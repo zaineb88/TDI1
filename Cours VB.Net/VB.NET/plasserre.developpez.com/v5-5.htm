@@ -1,0 +1,597 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net héritage </title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.5</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Pratique de l'héritage.</font></b></td>
+    <td width="14%" height="76"><a href="v5-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Définition de l'héritage:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font size="2" face="Courier New">A partir d'une classe existante, la <b><i>classe de base (ou classe mère), 
+on peut créer </i></b>une nouvelle classe, la <b><i>classe dérivée (ou classe fille)</i></b> 
+qui héritent des propriétés de la classe de base. La classe fille peut</font><font face="Courier" size="2"> 
+être modifiée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Soit la Classe 'Employé' elle comprendra les membres
+'Nom', 'Prénom' et la méthode 'SalaireAnnuel'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">On peut créer une 
+Classe 'Cadre' héritant de la classe 'Employé', elle comprendra les membres
+'Nom', 'Prénom' de la classe mère mais aussi 'Salaire' et 'Prime'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Et aussi une classe 'Ouvrier'&nbsp;</font><font face="Courier New" size="2">
+héritant de 'Employé', elle comprendra les membres 'Nom', 'Prénom' de la
+classe mère mais aussi 'HeureTravaillées' et 'Taux horaire' ses propres
+membres.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">'Cadre' <b>est un</b>  'Employé'. 
+Quant on peut dire 'est un', il s'agit bien d'héritage.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2"><b>Une classe peut hériter d'une autre classe</b>, 
+il suffit d'utiliser :'<font color="#0000ff">Inherits'.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt"><font face="Courier New" size="2">La
+méthode 'SalaireAnnuel' devra être substituée dans chaque classe fille, par
+une méthode de même nom ayant sa propre manière de calculer le salaire pour
+chaque classe fille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt"><font face="Courier New" size="2">On
+voit l'intérêt de l'héritage: on utilise, sans avoir à les réecrire, les
+membres de la classe mère.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font size="2" face="Courier New"><b>Inherits</b> permet de déclarer une 
+nouvelle classe,la <b><i>classe dérivée (ou classe fille)</i></b>, basée sur une 
+classe existante, la <b><i>classe de base (ou classe mère)</i></b>. Les classes 
+dérivées héritent des propriétés, des méthodes, des événements, des champs et 
+des constantes de la classe de base e</font><font face="Courier" size="2">t 
+peuvent les étendre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voici une classe:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Cadre</span></font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Property SalaireAnnuel() As 
+Integer<br>
+...</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Property </span></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF"> <br>
+End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Créons une classe dérivée qui hérite de
+Cadre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Class Cadre2<br>
+<b>Inherits Cadre</b><br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut ajouter:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">MustInherit:</font> Cela 
+donne une classe non instanciable, on ne peut pas créer d'objet avec!! Alors à 
+quoi cela sert!! A fournir une base pour des classes qui en hériteront. on 
+appelle ces classes des <b>classes abstraites</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">NotInheritable: </font>
+Cette classe ne peut-être héritée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Membres de la classe 
+dérivée:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2"><b>La classe fille possède tous les membres de 
+la classe mère.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Cela si le membre est '<font color="#0000FF">Protected</font>' ou '<font color="#0000FF">Public</font>'; pas s'il est Private.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Exemple:Un variable Private n'est pas visible 
+dans la Classe fille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Un variable Public est visible dans la Classe 
+fille, mais aussi par l'utilisateur de l'objet.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Un variable Protected est visible dans la 
+Classe fille mais pas à l'extérieur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Dans la classe Cadre2 on peut utiliser la 
+méthode SalaireAnnuel.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Il est possible de <b>rajouter </b>des membres 
+propre à la classe fille<b>, </b>mais aussi de<b> redéfinir</b>, de<b> 
+surcharger</b> ou de <b>masquer des membres de la classe mère</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New"><span style="background-color: #C0C0C0">A- Redéfinition 
+de membres (Overrides)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Il est possible en plus de <b>redéfinir (de 
+substituer) un des 
+membres</b> de la classe mère dans la classe fille.(de créer une nouvelle définition du membre dans la classe fille et 
+uniquement pour cette classe fille) si besoin. Pour que cela marche il faut que le membre 
+de la classe mère soit modifiable (<b>overridable</b>)&nbsp; et que le membre de même 
+nom de la classe fille soit&nbsp; modifié (<b>Overrides</b>)</font></p>
+<dl>
+<dt>&nbsp;</dt>
+<dt><font face="Courier New" size="2"><i>Dans la Classe fille (classe dérivée):</i></font></dt>
+<dt><font face="Courier New" size="2"><b>Overrides</b> </font></dt>
+<dd><font face="Courier New" size="2">Indique que cette procédure <b>
+Sub</b> substitue une procédure de même nom dans une classe de base.
+<font color="#FF0000">Le nombre et les types de données des arguments doivent 
+correspondre exactement à ceux de la procédure de la classe de base. </font>
+</font></dd>
+<dt>&nbsp;</dt>
+<dt><font face="Courier New" size="2"><i>Dans la Classe mère (classe de base):</i></font></dt>
+<dt><font face="Courier New" size="2"><b>Overridable</b> </font></dt>
+<dd><font face="Courier New" size="2">Indique que cette procédure 
+peut être substituée par une procédure de même nom dans une classe dérivée. <b>
+Overridable</b> est le paramètre par défaut. </font></dd>
+<dt><font face="Courier New" size="2"><b>NotOverridable</b> </font></dt>
+<dd><font face="Courier New" size="2">Indique que cette procédure ne 
+peut pas être substituée dans une classe dérivée. <b>NotOverridable</b> est le 
+paramètre par défaut d'une procédure qui ne se substitue pas à une procédure de 
+classe de base. </font></dd>
+<dt><font face="Courier New" size="2"><b>MustOverride</b> </font></dt>
+<dd><font face="Courier New" size="2">Indique que cette procédure <b>
+Sub</b> n'est pas implémentée dans cette classe et qu'elle doit l'être dans une 
+classe dérivée pour que cette classe puisse être créée.</font></dd>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Créons une Classe Cadre avec une méthode 
+'Salaire annuel sur 13 mois'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Cadre</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public <b>Overridable</b> ReadOnly 
+Property SalaireAnnuel() As Integer<br>
+Get<br>
+&nbsp;&nbsp;&nbsp; SalaireAnnuel = SalaireMensuel * 13 <br>
+End Get<br>
+End Property <br>
+End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Créons maintenant une classe Cadre2 qui 
+hérite de toutes les propriétés public et protected de la classe Cadre&nbsp; donc la méthode SalaireAnnuel 
+qui est sur 12 mois:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Class Cadre2<br>
+<b>Inherits Cadre</b><br>
+Public <b>Overrides</b> ReadOnly Property SalaireAnnuel() As Integer <br>
+Get <br>
+&nbsp;&nbsp;&nbsp; SalaireAnnuel = SalaireMensuel * 12 <br>
+End Get <br>
+End Property <br>
+End Class</span></font></p>
+<pre class="code">Quand on instance un objet avec la classe Cadre, si on utilise la méthode SalaireAnnuel() il sera calculer sur 13 mois.</pre>
+<pre class="code">Quand on instance un objet avec la classe Cadre2, si on utilise la méthode SalaireAnnuel() il sera calculer sur 12 mois.</pre>
+<pre class="code">Attention le membre substitué doit avoir la même signature (Les mêmes paramètres).</pre>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<span style="background-color: #C0C0C0"><font face="Courier New">B</font></span><font face="Courier New"><span style="background-color: #C0C0C0">- 
+Surcharge de membres (Overloads)</span></font></p>
+<dt>&nbsp;</dt>
+<dt><font face="Courier New" size="2">Cela crée plusieurs membres de même nom 
+mais avec des signatures différentes. Il peut y avoir une version dans la 
+classe de base et une version surchargée de même nom mais avec une signature 
+différente dans la classe fille.</font></dt>
+<dd>&nbsp;</dd>
+<dt><font face="Courier New" size="2"><b>Overloads</b></font></dt>
+<dd><font face="Courier New" size="2">Indique que ce membre surcharge une ou 
+plusieurs membres définis avec le même nom dans une classe de base.
+<font color="#FF0000">La liste d'arguments de cette déclaration doit être 
+différente de la liste d'arguments de chaque membre surchargé.</font> Les listes 
+doivent différer au niveau de leur nombre d'arguments, de leurs types de données 
+ou des deux. Cela permet au compilateur de distinguer la version à utiliser.
+</font>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public <b>Overloads</b> ReadOnly Property SalaireAnnuel( 
+Prime As Integer) As Integer <br>
+Get <br>
+&nbsp;&nbsp;&nbsp; SalaireAnnuel = (SalaireMensuel * 12) + Prime <br>
+End Get <br>
+End Property </span></font></p>
+<p><font face="Courier New" size="2">Vous ne pouvez pas spécifier <b>Overloads</b> 
+et <b>Shadows</b> dans la même déclaration. </font></dd>
+<dd><font face="Courier New" size="2">&nbsp;</font></dd>
+<dt>&nbsp;</dt>
+<p><span style="background-color: #C0C0C0"><font face="Courier New">C</font></span><font face="Courier New"><span style="background-color: #C0C0C0">- 
+Cacher un membre de la classe de base(Shadows)</span></font></p>
+<dt>&nbsp;</dt>
+<dt><font face="Courier New" size="2"><b>Shadows</b> </font></dt>
+<dd><font face="Courier New" size="2">Indique que ce membre cache un 
+élément de programmation de même nom ou un ensemble d'éléments surchargés, dans 
+une classe de base. Vous pouvez occulter tout type d'élément déclaré par un 
+autre type. <font color="#FF0000">Si vous masquez une procédure avec une autre 
+procédure, les arguments et le type retourné n'ont pas besoin de correspondre à 
+ceux de la procédure de la classe de base</font>. Un élément occulté est 
+indisponible à partir de la classe dérivée qui l'occulte, à moins que l'élément 
+d'occultation soit inaccessible, comme c'est le cas de <b>Private</b>.</font></dd>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">MyBase:</span></font></pre>
+<pre class="code">Dans le membre de la classe fille, on peut avoir besoin d'appeler le membre de la classe mère; on le fait avec <font color="#0000FF">MyBase</font>:</pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">Public Overrides Property OnPaint()  </font><font face="Courier New" size="2">'on redéfini OnPaint</font><font face="Courier New" size="2" color="#0000FF"> </font></span></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">MyBase.OnPaint			     </font><font face="Courier New">'on appelle le OnPaint de la Classe mère	</font></span></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">...				     </font><font face="Courier New">'on ajoute de nouvelles choses	</font></span></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">End Property</font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">Constructeur dans une classe fille</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">:</span></font></pre>
+<p><font face="Courier New" size="2">Les membres privés de la classe mère, comme 
+on l'a dit, ne sont pas accessibles à partir de la classe fille.</font></p>
+<p><font face="Courier New" size="2">Seuls les membres '<font color="#0000FF">Public</font>' et 
+'<font color="#0000FF">Protected</font>' de la 
+classe mère sont accessibles à partir de la classe fille, il faut donc utiliser 
+ces membres dans la classe fille.</font></p>
+<pre class="code">Exemple avec un constructeur:</pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Public Class Mere</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#008000">'Attribut privé</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Private _Nom As String</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#008000">'Constructeur</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Public Sub New( ByVal Nom As String)</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">	_Nom=Nom   </font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">End Sub</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">End Class</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Public Class Fille</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Inherits Mere</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#008000">'Constructeur</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">Public New ( ByVal Nom As String)</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">	MyBase.New (Nom)</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">End Sub</font></pre>
+<pre class="code" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF">End Class</font></pre>
+<pre class="code"><font face="Courier New">On voit ici que dans la classe fille, on appelle le constructeur de la classe mère.</font></pre>
+<pre class="code"><font face="Courier New">Car dans la classe fille _Nom de la classe mère n'est pas accessible.</font></pre>
+<p><font face="Courier New" size="2">Dans une clase fille, on passe donc les 
+paramètres à la classe mère en utilisant les membres 'Public' ou 'Protected' de 
+cette classe mère, on initialise en plus directement&nbsp; les attributs propres 
+à la classe fille si ils existent. </font></p>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">Héritage successif:exemple</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">:</span></font></pre>
+<pre class="code">Une classe peut hériter d'une classe qui en hérite d'une autre:</pre>
+<pre class="code">Prenons l'exemple suivant :</pre>
+<pre class="code">C hérite de B qui hérite de A, les membres sont hérités s'il sont Overridable.</pre>
+<pre class="code"><b>Class A</b>
+<font color="#0000FF">Public <b>Overridable</b> Sub F()</font> ' le membre F pourra être modifié dans une classe fille
+<font color="#0000FF">Console.WriteLine(&quot;A.F&quot;)
+End Sub</font>
+
+<font color="#0000FF">Public Overridable Sub G()'</font>le membre G pourra être modifié dans une classe fille</pre>
+<pre class="code"><font color="#0000FF">Console.WriteLine(&quot;A.G&quot;)
+End Sub
+End Class</font>
+
+<b>Class B</b>
+<font color="#0000FF">Inherits A	</font>'Hérite de A<font color="#0000FF">
+Public Overrides NotOverridable Sub F()	</font>'On interdit la modification de F dans une Classe fille<font color="#0000FF">
+Console.WriteLine(&quot;B.F&quot;)
+End Sub
+Public Overrides Sub G()
+Console.WriteLine(&quot;B.G&quot;)
+End Sub
+End Class</font>
+
+<b>Class C	</b>'Hérite de B qui hérite de A<font color="#0000FF">
+Inherits B
+Public Overrides Sub G()
+Console.WriteLine(&quot;C.G&quot;)
+End Sub
+End Class</font>
+
+</pre>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> En VB.Net une Classe 
+ne peut hériter que d'<b>une seule</b> Classe.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Création de Classe à partir de Classe du 
+Framework:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Il est possible de créer une classe qui hérite 
+d'une classe du Framework.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple d'une classe MyArray héritant de la 
+Collection ArrayList; on peut dans la classe appeler des membres de la classe de 
+base <b>(</b></font><font face="Courier New" color="#0000ff" size="2">MyBase.Add(S)</font><font face="Courier New" size="2">)ou 
+modifier les membres de cette classe de base (ici on 'cache' les membres de la 
+classe de base par</font><font face="Courier New" color="#0000ff" size="2"> 
+Shadows </font><font face="Courier New" size="2">et on crée ses propres membres.</font><b><font face="Courier New" size="2">
+</font></b></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">Imports 
+System.Collections</font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">Public Class 
+MyArray<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Inherits 
+ArrayList '</font><font face="Courier New" size="2">MyArray héritant de la 
+Collection ArrayList</font><font face="Courier New" color="#0000ff" size="2"><br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public&nbsp; 
+Shadows Sub Add(ByVal S As Salarié) <br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->MyBase.Add(S)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'On appelle la méthode Add de la classe de 
+base (classe mère) </font><font face="Courier New" color="#0000ff" size="2">
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End
+Sub<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> 
+Public Shadows ReadOnly Property Index(ByVal i As Integer) As Salarié<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Return 
+Ctype (MyBase.Item(i), Salarié)<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+Get<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+Property<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<br>
+End Class</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b><font face="Courier New" color="#0000ff" size="4"><span style="BACKGROUND-COLOR: #c0c0c0">Création
+de Classe à partir de Classe du Framework exemple2:</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b><font face="Courier New" size="2">Il
+existe des classes du Framework qui ne peuvent pas être utilisée!!!.On ne peut
+pas instancier d'objet avec!! Ce sont des classes 'abstraites'. Le seul moyen de
+les utiliser est de créer une classe fille qui en héritera.</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Exemple
+d'une classe qui ne peut pas être utilisée: <font color="#0000FF">CollectionBase.</font>
+Elle contient les principales caractéristique des collections mais pas toutes!!
+Il faudra par exemple ajouter <font color="#0000FF">Item</font> et <font color="#0000FF">Add</font>.</font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">Imports
+System.Collections</font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">Public Class
+MyCollection<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Inherits CollectionBase</font><font face="Courier New" color="#0000ff" size="2"><br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;Public Property Item(ByVal index As Integer) As Salarié<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Get<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Return Ctype (InnerList(index), Salarié)<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+End Get</font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Set (ByVal Value As Salarié)<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Me.InnerList(index)=Value<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+End Set<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+End Property</font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2"><br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Public&nbsp; Sub Add(ByVal value As Salarié)<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+Me.InnerList.Add(value)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font face="Courier New" color="#0000ff" size="2"><br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+End Sub<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->
+<br>
+End Class</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Ici
+la collection est 'Typée', elle n'accepte que des objet Salarié. InnerList est
+la List interne.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Création de composant et héritage:</span></font></b></p>
+<font size="2" face="Courier New">
+<p>On a vu que dans la création de composants, on peut utiliser un composant qui 
+existe déjà:</p>
+</font><font color="#0000ff" size="2">
+<p><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">Public</span></font></font><font color="#0000ff" size="2" face="Courier New"><span style="BACKGROUND-COLOR: #ffffff"> 
+Class</span></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+<b>MonBouton</b></span></font></p>
+<p></font><font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Inherits</span></font><font color="#0000ff" size="2"><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff"> 
+System.Windows.Forms.<b>Button</b></span></font></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Class</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+&nbsp;</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Ici on crée un composant MonBouton qui hérite de Button; ce composant Monbouton 
+fonctionne exactement comme Button (le bouton habituel).</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour modifier l’apparence du bouton, il faut remplacer (Overrides) la méthode 
+OnPaint de Button par la vôtre (celle-ci dessine le contrôle). Au sein de cette 
+méthode, vous devez appeler la méthode OnPaint de la base qui dessine le bouton 
+habituel, puis&nbsp; ajouter vos propres fonctions de dessin.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Il faut donc ajouter dans la classe MonBouton la procédure: </font></p>
+<font color="#0000ff" size="2">
+<p><font face="Courier New">Protected</font></font><font color="#0000ff" size="2" face="Courier New"> 
+Overrides Sub OnPaint(ByVal e As</font><font size="2"><font face="Courier New" color="#0000ff"> 
+PaintEventArgs)</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">MyBase.OnPaint(e)
+</font><font size="2"><font face="Courier New">'Appel à la méthode de la classe 
+de base, ce qui dessine le bouton</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">Dim myPen As New</font><font size="2"><font face="Courier New" color="#0000ff"> 
+Pen(Color.Purple, 3)</font></p>
+<p><font face="Courier New" color="#0000ff">e.Graphics.DrawRectangle(myPen, 3, 
+3, </font></font><font color="#0000ff" size="2" face="Courier New">Me.Width - 6, 
+Me</font><font size="2"><font face="Courier New" color="#0000ff">.Height - 6)
+</font><font face="Courier New">'Ajoute un cadre sur le dessin du bouton</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">End </font>
+<font color="#0000ff" size="2"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on compile cette Classe et qu'on ajoute le 
+composant à un projet, on obtient le bouton suivant:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="v5-3.h3.GIF" width="301" height="104"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

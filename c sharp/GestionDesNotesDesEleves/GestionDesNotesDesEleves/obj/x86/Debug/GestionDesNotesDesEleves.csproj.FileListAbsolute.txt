@@ -1,0 +1,8 @@
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\bin\Debug\GestionDesNotesDesEleves.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\bin\Debug\GestionDesNotesDesEleves.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\GestionDesNotesDesEleves.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\GestionDesNotesDesEleves.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\GestionDesNotesDesEleves\GestionDesNotesDesEleves\obj\x86\Debug\GestionDesNotesDesEleves.pdb

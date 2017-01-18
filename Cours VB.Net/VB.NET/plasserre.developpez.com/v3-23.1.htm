@@ -1,0 +1,735 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : textbox richtextbox  maskedtextbox rtf </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.0.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.23.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">WPF:</font></b><p><b><font face="Courier New" size="6" color="#800080">Dimension,
+      position
+      des contrôles: Layout.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v3-23.2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Le positionnement des contrôles est une chose
+complexe en WPF.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">En Windows Forms on pouvait mettre autant de
+contrôles que l'on voulait dans une form (fenêtre) et on utilisait
+simplement les coordonnées du coin supérieur gauche d'un contrôle pour
+définir sa position; en WPF il faut utiliser la notion de conteneur et de
+position dans ces conteneurs.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">En Windows Forms, en cas de changement
+d'écran ou de modification des dimensions d'une fenêtre, si on voulait un re-agencement,
+il fallait tout gérer soit même. En WPF cela sera automatique.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Certains
+conteneurs, en WPF, ne peuvent contenir qu'un enfant. Essayer de mettre 2 boutons dans
+une fenêtre vide: impossible!! Aussi, il est préférable de mettre dans une
+fenêtre vide un conteneur comme le conteneur grid (dont chaque cellule peut
+contenir un contrôle ), un DockPannel ou un StackPannel.</font><font face="Courier New" size="2">&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Ensuite,
+dans le conteneur le contrôle est positionné.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Nous
+allons voir:</font>
+</p>
+<blockquote>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>Hiérarchie
+dans les contrôles.</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>Position
+et dimension d'un contrôle dans un conteneur.</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>Grid
+(UniformGrid, GridSplitter)</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>StackPanel</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>WrapPanel</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>DockPanel</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#A31515" face="Courier New" size="2"><b>Canvas</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" color="#0000FF" size="4"><span style="background-color: #C0C0C0">Hiérarchie
+des contrôles.</span></font></b>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Certains
+contrôles (dit 'non conteneur') ne peuvent contenir qu'un contrôle. Essayer de mettre 2 boutons dans
+une fenêtre vide avec le designer ou une image et un texte dans un bouton: impossible!!</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Une fenêtre
+(Window) ou un bouton, ont une propriété nommé '<font color="#0000FF">Content</font>'
+qui ne peut donc contenir d'un seul élément.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+un bouton par exemple, en VB:&nbsp;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;&nbsp;&nbsp;<font face="Courier New" size="2">
+</font><font face="Courier New" size="2"><font color="#0000FF">MyButton.Content
+= &quot;Ok&quot;</font>&nbsp; affiche le texte 'Ok' dans le bouton.&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#111111">Mais
+ce que </font><font color="#0000FF">Content</font> (remarquons le, c'est
+fondamental) peut contenir est <b> un Objet </b>(un seul): du texte comme dans
+l'exemple précédant mais aussi un objet conteneur comme une Grid, un Canvas,
+un StackPanel, un DockPanel.. qui lui peut contenir plusieurs contrôles.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">C'est
+pour cela que quand on crée une fenêtre en VB, il est automatiquement ajouté
+une grid.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Les
+conteneurs comme une Grid par exemple, ont une propriété nommé <font color="#0000FF">Children</font>
+qui permet d'ajouter plusieurs contrôles.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#111111">En
+VB</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;
+MyGrid.Children.Add ( Buttom1)</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">A
+titre d'exemple, on peut mettre une grid dans un bouton et mettre dans les
+cellules de cette grid&nbsp; 2 textes, une image..</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" color="#0000FF" size="4"><span style="background-color: #C0C0C0">Position
+et dimension d'un contrôle dans un conteneur</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><u><b>Les
+dimensions</b></u> sont en &quot;device independent pixels&quot;.</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Width</font><font COLOR="#0000ff">=&quot;50&quot;</font><font COLOR="#ff0000">
+    Height</font><font COLOR="#0000ff">=&quot;30&quot;</font> indiquent les
+    dimensions d'un bouton (largeur, hauteur).</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b><u>Exemple
+1:</u></b></font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Mettre
+un bouton dans un conteneur (la cellule d'une grille par exemple), <b>on le
+positionne dans le Designer avec la souris</b>.</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Cela
+donne par exemple dans le code XAML:</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;39&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;30,64,128,0&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;Button1&quot;</font><font COLOR="#ff0000">
+VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot; </font><font COLOR="#ff0000">
+Click</font><font COLOR="#0000ff">=&quot;OnClick5&quot;&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font></font></p>
+<blockquote>
+  <blockquote>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Voyons
+le détail de cette ligne:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font>
+crée un bouton.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Name</font><font COLOR="#0000ff">=&quot;Button1&quot;&nbsp;
+</font>indique le nom du contrôle dans le designer.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+peut indiquer sur quoi le contrôle est aligné:</font>
+</p>
+<blockquote>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;&nbsp;
+    </font><font color="#111111">bouton aligné sur le bord supérieur.</font></font>
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font color="#ff0000" face="Courier New" size="2">Margin</font><font COLOR="#0000ff">=&quot;30,64,128,0&quot;
+    </font><font color="#111111"><font face="Courier New" size="2">indique les
+    marges gauche, supérieure, droite, inférieure</font><font face="Courier New" size="2">.</font></font>
+</p>
+    <p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfmargin.JPG" width="317" height="210">
+</p>
+    <p style="margin-top: 6.0pt" align="left">&nbsp;</p>
+</blockquote>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b><u>Exemple
+2:</u></b></font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Si <font COLOR="#ff0000">VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;</font></font>
+<font face="Courier New" size="2">voici un exemple de margin.<font COLOR="#ff0000">&nbsp;</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfmargin2.JPG" width="447" height="158">
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b><u>Les
+principes:</u></b></font>
+</p>
+<blockquote>
+  <blockquote>
+<p style="margin-top: 6.0pt" align="left"><font color="#FF0000" face="Courier New" size="2">VerticalAlignement
+et </font><font face="Courier New" size="2"><font COLOR="#ff0000">HorizontalAlignment</font>
+définissent sur quoi est aligné le contrôle.</font>
+</p>
+<blockquote>
+  <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">valeur
+  possible pour </font>
+  <font color="#FF0000" face="Courier New" size="2">VerticalAlignement</font><font face="Courier New" size="2">:<font COLOR="#0000ff">Top, Bottom, Center</font><font COLOR="#ff0000">&nbsp;</font><font color="#0000FF">Stretch
+  </font><font color="#111111">(étire le contrôle et rempli verticalement).</font></font>
+</p>
+  <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">valeur
+  possible pour <font color="#FF0000">HorizontalAlignment</font></font><font face="Courier New" size="2">:<font color="#0000ff">Left,
+  Right, Center</font><font COLOR="#ff0000">&nbsp;</font><font color="#0000FF">Stretch</font><font color="#111111">(étire
+  le contrôle et rempli horizontalement).</font><font color="#0000FF">.</font></font>
+</p>
+  <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#111111">Attention,
+  si on renseigne</font><font color="#0000FF" face="Courier New" size="2"> </font><font face="Courier New" size="2"><font COLOR="#ff0000">Width</font><font color="#0000ff">
+  </font><font color="#111111">et</font><font COLOR="#ff0000"> Height&nbsp; </font><font color="#111111">Stretch
+  ne fonctionne pas!!</font></font>
+</p>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#FF0000">Margin</font>
+définit les distances au conteneur.</font>
+</p>
+<blockquote>
+<p style="margin-top: 6.0pt" align="left"><font color="#ff0000" face="Courier New" size="2">Margin</font><font COLOR="#0000ff">=&quot;30,64,128,0&quot;
+</font><font color="#111111"><font face="Courier New" size="2">indique les
+marges gauche, supérieure, droite, inférieure</font><font face="Courier New" size="2">.</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#ff0000" face="Courier New" size="2">Margin</font><font COLOR="#0000ff">=&quot;30&quot;
+</font><font color="#111111"><font face="Courier New" size="2">indique que
+toutes les marges sont à 30.</font></font>
+</p>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#FF0000" face="Courier New" size="2">Paddding</font><font face="Courier New" size="2">
+définit l'épaisseur d'une marge dans le contrôle. (valable dans certains
+contrôles seulement)&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+résumer, voici un conteneur avec trois boutons:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><img border="0" src="vwpfposctrl.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Exemple
+en VB:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#0000FF"><font face="Courier New" size="2">Dim
+myButton As New Button()</font></font>
+</p>
+<p><font face="Courier New" size="2"><font color="#0000FF">myButton.Height =</font>
+<font COLOR="#a31515">&quot;33&quot;&nbsp;&nbsp;&nbsp;</font><font color="#008000">
+'modification des dimensions du bouton</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">myButton.Width =</font>
+<font COLOR="#a31515">&quot;55&quot;</font></font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.HorizontalAlignment
+= Windows.HorizontalAlignment.Stretch&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000FF">myButton.Content
+= </font><span style="COLOR: maroon">&quot;Button&nbsp; Stretch&quot;</span></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font SIZE="2" face="Courier New" color="#0000FF">Grid1.Children.Add(myButton)
+</font>
+<font SIZE="2" face="Courier New" color="#008000">
+'met le bouton dans le conteneur grid</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Autre
+exemple:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">Dim
+myButton As New Button()</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.Margin =
+New Thickness(10, 20,0, 20)</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.Padding=
+New Thickness(10)</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.HorizontalAlignment =
+Windows.HorizontalAlignment.Center</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">GrosBouton.Content
+= myButton '</font><font face="Courier New" size="2">on met myButtom dans un
+autre gros bouton, cela ne sert à rein, c'est juste pour illustrer la
+propriété </font><font face="Courier New" size="2" color="#0000FF">Content.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Conteneur:
+grid:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">En
+WPF une grid est un conteneur servant à aligner&nbsp; les contrôles (et pas
+une grille de données comme dans les Windows forms).</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Aller chercher un 'Grid' dans la boite à
+outils à gauche et la mettre dans une fenêtre vide.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwpfgrid1.JPG" width="316" height="318">
+</p>
+<p><font SIZE="2" face="Courier New">Cela donne dans le code XAML:</font></p>
+<font SIZE="2" COLOR="#a31515">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#a31515">Grid</font><font SIZE="2" COLOR="#ff0000">
+Margin</font><font SIZE="2" COLOR="#0000ff">=&quot;12,20,9,10&quot;</font><font SIZE="2" COLOR="#ff0000">
+Name</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">=&quot;Grid1&quot;
+/&gt;</font></p>
+</font>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">En fait dans VB quand on ajoute une fenêtre
+vide, la fenêtre contient déjà une grid.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2"><b>Pour ajouter des lignes et des colonnes
+dans la grille</b>, il faut cliquer dans les barres bleutées horizontales ou
+verticales et positionner les traits.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwpfgrid.JPG" width="314" height="320">
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+voit dans le code XAML les largeurs des colonnes et les hauteurs des lignes.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font COLOR="#a31515" face="Courier New">Grid</font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Grid.RowDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;74*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;84*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;121*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid.RowDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Grid.ColumnDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;37*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;28*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;31*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;176*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid.ColumnDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">On peut ensuite ajouter des contrôles dans
+les cellules de la grille pour les positionner.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Ici on va ajouter un ListBox en bas à droite
+de la grille.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font COLOR="#a31515">Grid</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;279&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;Grid1&quot;</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;272&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Grid.RowDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;74*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;84*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RowDefinition</font><font COLOR="#ff0000">
+Height</font></font><font face="Courier New" COLOR="#0000ff">=&quot;121*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid.RowDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Grid.ColumnDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;37*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;28*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;31*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ColumnDefinition</font><font COLOR="#ff0000">
+Width</font></font><font face="Courier New" COLOR="#0000ff">=&quot;176*&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid.ColumnDefinitions</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><b><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBox</font><font COLOR="#ff0000">
+Grid.Column</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+Grid.Row</font><font COLOR="#0000ff">=&quot;2&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;22,26,21,19&quot;</font><font COLOR="#ff0000">
+Name</font></font><font face="Courier New" COLOR="#0000ff">=&quot;ListBox1&quot;&gt;</font></b></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><b><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBoxItem</font><font COLOR="#0000ff">&gt;</font><font COLOR="#a31515">toto</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBoxItem</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></b></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><b><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBoxItem</font><font COLOR="#0000ff">&gt;</font><font COLOR="#a31515">lululu</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBoxItem</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></b></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><b><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBox</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></b></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBox</font><font COLOR="#ff0000">
+Grid.Column</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+Grid.Row</font><font COLOR="#0000ff">=&quot;2&quot; </font></b>indiquent dans
+quelle cellule est la ListBox.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Attention la première colonne est Column=0 et
+la première ligne est Row=0.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">La
+aussi&nbsp; <b><font COLOR="#ff0000">Margin</font><font COLOR="#0000ff">=&quot;22,26,21,19&quot;
+</font></b>indique les distances au conteneur autour de la ListBox.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+existe aussi une <font color="#0000FF">UniformGrid</font> qui reste similaire à
+la Grid à la seule différence que dans un UniformGrid les colonnes et les
+lignes ont forcément la même taille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Enfin
+il y a à notre disposition un <font color="#0000FF">GridSplitter</font>, qui
+ressemble au SplitContainer des WindowsForms,&nbsp; il permet de redimensionner
+les lignes et colonnes au cour de l'exécution de l'application.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;</font>
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Conteneur:
+StackPanel:</font></b></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Arrange les contrôles <b>sur une même ligne</b>
+qui peut être horizontale ou verticale.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="COLOR: blue"><font face="Courier New" size="2">En VB&nbsp;&nbsp;
+Dim</font></span><font face="Courier New" size="2"> instance <span style="COLOR: blue">As</span>
+StackPanel</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En XAML:&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&lt;StackPanel&gt; Children &lt;/StackPanel&gt;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">La
+valeur par défaut de <font color="#0000FF">Orientation </font>du StackPanel est
+<font color="#0000FF">Vertical</font><font color="#111111">, aussi les
+contrôles seront positionnés de haut en bas.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vwpfstackpanel.JPG" width="315" height="236"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">En
+XAML:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#a31515">&lt;StackPanel</font><font face="Courier New" COLOR="#0000ff">
+&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">TextBlock</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;6&quot;</font><font COLOR="#ff0000">
+Padding</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+HorizontalAlignment</font></font><font face="Courier New" COLOR="#0000ff">=&quot;Center&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#ff0000">FontFamily</font><font COLOR="#0000ff">=&quot;Verdana&quot;</font><font COLOR="#ff0000">
+FontSize</font><font COLOR="#0000ff">=&quot;12&quot;</font><font COLOR="#ff0000">
+FontWeight</font></font><font face="Courier New" COLOR="#0000ff">=&quot;Bold&quot;&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#a31515">Faire
+un choix:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">TextBlock</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;3,8,3,4&quot;</font><font COLOR="#ff0000">
+Padding</font><font COLOR="#0000ff">=&quot;2&quot;&gt;</font><font COLOR="#a31515">Option
+1</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;3,4,3,4&quot;</font><font COLOR="#ff0000">
+Padding</font><font COLOR="#0000ff">=&quot;2&quot;&gt;</font><font COLOR="#a31515">Option
+2</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;3,4,3,4&quot;</font><font COLOR="#ff0000">
+Padding</font><font COLOR="#0000ff">=&quot;2&quot;&gt;</font><font COLOR="#a31515">Option
+3</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">StackPanel</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#a31515"><br>
+</font>&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;En
+VB, autre exemple, on peut le coller dans la Sub New de Window1 qui est vide:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim StackPanel As New
+StackPanel</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">StackPanel.Orientation = System.Windows.Controls.Orientation.Horizontal</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">StackPanel.HorizontalAlignment = System.Windows.HorizontalAlignment.Right</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">StackPanel.VerticalAlignment = System.Windows.VerticalAlignment.Center</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF"><font face="Courier New">Dim
+MyButton1 As New Button</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" color="#0000FF">Dim
+MyButton2 As New Button</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF"><font face="Courier New">MyButton1.Content
+= &quot;bouton1&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF"><font face="Courier New">MyButton2.Content
+= &quot;bouton2&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">StackPanel.Children.Add(MyButton1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">StackPanel.Children.Add(MyButton2)</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.content= StackPanel</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela donne</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vwpflayout.JPG" width="463" height="224"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">La
+dimension du bouton est définie par son texte.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">Si on modifie la hauteur de la fenêtre, on
+remarque que les boutons sont repositionnés automatiquement. c'est l'avantage
+du Layout.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut insérer un bouton supplémentaire à
+une position définie:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">Dim
+MyButton3 As New Button</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MyButton3.Content
+= &quot;bouton3&quot;</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">StackPanel.Children.Insert(1,
+MyButton3)&nbsp;</font><font size="2" face="Courier New"> '1 indique la position d'insertion.</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vwpflayout1.JPG" width="213" height="144"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Conteneur:
+WrapPanel:</font></b></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le
+WrapPanel est une variante ou les éléments sont mis à la suite l'un de
+l'autre mais ou il y a <b>&quot;retour à la ligne&quot;</b> quand on atteint la
+limite du conteneur.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Exemple
+: affichons les fichiers du répertoire c::</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New">
+WrapPanel <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font>
+WrapPanel</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+dirs() <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">String</font> =
+Directory.GetFiles(<font COLOR="#a31515">&quot;C:\&quot;</font>)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">For</font>
+<font COLOR="#0000ff">Each</font> f <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">String</font>
+<font COLOR="#0000ff">In</font> dirs</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+file <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> FileInfo(f)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+lbl <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> Label</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">lbl.Width
+= 100</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">lbl.Content
+= file.Name.ToString</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">WrapPanel.Children.Add(lbl)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#0000ff">Next</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Content
+= WrapPanel</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vwpflayout2.JPG" width="562" height="130"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'intérêt de ce contrôle est que si on élargi
+la fenêtre, l'affichage ( sur 3 colonne ici) est automatiquement reformaté.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Conteneur:
+DockPanel:</font></b></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Arrange les contrôles soit horizontalement
+soit verticalement</b> mais en plus <b>les contrôles sont dockés</b>
+(attachés) à un des bords.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Dans
+un DockPanel, on met 2 boutons.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Pour
+le&nbsp; premier bouton&nbsp; <span style="COLOR: red">DockPanel.Dock</span><span style="COLOR: blue">=</span>“<span style="COLOR: blue">Left</span>“&nbsp;
+met le premier bouton contre le bord gauche.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Pour
+le second bouton&nbsp;&nbsp;&nbsp; <span style="COLOR: red">DockPanel.Dock</span><span style="COLOR: blue">=</span>“<span style="COLOR: blue">Left</span>“&nbsp;&nbsp;
+met le second bouton à gauche contre le premier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font face="Courier New" size="2"><img border="0" src="vwpfdockpanel.JPG" width="201" height="165"></font></p>
+<p style="MARGIN: 0px">&nbsp;</p>
+<p style="MARGIN: 0px"><font face="Courier New" size="2">En XAML cela donne:</font></p>
+<p style="MARGIN: 0px"><span style="COLOR: blue"><font face="Courier New" size="2">&lt;</font></span><font face="Courier New" size="2"><span style="COLOR: #a31515">DockPanel</span><span style="COLOR: blue">&gt;</span></font></p>
+<p style="MARGIN: 0px"><span style="COLOR: blue"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+&lt;</font></span><font face="Courier New" size="2"><span style="COLOR: #a31515">Button</span><span style="COLOR: blue">
+</span><span style="COLOR: red">DockPanel.Dock</span><span style="COLOR: blue">=</span>“<span style="COLOR: blue">Left</span>“<span style="COLOR: blue">&gt;</span>Button<span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Button</span><span style="COLOR: blue">&gt;</span></font></p>
+<p style="MARGIN: 0px"><span style="COLOR: blue"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+&lt;</font></span><font face="Courier New" size="2"><span style="COLOR: #a31515">Button</span><span style="COLOR: blue">
+</span><span style="COLOR: red">DockPanel.Dock</span><span style="COLOR: blue">=</span>“<span style="COLOR: blue">Left</span>“<span style="COLOR: blue">&gt;</span>Button<span style="COLOR: blue">&lt;/</span><span style="COLOR: #a31515">Button</span><span style="COLOR: blue">&gt;</span></font></p>
+<p style="MARGIN: 0px"><span style="COLOR: blue"><font face="Courier New" size="2">&nbsp;
+&lt;/</font></span><font face="Courier New" size="2"><span style="COLOR: #a31515">DockPanel</span><span style="COLOR: blue">&gt;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Conteneur:
+Canvas:</font></b></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+existe un contrôle <font color="#0000FF">Canvas</font> qui permet de
+positionner <b>des contrôles </b>en indiquant leurs coordonnées, mais il n'y a
+<b>pas de repositionnement automatique</b> quand on modifie les dimensions de la
+fenêtre, ce qui limite son intérêt.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">On
+positionne les contrôles avec </font><span class="code-attribute"><font color="#0000FF" face="Courier New" size="2">Canvas.Top
+et Canvas.Left </font><font face="Courier New" size="2">qui se trouve dans le
+code de chaque contrôle.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">En
+XAML:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><code class="markup"><font color="#0000FF" face="Courier New" size="2">&lt;Canvas&gt;</font></code></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font color="#0000FF" face="Courier New" size="2"><code class="markup">&lt;Image
+Source=</code><code class="literal1">&quot;<a href="../www.developpez.com/template/logo.gif">MyImage.gif</a>&quot;</code><code class="markup">
+Canvas.Left=</code><code class="literal1">&quot;100&quot;</code><code class="markup">
+Canvas.Top=</code><code class="literal1">&quot;50&quot;</code><code class="markup">/&gt;</code>
+</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font color="#0000FF" face="Courier New" size="2"><span class="code-keyword">&lt;</span><span class="code-leadattribute">CheckBox</span>
+<span class="code-attribute">Canvas.Top</span><span class="code-keyword">=&quot;80&quot;</span>
+<span class="code-attribute">Canvas.Left</span><span class="code-keyword">=&quot;0&quot;&gt;</span>Check
+Me<span class="code-keyword">&lt;/</span><span class="code-leadattribute">CheckBox</span><span class="code-keyword">&gt;</span>
+</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font color="#0000FF" face="Courier New" size="2"><span class="code-keyword">&lt;</span><span class="code-leadattribute">RadioButton</span>
+<span class="code-attribute">Canvas.Top</span><span class="code-keyword">=&quot;0&quot;</span>
+<span class="code-attribute">Canvas.Left</span><span class="code-keyword">=&quot;80&quot;&gt;</span>Yes<span class="code-keyword">&lt;/</span><span class="code-leadattribute">RadioButton</span><span class="code-keyword">&gt;</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><code class="markup"><font color="#0000FF" face="Courier New" size="2">&lt;/Canvas&gt;</font></code></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.0.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-23.2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:07 GMT -->
+</html>

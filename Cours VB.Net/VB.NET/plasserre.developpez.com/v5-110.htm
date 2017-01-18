@@ -1,0 +1,1000 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-110.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net bonne procédure</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-100.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.110</font></b></td>
+    <td width="52%" height="76" align="center">
+    <p style="margin-top: 0; margin-bottom: 0"><b>
+    <font face="Courier New" size="6" color="#800080">Approche 'fonctionnelle'</font></b></p>
+    <p style="margin-top: 0; margin-bottom: 0"><b>
+    <font face="Courier New" size="6"><font color="#800080">bonnes procédures</font>.</font><font face="Courier New" size="6" color="#800080">.</font></b></td>
+    <td width="9%" height="76"><a href="v5-120.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vfonction.JPG" width="128" height="71"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Quand on fait de la 
+programmation fonctionnelle: on n'utilise pas de classe mais des modules 
+standards, des Sub et des Functions.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Suivant quelles règles 
+découper son programme?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Si on programme depuis 
+longtemps, on le sait de manière 'intuitive' (après de nombreuses erreurs); il 
+est tout de même&nbsp; intéressant de connaître les grandes règles à suivre. 
+Très peu de sites ou d'ouvrages en parlent!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Analyse <b>ascendante, 
+descendante</b>?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080"><b>Pourquoi découper</b> en 
+procédures?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">La <b>cohésion</b> doit elle&nbsp; 
+être importante?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Le <b>couplage</b> doit-il 
+être modéré?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Comment utiliser les <b>
+paramètres</b>?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080"><b>Sub</b> ou <b>Function</b>?&nbsp;&nbsp;&nbsp;
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080"><b>Programmation défensive</b>?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Approche fonctionnelle, 
+analyse 'descendante' ou 'ascendante'</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+L'approche fonctionnelle découpe le problème en fonctions (ou procédures):</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+L'analyse se fait de manière <b><font color="#111111">descendante</font></b>: on 
+découpe un problème complexe en problèmes plus simple qui sont eux mêmes découpés 
+en problèmes plus simples. On découpe jusqu'à ne plus avoir que des problèmes 
+simples.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Il existe aussi l'analyse <b>ascendante</b>: ayant à sa disposition des 
+procédures simples, on les assemble en les faisant appeler par des procédures 
+plus complexes pour atteindre la solution.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Si le projet est entièrement nouveau, on fait plutôt une analyse descendante; si 
+on travaille sur un projet possédant déjà toutes les procédures simples, on 
+raisonnera en analyse ascendante.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Rien d'empêche d'avoir une analyse mixte.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On rappelle:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque procédure effectue une tache précise.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Les procédures sont composées des <b>'Sub'</b> et des '<b>Function</b>'. 
+</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Une <b>procédure est un ensemble d'instructions, de lignes de code</b>, un 
+groupement d'instructions bien définies effectuant une tache précise.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">Les procédures 'Sub':</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Elles débutent par le mot <font color="#0000ff">Sub</font> et se terminent par
+<font color="#0000ff">End Sub.</font> </font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Sub MaProcédure()</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp; A=1</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">End Sub</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Pour appeler la Sub:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MaProcedure()</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">Les procédures 'Function':</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2">Les 'Function' retournent une valeur. </font>
+</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Elles débutent par&nbsp; <font color="#0000ff">Function</font> et se terminent par
+<font color="#0000ff">End Function</font>.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff">Function SurfaceCercle( Rayon as Single)</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff">
+&nbsp;&nbsp;&nbsp;&nbsp;Return 3.14*Rayon*Rayon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+'Return indique ce que la fonction doit retourner </span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+End Function</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="FONT-FAMILY: Courier New">Dans la procédure qui appelle, il faut 
+une variable pour récupérer la valeur retourner par la Fonction:</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff" size="2">
+<span style="FONT-FAMILY: Courier New">S=  </span></font>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff">SurfaceCercle</font></span><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34"> On rappelle que le 
+nom de la procédure doit être </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font face="Courier New" size="2">
+<b>en minuscule avec la première lettre de chaque&nbsp; mot en majuscule</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff">SurfaceCercle() </font>est correct.</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Pourquoi utiliser des 
+procédures?</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">D'abord , dans certains cas, <b>c'est obligatoire!</b>! Il y a 
+les procédures évènements automatiquement crées par VB. Ensuite, dès que l'on 
+veut écrire du code, il faut créer des procédures Sub ou Function dans les 
+modules de formulaire ou dans les modules standard (voir <a href="v5-10.htm">
+5-10</a>)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La programmation fonctionnelle avec découpage 
+en procédures a des avantages:</font></p>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On évite la répétition du même code:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Si il faut 30 lignes de code pour faire un 
+    calcul et que le calcul est effectué 10 fois dans le programme, il est 
+    pratique de créer une <font color="#0000FF">Sub CalculTotal()</font> 
+    contenant les 30 lignes de calcul et d'appeler 10 fois la Sub.</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Voici la Sub:</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">Public Sub CalculTotal()</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">A=B+C</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">D=E+3</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">..</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Voici les appels:</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">CalculTotal()</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">..</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">CalculTotal()</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On simplifie les modifications:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">S'il y a une modification à faire dans le 
+    calcul, la modification est effectuée 1 fois (Avec 10 fois le code du calcul 
+    disséminé dans le programme, on risque d'oublier de modifier un des codes).
+    </font></p>
+  </blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On&nbsp; introduit une abstraction qui 
+  clarifie le code:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2" color="#0000FF">CalculTotal() </font>
+    <font face="Courier New" size="2">est plus compréhensible que</font><font face="Courier New" size="2" color="#0000FF"> 
+    A=B+C....</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">On oublie le code interne à la procédure, 
+    pour ne plus se souvenir que de la fonction de la procédure: La procédure 
+    fait le Calcul du total..</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">On masque ainsi l'implémentation.</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On&nbsp; réduit la complexité:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Chaque tache complexe est décomposée en 
+    plusieurs procédures qui elles-mêmes sont décomposées en procédures plus 
+    simples. </font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On améliore la portabilité:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">On isole dans les procédures le code non 
+    portable et on le groupe.</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Si on doit effectuer un changement 
+    (changement de type de base de données par exemple en modifiant un programme 
+    pour qu'il fonctionne sous MySQL alors qu'il fonctionnait sous Acces), il 
+    suffit de modifier uniquement les procédures d'accès à la base de données.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <b><font face="Courier New" size="2">On peut masquer certains fonctions:</font></b></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+    <font face="Courier New" size="2">Certaines fonctions sont complexes et leur 
+    code est peu intéressante, une fois écrite il faut mieux ne plus les voir. 
+    (fonction booléens complexes)</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">La 'cohésion' de la 
+procédure doit être importante:</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008080"><span style="font-family: Courier New"><b>La 'cohésion' </b>
+fait référence aux<b> liens établis entre les opérations de la procédure </b>
+DANS la procédure.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Un exemple:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La <font color="#0000FF">Sub Carré()</font> à 
+une forte cohésion: elle est entièrement consacrée à une tache: le calcul du 
+carré d'un nombre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La <font color="#0000FF">Sub CarréEtCube()</font> 
+qui calcul le carré ou le cube d'un nombre a une cohérence faible!! (Il vaut 
+mieux dans ce cas écrire une procédure Carré() et une procédure Cube() )</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Compris?</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si la cohésion est faible , il a été prouvé 
+que les procédures contenaient plus d'erreurs de programmation.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font face="Courier New" size="2">Donc <b><font color="#FF0000">une procédure 
+ne doit faire qu'une seule chose</font></b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+&nbsp;</p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On parle ici de <b>cohésion fonctionnelle:</b> 
+la fonction de la procédure est unique.</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+EffaceFichier()</font>, <font color="#0000FF">CalculAge()</font> ont une bonne 
+cohésion fonctionnelle,&nbsp; <font color="#0000FF">SaisirDate&amp;CalculAge()</font> 
+a une moins bonne cohésion.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe d'autres sortes de cohésion:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La <b>cohésion temporelle</b>:</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Différentes opérations qui 
+n'ont rien a voir entre elles doivent être effectuées au même moment:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: La <font color="#0000FF">Sub Demarrage()</font> appelée au début d'un 
+programme va ouvrir les fichiers, initialiser les variables, lire le fichier de 
+configuration.</font></p>
+</blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La <b>cohésion séquentielle</b>:</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Lorsque les opérations qui n'ont rien à voir 
+entre elles doivent impérativement être effectuées dans un <b>ordre précis</b>:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: La <font color="#0000FF">Sub 
+CalculAnnéeRetraite()</font> qui a partir de la date de naissance va calculer 
+l'age puis l'année de retraite. (On pourrait aussi dans ce cas écrire une 
+routine CalculAge() qui serait appelée par CalculAnnéeRetraite() )</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Certaines cohésion sont <font color="#FF0000">à éviter</font>: </font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">La cohésion de communication: </font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Les opérations travaillent sur les <b>mêmes 
+données</b> mais n'ont pas de relation.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">ImprimeAndEffaceTableau()</font> me parait à éviter: 
+écrire les procédures ImprimeTableau() et EffaceTableau()</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">D'autres sont <font color="#FF0000">à bannir</font>:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La <b>cohésion logique</b>:</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; La sélection des opérations 
+(sans relation entre elles) à effectuer est pilotée par un paramètre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Seul le paramètre est 
+commun!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; La Sub
+<font color="#0000FF">ImprimerTableauAfficherResultat</font> 
+(Flag) ou le Flag indique s'il faut imprimer ou afficher est à bannir.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Le 'couplage' 
+entre procédures doit être modéré:</span></font></span></p>
+<font face="Courier New">
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">
+<font color="#008080">Le couplage traite des <b>connexions entre les différentes 
+procédures</b>, <b>il doit être modéré</b>, ce qui signifie qu'il doit y avoir 
+peu de connexions.</font><ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2"><b>
+  Une procédure doit ne communiquer qu’avec un nombre &quot; minimum &quot; d’autres 
+  procédures</b> du logiciel. L’objectif est de minimiser le <i><b>nombre </b>
+  </i>d'interconnexions entre les procédures. L'intérêt de cette règle est de 
+  garantir un meilleur respect de la protection des procédures.</font> </li>
+</ul>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;</p>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+  Lorsque deux procédures communiquent entre elles, <b>l’échange d’information 
+  doit être minimal</b>. Il s'agit de minimiser la </font></font>
+  <font face="TimesNewRoman"><font size="2"><font face="Courier New">taille</font><i><font face="Courier New" color="#0000ff">
+  </font></i></font><font face="Courier New" size="2">des interconnexions entre 
+  modules.</font></font> </li>
+</ul>
+<font face="Courier New">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Eviter le tout 'variables globales'.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Une Sub ayant 2 paramètres c'est bien, une Sub en ayant 15 c'est trop.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;</p>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+  Lorsque deux procédures communiquent, <b>l’échange d’information doit être 
+  explicite</b>: </font> </li>
+</ul>
+</font>
+<blockquote>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font face="Courier New" size="2">
+  Eviter qu'une variable soit visible dans une procédure, alors qu'elle est 
+  déclarée dans une autre.</font> 
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">
+  <font face="Courier New" size="2">Si vous modifié des variables globales 
+  utilisées par un autre module c'est dangereux!!</font><p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">
+  <font face="Courier New" size="2">Si vous utilisez un paramètre pour&nbsp; 
+  passer une données, c'est explicite, c'est Ok.</font></blockquote>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;</p>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" size="2">Toute information dans une procédure doit 
+  être répartie en deux catégories : <b>l’information privée et l’information 
+  publique.</b> Ce principe permet de modifier la partie privée sans que les 
+  clients (</font><i><font face="Courier New" size="2">fonctions utilisant cette 
+  procédure</font></i><font face="Courier New"><font size="2">) soient 
+  confrontés à un quelconque problème à cause de modifications ou de 
+  changements.</font></font></li>
+</ul>
+<blockquote>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font size="2" face="Courier New">&nbsp;Plus la partie publique est petite, 
+  mieux c'est..</font><p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" size="2">On déclarera en début de procédure des 
+  variables privées, et on travaillera sur ses variables privées; seul le 
+  résultat sera accessible de l'extérieur.</font></blockquote>
+<p>&nbsp;</p>
+</span>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Une procédure doit donc être autonome:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#FF0000">Une procédure est autonome et 
+ne doit pas lire ni modifier directement les variables du programme qui 
+l'appelle, sans passer par des paramètres.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Squelette d'un 
+programme:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Exemple simpliste de l'agencement des 
+procédures:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">De manière générale, le programme est composé 
+de procédure, en appelant d'autres, qui en appelle d'autres..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'Squelette' de programme:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Démarrage</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+OuvrirFichier()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; LireConfig()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+InitialiserVariable()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; LireDonnées()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Quitter</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+EnregistrerDonnée()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+FermerFichier()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voici la&nbsp; Sub Main(), procédure de 
+démarrage du programme :</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Main()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Démarrage()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'puis affiche le formulaire principal</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans le formulaire principal, un bouton 
+'Quitter' déclenche la Sub suivante:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub BoutonQuitter_Click(..)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Quitter()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un bouton 'Nouveau' (travail sur de nouvelle 
+données) contient:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Nouveau_Click(..)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+EnregistrerDonnée()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+InitialiserVariable()</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque que </font>
+<font face="Courier New" size="2" color="#0000FF">EnregistrerDonnée()</font><font face="Courier New" size="2">et
+</font><font face="Courier New" size="2" color="#0000FF">InitialiserVariable()
+</font><font face="Courier New" size="2">sont appelés de plusieurs endroits.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite il suffit d'écrire tous le code des 
+Sub.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Les paramètres</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Dans quel ordre les mettre?</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un Sub reçoit 3 paramètres: P1 qui est une 
+donnée qu'utilise la Sub, P2 qui est modifié par la Sub , P3 qui contient un 
+résultat retourné par la Sub.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Et bien il est conseillé de les mettre dans 
+l'ordre P1, P2, P3&nbsp;&nbsp; (<b>Entrée, Modification, Sortie</b>)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple <font color="#0000FF">Sub CalculCarré(nombre, 
+carré) </font>'quand on appelle cette Sub on envoie un nombre, on récupère le 
+carré.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">S'il y a une variable d'erreur ou d'état, 
+la mettre en fin.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Sub Divise(Nombre1, Nombre2, CalculImpossible) </font>
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'cette routine calcule Nombre1/Nombre2 mais retourne CalculImpossible=True si 
+Nombre2 est égal à zéro.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Nombre de paramètres?</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">7 maximum, au delà de 7 on s'y perd!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans les 7, il peut y avoir des tableaux.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Paramètres pour plusieurs routines:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si plusieurs routines utilisent les mêmes 
+paramètres, les mettre dans le même ordre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">AfficheText(LeTexte, 
+Couleur)</font> et&nbsp; <font color="#0000FF">ImprimeText(LeTexte, couleur)</font> 
+sont cohérent.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Ne pas utiliser de paramètre comme variable 
+de travail.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub calcul (A, B)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">A=A+2&nbsp; </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Est à éviter: le paramètre A ne contient plus la valeur d'entrée!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">car on a utiliser A comme variable de travail.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Faire plutôt:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Sub calcul (A, B)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2" color="#0000FF">Dim V As Integer= A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'On passe la valeur du paramètre dans 
+une variable locale.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">V=V+2&nbsp;
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'C'est mieux! A 
+contient toujours la valeur d'entrée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut donc déclarer en début de Sub des 
+variables locales propres à la Sub et travailler avec elles dans la Sub. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Mettre des commentaires en début de sub:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Sub Divise(Nombre1, Nombre2,Resultat, 
+CalculImpossible)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'***Division de 2 Nombres</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'Entrée: Nombre1, Nombre2 de 
+type Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'Sortie: Résultat de type 
+Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'Teste Nombre2 si =0 retourne 
+CalculImpossible=True</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">If Nombre2= 0 then</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+CalculImpossible=True: Exit Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Resultat=Nombre1/Nombre2</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Tester la validité des paramètres en début 
+de Sub:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voir l'exemple précédent</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">If Nombre2= 0 then&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'teste le paramètre Nombre2 et quitte la Sub 
+s'il n'est pas valide. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est mieux de le faire au début pour tous les 
+paramètres plutôt que de le faire dans toute la procédure.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Utiliser une 'Sub' ou 
+une 'Function'?</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Les puristes diront qu'il faut utiliser une <b>
+fonction</b> quand on a <b>une valeur de sortie (une seule)</b>. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Plusieurs paramètres d'entrée sont possible 
+par contre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La fonction <font color="#0000FF">FileExist(),</font> 
+avec comme entrée le nom d'un fichier, retourne uniquement un Booléen (True ou False), 
+c'est bien une fonction qu'il fallait utiliser.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut élargir la définition en employant une 
+fonction quand <b>l'objectif principal est de retourner la valeur indiquée dans 
+le nom de la fonction:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>&nbsp;&nbsp; </b><font color="#0000FF">
+MetAuFormat( In, Out)</font> transforme le texte 'In'&nbsp; en&nbsp; 'Out'; si 
+la fonction à échoué elle retourne False.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On l'utilisera comme cela:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">If MetAuFormat(In, Out) = True 
+Then&nbsp; LeText.Text=Out</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On aurait pu utiliser une Sub, avec comme 
+troisième paramètre une variable indiquant le succès ou l'échec.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>&nbsp; </b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">MetAuFormat( In, Out, Succes)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Certains utilisent des noms de variable 
+commençant par</font><font face="Courier New" size="2" color="#0000FF"> Is
+</font><font face="Courier New" size="2">afin d'indiquer clairement que c'est 
+une fonction et ce qu'elle retourne:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">IsOpen()</font> pour 
+voir si un fichier est ouvert (retourne True si le fichier est ouvert). ce qui 
+permet d'utiliser:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">If IsOpen(&quot;monfichier&quot;) Then...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Programmation 
+défensive:</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est comme quand on conduit une voiture; il 
+faut se méfier des autres: bien regarder aux croisements et ralentir, même si on 
+a la priorité!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut donc:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Tester la validité des paramètres en début 
+de Sub:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On l'a déjà vu:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">If nombre2= 0 then&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'teste le paramètre Nombre2 et quitte la Sub 
+s'il n'est pas valide ce qui évite une division par zéro si l'expression 
+nombre1/nombre2 est utilisée. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est mieux de le faire au début pour tous les 
+paramètres plutôt que de le faire dans toute la procédure.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut le faire surtout si les données 
+viennent de l'&quot;extérieur&quot;: <b>fichier, réseau</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut encore plus le faire si c'est <b>
+l'utilisateur</b> qui a saisi les données.</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Vérifier si la données est dans la plage 
+attendue:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Si on attend le numéro d'un 
+jour du mois, vérifier que c'est un nombre, s'il est positif, compris entre 1 et 
+31, entier..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Vérifier si la données est une String valide:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp; Si on attend un nom de fichier, 
+vérifier que c'est du texte, éliminer les espaces en début et fin, y a t-il une 
+extension? des caractères invalides? </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En VB il y a des fonctions qui font cela.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Tester la validité des paramètres de sortie:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;&nbsp;&nbsp;<font face="Courier New" size="2"><b> </b>Avant de les
+retourner.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Prendre en charge les erreurs:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a des procédures 'tolérantes':</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si une valeur n'est pas valide, on peut donner 
+une valeur par défaut, redonner la précédente valeur..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est le cas des prises de température à une 
+fréquence importante. S'il manque une valeur; reprendre la précédente.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a des procédures 'strictes', cela 
+entraîne une des actions suivantes:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'arrêt du programme!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure redemande la valeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Elle retourne une variable indiquant qu'elle a 
+échoué</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Pendant le développement utiliser les 
+assertions</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est une manière de se contrôler soi-même <b>
+en cours de développement</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On place des assertions dans le code:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si elles sont vraie c'est que cela se passe 
+comme prévu.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si elles sont fausses c'est qu'une erreur 
+inattendue, inacceptable se produit. </font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" size="2"><b>Debug.Assert</b> affiche une fenêtre 
+  Windows et stoppe le programme si une assertion(une condition) passe à <b>
+  False</b>.</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">Debub.Assert(Assertion)</span></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">Debub.Assert(Assertion, Message1)</span></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">Debub.Assert(Assertion, Message1, 
+  Message2)</span></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" size="2">L'exemple suivant vérifie si le paramètre 
+  'type' est valide. Si le type passé est une référence null (Nothing dans 
+  Visual Basic), Assert&nbsp; ouvre une boite de dialogue nommé 'Echec Assertion' 
+  avec 3 boutons 'Abandonner, Recommencer' 'Ignorer'.. La liste des appels est 
+  affichée dans la fenêtre (procédure en cours en tête de liste, module et 
+  numéro de ligne en première ligne)<br>
+  &nbsp;<br>
+  <font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Public Shared 
+  Sub UneMethode (type As Type, Typedeux As Type)<br>
+  Debug.Assert( Not (type Is Nothing), &quot;Le paramètre Type est=Nothing &quot;, &quot;Je ne 
+  peux pas utiliser un Nothing&quot;)</span></font></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">....<br>
+  End Sub UneMethode<br>
+&nbsp;</span></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <span style="background-color: #FFFFFF"><font face="Courier New" size="2">Il 
+  n'est pas souhaitable que l'utilisateur&nbsp; puisse voir les messages des 
+  assertions, elles disparaissent dans le code de production.</font></span></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  &nbsp;</p>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+  <span style="background-color: #FFFFFF"><font face="Courier New" size="2"><b>
+  En résumé:</b> Une procédure doit avoir:</font></span></p>
+</blockquote>
+<dl compact>
+  <dd><font color="#008000" face="Courier New"><b>de la modularité:</b> un sous-programme réalise une tâche et une seule (par 
+  exemple, une fonction de calcul ne doit pas afficher de résultat)&nbsp;;
+  </font> </dd>
+  <dd>&nbsp;</dd>
+  <dd><font color="#008000" face="Courier New"><b>de l'autonomie:</b> un sous-programme est autonome et ne doit pas lire ni 
+  modifier directement les variables du programme qui l'appelle, sans passer par 
+  des paramètres&nbsp;; </font> </dd>
+  <dd>&nbsp;</dd>
+  <dd><font color="#008000" face="Courier New"><b>de la transparence:</b> un sous-programme doit être conçu de façon à ce que le 
+  programmeur qui y fait appel (non nécessairement son concepteur) n'ait pas à 
+  tenir compte des choix du concepteur&nbsp;; </font> </dd>
+  <dd>&nbsp;</dd>
+  <dd><font color="#008000" face="Courier New"><b>de la convivialité: </b>
+  l'appel du sous-programme doit être la 
+  plus évidente possible. </font> </dd>
+</dl>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-100.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-120.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-110.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

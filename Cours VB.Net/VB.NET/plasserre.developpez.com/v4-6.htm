@@ -1,0 +1,1833 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:41 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les fichiers  FileOpen Streamer</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.6</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les fichiers.</font></b></td>
+    <td width="9%" height="76"><a href="v4-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vrepert.JPG" width="58" height="49"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment lire et écrire 
+dans des fichiers du texte, des octets, du XML du Rtf ?</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les Classes du 
+Framework</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">FileOpen</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les objets</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les nouveautés de VS 
+2005</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">Comment
+ouvrir une boite de dialogue pour choisir un fichier?&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">Un
+exemple de classe permettant d'enregistrer une variable structurée avec des
+FileStream.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Généralités et rappels:</font></span></p>
+<p><font face="Courier New" size="2">Le mot&nbsp; '<b>fichier</b>'&nbsp; est a prendre au sens informatique: ce n'est pas 
+un ensemble de fiches mais plutôt un ensemble d'octets. Un fichier peut être un 
+programme (Extension .EXE), du texte (Extension .TXT ou .DOC....), une image 
+(Extension .BMP .GIF .JPG...), une base de données (.MDB..) du son, de la 
+vidéo....</font></p>
+<p><font face="Courier New" size="2">Pour travailler avec du texte, des octets, 
+des données très simple (sans nécessité d'index, de classement..), on utilise les méthodes décrites dans 
+cette page: travail direct 
+dans <b>les fichiers séquentiels, aléatoires, binaires. </b>Mais dès que les informations 
+sont plus structurées, il faut utiliser les <b>bases de données </b>(Il y a 
+plusieurs chapitre plus loin traitant des bases de données).</font></p>
+<p><font face="Courier New" size="2">Un fichier a un <b>nom</b>: 'Image.GIF' , une <b>extension</b>: '.GIF' qui en 
+indique généralement le type de contenu , des <b>attributs</b> (Longueur, Date de 
+création, de modification, Fichier en lecture seule ou non..).</font></p>
+<p><font face="Courier New" size="2">On voit cela dans l'explorer Windows:</font></p>
+<p><img border="0" src="vfichier.gif" width="343" height="74"></p>
+<p><font face="Courier New" size="2">&nbsp;</font></p>
+<p><font face="Courier New" size="2">Un fichier est composé d'<b>enregistrements</b> qui sont des 'paquets' de 
+données; suivant le type de fichier un enregistrement peut correspondre à une 
+ligne, un octet, un groupe d'octets..</font></p>
+<p><font face="Courier New" size="2">Un fichier peut être vu comme contenant du 
+texte, de l'XML, des octets.</font></p>
+<p><font face="Courier New" size="2"><b>Comment utiliser les fichiers? Voici le 
+plan de cet article: </b> 
+</font> </p>
+<p><u><font face="Courier New"><b><font color="#800080">A- Il est conseillé de 
+travailler avec les Classes du Frameworks </font></b></font></u></p>
+<p><font face="Courier New" size="2"><b><font color="#008000">Avec la Classe FileInfo</font></b>, on obtient 
+des <b>renseignements</b> sur le fichier.</font></p>
+<p><font face="Courier New" size="2">Pour <b>lire écrire </b>dans un fichier (en dehors des bases de données), il y a 
+plusieurs méthodes:</font></p>
+<p><b><font color="#008000" face="Courier New" size="2">&nbsp;Avec la Classe 
+System.Io on a a notre disposition StreamReader StreamWriter BinaryReader 
+BinaryWriter FileStream:</font></b></p>
+<p><font face="Courier New" size="2">Pour lire ou écrire dans un fichier, il faut l'<b>ouvrir (</b><font color="#0000FF">Open</font><b>)</b>, <b>lire 
+ou écrire en utilisant un flux de données (</b><font color="#0000FF">Stream</font><b>)</b> puis le <b>refermer 
+(</b><font color="#0000FF">Close</font><b>)</b>.</font></p>
+<p><font face="Courier New" size="2">Le <b>Stream</b> (flux, torrent, courant) est une notion générale, c'est donc 
+un flux de données provenant ou allant vers un fichier, un port, une connexion 
+TCP/IP...</font></p>
+<p><font face="Courier New" size="2">L'accès est séquentiel: les données sont traitées&nbsp; du début à la fin du 
+fichier.</font></p>
+<p>&nbsp;</p>
+<p><u><b><font face="Courier New" color="#800080">B- Il existe toujours la méthode classique du
+FileOpen de VB :</font></b></u></p>
+<p><font face="Courier New" size="2">On ouvre le fichier en mode séquentiel, aléatoire, binaire, 
+on lit X enregistrements, on referme le fichier.</font></p>
+<p>&nbsp;</p>
+<p><u><b><font face="Courier New" color="#800080">C- Avec certains objets, on 
+gèrent automatiquement les lectures écritures sur disque.</font></b></u></p>
+<p><font face="Courier New" size="2">Comme avec le RichTextBox par exemple.
+</font> </p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>En résumé</b>, pour travailler sur 
+les fichiers, on dispose:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">de l'espace de nom System.IO avec les 
+  Classes et objets .NET</font></li>
+  <li><font face="Courier New" size="2">des instructions VisualBasic runtime 
+  traditionnelles: FileOpen WriteLine..</font></li>
+  <li><font face="Courier New" size="2">des instructions du FSO (FileObjetSystem) 
+  pour la compatibilité avec les langages de script.</font></li>
+</ul>
+&nbsp;<p><font face="Courier New" size="2">Les 2 derniers font appel au premier; 
+donc pourquoi ne pas utiliser directement les Classe .NET?</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">A- Classe&nbsp; FileInfo et 
+File, </span></font></b>
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="5" color="#0000FF">Stream.</font></span></p>
+<p><font face="Courier New" size="2">Pour travailler sur les fichiers, il faut au préalable taper:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.IO</font></p>
+</font>
+<p><font face="Courier New" size="2">La classe </font>
+<font face="Courier New" size="4"> <b>File</b></font><font face="Courier New" size="2"> est utilisée pour travailler sur un ensemble de fichier 
+ou un fichier (sans instanciation préalable: ce sont des méthodes statiques), 
+la Classe <b>FileInfo</b> donne des renseignements sur un fichier particulier 
+(Il faut instancier au préalable un objet FileInfo).</font></p>
+<p><font face="Courier New" size="2">La Classe <b>File</b> possède les méthodes suivantes.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Exists</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teste si le fichier existe.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Create</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Crée le fichier</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Copy</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Copie le fichier</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Delete </font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Efface le fichier</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>GetAttributes , SetAttributes </b></font>&nbsp;&nbsp;&nbsp; 
+Lire ou écrire les attributs.</font></p>
+<p><font color="#808000" face="Courier New" size="2"><b>GetCreationTime , 
+GetLastAccessTime , GetLastWriteTime </b></font>
+<font face="Courier New" size="2">et les Set.. correspondant.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Move</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Déplacement de fichier</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">Replace</font></b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Framework 2</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">ReadAllText, 
+WriteAllText</font></b><font face="Courier New" size="2">&nbsp;&nbsp; Framework 
+2 lire ou écrire un texte dans un fichier</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">ReadAllLines, 
+WriteAllLines</font></b><font face="Courier New" size="2">&nbsp;&nbsp; Framework 
+2 lire ou écrire des lignes dans un fichier</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">ReadAllBytes, 
+WriteAllBytes</font></b><font face="Courier New" size="2">&nbsp;&nbsp; Framework 
+2 lire ou écrire des octets dans un fichier</font></p>
+<p><font face="Courier New" size="2">Toutes les méthodes <b><font color="#808000">Open</font></b> (pour un 
+FileStream) <b><font color="#808000">OpenRead, OpenWrite, OpenText.</font></b></font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><b>Un fichier existe-t-il?</b> Afficher True s'il existe:</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Label1.Text = File.Exists(&quot;vessaggi.gif&quot;).ToString</span></p>
+</font>
+<p><font face="Courier New" size="2">Exists est bien une 'méthode de Classe': 
+pas besoin d'instancier quoi que ce soit.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Déplacer un </font></b><font face="Courier New" size="2"><b>
+fichier de c: vers d:?</b> </font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">File.Move(&quot;c:\monText.txt&quot;, &quot;d:\monText.txt&quot;)</span></p>
+</font>
+<p><b><font face="Courier New" size="2">Copier un </font></b><font face="Courier New" size="2"><b>
+fichier de c: vers d:?</b> </font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">File.Copy(&quot;c:\monText.txt&quot;, &quot;d:\monText.txt&quot;, 
+True)</span></p>
+</font>
+<p><font face="Courier New" size="2">Le dernier argument facultatif (framework 
+2) permet de remplacer cible s'il existe.</font></p>
+<p><b><font face="Courier New" size="2">Sauvegarde un fichier et le remplace</font></b><font face="Courier New" size="2"><b>?</b> 
+(Framework 2)</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">File.Copy(&quot;c:\monText.txt&quot;, &quot;c:\newText.txt&quot;,, 
+&quot;c:\newText.bak &quot; True)</span></p>
+</font>
+<p><font face="Courier New" size="2">Sauvegarde monText.tx sans un .bak , puis&nbsp; 
+copie NewText.txt dans monText.tx ; True permet de remplacer cible s'il existe.</font></p>
+<p><font face="Courier New" size="2"><b>
+Efface un fichier:</b> </font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">File.Delete(&quot;d:\monText.txt&quot;)</span></p>
+</font>
+<p><font face="Courier New" size="2"><b>Lire la totalité d'un fichier texte?</b> 
+(Framework 2)</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Dim myText As String =File.ReadAllText(&quot;c:\monText.txt&quot;)</span></p>
+<p><span style="background-color: #FFFFFF">File.WriteAllText(&quot;c:\monText.txt&quot;, 
+myText) </span>
+</font>
+<span style="background-color: #FFFFFF">
+<font SIZE="2" face="Courier New">
+'pour réecrire le texte dans un autre fichier.</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" size="2">La 
+méthode <font color="#0000FF">AppendAllText</font> existe aussi.</font></span></p>
+<p><font face="Courier New" size="2"><b>Lire et mettre dans un tableau les 
+lignes d'un fichier texte?</b> (Framework 2)</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Dim myLines() As String =File.ReadAllLines(&quot;c:\monText.txt&quot;)</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p><b>Lire et mettre dans un tableau les octets d'un fichier?</b> (Framework 2)</p>
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Dim myBytes() As Byte =File.ReadAllBytes(&quot;c:\monText.txt&quot;)</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p><b>Un fichier est-il en lecture seule?</b></p>
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">If File.GetAttributes(&quot;c:\monText.txt&quot;) 
+And FileAttributes.ReadOnly Then..</span></p>
+<p>&nbsp;</p>
+</font>
+<p><font face="Courier New" size="2">La Classe </font>
+<font face="Courier New" size="4"> <b>FileInfo</b></font><font face="Courier New" size="2"> possède les propriétés suivantes.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Name</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Nom du fichier (sans chemin)</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>FullName</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Nom complet avec chemin</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Extension</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extension&nbsp;&nbsp; (.txt par exemple)</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Length</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Longueur du&nbsp; fichier.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Directory</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Répertoire parent</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>DirectoryName</b></font>&nbsp;&nbsp;&nbsp;Répertoire ou se trouve le fichier</font></p>
+<p><b><font color="#808000" face="Courier New" size="2">Exists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font face="Courier New" size="2">Existe?</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>LastAccessTime</b></font>&nbsp;&nbsp;Date du dernier accès, LastWriteTime existe aussi.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Attributes</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Attributs</font></p>
+<p><font face="Courier New" size="2">Il faut faire un <font color="#0000FF">AND</font> entre 
+<font color="#0000FF">Attributes</font> et une valeur de l'énumération 
+<font color="#0000FF">FileAttributes</font> ( Archive, Compressed, Directory, Encrypted, Hidden, Normal, 
+ReadOnly, System, Temporaly).</font></p>
+<p><font face="Courier New" size="2">Pour tester ReadOnly par exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim sNom As String = &quot;c:\monfichier.txt&quot;</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Dim Fi As FileInfo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">
+'On déclare un FileInfo</font></span></p>
+<p class="titre3" style="margin:0 0cm; ">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Fi=New FileInfo( sNom)&nbsp; </font>
+<font face="Courier New" size="2">
+'On instancie ce FileInfo avec comme paramètre le nom du fichier</font></span></p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Fi.Attributes And FileAttributes.ReadOnly&nbsp;&nbsp;</span>&nbsp; </font>
+<font face="Courier New" size="2">
+Retourne True si le fichier est ReadOnly</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2">Et aussi:</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2"><font color="#0000FF">Fi.Name</font> retourne 
+&quot;monfichier.txt&quot;</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2"><font color="#0000FF">Fi.FullName</font> 
+retourne &quot;c:\monfichier.txt&quot;</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font SIZE="2" color="#0000FF" face="Courier New">Fi.Name.Substring(0, 
+Fi.Name.LastIndexOf(&quot;.&quot;)) </font><font SIZE="2"><font face="Courier New">
+retourne &quot;monfichier&quot; : pas de chemin ni d'extension.</font></p>
+</font>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p><font face="Courier New" size="2">Et les méthodes suivantes:</font></p>
+<p><b><font color="#808000" face="Courier New" size="2">Create, Delete, MoveTo</font></b></p>
+<p><b><font color="#808000" face="Courier New" size="2">AppendTex, CopyTo Open, OpenRead, OpenWrite, 
+OpenText..</font></b></p>
+<p><font face="Courier New" size="2">On voit que toutes les informations sont accessibles.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><b>Pour un fichier, afficher successivement le nom, le nom avec répertoire, le répertoire, la 
+longueur, la date de dernière écriture et si le fichier est en ReadOnly.</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim sNom As String = &quot;c:\monfichier.txt&quot;</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Dim Fi As FileInfo&nbsp; </font>
+<font face="Courier New" size="2">
+'On déclare un FileInfo</font></span></p>
+<p class="titre3" style="margin:0 0cm; ">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Fi=New FileInfo( sNom)&nbsp; </font>
+<font face="Courier New" size="2">
+'on instance ce FileInfo avec comme paramètre le nom du fichier</font></span></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;Nom=&quot;&amp; Fi.Name)</span></font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;Nom complet =&quot;&amp; Fi.FullName)</span></font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;Répertoire=&quot;&amp; Fi.DirectoryName)</span></font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;Longueur=&quot;&amp; Fi.Length.ToString)</span></font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;Date der modification=&quot;&amp; 
+Fi.LastWriteTime.ToShortDateString)</span></font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(&quot;ReadOnly=&quot;&amp; (Fi.Attributes And 
+FileAttributes.ReadOnly).ToString)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p><font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<img border="0" src="../localhost/C_/WINLDF/Site%20developpez.com/v2005.JPG" width="52" height="21"><b> 
+Classe My.Computer.FileSystem</b> en VS 2005.</span></font></p>
+<p><font face="Courier New" size="2">En VS 2005 il y a en plus la classe
+<font color="#0000FF">My.Computer.FileSystem</font> qui simplifie énormément les 
+choses:</font></p>
+<p><font face="Courier New" size="2">les méthodes <font color="#0000FF">CopyFile</font>,
+<font color="#0000FF">DeleteFile</font>, <font color="#0000FF">FileExits </font>
+permettent de copier, effacer un fichier ou de voir s'il existe. Il existe aussi
+<font color="#0000FF">RenameFile</font> et <font color="#0000FF">MoveFile</font>.</font></p>
+<p><font face="Courier New" size="2">Exemple :</font></p>
+<p><font face="Courier New" size="2">Afficher dans une MsgBox True si 'c:\config.sys' 
+existe.</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">MsgBox(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">My</font><font SIZE="2" color="#0000FF"><font face="Courier New">.Computer.FileSystem.FileExists(&quot;c:\config.sys&quot;).ToString)</font></p>
+</font>
+<p><font face="Courier New" size="2">Exemple :</font></p>
+<p><font face="Courier New" size="2"><b>Afficher la liste des fichiers qui sont 
+sous c:\</b>; ici on utilise <font color="#0000FF">GetFiles</font> qui retourne une 
+collection des fichiers.(count contient le nombre de&nbsp; fichiers, item () les 
+noms.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> 
+i = 0 </font><font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.Getfiles(&quot;c:\&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">).Count 
+- 1</font></p>
+<p><font color="#0000FF" face="Courier New">ListBox1.Items.Add(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.GetFiles(&quot;c:\&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">).Item(i))</font></p>
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Next</font><font face="Courier New" SIZE="2" color="#0000FF"> 
+i</font></p>
+<p><b>
+<font SIZE="2" face="Courier New">
+Un fichier existe t-il et est-il ouvert et utilisé par une autre application?
+</font>
+</b></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><font color="#0000ff" size="2">If</font><font size="2"> </font><font color="#0000ff" size="2">My</font><font size="2">.Computer.FileSystem.FileExists(</font><font color="#800000" size="2">&quot;</font><span style="background-color: #FFFFFF">c:\monText.txt</span><font color="#800000" size="2">&quot;</font><font size="2">)
+</font><font color="#0000ff" size="2">Then</p>
+</font><font size="2">
+<p></font><font color="#0000ff" size="2">Try</font></p>
+</font>
+<p><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp; </font><font size="2" face="Courier New" color="#008000">'on
+tente d'ouvrir un stream sur le fichier, s'il est déjà utilisé, cela
+déclenche une erreur.</font></p>
+<font size="2">
+<p></font><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp; </font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<font color="#0000ff" size="2">Dim</font><font size="2"> fs </font><font color="#0000ff" size="2">As</font><font size="2">
+IO.FileStream = </font><font color="#0000ff" size="2">My</font><font size="2">.Computer.FileSystem.GetFileInfo(</font><font color="#800000" size="2">&quot;</font><span style="background-color: #FFFFFF">c:\monText.txt</span><font color="#800000" size="2">&quot;</font><font size="2">).Open(IO.FileMode.Open,
+IO.FileAccess.Read)</p>
+<p>&nbsp;&nbsp; fs.Close()</p>
+<p></font><font color="#0000ff" size="2">Catch</font><font size="2"> ex </font><font color="#0000ff" size="2">As</font><font size="2">
+Exception</p>
+<p>&nbsp; MsgBox(</font><font color="#800000" size="2">&quot;</font></font><font color="#0000FF"><font size="2" face="Courier New">Le
+fichier&nbsp;</font><font SIZE="2" face="Courier New"><span style="background-color: #FFFFFF">
+est déjà ouvert</span><font size="2">&quot;</font></font></font><font SIZE="2" face="Courier New" color="#0000FF"><font size="2">)</p>
+<p></font><font color="#0000ff" size="2">End</font><font size="2"> </font><font color="#0000ff" size="2">Try</p>
+</font><font size="2">
+<p></font><font color="#0000ff" size="2">End</font><font size="2"> </font><font color="#0000ff" size="2">If</p>
+</font></font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4">Utiliser les &quot;Stream&quot;.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><font face="Courier New" size="2">Le <b>Stream</b> (flux, torrent, courant) est une notion générale, c'est donc 
+un flux de données provenant ou allant vers un fichier, un port, une connexion 
+TCP/IP...</font></p>
+<p><font face="Courier New" size="2">Ici on utilise un <font color="#0000FF">Stream</font> pour lire ou 
+écrire dans un fichier.</font></p>
+<p><font face="Courier New" size="2">L'accès est séquentiel: les données sont 
+traitées&nbsp;du début à la fin du 
+fichier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4">
+<b>Pour écrire</b></font><font face="Courier New" size="2"> dans un fichier texte:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il&nbsp; 
+faut instancer un objet de la classe <b>StreamWriter</b> . On écrit avec <b>
+Write </b>ou<b> WriteLine</b>.(ajoute un saut de ligne)&nbsp; Enfin on ferme 
+avec <b>Close</b>. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut instancier avec le constructeur de la classe StreamWriter et avec New, ou 
+par la Classe File.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim SW As New StreamWriter (&quot;MonFichier.txt&quot;)</span></font><span style="background-color: #FFFFFF">
+</span>' 
+crée ou si existe écrase</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe une surcharge permettant de ne pas 
+écraser mais d'ajouter à la fin du fichier:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim SW As New StreamWriter (&quot;MonFichier.txt&quot;, True)</span></font> 
+' crée ou si existe ajoute</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec la classe File:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim SW As&nbsp; StreamWriter=File.CreateText (&quot;MonFichier.txt&quot;)</span></font> 
+' crée ou si existe écrase</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim SW As StreamWriter = File.AppendText(&quot;MonFichier.txt&quot;)
+</span>
+</font>' crée ou si existe ajoute</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite pour écrire 2 lignes:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">SW.WriteLine (&quot;Bonjour&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">SW.WriteLine (&quot;Monsieur&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Enfin on ferme:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">SW.Close()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="4" face="Courier New">Pour lire</font><font size="2" face="Courier New"> 
+dans un fichier Texte:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut instancier un objet de la classe <b>StreamReader</b>. 
+On lit avec <b>Read </b>(un nombre d'octet) <b>ReadLine</b> (une ligne) <b>
+ReadToEnd</b> (de la position courante jusqu'à la fin). Enfin on ferme avec <b>
+Close</b>. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec le constructeur de la Classe Stream Reader:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim SR As New StreamReader (&quot;MonFichier.txt&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec la Classe File:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim 
+SR As&nbsp; StreamReader=File.OpenText (&quot;MonFichier.txt&quot;)</span></font><span style="background-color: #FFFFFF"> '</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Comment lire chaque ligne du fichier et s'arrêter à la fin?</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En effet on ne sait pas habituellement combien 
+le fichier contient de ligne, si le fichier contient 2 lignes il faut en lire 2 
+et s'arrêter sinon on tente de lire après la fin du fichier et cela déclenche une erreur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">3 solutions:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">1-Utiliser <b>ReadToEnd </b>qui lit en bloc jusqu'à la fin.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">2-Avant ReadLine mettre un <b>Try</b>: quand l'erreur 'fin de fichier' survient 
+elle est interceptée par Catch qui sort&nbsp; du cycle de lecture et ferme le 
+fichier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">3-Utiliser <b>Peek</b> qui lit dans le fichier un caractère mais sans modifier 
+la position courante de lecture.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La particularité de Peek est de retourner -1 s'il n'y a plus de caractère à lire 
+sans déclencher d'erreur, d'exception.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La troisième solution est la plus générale et la plus élégante:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Do Until SR.Peek=-1</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; Ligne=SR.ReadLine()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Loop</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Enfin on ferme:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">SR.Close()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+Notion de 'Buffer', utilisation de Flush.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En fait quand on écrit des informations sur le disque, le logiciel travaille sur 
+un buffer ou <b>mémoire tampon</b> qui est en mémoire vive. Si on écrit des lignes dans 
+le fichier, elles sont 'écrites' dans le buffer en mémoire vive. Quand le buffer est plein,(ou 
+que l'on ferme le fichier) 
+l'enregistrement du contenu du buffer est effectué effectivement sur le disque.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ce procédé est général à l'écriture et à la 
+lecture de fichier mais totalement transparent car le programmeur ne se 
+préoccupe pas des buffers.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Parfois, par contre, même si&nbsp; on a enregistré peu d'information, on veut être sûr 
+qu'elle est sur le disque, il faut donc forcer l'enregistrement sur disque même 
+si le buffer n'est pas plein, on utilise alors la méthode <b>Flush</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;
+<font color="#0000FF">SW.Flush()</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le fait de fermer un fichier par Close, appelle automatiquement Flush() ce qui 
+enregistre des données du buffer.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">B- Utiliser &quot;FileOpen</font></b></span><b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">&quot;.</span></font></b></p>
+<p><font face="Courier New" size="2">Visual&nbsp;Basic fournit <b>trois types d'accès au fichier</b>&nbsp;:
+</font> </p>
+<ul type="disc">
+  <li><font face="Courier New" size="2"><b>l'accès séquentiel</b>, pour lire et écrire des fichiers 
+  'texte' de manière 
+  continue, chaque donnée est enregistrée successivement du début à la fin&nbsp;; les enregistrements n'ont 
+  pas la même longueur, ils sont séparés par un séparateur (des&nbsp; virgules ou des retours à 
+  la ligne).</font></li>
+</ul>
+<blockquote>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="8%" id="AutoNumber4">
+  <tr>
+    <td width="100%">Philippe</td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="14%" id="AutoNumber5">
+  <tr>
+    <td width="100%">Jean-François</td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="7%" id="AutoNumber6">
+  <tr>
+    <td width="100%">Louis</td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2">On ne peut qu'écrire le premier 
+enregistrement puis le second, le troisième, le quatrième...</font></p>
+<p><font face="Courier New" size="2">Pour lire c'est pareil: on ouvre , on lit 
+le premier, le second, le troisième, le quatrième....</font></p>
+<p><font face="Courier New" size="2">Pour lire le troisième enregistrement , il faut lire&nbsp; avant les 2 
+premiers.</font></p>
+</blockquote>
+<ul type="disc">
+  <li><font face="Courier New" size="2"><b>l'accès aléatoire (Random)</b>, (on le nomme parfois <b>accès direct)</b> pour lire et écrire des fichiers texte ou binaire 
+  constitués d'enregistrements <b><i>de longueur fixe</i></b>&nbsp;; on peut avoir directement 
+  accès à un enregistrement à partir de son&nbsp; numéro. </font> </li>
+</ul>
+<blockquote>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="35%" id="AutoNumber7">
+  <tr>
+    <td width="100%">
+    <p style="margin-top: 0; margin-bottom: 0">Philippe</p>
+    <p style="margin-top: 0; margin-bottom: 0">1 place de la gare</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p style="margin-top: 0; margin-bottom: 0">Jean</p>
+    <p style="margin-top: 0; margin-bottom: 0">35 rue du cloître</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p style="margin-top: 0; margin-bottom: 0">Pierre</p>
+    <p style="margin-top: 0; margin-bottom: 0">14 impasse du musée</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p style="margin-top: 0; margin-bottom: 0">Louis</p>
+    <p style="margin-top: 0; margin-bottom: 0">sdf</td>
+  </tr>
+</table>
+&nbsp;<p><font face="Courier New" size="2">Les enregistrements ont une longueur fixe: il faut prévoir!! si on 
+décide de 20 caractères pour le prénom, on ne pourra pas en mettre 21, le 21ème 
+sera tronqué, à l'inverse l'enregistrement de 15 caractères sera complété par 
+  des blancs.</font></p>
+<p><font face="Courier New" size="2">Il n'y a pas de séparateur entre les 
+enregistrements.</font></p>
+<p><font face="Courier New" size="2">Les enregistrements peuvent être constitués d'un ensemble de variables: une 
+structure,&nbsp;ici prénom et adresse.</font></p>
+<p><font face="Courier New" size="2">Ensuite on peut lire directement n'importe 
+quel enregistrement,le second enregistrement par exemple, ou écrire sur le 
+3éme.(on comprend que, connaissant la longueur d'un enregistrement qui est fixe, 
+l'ordinateur peut calculer la position d'un enregistrement quelconque.)</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<ul type="disc">
+  <li><font face="Courier New" size="2"><b>l'accès binaire</b>, pour lire et 
+  écrire dans tous les fichiers , on lit ou écrit un nombre d'octet désiré à une 
+  position désirée..C'est comme l'accès direct, on peut lire le 36ème octet..</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><i><font face="Courier New" size="2">En pratique:</font></i></p>
+<p><font face="Courier New" size="2">Les fichiers séquentiels sont bien pratique pour charger une série de ligne, 
+(toujours la même)&nbsp; dans une ListBox par exemple.</font></p>
+<p><i><font face="Courier New" size="2">Faut-il utiliser les fichiers 
+séquentiels ou random (à accès aléatoire, à accès direct) pour créer par exemple <b>un petit carnet 
+d'adresse</b>?</font></i></p>
+<p><i><font face="Courier New" size="2">Il y a 2 manières de faire:</font></i></p>
+<ul>
+  <li><i><font face="Courier New" size="2">Créer un fichier random et lire ou 
+  écrire dans un enregistrement pour lire ou modifier une adresse.</font></i></li>
+  <li><i><font face="Courier New" size="2">Créer un fichier séquentiel. A 
+  l'ouverture du logiciel lire séquentiellement toutes les adresses et les 
+  mettre dans un tableau (de structure). Pour lire ou modifier une adresse: lire 
+  ou modifier un élément du tableau. En sortant du programme enregistrer tous 
+  les éléments du tableau séquentiellement.(Enregistrer dans un nouveau fichier, 
+  effacer l'ancien, renommer le nouveau avec le nom de l'ancien).</font></i></li>
+</ul>
+<i><font face="Courier New" size="2">Bien sur s'il y a de nombreux 
+  éléments dans une adresse, un grand nombre d'adresse, il faut utiliser une 
+  base de données.</font></i><p>&nbsp;</p>
+<p><img border="0" src="vicochev.GIF" width="32" height="34"></p>
+<p><b><font face="Courier New" size="2" color="#008000">Si on ouvre un fichier 
+en écriture et qu'il n'existe pas sur le disque, il est crée.</font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Si on ouvre un fichier 
+en lecture et qu'il n'existe pas, une exception est déclenchée (une erreur). On 
+utilisait cela pour voir si un fichier existait: on l'ouvrait, s'il n'y avait 
+pas d'erreur c'est qu'il existait. Mais maintenant il y a plus simple pour voir 
+si un fichier existe (File.Exists). </font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Si on ouvre un fichier 
+et que celui-ci est déjà ouvert par un autre programme, il se déclenche 
+généralement une erreur (sauf si on l'ouvre en Binaire, c'était le cas en VB6, 
+c'est à vérifier en VB.NET).</font></b></p>
+<p><font face="Courier New" size="2">Pour ouvrir un fichier on utilise <b>FileOpen</b></font></p>
+<p><b><font color="#0000FF" face="Courier New" size="2">FileOpen (FileNumber, FileName, Mode, Access, Share, 
+RecordLength)</font></b></p>
+<h4 class="dtH4"><font face="Courier New" size="2">Paramètres de FileOpen</font></h4>
+<dl>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>FileNumber</i> </font> </dt>
+  <dd><font face="Courier New" size="2">A tous fichier est affecté un numéro unique, c'est ce numéro que l'on 
+  utilisera pour indiquer sur quel fichier pratiquer une opération.. Utilisez la fonction <b>
+  FreeFile</b> pour obtenir le prochain numéro de fichier disponible. </font> </dd>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>FileName</i> </font> </dt>
+  <dd><font face="Courier New" size="2">Obligatoire. Expression de type <b>String</b> spécifiant un nom de 
+  fichier. Peut comprendre un nom de répertoire ou de dossier, et un nom de 
+  lecteur. </font> </dd>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>Mode</i> </font> </dt>
+  <dd><font face="Courier New" size="2">Obligatoire. Énumération </font> 
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">OpenMode</span></font><font face="Courier New" size="2"> spécifiant le mode d'accès au fichier&nbsp;: <b>Append</b>,
+  <b>Binary</b>, <b>Input (séquentiel en lecture)</b>, <b>Output (séquentiel en 
+  écriture)</b> ou <b>Random (accès aléatoire)</b>. </font> </dd>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>Access</i> </font> </dt>
+  <dd><font face="Courier New" size="2">Facultatif. Mot clé spécifiant les opérations autorisées sur le fichier 
+  ouvert&nbsp;: <b>Read</b>, <b>Write</b> ou <b>ReadWrite</b>. Par défaut, la valeur 
+  est <b>OpenAccess.ReadWrite</b>.&nbsp; </font> </dd>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>Share</i> </font> </dt>
+  <dd><font face="Courier New" size="2">Facultatif.&nbsp; Spécifiant si un autre programme peut avoir en même 
+  temps accès au même fichier&nbsp;: <b>Shared (permet l'accès aux autres 
+  programmes)</b>, <b>Lock Read (interdit l'accès en lecture)</b>, <b>
+  Lock Write (interdit l'accès en écriture)</b> et <b>Lock Read Write (interdit 
+  totalement l'accès)</b>. Le processus <b>OpenShare.Lock Read Write</b> 
+  est paramétré par défaut. </font> </dd>
+  <dt><font color="#0000FF" face="Courier New" size="2"><i>RecordLength</i> </font> </dt>
+  <dd><font face="Courier New" size="2">Facultatif. Nombre inférieur ou égal à 32&nbsp;767 (octets). Pour les fichiers 
+  ouverts en mode <b>Random</b>, cette valeur représente la longueur de 
+  l'enregistrement. Pour les fichiers séquentiels, elle représente le nombre de 
+  caractères contenus dans la mémoire tampon. </font> </dd>
+</dl>
+<p><font face="Courier New" size="2">Pour <b>écrire</b> dans un fichier on utilise</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Print , Write, WriteLine</font>. dans les fichiers 
+séquentiels</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">FilePut</font>&nbsp; dans les fichiers aléatoires</font></p>
+<p><font face="Courier New" size="2">Pour <b>lire</b> dans un fichier on utilise:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Input, LineInput</font> dans les fichiers séquentiels</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">FileGet</font> dans les fichiers aléatoires.</font></p>
+<p><font face="Courier New" size="2">Pour <b>fermer</b> le fichier on utilise <font color="#0000FF">FileClose()</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="2">Numéro de fichier</font></span><font face="Courier New" size="2"><span style="font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour repérer chaque fichier, on lui donne un 
+numéro unique (de type Integer).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La fonction <font color="#0000FF">FreeFile</font> retourne le premier 
+numéro libre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim <b>No</b> as Integer</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF"><b>No</b>= Freefile()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite on peut utiliser <b>
+<font color="#0000FF">No </font></b>pour repérer le fichier sur lequel on 
+travaille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">FileOpen( <b>No</b>, &quot;MonFichier&quot;, 
+OpenMode.Output)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Print(<b>No</b>,&quot;toto&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">FileClose (<b>No</b>)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">Fichier séquentiel:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Vous devez spécifier si vous voulez lire 
+(entrer) des caractères issus du fichier (mode
+<b>Input</b>), écrire (sortir) des caractères vers le fichier (mode <b>Output</b>) ou 
+ajouter des caractères au fichier (mode <b>Append</b>).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ouvrir le fichier 'MonFichier' en mode 
+séquentiel pour y écrire:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim No as integer</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">No= Freefile</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">FileOpen( No, &quot;MonFichier&quot;, 
+OpenMode.Output)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour écrire dans le fichier séquentiel: on 
+utilise <b>Write</b> ou <b>WriteLine Print ou PrintLine</b>:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La fonction <b>Print</b> écrit dans le fichier 
+sans aucun caractère de séparation.</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Print(1,&quot;toto&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Print(1,&quot;tata&quot;)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Print(1, 1.2)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Donne le fichier 'tototata1.2'</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La fonction <b>Write</b> insère des 
+points-virgules 
+entre les éléments et des guillemets de part et d'autre des chaînes au moment de 
+leur écriture dans le fichier, les valeurs booléens et les variables DateTime 
+sont écrites sans problèmes. </font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Write(1,&quot;toto&quot;)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Write(1,&quot;tata&quot;)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Write(1, 1.2)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Donne le fichier '&quot;toto&quot;;&quot;tata&quot;;1.2&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Attention</b> s'il y a des points-virgules dans 
+les chaînes , elles seront considérées comme séparateurs!! ce qui entraîne des 
+erreurs à la lecture; il faut mettre la chaîne entre &quot;&quot; ou bien&nbsp; remplacer le 
+point-virgule par un caractère non utilisé (# par exemple) avant de l'enregistrer puis 
+après la lecture remplacer '#' par ';'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut utiliser <b>Input </b>pour relire ces 
+données (Input utilise aussi le point-virgule comme séparateur. </font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">La fonction <b>WriteLine</b> insère un 
+caractère de passage à la ligne, c'est-à-dire un retour chariot+ saut de ligne (</font><font size="2"><code class="ce"><font face="Courier New">Chr(13) 
++ Chr(10)</font></code></font><font size="2" face="Courier New">),On lira les 
+données par <b>LineInput</b>.</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">WriteLine(1,&quot;toto&quot;)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">WriteLine(1,&quot;tata&quot;)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">WriteLine(1, 1.2)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Donne le fichier </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&quot;toto&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&quot;tata&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">1.2</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut utiliser <b>LineInput </b>pour relire ces 
+données car il lit jusqu'au&nbsp; retour Chariot, saut de ligne. </font></p>
+  </blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Toutes les données écrites dans le fichier à l'aide de la fonction Print 
+respectent les conventions internationales&nbsp;; autrement dit, les données sont 
+mises en forme à l'aide du séparateur décimal approprié. Si l'utilisateur 
+souhaite produire des données en vue d'une utilisation par plusieurs paramètres 
+régionaux, il convient d'utiliser la fonction <b>Write</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>
+<font color="#0000FF">EOF (NuméroFichier) </font>veut dire 'End Of File', 
+</b>(Fin de Fichier)<font color="#0000FF"> </font>il<font color="#0000FF"> </font> prend 
+la valeur True 
+si on est à la fin du fichier et qu'il n'y a plus rien à lire.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><b>LOF (NuméroFichier)</b></font> veut dire '<b>Lenght Of 
+File</b>', il&nbsp; retourne la longueur du 
+fichier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: Lire chaque ligne d'un fichier texte.</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim Line As String<br>
+FileOpen(1, &quot;MonFichier.txt&quot;, OpenMode.Input) </span> </font>
+<span style="background-color: #FFFFFF">' Ouvre en lecture<font color="#0000FF">.<br>
+While Not EOF(1) </font>' Boucler jusqu'à la fin du fichier</span></font></p>
+  <blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Line = LineInput(1)
+</span> </font><span style="background-color: #FFFFFF">' Lire chaque ligne<font color="#0000FF"><br>
+Debug.WriteLine(Line) </font>' Afficher chaque ligne sur la console.</span><font color="#0000FF"><span style="background-color: #FFFFFF"><br>
+&nbsp;</span></font></font></p>
+  </blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New">
+<font color="#0000FF"><font size="2"><span style="background-color: #FFFFFF">End While<br>
+FileClose(1)</span></font></font><font size="2"><span style="background-color: #FFFFFF"> '</span> Fermer</font></font><font color="#0000FF"><font size="2" face="Courier New">.</font><br>
+&nbsp;</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici on a utilisé une boucle While.. End While 
+qui tourne tant que EOF est Faux. Quand on est à la fin du fichier EOF (End of 
+File)devient 
+égal à True et on sort de la boucle.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New"><b><span style="background-color: #C0C0C0">Fichier à 
+accès aléatoire:</span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On ouvre le fichier avec <b>FileOpen</b> et le 
+mode <font color="#0000FF">OpenMode.Random, </font>ensuite on peut écrire un 
+enregistrement grâce à<font color="#0000FF"> FilePut()&nbsp; </font>ou en lire 
+un grâce à<font color="#0000FF"> FileGet(). </font>On peut se positionner sur un 
+enregistrement précis (le 2eme, le 15ème) avec <font color="#0000FF">Seek</font>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Le premier enregistrement est 
+l'enregistrement numéro 1</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Fichier des adresses</font></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<font face="Courier New" size="2">Créer une structure Adresse, on utilise &lt;VBFixedString( 
+)&gt; pour fixer la longueur.<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">Public 
+Structure </span>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; background-color:#FFFFFF">Adresse</span></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">&nbsp;&nbsp; &lt;VBFixedString(20)&gt;Dim
+</span>
+<span style="font-size: 10pt; font-family: Courier New; background-color:#FFFFFF">Nom </span>
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+As String</span></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">&nbsp;&nbsp; 
+&lt;VBFixedString(20)&gt;Dim </span>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; background-color:#FFFFFF">Rue<span style="COLOR: blue"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">&nbsp;&nbsp; &lt;VBFixedString(20)&gt;Dim
+</span>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; background-color:#FFFFFF">Ville<span style="COLOR: blue"> 
+&nbsp;&nbsp;&nbsp;&nbsp; As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; background-color:#FFFFFF">End 
+Structure</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'Ouvrir le fichier, comme il n'existe pas, cela entraîne sa création<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Dim FileNum As Integer, RecLength As Long,&nbsp; UneAdresse As Adresse</span><br>
+</font>' Calcul de la longueur de l'enregistrement <font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">RecLength = Len(UneAdresse)</span><br>
+</font>' Récupérer le premier numéro de fichier libre.<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">FileNum = FreeFile</span><br>
+</font>' Ouvrir le fichier.<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">FileOpen(FileNum, &quot;MONFICHIER.DAT&quot;, OpenMode.Random, , , RecLength)</span><br>
+&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour <b>écrire</b> des données sur le second enregistrement 
+par exemple:</font></p>
+<font SIZE="2">
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">UneAdresse.Nom = &quot;Philippe&quot;</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">UneAdresse.Rue = &quot;Grande rue&quot;</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">UneAdresse.Ville = &quot;Lyon&quot;</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">FilePut(FileNum, UneAdresse,2 )</font></span></p>
+<p><font face="Courier New">Dans cette ligne de code, </font> <code class="ce">
+<font face="Courier New" color="#0000FF">FileNum</font></code><font face="Courier New"> 
+contient le numéro 
+utilisé par la
+<MSHelp:link tabIndex="0" keywords="vastmOpen">fonction FileOpen</MSHelp:link> 
+pour ouvrir le fichier, <code><font face="Courier New"><font color="#0000FF">2</font> est</font></code> 
+le numéro de l'enregistrement ou sera copié la variable 'UneAdresse' (c'est un long si on utilise une 
+variable) et </font><code>
+<font face="Courier New" color="#0000FF">UneAdresse</font></code><font face="Courier New">, déclaré en tant 
+que type </font><code><font face="Courier New">Adresse</font></code><font face="Courier New"> défini par l'utilisateur, reçoit le 
+contenu de l'enregistrement. Cela écrase l'enregistrement 2 s'il contenait 
+quelque chose. </font></p>
+<p><font face="Courier New">Pour <b>écrire à la fin</b> du fichier, <b>ajouter un 
+enregistrement</b> il faut connaître le nombre d'enregistrement et écrire 
+l'enregistrement suivant.</font></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">Dim last as long&nbsp; </font><font face="Courier New">
+'noter que le numéro d'enregistrement est un long</font></span></p>
+<p><font face="Courier New">Pour connaître le nombre d'enregistrement, il faut 
+diviser la longueur du fichier par la longueur d'un enregistrement. </font></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New">last = FileLen(&quot;MONFICHIER.DAT&quot;) / 
+RecLength</font></span></p>
+<p><font face="Courier New">On ajoute 1 pour créer un nouvel enregistrement.</font></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">FilePut(FileNum, UneAdresse,last+1 )</font></span></p>
+</font>
+<pre class="code">Pour <b>lire</b> un enregistrement (le premier par exemple):</pre>
+<pre class="code"><font color="#0000FF"><span style="background-color: #FFFFFF">FileGet(FileNum, UneAdresse, 1)</span></font></pre>
+<p><font face="Courier New" size="2"><b>Attention</b> Option Strict doit être à&nbsp; false 
+.</font></p>
+<p><font face="Courier New" size="2">Si option Strict est à True, la ligne qui 
+précède génère une erreur car le second argument attendu ne peut pas être une 
+variable 'structure'. Pour que le second argument 
+de FileGet (Une adresse) soit converti dans une variable Structure 
+automatiquement Option Strict doit donc être à false. (Il doit bien y avoir un 
+moyen de travailler avec Option Strict On et&nbsp; de convertir explicitement mais je ne l'ai pas trouvé)
+</font> </p>
+<p><font face="Courier New" size="2"><b>Remarque:</b> si le fichier contient 4 
+enregistrements, on peut écrire le 10ème enregistrement, VB ajoute entre le 4ème 
+et le 10ème, 5 enregistrements vides. On peut lire un enregistrement qui 
+n'existe pas, cela ne déclenche pas d'erreur.</font></p>
+<p><font face="Courier New" size="2">Le numéro d'enregistrement peut être omis dans ce cas c'est l'enregistrement 
+courant qui est utilisé.</font></p>
+<p><font face="Courier New" size="2">On positionne l'enregistrement courant avec <font color="#0000FF">Seek:</font></font></p>
+<p><font face="Courier New" size="2">Exemple: Lire le 8ème enregistrement:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Seek(FileNum,8)</span></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">FileGet(FileNum,Une Adresse)</span></font></p>
+<h2 class="dtH2"><font face="Courier New" size="2">Suppression d'enregistrements</font></h2>
+<p><font face="Courier New" size="2">Vous pouvez supprimer le contenu d'un 
+enregistrement en effaçant ses champs (enregistrer à la même position des 
+variables vides), mais l'enregistrement existe toujours dans le fichier. </font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour enlever un enregistrement supprimé</b>
+</font> </p>
+<ol type="1">
+  <li><font face="Courier New" size="2">Créez un nouveau fichier. </font> </li>
+  <li><font face="Courier New" size="2">Copiez tous les enregistrements valides du fichier d'origine dans le 
+  nouveau fichier (pas ceux qui sont vides). </font> </li>
+  <li><font face="Courier New" size="2">Fermez le fichier d'origine et utilisez la fonction <b>Kill</b> pour le 
+  supprimer. </font> </li>
+  <li><font face="Courier New" size="2">Utilisez la fonction <b>Rename</b> pour renommer le nouveau fichier en lui 
+  attribuant le nom du fichier d'origine. </font> </li>
+</ol>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New"><b><span style="background-color: #C0C0C0">Fichier 
+binaire:</span></b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Dans les fichiers binaires on travaille sur les octets.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+La syntaxe est la même que pour les fichiers Random, sauf qu'on travaille sur la 
+position d'un octet et non sur un numéro d'enregistrement.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour ouvrir un fichier binaire:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<font color="#0000FF">
+<b><span style="background-color: #FFFFFF">FileOpen</span></b><span style="background-color: #FFFFFF">(FileNumber, FileName, OpenMode.Binary)</span></font><br>
+&nbsp;</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<b>FileGet</b> et <b>FilePut</b> permettent de lire ou d'écrire des octets .</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">FileOpen(iFr, ReadString, OpenMode.Binary)</span><br>
+<span style="background-color: #FFFFFF">MyString = New String(&quot; &quot;c, 15)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+'Créer une chaîne de 15 espaces<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">FileGet(iFr, MyString)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>' Lire 15 caractères dans MyString<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">FileClose(iFr)<br>
+MsgBox(MyString)</span></font></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Le fait de créer une variable de 15 caractères et de l'utiliser dans FileGet 
+permet de lire 15 caractères.<br>
+&nbsp;</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">C</font></b></span><b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">-Utilisation du Contrôle RichTextBox.</span></font></b></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On rappelle que du texte présent dans un contrôle <b>RichTextBox</b> peut être 
+enregistré ou lu très simplement avec les méthodes <b>.SaveFile</b> et <b>.LoadFile</b>.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Le texte peut être du <b>texte brut</b> ou du <b>RTF</b>.</font></p>
+<p class="titre3">
+<span style="COLOR: #0000ff; FONT-FAMILY: Courier New; background-color:#FFFFFF">
+<font size="2">richTextBox1.SaveFile(FileName, RichTextBoxStreamType.PlainText)</font></span></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font size="2">
+<span style="FONT-WEIGHT: normal; COLOR: windowtext; FONT-FAMILY: Courier New">
+Si on remplace&nbsp;.PlainText par </span>
+<span style="FONT-WEIGHT: 700; COLOR: windowtext; FONT-FAMILY: Courier New">.RichText</span><span style="FONT-WEIGHT: normal; COLOR: windowtext; FONT-FAMILY: Courier New"> 
+c’est le texte enrichi et non le texte brut qui est enregistré</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font size="2">
+<span style="FONT-WEIGHT: normal; COLOR: windowtext; FONT-FAMILY: Courier New">
+Pour lire un fichier il faut employer </span>
+<span style="FONT-WEIGHT: 700; COLOR: windowtext; FONT-FAMILY: Courier New">.LoadFile
+</span>
+<span style="FONT-WEIGHT: normal; COLOR: windowtext; FONT-FAMILY: Courier New">
+avec la même syntaxe.</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font size="2">
+<span style="font-family: Courier New">Simple, non!!!</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Lire ou écrire des octets ou du XML:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">BinaryWriter et BinaryReader&nbsp;&nbsp; permettent d'écrire ou de lire des 
+données binaires.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">XMLTextWriter et XMLTextReader&nbsp; écrit et lit du Xml.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour enregistrer un tableau, un objet, Vb.Net 
+propose aussi la <b>Sérialization</b> (voir ce chapitre)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">D-
+Comment ouvrir une boite de dialogue pour ouvrir un fichier?</span></font></b></p>
+<p style="margin-top: 1; margin-bottom: 1">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 1"><font face="Courier New" size="2">Ajouter
+un&nbsp; contrôle <font color="#0000FF">OpenFileDialog </font>à la form. (le
+nommer DialogOpen) ou</font></p>
+<p style="margin-top: 1; margin-bottom: 1">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 1"><font face="Courier New" size="2" color="#0000FF">Dim
+dialogOpen As New OpenFileDialog&nbsp;&nbsp;</font></p>
+<p style="margin-top: 1; margin-bottom: 1">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">With
+DialogOpen</font></p>
+<blockquote>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">.InitialDirectory
+  =
+  &quot;C:&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </font><font face="Courier New" size="2">'répertoire sur lequel s'ouvrira la
+  boite</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">.Title
+  = &quot;Choisir une fichier&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </font><font face="Courier New" size="2">'titre de la barre&nbsp;&nbsp;</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">.Filter
+  = &quot;Fichiers LDF(*.ldf)|*.ldf&quot;&nbsp;&nbsp; </font><font face="Courier New" size="2">'filtre,
+  seules les fichiers LDF </font><font face="Courier New" size="2">apparaîtront</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">.ShowDialog()&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </font><font face="Courier New" size="2">' on ouvre la boite de dialogue enfin</font></p>
+  <p style="margin-top: 1; margin-bottom: 1">&nbsp;&nbsp;
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <font face="Courier New" size="2">'Retour après la fermeture de la boite de
+  dialogue</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">If
+  Err.Number = 32755 Then Exit Sub &nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'le
+  bouton 'annuler' a t'il été cliqué?</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">If
+  Len(.FileName) = 0 Then</font>&nbsp; <font color="#0000FF" face="Courier New" size="2">Exit
+  Sub&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'aucun
+  choix</font></p>
+  <p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">Dim
+  sFile As String = .FileName </font><font face="Courier New" size="2">&nbsp;&nbsp; <font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </font>'nom du fichier choisi ( avec extension) </font></p>
+</blockquote>
+<p style="margin-top: 1; margin-bottom: 1"><font color="#0000FF" face="Courier New" size="2">End
+With</font></p>
+<p style="margin-top: 1; margin-bottom: 1">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 1" align="center"><img border="0" src="vopenfil2.JPG"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Vous
+avez le nom du fichier a ouvrir, a vous de l'ouvrir avec un Open...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Save</font><font face="Courier New" size="2"><font color="#0000FF">FileDialog
+</font>existe aussi<font color="#0000FF">.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="line-height:normal"><font size="4" color="#0000FF" face="Courier New"><span style="background-color: #C0C0C0"><b>Comment
+enregistrer, lire , effacer&nbsp; une variable structurée dans un fichier
+binaire:</b></span></font>&nbsp;</p>
+<p style="line-height:normal"><font face="Courier New" size="2">Sans utiliser de
+FileOpen FilePut, FileGet mais en utilisant plutôt des FileStream (un
+BinaryReader et un BinaryWriter). On reste dans le Framework .Net et la
+programmation Objet.</font></p>
+<p style="line-height:normal"><font face="Courier New" size="2">Par Bruno
+Chappe.</font></p>
+<p style="line-height:normal"><font face="Courier New" size="2">Débutant
+s'abstenir.</font></p>
+<p style="line-height:normal"><font face="Courier New" size="2">Cette syntaxe
+est entièrement écrite en VB .NET 2005, et n’utilise que des objets avec méthodes
+et propriétés issue de VB .NET 2005.</font></p>
+<p class="MsoNormal" style="line-height:normal"><font face="Courier New" size="2">On
+crée une Structure 'personne', une Class 'myBinaryReader', une Class 'myBinaryWriter'
+permettant de lire et d'enregistrer des 'personne'.</font></p>
+<p class="MsoNormal" style="line-height:normal"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">&nbsp;</font><o:p>
+</o:p>
+</span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'System.IO
+doit être importé dans l'entête de votre module</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2"><o:p>
+</o:p>
+</font></span></i></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="4">ETAPE
+N°1 : Créer la structure et les classe binaryReader et binaryWriter
+personnalisées</font></b></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Créer la
+structure avec son constructeur spécifique<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Structure
+personne</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Public
+pNom As String</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Public
+pPrenom As String<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Public
+pAge As Integer<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Public
+pMarie As Boolean<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Sub
+New ( ByVal myNom As String , ByVal myPrenom As String , ByVal myAge As Integer
+, ByVal myMarie As Boolean )<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Me.pNom
+= myNom</font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Me.pPrenom
+= myPrenom</font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Me.pAge
+= myAge</font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Me.pMarie
+= myMarie<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Sub<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Structure<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Créer
+une classe de binarywriter personnalisée à partir de le classe binarywriter
+native de vb<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Class
+myBinarywriter <o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Inherits
+System.IO.BinaryWriter<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Sub
+New ( ByVal st1 As System.IO.Stream )<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.New(st1)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Sub<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span style="color:#00B050"><font face="Courier New" size="2"><i style="mso-bidi-font-style:
+normal">'PadRight est utilisé pour faire des </i><i style="mso-bidi-font-style: normal; color: #00B050">chaînes</i><i style="mso-bidi-font-style:
+normal"> de caractère de longueur <span style="mso-spacerun: yes">&nbsp;</span>fixes<o:p>
+</o:p>
+</i></font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'C'est
+indispensable pour pouvoir calculer la longueur des enregistrements par la suite
+et avoir des enregistrements qui ont tous la même longueur<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Overloads
+Sub write( ByVal e As personne )<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.Write(e.pNom.PadRight(15))
+<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.Write(e.pPrenom.PadRight(15))<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.Write(e.pAge)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.Write(e.pMarie)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Sub<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">End
+Class</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Créer
+une classe de binaryreader personnalisée à partir de la classe binaryreader
+native de vb<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Class
+myBinaryreader <o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Inherits
+System.IO.BinaryReader<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Sub
+New ( ByVal st2 As System.IO.Stream )<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">MyBase.New(st2)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Sub<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Function
+readpersonne() As personne<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+pNom As String = MyBase.ReadString<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+pPrenom As String = MyBase.ReadString<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+pAge As Integer = MyBase.ReadInt32<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+pMarie As Boolean = MyBase.ReadBoolean<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">readpersonne
+= New personne(pNom, pPrenom, pAge, pMarie)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Function<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">End
+Class <o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2"><span lang="EN-US" style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br clear="all" style="page-break-before:always">
+</span></font></b>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="4">ETAPE
+N° 2 : Utilisation des classes personnalisées</font></b></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>***Ecrire
+un enregistrement</b></font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">DEBUT</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Variable
+string stockant le chemin d'accès au fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+myFile as String</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Si l'on
+veut écrire directement dans un enregistrement existant (plutôt que d'écrire
+à la suite du fichier)<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'il faut
+au préalable récupérer la rang de l'enregistrement ou l'on veut commencer à
+écrire<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'et
+multiplier ce rang par la longueur d'un enregistrement (en octets). Cette opération
+nous donne<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'la
+position du premier octet à écrire dans le fichier.<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Pour mémoire,
+la longueur d'un enregistrement en octet est égale à la taille du fichier en
+octet<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'divisé
+par le nombre d'enregistrements (Voir Annexe de ce document pour les
+explications)<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+position As Integer</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Déclarer
+une variable de type 'personne' et assigner les valeurs voulues à ses champs<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Il est
+possible de travailler avec un tableau de structure, cela revient au même mais<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'est moins
+indispensable qu'avant vu que l'on peut aller écrire et lire directement dans
+le fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+maPersonne As personne</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">With
+maPersonne</font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.pNom
+= <i style="mso-bidi-font-style:normal"><span style="color:#00B050">'valeur du
+champ</span></i></font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.pPrenom
+= <i style="mso-bidi-font-style:normal"><span style="color:#00B050">'valeur du
+champ</span></i></font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.pAge
+= <i style="mso-bidi-font-style:normal"><span style="color:#00B050">'valeur du
+champ</span></i></font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.pMarie
+= <i style="mso-bidi-font-style:normal"><span style="color:#00B050">'valeur du
+champ</span></i></font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">End
+With</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Déclare
+le flux et le writer qui vont nous permettre d'écrire notre structure<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Bien
+faire attention aux propriétés FileMode et FileAccess en fonction des opérations<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'que vous
+voulez effectuer<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Si vous
+voulez <b style="mso-bidi-font-weight:
+normal">écrire l'enregistrement à la suite des autres</b> :<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fs As FileStream = File.Open(myFile, <b style="mso-bidi-font-weight:normal">FileMode.Append</b>,
+FileAccess.Write, FileShare.None)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Si vous
+voulez <b style="mso-bidi-font-weight:
+normal">re-ecrire/modifier un enregistrement</b> :<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; line-height: normal; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fs As FileStream = File.Open(myFile, <b style="mso-bidi-font-weight:normal">FileMode.Open</b>,
+FileAccess.Write, FileShare.None)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Dans les
+2 cas, remarquez ici que nous instancions un objet issue de la classe que nous
+avons créé plus haut<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'et non
+pas un objet issue des classes natives de vb<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+bw As New myBinarywriter(fs)</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Nécessaire
+que si vous souhaitez écrire à un endroit précis dans le fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Où
+position indique la position de début d'écriture dans le flux (fs) et
+SeekOrigin.Begin indiquant à partir de quel<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'endroit
+du flux commencer la recherche de position<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">fs.Seek(position,
+SeekOrigin.Begin) <o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Dans tous
+les cas, l'instruction ci-dessous écrit l'intégralité de notre structure sous
+forme binaire dans le fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">bw.write(maPersonne)</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'SURTOUT
+BIEN PENSER A FERMER LES FLUX ET WRITER<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">bw().Close</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fs().Close</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">FIN</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br clear="all" style="page-break-before:always">
+</span></font></b>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>***Lire
+un enregistrement</b></font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">DEBUT</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Variable
+string stockant le chemin d'accès au fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+myFile as String</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Déclarer
+la variable qui va recevoir les informations issues du fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+maPersonne As personne</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Instancier
+un objet flux et un objet binaryReder<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Remarquez
+le FileAcces.Read pour la lecture<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+fs As FileStream = File.Open(myFile, FileMode.Open, FileAccess.Read,
+FileShare.None)</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Objet
+instancié à partir de notre classe personnalisée myBinaryreader<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+br As New myBinaryreader(fs) <o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Si besoin
+d'aller lire un enregistrement précis<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fs.Seek(position,
+SeekOrigin.Begin) <i style="mso-bidi-font-style:normal"><span style="color:
+#00B050">'Mêmes paramètres que pour l'écriture</span></i></font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Sinon,
+vous ferez probablement un traitement en boucle de tout les enregistrements du
+fichier<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Do
+Until fs.Position = fs.Length <i style="mso-bidi-font-style:normal"><span style="color:#00B050">'Faire
+jusqu'à ce que la position dans le flux soit égale à la longueur total du
+flux</span></i></font></p>
+<p style="line-height: normal; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myPersonne
+= br.readpersonne</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'Ici
+traitez les informations récupérées, par exemple pour afficher dans un
+listBox<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Loop</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">'SURTOUT
+BIEN PENSER A FERMER LES FLUX ET READER<o:p>
+</o:p>
+</font></span></i></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">br().Close</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fs().Close</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">FIN</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br clear="all" style="page-break-before:always">
+</span></font></b>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">***Supprimer
+un enregistrement</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Au
+préalable il faut “marquer” l’enregistrement à effacer en utilisant la
+procédure décrite plus haut pour modifier un enregistrement. Pour cela on peut
+faire soit comme dans le TP en utilisant un champ «&nbsp;supprimé&nbsp;»de
+notre structure que l’on marque à True soit on écrit un enregistrement vide
+par-dessus l’enregistrement que l’on veut effacer (en affectant «&nbsp;Nothing&nbsp;»
+au premier champ de l’enregistrement par exemple). En résumé, n’importe
+quoi qui nous permet de repérer au moment de la réécriture du fichier, que
+cet enregistrement ne doit pas être recopié.<o:p>
+</o:p>
+</font></span></i></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:
+normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Commencer
+par créer une copie du fichier original (Ne pas oublier de faire des tests sur
+l’existence du fichier)<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fi As New FileInfo(myFile)<o:p>
+</o:p>
+</font></span></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+newFile As String = myFile &amp; “.bck”<o:p>
+</o:p>
+</font></span></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fi.CopyTo(newFile)
+<i style="mso-bidi-font-style:normal"><span style="color:#00B050">‘Créé
+newFile et copie myFile dedans<o:p>
+</o:p>
+</span></i></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Ensuite
+on ouvre les 2 flux (1 en lecture et 1 en écriture) et les 2 binary (-reader
+&amp; -writer)</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fsR As FileStream = File.Open(newFile, FileMode.Open, FileAccess.Read,
+FileShare.None)<o:p>
+</o:p>
+</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Ici
+le le paramètre FileMode.Create va faire que le fichier myFile va être recréé
+par-dessus l’ancien fichier et l’écraser<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fsW As FileStream = File.Open(myFile, FileMode.Create, FileAccess.Write,
+FileShare.None)<o:p>
+</o:p>
+</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Après
+l’instruction ci-dessus on a donc un fichier myFile qui existe mais qui est
+vide (sans avoir besoin de le supprimer d’abords et de le recréer ensuite),
+prêt à recevoir les données du fichier newFile.<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+br As New myBinaryreader(fsR)<o:p>
+</o:p>
+</font></span></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+bw As New myBinarywriter(fsW)<o:p>
+</o:p>
+</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘On
+dimensionne une variable du type de notre structure<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+maPersonne As personne</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Faire
+une boucle sur le fichier en lecture<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Do
+Until fsR.Position = fsR.Length</font></p>
+<p style="text-indent: 35.4pt; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">maPersonne
+= br.readpersonne</font></p>
+<p style="text-indent: 35.4pt; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">‘Si
+marquage de maPersonne n’indique pas qu’il faut effacer l’enregistrement
+alors&nbsp;:</font></p>
+<p style="text-indent: 35.4pt; margin-left: 70.8pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">bw.write(maPersonne)</font></p>
+<p style="text-indent: 35.4pt; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">End
+If</font></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Loop</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Cette
+boucle va donc lire chaque enregistrement dans newFile, l’affecter dans une
+variable structurée maPersonne et si cette variable ne contient pas
+d’indicateur de suppression, l’écrire dans myFile. A la fin de la boucle
+myFile contient donc tous les enregistrements de newFile sauf ceux marqués à
+supprimer.<o:p>
+</o:p>
+</font></span></i></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘On
+oubli pas de fermer les flux<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">br.Close()</font></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">bw.Close()</font></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fsR.Close()</font></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">fsW.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><i style="mso-bidi-font-style:normal"><span style="color:#00B050"><font face="Courier New" size="2">‘Et
+de supprimer le fichier newFile qui ne nous sert plus à rien<o:p>
+</o:p>
+</font></span></i></p>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">File.Delete(newFile)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span lang="EN-US" style="mso-fareast-font-family: Calibri; mso-bidi-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><br clear="all" style="page-break-before:always">
+</span></font>
+<p style="text-indent: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>ANNEXE&nbsp;:
+Comment calculer la valeur de la variable «&nbsp;position&nbsp;» utilisée
+dans la méthode seek de notre FileStream</b></font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Nous
+avons besoin de 3 éléments&nbsp;: la longueur totale du fichier en octets, la
+taille d’un enregistrement en octets, le numéro de l’enregistrement que
+l’on souhaite modifier/remplacer/effacer.</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Longueur
+totale du fichier en octets</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+fi as New FileInfo(myFile)<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+longueurFichier As Long</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">longueurFichier
+= fi.length <i style="mso-bidi-font-style:normal"><span style="color:#00B050">‘Renvoi
+un entier long représentant la taille totale en octet<o:p>
+</o:p>
+</span></i></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Taille
+d’un enregistrement en octets</font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dim
+nbEnreg As Integer <i style="mso-bidi-font-style:normal"><span style="color:#00B050">‘Au
+préalable il faut récupérer le nombre d’enregistrements, par exemple lors
+d’une première lecture du fichier séquentielle, en incrémentant un compteur
+par programmation.</span></i></font></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><span lang="EN-US" style="mso-ansi-language:EN-US"><font face="Courier New" size="2">Dim
+tailleEnreg as Integer<o:p>
+</o:p>
+</font></span></p>
+<p style="line-height: normal; margin-left: 35.4pt; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span lang="EN-US" style="mso-ansi-language:EN-US">tailleEnreg
+= </span>longueurFichier / nbEnreg</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Pointer
+directement dans le fichier à l’octet voulu pour l’écriture</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Autrement
+dit, calculer la variable «&nbsp;position&nbsp;» pour pouvoir l’utiliser
+dans la méthode seek.</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+suffit de multiplier le numéro de l’enregistrement à écrire (le premier
+enregistrement doit avoir<span style="mso-spacerun: yes">&nbsp; </span>l’indice
+0) par la taille d’un enregistrement.</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ainsi
+par exemple, si j’ai un fichier de 120 octets avec 12 enregistrements (de 0 à
+11), cela me fait des enregistrements de 10 octets de long. Si je veux aller
+modifier le 4<sup>ème</sup> enregistrement, ma variable position sera égale à
+40 (4*10).</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+ne me reste plus qu’à déplacer le pointeur dans mon flux avant d’écrire
+ma variable, en utilisant&nbsp;:</font></p>
+<p style="line-height: normal; margin-top: 0; margin-bottom: 0"><span style="mso-tab-count:1"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><font face="Courier New" size="2"><span lang="EN-US" style="mso-ansi-language:EN-US">fs.Seek(position,
+SeekOrigin.Begin)<o:p>
+</o:p>
+</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:42 GMT -->
+</html>

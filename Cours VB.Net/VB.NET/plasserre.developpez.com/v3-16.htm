@@ -1,0 +1,988 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:13 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net grille: datagrid datagridview msflexgrid</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-15.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.16</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Contrôles 'Grid'.</font></b></td>
+    <td width="9%" height="76"><a href="v3-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#800080" size="2">Qu'utiliser pour afficher dans 
+une 'Grille'(Grid), un tableau (type tableur avec des lignes et des colonnes)?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; ">Ici on<b> affiche du texte directement 
+dans les cellules SANS 
+utiliser de liaison avec une base de données</b>. On parle de grille '<b>indépendante</b>'</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800000" face="Courier New" size="2">MsFlexGrid de VB6</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800000" face="Courier New" size="2">LameGrid&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800000" face="Courier New" size="2">DataGrid VB.Net 2003</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800000" face="Courier New" size="2">DataGridView VB.Net 2005</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">A - Contrôle 'MsFlexGrid' de VB6</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Microsoft fournissait avec <b>VB6</b> l'activeX
+<b>'Microsoft Flexgrid 6' </b>qui permettait de satisfaire à la plupart des 
+demandes . Il est toujours possible d'utiliser cet activeX dans vos programmes 
+mais ce n'est plus du .net (c'est du non managé).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Il faut l'ajouter dans la boite à outils:</b> 
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En VB 2003</b> Bouton droit puis dans le menu 'Ajouter/Supprimer un composant'&nbsp; puis 
+'Parcourir' , on ajoute <b>MSFLXGRD.OCX</b> qui est dans Windows/System32 ( si 
+vb6 installé, ou sinon le demander à quelqu'un qui a VB6).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En VB 2005</b> menu 'Outils'&nbsp; puis 'Choisir
+des éléments de la boite à outils' , onglet 'composant COM' puis bouton
+'parcourir' on ajoute <b>MSFLXGRD.OCX</b> qui est dans Windows/System32 ( si 
+vb6 installé, ou sinon le demander à quelqu'un qui a VB6 mais il faut ensuite
+ouvrir&nbsp;</font> le cd vb6 et cliquer sur c:\common\tools\vb\controls\vbctrls.reg).</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voila ce qu'il permet de faire en VB6: 
+(Logiciel <a href="ldf.htm">LDF</a> de l'auteur)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="ldf1.gif" width="528" height="277"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les propriétés <font color="#0000FF">Cols</font> 
+et <font color="#0000FF">Rows</font> permettent de définir le nombre de colonne 
+et de ligne.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">FixedCols</font> et
+<font color="#0000FF">FixedRows</font> permettent de déterminer les colonnes et 
+lignes qui ne bougent pas (titres); <font color="#0000FF">BackColorFixed</font> 
+donne une couleur à ces lignes fixes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Modifier la largeur d'une colonne:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Grid.ColWidth(i) =150</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour modifier une cellule:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#0000FF">Grid.Row = 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'Coordonnées de la cellule<font color="#0000FF"><br>
+Grid.Col = 3<br>
+Grid.CellFontBold = True&nbsp;&nbsp;&nbsp; </font>'Texte en gras<font color="#0000FF"><br>
+Grid.CellForeColor = Color.Red </font>'Couleur du texte</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Grid.Text= Texte&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">ou&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Grid.TextMatrix(2, 3) = Texte</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">.TextMatrix </font>
+<font face="Courier New" size="2">est beaucoup plus rapide que </font>
+<font face="Courier New" size="2" color="#0000FF">.Text </font>
+<font face="Courier New" size="2">mais on n'a accès qu'au texte et pas à 
+l'enrichissement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Modifier la couleur de fond d'une cellule:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Grid.CellBackColor =</font>
+</font><font color="#0000FF" face="Courier New" size="2">Color.Red</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mettre une image dans une cellule</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+Grid.CellPictureAlignment = flexAlignCenterCenter </font>'4= gère l'alignement<br>
+<font color="#0000FF">Set Grid.CellPicture = ImageCoche.Picture&nbsp;&nbsp;
+</font>&nbsp;'Syntaxe VB6, le Set doit disparaître en .Net</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut gérer l'évènement
+<font color="#0000FF">Grid_RrowColChanged </font>quand l'utilisateur change de 
+cellule<font color="#0000FF">. </font>Il existe bien sur<font color="#0000FF"> 
+Grid_Click...</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il n'y a pas de gestion de saisie dans les 
+cellules, il faut le faire 'à la main', <font color="#0000FF">Grid_KeyPress</font> 
+appelle une routine qui simule une saisie dans la grille avec un textbox qui 
+prend les dimensions de la cellule. ( Voir le code en annexe en bas de page )</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour accélérer l'affichage et éviter le 
+scintillement , surtout si il faut réafficher la totalité du tableau avec des 
+couleurs et des images, il faut désactiver la mise à jour de l'affichage, 
+afficher la page, réactiver. L'affichage devient instantané.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'exemple suivant colore une ligne sur deux, 
+c'est instantané.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim j As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Grid.Redraw = False<br>
+Grid.Clear</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">For i = 0 To NbMaxLigne Step 2<br>
+Grid.Row = i<br>
+For j = 0 To MaxColonne - 1<br>
+Grid.Col = j<br>
+Grid.CellBackColor = VERTCLAIR<br>
+Next j<br>
+Next i</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Grid.Redraw = True</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">B - Contrôles Freeware à 
+télécharger, c'est du '.Net': </font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">'lameGrid'en français +++++</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il existe un contrôle <b>gratuit</b> nommé <b>
+lameGrid</b> qui est du pur .Net et qui permet simplement d'afficher dans une&nbsp; 
+grid. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On le trouve ici avec son mode d'emploi:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4">
+<a href="http://kikos31.developpez.com/lamegrid/">
+http://kikos31.developpez.com/lamegrid/</a> par Christophe Holmes</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">C'est simple rapide, efficace. On le 
+conseille.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vlamegrid.gif" width="600" height="396"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Son usage est simple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Grille(1.2).Forecolor= MyColor</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Grille(1.2).Font= MyFont</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Grille(1.2).Texte=&quot;Lulu&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Autre:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New">SourceGrid en Anglais.
+</font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New">
+<a href="http://www.devage.com/SourceGrid/SourceGrid2_EN.html">
+http://www.devage.com/SourceGrid/SourceGrid2_EN.html</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vSourceGrid.jpg" width="510" height="380"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">C - Contrôle 'DataGrid ' de 
+VB 2003</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">C'est un des contrôles 
+fournit avec VB.Net 2003 les plus puissant. Il est très adapté pour faire une liaison 
+avec une base de données, mais pour l'utiliser simplement, dur, 
+dur!!</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Il est composé de lignes et de colonnes:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vctrl2.GIF" width="285" height="146"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New">Aspect du contrôle 'DataGrid'</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mettre un 'DataGrid' dans le formulaire en 
+cours en allant le chercher dans la boite à outils.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt" align="left">
+<font face="Courier New" size="2">On peut modifier l'aspect du DataGrid1 </font>
+</p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt" align="left">
+<font face="Courier New" size="2">en dans la fenêtre de propriété les propriétés
+</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt" align="left">
+<font face="Courier New" size="2">en utilisant la mise en forme automatique 
+(lien en bas de la fenêtre de propriétés.)</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vctrl3.GIF" width="358" height="218"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Pour travailler avec un DataGrid, on peut:</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">&nbsp;écrire directement dedans </font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">&nbsp;créer un
+<font color="#0000FF">DataSet </font>(un DataSet c'est un objet qui a la 
+structure d'une base de données mais en local, il comporte des lignes , des 
+colonnes.. voir la chapitre 6-5).Ce DataSet&nbsp; sera ensuite lié au DataGrid 
+par </font>
+<font color="#0000FF" face="Courier New" size="2">DataGrid1.DataSource= MonDataSet. </font>
+<font face="Courier New" size="2">Toute modification du Dataset sera ensuite 
+répercutée automatiquement sur le DataGrid. Et toute modification du DataGrid 
+sera répercutée sur le DataSet.</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment modifier le texte d'une cellule?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour modifier une cellule du Datagrid, il faut 
+modifier le DataSet (pas le DataGrd)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">MonDataSet.Tables(0).Rows 
+(0) (1)= &quot;Montexte&quot; </font>'0 et 1 sont respectivement le numéro de ligne et de 
+colonne. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment lire le texte d'une cellule?</span></font></b></p>
+<font SIZE="2" color="#111111" face="Courier New">
+<p>Lire ligne 1, colonne 1, l'afficher dans une TextBox.</p>
+</font><font SIZE="2" color="#0000FF">
+<p><font face="Courier New">TextBox1.Text = </font> </font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(DataGrid1(1, 
+1), </font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2" color="#0000FF"><font face="Courier New">)</font></p>
+<p><font face="Courier New">DataGrid1(1, 1) = TextBox1.Text</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment sélectionner une ligne?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut taper</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">DataGrid1.Select(1)</font>
+<font face="Courier New" size="2"> la ligne devient bleue.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2" color="#0000FF">DataGrid1.CurrentRowIndex
+= 1&nbsp;</font><font face="Courier New" size="2"> la ligne devient la ligne
+courante.&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment cacher une colonne?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">MonDataSet.Tables[&quot;Employees&quot;].Columns[&quot;LastName&quot;].ColumnMapping 
+= MappingType.Hidden</font><font face="Courier New"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New">Comment améliorer la rapidité 
+de l'affichage:</font></b></span><b><font face="Courier New"><span style="background-color: #C0C0C0">
+</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on fait un grand nombre de modifications 
+dans un DataGrid, le DataGrid est remis à jour à chaque modification, c'est long 
+et souvent l'affichage clignote.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour éviter cela, il faut désactiver 
+l'affichage par <font color="#0000FF">BeginUpdate</font>, afficher toutes les 
+modifications puis réactiver l'affichage par <font color="#0000FF">EndUpdate</font>: 
+la mise à jour se fait en une fois très rapidement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Private Sub BeginEndUpdate()<br>
+' MyDataGridColumnStyle is a class derived from DataGridColumnStyle.<br>
+Dim dgc As MyDataGridColumnStyle<br>
+Dim dgCols As GridColumnStylesCollection<br>
+dgCols = DataGrid1.TableStyles(0).GridColumnStyles<br>
+For Each dgc In dgCols<br>
+dgc.BeginUpdate<br>
+Next <br>
+<br>
+' Code to update not shown here.<br>
+<br>
+For Each dgc In dgCols<br>
+dgc.EndUpdate<br>
+Next<br>
+<br>
+End Sub</font><font face="Courier New" size="2" color="#800080"><b><br>
+&nbsp;</b></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;</p>
+</font><font COLOR="#0000ff" size="4">
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New"><span style="background-color: #C0C0C0">D</span></font></b></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF"> - Contrôle 'DataGridView 
+' de VB </font></b></span></font>
+<img border="0" src="v2005.JPG" width="52" height="21"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>C'est
+celui qu'il faut utiliser.</b></font></p>
+<font SIZE="2" color="#800080">
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700">Il remplace le DataGrid 
+dans &nbsp;VB.Net 2005 </span></font><font SIZE="2">
+<span style="font-family: Courier New">Il est <b>bien plus simple à utiliser</b> surtout 
+pour modifier directement la grille sans passer par un DataSet.(Contrôle
+indépendant) </span>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New"><b><span style="background-color: #C0C0C0">Exemple
+1:</span> On crée la Grid puis des colonnes de la grid; on crée les lignes que
+l'on ajoute à la grille.</b></span></font></p>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p><img border="0" src="vgridview.JPG" width="473" height="186"></p>
+</font><font SIZE="2">
+<p>
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView.ColumnCount = 5 </font>
+<font face="Courier New" size="2">indique le nombre de colonne.</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView.Columns(0).Name = &quot;Date&quot; </font>
+<font face="Courier New" size="2">met un texte dans le haut de la colonne.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView.Rows.Add(t) </font><font face="Courier New" size="2">
+'Ajout de ligne; t est un tableau de 5 strings.&nbsp; </font>
+<font face="Courier New" size="2" color="#0000FF">&nbsp; </font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView.CurrentCell</font><font face="Courier New" size="2"> 
+est la cellule courante (</font><font face="Courier New" size="2" color="#0000FF">CurrentCellAdress </font>
+<font face="Courier New" size="2">contient les numéro de ligne et colonne)</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView</font><font face="Courier New"><font color="#0000FF">.EditMode 
+= DataGridViewEditMode.EditOnEnter </font><font color="#111111">autorise de 
+modifier les cellules.</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New">Exemple de Microsoft: afficher dans le contrôle</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+</font><font face="Courier New" size="2">MyDataGridView </font></font>
+<font SIZE="2" face="Courier New">5 colonnes( nommées date, 
+piste, titre, artiste, album) et 6 lignes de chanson.(exemple 
+à partir d'un exemple de Microsoft)</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'création de la grille</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private WithEvents 
+MyDataGridView As New DataGridView</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.Controls.Add(MyDataGridView)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On 
+met 5 colonnes</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">MyDataGridView.ColumnCount = 5</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On 
+colore les en-têtes, on met les fonts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">With 
+MyDataGridView.ColumnHeadersDefaultCellStyle</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.BackColor = Color.Navy</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.ForeColor = Color.White</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Font = New Font(MyDataGridView.Font, 
+FontStyle.Bold)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'on 
+positionne la grille</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">With MyDataGridView</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Name = &quot;MyDataGridView&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Location = New Point(8, 8)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Size = New Size(500, 250)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.AutoSizeRowsMode = 
+DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.ColumnHeadersBorderStyle = 
+DataGridViewHeaderBorderStyle.Single</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.CellBorderStyle = 
+DataGridViewCellBorderStyle.Single</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.GridColor = Color.Black</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.RowHeadersVisible = False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On 
+donne le nom des colonnes</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(0).Name = &quot;Date&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(1).Name = &quot;Piste&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(2).Name = &quot;Titre&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(3).Name = &quot;Artiste&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(4).Name = &quot;Album&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(4).DefaultCellStyle.Font 
+= New Font(Me.MyDataGridView.DefaultCellStyle.Font, FontStyle.Italic)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.SelectionMode = 
+DataGridViewSelectionMode.FullRowSelect</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.MultiSelect = False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Dock = DockStyle.Fill</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Création d'un tableau de 5 strings pour chaque ligne</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row0 As String() = 
+{&quot;11/22/1968&quot;, &quot;29&quot;, &quot;Revolution 9&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Beatles&quot;, &quot;The Beatles [White 
+Album]&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row1 As String() = 
+{&quot;1960&quot;, &quot;6&quot;, &quot;Fools Rush In&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Frank Sinatra&quot;, &quot;Nice 'N' 
+Easy&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row2 As String() = 
+{&quot;11/11/1971&quot;, &quot;1&quot;, &quot;One of These Days&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Pink Floyd&quot;, &quot;Meddle&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row3 As String() = 
+{&quot;1988&quot;, &quot;7&quot;, &quot;Where Is My Mind?&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Pixies&quot;, &quot;Surfer Rosa&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row4 As String() = 
+{&quot;5/1981&quot;, &quot;9&quot;, &quot;Can't Find My Mind&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Cramps&quot;, &quot;Psychedelic 
+Jungle&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row5 As String() = 
+{&quot;6/10/2003&quot;, &quot;13&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Scatterbrain. (As Dead As 
+Leaves.)&quot;, _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&quot;Radiohead&quot;, &quot;Hail to the 
+Thief&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim row6 As String() = 
+{&quot;6/30/1992&quot;, &quot;3&quot;, &quot;Dress&quot;, &quot;P J Harvey&quot;, &quot;Dry&quot;}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">With Me.MyDataGridView.Rows</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Ajout de ligne</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row0)&nbsp;&nbsp;&nbsp;
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row2)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row3)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row4)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row5)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Add(row6)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">With Me.MyDataGridView</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Ordre des colonnes</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(0).DisplayIndex = 3</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(1).DisplayIndex = 4</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(2).DisplayIndex = 0</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(3).DisplayIndex = 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">.Columns(4).DisplayIndex = 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Ajouter une ligne</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.MyDataGridView.Rows.Add()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Enlever la ligne pointée</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If 
+Me.MyDataGridView.SelectedRows.Count &gt; 0 AndAlso _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Not 
+Me.MyDataGridView.SelectedRows(0).Index = _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.MyDataGridView.Rows.Count - 
+1 Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+Me.MyDataGridView.Rows.RemoveAt( _</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.MyDataGridView.SelectedRows(0).Index)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Faire disparaître toutes es lignes</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Me.MyDataGridView.Rows.Clear()&nbsp;
+</font><font face="Courier New" size="2">'il ne reste plus que les en-têtes de
+colonnes</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2"><span style="font-family: Courier New"><b><span style="background-color: #C0C0C0">Exemple
+2:</span> On crée la grid avec des lignes et des colonnes puis on modifie les
+cellules.</b></span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+<img border="0" src="vgridview2.JPG" width="376" height="178"></p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; "><font face="Courier New" size="2">'Mettre
+5 colonnes et 50 lignes dans la grid</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.RowCount
+= 50</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.ColumnCount
+= 5</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">With
+Me.Grid</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Une
+ligne sur 2 en bleue</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.RowsDefaultCellStyle.BackColor
+= Color.White</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AlternatingRowsDefaultCellStyle.BackColor
+= Color.AliceBlue</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Interdir
+la selection de plusieurs cellules</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.MultiSelect
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Empeche
+la saisie dans les cellules (en faite, le permet par programmation)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.EditMode
+= DataGridViewEditMode.EditProgrammatically</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Gestion
+des en-têtes de colonne</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">With
+Grid.ColumnHeadersDefaultCellStyle '</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.BackColor
+= Color.Blue&nbsp; </font><font face="Courier New" size="2">'ça marche pas!!??</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.ForeColor
+= Color.Blue</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Font
+= New Font(Grid.Font, FontStyle.Bold)</font><font face="Courier New" size="2">'
+en gras</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Pour
+que BackColor =Color.Blue fonctionne, il suffit de mettre la propriété <font color="#0000FF">EnableHeadersVisualStyles</font>
+à <font color="#0000FF">False</font> .<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">With
+Grid</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Empêche
+les modifications de lignes, colonnes, l'ajout, la suppression</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AllowUserToAddRows
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AllowUserToDeleteRows
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AllowUserToOrderColumns
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AllowUserToResizeColumns
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.AllowUserToResizeRows
+= False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Nomme
+les colonnes (en têtes)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(0).Name
+= &quot;Date&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(1).Name
+= &quot;Libellé&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(2).Name
+= &quot;Montant&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(3).Name
+= &quot;Origine&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(4).Name
+= &quot;Cochée&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.RowHeadersVisible
+= False </font><font face="Courier New" size="2">'pas de première colonne d'en
+tête</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">.Columns(2).Width
+= 30 </font><font face="Courier New" size="2">'modifie la largeur de la colonne
+2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Pour
+avoir une 2 lignes d'en-tête:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">.Columns(2).Name
+= &quot;Montant&quot; &amp; ControlChars.CrLf &amp; &quot;en euros&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">(ColumnsHeaderHeightSizeMode
+est par défaut à AutoSize)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On
+modifie la couleur de fond d'une cellule, on aligne au milieu, impose un format
+et affiche &quot;12&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+3).Style.BackColor = Color.Coral</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+3).Style.Alignment = DataGridViewContentAlignment.MiddleRight</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+3).Style.Format = &quot;#####&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+3).Value = 12</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On
+modifie la couleur de fond d'une cellule, on aligne au milieu, on met en
+italique et affiche &quot;Toro&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+4).Style.BackColor = Color.Chartreuse</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+4).Style.Alignment = DataGridViewContentAlignment.MiddleRight</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+4).Style.Font = New Font(Grid.Font, FontStyle.Italic)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(3,
+4).Value = &quot;Toro&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">If</font></span><font face="Courier New" size="2">
+<span style="COLOR: blue">Not</span> Button1.Font.Style = FontStyle.Bold <span style="COLOR: blue">Then</span>&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Button1.Font
+= <span style="COLOR: blue">New</span> Font(FontFamily.GenericSansSerif, _
+12.0F, FontStyle.Bold)&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">End</span>
+<span style="COLOR: blue">If</span>&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On
+force la cellule à accepter une image, on aligne au milieu, donne une couleur
+de fond et affiche une image à partir d'un fichier.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(2,
+2) = New DataGridViewImageCell</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(2,
+2).Style.Alignment = DataGridViewContentAlignment.MiddleCenter</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(2,
+2).Style.BackColor = Color.Wheat</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Item(2,
+2).Value = New Bitmap(&quot;viconote.gif&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'On&nbsp;
+autorise le redimensionnement&nbsp; auto, marche pas?</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.AutoResizeColumns()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Positionner
+la cellule courante, le curseur sur la cellule 1,1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Rows(1).Cells(1).Selected
+= True</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Connaître
+la ligne et la colonne de la cellule&nbsp; </font><font face="Courier New" size="2">courante</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New">
+x <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Integer</font> =
+Grid.CurrentCellAddress.X</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+y <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Integer</font> =
+Grid.CurrentCellAddress.Y</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Effacer
+le contenu de toutes les cellules de la grid</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.Rows.Clear()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.RowCount
+= 50</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Grid.ColumnCount
+= 5</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'Modifier
+le ToolTipText (Petit rectangle jaune contenant un test qui apparaît quand le
+curseur de la souris reste un moment sur une cellule)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Private
+Sub Grid_CellFormatting(ByVal sender As Object, ByVal e As
+System.Windows.Forms.DataGridViewCellFormattingEventArgs) Handles
+Grid.CellFormatting</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Dim
+cell As DataGridViewCell = Grid(e.ColumnIndex, e.RowIndex)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">cell.ToolTipText
+= &quot;oui&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2" color="#FF0000"><b>On
+rappelle que la première cellule en haut à gauche est la cellule&nbsp; '0,0';
+on ne compte pas les en-têtes.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" size="4">
+Annexe:</font><font face="Courier New" size="2">
+code permettant de simuler la saisie dans un MsFlexGrid:</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><br>
+Mettre dans un formulaire une grille MSFLEXGRID nommée Grid,
+une TextBox (avec borderSTyle =None) nommée TxtEdit.<br>
+<br>
+<font color="#0000FF">Grid_KeyPress</font> 
+appelle une routine qui affiche le textbox (qui 
+prend les dimensions de la cellule), l'utilisateur tape son texte dans le 
+textbox, quand il sort, le textbox est effacé et le texte affiché dans la 
+cellule de la grid.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">AJOUTER DANS LES PROCEDURES:<br>
+<br>
+P<font color="#0000FF">rivate Sub Grid_DblClick()<br>
+If Txtedit.Visible = True Then Exit Sub 'evite une boucle<br>
+'edite<br>
+MSHFlexGridEdit Grid, Txtedit, 32 ' Simule un espace.<br>
+End Sub<br>
+<br>
+<br>
+Private Sub Grid_GotFocus()<br>
+If Txtedit.Visible = True Then<br>
+Grid = Txtedit<br>
+Txtedit.Visible = False<br>
+End If<br>
+End Sub<br>
+<br>
+<br>
+Private Sub Grid_KeyPress(KeyAscii As Integer)<br>
+MSHFlexGridEdit Grid, Txtedit, KeyAscii<br>
+End Sub<br>
+<br>
+<br>
+<br>
+Private Sub Grid_RowColChange()<br>
+EditKeyCode Grid, Txtedit, 27, 0<br>
+End Sub<br>
+<br>
+<br>
+Private Sub Txtedit_KeyDown(KeyCode As Integer, Shift As Integer)<br>
+EditKeyCode Grid, Txtedit, KeyCode, Shift<br>
+End Sub<br>
+<br>
+</font><br>
+<br>
+AJOUTER LES 3 routines:<br>
+<br>
+<font color="#0000FF">Sub EditKeyCode(MSHFlexGrid As Control, Edt As Control, 
+KeyCode As Integer, Shift As Integer)<br>
+</font>' Traitement de contrôle d'édition standard.<font color="#0000FF"><br>
+Select Case KeyCode<br>
+Case 27  </font>' ÉCHAP : masque, renvoie le focus à MSHFlexGrid.<font color="#0000FF"><br>
+Edt.Visible = False<br>
+MSHFlexGrid.SetFocus<br>
+Case 13  </font>' ENTRÉE renvoie le focus à MSHFlexGrid.<font color="#0000FF"><br>
+Edt.Visible = False<br>
+MSHFlexGrid.SetFocus<br>
+MiseaJourLigne<br>
+Case 38  </font>' Haut.<font color="#0000FF"><br>
+MSHFlexGrid.SetFocus: DoEvents<br>
+Edt.Visible = False<br>
+MiseaJourLigne<br>
+If MSHFlexGrid.Row &gt; MSHFlexGrid.FixedRows Then<br>
+MSHFlexGrid.Row = MSHFlexGrid.Row - 1<br>
+End If<br>
+Case 40  </font>' Bas<font color="#0000FF">.<br>
+MSHFlexGrid.SetFocus: DoEvents<br>
+Edt.Visible = False<br>
+MiseaJourLigne<br>
+If MSHFlexGrid.Row &lt; MSHFlexGrid.Rows - 1 Then<br>
+MSHFlexGrid.Row = MSHFlexGrid.Row + 1<br>
+End If<br>
+Case 39  </font>' droit.<font color="#0000FF"><br>
+' MSHFlexGrid.SetFocus: DoEvents<br>
+' If MSHFlexGrid.Col &lt; MSHFlexGrid.Cols Then<br>
+' MSHFlexGrid.Col = MSHFlexGrid.Col + 1<br>
+' End If<br>
+' Edt.Visible = False<br>
+' MiseAJourLigne<br>
+' Case 37 ' Gauche.<br>
+' MiseAJourLigne<br>
+' MSHFlexGrid.SetFocus: DoEvents<br>
+' If MSHFlexGrid.col &gt; MSHFlexGrid.FixedCols - 1 Then<br>
+' MSHFlexGrid.col = MSHFlexGrid.col - 1<br>
+' End If<br>
+End Select<br>
+End Sub<br>
+<br>
+&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Sub MSHFlexGridEdit(MSHFlexGrid 
+As Control, Edt As Control, KeyAscii As Integer)<br>
+</font>
+<font face="Courier New" size="2">' Utilise le caractère qui a été tapé.</font><font color="#0000FF" face="Courier New" size="2"><br>
+Select Case KeyAscii<br>
+</font>
+<font face="Courier New" size="2">' Un espace signifie &quot;modifier le texte en cours&quot;.</font><font color="#0000FF" face="Courier New" size="2"><br>
+Case 0 To 32<br>
+Edt = Trim(MSHFlexGrid)<br>
+If Len(Edt) &lt; 1 Then<br>
+<br>
+Edt = Grid.Text<br>
+End If<br>
+<br>
+Edt.SelStart = 1000<br>
+</font>
+<font face="Courier New" size="2">' Tout autre élément signifie &quot;remplacer le ' texte en cours&quot;.</font><font color="#0000FF" face="Courier New" size="2"><br>
+Case Else<br>
+Edt = Chr(KeyAscii)<br>
+Edt.SelStart = 1<br>
+End Select<br>
+' Affiche Edt au bon endroit.<br>
+Edt.Move MSHFlexGrid.Left + MSHFlexGrid.CellLeft, MSHFlexGrid.Top + 
+MSHFlexGrid.CellTop, MSHFlexGrid.CellWidth - 8, MSHFlexGrid.CellHeight - 8<br>
+Edt.ForeColor = ROUGE<br>
+Edt.Visible = True<br>
+</font>
+<font face="Courier New" size="2">' Et laisse l'opération s'effectuer.</font><font color="#0000FF" face="Courier New" size="2"><br>
+Edt.SetFocus<br>
+End Sub<br>
+<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Public Sub 
+MiseaJourLigne()<br>
+</font>'Met à jour la grid</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Grid.text=Txtedit.text<br>
+End sub</font><br>
+<br>
+<br>
+<br>
+<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-15.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:23 GMT -->
+</html>

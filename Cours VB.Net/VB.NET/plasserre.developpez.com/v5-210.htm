@@ -1,0 +1,489 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-210.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net commentaires , nom de variable commentaire, nommage notation hongroise</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-200.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.210</font></b></td>
+    <td width="47%" height="76" align="center"><p><font face="Courier New" color="#800080" size="5"><b>Rendre le code
+      lisible:</b></font></p>
+      <p><font face="Courier New" color="#800080" size="5"><b>commentaires, nommage des
+      variables et objets visuels, notation hongroise.</b></font></p>
+    </td>
+    <td width="14%" height="76"><a href="v6-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font color="#FF0000" face="Courier New">Mise à
+jour: 5/2/2008</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New"><b>Pour faire un code lisible</b>:</span></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+  <span style="font-family: Courier New">Mettre des commentaires.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+  <span style="font-family: Courier New">Aérer le code.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+  <span style="font-family: Courier New">Choisir de bons noms de variable.</span></font></p>
+  <p style="margin-top: 6.0pt"><font color="#800080" face="Courier New" size="2">Utiliser
+  la 'Notation hongroise'</font></p>
+  <p style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0"><b>Ajouter des commentaires</b>.</span>
+</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Pour vous; pour les autres.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Au début de chaque routine, Sub, Function, 
+Classe , noter en commentaire ce qu'elle fait et quelles sont les 
+caractéristiques des paramètres:</font></p>
+<blockquote>
+  <blockquote>
+    <ul>
+      <li><font face="Courier New" size="2">Le résumé descriptif de la routine, 
+      la Sub ou Function. </font></li>
+      <li><font face="Courier New" size="2">Une description de chaque paramètre.
+      </font></li>
+      <li><font face="Courier New" size="2">La valeur retournée s'il y en a une.</font></li>
+      <li><font face="Courier New" size="2">Une description de toutes les 
+      exceptions..</font></li>
+      <li><font face="Courier New" size="2">Un exemple d'utilisation </font>
+      </li>
+      <li><font face="Courier New" size="2">Une explication sur le 
+      fonctionnement de la routine.</font></li>
+    </ul>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Ne pas ajouter de commentaire en fin de 
+ligne (une partie ne sera pas visible) mais plutôt avant la ligne de code. Seule 
+exception ou on utilise la fin de ligne: les commentaires après les déclarations 
+de variable.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim i As Integer
+</font>&nbsp;&nbsp; <font color="#008000">'Variable de boucle</font></font></p>
+<p><font face="Courier New" size="2" color="#008000">'Parcours du tableau à la 
+recherche de..</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">For i=0 To 100</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p><font face="Courier New" size="2">Paradoxalement, trop de commentaires tue le 
+code autant que le manque de commentaires. Pour éviter de tomber dans le tout ou 
+rien, fixons nous quelques règles:</font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New" size="2">Commentez le début de chaque Sub, 
+      Fonction, Classe</font></p>
+      <p><span style="font-weight: 400"><font face="Courier New" size="2">
+      Commentez toutes les déclarations de variables </font></span></p>
+      <h3><span style="font-weight: 400"><font face="Courier New" size="2">
+      Commentez toutes les branches conditionnelles</font></span></h3>
+      <h3><span style="font-weight: 400"><font face="Courier New" size="2">
+      Commentez toutes les boucles</font></span></h3>
+    </blockquote>
+  </blockquote>
+  <p><b><font face="Courier New" size="2">Commentaire en Xml</font></b></p>
+  <p><font face="Courier New" size="2">On peut ajouter des commentaires en xml 
+  dans VB2005.<img border="0" src="v2005.JPG" width="52" height="21"></font></p>
+  <span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label3">
+  <p><font face="Courier New" size="2">Exemple: </font></p>
+  <p><font face="Courier New" size="2"><i>Pour une Sub</i>: Sur une ligne 
+  blanche au dessus de la Sub Calcul, tapez &quot;'''&quot; (3 &quot;'&quot;).</font></p>
+  <p><font face="Courier New" size="2">ou</font></p>
+  <p><font face="Courier New" size="2"><i>Pour une variable</i>: Curseur sur la 
+  variable, bouton droit puis 'Insérer un commentaire' dans le menu.</font></p>
+  </span>
+  <p><font face="Courier New" size="2">Un bloc Xml &lt;Summary&gt; se crée 
+  automatiquement; pour l'exemple de la Sub, ajouter 'Fonction Calculant le 
+  total'</font></p>
+  <p><font face="Courier New" size="2">
+  <img border="0" src="vcomxml.JPG" width="571" height="274"></font></p>
+  <p><font face="Courier New" size="2">Quand ensuite on tape le nom de la Sub , 
+  le commentaire s'affiche.</font></p>
+  <p><font face="Courier New" size="2">De plus Visual Basic génère 
+  automatiquement un fichier de documentation XML lorsque vous créez le projet. 
+  Ce fichier apparaît dans le répertoire de sortie de l'application sous le nom 
+  AssemblyName.xml.</font></p>
+</blockquote>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF"><b>Éclaircir, aérer&nbsp; le 
+code:</b></font></span></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Ajouter quelques lignes blanches.</b></font></p>
+<p><font face="Courier New" size="2"><b>Décaler à droite le code contenu dans&nbsp; 
+une boucle ou une section If.. End If:</b></font></p>
+<p><font face="Courier New" size="2">Une mise en retrait simplifie la lecture du 
+code, par exemple : <br>
+<font color="#0000FF">If ... Then<br>
+&nbsp;&nbsp;&nbsp; If ... Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;&nbsp;&nbsp; Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;&nbsp;&nbsp; End If<br>
+Else<br>
+...<br>
+End If</font></font></p>
+  <p>&nbsp;</p>
+  <p><font face="Courier New" size="2"><b>Éviter plusieurs instructions par ligne.</b></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">A= 2 : B= 3 :
+C=5&nbsp;</font>&nbsp; est à éviter.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Pas plus de 80 caractères par ligne.</b></font></p>
+<p><font face="Courier New" size="2">Avant, on avait des écrans ou les lignes
+faisaient 80 caractères; maintenant on n'a pas de limitation mais:</font></p>
+<p><font face="Courier New" size="2">Si on veut imprimer le source et que les
+lignes sont très longues, l'impression est illisible.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Pas plus de 50 lignes par fonction.</b></font></p>
+<p><font face="Courier New" size="2">Cela permet de faire défiler rapidement la
+fonction et de la voire en totalité.</font></p>
+<p><font face="Courier New" size="2">Mais parfois une fonction doit comporter un
+grand nombre de lignes, mais cette fonction est un tout et le 'découpage' en
+sous-fonctions est impossible (variable locale multiple) ou ce découpage
+augmente la complexité.&nbsp;&nbsp;</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0"><b>Choisir les noms de procédures et 
+de variables avec soins</b>:</span> </font></p>
+<blockquote>
+  <p><font face="Courier New" size="2"><b>On concatène plusieurs mots</b> pour 
+  former un nom de fonction, de variable de Classe..</font></p>
+  <p><font face="Courier New" size="2">Il y a 3 manières&nbsp; d'utiliser <b>les 
+  lettres capitales</b> dans ces mots (on appelle cela la capitalisation!)</font></p>
+  <blockquote>
+    <p><font face="Courier New" size="2"><b>-Pascal Case</b>:La première lettre 
+    de chaque mot est en majuscule:</font></p>
+    <p><font face="Courier New" size="2">&nbsp;</font><font size="2"><code class="ce"><font face="Courier New" color="#0000FF"><b>C</b>alcul<b>T</b>otal()</font></code></font></p>
+    <p><b><code><font face="Courier New" size="2">-Camel Case:</font></code></b><font face="Courier New" size="2">La 
+    première lettre de chaque mot est en majuscule, sauf la première:</font></p>
+    <p><font size="2"><code><font face="Courier New" color="#0000FF"><b>&nbsp;iN</b>ombre<b>P</b>atient</font></code></font></p>
+    <p><code><font face="Courier New" size="2"><b>-UpperCase:</b> Toutes les 
+    lettres sont en majuscule:</font></code></p>
+    <p><code><font face="Courier New" size="2" color="#0000FF">&nbsp;MACONSTANTE</font></code></p>
+  </blockquote>
+  <p><code><font face="Courier New" size="2" color="#0000FF">&nbsp;</font></code></p>
+  <p><font face="Courier New" size="2">De plus le nom doit être explicite.
+  </font></p>
+  <p><font face="Courier New" size="2"><b>Microsoft propose quelques règles:</b></font></p>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <h4 class="dtH4"><font face="Courier New" size="2">Sub , Fonctions</font></h4>
+    <p><font size="2" face="Courier New">Utilisez la 'case Pascal' pour les noms 
+    de routine (la première lettre de chaque mot est une majuscule).</font></p>
+    <p><font face="Courier New" size="2">Exemple: </font><font size="2">
+    <code class="ce"><font face="Courier New" color="#0000FF"><b>C</b>alcul<b>T</b>otal()</font></code></font></p>
+    <p><font size="2" face="Courier New">Évitez d'employer des noms difficiles 
+    pouvant être interprétés de manière subjective, notamment </font>
+    <font size="2"><code class="ce"><font face="Courier New">Analyse()</font></code><font face="Courier New"> 
+    pour une routine</font></font><font size="2" face="Courier New"> par 
+    exemple.&nbsp; </font></p>
+    <p><font size="2" face="Courier New">Utilisez les verbe/nom pour une routine 
+    : </font><font size="2" color="#0000FF"><code class="ce">
+    <font face="Courier New">CalculTotal()</font></code></font><font size="2" face="Courier New"><font color="#0000FF">.</font>
+    </font></p>
+    <h4 class="dtH4"><font face="Courier New" size="2">Variables</font></h4>
+    <p><font face="Courier New" size="2">Pour les noms de variables, utilisez la 
+    'case Camel' selon laquelle la première lettre des mots est une majuscule, 
+    sauf pour le premier mot.</font></p>
+    <p><font size="2" face="Courier New">Exemple: </font><font size="2"><code>
+    <font face="Courier New" color="#0000FF"><b>iN</b>ombre<b>P</b>atient</font></code></font></p>
+    <p><font size="2" face="Courier New">noter ici que la première lettre 
+    indique le type de la variable (Integer), elle peut aussi indiquer la 
+    portée(<b>gT</b>otal pour une variable globale). </font></p>
+    <p><font size="2" face="Courier New">Évitez d'employer des noms difficiles 
+    pouvant être interprétés de manière subjective, </font><font size="2"><code>
+    <font face="Courier New">'YYB8' ou 'flag'</font></code></font><font size="2" face="Courier New"> 
+    pour une variable.&nbsp; </font></p>
+    <p><font size="2" face="Courier New">Ajoutez des méthodes de calcul ( </font>
+    <font size="2"><code class="ce"><font face="Courier New">Min</font></code><font face="Courier New">,
+    </font><code class="ce"><font face="Courier New">Max</font></code><font face="Courier New">,
+    </font><code><font face="Courier New">Total</font></code></font><font size="2" face="Courier New">) 
+    à la fin d'un nom de variable, si nécessaire. </font></p>
+    <p><font size="2" face="Courier New">Les noms de variable booléenne doivent 
+    contenir </font><font size="2"><code class="ce"><font face="Courier New">Is</font></code><font face="Courier New"> 
+    qui implique les valeurs&nbsp; True/False, par exemple </font>
+    <code class="ce"><font face="Courier New" color="#0000FF">fileIsFound</font></code></font><font size="2" face="Courier New">.
+    </font></p>
+    <p><font size="2" face="Courier New">Évitez d'utiliser des termes tels que
+    </font><font size="2"><code class="ce"><font face="Courier New">Flag</font></code><font face="Courier New"> 
+    lorsque vous nommez des variables d'état, qui différent des variables 
+    booléennes car elles acceptent plus de deux valeurs. Plutôt que </font>
+    <code class="ce"><font face="Courier New">documentFlag</font></code><font face="Courier New">, 
+    utilisez un nom plus descriptif tel que </font><code class="ce">
+    <font face="Courier New" color="#0000FF">documentFormatType</font></code></font><font size="2" face="Courier New">.
+    </font></p>
+    <p><font size="2" face="Courier New">Même pour une variable à courte durée 
+    de vie&nbsp; utilisez un nom significatif.&nbsp; </font></p>
+    <p><font size="2" face="Courier New"> Utilisez des noms de variable 
+    d'une seule lettre, par exemple </font><font size="2"><code class="ce">
+    <font face="Courier New">i</font></code><font face="Courier New"> ou </font>
+    <code class="ce"><font face="Courier New">j</font></code></font><font size="2" face="Courier New">, 
+    pour les index de petite boucle uniquement. </font></p>
+    <p><b><font face="Courier New" size="2">Paramètre</font></b></p>
+    <p><font face="Courier New" size="2">Pour les noms de paramètres, utilisez 
+    la 'case Camel' selon laquelle la première lettre des mots est une 
+    majuscule, sauf pour le premier mot.</font></p>
+    <p><font size="2" face="Courier New">Exemple: </font><code>
+    <font face="Courier New" size="2" color="#0000FF">typeName</font></code></p>
+    <p><b><font face="Courier New" size="2">Constantes</font></b></p>
+    <p><font face="Courier New" size="2">Utiliser les majuscules pour les 
+    constantes: <font color="#0000FF">MYCONSTANTE</font></font></p>
+    <p><font size="2" face="Courier New">N'utilisez pas des nombres ou des 
+    chaînes littérales telles que </font><font size="2"><code class="ce">
+    <font face="Courier New">For i = 1 To 7</font></code><font face="Courier New">. 
+    Utilisez plutôt des constantes&nbsp; par exemple </font><code class="ce">
+    <font face="Courier New">For i = 1 To DAYSINWEEK</font></code></font><font size="2" face="Courier New">, 
+    pour simplifier la maintenance et la compréhension. </font></p>
+    <h4 class="dtH4"><font size="2" face="Courier New">Objet, Classe</font></h4>
+    <p class="dtH4"><font size="2" face="Courier New">Pour les noms de Classe, 
+    utiliser le case Pascal:</font></p>
+    <p class="dtH4"><font size="2" face="Courier New">Exemple
+    <font color="#0000FF">Class MaClasse</font></font></p>
+    <p class="dtH4"><font size="2" face="Courier New">Idem pour les évènement, 
+    espace de nom, méthodes:</font></p>
+    <p class="dtH4"><font size="2" face="Courier New">Exemple:
+    <font color="#0000FF">System.Drawing, ValueChange..</font></font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Dans les&nbsp; objets, il 
+    ne faut pas inclure des noms de classe dans les noms de propriétés 
+    Patient.PatientNom est inutile, utiliser plutôt <font color="#0000FF">
+    Patient.Nom</font>. </font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Les <font color="#0000FF">
+    interfaces</font> commencent par un I</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Exemple:
+    <font color="#0000FF">IDisposable</font></font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Pour les variables privées 
+    ou protégées d'une classe utilisez le case Camel:</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Exemple:</font><font face="Courier New" size="2" color="#0000FF"> 
+    lastValue </font><font face="Courier New" size="2">(variable protégée)</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">En plus pour les variables 
+    privées d'une classe mettre un &quot;_&quot; avant:</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Exemple:</font><font face="Courier New" size="2" color="#0000FF"> 
+    _privateField</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Pour une variable Public 
+    d'une classe utiliser le 'case Pascale':</font></p>
+    <p class="dtH4"><font face="Courier New" size="2">Exemple</font><font face="Courier New" size="2" color="#0000FF">&nbsp; 
+    TotalAge</font></p>
+    <h4 class="dtH4"><font face="Courier New" size="2">Tables</font></h4>
+    <p><font size="2" face="Courier New">Pour les tables, utilisez le singulier. 
+    Par exemple, utilisez table '</font><font size="2"><code><font face="Courier New">Patient'</font></code><font face="Courier New"> 
+    plutôt que '</font><code><font face="Courier New">Patients</font></code></font><font size="2" face="Courier New">'.
+    </font></p>
+    <p><font face="Courier New" size="2">N'incorporez pas le type de données 
+    dans le nom d'une colonne.&nbsp; </font></p>
+    <h4 class="dtH4"><font face="Courier New" size="2">Divers</font></h4>
+    <p><font face="Courier New" size="2">Minimisez l'utilisation d'abréviations.&nbsp;
+    </font></p>
+    <p><font size="2" face="Courier New">Lorsque vous nommez des fonctions, 
+    insérez une description de la valeur retournée, notamment </font>
+    <font size="2"><code class="ce"><font face="Courier New" color="#0000FF">
+    GetCurrentWindowDirectory()</font></code></font><font size="2" face="Courier New">.
+    </font></p>
+    <p><font face="Courier New" size="2">Évitez de réutiliser des noms 
+    identiques pour divers éléments. </font></p>
+    <p><font face="Courier New" size="2">Évitez l'utilisation d'homonymes et des 
+    mots qui entraînent souvent des fautes d'orthographe. </font></p>
+    <p><font size="2" face="Courier New">Évitez d'utiliser des signes 
+    typographiques pour identifier des types de données, notamment </font>
+    <font size="2"><code class="ce"><font face="Courier New">$</font></code><font face="Courier New"> 
+    pour les chaînes ou </font><code class="ce"><font face="Courier New">%</font></code></font><font size="2" face="Courier New"> 
+    pour les entiers. </font></p>
+    <p><font face="Courier New" size="2">Un nom doit indiquer la signification 
+    plutôt que la méthode. </font></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">Notation
+</span></b></font><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">hongroise</span></b></font><span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF"><b>:</b></font></span></p>
+<p><font face="Courier New" size="2">La <b>notation hongroise</b> est une <b>convention
+de nommage</b> qui met en avant , par l'utilisation d'un <b>préfixe</b>, des
+informations sur l'objet nommé.&nbsp;</font></p>
+<p><font face="Courier New" size="2">La qualification de &quot;hongroise&quot;
+vient du pays d'origine de Simonyi, le créateur de ce nommage qui a travaillé
+chez Xerox puis Microsoft.</font></p>
+<p><font face="Courier New" size="2">Il y a 2 sortes de <b>notation hongroise:</b></font></p>
+<p><b><font face="Courier New" size="3">Notation Apps:</font></b></p>
+<blockquote>
+  <p><font face="Courier New" size="2">On préfixe le nom des variables de manière
+  a indiquer leur <b>utilisation</b>&nbsp;:</font></p>
+  <font face="Courier New" size="2">rwPosition&nbsp;: est une variable représentant&nbsp;
+  la position d'une ligne (<i>row</i> en anglais)</font>
+</blockquote>
+<p><b><font face="Courier New" size="3">Notation Systems:</font></b></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Cette notation consiste à faire précéder
+  le nom de la variable d'un préfixe reflétant son <b>type</b>. Ce préfixe
+  est toujours écrit en minuscule puis la première lettre suivante en
+  majuscule.</font></p>
+  <p><font face="Courier New" size="2">Par exemple, la variable booléenne 'ouvert'
+  est préfixée par un <i>b</i> pour indiquer un booléen&nbsp;: '<i>bOuvert'</i>.</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On peut préfixer avec le type et&nbsp;
+(ou) la portée.</font></p>
+<p><font face="Courier New" size="2">Type:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">i&nbsp;&nbsp;&nbsp;
+Integer (entier)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">n&nbsp;&nbsp;&nbsp;
+Short int (entier court)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">l&nbsp;&nbsp;&nbsp;
+Long&nbsp; (entier long)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">f&nbsp;&nbsp;&nbsp;
+float= Single (nombre a virgule flottante)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">d&nbsp;&nbsp;&nbsp;
+Double (float double)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">c&nbsp;&nbsp;&nbsp;
+Char (caractère)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">by&nbsp;&nbsp;
+Byte (caractère non signe)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">b&nbsp;&nbsp;&nbsp;
+Boolean (booleen true/false)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">s&nbsp;&nbsp;&nbsp;
+String (chaîne de caractères)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">h&nbsp;&nbsp;&nbsp;
+Handle&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">file
+File (fichier)&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">et
+non utilisé en VB:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">v
+void</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">w
+word (mot = double octet)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">dw
+double word (double mot)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">sz
+zero-terminated string (chaine de caracteres terminee par un char zero)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">str
+string object (objet String)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">pt&nbsp;&nbsp;
+point&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">rgb&nbsp;
+rgb triplet&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><br>
+Portée:<br>
+<br>
+g : variable globale à une application<br>
+s : variable locale à un module.<br>
+p : variable passée en paramètre d’une fonction ou d’une méthode de
+classe.<br>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si
+une variable est un tableau, on ajoute le préfixe « a ».</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Exemple:</font></p>
+<p><font face="Courier New" size="2">Préfixe avec le type: variable nommée
+Ouvert de type boolean:</font></p>
+<p><font color="#0000FF" size="2" face="Courier New">bOuvert.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Préfixe avec la portée: variable nommée
+Nom de portée globale:</font></p>
+<p><font color="#0000FF" size="2" face="Courier New">gNom </font><font size="2" face="Courier New">ou</font><font color="#0000FF" size="2" face="Courier New">
+g_Nom</font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Variable nommée Position qui est une
+variable globale et une Integer.</font></p>
+<p><font color="#0000FF" size="2" face="Courier New">g_iPosition</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On voit qu'on peut utiliser ou non le
+caractère&quot;&quot;_&quot;.</font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Cette notation hongroise a ses partisans et
+ses adversaires (nom trop complexe).</font></p>
+<p><font face="Courier New" size="2"><br>
+</font></p>
+<p><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">Nommage
+des objets visuels: </span></b></font><font face="Courier New" size="2">&nbsp;</font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Les objets
+visuels sont les boutons, les TextBox....</font></p>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p style="MARGIN: 6pt 0cm 0pt"><span style="FONT-FAMILY: Courier New"><font size="2">Il
+est conseillé par Microsoft de débuter le nom d’un objet visuel par un mot
+évoquant sa nature:</font></span></p>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">Microsoft
+conseille:</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">btn
+pour les Boutons</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">lst
+pour les ListBox</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">chk
+pour les CheckBox</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">cbo
+pour les combos</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">dlg
+pour les DialogBox</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">frm
+pour les Form</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">lbl
+pour les labels</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">txt
+pour les Textbox</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">tb
+pour les Toolsbar</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">rb
+pour les radiobutton</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">mm
+pour les menus</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font size="2"><span style="FONT-FAMILY: Courier New">tmr
+pour les timers</span></font></p>
+<p><font face="Courier New">Exemple:</font></p>
+<p><span style="FONT-FAMILY: Courier New"><font size="2"><font color="#0000ff">btnOk</font>&nbsp;
+par exemple pour un bouton sur lequel il y a 'Ok'.</font></span></p>
+<p>&nbsp;</p>
+</span>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-200.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-210.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

@@ -1,0 +1,32 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\bin\Debug\inscription.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\bin\Debug\inscription.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\inscription.Form1.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\inscription.Properties.Resources.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\inscription.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\inscription.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\inscription\inscription\obj\x86\Debug\inscription.Form2.resources
+I:\inscription\inscription\obj\x86\Debug\inscription.exe
+I:\inscription\inscription\obj\x86\Debug\inscription.pdb
+I:\inscription\inscription\bin\Debug\inscription.exe
+I:\inscription\inscription\bin\Debug\inscription.pdb
+I:\inscription\inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\inscription\inscription\obj\x86\Debug\inscription.Form1.resources
+I:\inscription\inscription\obj\x86\Debug\inscription.Form2.resources
+I:\inscription\inscription\obj\x86\Debug\inscription.Properties.Resources.resources
+I:\inscription\inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\inscription\inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\inscription1\inscription\obj\x86\Debug\inscription.exe
+I:\inscription1\inscription\obj\x86\Debug\inscription.pdb
+I:\inscription1\inscription\bin\Debug\inscription.exe
+I:\inscription1\inscription\bin\Debug\inscription.pdb
+I:\inscription1\inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\inscription1\inscription\obj\x86\Debug\inscription.Form1.resources
+I:\inscription1\inscription\obj\x86\Debug\inscription.Form2.resources
+I:\inscription1\inscription\obj\x86\Debug\inscription.Properties.Resources.resources
+I:\inscription1\inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\inscription1\inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\inscription1\inscription\obj\x86\Debug\inscription.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\inscription1\inscription\obj\x86\Debug\inscription.pdb

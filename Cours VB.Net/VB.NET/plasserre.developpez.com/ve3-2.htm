@@ -1,0 +1,197 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve3-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple calcul d''un prêt : mensualités</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve3-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 3.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Mensualités d'un prêt.</font></b></td>
+    <td width="14%" height="76"><a href="v4-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Comment créer un programme qui calcul 
+les mensualités d'un prêt ?</span></b></font></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">Dans l'espace
+<font color="#0000FF">Microsoft.VisualBasic</font> 
+il existe des fonctions financières. (VB 2003 et VB 2005)</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF">Pmt</font> <b>calcul les mensualités d'un prêt</b>.</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Remboursement mensuel= <b>Pmt</b>( Rate, 
+NPer, PV, FV, Due)</span></font></p>
+<dl>
+  <dt><i>Rate</i> </dt>
+  <dd>Obligatoire. Donnée de type <b>Double</b> indiquant le taux d'intérêt par 
+  période. Si taux d'intérêt annuel de 10&nbsp;pour&nbsp;cent et si vous effectuez des 
+  remboursements mensuels, le taux par échéance est de 0,1/12, soit&nbsp;0,0083. </dd>
+  <dt><i>NPer</i> </dt>
+  <dd>Obligatoire. Donnée de type <b>Double</b> indiquant le nombre total 
+  d'échéances. Par exemple, si vous effectuez des remboursements mensuels dans 
+  le cadre d'un emprunt de quatre ans,il y a 4&nbsp;*&nbsp;12 (soit 48) échéances. </dd>
+  <dt><i>PV</i> </dt>
+  <dd>Obligatoire. <b>Double </b>indiquant la <b>valeur actuelle</b> . Par 
+  exemple, lorsque vous empruntez de l'argent pour acheter une voiture, <b>le 
+  montant du prêt</b> correspond à la valeur actuelle (pour un emprunts il est 
+  négatif). </dd>
+  <dt><i>FV</i> </dt>
+  <dd>Facultatif. <b>Double</b> indiquant la valeur future ou le solde en 
+  liquide souhaité au terme du dernier remboursement. Par exemple, la valeur 
+  future d'un emprunt est de 0&nbsp;F car il s'agit de sa valeur après le dernier 
+  remboursement. Par contre, si vous souhaitez économiser 70&nbsp;000&nbsp;F sur 15&nbsp;ans, 
+  ce montant constitue la valeur future. Si cet argument est omis,&nbsp;0 est 
+  utilisée par défaut. </dd>
+  <dt><i>Due</i> </dt>
+  <dd>Facultatif. Objet de type <code class="ce">Microsoft.VisualBasic.DueDate</code> 
+  indiquant la date d'échéance des paiements. Cet argument doit être
+  <code class="ce">DueDate.EndOfPeriod</code> si les paiements sont dus à terme 
+  échu ou <code class="ce">DueDate.BegOfPeriod</code> si les paiements sont dus 
+  à terme à échoir (remboursement en début de mois). Si cet argument est omis,
+  <code class="ce">DueDate.EndOfPeriod</code> est utilisé par défaut. </dd>
+</dl>
+<p style="margin-top: 2; margin-bottom: 0">Noter que si Rate est par mois NPer 
+doit être en mois; si Rate est en année NPer doit être en année.</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Sub CalculPret()<br>
+Dim PVal, Taux, FVal, Mensualite, NPerVal As Double<br>
+Dim PayType As DueDate<br>
+<br>
+Dim Response As MsgBoxResult<br>
+Dim Fmt As String</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Fmt = 
+&quot;###,###,##0.00&quot; </font>' format d'affichage.<font color="#0000FF"><br>
+FVal = 0&nbsp; </font>'0 pour un prêt.<font color="#0000FF"><br>
+&nbsp;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">PVal = CDbl(InputBox(&quot;</font>Combien 
+voulez-vous emprunter?<font color="#0000FF">&quot;))<br>
+Taux = CDbl(InputBox(&quot;</font>Quel est le taux d'intérêt annuel?<font color="#0000FF">&quot;))<br>
+If Taux &gt; 1 Then Taux = Taux / 100 </font>' Si l'utilisateur à tapé 4 
+transformer en 0.04.<font color="#0000FF"><br>
+NPerVal =12* CDbl(InputBox(&quot;</font>Durée du prêt (en années)?<font color="#0000FF">&quot;))<br>
+Response = MsgBox(&quot;</font>Echéance en fin de mois?<font color="#0000FF">&quot;, 
+MsgBoxStyle.YesNo)<br>
+If Response = MsgBoxResult.No Then<br>
+&nbsp; PayType = DueDate.BegOfPeriod<br>
+Else<br>
+&nbsp; PayType = DueDate.EndOfPeriod<br>
+End If<br>
+Mensualite = <b>Pmt</b>(Taux / 12, NPerVal, -PVal, FVal, PayType)<br>
+MsgBox(&quot;</font>Vos mensualités seront de <font color="#0000FF">&quot; &amp; Format(Mensualite, 
+Fmt) &amp; &quot;</font> par mois<font color="#0000FF">&quot;)<br>
+End Sub</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">IPmt </font>calcul les intérêts pour une période.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Calculons le total des intérêts:</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim IntPmt, Total, 
+P As Double</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF"><span style="background-color: #FFFFFF">For P = 1 To 
+TotPmts ' Total all interest.<br>
+IntPmt = <b>IPmt</b>(APR / 12, P, NPerVal, -PVal, Fval, PayType)<br>
+Total = Total + IntPmt<br>
+Next Period<br>
+&nbsp;</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Autres mots clés :</p>
+<table cellSpacing="2" cellPadding="5" width="100%">
+  <tr>
+    <td><font size="2">Calculer l'amortissement.</font></td>
+    <td><font color="#0000FF" size="2">DDB, SLN, SYD</font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer la valeur future.</font></td>
+    <td><font color="#0000FF" size="2">FV </font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer le taux d'intérêt.</font></td>
+    <td><font color="#0000FF" size="2">Rate </font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer le taux de rendement interne.</font></td>
+    <td><font color="#0000FF" size="2">IRR, MIRR</font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer le nombre de périodes.</font></td>
+    <td><font color="#0000FF" size="2">NPer </font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer les paiements.</font></td>
+    <td><font color="#0000FF" size="2">IPmt, Pmt, PPmt</font></td>
+  </tr>
+  <tr>
+    <td><font size="2">Calculer la valeur actuelle.</font></td>
+    <td><font color="#0000FF" size="2">NPV, PV</font></td>
+  </tr>
+</table>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Par exemple:</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Rate </font>Permet 
+de calculer <b>le taux d'un prêt</b> en connaissant la somme prêtée, le nombre 
+de mois et la mensualité.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;</span></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve3-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve3-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+</html>

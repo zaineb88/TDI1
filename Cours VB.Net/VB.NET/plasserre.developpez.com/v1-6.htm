@@ -1,0 +1,852 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:50 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET  variable </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="7%" height="62">
+    &nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a><b><font size="6" color="#800080" face="Courier New"> 1.6</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Variables</font></b></td>
+    <td width="14%" height="76"><a href="v1-6string.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font size="7" color="#FF00FF">X=1</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>C’est le même sens 
+qu’en mathématique</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Une variable sert à stocker&nbsp; un nombre, du texte (chaîne de caractères), une date, 
+un objet..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Une variable a un <b>nom</b> 
+et un <b>type</b> qui indique ce que l’on peut y mettre.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New">
+<font size="2">Si</font><font size="2" color="#0000FF"> myString</font></span><span style="font-size: 10.0pt; font-family: Courier New">&nbsp; est une 
+variable de type chaîne de caractère (ou <font color="#0000FF">String</font>)&nbsp;: je peux y mettre une chaîne de caractère 
+(«&nbsp;TOTO&nbsp;» par exemple) </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<img border="0" src="vstring.gif" width="144" height="112"></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">myString=&quot;TOTO&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font size="2"><span style="font-family: Courier New">Si <font color="#0000FF">
+age</font> est une autre variable de type numérique, je peux y stocker un nombre 
+(45,2 par exemple).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">age=45,2</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Nom des variables&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On peut utiliser dans 
+les noms de variable des <b>majuscules ou des minuscules</b> mais pour VB&nbsp; il n’y a pas 
+de différence.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On ne peut pas 
+déclarer une variable <font color="#0000FF">VB</font> et une variable
+<font color="#0000FF">vb</font>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si on déclare une 
+variable nommée 'VB'&nbsp; et si ultérieurement on tape 'vb', le logiciel le 
+transforme 
+automatiquement en 'VB'.</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>On peut mettre des 
+chiffres et des lettres</b> dans les noms de variable mais pas de chiffre en premier caractère.</span></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">2A</font> n’est pas un 
+nom valide</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">Nom2</font> l’est.</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Certains caractères 
+de ponctuation </b>&nbsp;(‘&nbsp;»..) <b>ne peuvent pas être utilisés</b>, d'autres &quot;_&quot; et &quot;–&quot; sont permis&nbsp;:</span></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">nom_Utilisateur</font>&nbsp; 
+est valide.</span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;L'espace n'étant 
+pas permis, on utilise le &quot;_&quot;.</span></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Bien sur, <b>les mots clé 
+de VB (ceux qui sont des instructions)ne peuvent pas être utilisés</b>&nbsp;: On ne peut pas nommer une variable Form ou BackColor</span></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il est conseillé de 
+donner des <b>noms explicites</b>&nbsp;qui rappelle ce que contient la variable:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+nom_Utilisateur</font>&nbsp; 
+est explicite, pas <font color="#0000FF">NU</font>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Parfois on indique en 
+début de nom, par une lettre, le <b>type de variable</b> ou sa <b>portée</b> (la zone 
+de code où la variable existe).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">s_Nom</font>&nbsp;&nbsp;&nbsp; 'Le s indique qu'il s'agit 
+d'une variable String (Chaîne de caractères)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">iIndex </font>&nbsp; 'Le i indique qu'il s'agit d'une 
+variable Integer (Entier)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">gNomUtilisateur</font>&nbsp;&nbsp;&nbsp; 'g indique que la 
+variable est globale </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+<p><font face="Courier New" size="1">Il est possible de '<b>forcer' le type de la variable</b> 
+en ajoutant un caractère spécial à la fin du nom de la variable.</font></p>
+<p><font size="1"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New" color="#0000FF"> 
+c$ = &quot;aa&quot;&nbsp;&nbsp;&nbsp; </font><font face="Courier New">' <b>$</b> force c a être une 
+variable String.</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="1">De même <b>%</b> force les Integer, 
+<b>&amp;</b> les long..</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="1">Cette notation est moins
+utilisée et à éviter.</font> </span></p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Majuscules ++++:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicoexcl.gif" width="29" height="43"> On conseille, quand le nom d'une variable est 
+composé de plusieurs mots, de mettre <b>la première lettre de chaque mot en 
+majuscule, sauf pour le premier mot.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">nom_Utilisateur</font></span></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voir le chapitre sur <a href="v5-210.htm">le
+nommage des variables.</a></font></p>
+<p style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Déclaration, 
+initialisation:</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Avant d'utiliser une 
+variable, il faut <b>la déclarer</b>, la créer, pour cela on 
+utilise l'instruction '<font color="#0000FF">Dim' </font>:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim 
+a As Integer</span></font>&nbsp;&nbsp;&nbsp; 'Déclare une variable nommée 'a' de type
+Integer (Entier).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Avant la ligne, 'a' 
+n'existait pas, après le DIM, 'a' existe et contient 0.</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">L'instruction Dim crée la
+variable et lui alloue un espace de stockage.</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut aussi parfois l'<b>initialiser</b>, c'est à 
+dire lui donner une valeur de départ : <font color="#0000FF">a=3</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut déclarer et initialiser en même temps:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a As Integer</font> <font color="#0000FF">=3</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Rien n'empêche d'utiliser une expression , une 
+fonction pour initialiser.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a As Integer</font> <font color="#0000FF">= CalculMaVariable(4,3)</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">Ici pour initialiser la variable, on 
+appelle une fonction <font color="#0000FF">CalculMaVariable</font> qui retourne 
+une valeur pour a.</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicoexcl.gif" width="29" height="43"></font><span style="background-color: #FFFFFF"><font size="2" color="#FF0000"><span style="font-family: Courier New"> 
+ Il est toujours préférable d'initialiser rapidement une variable. </span></font>
+</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; background-color: #FFFFFF"><font size="2">On
+peut déclarer plusieurs variables en même temps; il faut les séparer par des
+virgules:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a, b, c As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>'a, b et c
+sont maintenant des variables de type Integer.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">En pratique: Exemple.</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Les variables après avoir été 
+déclarées, vont servir à stocker des données, à effectuer des calculs, on peut 
+afficher ensuite leur valeur.</font></b></p>
+<p><font face="Courier New" size="2">Exemple simpliste d'utilisation de 
+variables:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim varA As Integer
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Création d'une variable varA</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim varB As Integer</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Création d'une variable varB</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim total As Integer</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'Création d'une variable total</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">varA</font><font face="Courier New" size="2"><font color="#0000FF">=3</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Mettre '3' dans a </font></p>
+<p><font face="Courier New" size="2" color="#0000FF">varB</font><font face="Courier New" size="2"><font color="#0000FF">=2</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Mettre '2' dans b</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">t</font><font face="Courier New" size="2"><font color="#0000FF">otal=varA 
++ varB</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Mettre dans la variable 'total' la valeur de 
+varA et de varB&nbsp; </font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">LabelTotal.Text= 
+total.ToString</font>&nbsp;&nbsp;&nbsp; 'Afficher le total dans un label (un 
+label est une zone permettant d'afficher du texte), pour 
+cela transformer la variable total qui est un entier en chaîne de caractères (à 
+l'aide de ToString) puis&nbsp; 
+mettre la string dans le texte du label.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"> 
+<b> 
+Noter bien la différence entre :</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim total As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">t</font><font face="Courier New" size="2"><font color="#0000FF">otal= 123&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'Total est une variable <b>numérique</b> (Integer ou Entier) contenant le nombre 
+123</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">et</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim total2 As String</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">t</font><font face="Courier New" size="2"><font color="#0000FF">otal2= &quot;123&quot; </font>&nbsp;&nbsp;'Total2 est une variable <b>string</b> contenant la chaîne de caractère &quot;123&quot; 
+c'est à dire les caractères &quot;1&quot; , &quot;2&quot; et &quot;3&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vicochev.GIF" width="32" height="34"><font face="Courier New" size="2"> <b><font color="#008000">On peut afficher les 
+chaînes de caractères (ou String), pas les variables numériques.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;
+</font></b><font face="Courier New" size="2"> <b><font color="#008000">On fait des calculs avec les variables numériques.</font></b> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faudra donc parfois <b>convertir</b> le 
+contenu d'une variable d'un type dans un autre type(convertir une variable numérique en 
+String pour l'afficher par exemple ou convertir une variable String en numérique 
+pour faire un calcul) on apprendra cela plus loin.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'exemple simpliste juste au dessus en montre 
+un exemple: il faut convertir total qui est un entier en string pour l'afficher.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Concernant les variables numériques:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les variables numériques peuvent être <b>
+signées</b> (accepter les valeurs négatives ou positives) ou <b>non signées</b> 
+( Comme le Type 'Byte' qui ne contient que des valeurs positives)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Les </span></font>
+</span>
+<span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">différents 
+types de variable:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Rappel:
+(C'est juste pour comprendre, mais pas indispensable: vous pouvez sauter le
+rappel)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Un bit (ou binary digit)
+peut contenir 0 ou 1.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Un octet est composé de 8
+bits.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">En Visual Basic, les
+variables peuvent être: </span>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Nom&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Contient&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Boolean</font>&nbsp;</b>&nbsp; &nbsp; 
+Contient 
+une valeur Booléenne (logique): True ou False.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Byte</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Contient les nombres entiers de 0 à 255 
+(sans signe)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Short</font>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+16 bits (-32768 à 32768)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Integer</font></b>&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+32 bits &nbsp;(-2147483648&nbsp; à 2147483647)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Long&nbsp;</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+64 bits&nbsp; (-9223372036854775808 à 9223372036854775807) </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Single</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre 
+réel en 
+virgule flottante (-1,401298 *10^-45 à 1,401298 10^45)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Double</font>&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp; Nombre 
+réel en 
+virgule flottante double précision. (..puissance 324)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#808000">
+<b>Decimal</b>
+</font>&nbsp;&nbsp;&nbsp; Nombre réel en virgule fixe grande précision sur 16 
+octets.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Char</font></b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 
+caractère alphanumérique</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">String</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Chaîne de 
+caractère de longueur variable (jusqu'a 2 milliard de caractères)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#808000">
+<b>DateTime</b>&nbsp;</font>&nbsp;&nbsp;&nbsp;Date plus  heure</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Object</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peut 
+contenir tous les types de variables mais aussi des contrôles, des fenêtres..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Structure</font></b>&nbsp;&nbsp; 
+Ensemble de différentes variables définies 
+par l’utilisateur.&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="v2005.JPG" width="52" height="21"><font size="2"><span style="font-family: Courier New">&nbsp; 
+Dans la version 2005 il y a aussi les Unsigned (non signé: pas de valeur négative):</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b><font color="#808000">
+UInteger</font></b>&nbsp;&nbsp;&nbsp;&nbsp;Entier codé sur 32 bits pouvant prendre les valeurs
+</span></font><font face="Courier New" size="2">0 à 4 294 967 295.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#808000"><b>ULong</b>&nbsp; </font>&nbsp;&nbsp;&nbsp;&nbsp; Entier codé sur 64 bits :0 à 18 446 744 073 709 551 615</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#808000">UShort</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 16 bits 0 à 65 535.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;et</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#808000">SByte</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Byte mais signé. Codé sur 1 octet, valeur de -128 à 127&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">
+Détaillons</span></font><span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New"><span style="background-color: #C0C0C0">1- Variable 
+Booléenne.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Contient une valeur 
+Booléenne : <font color="#0000FF">True</font> ou <font color="#0000FF">False</font> 
+(Vrai ou Faux pour les sous doués en anglais!)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim 
+myBoolean As Boolean</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">myBoolean = True</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New"><span style="background-color: #C0C0C0">2- Variable 
+entière:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Byte, Short, Integer, Long</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Byte</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Contient les nombres entiers de 0 à 255 
+(sans signe)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Short</font>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+16 bits (-32768 à 32768)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Integer</font></b>&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+32 bits &nbsp;(-2147483648&nbsp; à 2147483647)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Long&nbsp;</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Entier sur 
+64 bits&nbsp; (-9223372036854775808 à 9223372036854775807) </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour une variable entière 
+il n'y a pas de possibilité de virgule!! attention, une division de 2 entiers 
+donne un entier.</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour le mathématicien, les 
+Integer correspondent au <b>nombres entiers naturels</b>: Entiers positif ou 
+négatif et 0 (..-3 -2 -1 0 1 2 3...), mais avec une limite.</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Attention ,les variables 
+numériques en informatique ne peuvent pas contenir de nombre infiniment grand: Il y a une limite 
+maximum : un Integer est par exemple codé sur 32 bits </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">ce qui fait qu'il peut 
+varier de -2147483648&nbsp; à 2147483647. Si on utilise une valeur trop grande, 
+une erreur se produit. Les entiers peuvent être 
+positifs ou négatifs (Sauf les Bytes et les 'Unsigned': UInteger, ULong, UShort).</span><font size="2"><span style="font-family: Courier New">&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Plus on augmente le type 
+(Long au lieu de Integer) plus on peut y mettre des grands nombres. Mais cela 
+prend aussi plus de place et le traitement des opérations est plus long.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Les processeurs 
+travaillant sur ’32 bits’, utilisez plutôt les <b>Integer </b>(qui sont codés 
+sur 32 bits aussi), c’est plus rapide, que les 
+short.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>On utilise largement 
+les 'Integer'</b> comme variable de boucle, Flag, là ou il y a&nbsp; besoin 
+d'entier...(Les calculs sur les réels en virgule flottante sont beaucoup plus 
+lent.)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">Dim i As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">i</span></font></span><font size="2" color="#0000FF"><span style="font-family: Courier New; background-color:#FFFFFF">=12</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le type de données <b>Byte</b> est utilisé 
+pour contenir des données binaires (octet codant de 0 à 255) non signé.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New"><span style="background-color: #C0C0C0">3- Variable avec virgule:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un réel peut avoir une partie fractionnaire: 
+1,454 est un réel.</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour le mathématicien, les 
+Single, Double.. correspondent au <b>nombres réels ou fractionnaires</b>: mais 
+avec des limites (sur la précision et le fait qu'il ne sont pas infinis).</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Single, Double, Decimal.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Single</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre 
+réel en 
+virgule flottante (-1,401298 *10^-45 à 1,401298 10^45)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b><font color="#808000">Double</font>&nbsp;</b>&nbsp;&nbsp;&nbsp;&nbsp; 
+Nombre réel en virgule flottante double précision. (</span><font face="Courier New" size="2">-1,79769313486231570E+308 
+et -4,94065645841246544E-324 pour les valeurs négatives et entre 
+4,94065645841246544E-324 et 1,79769313486231570E+308 pour les valeurs positives</font><span style="font-size: 10.0pt; font-family: Courier New">)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#808000">
+<b>Decimal</b>
+</font>&nbsp;&nbsp;&nbsp; Nombre réel en virgule fixe grande précision sur 16 
+octets: </span><font face="Courier New" size="2">Avec une échelle 0 (aucune 
+décimale), la plus grande valeur possible correspond à 
++/-79&nbsp;228&nbsp;162&nbsp;514&nbsp;264&nbsp;337&nbsp;593&nbsp;543&nbsp;950&nbsp;335. Avec 28&nbsp;décimales, la plus grande 
+valeur correspond à +/-7,9228162514264337593543950335</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b><u><font face="Courier New">a- Les variables en virgule flottante ou notation scientifique</font></u></b><font face="Courier New" size="2">:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">&nbsp;(<b>Single, Double</b>) </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">La 
+variable peut être positive ou négative.<br>
+Le 'Double' est, bien sur, plus précis et peut atteindre des nombres plus grand 
+que le 'Single'. </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Le 'Single' comporte 7 chiffres significatifs 
+maximum.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Le 'Double' comporte 18 chiffres significatifs 
+maximum.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Le nombre est <b>codé en interne</b> sous 
+forme scientifique, exemple:<font color="#0000FF">1,234568E+008</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Mais en pratique, on travaille et on les affiche de manière habituelle, 
+en notation normale avec <b>un point</b> comme séparateur décimal:
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Dim poids As Single</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">poids=45.45&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<i><font face="Courier New" size="2">Format Scientifique, Mantisse et exposant:</font></i></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Voici 3 nombres:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">14500000</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">0,145</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">0,0000145</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Ils comportent tous les 3, deux informations:
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-le nombre entier 145</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-la localisation du premier chiffre par 
+rapport à la virgule</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">&nbsp;8</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-5&nbsp;&nbsp; dans nos exemples.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Donc un réel peut être stocké sous la forme 
+d'un couple:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-Partie entière</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">-Localisation de la virgule</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Il est&nbsp; codé en interne avec une <b>mantisse 
+(la partie entière)</b> et un <b>exposant</b>  (<b>position de la virgule</b>), sous la forme
+<i>mmm</i><b>E</b><i>eee</i>, dans laquelle <i>mmm</i> correspond à la mantisse 
+(chiffres significatifs: partie entière) et <i>eee</i> à l'exposant (puissance de&nbsp;10). 
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">En fait, en notation scientifique (en codage 
+interne) un chiffre précède toujours la virgule: <font color="#0000FF">1,234568E+008</font>.
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2"><span style="font-family: Courier New">Attention ,les variables 
+numériques réelles ne peuvent pas contenir de nombre infiniment grand: Il y a 
+une limite maximum comme pour les entiers. </span></font>
+<font face="Courier New" size="2">La valeur 
+positive la plus élevée d'un type de données <b>Single</b> est 3,4028235E+38 et 
+celle d'un type de données <b>Double</b> est 1,79769313486231570E+308. </font>
+<font size="2"><span style="font-family: Courier New">Si on dépasse cette valeur 
+VB le signale en déclenchant une erreur.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Quand on travaille avec des nombres ayant 
+beaucoup de chiffres significatifs, il peut y avoir des erreurs d'arrondi. Le 
+type 'Single' comporte par exemple une mantisse de 7 chiffres significatifs 
+seulement. Si on utilise des nombres (même petit: avec 
+un exposant négatif par exemple)avec 8 chiffres significatifs il peut y avoir 
+des erreurs d'arrondi.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><u><b><font face="Courier New">b-
+Les
+variables en virgule fixe</font></b></u><font face="Courier New" size="2"> 
+(<b>Decimal</b>) prend en charge jusqu'à 29 chiffres significatifs et peut 
+représenter des valeurs jusqu'à 7,9228 x 10^28. Ce type de données est 
+particulièrement adapté aux calculs (par exemple, <b>financiers</b>) qui exigent 
+un grand nombre de chiffres, mais qui ne peuvent pas tolérer les erreurs 
+d'arrondi.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vicochev.GIF" width="32" height="34"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#008000"><b>Pour les calculs financiers ont utilisera 
+les 'Decimal' ou les 'Double'</b><br>
+<b>Pour les petits calculs du genre résultats d'examen biologique ont utilisera 
+les 'Single' ou les 'Double' qui sont les plus rapides.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#008000">Pour les variables de 
+boucle, les index, on utilise habituellement des Integers.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">String, Char:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Le type '<b>String</b>' 
+peut contenir une 'chaîne de caractères' (alphanumérique) comme du texte. La 
+longueur de la chaîne n'est pas fixe et une String peut avoir un nombre de 
+caractère allant de 0 jusqu'à environ 2 milliards de 
+caractères.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Les chaînes de 
+longueur fixe n’existent pas (plus).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Le Type '<b>Char</b>' 
+contient un seul caractère. On utilise souvent des tableaux de 'Char'.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour information <b>Char</b> et <b>String</b> 
+contiennent des caractères au format <b>Unicode</b> (dans la variable, chaque caractère 
+est codé sur 2 octets) et 
+pas de l'ASCII ou de l'ANSI..(ancien codage ou chaque caractère était codé sur 
+un octet).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les premiers caractères ont le même code 
+Unicode et Ascii.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Caractère&nbsp;&nbsp;&nbsp; Code</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&quot;a&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+65</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&quot;b&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+66</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&quot; &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+32</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il y a aussi des caractères non affichable:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">RC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+13&nbsp;&nbsp;&nbsp; retour chariot</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">LF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+10&nbsp;&nbsp;&nbsp; Line Feed</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+09&nbsp;&nbsp;&nbsp; Tabulation</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour passer à la ligne , on utilise les codes 
+13 puis 10. Il y a une constante toute faites pour cela: </font>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">
+ControlChars.CrLf&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chr$(13)+Chr$(10)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF"><b><span style="background-color: #C0C0C0">
+Annexe 1:Place 
+occupée en mémoire:</span></b></font><font face="Courier New" size="2"> </font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les types de variable ont un nom en 
+VisualBasic et un nom dans le Framework.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Integer</b> et <b>System.Int32</b> sont 
+équivalents pour designer le type 'entier', <font color="#0000FF">Integer</font> est le 
+type VB, 
+<font color="#0000FF">System.Int32 </font>est le type 'NET' </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Exemple 
+de place occupée par une variable (et le nom de sa Classe dans&nbsp; NET).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Type VB&nbsp;&nbsp;&nbsp; 
+Place occupée&nbsp;&nbsp;&nbsp; Type NET correspondant</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Boolean</b>&nbsp;&nbsp;&nbsp; 2 octets  &nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New"><b>
+System.Boolean</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Byte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-family: Courier New">1 octet&nbsp; </span></font>
+<font face="Courier New"><b>
+&nbsp;&nbsp;&nbsp;
+System.Byte</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Short</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+2 octets&nbsp; </span></font>
+<font face="Courier New">
+<b>&nbsp; System.Int16</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Integer</b>&nbsp;&nbsp;&nbsp; 
+4 octets&nbsp; </span></font>
+<font face="Courier New">
+<b>&nbsp;&nbsp; System.Int32</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Long</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+8 octets&nbsp; </span></font>
+<font face="Courier New"><b>&nbsp;&nbsp; System.Int64</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Single</b>&nbsp;&nbsp;&nbsp;&nbsp; 
+4 octets&nbsp; </span></font>
+<font face="Courier New"><b>&nbsp;&nbsp; System.Single</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Double </b>&nbsp;&nbsp;&nbsp; 
+8 octets&nbsp; </span></font>
+<font face="Courier New"><b>&nbsp;&nbsp; System.Double</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Decimal</b>&nbsp;&nbsp;&nbsp; 
+16 octets&nbsp; </span></font><font face="Courier New"><b>&nbsp; System.Decimal</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Date</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+8 octets&nbsp; </span></font>
+<font face="Courier New"><b>&nbsp;&nbsp; System.DateTime</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Char</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+2 octets&nbsp; </span></font>
+<font face="Courier New">
+<b>&nbsp;&nbsp; System.Char</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Objet</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 
+octets&nbsp; </font><font face="Courier New"><b>&nbsp;&nbsp; System.Objet</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">String&nbsp;&nbsp; </b>dépend de la chaîne<b> 
+, de </b></font><b><font face="Courier New">System.String </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><font face="Courier New"><font SIZE="2">La méthode</font><font SIZE="2" COLOR="#0000ff"> 
+GetType </font><font SIZE="2">permet de savoir de quel type, de quelle Classe 
+est une variable.</font></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> 
+x </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New">
+</font></p>
+<p><font face="Courier New"><font color="#0000FF">MessageBox.Show(x.GetType.ToString)&nbsp;&nbsp;
+</font>&nbsp;'Affiche: Systeme.String</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Prend le type de x, le transforme en String, 
+l'affiche dans une MessageBox.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Annexe 2: Type primitif</span></font></b><font face="Courier New" size="2"> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mise à part Objet, Structure, Class tous les 
+autres types sont dit '<b>Primitif</b>'( Byte, Boolean, Short, Integer, Long, 
+Single, Double, Decimal, Date, Char, String)</font></p>
+<ul type="disc">
+  <li><font size="2" face="Courier New">Tous les types primitifs permettent la 
+  création de valeurs par l'écriture de <b>littéraux</b>. Par exemple, </font>
+  <font size="2"><code class="ce"><font face="Courier New" color="#0000FF">i=123</font><font face="Courier New"> 
+  ou <font color="#0000FF">i=123I</font> (le I force 123 a être&nbsp; entier)</font></code></font><font size="2" face="Courier New"> 
+  est un littéral de type <b>Integer</b>. </font></li>
+  <li><font face="Courier New" size="2">Il est possible de déclarer des <b>
+  constantes</b> des types primitifs. </font></li>
+  <li><font face="Courier New" size="2">Lorsque qu'une expression est constituée 
+  de constantes de type primitif, le compilateur évalue l'expression au moment 
+  de la compilation. C'est plus rapide.</font></li>
+</ul>
+<p><font face="Courier New" size="2">&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6string.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:51 GMT -->
+</html>

@@ -1,0 +1,10 @@
+C:\Users\Younes\Videos\Ofppt\Ofppt\bin\Debug\Ofppt.exe
+C:\Users\Younes\Videos\Ofppt\Ofppt\bin\Debug\Ofppt.pdb
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.Form1.resources
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.Properties.Resources.resources
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.Rechercher.resources
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.csproj.GenerateResource.Cache
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.exe
+C:\Users\Younes\Videos\Ofppt\Ofppt\obj\x86\Debug\Ofppt.pdb
+I:\Ofppt\Ofppt\obj\x86\Debug\Ofppt.exe
+I:\Ofppt\Ofppt\obj\x86\Debug\Ofppt.pdb

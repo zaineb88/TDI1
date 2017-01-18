@@ -1,0 +1,897 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:45 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net : imprimer </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-10.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.11</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Imprimer.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vimprim.JPG" width="77" height="84"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment Imprimer ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Prévoir une longue 
+soirée, au calme, un bon siège, 1 g de paracétamol et un gros thermos de café!!</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On verra que l'on peut 
+utiliser pour imprimer: </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">A-
+La méthode .Net</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Soit avec un composant 
+'PrintDocument'.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Soit avec une instance de 'la 
+Class PrintDocument'.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">B-
+On peut, en ajoutant une référence, imprimer comme en VB6 et c'est plus
+simple!!&nbsp;</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">A- Avec PrintDocument</font></b></span></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" color="#0000FF" size="4">1 Imprimer 'Hello' avec le 
+composant 'PrintDocument'</font></b></span></p>
+<p><font face="Courier New">&nbsp;L'utilisateur clique sur un bouton, cela imprime 'Hello'</font></p>
+<p><b><font face="Courier New" color="#008000" size="2">Cet exemple utilise un 
+'composant PrintDocument'</font></b></p>
+<p><b><i><font face="Courier New" size="2">Comment faire en théorie?</font></i></b></p>
+<p><font face="Courier New" size="2">C'est le composant <font color="#0000FF">PrintDocument</font> qui 
+imprime.</font></p>
+<p><font face="Courier New" size="2"><b>En prendre un dans la boite à outils</b>, 
+le mettre dans un formulaire. Il apparaît sous le formulaire et se nomme
+<font color="#0000FF">PrintDocument1.</font></font></p>
+<p><font face="Courier New" size="2"><b>Pour imprimer</b> il faut utiliser la 
+méthode <font color="#0000FF">Print</font> de ce composant PrintDocument; Il 
+faut donc écrire l'instruction suivante:&nbsp; </font></p>
+<p><font color="#0000FF" face="Courier New" size="2">PrintDocument1.Print</font></p>
+<p><font face="Courier New" size="2">Cette instruction appelle la procédure 
+évènement <font color="#0000FF">PrintDocument1_PrintPage</font> du composant 
+PrintDocument et qui contient la logique d'impression. Un paramètre de cet évènement&nbsp;PrintPage&nbsp; est <b>
+l'objet graphique envoyé à l'imprimante </b>(nommé <font color="#0000FF">e</font>). C'est à vous de dessiner dans 
+l'objet graphique (e) ce que vous voulez imprimer . En fin de routine, l'objet 
+graphique sera imprimé (automatiquement).</font></p>
+<p><b><i><font face="Courier New" size="2">En pratique:</font></i></b></p>
+<ul>
+  <li><b><font face="Courier New" size="2">Je p</font></b><font face="Courier New" size="2"><b>rends 
+  un PrintDocument dans la boite à outils</b>, je le met dans un formulaire. Il 
+  apparaît sous le formulaire et se nomme PrintDocument1.</font></li>
+</ul>
+<blockquote>
+<p align="center"><img border="0" src="vprint1.GIF" width="129" height="36"></p>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Si je double-clique sur PrintDocument1&nbsp; 
+  je vois apparaître la procédure </font>
+  <font SIZE="2" color="#0000FF" face="Courier New">PrintDocument1_PrintPage</font><font face="Courier New" size="2"> 
+  (qui a été générée automatiquement):</font></li>
+</ul>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+    </font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+    PrintDocument1_PrintPage(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+    sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+    System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+    e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+    System.Drawing.Printing.PrintPageEventArgs) </font>
+    <font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+    PrintDocument1.PrintPage</font></p>
+    </font>
+    <p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+    </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+    </font>
+<p><font face="Courier New" size="2">C'est cette procédure qui est fondamentale 
+et qui contient les routines d'impression écrites par le programmeur. Les 
+routines d'impression agissent sur l'objet graphique qui sera utilisé pour 
+imprimer , cet objet graphique est fourni dans les paramètres de la 
+procédure(ici c'est <font color="#0000FF">e </font>qui est de type 
+PrintPageEventArgs) </font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Dans cette routine PrintPage, j'ajoute 
+  donc le code dessinant une texte (DrawString) sur l'objet graphique 'e':</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font color="#0000FF" face="Courier New" SIZE="2">e.Graphics.DrawString(&quot;Hello&quot;,
+</font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font color="#0000FF" face="Courier New" SIZE="2"> 
+Font(&quot;Arial&quot;, 80, FontStyle.Bold), Brushes.Black, 150, 125)</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Enfin je dessine un bouton nommé 'ButtonPrint' 
+  avec une propriété Text contenant &quot;Imprimer Hello&quot; et dans la procédure 
+  ButtonPrint_Click&nbsp; j'appelle la méthode Print</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font color="#0000FF" face="Courier New" SIZE="2">PrintDocument1.Print()</font></p>
+  </blockquote>
+</blockquote>
+<p><b><i><font face="Courier New" size="2">Voici le code complet:</font></i></b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><b><font face="Courier New">Private</font></b></font><font face="Courier New"><b><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></b><font SIZE="2" color="#0000FF"><b> 
+PrintDocument1_PrintPage</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Drawing.Printing.PrintPageEventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+PrintDocument1.PrintPage</font></p>
+<blockquote>
+  <p><font color="#0000FF" face="Courier New">e.Graphics.DrawString(&quot;Hello&quot;,
+  </font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  Font(&quot;Arial&quot;, 80, FontStyle.Bold), Brushes.Black, 150, 125)</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><b><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></b><font SIZE="2" color="#0000FF"><b> 
+ButtonPrint_</b>Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ButtonPrint.Click</font></p>
+<blockquote>
+  <p><font color="#0000FF" face="Courier New">PrintDocument1.Print()</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p><font face="Courier New" size="2">Si je clique sur le bouton 'ImprimerHello' 
+cela imprime un gros 'Hello'.</font></p>
+<p><font color="#008000" face="Courier New" size="2"><b>
+<img border="0" src="vicochev.GIF" width="32" height="34"> </b>La méthode <b>
+Print</b> d'un <b>PrintDocument</b> déclenche l'évènement <b>PrintPage </b>de ce 
+PrintDocument qui contient le code dessinant sur le graphique de la page à 
+imprimer. En fin de routine PrintPage le graphique est imprimer sur la feuille 
+de l'imprimante.</font></p>
+<p><font face="Courier New" size="2">Toutes les méthodes graphiques  écrivant, dessinant, 
+traçant des lignes... sur un graphique permettent donc 
+d'imprimer.</font></p>
+<p>&nbsp;</p>
+<pre class="code"><font face="Courier New" color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0">Imprimer un dessin:</span></font></pre>
+<p><font face="Courier New" size="2">Créons une ellipse bleue à l'intérieur d'un 
+rectangle avec la position et les dimensions suivantes&nbsp;: début à&nbsp;100,&nbsp;150 avec 
+une largeur de&nbsp;250 et une hauteur de&nbsp;250. </font> </p>
+<pre class="code"><font face="Courier New">
+<font color="#0000FF">Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+   e.Graphics.FillEllipse(Brushes.Blue, New Rectangle(100, 150, 250, 250))
+End Sub</font></font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">Afficher</font></span><font face="Courier New" color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0"> un Message Box indiquant 'Fin d'impression'.</span></font></pre>
+<p><font face="Courier New" size="2">On a étudié l'évènement
+<font color="#0000FF">PrintPage</font>, mais il existe aussi les évènements:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">BeginPrint</font> et
+<font color="#0000FF">EndPrint</font> respectivement déclenchés en début et fin 
+d'impression<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Il suffit d'utiliser l'évènement EndPrint 
+pour prévenir que l'impression est terminée:</font></p>
+<p><font face="Courier New" size="2"><br>
+<font color="#0000FF">Private Sub <b>PrintDocument1_EndPrint</b>(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint<br>
+&nbsp;&nbsp; MessageBox.Show(&quot;Fin d'impression&quot;)<br>
+End Sub</font><br>
+</font> </p>
+<p><font face="Courier New" size="2">On peut même fignoler et afficher &quot;Fin 
+d'impression de Nom du document&quot;</font></p>
+<p><font face="Courier New" size="2">Il faut avoir renseigné le DocumentName:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">PrintDocument1.DocumentName = &quot;MyTextFile&quot;</font></font></p>
+<p><font face="Courier New" size="2">Puis écrire:<br>
+<font color="#0000FF">Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint<br>
+&nbsp;&nbsp; MessageBox.Show( &quot;Fin d'impression de &quot;+PrintDocument1.DocumentName)<br>
+End Sub</font><br>
+</font></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" color="#0000FF" size="4">2-Même programme: Imprimer 
+'Hello' mais avec la Classe PrintDocument</font></b></span></p>
+<p><font face="Courier New">&nbsp;L'utilisateur clique sur un bouton, cela imprime 'Hello'</font></p>
+<p><b><font face="Courier New" color="#008000" size="2">Cet exemple utilise 'une 
+instance de la Classe PrintDocument'. On ne met pas de composant 'PrintDocument' 
+dans le formulaire.</font></b></p>
+<p><b><i><font face="Courier New" size="2">Comment faire en théorie?</font></i></b></p>
+<p><font face="Courier New" size="2">Il faut importer l'espace de nom 'Printing' 
+par :</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p><font face="Courier New">Imports</font></font><font SIZE="2"><font face="Courier New">
+  <font color="#0000FF">System.Drawing.Printing</font></font></p>
+</blockquote>
+</font>
+<p><font face="Courier New" size="2">Il faut créez&nbsp; <b>une instance de la 
+Classe</b> <font color="#0000FF">PrintDocument </font>dans le module.</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">&nbsp;<font color="#0000FF">Dim 
+pd As new PrintDocument()</font></font></p>
+</blockquote>
+<h5><span style="font-weight: 400"><font face="Courier New">Il faut créer soi 
+même, une 
+routine</font></span><font face="Courier New" size="2"> pd_PrintPage <span style="font-weight: 400">
+.</span></font></h5>
+<blockquote>
+<p align="left"><font face="Courier New" size="2"><font color="#0000FF">Private 
+Sub pd_PrintPage(sender As object, ev As 
+System.Drawing.Printing.PrintPageEventArgs)</font><br>
+<font color="#0000FF">End sub</font></font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il faut indiquer le &quot;lien&quot; entre l'objet&nbsp; 
+pd et la routine évènement PrintPage</font></p>
+<blockquote>
+<p><font face="Courier New" size="2" color="#0000FF">AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" size="2">Dans la procédure Button_Click d'un bouton 
+&quot;Imprimer&quot; il faut appeler la méthode <font color="#0000FF">Print</font><b>&nbsp; </b>
+du PrintDocument<b> pour effectuer l'impression</b> 
+du document .</font></p>
+<p align="center"><font face="Courier New" size="2" color="#0000FF">pd.Print</font></p>
+<h5><font face="Courier New" size="2">&nbsp;<span style="font-weight: 400">Cela</span> 
+déclenche <span style="font-weight: 400">la procédure</span><font color="#0000FF">
+<span style="font-weight: 400">Private 
+Sub pd_PrintPage</span></font><span style="font-weight: 400"> précédemment 
+écrite, dans laquelle on a ajouté:</span></font></h5>
+<blockquote>
+<p>
+<font color="#0000FF" face="Courier New" size="2">ev.Graphics.DrawString 
+(&quot;Hello&quot;, printFont, Brushes.Black, 
+leftMargin, yPos, new StringFormat()).</font></p>
+</blockquote>
+<h5>&nbsp;</h5>
+<h5><i><font face="Courier New">Cela donne le code complet:</font></i></h5>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Drawing.Printing</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Public</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Inherits</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Windows.Forms.Form</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> pd
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">&nbsp;
+</font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+PrintDocument </font></font>
+<font face="Courier New" SIZE="2">'Assumes the default printer</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></b><font SIZE="2" color="#0000FF"><b> 
+Form1_Load</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">MyBase</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.Load</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; AddHandler</font><font SIZE="2" color="#0000FF"> 
+pd.PrintPage, </font><font SIZE="2" COLOR="#0000ff">AddressOf</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.Pd_PrintPage</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font></b><font SIZE="2" COLOR="#0000ff"><b><font face="Courier New">Sub</font></b></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></b><font SIZE="2" color="#0000FF"><b> 
+Pd_PrintPage</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Drawing.Printing.PrintPageEventArgs)</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">e.Graphics.DrawString(&quot;Hello&quot;, </font>
+  </font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  Font(&quot;Arial&quot;, 80, FontStyle.Bold),&nbsp;&nbsp; Brushes.Black, 150, 125)</font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font></b><font SIZE="2" COLOR="#0000ff"><b><font face="Courier New">Sub</font></b></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></b><font SIZE="2" color="#0000FF"><b> 
+ButtonPrint_Click</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+ButtonPrint.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; pd.Print()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font></b><font SIZE="2" COLOR="#0000ff"><b><font face="Courier New">Sub</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End</font></font><font SIZE="2" face="Courier New" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Class</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Comment choisir l'imprimante?</span></font></b></p>
+<p><font face="Courier New" size="2">Le composant <font color="#0000FF">
+PrintDialog</font> permet <b>le choix de l'imprimante</b>, de la zone à imprimer (tout, 
+la sélection..) et donne accès aux caractéristiques de l'imprimante.</font></p>
+<p><font face="Courier New" size="2">Comment l'utiliser?</font></p>
+<p><font face="Courier New" size="2">Il faut créer une instance de PrintDialog:</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; 
+Dim</font><font SIZE="2" color="#0000FF"> dlg </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font face="Courier New" color="#0000FF" SIZE="2"> 
+PrintDialog</font></p>
+<p><font face="Courier New" size="2">Il faut indiquer au PrintDialog sur quel 
+PrintDocument travailler:</font></p>
+<p><font face="Courier New" color="#0000FF" SIZE="2">&nbsp;&nbsp;&nbsp; 
+dlg.Document = pd</font></p>
+<p><font face="Courier New" size="2">Puis ouvrir la fenêtre PrintDialog avec la 
+méthode <font color="#0000FF">ShowDialog</font>.</font></p>
+<p><font face="Courier New" size="2">L'utilisateur choisit son imprimante puis 
+clique sur 'Ok'.</font></p>
+<p><font face="Courier New" size="2">Si elle retourne Ok, on imprime.</font></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">Quand 
+l'utilisateur clique sur le bouton ButtonPrint ('Imprimer')&nbsp; la fenêtre PrintDialog 
+s'ouvre:</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New">
+Voici le code complet:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ButtonPrint_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+ButtonPrint.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> dlg
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PrintDialog</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">dlg.Document = pd</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> result
+</font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+DialogResult = dlg.ShowDialog()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> (result 
+= System.Windows.Forms.DialogResult.OK) </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; pd.Print()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Comment modifier la page à imprimer?</span></font></b></p>
+<p><font face="Courier New" size="2">Comment choisir d'imprimer en <b>portrait ou 
+paysage</b>? <b>modifier les marges.</b>.</font></p>
+<p><font face="Courier New" size="2">Il faut utiliser un composant <font color="#0000FF">
+PageSetUpDialog</font>. </font></p>
+<p><font face="Courier New" size="2">Pour stocker les informations sur la page 
+(marges...) il faut un <font color="#0000FF">PageSetting</font></font></p>
+<p><font face="Courier New" size="2">Je lie le PageSetting au PageSetUpDialog en donnant à la propriété
+<font color="#0000FF">PageSettings</font> du 
+PageSetUpDialog le nom du PageSetting.</font></p>
+<p><font face="Courier New" size="2">puis j'ouvre le PageSetUpDialog.</font></p>
+<font SIZE="2">
+<p><font face="Courier New">Au retour le PageSetting contient les modifications, 
+je les 'passe' au PrintDocument avant d'imprimer.</font></p>
+</font><font SIZE="2" face="Courier New">
+<p>Cela donne:</p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+psDlg </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PageSetupDialog</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+LePageSettings </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PageSettings</font></p>
+<p><font face="Courier New" color="#0000FF">psDlg. PageSettings = 
+LePageSettings</font></p>
+<p><font face="Courier New" color="#0000FF">psDlg.ShowDialog()</font></p>
+</font>
+<h5><font color="#0000FF"><span style="font-weight: 400">
+<font face="Courier New">pd.DefaultPageSettings = LePageSettings</font></span></font></h5>
+<h5><font color="#0000FF"><span style="font-weight: 400">
+<br>
+&nbsp;</span></font></h5>
+<font SIZE="4" COLOR="#0000ff">
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New">
+Prévisualisation de</font></b></span><b><font face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0"> 
+la page à imprimer?</span></font></b></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2">On utilise pour cela un </font>
+<font SIZE="2" COLOR="#0000ff">PrintPreviewDialog, </font><font SIZE="2">on lui 
+indique quel PrintDocument pré visualiser en l'assignant à sa méthode 
+<font color="#0000FF">document</font> 
+puis on l'affiche par <font color="#0000FF">ShowDialog()</font>.</font></font><font SIZE="2" COLOR="#0000ff"></p>
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+dllg </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PrintPreviewDialog</font></p>
+<p><font face="Courier New" color="#0000FF">dllg.Document = pd</font></p>
+<p><font face="Courier New" color="#0000FF">dllg.ShowDialog()</font></p>
+</font>
+<h5>&nbsp;</h5>
+<h5><font face="Courier New" color="#0000FF" size="4">
+<span style="background-color: #C0C0C0">Construction d'une application d'impression 
+complexe:</span></font></h5>
+<p><font face="Courier New" size="2">Comment imprimer le contenu d'un fichier 
+texte?</font></p>
+<p><font face="Courier New" size="2">Tous les didacticiels (Microsoft compris) 
+donnent cet exemple.</font></p>
+<p><font face="Courier New" size="2">La première chose que vous devez faire est 
+d'écrire votre logique d'impression. Pour cela, quand la méthode <b>PrintDocument.Print()</b> est appelée, 
+les événements suivants sont déclenchés. </font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>BeginPrint</b> </font></li>
+  <li><font face="Courier New" size="2"><b>PagePrint</b> (un ou plusieurs s'il y 
+  a plusieurs pages à imprimer)
+  </font></li>
+</ul>
+<div id="post_message_2774538">
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        La fonction PrintPage est appelée autant de fois qu'il y a de page.<br>
+        Par défaut une document à une seule page. Si en imprimant la page on
+        veut faire un&nbsp; saut de page, on positionne:
+        <p><font color="#0000FF">e.<span>HasMorePages</span> = true</font></p>
+        <p><br>
+        <!-- BEGIN TEMPLATE: bbcode_code -->
+        Cela fait un saut de page et déclenche de nouveau PrintPage pour la
+        page suivante. Il faut donc&nbsp; incrémenter une variable à chaque
+        appel de cette fonction afin de savoir quelle est la page courante.</p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</div>
+<!-- / message -->
+<!-- sig -->
+<p>&nbsp;</p>
+<ul>
+  <li><font face="Courier New" size="2"><b>EndPrint</b> </font></li>
+</ul>
+<p><font face="Courier New" size="2">L'argument d'événement de <b>
+PagePrint</b> (<b>PagePrintEventArgs</b>) comprend une propriété <b>HasMorePages</b>. 
+Si celle-ci a la valeur <b>True</b> lors du retour de votre gestionnaire 
+d'événements, <b>PrintDocument</b> définit une nouvelle page et déclenche de 
+nouveau l'événement <b>PagePrint</b>. </font></p>
+<p><font face="Courier New" size="2">Voyons la logique dans votre 
+gestionnaire d'événements <b>PagePrint</b> : </font></p>
+<ul>
+  <li><font face="Courier New" size="2">Imprimez le contenu de la page en 
+  utilisant les informations des arguments d'événement. Les arguments 
+  d'événement contiennent l'objet <b>Graphics</b> pour l'imprimante, le <b>
+  PageSettings</b> pour cette page, les limites de la page, et la taille des 
+  marges. </font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Il faut dans <b>la procédure PagePrint</b> imprimer 
+    ligne par ligne en se déplaçant à chaque fois vers le bas d'une hauteur de 
+    ligne.</font></p>
+    <p><font face="Courier New" size="2">Pour 'simplifier', on considère que 
+    chaque ligne ne déborde pas à droite!!</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Déterminer s'il reste des pages à 
+  imprimer. </font></li>
+  <li><font face="Courier New" size="2">Si c'est le cas, <b>HasMorePages</b> 
+  doit être égal à <b>True</b>. </font></li>
+  <li><font face="Courier New" size="2">S'il n'y a pas d'autres pages, <b>
+  HasMorePages</b> doit être égal à <b>False</b>. </font></li>
+</ul>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Public Class 
+ExampleImpression<br>
+&nbsp;&nbsp;&nbsp; Inherits System.Windows.Forms.Form<br>
+<br>
+&nbsp;&nbsp;&nbsp; ....<br>
+<br>
+&nbsp;&nbsp;&nbsp; private printFont As Font<br>
+&nbsp;&nbsp;&nbsp; private streamToPrint As StreamReader<br>
+<br>
+&nbsp;&nbsp;&nbsp; Public Sub New ()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyBase.New<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InitializeComponent()<br>
+&nbsp;&nbsp;&nbsp; End Sub</font><br>
+<br>
+&nbsp;&nbsp; <font color="#008000">&nbsp;'Evénement survenant lorsque 
+l'utilisateur clique sur le bouton 'Imprimer'</font><br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Private Sub printButton_Click(sender As object, e As System.EventArgs)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Try<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; streamToPrint = new StreamReader (&quot;PrintMe.Txt&quot;)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Try<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; printFont = new Font(&quot;Arial&quot;, 10)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim pd as PrintDocument = new PrintDocument()
+</font><font color="#008000">'déclaration du PrintDocument</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AddHandler pd.PrintPage, AddressOf Me.pd_PrintPage<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pd.Print()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finally<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; streamToPrint.Close()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Try<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Catch ex As Exception<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBox.Show(&quot;Une 
+erreur est survenue: - &quot; + ex.Message)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End Try<br>
+<br>
+&nbsp;&nbsp;&nbsp; End Sub<br>
+<br>
+&nbsp;&nbsp;&nbsp; </font><font color="#008000">'Evènement survenant pour chaque 
+page imprimer</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp; Private Sub pd_PrintPage(sender As object, ev As System.Drawing.Printing.PrintPageEventArgs)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim lpp As Single = 0&nbsp;&nbsp;&nbsp;
+</font><font color="#008000">'nombre de ligne par page</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim yPos As Single =&nbsp; 0&nbsp;
+</font><font color="#008000">'ordonnée&nbsp;&nbsp; </font><font color="#0000FF">
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim count As Integer = 0 </font>
+<font color="#008000">'numéro de ligne</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim leftMargin As Single = ev.MarginBounds.Left<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim topMargin As Single = ev.MarginBounds.Top<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim line as String<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#008000">'calcul 
+le nombre de ligne par page<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' hauteur de la page/hauteur de la 
+police de caractère</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lpp = ev.MarginBounds.Height&nbsp; / printFont.GetHeight(ev.Graphics)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#008000">'lit une 
+ligne dans le fichier</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line=streamToPrint.ReadLine()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'Boucle affichant 
+chaque ligne&nbsp;&nbsp;&nbsp; </font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2"><font color="#0000FF"> <b>while (count &lt; lpp AND line &lt;&gt; Nothing)</b><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yPos = topMargin + (count * printFont.GetHeight(ev.Graphics))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font color="#008000">'Ecrit le texte dans l'objet graphique</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ev.Graphics.DrawString (line, printFont, Brushes.Black, leftMargin, _<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yPos, new StringFormat())<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; count = count + 1<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (count &lt; lpp) then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; line=streamToPrint.ReadLine()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end if<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>End While</b><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#008000">'S'il y 
+a encore des lignes, on réimprime une page</font><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If (line &lt;&gt; Nothing) Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ev.HasMorePages = True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ev.HasMorePages = False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If<br>
+<br>
+&nbsp;&nbsp;&nbsp; End Sub<br>
+<br>
+&nbsp;&nbsp;&nbsp; ....<br>
+<br>
+End Class</font></font></p>
+<pre class="code"><font face="Courier New">
+On a vu que p</font><font face="Courier New" size="2">our 'simplifier', on considère que chaque ligne ne déborde pas à droite.</font></pre>
+<pre class="code"><font face="Courier New" size="2">Dans la pratique, pour gérer les retours à la ligne automatiques on peut dessiner dans un rectangle en utilisant une surcharge de DrawString.</font></pre>
+<p><font face="Courier New" color="#0000ff" size="2">Dim rectangle As New
+RectangleF (100, 100, 150, 150 )</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Dim T as String= &quot;Chaîne
+de caractères très longue&quot;</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">g.DrawString (T, Me.Font,
+New SolidBrush (ColorBlack), Rectangle)</font></p>
+<p><font face="Courier New" size="2">On peut <b>mesurer la longueur (ou le
+nombre de lignes) d'une chaîne</b>:</font></p>
+<p><font face="Courier New" size="2">Avec</font><font face="Courier New" color="#0000ff" size="2">
+MeasureString</font></p>
+<pre class="code"><font face="Courier New">(Voir la page sur les graphiques.)</font></pre>
+<pre class="code">&nbsp;</pre>
+<h5><span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Propriétés du 'PrintDocumet'</font></span><font face="Courier New" color="#0000FF" size="4"><span style="background-color: #C0C0C0">:</span></font></h5>
+<p><font face="Courier New" size="2">On peut sans passer par une 'boite de 
+dialog' gérer directement l'imprimante, les marges, le nombre de copies..</font></p>
+<p><font face="Courier New" size="2">Si pd est le PrintDocument:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">pd.PrinterSetting</font>&nbsp;&nbsp;&nbsp; 
+désigne l'imprimante en cours</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+pd.PrinterSetting.PrinterName</font> retourne ou définit le nom de cet 
+imprimante</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+pd.PrinterSetting.Printerresolution</font>&nbsp; donne la résolution de cette 
+imprimante.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+pd.PrinterSetting.installedPrinted</font>&nbsp;&nbsp; donne toutes les 
+imprimantes installées.</font></p>
+<p><font face="Courier New" size="2">La propriété <font color="#0000FF">
+DefaultPageSetting</font> est en rapport avec les caractéristiques de la page.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+pd.PrinterSetting.DefaultPageSetting.Margins</font> donne les marges</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+pd.PrinterSetting.PrinttoFile</font>&nbsp; permettrait d'imprimer dans un 
+fichier (non testé)</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">&nbsp;Imprime le formulaire en cours.</span></font></b></p>
+<h4 class="dtH4"><font face="Courier New" size="2">
+<span style="font-weight: 400">Exemple fournit par Microsoft.</span></font></h4>
+<p class="dtH4"><font face="Courier New" size="2">La routine CaptureScreen 
+capture l'image du formulaire en cours et la met dans memoryImage. puis 
+memoryImage est passé dans l'objet graphique e qui est imprimé.</font></p>
+<pre class="code"><font color="#0000FF">Private Declare Function BitBlt Lib &quot;gdi32.dll&quot; Alias &quot;BitBlt&quot; (ByVal _
+   hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As _
+   Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal _
+   hdcSrc As IntPtr, ByVal nXSrc As Integer, ByVal nYSrc As Integer, _
+   ByVal dwRop As System.Int32) As Long
+Dim memoryImage As Bitmap
+Private Sub CaptureScreen()
+   Dim mygraphics As Graphics = Me.CreateGraphics()
+   Dim s As Size = Me.Size
+   memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+   Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+   Dim dc1 As IntPtr = mygraphics.GetHdc
+   Dim dc2 As IntPtr = memoryGraphics.GetHdc
+   BitBlt(dc2, 0, 0, Me.ClientRectangle.Width, _
+      Me.ClientRectangle.Height, dc1, 0, 0, 13369376)
+   mygraphics.ReleaseHdc(dc1)
+   memoryGraphics.ReleaseHdc(dc2)
+End Sub
+Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, _
+   ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles _
+   PrintDocument1.PrintPage
+   e.Graphics.DrawImage(memoryImage, 0, 0)
+End Sub
+Private Sub PrintButton_Click(ByVal sender As System.Object, ByVal e As _
+   System.EventArgs) Handles PrintButton.Click
+   CaptureScreen()
+   PrintDocument1.Print()
+End Sub</font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">Imprime un contrôle DataGrid.</span></b></font></pre>
+<h4 class="dtH4"><font face="Courier New" size="2">
+<span style="font-weight: 400">Exemple fournit par Microsoft.</span></font></h4>
+<p><font face="Courier New" size="2">Cet exemple nécessite&nbsp;: </font> </p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">un contrôle <b>Button</b>, nommé 
+  ImprimerGrid, dans le formulaire&nbsp;; </font> </li>
+  <li><font face="Courier New" size="2">un contrôle <b>DataGrid</b> nommé DataGrid1&nbsp;;
+  </font> </li>
+  <li><font face="Courier New" size="2">un composant <b>PrintDocument</b> nommé PrintDocument1.
+  </font> </li>
+</ul>
+<pre class="code"><font face="Courier New">Comme d'habitude <font color="#0000FF">PrintPage</font> imprime e.Graphics.</font></pre>
+<pre class="code"><font face="Courier New">D'après ce que j'ai compris, l'évènement <font color="#0000FF">Paint</font> redessine un contrôle </font></pre>
+<pre class="code"><font face="Courier New">mais on peut choisir le contrôle et l'endroit ou le redessiner,</font></pre>
+<pre class="code"><font face="Courier New">Je redessine donc grâce à <font color="#0000FF">Paint</font>,le DataGrid dans e.graphics.  </font></pre>
+<pre class="code"><font face="Courier New"><font color="#0000FF">PaintEventArgs</font> Fournit les données pour l'événement Paint: </font></pre>
+<p><font face="Courier New" size="2"><font color="#0000FF">PaintEventArgs</font> 
+spécifie l'objet <font color="#0000FF">graphics</font> à utiliser pour peindre 
+le contrôle, ainsi que le <font color="#0000FF">ClipRectangle</font> dans lequel 
+le peindre.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">InvokePaint</font> 
+déclenche l'évènement Paint</font></p>
+<pre class="code"><font color="#0000FF">Private Sub ImprimerGrid_Click(ByVal sender As System.Object, ByVal e As _
+   System.EventArgs) Handles PrintGrid.Click
+   PrintDocument1.Print()
+End Sub
+
+Private Sub PrintDocument1_PrintPage(ByVal sender As System.Object, _
+   ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles _
+   PrintDocument1.PrintPage
+   Dim myPaintArgs As New PaintEventArgs(e.Graphics, New Rectangle(New _
+      Point(0, 0), Me.Size))
+   Me.InvokePaint(DataGrid1, myPaintArgs)
+End Sub</font></pre>
+<pre class="code">&nbsp;</pre>
+<h4 class="dtH4"><b><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="3">Imprime
+le texte d'un RichTextBox</font></span></b></h4>
+<p class="dtH4">Voir <a href="http://msdn2.microsoft.com/fr-fr/library/7d29f66t(VS.80).aspx">Imprimer le contenu d'une RichtextBox</a></p>
+<h4 class="dtH4"><font face="Courier New">Simple, non!!&nbsp; Je plaisante!!</font></h4>
+<p class="dtH4">&nbsp;</p>
+<p class="dtH4"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">B- Imprimer comme en VB6 avec
+un objet 'Printer'&nbsp;</font></b></span></p>
+<p class="dtH4"><font face="Courier New" size="2"><font color="#111111">Microsoft
+propose un <b>PowerPack de compatibilité vb6</b> le '</font><span class="ui">Microsoft.VisualBasic.PowerPacks.Printing.Printer'
+qui ajoute à VB 2005 une Classe permettant d'imprimer 'comme en VB6'; cela
+permet d'utiliser votre code de routine d'impression VB6 ou de créer des
+routines d'impression beaucoup plus simple!!</span></font></p>
+<p class="dtH4"><font face="Courier New" size="2"><b>Télécharger le&nbsp;
+PowerPack <a href="http://msdn2.microsoft.com/en-us/vbasic/bb219077.aspx">Printercompatibility
+1</a></b></font></p>
+<p class="dtH4"><font face="Courier New" size="2"><b>Voir la <a href="file:///C:/Program%20Files/Microsoft%20Visual%20Basic%202005%20Power%20Packs/Printing/Printer/Documentation/Printer%20Compatibility%20Library%20Help.htm">Documentation
+</a></b></font><font face="Courier New" size="2"><b><a href="file:///C:/Program%20Files/Microsoft%20Visual%20Basic%202005%20Power%20Packs/Printing/Printer/Documentation/Printer%20Compatibility%20Library%20Help.htm">complète</a></b></font></p>
+<p class="numberedlist1"><font face="Courier New" size="2">Après avoir
+installé le Pack, aller dans le menu <span class="ui">Project cliquer sur
+'Ajouter une référence'.</span></font></p>
+<p class="numberedlist1"><font face="Courier New" size="2">Sur l'onglet <span class="ui">NET</span>
+, cliquez sur&nbsp; <span class="ui">Microsoft.VisualBasic.PowerPacks.Printing.Printer</span>,
+puis sur <span class="ui">OK</span>.</font></p>
+<p class="numberedlist1"><font face="Courier New" size="2">Dans le&nbsp; <span class="ui">Code</span>,
+ajouter en haut du module:</font></p>
+<p class="codeinlist1"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Imports Microsoft.VisualBasic.PowerPacks.Printing.Compatibility.VB6</font></p>
+<p class="numberedlist1"><font face="Courier New" size="2">Maintenant on peut
+utiliser du code VB6 pour imprimer:</font></p>
+<blockquote>
+  <p class="code"><font face="Courier New" size="2"><font color="#0000FF">Dim pr
+  As New Printer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#111111">'Instanciation
+  de l'imprimante par défaut</font></font></p>
+  <p class="code"><font face="Courier New" size="2"><font color="#0000FF">Dim
+  pFont As New Font(&quot;Arial&quot;, 14)&nbsp;&nbsp;&nbsp; </font><font color="#111111">'Une
+  nouvelle font</font></font></p>
+  <p class="code"><font color="#0000FF" face="Courier New" size="2">pr.Font =
+  pFont</font></p>
+  <p class="code"><font face="Courier New" size="2"><font color="#0000FF">pr.Print(&quot;This
+  text will print in 14 point &quot;)&nbsp;</font><font color="#111111"> 'Texte
+  à imprimer</font></font></p>
+  <p class="code"><font face="Courier New" size="2"><font color="#0000FF">pr.EndDoc()&nbsp;&nbsp;&nbsp;</font><font color="#111111">
+  'fin, on lance l'impression</font></font></p>
+</blockquote>
+<p class="MsoNormal"><b><font face="Courier New">Simple, non!!&nbsp; Je
+plaisante pas!!</font></b></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;<span class="languagekeyword">DrawMode</span>,
+<span class="languagekeyword">DriverName</span>, <span class="languagekeyword">hDC</span>,
+<span class="languagekeyword">Port</span>, TrackDefault, et <span class="languagekeyword">Zoom</span>
+n'existent plus.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Par contre il y a en
+plus:&nbsp; <span class="languagekeyword"><font color="#0000FF">PrintAction</font></span>
+property&nbsp; qui permet un print preview ou permet d'imprimer dans un fichier.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Il y a aussi la&nbsp; <span class="languagekeyword"><font color="#0000FF">PrinterCollection</font><span style="FONT-WEIGHT: normal">
+class </span></span>qui contient les imprimantes . La&nbsp; global <font color="#0000FF">Printers</font>
+collection permet de sélectionner une imprimante.</font></p>
+<p class="dtH4">&nbsp;</p>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-10.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:46 GMT -->
+</html>

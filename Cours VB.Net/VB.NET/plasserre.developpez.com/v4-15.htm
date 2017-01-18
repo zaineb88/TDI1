@@ -1,0 +1,337 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic.Net le drag and drop </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-14.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.15</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Drag and Drop.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><p><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p><font face="Courier New" size="2">L'exécution d'opérations <b>
+glisser-déplacer</b>&nbsp; (Drag ans Drop) peut être ajoutée dans un programme.</font></p>
+<p><font face="Courier New" size="2">La méthode
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDoDragDropTopic">
+<font color="#0000FF">DoDragDrop</font> du contrôle de départ </MSHelp:link>
+autorise la collecte des données au début de l'opération.</font></p>
+<p><font face="Courier New" size="2">Les évènement&nbsp; <font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDragEnterTopic">
+DragEnter</MSHelp:link>,
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDragLeaveTopic">
+DragLeave</MSHelp:link> et
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDragDropTopic">
+DragDrop</MSHelp:link></font>. permettent de 'poser' les données dans le 
+contrôle d'arrivée.</font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Exemple No 1 (simple)</span></font></b></p>
+<p><font face="Courier New" size="2">Exemple: Le contrôle de départ est un 
+contrôle
+<a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/vbcon/html/vboributtonctltasks.htm">
+Button</a>, les données à faire glisser sont la chaîne représentant la propriété
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassTextTopic">
+Text</MSHelp:link> du contrôle <b>Button</b>, et les effets autorisés sont la 
+copie ou le déplacement. Le texte sera déposé dans un textBox:</font></p>
+<h2 class="dtH2"><span style="background-color: #C0C0C0">
+<font face="Courier New" size="2">L</font></span><font face="Courier New" size="2"><span style="background-color: #C0C0C0">e contrôle de départ.</span></font></h2>
+<p><font face="Courier New" size="2">La fonctionnalité qui autorise la collecte 
+des données au début de l'opération glisser&nbsp;dans la méthode
+<font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDoDragDropTopic">
+DoDragDrop</MSHelp:link></font>.</font></p>
+<p><font face="Courier New" size="2">L'événement <font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassMouseDownTopic">
+MouseDown</MSHelp:link></font><b> du contrôle de départ </b>est généralement 
+utilisé pour démarrer l'opération glisser parce qu'il est le plus intuitif (la 
+plupart des glisser-déplacer commencent par un appuie sur le&nbsp; bouton de la 
+souris). Mais, souvenez-vous que n'importe quel événement peut servir à 
+initialiser une procédure glisser-déplacer.</font></p>
+<blockquote class="dtBlock">
+  <p><font face="Courier New"><b><b class="le"><font size="2">Remarque</font></b><font size="2">&nbsp;&nbsp;</font></b><font size="2"> 
+  Les contrôles
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsListViewClassItemDragTopic">
+  ListView</MSHelp:link> et
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsTreeViewClassItemDragTopic">
+  TreeView</MSHelp:link>, , ont un événement </font><b><font size="2">ItemDrag
+  </font></b><font size="2">qui est spécifique .</font></font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><br>
+<font color="#0000FF">Private Sub Button1_MouseDown(ByVal sender As Object, 
+ByVal e As System.Windows.Forms.MouseEventArgs) Handles Button1.MouseDown<br>
+&nbsp;&nbsp; Button1.<b>DoDragDrop</b>(Button1.Text, DragDropEffects.Copy Or 
+DragDropEffects.Move)<br>
+End Sub<br>
+</font><br>
+Le premier argument indique les données à déplacer.</font></p>
+<p><font face="Courier New" size="2">Le second les effets permis = copier ou 
+déplacer.</font></p>
+<h2 class="dtH2"><span style="background-color: #C0C0C0">
+<font face="Courier New" size="2">L</font></span><font face="Courier New" size="2"><span style="background-color: #C0C0C0">e contrôle d'arrivée</span></font></h2>
+<p><font face="Courier New" size="2">Toute zone d'un Windows Form ou d'un 
+contrôle peut être configurée pour accepter les données déplacées en définissant 
+la propriété
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassAllowDropTopic">
+AllowDrop</MSHelp:link> et en gérant les événements
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDragEnterTopic">
+DragEnter</MSHelp:link> et
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassDragDropTopic">
+DragDrop</MSHelp:link>. </font></p>
+<p class="labelproc"><font face="Courier New" size="2">Dans notre exemple, c'est 
+un contrôle TextBox1 qui est&nbsp;le contrôle d'arrivée.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">TextBox1.AllowDrop&nbsp; 
+=True.&nbsp;&nbsp;&nbsp; </font>&nbsp;'autorise le contrôle TextBox à recevoir</font></p>
+<p><font face="Courier New" size="2">Dans l'événement <b>DragEnter</b> du 
+contrôle qui doit recevoir les données déplacées</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Vérifier que le type des données est 
+  compatible avec le contrôle d'arrivée (ici, vérifier que c'est bien du texte).
+  </font></p>
+  <p><font face="Courier New" size="2">Définir ensuite l'effet produit lorsque 
+  le déplacement a lieu en lui attribuant une valeur de l'énumération
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsDragDropEffectsClassTopic">
+  DragDropEffects</MSHelp:link>.(ici il faut copier) </font></p>
+</blockquote>
+<pre class="code"><font face="Courier New">
+<font color="#0000FF">Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter
+   If (e.Data.GetDataPresent(DataFormats.Text)) Then
+     e.Effect = DragDropEffects.Copy
+   Else
+     e.Effect = DragDropEffects.None
+   End If
+End Sub</font>
+
+</font></pre>
+<p><font face="Courier New" size="2">Dans l'événement <b>DragDrop</b> du 
+contrôle d'arrivée, utilisez la méthode <font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsDataObjectClassGetDataTopic">
+GetData</MSHelp:link></font> <b>pour extraire les données</b> que vous faites 
+glisser. </font></p>
+<pre class="code"><font face="Courier New">
+<font color="#0000FF">Private Sub TextBox1_DragDrop(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragDrop
+   TextBox1.Text = e.Data.GetData(DataFormats.Text).ToString
+End Sub
+</font>
+</font></pre>
+<pre class="code"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Exemple No 2 plus complexe:</span></font></b></pre>
+<pre class="code"><font face="Courier New">Glisser déplacer <b>une ligne</b> d'une <b>listBox</b> 'ListBox1' <b>vers une listBox</b> 'ListBox2'.</font></pre>
+<pre class="code">Créer une ListBox1</pre>
+<pre class="code">Créer une listBox2 avec sa propriété <font color="#0000FF">AllowDrop=True </font><font color="#008000">'listBox2 accepte le 'lâcher'</font></pre>
+<pre class="code">Dans l'en-tête du module ajouter:</pre>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Public</font></font><font face="Courier New"><font SIZE="2">
+<font color="#0000FF">IndexdInsertion </font></font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer&nbsp;&nbsp; </font></font>
+<font SIZE="2" color="#008000"><font face="Courier New">&nbsp;' Variable 
+contenant l'index ou sera inséré la ligne</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+'Eventuellement pour l'exemple charger les 2 ListBox avec des chiffres pour 
+pouvoir tester.</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Form1_Load(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles MyBase</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> i = 1
+</font><font SIZE="2" COLOR="#0000ff">To</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+100</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">ListBox1.Items.Add(i.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> i = 1
+</font><font SIZE="2" COLOR="#0000ff">To</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+100</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">ListBox2.Items.Add(i.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p><font face="Courier New">'Dans le listBox de départ, l'évènement MouseDown&nbsp; 
+déclenche le glisser déplacer par DoDragDrop.</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListBox1_MouseDown(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.MouseEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ListBox1.MouseDown</font></p>
+<p><font color="#0000FF" face="Courier New">
+ListBox1.DoDragDrop(ListBox1.Items(ListBox1.IndexFromPoint(e.X, e.Y)), 
+DragDropEffects.Copy </font></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Or</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+DragDropEffects.Move)</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></font></p>
+<p><font face="Courier New" SIZE="2">'ListBox1.IndexFromPoint(e.X, e.Y) retourne 
+l'Index de l'item ou se trouve la souris à partir des coordonnées e.x et e.y du 
+pointeur)</font></p>
+<p><font face="Courier New" size="2">'DoDragDrop a 2 arguments: l'élément à 
+draguer et le mode</font></p>
+<p>&nbsp;</p>
+<font SIZE="2" face="Courier New">
+<p>'DragOver qui survient quand la souris se balade sur le contrôle d'arrivé, 
+vérifie si le Drop reçoit bien du texte et met dans IndexdInsertion le listItem&nbsp; 
+qui est sous la souris.</p>
+<p>'Noter que e.x et e.y sont les coordonnées écran , il faut les transformer en 
+coordonnées client (du contrôle) par PointToClient afin d'obtenir l'index de 
+l'item ou se trouve la souris (en utilisant IndexFromPoint. </p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListBox2_DragOver(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.DragEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+ListBox2.DragOver</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> (e.Data.GetDataPresent(</font><font SIZE="2" COLOR="#0000ff">GetType</font><font SIZE="2" color="#0000FF">(System.String)))
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">e.Effect = DragDropEffects.None</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">IndexdInsertion = 
+ListBox2.IndexFromPoint(ListBox2.PointToClient(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Point(e.X, e.Y)))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">e.Effect = DragDropEffects.Copy</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'Enfin dans DragDrop, on récupère le texte dans Item et on ajoute un item après 
+l'item pointé.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListBox2_DragDrop(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.DragEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+ListBox2.DragDrop</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> item
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF"> 
+= </font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(e.Data.GetData(</font><font SIZE="2" COLOR="#0000ff">GetType</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">(System.String)), 
+System.Object)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">ListBox2.Items.Insert(IndexdInsertion + 
+1, item)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font face="Courier New">
+</font></pre>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-14.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+</html>

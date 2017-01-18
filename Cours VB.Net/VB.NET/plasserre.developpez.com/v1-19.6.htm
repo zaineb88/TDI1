@@ -1,0 +1,218 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.6</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Structures et
+      Tableaux.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">6-
+Structures et Tableaux.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>6.1</b></font><font face="Courier New" size="2"><b>
+ Créer une Structure 'dvd' contenant un 'Numero'(un Integer ), un 'Titre'(une
+String), un 'Auteur' (une String). Déclarer un tableau structuré de 10 dvd.
+Indiquer que le dernier dvd doit avoir comme nom 'Red House&quot; et comme
+auteur &quot;Clapton&quot;. Afficher dans une MessageBox le titre du premier dvd.
+Rechercher, à l'aide d'une boucle, les dvd dont l'auteur est &quot;Clapton&quot;
+et afficher dans une MessageBox leurs titres.&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>6.2</b></font><font face="Courier New" size="2"><b> Déclarer un tableau
+t de 100 Integer. Le remplir avec un nombre aléatoire compris entre 1 et 100,
+le trier par ordre croissant.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b>Pour
+visualiser les éléments du tableau trié, demander à l'utilisateur dans une
+InputBox un numéro d'élément puis afficher dans une MessageBox la valeur de
+l'élément. Créer une boucle pour redemander sans cesse un numéro
+d'élément. Arrêter si l'utilisateur clique sur 'Annuler' dans la InputBox.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">6-
+Structures et Tableaux.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>6.1</b></font><font face="Courier New" size="2"><b>
+ Créer une Structure dvd contenant un Numero (un Integer ), un Titre(une
+String), un Auteur (une String). Déclarer un tableau structuré de 10 dvd.
+Indiquer que le dernier dvd doit avoir comme nom 'Red House&quot; et comme
+auteur &quot;Clapton&quot;. Afficher dans une MessageBox le titre du premier dvd.
+Rechercher, à l'aide d'une boucle, les dvd dont l'auteur est &quot;Clapton&quot;
+et afficher dans une MessageBox leurs titres.&nbsp;</b></font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">Il faut déclarer
+la structure mais en haut du module, sous <font color="#0000FF">Public
+Class Form1</font>, par dans la procédure.</font></p>
+<p style="margin-top: 6pt"><font color="#0000FF"><font face="Courier New" SIZE="2">Public</font><font face="Courier New"><font SIZE="2">
+Class Form1</font></font></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public 
+Structure </span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">dvd</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; 
+Dim Numero&nbsp;&nbsp;&nbsp;&nbsp; As Integer</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">Titre</span></font><span style="color: blue">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As String</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">Auteur&nbsp;</span></font><span style="color: blue">
+&nbsp;&nbsp;&nbsp;&nbsp; As String</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Structure</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">&nbsp;</span></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Puis dans une 
+procédure il faut <b>déclarer</b>  le tableau:</font></p>
+<p style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Private Button1_Click (..)</font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim i As Integer</font>&nbsp;
+'variable de boucle</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+MesDvd(10) </font> <span style="color: blue">As</span><font color="#0000FF"> 
+dvd </font>'déclaration du tableau.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">MesDvd(9).Titre
+=&quot;Red House&quot; </font> </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">MesDvd(9).Auteur=
+&quot;Clapton&quot; </font> </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">End
+Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">MsgBox
+(</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">MesDvd(0).Titre) </font> </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">For
+i=0 to 9</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;&nbsp; <font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+If MesDvd(i).Auteur= &quot;Clapton&quot; Then</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;&nbsp; <font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;
+MsgBox (MesDvd(i).Titre))</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;&nbsp; <font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+Next i</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">End
+Class</span></font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">On remarque que le
+tableau de 10 éléments va de <span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">MesDvd(0) </font> à </span><font color="#0000FF"><span style="background-color: #FFFFFF">MesDvd(9). </span> </font> </font></p>
+<p style="margin-top: 6pt"><span style="background-color: #FFFFFF"><font face="Courier New" size="2">Au
+lieu d'écrire</font><font color="#0000FF" face="Courier New" size="2"> </font></span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">For
+i=0 to 9 </font>on aurait pu écrire<font color="#0000FF"> </font></span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">For
+i=0 to MesDvd.Length-1</span></font></p>
+<p style="margin-top: 6pt"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">(</span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">MesDvd.Length</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+étant le nombre d'éléments dans MesDvd,&nbsp; </span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">MesDvd.Length-1
+</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">est
+l'index du dernier élément)</span></p>
+<p style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>6.2</b></font><font face="Courier New" size="2"><b> Déclarer un tableau
+t de 100 Integer. Le remplir avec un nombre aléatoire compris entre 1 et 100,
+le trier par ordre croissant.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b>Pour
+visualiser les éléments du tableau trié, demander à l'utilisateur dans une
+InputBox un numéro d'élément puis afficher dans une MessageBox la valeur de
+l'élément. Créer une boucle pour redemander sans cesse un numéro
+d'élément. Arrêter si l'utilisateur clique sur 'Annuler' dans la InputBox.</b></font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New">
+t(100) <font COLOR="#0000ff">As</font> </font><font face="Courier New" COLOR="#0000ff">Integer</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">Dim</font> i, r <font COLOR="#0000ff">As</font>
+</font><font face="Courier New" COLOR="#0000ff">Integer</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">Dim</font> rep <font COLOR="#0000ff">As</font>
+</font><font face="Courier New" COLOR="#0000ff">String</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">Randomize()</font></p>
+<p><font face="Courier New"><font COLOR="#0000ff">For</font> i = 0 <font COLOR="#0000ff">To</font>
+t.Length - 1</font></font></p>
+<p><font size="2"><font face="Courier New">t(i) = <font COLOR="#0000ff">CType</font>((Int(Rnd()
+* 100)) + 1, <font COLOR="#0000ff">Integer</font>)</font></font></p>
+<p><font size="2"><font COLOR="#0000ff" face="Courier New">Next</font><font face="Courier New">
+i</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">Array.Sort(t)</font></p>
+</font>
+<p><font face="Courier New" size="2" COLOR="#0000ff">Do</font></p>
+<p><font size="2"><font face="Courier New">&nbsp; rep = InputBox(</font><font COLOR="#a31515" face="Courier New">&quot;Voir
+‚l'élément numéro?&quot;</font><font face="Courier New">)</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">&nbsp; If</font>
+rep = <font COLOR="#a31515">&quot;&quot;</font> <font COLOR="#0000ff">Then</font>
+<font COLOR="#0000ff">Exit</font> </font><font face="Courier New" COLOR="#0000ff">Do</font></font></p>
+<p><font face="Courier New" size="2">&nbsp; r = <font COLOR="#0000ff">CType</font>(rep,
+<font COLOR="#0000ff">Integer</font>)</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">&nbsp; MsgBox(t(r).ToString)</font></p>
+</font>
+<p><font face="Courier New" size="2" COLOR="#0000ff">Loop</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

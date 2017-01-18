@@ -1,0 +1,612 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-200.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:11 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net déboguage bug</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-21.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.200</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Débogage.</font></b></td>
+    <td width="9%" height="76"><a href="v4-210.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Le débogage est la 
+recherche des bugs, les erreurs de logique.(voir 4-3 Traiter les erreurs)</span></font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="ftp://ftp-developpez.com/plasserre/vdebug.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="ftp://ftp-developpez.com/plasserre/vdebug.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005</span></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Rappelons qu'il existe:</font></p>
+<ol>
+  <li class="Action" value="1"><font face="Courier New" size="2">Les erreurs de syntaxe.
+  </font> </li>
+  <li class="Action" value="2"><font face="Courier New" size="2">Les erreurs de logique.
+  </font> </li>
+  <li class="Action" value="3"><font face="Courier New" size="2">Les erreurs d'exécution.</font></li>
+</ol>
+<p><font face="Courier New" size="2"><b>Les erreurs de syntaxe</b> sont détectées automatiquement par l'éditeur de Visual 
+Studio. ou lors de la génération du projet en mode Run. La compilation vérifie 
+les types des données, les paramètres....</font></p>
+<p><font face="Courier New" size="2"><b>Les erreurs d'exécution</b> surviennent 
+lorsque l'exécution d'une instruction échoue ( 
+tentative d'ouverture d'un fichier qui n'existe pas par exemple). Cela provoque 
+l'apparition d'un message et provoque l'arrêt brutal de l'application. Il faut 
+donc prévoir une gestion des éventuelles erreurs d'exécution afin d'éviter 
+l'arrêt de l'application. A l'aide de <font color="#0000FF">Try Catch</font>, on 
+pourra intercepter l'erreur et informer l'utilisateur, prévoir une correction.</font></p>
+<p><b><font face="Courier New" size="2">L</font></b><font face="Courier New" size="2"><b>es 
+erreurs de logique</b> sont plus difficiles à détecter. Le code est 
+syntaxiquement correct, mais il ne réalise pas les opérations prévues. C'est là 
+qu'intervient le débogage afin de diagnostiquer l'origine de l'erreur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Pour déboguer, il faut 
+lancer l'exécution du programme puis, </span>
+</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">A -Suspendre 
+l'exécution à certains endroits du code</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">B -Voir ce qui se passe 
+puis faire avancer le programme pas à pas.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">C -Afficher des 
+informations de débogage quand le programme tourne. </span></font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">A - Suspendre l'exécution.
+</font></b></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Pour démarrer et arrêter l'exécution</b>, 
+on utilise les boutons suivants:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vbtrun-2.gif" width="70" height="22"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On lance le programme avec le premier bouton, on 
+le suspend avec le second, on l'arrête définitivement avec le troisième..</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut  suspendre (l'arrêter temporairement) le 
+programme:</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">avec le second 
+bouton </font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">grâce à <b>des points d'arrêt</b> (pour définir un point d'arrêt en 
+mode de conception, cliquez en face d'une ligne dans la marge grise: la ligne 
+est surlignée en marron. Quand le code est exécuté , il s'arrête sur cette ligne 
+marron). </font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font></span><span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+
+For i= 1 To 6</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#808000">
+&#9679;</font></span><font face="Courier New" size="2" color="#808000"><span style="background-color: #808000"> </span></font>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #808000">Tableau(i)=i*i</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #C0C0C0">&nbsp;</span><span style="background-color: #FFFFFF"> Next i</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">En 
+plus si on clique sur le rond de gauche avec le bouton droit de la souris, on 
+ouvre un menu permettant de modifier les propriétés de ce point d'arrêt (il y a 
+la possibilité d'arrêter au premier ou au Xième passage sur le point d'arrêt, ou 
+arrêter si une expression est à True ou à changé)</font></span></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">en appuyant sur Ctrl-Alt-Pause</font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">en incluant dans le code une instruction
+<font color="#0000FF">Stop</font></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><b>Attention:</b> Si vous utilisez des 
+instructions Stop dans votre programme, vous devez les supprimer avant de 
+générer la version finale.</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Les transformer en commentaire :</font><font face="Courier New" size="2" color="#0000FF"><br>
+</font><font face="Courier New" size="2" color="#008000">' Stop</font><font face="Courier New" size="2" color="#0000FF"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">ou utiliser des instructions 
+conditionnelles :</font><font face="Courier New" size="2" color="#0000FF"><br>
+#If DEBUG Then<br>
+Stop<br>
+#End If</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF"><br>
+</font><font face="Courier New" size="2">Dans ce cas, en mode Debug 
+l'instruction Stop sera exécutée, pas en mode Release.</font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">B - Débogage pas à pas.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#008000">Quand le programme est 
+suspendu, on peut <b>observer les variables</b>, <b>déplacer le point 
+d'exécution</b>, on peut aussi faire marcher le programme <b>pas à pas (instruction par 
+instruction)</b> et observer <b>l'évolution de la 
+valeur des variables</b>, on peut enfin modifier la valeur d'une variable afin 
+de tester le logiciel avec cette valeur.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>F11</b> permet l'exécution pas à pas, instruction par instruction (y compris des procédures appelées: si 
+il y a appel à une autre procédure, le pas à pas saute dans l'autre procédure)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>F10</b> permet le pas à pas (sans détailler les procédures appelées: exécute 
+la procédure appelée en une fois)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>Maj+F11</b> exécute jusqu'à la fin de la procédure en cours.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On peut afficher ou définir l'instruction suivante, exécuter jusqu'au 
+curseur, insérer un point d'arrêt ou un espion en cliquant sur le <b>bouton droit 
+de la souris</b> et en choisissant une ligne du menu (VB 2003).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<img border="0" src="vdebog.gif" width="222" height="291"></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#008000">
+<b>Espion express</b></font> (VB 2003 et 2005)permet de saisir une expression (variable, calcul de 
+variables) et de voir ensuite dans une fenêtre 'espion' les modifications de cette 
+expression au cours du déroulement du programme. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt" align="center">
+<img border="0" src="vespexp.JPG" width="468" height="241"></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0" align="left">
+<font size="2" face="Courier New">Exemple en VB 2005, c'est pareil en VB 2003: 
+suivre la valeur de la variable de boucle 'i'.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0" align="left">
+<font size="2" face="Courier New">Sur la ligne , bouton droit, 'espion 
+express..' dans la fenêtre qui s'ouvre à droite,</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0" align="left">
+<font size="2" face="Courier New">Tapez 'i' puis 'Fermer', la fenêtre espion 
+apparaît en bas avec la valeur de i</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0" align="left">
+<font size="2" face="Courier New">Tapez F10 , F10.. la boucle tourne et i est 
+incrémenté.</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2" color="#008000">Atteindre la définition</font></b><font face="Courier New" size="2">
+permet d'afficher la déclaration de la variable et ainsi de voir quelle est sa 
+portée et si elle est initialisée. S'il s'agit du nom d'une procédure, on se 
+retrouve dans la procédure (pour voir ce qu'elle contient)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">On peut grâce au menu 'Débogage' puis 'Fenêtre' 
+ouvrir les fenêtres:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Automatique uniquement en VB 2003</font></b>, qui affiche les valeurs des 
+variables de l'instruction en cours&nbsp; et des instructions voisines.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Immédiat (VB 2003 2005)</font></b> ou il est possible de taper des 
+instructions ou expressions pour les exécuter ou voir des valeurs. </font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Taper &quot;?I&quot; (c'est l'équivalent de &quot;Print I&quot; qui veut dire: 
+afficher la 
+valeur de la variable I) 
+puis valider, cela affiche la valeur de la variable I.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<img border="0" src="vdebogi.JPG" width="430" height="108"></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Autre exemple, pour voir le contenu d'un tableau A(), tapez sur une seule ligne: 
+&quot;For i=0 to 10: ?A(i): Next i&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Enfin, il est possible de modifier la valeur d'une variable: Taper&quot; I=10&quot; puis 
+valider, cela modifie la valeur de la variable.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Espions</font></b> permettant d'afficher le contenu de 
+variables ou d'expressions.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#008000"><b>Espions Express</b></font> permet d'afficher la valeur 
+de l'expression sélectionnée.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Points d'arrêts (VB 2003 et 2005)</font></b> permet de modifier les 
+propriétés des points d'arrêts. on peut mettre un point d'arrêt en cliquant dans 
+la marge grise à gauche: l'instruction correspondante s'affiche en marron et 
+l'exécution s'arrêtera sur cette ligne. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Me (VB 2003)</font></b> affiche les données du module en cours.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#008000"><b>Variables locales</b></font>
+<b><font color="#008000">(VB 2003 et 2005)</font></b>affiche les variables 
+locales.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+<img border="0" src="vdebogv.JPG" width="542" height="160"></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Modules</font></b>
+<b><font color="#008000">(VB 2003 )</font></b>affiche les dll ou .exe utilisés.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#008000">Mémoire, Pile d'appels, Thread, Registres, Code Machine</font></b> 
+permettent d'étudier le fonctionnement du programme à un niveau plus spécialisé 
+et technique.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment v</span></font></b><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">oir 
+rapidement la valeur des propriétés ou de variables.</span></b></font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est toujours possible de voir <b>la valeur 
+d'une propriété d'un objet</b> en la sélectionnant avec la souris:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple on sélectionne label1.Text et on voit 
+apparaître sa valeur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vaide1.GIF" width="303" height="56"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les variables, il suffit que le curseur soit sur une variable 
+pour voir la valeur de cette variable.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut aussi copier une expression dans la 
+fenêtre 'immédiat' , mettre un ? avant et valider pour voir la valeur de 
+l'expression.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Attention à l'affichage:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois en mode pas à pas on regarde le 
+résultat d'une instruction dans la fenêtre du programme. Par exemple on modifie 
+la propriété text d'un label et on regarde si le label à bien changé.&nbsp; 
+Parfois la mise à jour n'est pas effectuée car <b>le programme met à jour 
+certains contrôles seulement en fin de procédure.</b> pour palier à cela et 
+afficher au fur et à mesure, même si la procédure n'est pas terminée, on utilise 
+la méthode <font color="#0000FF">Refresh</font> de l'objet qui 'met à jour'.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Label1.text=&quot;A&quot;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Label1.Refresh</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela ne semble pas toujours fonctionner. 
+Avez-vous une explication?</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="2" color="#0000FF">Modification du code source.</font></b></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">En version 2003, les modifications effectuées 
+lors de la suspension de l'exécution, ne sont pas prises en compte lors du 
+redémarrage.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">En version
+<img border="0" src="v2005.JPG" width="52" height="21"> Il y a maintenant le '<font color="#0000ff">Edit 
+and continue</font>': en mode Debug, on peut modifier une ligne et poursuivre le 
+programme qui tiendra compte de la modification (Sauf pour les déclarations).</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" size="2">En version 2005, Il est proposé des solutions pour corriger les 
+erreurs de code:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">Une fenêtre vous indique les corrections 
+à faire.</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" size="2">Si je veux afficher une valeur numérique (avec 
+option Strict=On),il y a erreur, VB me propose la correction:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<img border="0" src="v2005p15.JPG" width="436" height="205"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<b><font face="Courier New" size="4"><span style="background-color: #C0C0C0">C - 
+Sortie des informations de débogage.</span></font></b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New">On veut parfois afficher automatiquement des résultats 
+intermédiaires, un message destiné au programmeur dans telle 
+circonstance...quand le programme tourne.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Objet Console.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut écrire sur la fenêtre console, quand on a 
+parfois besoin d'afficher des informations, mais <b>uniquement pour le programmeur:</b></font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Console.WriteLine( myKeys(i))</span></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Mais dans un programme Windows, il n'y a pas 
+de console!! la sortie est donc envoyée vers la fenêtre de sortie (voir Debug)(Menu 
+Affichage&gt;Autres fenêtres&gt;Sortie pour voir la fenêtre) </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Autre exemple:</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Dim </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">amis() </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">= {&quot;pierre&quot;, &quot;jean&quot;, 
+&quot;jacques&quot;, &quot;toto&quot;}</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">For Each </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">nom </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String In </font>
+<font face="Courier New" size="2"><font color="#0000FF">amis</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+Console.Out.WriteLine(nom)</font></p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Next</p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Objet Debug</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'espace de noms <b>Systems.Diagnostics </b>
+est nécessaire.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour déboguer du code, on a parfois besoin 
+d'afficher des informations, mais <b>uniquement pour le programmeur</b>, en mode 
+debug afin de suivre le cheminement du programme ou la valeur d'une variable ou 
+si une condition se réalise; pour cela on utilise une fenêtre nommée 'Sortie'(Output). 
+(Menu Affichage&gt;Autres fenêtres&gt;Sortie) </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour écrire dans la fenêtre Output (<b>sans 
+arrêter le programme</b>):</font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Du texte:</font></li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(Message)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">et pour ajouter un passage à la ligne:</font><font face="Courier New" size="2" color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Debug.WriteLine(Message)</span></font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Le 
+  contenu d'une variable:</font></li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(Variable)</span></font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Les 
+  propriétés d'un objet:</font></li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(Objet)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(&quot;ça marche&quot;)</span>&nbsp;&nbsp;
+</font><font face="Courier New" size="2">&nbsp;'Affiche 'ça marche'</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim A as Integer=2</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(A)&nbsp;</span>&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'Affiche 2</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debug.Write(A+2)&nbsp;</span> </font>
+<font face="Courier New" size="2">'Affiche 4</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On voit que s'il y a une expression, elle est 
+évaluée.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut aussi afficher un message <b>si</b> 
+une condition est remplie en utilisant <b>WriteLineIf ou WriteIf</b>:</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Debug.WriteLineIf(i = 2, &quot;i=2&quot;)</span></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Affiche 'i=2'&nbsp; si i=2</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela vous permet, <b>sans arrêter le programme</b> 
+(comme le fait Assert), d'être informé quand une condition est vérifiée. </font>
+</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Debug.Assert</b> par contre affiche une 
+fenêtre Windows et stoppe le programme si une assertion(une condition) passe à
+<b>False</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debub.Assert(Assertion)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debub.Assert(Assertion, 
+Message1)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Debub.Assert(Assertion, 
+Message1, Message2)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'exemple suivant vérifie si le paramètre 
+'type' est valide. Si le type passé est une référence null (Nothing dans Visual 
+Basic), Assert&nbsp; ouvre une boite de dialogue nommé 'Echec Assertion' avec 3 
+boutons 'Abandonner, Recommencer' 'Ignorer'.. La liste des appels est affichée 
+dans la fenêtre (procédure en cours en tête de liste, module et numéro de ligne 
+en première ligne)<br>
+&nbsp;<br>
+<font color="#0000FF"><span style="background-color: #FFFFFF">Public Shared Sub 
+UneMethode (type As Type, Typedeux As Type)<br>
+Debug.Assert( Not (type Is Nothing), &quot;Le paramètre Type est=Nothing &quot;, &quot;Je ne 
+peux pas utiliser un Nothing&quot;)</span></font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">....<br>
+End Sub UneMethode<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Debug.Fail</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Fait pareil mais sans condition.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Trace:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Trace possède les mêmes fonctions que Debug (Write, 
+WriteIf, Assert, Fail..) mais la différence est que Trace permet d'afficher à 
+l'utilisateur final par défaut. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" color="#0000FF">Mode 'Trace', 'Release', Mode 'Debug</font></b></span><b><font face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">'</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2" face="Courier New">
+<p><b>En VB 2003</b>, en haut de la fenêtre de l'IDE il y a une liste déroulante elle contient:</p>
+<blockquote>
+  <p><font color="#0000FF">Release</font>. (à utiliser pour générer la version à distribuer)</p>
+  <p><font color="#0000FF">Debug</font>&nbsp;&nbsp;&nbsp; (à utiliser pour générer une version à tester)</p>
+</blockquote>
+  <p><b>En VB 2005</b>, si vous choisissez les paramètres de développement Visual 
+  Basic, l'outil qui permet de choisir entre la configuration
+  <font color="#0000FF">Debug</font> et
+  <font style="background-color: #FFFFFF" color="#0000FF">Release</font> 
+  n'apparaît pas dans la barre d'outils. Visual Studio choisit automatiquement 
+  la configuration Debug lorsque vous cliquez sur <b>Démarrer</b> dans le menu
+  <b>Débogueur</b> et la configuration Release lorsque vous utilisez le menu <b>
+  Générer</b></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Trace</b> est activé par défaut. Par 
+conséquent, du code est généré pour toutes les méthodes <b>Trace</b> dans les 
+versions release et debug. Ceci permet à un utilisateur final d’activer le 
+traçage pour faciliter l’identification du problème sans que le programme ait à 
+être recompilé.  </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par opposition, Debug est désactivé par défaut dans les versions release, donc aucun code 
+exécutable n’est généré pour les méthodes <b>Debug</b>.</font><span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<font SIZE="2" face="Courier New">
+<p>On peut utiliser une constante nommé DEBUG qui aura la valeur True si on est 
+en mode Debug.</p>
+<p>Cela permet d'écrire: </p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">#If Debug Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; Stop</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">#End If</font></p>
+<p>Ici Stop se produira uniquement si on est en mode Debug; en mode Release, il 
+n'y aura pas d'arrêt.</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-21.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-210.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-200.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:14 GMT -->
+</html>

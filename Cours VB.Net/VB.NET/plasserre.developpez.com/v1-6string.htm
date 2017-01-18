@@ -1,0 +1,1501 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6string.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:51 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET string char </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="53%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="7%" height="62">
+    &nbsp;</td>
+    <td width="40%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les string et Char</font></b></td>
+    <td width="14%" height="76"><a href="v1-6-num.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+&nbsp; <img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#800080"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">A- Une variable
+'<u>String</u>' peut contenir une chaîne de caractères, des données alphanumériques.</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">Pour travailler avec les 'String', on 
+peut:</span></b></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">1-Utiliser les membres de la Classe 
+String.</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">2-Utiliser les méthodes du VisualBasic (les 
+anciens reconnaîtrons)</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">3-Exemple</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">4-Comparaison
+de caractères</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">5-
+Unicode</span></b></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">B -Une variable '<u>Char</u>' peut contenir un 
+caractère</span></b></font><font color="#800080"><b><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">.</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family:&quot;Courier New&quot;; background-color:#C0C0C0"><b>
+<font size="6" color="#0000FF">A- STRING.</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il faut <b>déclarer</b> une variable avant 
+de l’utiliser, pour cela on utilise l’instruction Dim</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">Dim</font> myString <font color="#0000FF">As String </font>
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">‘Déclare une variable nommée <b>myString</b>
+et qui peut contenir une chaîne de caractère.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Cette variable peut être utilisée pour 
+conserver une chaîne de caractère.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">myString=</font>&nbsp;&quot;TOTO&quot;&nbsp;&nbsp; &nbsp;
+<img border="0" src="vstring.gif" width="147" height="73"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;'On met la chaîne de caractères &quot;TOTO&quot; 
+dans la variable <font color="#0000FF">myString</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut afficher le contenu de la chaîne 
+dans un label (zone présente dans une fenêtre et ou on peut afficher du texte) par exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Label.Text =
+myString</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Cela affiche 'TOTO' dans le label.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Remarquons que pour définir une chaîne de 
+caractères il faut utiliser des &quot;&nbsp;&quot;&nbsp;: Ce qui est entre &quot;&nbsp; 
+et &quot;&nbsp; est la chaîne de caractères.<b> </b>On parle de<b> chaîne littérale: 
+(</b></span><font face="Courier New" size="2">une représentation textuelle d'une 
+valeur particulière)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#FF0000"><b><span style="font-family: Courier New">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Après 
+avoir été créée, une String contient 'Nothing' c'est à dire rien, même pas une chaîne
+vide; 
+il faudra l'initialiser pour 
+qu'elle contienne quelque chose.</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">DIM</font> <font color="#0000FF">myString As String&nbsp;&nbsp;&nbsp;&nbsp;</font>
+myString&nbsp; contient <font color="#0000FF">Nothing</font> </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">cela signifie qu'elle ne pointe sur 'rien'.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">myString </span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">=</font>&nbsp;&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">myString&nbsp;</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"> contient &quot;&quot; : chaîne vide 
+de longueur 0</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">myString </span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">=</font>&nbsp;&quot;TOTO&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">myString&nbsp;</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"> contient &quot;TOTO&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-weight: 700"><font face="Courier New" size="2">Notez bien 
+l'importance des guillemets:</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">A</font> est la variable A</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">&quot;</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">A&quot;</font> est une chaîne de caractères contenant 
+le caractère &quot;A&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple: </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim</font> A
+<font color="#0000FF">As String</font>=&nbsp;&quot;Visual&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim</font> B
+<font color="#0000FF">As String</font>=&nbsp;&quot;Basic&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Label.text =&nbsp;&quot;A+B&quot;</span></font>&nbsp; 
+affiche bêtement la chaîne&nbsp; «&nbsp;<b>A+B</b>&nbsp;»</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Label.text =&nbsp; A + B</span>&nbsp;</font>&nbsp;&nbsp; 
+affiche &quot;<font color="#0000FF">VisualBasic</font>&quot;&nbsp; on affiche les 
+variables.&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Notez enfin que &quot;&nbsp; &quot;,&nbsp; l'<b>espace</b> est 
+un caractère à part entière.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour <b>ajouter les chaînes
+les unes aux autres</b> on utilise l'opérateur '&amp;' ou '+'.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">Label.text =&nbsp;
+A &amp; B</span>&nbsp;</font> </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si je veux inclure un caractère &quot; dans la 
+chaîne il faut le doubler pour qu'il ne soit pas considérer comme caractère de 
+fin de chaîne:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A=&quot; 
+Bonjour &quot;&quot;Monsieur&quot;&quot; &quot;</span> </font>&nbsp;&nbsp; 'Afficher cela donne :&nbsp; Bonjour 
+&quot;Monsieur&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut <b>initialiser</b> la variable en 
+même temps qu’on la déclare.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim </font>Chaine<font color="#0000FF"> 
+ As String </font>=&nbsp;&quot;Toto&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">On peut 
+déclarer plusieurs variables d'un même type sur une même ligne.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim 
+x, y, z As String</span> </font>&nbsp;&nbsp; 'Déclare 3 variables 'String'</span></font></p>
+<font size="1">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+  On utilise GetType pour connaître le type d'une variable.</p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  &nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">x.GetType.ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">y.GetType.ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">z.GetType.ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0">donne</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+  System.String</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+  System.String</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+  System.String</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Ce qui 
+  prouve que les 3 variables sont bien des Strings. (ce qui n'était pas le cas 
+  en VB6)</font></p>
+</blockquote>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">1- System.</span></b></font></span><font color="#0000FF" size="4"><b><span style="font-family:&quot;Courier New&quot;; background-color:#C0C0C0">String 
+est une Classe du Framework:</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le type <b>System.String </b>ou <b>String</b> (Chaîne de 
+caractères) est une <b>Classe</b> qui a des méthodes.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#008000">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Pas besoin de connaître toutes 
+les méthodes, il suffit </span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">(Après déclaration de la String par Dim
+réponse As String)</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> de 
+taper &quot;<b>.&quot; après le nom de la variable</b> .</span><font size="2"><span style="font-family: Courier New">Et 
+v</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ous voyez apparaître toutes les propriétés 
+et méthodes&nbsp;: </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><img border="0" src="vstring2.JPG" width="201" height="307">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Par exemple la méthode <font color="#0000FF"><b>.ToUpper</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Mettre en majuscules une chaîne de 
+caractère</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim
+str As String = &quot;abc&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF">str=str.ToUpper()</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><span style="font-size:10.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span style="font-size:
+10.0pt;font-family:&quot;Courier New&quot;">Si str contenait &quot;<b>abc</b>&quot;&nbsp;&nbsp; 
+il contiendra &quot;<b>ABC</b>&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><b>.ToLower</b>&nbsp;</font>
+transforme par contre&nbsp; la 
+chaîne en minuscule.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Quel intérêt&nbsp;? Exemple</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Je dois comparer 2 string pour savoir si 
+elle sont égales, la première a été saisie par l’utilisateur et je ne sais pas 
+si l’utilisateur a tapé en majuscules ou en minuscules. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si je compare A =&nbsp;&quot;Vb&quot; et B=&nbsp;&quot;vb&quot; elles 
+sont différentes.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si je compare <font color="#0000FF">A.ToLower</font> et 
+<font color="#0000FF">B.ToLower</font> elles 
+sont égales. &nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF"><b>.Trim</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Permet de supprimer des caractères en début 
+et fin de chaîne.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim a As String =&nbsp;&quot;#@Informatique@#&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">
+Dim b As Char() = {&quot;#&quot;,&nbsp;&quot;@&quot;}&nbsp;&nbsp;&nbsp; </font>
+'b est un tableau de Char contenant les caractères à supprimer.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">a</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">=a.Trim(b)</span></font>&nbsp; 
+Donne a=&nbsp;&quot;Informatique&quot; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Attention&nbsp;: Bien utiliser Char() qui est un 
+tableau de caractères pour définir les caractères à supprimer.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">(Dim b As String=&nbsp;&quot;#@&quot; est déconseillé car 
+produisant des résultats curieux.)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Pour enlever les espaces avant et après la 
+chaîne (Cas le plus fréquent)&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" color="#0000FF" size="2">a=&quot; Bonjour &quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New">a</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">=a.Trim(&quot; &quot;)&nbsp;&nbsp;&nbsp; </font>'donne
+a=&quot;Bonjour&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il existe aussi <font color="#0000FF">Trim</font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Star<b>t</b></span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> et </span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Trim</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">End</font> pour agir seulement sur le début ou la fin de la chaîne.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF"><b>Length&nbsp;:</b></font> 
+Taille d’une chaîne en nombre de caractère.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Afficher la taille de la chaîne «&nbsp;VB&nbsp;»</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+s As String=</font> 
+&quot;VB&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">MsgBox(s.Length.ToString)</font> 
+‘Affiche&nbsp;2 </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF"><b>Concat&nbsp;:</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Concaténation de plusieurs chaînes&nbsp;: mise 
+bout à bout&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">s</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">=String.Concat(a,b)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il est plus rapide de faire&nbsp;: <font color="#0000FF">s=
+a &amp; b&nbsp;</font> </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">(<font color="#0000FF">s=a+b</font> marche mais est déconseillé)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">Insert&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Insère une chaîne dans une autre. </span>
+</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">D<span style="background-color: #FFFFFF">im
+s As String=</span></font><span style="background-color: #FFFFFF">&nbsp;&quot;VisualBasic&quot;</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">s</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">=
+s.Insert(6,&quot;&nbsp; 
+&quot;&nbsp;)</span></font> ‘Donne s=&nbsp;&quot;Visual&nbsp; Basic&quot;&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Noter: le premier caractère a la position 0.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><font size="2"><b>
+<span style="font-family: Courier New">Remove</span></b></font><b><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">&nbsp;:</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Enlève des caractères à 
+une certaine position dans </span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;une chaîne. </span>
+</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">D<span style="background-color: #FFFFFF">im
+s As String=</span></font><span style="background-color: #FFFFFF">&nbsp;&quot;VisualBasic&quot;</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">s</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">=
+s.Remove(2,7&nbsp;)</span></font>&nbsp; Donne s=&nbsp;&quot;Viic&quot;&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">Replace&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Remplace  dans une chaîne de départ, 
+toutes les occurrences d'une chaîne par une autre.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Resultat=ChaineDépart.Replace(ChaîneARemplacer,ChaîneQuiRemplace)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+s As String=&nbsp;</font>&quot;Visual_Basic&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">s</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">=
+s.Replace(&quot;_&quot;,&quot;&nbsp;&quot;&nbsp;)</span></font> 
+‘Donne s=&nbsp;&quot;Visual&nbsp; Basic&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Autre exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">L'utilisateur a tapé une 
+date, mais avec comme séparateur des &quot;.&quot;, comme on le verra plus loin, il est 
+nécessaire d'utiliser plutôt les &quot;/&quot;, pour cela on utilise&nbsp; Replace</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+ladate as string=&nbsp;</font>&quot;12.02.1990&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New; background-color: #FFFFFF">l</span></font><span style="background-color: #FFFFFF"><font size="2" color="#0000FF"><span style="font-family: Courier New">adate</span></font></span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">=
+ladate.Replace(&quot;.&quot;,&quot;/&quot;&nbsp;)</span></font>&nbsp; Donne
+ladate=&nbsp;&quot;12/02/1990&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">Split&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Découpe en plusieurs sous chaînes une 
+chaîne de départ, cela par rapport à un séparateur.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Je récupère dans un fichier&nbsp;une chaîne de 
+mots ayant pour séparateur «&nbsp;;&nbsp;», je veux mettre chaque mot dans un tableau.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Chaîne contenant les mots séparés par 
+«&nbsp;;&nbsp;» </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+s As String=</font>&nbsp;&quot;Philippe;Jean&nbsp;;Toto&quot;&nbsp;
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+separateur As 
+Char</font> =&nbsp;&quot;;&quot;c</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim nom() As String</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">n</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">om=s.Split(separateur)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Donne&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nom(0)=&nbsp;&quot;Philippe&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nom(1)=&nbsp;&quot;Jean&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nom(2)=&nbsp;&quot;Toto&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Remarque: Quand on déclare le tableau
+nom(), 
+on ne donne pas le nombre d'élément, c'est Split qui crée autant d'élément qu'il 
+faut.</span></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Avec le Framework 2, on peut utiliser plusieurs 
+séparateurs différent:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">Dim
+n</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">om()
+As String =s.Split(&quot; &quot;c) </font>'pour séparer les mots séparés par
+des blancs.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">Dim
+n</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">om()
+As String =s.Split(
+New Char() {&quot; &quot;c, &quot;,&quot;c, &quot;.&quot;c }) </font>ici on a 3 séparateurs: l'espace, la 
+virgule et le point.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">le c après chaque séparateur veut dire 
+Char, car les séparateurs sont des caractères</span></font></span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">On peut ajouter 2 paramètres permettant 
+d'indiquer le nombre de ligne maximum et forcer l'élimination des lignes vides.</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<font face="Courier New" size="2">Dim sep() As Char={</font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&quot; 
+&quot;c, &quot;,&quot;c, &quot;.&quot;c}</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Dim nom() As String = S.Split ( sep, 100, 
+StringSplitOptions.RemoveEmptyEntries )</span></font></span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">
+
+</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Allons encore plus loin: 
+avant et après le séparateur il peut y avoir des espaces:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Il faut dans ce cas 
+utiliser la méthode Split de la classe Regex:</span></font></p>
+    <font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+    <p ALIGN="LEFT">Imports </font>
+    <font FACE="Courier New" SIZE="2" color="#0000FF">
+    System.Text.RegularExpressions</p>
+    </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+    <p ALIGN="LEFT">Dim </font><font face="Courier New" size="2">S </font>
+    <font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String </font>
+    <font FACE="Courier New" SIZE="2" color="#0000FF">= &quot;abc ; def ; ghi&quot;</p>
+    </font><font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+    <p ALIGN="LEFT">' On crée un Regex</p>
+    </b></font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+    <p ALIGN="LEFT">Dim </font>
+    <font face="Courier New" size="2" color="#0000FF">R </font>
+    <font FACE="Courier New" SIZE="2" COLOR="#0000ff">As New </font>
+    <font FACE="Courier New" SIZE="2" color="#0000FF">Regex(&quot;\s*;\s*&quot;)</p>
+    </font><font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+    <p ALIGN="LEFT">' décomposition de ligne en champs</p>
+    </b></font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+    <p ALIGN="LEFT">Dim </font>
+    <font face="Courier New" size="2" color="#0000FF">Nom </font>
+    <font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String</font><font FACE="Courier New" SIZE="2" color="#0000FF">() 
+    = R.Split(S)</font></p>
+  </blockquote>
+</blockquote>
+    <p ALIGN="LEFT"><b><font face="Courier New" size="2" color="#0000FF">.Join </font></b></p>
+    <p ALIGN="LEFT"><font face="Courier New" size="2">Concatène&nbsp; tous les 
+    éléments d'un tableau et peut ajouter des séparateurs.</font></p>
+    <p ALIGN="LEFT"><font face="Courier New" size="2">Si myLines() est un 
+    tableau de String, je veux ajouter ces lignes bout à bout en les séparant 
+    d'un retour à la ligne. </font></p>
+    <p ALIGN="LEFT"><font face="Courier New" size="2" color="#0000FF">Dim myText 
+    As String = String.Join ( ControlChars.CrLf, myLines)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">.IndexOf .LastIndexOf</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Indique le numéro du caractère, la position (la première 
+occurrence) ou une chaîne à chercher est trouvée dans une autre. Recherche en 
+commençant par la fin avec LastIndexOf</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+a As String=</font>&nbsp;&quot;LDF.EXE&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+r As Char()=</font>{&quot;.&quot;}</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">a</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">.IndexOf(r)&nbsp;</span> </font>
+retourne 3</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#FF0000">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Se souvenir&nbsp;: le premier caractère est en 
+position <b>0 en&nbsp; .Net</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">.LastIndexOf</font>
+</span></b><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+retourne la dernière occurrence.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><b>
+<font color="#0000FF">
+.IndexOfAny .LastIndexOfAny </font> </b>(Framework 2)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Indique le numéro du caractère, la position (la première 
+occurrence) ou un caractère à chercher est trouvé dans une chaîne de
+caractères avec en plus 
+possibilité d'indiqué la position de départ.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+a As String=</font>&nbsp;&quot;LDF.EXE&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim
+r As Char()=</font>{&quot;.&quot;}</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">a</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">.IndexOfAny(r)&nbsp;</span>&nbsp;&nbsp;
+</font>recherche à partir du début de chaîne.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">a</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">.IndexOfAny(r,2)&nbsp;</span> </font>
+recherche à partir du deuxième caractère.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Autre
+exemple: On recherche ici plusieurs caractères (en fait un tableau de Char)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+str As String =&quot;gfdjzak;,vdqsygeak&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+start As Integer =2</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+at As Integer&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+count As Integer =5</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+target As String = &quot;ou&quot; </font><font face="Courier New" size="2">'chaîne
+à chercher&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+anyOf As Char() = target.ToCharArray() </font><font face="Courier New" size="2">'on
+transforme la chaîne en tableau de char&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><font color="#0000FF">at
+= str.IndexOfAny(anyOf, start, count) </font>'on cherche le tableau de Char
+anyOf dans str à partir de la position start et sur count caractères.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">.Compare</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Compare 2 chaînes&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim rep As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">rep=String.Compare(a,b)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Retourne un entier </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Négatif si a&lt;b</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 si a=b</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Positif si a&gt;b</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On peut comparer des sous chaînes et indiquer 
+la sensibilité à la casse (Framework 2):</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">rep= String.Compare(a, 
+2, b, 2, 10, True)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><span style="font-family: Courier New">
+<font size="2" color="#0000FF">&nbsp;</font><font size="2">Ici on compare 10 
+caractères en commençant par le deuxième caractère de chaque chaîne en mode 
+sensible à la casse (majuscules&lt;&gt;minuscule).</font></span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">.Contains</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Permet de savoir si une 
+chaîne apparaît dans une autre</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">: </span><font face="Courier New" size="2">
+(Framework 2)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim trouve 
+As Boolean</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">trouve </span></font></span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">= a.Contains( 
+&quot;123&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Retourne True ou False</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF">.Substring</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Extrait une partie d’une chaîne.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Le premier paramètre 
+indique la position de départ; le second, le nombre de caractères à extraire.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a As 
+String=</font> 
+&quot;Informatique&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MessageBox.show(a.Substring(2,3))</span></font> 
+‘Affiche&nbsp; for</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Le premier paramètre 
+indique </span></font><font face="Courier New" size="2">la position du caractère 
+où doit commencer la sous-chaîne, en commençant à la position&nbsp;0. (les caractères 
+sont comptés 0, 1, 2, 3....)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Le second paramètre la longueur de la 
+sous-chaîne.</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exercice 1: comment obtenir les 4 caractères 
+de droite:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a As 
+String=</font> 
+&quot;Informatique&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MessageBox.show(a.Substring(A.Length-4))</span></font> 
+‘Affiche&nbsp; ique</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Ici on omet le second paramètre, la longueur de 
+la sous-chaîne,  va jusqu'a la fin de la chaîne.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exercice 2: comment obtenir les 3 caractères 
+de gauche:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Dim 
+a As 
+String=</font> 
+&quot;Informatique&quot;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MessageBox.show(a.Substring(0, 3))</span></font> 
+‘Affiche&nbsp; inf</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#0000FF">.Chars</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Une chaîne peut être perçue comme un <b>
+tableau de caractères </b>(instances Char) ; vous pouvez extraire un caractère 
+particulier en faisant référence à l'index de ce caractère par l'intermédiaire 
+de la propriété Chars. Par exemple :<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">Dim maString As String = &quot;ABCDE&quot;<br>
+Dim monChar As Char<br>
+monChar = maString.Chars(3)</font></span> ' monChar = &quot;D&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">On peut créer des chaînes&nbsp; avec la Classe 
+String:</font></b></p>
+<font SIZE="2">
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">m</font></span><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">yString = </span> </font></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">New</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> </font>
+</span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">String</span></font></font><font face="Courier New" SIZE="2"><font color="#0000FF"><span style="background-color: #FFFFFF">(&quot; 
+&quot;, 15)&nbsp;</span></font>&nbsp;&nbsp; 'Créer une chaîne de 15 espaces</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p><font face="Courier New" size="2" color="#0000FF"><b>.PadRight</b></font></p>
+<p><font face="Courier New" size="2">Aligne les caractères de cette chaîne à 
+gauche et remplit à droite en ajoutant un caractère Unicode spécifié pour une 
+longueur totale spécifiée.</font></p>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">Dim str As String
+Dim pad As Char
+str = &quot;Nom&quot;
+pad = Convert.ToChar(&quot;.&quot;) 
+Console.WriteLine(str.PadRight(15, pad))</span></font> ' Affiche Nom............
+</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">PadLeft fait l'inverse.</font></pre>
+<pre class="code" style="DISPLAY: block">&nbsp;</pre>
+<p><b><font face="Courier New" size="2" color="#0000FF">.StartsWith() </font><font face="Courier New" size="2"> et</font><font face="Courier New" size="2" color="#0000FF"> EndsWith()</font></b></p>
+<p><font face="Courier New" size="2">Permettent de tester si une string commence 
+ou se termine par une string, retourne True ou False.</font></p>
+<p><font face="Courier New" size="2">Tester si la String s commence par &quot;abc&quot; et 
+se termine par &quot;xyz&quot;:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">If s.StartWith (&quot;abc&quot;) And 
+s.EndWith (&quot;xyz&quot;) then</font></p>
+<p><font face="Courier New" size="2">En VB 2005, on peut ajouter un argument 
+gérant la culture ou la casse.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b><font color="#0000FF">.IsNull , IsNullOrEmpty()</font> </b>Framework
+2</font></p>
+<p><font face="Courier New" size="2">Il est parfois nécessaire de vérifier si 
+une chaîne est égale à Nothing ou de longueur égale à 0 (vide).</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">If S Is Nothing AndOr 
+S.length=0 then</font></p>
+<p><font face="Courier New" size="2">Ou</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">If String.IsNullOrEmpty( S) 
+then</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p><b><font face="Courier New" color="#0000FF" size="4">
+<span style="background-color: #C0C0C0">2- On peut aussi utiliser les instructions
+'Visual Basic':</span></font></b></p>
+<p><font color="#FF0000" face="Courier New">Si vous débuter, <b> laisser de coté ces 
+instructions Visual Basic</b>: elle font double emploi avec la classe String, elle 
+ne sont pas toujours&nbsp;cohérentes avec le reste et cela embrouille.&nbsp; </font></p>
+<p><b> <font color="#FF0000" face="Courier New"> Utiliser plutôt la classe String. </font></b> </p>
+<p><font face="Courier New" size="2">Elles sont bien connues des 'anciens' et sont&nbsp; parfois plus simples. Mais 
+elles ne fonctionnent pas comme des Objets mais comme des instructions. </font></p>
+<p><font face="Courier New" size="2">Elle font partie de 
+l'espace de nom Microsoft.VisualBasic (et pas de la classe de compatibilité
+VB6), il est 'chargé' par défaut et il n'y a 
+pas lieu de l'importer. Par contre quand certains 'mots' sont communs à 
+plusieurs classes ou instructions, il peut y a avoir ambiguïté et il faut utiliser dans ce cas la syntaxe 
+complète. Cela semble le cas pour left qui est un mot clé Vb mais aussi une propriété des 
+contrôles. Pour lever l'ambiguïté il faut écrire&nbsp;
+<font color="#0000FF">Microsoft.VisualBasic.left(C,i)</font> par exemple.</font></p>
+<p>
+<font color="#FF0000">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">
+<img border="0" src="vicocheb.gif" width="32" height="34">  Attention&nbsp;: le premier caractère est en 
+position <b>1 dans les instructions VB</b>.</span></font></p>
+<p><b><font face="Courier New" size="2">Mid:</font></b></p>
+<p><font face="Courier New" size="2">Permet de récupérer une sous-chaîne.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MaString = &quot;Mid 
+Demonstration&quot; <br>
+a = Mid(MaString, 1, 3)</span> ' </font><font face="Courier New" size="2">Retourne &quot;Mid&quot;.</font></p>
+<p><font face="Courier New" size="2">Retourne 3 caractères à partir <b>du
+premier</b></font></p>
+<p><font size="2"><span style="font-family: Courier New">Le premier paramètre 
+indique </span></font><font face="Courier New" size="2">la position du caractère 
+où doit commencer la sous-chaîne, en commençant à la position&nbsp;1. (les caractères 
+sont comptés 1, 2, 3...; on rappelle qu'avec SubString la sous-chaîne, commence 
+à la position&nbsp;0.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">a
+= Mid(MaString, 14)</span> ' </font><font face="Courier New" size="2">Retourne &quot;tion&quot;: 
+du 14ème à la fin (pas de 3ème argument)</font></p>
+<p><font face="Courier New" size="2">Mid permet aussi de remplacer une string 
+dans une string</font></p>
+<p>
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+Mid(MaString, 1, 3) = &quot;Fin&quot;&nbsp; </font><font face="Courier New" size="2">
+=&gt; MaString=&quot;Fin 
+Demonstration&quot;</font><font face="Courier New" size="2" color="#0000FF">&nbsp; </font></span></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Left, Right (Pas d'équivalent dans le 
+Framework)</font></b></p>
+<p><font face="Courier New" size="2">Retourne x caractères de gauche ou de 
+droite:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">a=Right(MaString,2)&nbsp;</span>&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'a=&quot;on&quot;</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">a=Microsoft.VisualBasic.Left(MaString,2)&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'a=&quot;Mi&quot;</font></p>
+<p><font face="Courier New" size="2">Notez bien que, pour lever toute ambiguïté 
+avec les méthodes left d'autres classes, il faut indiquer </font><font face="Courier New" size="2" color="#0000FF">Microsoft.VisualBasic.Left.</font><font face="Courier New" size="2">&nbsp;
+</font></p>
+<p><b><font face="Courier New" size="2">Len.</font></b></p>
+<p><font face="Courier New" size="2">Retourne la longueur de la chaîne:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MyLen = Len(MaString) </span> <b>'</b></font><font face="Courier New" size="2"> 
+Retourne 17.</font><font face="Courier New" size="2" color="#0000FF"><br>
+&nbsp;</font></p>
+<p><b><font face="Courier New" size="2">LTrim, RTrim</font></b></p>
+<p><font face="Courier New" size="2">Enlève les espaces à gauche ou à droite 
+d'une chaîne.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">a</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">=LTrim(&quot;&nbsp; RRRR&quot;)</span></font>&nbsp; 
+' a=&quot;RRR&quot;</font></p>
+<p><b><font face="Courier New" size="2">InStr</font></b></p>
+<p><font face="Courier New" size="2">Retourne un entier spécifiant la position de début de la première chaîne à 
+l'intérieur d'une autre.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">n</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">=InStr(1,&quot;aaaaRaa&quot;,&quot;R&quot;)&nbsp;&nbsp;</span> </font>&nbsp;&nbsp;&nbsp;&nbsp; 
+'retourne 5</font></p>
+<p><font face="Courier New" size="2">Recherche à partir du premier caractère, à 
+quelle position se trouve 'R' 
+dans la chaîne &quot;aaaaRaa&quot;</font></p>
+<p><font face="Courier New" size="2">Si la chaîne n'est pas trouvée , retourne 0</font></p>
+<p><font face="Courier New" size="2"><b>InStrRev</b></font></p>
+<p><font face="Courier New" size="2">Recherche aussi une chaîne mais de droite à 
+gauche. la position de départ est le 3ème argument.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">InStrRev (Ch1, Ch2 , 
+PosDépart)</span></font></p>
+<p><font face="Courier New" size="2"><b>StrComp </b>Compare 2 chaînes.</font></p>
+<p><b><font face="Courier New" size="2">Space</font></b></p>
+<p><font face="Courier New" size="2">Retourne une chaîne d'espace:
+<font color="#0000FF">Space(10)</font> retourne &quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&quot;</font></p>
+<p><b><font face="Courier New" size="2">StrDup</font></b></p>
+<p><font face="Courier New" size="2">Retourne une chaîne de caractères par 
+duplication d'un caractère dont on a spécifié le nombre.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">maString = StrDup(5, 
+&quot;P&quot;) </span></font>' Retourne &quot;PPPPP&quot;<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2"><b>Asc</b> </font></p>
+<p><font face="Courier New" size="2">Retourne le code de caractère du caractère 
+entré. Il peut être compris entre&nbsp;0 et&nbsp;255 pour les valeurs du jeu de caractères 
+codé sur un octet (SBCS) et entre&nbsp;-32&nbsp;768 et&nbsp;32&nbsp;767 pour les valeurs du jeu de 
+caractères codé sur deux octets (DBCS). La valeur retournée dépend de la page de 
+codes </font></p>
+<p><font face="Courier New" size="2"><b>AscW</b> retourne le code Unicode du 
+caractère entré. Il peut être compris entre 0&nbsp;et&nbsp;65&nbsp;535.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">x=Asc(&quot;A&quot;)</span></font>&nbsp;&nbsp;&nbsp; 'retourne 65</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">x=Asc(&quot;ABCD&quot;)</span></font> 'retourne 65 : 
+<b>Seul</b> le premier 
+caractère est pris en compte</font></p>
+<p><b><font face="Courier New" size="2">Chr et ChrW</font></b></p>
+<p><font face="Courier New" size="2">Retourne le caractère associé au code de 
+caractère.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Chr(65)</span></font>&nbsp;&nbsp; 
+retourne &quot;A&quot;&nbsp;&nbsp;&nbsp; 'cela dépend de la page de code.</font></p>
+<p><font face="Courier New" size="2">On peut donner le numéro du caractère en 
+hexadécimal, dans ce cas on le fait précéder de &amp;H</font></p>
+<p>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Chr(&amp;H20)&nbsp;&nbsp; </font><font face="Courier New" size="2">
+est équivalent de</font><font color="#0000FF" face="Courier New" size="2"> 
+Chr(32) </font><font face="Courier New" size="2">
+et retourne un caractère &quot; &quot;.</font></span></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">ChrW&nbsp;</font> retourne le caractère 
+correspondant à l'Unicode</font></p>
+<p><b><font face="Courier New" size="2">GetChar</font></b></p>
+<p><font face="Courier New" size="2">Retourne le caractère d'une chaîne à une 
+position donnée.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim maString As 
+String = &quot;AIDE&quot;<br>
+Dim monChar As Char<br>
+monChar = GetChar(maString, 3)</span> </font>' monChar = &quot;D&quot;<br>
+&nbsp;</font></p>
+<p><b><font face="Courier New" size="2">LCase Ucase</font></b></p>
+<p><font face="Courier New" size="2">Retourne la chaîne en minuscule ou 
+majuscule:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Lowercase = LCase(UpperCase)</span></font></p>
+<p><b><font face="Courier New" size="2">Lset Rset</font></b></p>
+<p><font face="Courier New" size="2">Retourne une chaîne alignée à gauche avec 
+un nombre de caractère.</font></p>
+<p>
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+Dim maString As String = 
+&quot;gauche&quot;<br>
+Dim r As String<br>
+r = LSet(maString, 2)
+</font><font face="Courier New" size="2">
+ ' Retourne &quot;ga&quot;
+</font></span><font face="Courier New" size="2" color="#0000FF">
+<br>
+</font><font face="Courier New" size="2"><br>
+Si la chaîne de départ est plus courte que la longueur spécifiée, des espaces 
+sont ajoutés.<br>
+</font><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">r</span></font>
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+ = LSet(maString, 8) </font><font face="Courier New" size="2">
+ ' 
+Retourne &quot;gauche&nbsp; &quot;</font></span></p>
+<p><b><font face="Courier New" size="2">StrRevers</font></b></p>
+<p><font face="Courier New" size="2">Retourne une chaîne ou les 
+caractères ont été inversés:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim maString As String = &quot;</span></font><font face="Courier New">STRESSED&quot;</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim revString As String<br>
+<br>
+revString = StrReverse(myString)&nbsp;&nbsp;</span>&nbsp; <b>'  </b></font>
+<font face="Courier New" size="2">Retourne &quot;</font><font size="2" face="Courier New">DESSERTS</font><span style="background-color: #FFFFFF"><font size="2" face="Courier New">&quot;</font></span></p>
+<p><font face="Courier New" size="2">Marrant l'exemple!!</font><span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF"><br>
+&nbsp;</font></span></p>
+<p><span style="font-weight: 700; background-color: #FFFFFF">
+<font face="Courier New" size="2">Filter (VB2005)</font></span></p>
+<p><font face="Courier New" size="2">Passe les Strings d'un tableau dans un autre tableau, si elles contiennent ou 
+non une chaîne.</font></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">TableauResultat= Filter( 
+TableauChaine, Match, Include, Compare) </font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Match: </font>
+<font face="Courier New" size="2">chaîne à chercher.</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Include:</font><font face="Courier New" size="2"> 
+Filtre sur la présence ou non de la chaîne a chercher.</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Compare: </font>
+<font face="Courier New" size="2">en binaire ou en texte (majuscules = 
+minuscules dans ce cas)</font></span></p>
+<span codeLanguage="VisualBasic">
+<pre><font color="#0000FF">Dim TestStrings(2) As String
+TestStrings(0) = &quot;Ici&quot;
+TestStrings(1) = &quot;Si&quot;
+TestStrings(2) = &quot;si&quot;
+Dim subStrings() As String	</font>'Chaîne des résultats<font color="#0000FF">
+
+subStrings = Filter(TestStrings, &quot;i&quot;, True, CompareMethod.Text)
+</font>'Retourne &quot;Ici&quot;,&quot;Si&quot;,&quot;si&quot;</pre>
+<pre><font color="#0000FF">
+subStrings = Filter(TestStrings, &quot;si&quot;, True, CompareMethod.Binary)
+</font>' Retourne &quot;si&quot;.</pre>
+<pre><font color="#0000FF">
+subStrings = Filter(TestStrings, &quot;si&quot;, False, CompareMethod.Binary)
+</font>'Retourne &quot;Ici&quot;,&quot;Si&quot;</pre>
+</span>
+<p>&nbsp;</p>
+<p><b>
+<font face="Courier New" size="2">Like:</font></b></p>
+<p><font face="Courier New" size="2">Instruction <b>hyper puissante</b>: Like, 
+elle <b>compare</b> une chaîne String avec un modèle (Pattern), elle permet de 
+voir si la chaîne contient ou ne contient pas un ou des caractères, ou une plage 
+de caractères. (c'est l'équivalent des <b>expressions régulières du
+Framework qu'il faut plutôt utiliser</b>)</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #FFFFFF">
+result = String </span>
+<font color="#0000FF"><span style="background-color: #FFFFFF">Like</span></font><span style="background-color: #FFFFFF"> 
+Pattern </span></font></p>
+<p><font face="Courier New" size="2">Si <i>string</i> correspond à <i>pattern</i>, 
+la valeur de <i>result</i> est <b>True</b>&nbsp;; s'il n'y a aucune correspondance, 
+la valeur de <i>result</i> est <b>False</b>. Si string et pattern sont une 
+chaîne vide, le résultat est <b>True</b>.<i> </i>Sinon, si <i>string</i> ou <i>
+pattern</i> est une chaîne vide, le résultat est<i> </i><b>False</b><i>. </i>
+</font></p>
+<p><font face="Courier New" size="2">L'intérêt de <font color="#0000FF">Like</font> 
+est que l'on peut y mettre des <b>caractères génériques:</b></font></p>
+<p><font face="Courier New" size="2"><b>? </b>veut dire tout caractère unique</font></p>
+<p><font face="Courier New" size="2"><b>* </b>veut dire * ou plusieurs 
+caractères.</font></p>
+<p><font face="Courier New" size="2"><b># </b>veut dire tout chiffre.</font></p>
+<p><font face="Courier New" size="2"><b>[caractères] </b>veut dire tout 
+caractères présent dans la liste.</font></p>
+<p><font face="Courier New" size="2"><b>[!caractères] </b>veut dire tout 
+caractères NON&nbsp; présent dans la liste.</font></p>
+<p><font face="Courier New" size="2"><b>- trait d'union </b>permet de spécifier 
+un début et une fin de plage.</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim R As Boolean</span></font><br>
+<font color="#0000FF"><span style="background-color: #FFFFFF">R</span></font>
+<span style="background-color: #FFFFFF"><font color="#0000FF"> = &quot;D&quot; Like &quot;D&quot;
+</font></span>' Est ce que &quot;D&quot; est égal à &quot;D&quot;? =&gt; True.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;F&quot; Like &quot;f&quot;
+</font></span>' Est ce que &quot;F&quot; est égal à &quot;f&quot;? =&gt; False.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;F&quot; Like &quot;FFF&quot;</font></span> 
+' Est ce que &quot;F&quot; est égal à &quot;FFF&quot;? =&gt; False.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;cBBBc&quot; Like 
+&quot;c*c&quot; </font></span>' Est ce que &quot;cBBBc&quot; répond au pattern (avoir un &quot;c&quot; au <br>
+'début, un&nbsp; &quot;c&quot; à la fin, et des caractères au milieu? Retourne True.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;J&quot; Like &quot;[A-Z]&quot;</font></span> 
+' Est ce que &quot;J&quot; est contenu dans les caractères allant de<br>
+'&nbsp; A à Z? Retourne True.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;I&quot; Like &quot;[!A-Z]&quot;
+</font></span>' Est ce que &quot;I&quot; n'est PAS dans les caractères allant de<br>
+'&nbsp; A à Z? Retourne&nbsp; False.</font></p>
+<p><font face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;a4a&quot; Like 
+&quot;a#a&quot;</font></span> ' Est ce que &quot;a4a&quot; commence et finie par un<br>
+' &quot;a&quot; et à un nombre entre les 2? Retourne True.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">R = &quot;bM6f&quot; Like 
+&quot;b[L-P]#[!c-e]&quot;</font></span> ' Est ce que &quot;bM6f&quot; </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'commence par&nbsp; &quot;b&quot;,</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'a 
+des caractères entre L et P</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'un 
+nombre</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'se 
+termine par un caractère non compris entre c et e</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+'retourne True</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="4"><b>3-
+Un exemple:</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><b>
+<span style="font-family: Courier New">C</span></b></font><b><span style="font-family:&quot;Courier New&quot;; "><font size="2">ombinaison de chaînes de caractères, de variables..</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Souvent, on a besoin d'afficher une combinaison de chaînes littérales, le 
+contenu de variables, des résultats de calcul; c'est possible.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">Exemple&nbsp;:</span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour afficher dans un label le carré de X 
+est X2, avec une valeur dans la&nbsp; variable x&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Dim X As Integer = 2</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">L</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">abel1.Text=&nbsp;&quot;Le 
+carré de &quot;&nbsp;&amp; X &amp; &quot;&nbsp; est &quot;&nbsp;&amp; X * X</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ce qui est entre guillemets est affiché 
+tel quel. C'est le cas de </span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&quot;Le carré de &quot; </font>
+et de<font color="#0000FF">
+&quot; est &quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ce qui n’est pas entre guillemets est 
+évalué, le résultat est affiché. C'est le cas de <font color="#0000FF">X</font> et 
+<font color="#0000FF">X*X</font></span></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Si
+      on voulait être puriste, il faudrait transformer les Integer en String
+      avant de les afficher.</font></p>
+      <p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">L</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">abel1.text=&nbsp;&quot;Le 
+carré de &quot;&nbsp;&amp; X.ToString &amp; &quot;&nbsp; est &quot;&nbsp;&amp;
+      (X * X).ToString</span></font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour ne faire qu'une 
+chaîne on ajoute les bouts de chaînes avec l'opérateur '&amp;'.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Notez l’usage d’espace en fin de chaîne 
+pour  que les mots et les chiffres ne se touchent pas.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim X As Integer</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">X=2</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Label1.text=&nbsp;&quot;Le carré de &quot;&nbsp;&amp; X &amp; 
+&quot;&nbsp; est 
+&quot;&nbsp;&amp; X * X</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">A</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ffiche dans le label&nbsp;: «&nbsp; Le carré de 2 
+est 4&nbsp;»</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="3">Voir des <b>exemples de code</b> dans <a href="ve1-1.htm">ve1-1</a></font></p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">4- Comparaison&nbsp; de 
+caractères et 'Option Compare'</span></font></p>
+<p><font face="Courier New" size="2">On peut comparer 2 String</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim s1 As String =&quot;ABCD&quot;</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim s2 As String =&quot;XYZ&quot;</font></p>
+<p><font face="Courier New" size="2">Dans ce cas <font color="#0000FF">s1&lt;s2 </font>
+est vraie.</font></p>
+<p><b><font face="Courier New">Par défaut (Option Compare Binary)</font></b></p>
+<blockquote>
+<p><font face="Courier New" size="2">Les caractères sont classés dans un ordre 
+croissant (l'ordre de leur code unicode) </font></p>
+<p><font face="Courier New" size="2">Voyons l'ordre des certains caractères 
+particuliers:</font></p>
+<p><font face="Courier New" size="2">&quot; &quot;&nbsp; +,-./ 0123456789 :;ABCDEF abcdef 
+èéê </font></p>
+<p><font face="Courier New" size="2">On constate que l'ordre est espace puis 
+quelques caractères spéciaux, les chiffres, les majuscules puis les minuscules, 
+les accentués.(voir le tableau d'unicode)</font></p>
+<p><font face="Courier New" size="2">Ainsi <font color="#0000FF">B&lt;a</font></font></p>
+<p><font face="Courier New" size="2">En utilisant <b>Option Compare Binary</b>, la plage </font>
+<font size="2"><code class="ce"><font face="Courier New">[A–E]</font></code><font face="Courier New"> 
+correspond à <i>A</i>, <i>B</i>, <i>C</i>, <i>D</i> et <i>E</i>. </font></font></p>
+</blockquote>
+<p><b><font face="Courier New">Avec Option Compare Text</font></b></p>
+<blockquote>
+<p><font face="Courier New" size="2">Les caractères sont classées dans un ordre 
+qui reflète plus la réalité d'un texte:</font></p>
+<p><font face="Courier New" size="2">Toutes les types de a: <i>&nbsp;A</i>, <i>a</i>, À, à, 
+puis tous les types de b: <i>B</i>, <i>b...</i></font></p>
+<p>
+<font size="2"><font face="Courier New">Avec <b>Option 
+Compare Text</b>,</font><code class="ce"><font face="Courier New"> [A–E]</font></code></font><font size="2" face="Courier New"> 
+correspond à<i> A</i>, <i>a</i>, À, à, <i>B</i>, <i>b</i>, <i>C</i>, <i>c</i>,
+<i>D</i>, <i>d</i>, <i>E</i> et <i>e</i>. La plage ne correspond pas à Ê ou ê 
+parce que les caractères accentués viennent après les caractères non accentués 
+dans l'ordre de tri.</font></p>
+<p><font face="Courier New" size="2">Ainsi <font color="#0000FF">B&gt;a</font></font></p>
+</blockquote>
+<p><font face="Courier New" size="2">L'ordre des caractères est donc défini par <b>
+Option Compare</b> et aussi les paramètres régionaux du système sur lequel s'exécute 
+le code. </font>
+</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New">Grande règles de comparaison:</font></b></p>
+<p><font face="Courier New" size="2"><i>La comparaison s'effectue de gauche à 
+droite.</i> </font>
+</p>
+<p><font face="Courier New" size="2"><i>La comparaison s'effectue sur le premier 
+caractère de chaque chaîne.</i></font></p>
+<p><font face="Courier New" size="2"><i>Si le premier caractère est identique, la 
+comparaison se fait sur le deuxième caractère...</i></font></p>
+<p><font face="Courier New" size="2">&nbsp;<font color="#0000FF">&quot;zz&quot; &gt; &quot;za&quot;&nbsp;
+</font>est vrai</font></p>
+<p><font face="Courier New" size="2">En cas de chaîne du type &quot;zz&quot; et &quot;zzz&quot; , la 
+seconde est supérieure</font></p>
+<p><font face="Courier New" size="2">&nbsp;<font color="#0000FF">&quot;zz&quot; &lt; &quot;zzz&quot;&nbsp;
+</font>est vrai</font></p>
+<p><font face="Courier New" size="2">Il y a quelques <b>pièges</b>:</font></p>
+<p><font face="Courier New" size="2">Si je veux créer des chaînes du genre 'un 
+nombre puis le mot string' et qu'elles soient classées dans un ordre logique 
+pour l'humain.</font></p>
+<p><font face="Courier New" size="2">Je vais taper:&nbsp; &quot;1string&quot;, &quot;2string&quot;, 
+&quot;10string&quot;, &quot;11string&quot;, &quot;100string&quot; </font>
+</p>
+<p><font face="Courier New" size="2">Le classement par Vb sera 'surprenant' car 
+les chaînes seront classées dans cet ordre:</font></p>
+<p><font face="Courier New" size="2">&nbsp;&quot;100string&quot;, &quot;10string&quot;, &quot;11string&quot;, 
+&quot;1string&quot;,&quot;2string&quot;</font></p>
+<p><font face="Courier New" size="2">Pourquoi? c'est l'application stricte des 
+règles de comparaison: regardons le troisième caractère des 2 premières chaînes(les 2 premiers caractères étant égaux), &quot;0&quot; est bien inférieur à &quot;s&quot; donc&nbsp; 
+&quot;100string&quot; &lt; &quot;10string&quot; est vrai!!</font></p>
+<p><font face="Courier New" size="2">Pour résoudre le problème et obtenir un 
+classement correct, il faut écrire des blocs numériques de même longueur et 
+alignés à droite:</font></p>
+<p><font face="Courier New" size="2">Écrire 010string et non 10string.</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp; &quot;001string&quot;, &quot;002string&quot;, 
+&quot;010string&quot;, &quot;011string&quot;, &quot;100string&quot; ' ici le trie est dans le bon ordre.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">5- Unicode:</span></font></b></p>
+<p><font face="Courier New" size="2">Les variables <b>string</b> sont stockées 
+sous la forme de séquences de&nbsp; 16&nbsp;bits (2&nbsp;octets) non signés dont les 
+valeurs sont comprises entre 0&nbsp;et&nbsp;65&nbsp;535. Chaque nombre représente un caractère
+<b>Unicode</b>. Une chaîne peut contenir jusqu'à 2&nbsp;milliards&nbsp; de 
+caractères.</font></p>
+<p><font face="Courier New" size="2">L'Unicode est donc un codage de caractères 
+sur 16 bits qui contient tous les caractères d'usage courant dans les langues 
+principales du monde.</font></p>
+<p><font face="Courier New" size="2"><b>Les premiers 128 codes </b>(0–127) 
+Unicode correspondent aux lettres et aux symboles du clavier américain standard. 
+Ce sont les mêmes que ceux définis par le jeu de caractères ASCII (ancien codage 
+sur un octet). <b>Les 128 
+codes suivants</b> (128–255) représentent les caractères spéciaux, tels que les 
+lettres de l'alphabet latin, les accents, les symboles monétaires et les 
+fractions. Les codes restants sont utilisés pour des symboles, y compris les 
+caractères textuels mondiaux, les signes diacritiques, ainsi que les symboles 
+mathématiques et techniques.</font></p>
+<p><font face="Courier New" size="2">Voici les 255 premiers</font></p>
+<p align="center"><img border="0" src="vunicode.GIF" width="601" height="422"></p>
+<p><font face="Courier New" size="2">Le petit carré indique un caractère non 
+imprimable (non affichable), certains caractères sont des caractères de contrôle 
+comme le numéro 9 qui correspondant à tabulation, le numéro 13 qui correspond au retour à la 
+ligne..</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="6"><b>
+<span style="background-color: #C0C0C0">B- CHAR.</span></b></font></p>
+<p><font face="Courier New" size="2">Le type <font color="#0000FF">Char</font>
+représente un caractère.</font></p>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" size="2" face="Courier New">Dim
+C As Char&nbsp; </font><font size="2" face="Courier New">, C peut contenir un
+caractère et un seul.</font></span></p>
+<p><font face="Courier New" size="2">Les variables <b>Char</b> sont stockées en
+interne sous la forme de nombres 16&nbsp;bits (2&nbsp;octets) non signés
+représentant un seul caractère <b>
+Unicode</b>. Pour les conversions entre le type <b>Char</b> et les types numériques il y a les fonctions <b>AscW</b> et <b>ChrW</b> qui peuvent 
+être utilisées..</font></p>
+<p><font face="Courier New" size="2">L'ajout du caractère de type littéral <b>C</b> 
+à un littéral de chaîne force ce dernier a être un type <b>Char</b>. A utiliser 
+surtout si <b>Option Strict (qui force à être strict..)</b> est activé.</font></p>
+<p><b><font face="Courier New" size="2">Exemple:</font></b></p>
+<pre class="code"><font face="Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">Option Strict On</span></font><span style="background-color: #FFFFFF">
+' ...
+</span><font color="#0000FF"><span style="background-color: #FFFFFF">Dim C As Char
+C = &quot;A&quot;c</span></font></font></pre>
+<pre class="code"><b><font face="Courier New">String.ToCharArray:</font></b></pre>
+<pre class="code"><font face="Courier New">Permet de passer une string dans un tableau de Char:</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Dim maString As String = &quot;abcdefghijklmnop&quot;
+Dim maArray As Char() = maString.ToCharArray</span></font></pre>
+<p><font size="2" face="Courier New">La variable </font><font size="2">
+<code class="ce"><font face="Courier New">maArray</font></code><font face="Courier New"> 
+contient à présent un tableau composé de <b>Char</b>, chacun représentant un 
+caractère de </font><code class="ce">
+<font face="Courier New">maString</font></code></font><font size="2" face="Courier New">.</font></p>
+<pre class="code"><font face="Courier New">Pour mettre le tableau de Char dans une String:</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Dim maNewString As String (maArray)</span></font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b><font face="Courier New">String.</font>Chars():</b></pre>
+<pre class="code"><font face="Courier New" size="2">Vous pouvez extraire un caractère particulier d'une chaîne en faisant référence à</font></pre>
+<pre class="code"><font face="Courier New" size="2">l'index de ce caractère par l'intermédiaire de la propriété Chars. Par exemple:
+
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">Dim maString As String = &quot;ABCDE&quot;
+
+Dim monChar As Char
+
+monChar = maString.Chars(3)</font></span> ' monChar = &quot;D&quot;</font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b>Un caractère est-il numérique? un chiffre? une lettre? un séparateur? un espace?....</b></pre>
+<pre class="code"><font color="#0000FF">	<font face="Courier New" size="2">Dim chA As Char
+        chA = &quot;A&quot;c
+        Dim ch1 As Char
+        ch1 = &quot;1&quot;c
+        Dim str As String
+        str = &quot;test string&quot;
+
+        Console.WriteLine(chA.CompareTo(&quot;B&quot;c))          ' Output: &quot;-1&quot; </font></font><font face="Courier New" size="2">'  A est plus petit que B<font color="#0000FF">
+        Console.WriteLine(chA.Equals(&quot;A&quot;c))             ' Output: &quot;True&quot; ' </font>Egal?<font color="#0000FF">
+        Console.WriteLine(Char.GetNumericValue(ch1))    ' Output: 1	 </font>'Convertir en valeur numérique<font color="#0000FF"> </font>(double)<font color="#0000FF">
+        Console.WriteLine(Char.IsControl(Chr(9)))       ' Output: &quot;True&quot;</font>'  Est une caractère de contrôle?<font color="#0000FF">
+        Console.WriteLine(Char.IsDigit(ch1))            ' Output: &quot;True&quot;</font>'  Est un chiffre<font color="#0000FF">
+        Console.WriteLine(Char.IsLetter(&quot;,&quot;c))          ' Output: &quot;False&quot;</font>' Est une lettre<font color="#0000FF">
+        Console.WriteLine(Char.IsLower(&quot;u&quot;c))           ' Output: &quot;True&quot; </font>' Est en minuscule<font color="#0000FF">
+        Console.WriteLine(Char.IsNumber(ch1))           ' Output: &quot;True&quot; </font>' Est un nombre<font color="#0000FF">
+        Console.WriteLine(Char.IsPunctuation(&quot;.&quot;c))     ' Output: &quot;True&quot; </font>' Est un caractère de ponctuation<font color="#0000FF">
+        Console.WriteLine(Char.IsSeparator(str, 4))     ' Output: &quot;True&quot; </font>' Est un<font color="#0000FF"> </font>séparateur<font color="#0000FF">
+        Console.WriteLine(Char.IsSymbol(&quot;+&quot;c))          ' Output: &quot;True&quot; </font>' Est un<font color="#0000FF"> </font>symbole<font color="#0000FF">
+        Console.WriteLine(Char.IsWhiteSpace(str, 4))    ' Output: &quot;True&quot; </font>' Est un<font color="#0000FF"> </font>espace<font color="#0000FF">
+        Console.WriteLine(Char.ToLower(&quot;M&quot;c))           ' Output: &quot;m&quot;	</font> ' Passe en minuscule<font color="#0000FF">
+      </font></font>
+Existe aussi <font color="#0000FF">IsLetterOrDigit</font>, <font color="#0000FF">IsUpper</font>.</pre>
+<pre class="code">Bien sur si on est en 'Option Strict' il faut ajouter .ToString à chaque ligne:</pre>
+<pre class="code"><font color="#0000FF">Console.WriteLine(Char.ToLower(&quot;M&quot;c).ToString) </font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code">On note que l'on peut tester un caractère dans une chaîne: <font color="#0000FF">Char.IsWhiteSpace(str, 4)</font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code">Autre manière de tester chaque caractères d'une String:</pre>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim V as string</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">
+For Each C As 
+Char in V&nbsp;&nbsp;&nbsp; </font>'Pour chaque caractère de V..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+C...</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">N</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">ext</span></font></p>
+<pre class="code">Ici la String est considérée comme une collection de Char. (C'est aussi une collection de String) </pre>
+<pre class="code">Mais on verra plus loin les collections et les boucles <font color="#0000FF">For Each</font>.</pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b>Conversions Char &lt;-&gt;Unicode</b></pre>
+<pre class="code"><font face="Courier New">On rappelle que l'Unicode est le mode de codage  interne des caractères.</font></pre>
+<pre class="code"><font color="#0000FF">Dim monUnicode As Short = Convert.ToInt16 (&quot;B&quot;c)</font> ' le code Unicode  de B est 66.</pre>
+<pre class="code"><font color="#0000FF">Dim monChar As Char = Convert.ToChar (66)</font> '   monChar=&quot;B&quot;</pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code">Si vous souhaiter utiliser <font color="#0000FF">Asc</font> et <font color="#0000FF">Chr</font> de VisualBasic:</pre>
+<pre class="code"><font color="#0000FF">Dim monAscii As Short = Asc(&quot;B&quot;) </font>'donne le code Ascii ou l'Unicode (Ascw fait de même?)</pre>
+<pre class="code"><font color="#0000FF">Dim monChar As Char= Chr(66)</font> </pre>
+<pre class="code"><font SIZE="2">C'est mieux avec la classe Convert :</font><font SIZE="2" COLOR="#0000ff"> Dim</font><font SIZE="2"> c </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Char</font><font SIZE="2"> <font color="#0000FF">= Convert.ToChar(66)</font></font></pre>
+<pre class="code">&nbsp;<font face="Courier New" size="3">Voir des <b>exemples de code</b> dans <a href="ve1-1.htm">ve1-1</a></font></pre>
+<pre class="code">&nbsp;</pre>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="2" color="#0000FF">Et </font></b></span>
+<font color="#0000FF" face="Courier New" size="2"><b>
+<span style="background-color: #C0C0C0">les Chaînes de 
+longueur fixe:</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">On a vu que les chaînes de 
+longueur fixe n'existent pas en VB.NET (compatibilité avec les autres langages 
+oblige), mais il y a moyen de contourner le problème:</font></p>
+<ul>
+  <li>
+    <p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">On peut utiliser
+    <b>PadRight</b> et <b>PadLeft</b> pour créer une chaîne de longueur
+    définie. Voir plus haut.&nbsp;</font></li>
+  <li>
+    <p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">On peut utiliser la <b>Classe de 
+compatibilité VB6:</b></font><font color="#FF0000" face="Courier New" size="2"><b> 
+à&nbsp; éviter</b></font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">(Il faut charger dans les 
+références du projet Microsoft.VisualBasic.Compatibility et Compatibility Data)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><font color="#0000FF">Dim 
+MaChaineFixe As New VB6.FixedLengthString(100)</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Pour afficher la chaîne fixe 
+utilisez <font color="#0000FF">MaChaineFixe.Tostring</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Mais pour mettre une chaîne dans 
+cette chaîne de longueur fixe!! galère!!!</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><font color="#0000FF">MaChaineFixe=&quot;ghg&quot;
+</font>n'est pas accepté: on ne peut pas mettre une String dans une chaîne fixe</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">MaChaineFixe = </font></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">CType</font><font face="Courier New"><font SIZE="2" color="#0000FF">(&quot;hg&quot;, 
+Microsoft.VisualBasic.Compatibility.VB6.FixedLengthString) </font>
+<font SIZE="2">'pas accepté non plus!!</font></font><font SIZE="2"></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</font>
+<ul>
+  <li>
+    <p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Enfin&nbsp;
+    il y a un autre moyen pour 
+les <b>structures</b>. On verra cela plus loin.</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#FF0000" face="Courier New" size="2">Donc&nbsp; <b>les chaînes fixes sont à&nbsp; éviter.</b></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6-num.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6string.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:52 GMT -->
+</html>

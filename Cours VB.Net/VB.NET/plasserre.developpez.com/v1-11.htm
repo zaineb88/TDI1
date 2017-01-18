@@ -1,0 +1,1395 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET: structure de controle: if then select case for next Choose Iif switch </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.11</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Structures de contrôle</font></b></td>
+    <td width="14%" height="76"><a href="v1-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="vorganig4.GIF" width="138" height="129"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#800080">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Elles permettent de gérer le déroulement du 
+code.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On étudiera:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; If 
+Then</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; 
+Select Case</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; For 
+Next</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Do 
+Loop</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; While End While</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; For 
+Each</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp; <font color="#800080">
+<b>Switch</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#800080"><b><font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; 
+IIF</span></font></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;&nbsp;&nbsp;<font size="2" color="#800080"><b><span style="font-family: Courier New">&nbsp;
+Choose</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">If then</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Permet de créer une <b>structure 
+décisionnelle</b>&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vorganig2.GIF" width="138" height="129"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">If </font>Condition
+<font color="#0000FF">Then</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si la Condition est vraie alors……</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Une instruction (ou un bloc d’instructions) 
+peut être exécutée si une condition est vraie.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Exemple:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If A=B then </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; </span></font></span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox(&quot;A=B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End If</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Si A = B alors on exécute le bloc de 
+code entre Then&nbsp; et End If, il affiche dans une fenêtre MessageBox «&nbsp;A=B&nbsp;»</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Noter que, si on le désire, on peut écrire 
+sur la même ligne après Then (Pas besoin de End If).</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If A=B Then MsgBox(&quot;A=B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;C'est équivalent </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut <b>tester une condition fausse</b> 
+et dans ce cas utiliser <b>Not</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If Not A=B Then MsgBox(&quot;A 
+différent de B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Si A et B sont différent (Not A=B signifie 
+NON égaux) afficher&nbsp;&quot;A différent de B&quot;.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">(On aurait pu écrire If A&lt;&gt;B Then...)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il peut y avoir <b>des opérateurs logiques</b> dans 
+la condition:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2">
+<font color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">If A=B And C=D then..&nbsp;&nbsp;&nbsp; </span></font>
+<span style="font-family: Courier New; background-color: #FFFFFF">'Si A égal B 
+et si C égal D</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Autre exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Dim 
+n As String =&quot;33&quot;</font>&nbsp; on crée une String , on y met les caractères &quot;33&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF">
+<span style="background-color: #FFFFFF">If Not 
+IsNumeric(n) then</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox 
+(&quot;n n’est pas un nombre&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Exit Sub</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si n n’est pas numérique alors afficher&nbsp;dans une boite 
+de dialogue: «&nbsp;n n’est pas un nombre&nbsp;» puis quitter la procédure (Exit Sub)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Noter bien que comme il y a plusieurs 
+instructions après Then on crée un bloc d’instruction de plusieurs lignes entre 
+Then et End If.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Simplification d'écriture:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Au lieu de </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><font size="2">
+<span style="font-family: Courier New; background-color: #FFFFFF">I</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><span style="background-color: #FFFFFF">f 
+Condition = True Then</span></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut écrire:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><font size="2">
+<span style="font-family: Courier New; background-color: #FFFFFF">If Condition 
+Then</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"> &nbsp;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Condition étant de toute manière évaluée pour 
+voir si elle est égale à True.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut aussi utiliser la structure&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Si..Alors..Sinon</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If condition then</span></font></p>
+<p class="MsoNormal" style="margin-top:0;text-indent:35.4pt; margin-bottom:0">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">.. ‘effectué 
+si condition vraie</span></p>
+<p class="MsoNormal" style="margin-top:0;text-indent:35.4pt; margin-bottom:0">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Else</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..’effectué si condition fausse</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If A=B then </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; </span></font></span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox(&quot;A=B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Else</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; </span></font></span><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox(&quot;A 
+différend de B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End If</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Des structures If Then peuvent être <b>
+imbriquées</b>&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">If..</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> </font>
+<span style="background-color: #FFFFFF">
+<font color="#FF00FF">
+If.</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">.</span></font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </font><font color="#FF00FF">
+Else</font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span> </font>
+<span style="background-color: #FFFFFF">
+<font color="#00FF00">
+If.</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">.</span></font></span></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..</span></font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:0;margin-right:0cm;margin-bottom:0cm;
+margin-left:35.4pt;margin-bottom:0;text-indent:35.4pt">
+<font color="#00FF00">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </font><font color="#FF00FF">
+End if</font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End If</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour bien repérer les différents niveaux, 
+utiliser les tabulations et décaler le ‘If then’ et son code au même niveau.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour vérifier s’il n’y a pas d’erreur, 
+compter les ‘If’, il doit y en avoir autant que des ‘End If’. VB souligne le 
+‘If’ si il n’y a pas de ‘End if’. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Dernière syntaxe:</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font size="2"><span style="font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">If
+</font>Condition1 <font color="#0000FF">Then</font></span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font size="2"><span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; ..</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">ElseIf</span></font></font><font SIZE="2" face="Courier New"><span style="background-color: #FFFFFF"> 
+condition2 </span> </font><font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Then</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; ..</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">ElseIf</span></font><font SIZE="2" face="Courier New"><span style="background-color: #FFFFFF"> 
+condition3 </span> </font><font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Then</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; ..</span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">end if</span></font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Si condition1...</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Sinon si condition2</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Sinon si condition3</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Select 
+Case</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">C</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">réer une structure décisionnelle&nbsp; permettant&nbsp; d’exécuter <b>un grand nombre de blocs de code différents 
+en fonction de la valeur d’une expression</b>&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;<img border="0" src="vorganig4.GIF" width="138" height="129"></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Select Case expression</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Case valeur1</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘code effectué si expression=valeur1</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ……</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Case valeur2</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘code effectué si expression=valeur2</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ……</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Case valeur3</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘code effectué si expression=valeur3</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ……</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Case Else</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘code effectué dans tous les autres 
+cas</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">End Select</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Attention si expression=valeur1 le code 
+entre Case Valeur1 et Case valeur2 (et uniquement celui là) est effectué, puis 
+l’exécution saute après End Select.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple d’un code affichant le jour de la 
+semaine&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">J</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> est un entier contenant le numéro d’ordre 
+du jour</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font size="2" color="#0000FF">N=J 
+Mod 7&nbsp;</font><font size="2">&nbsp;&nbsp;&nbsp; ‘ contient le reste de la division entière de J 
+par 7</font></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Select Case N</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">
+Case 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+'Si N=1</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">MsgBox 
+&quot;Lundi&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Afficher 'Lundi'&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case 2</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">MsgBox 
+&quot;Mardi&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case 3</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">MsgBox 
+&quot;Mercredi&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">..</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case Else</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">MsgBox 
+&quot;Nombre pas entre 1 et 7&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End select</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Nous venons d’utiliser une expression 
+simple après chaque Case mais on peut utiliser des expressions plus complexes&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Plusieurs clauses d'expression peuvent être 
+séparées par des virgules. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Select Case N</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case 8,9,10</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘Effectuer le code&nbsp; si N=8 ou N=9 ou 
+N=10</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le mot clé <b>To</b> permet de définir les limites 
+d'une plage de valeurs correspondantes pour N. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Select Case N</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Case</font> 8 
+<font color="#0000FF">To</font> 20</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘Effectuer 
+le code&nbsp; si N est dans la plage 8 à 20</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le mot clé <b>Is</b> associé à un opérateur de 
+comparaison (=, &lt;&gt;, &lt;, &lt;=, &gt; ou &gt;=) permet de spécifier une restriction sur les 
+valeurs correspondantes de l’expression. Si le mot clé Is n'est pas indiqué, il 
+est automatiquement inséré. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Select Case N</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case Is &gt;= 5</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ‘Effectuer le code&nbsp; si N supérieur ou 
+égal à 5.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Vous pouvez utiliser plusieurs expressions 
+ou plages dans chaque clause Case (séparées par des virgules). Par exemple, la ligne suivante est valide :</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case 1 To 4, 7 To 9, 11, 13, Is &gt; MaxNumber</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Vous pouvez aussi indiquer des plages et 
+des expressions multiples pour des chaînes de caractères. Dans l'exemple 
+suivant, Case correspond aux chaînes qui sont absolument identiques à « aaa 
+», aux chaînes comprises entre «ccc» et «ddd» dans l'ordre alphabétique, ainsi 
+qu'à la valeur de Var :</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Case &quot;aaa&quot;, &quot;ccc&quot; To &quot;ddd&quot;, 
+Var</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="margin-top: 6pt"><b>
+    <font face="Courier New" size="2">Pour les 'Pro':</font></b></p>
+    <p class="MsoNormal" style="margin-top: 6pt">
+    <font face="Courier New" size="2"><b>Les &quot;Case&quot; peuvent contenir n'importe 
+    quelle expression.</b> Aussi il est possible de tester dans les conditions, 
+    non pas les valeurs d'une même variable, mais divers fonctions totalement 
+    indépendantes ou comme ici des fonctions travaillant toutes sur une même 
+    variable. C'est un usage méconnu du Select Case qui clarifie l'écriture et 
+    qui évite de multiples If Then ou Goto.</font></p>
+    <p class="MsoNormal" style="margin-top: 6pt">
+    <font face="Courier New" size="2">Ici une routine reçoit une String 
+    contenant un nom de fichier, elle teste si le nom n'est pas vide&nbsp; puis 
+    si le fichier existe..</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font color="#0000FF" size="2" face="Courier New">Sub TestFichier (File As 
+    String)</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">Select Case true</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case&nbsp;len(File) 
+    =&nbsp;0&nbsp;</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgbox &quot;Pas de 
+    nom de fichier&quot;&nbsp;&nbsp;&nbsp; </font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case&nbsp;Not 
+    Exit(File)</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errorState=File.NotExist</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;</font><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp; 
+    Case&nbsp;Not Open(File)</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errorState=File.NotOpen</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Case Not Overwrite(File)
+    </font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; errorState=File.NotOverwrite</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Case else</font></font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New"><font size="2"><font color="#0000FF">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font size="2" color="#33cc00">'placer les exceptions ici</font></font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" color="#0000ff" size="2">End Select</font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+    <font face="Courier New" size="2" color="#0000FF">End Sub</font><font face="Courier New" size="2"><br clear="all">
+    &nbsp;</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family:&quot;Courier New&quot;; font-weight:700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">For Next</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">P</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ermet de faire des <b>boucles</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;<img border="0" src="vorganig3.GIF" width="67" height="101"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Les boucles sont très utilisées pour 
+parcourir une plage de valeur qui permet par exemple de parcourir tous les 
+éléments d’un tableau ou pour effectuer de manière itérative un calcul.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le nombre de boucle va être déterminé par 
+une variable qui sert de <b>compteur.</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Le nombre d’exécution est déterminé au 
+départ</b> de la boucle car le compteur a une valeur de départ, une valeur d’arrêt.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour variable allant de 
+'début' à 'fin'&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Boucler</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">donne en VB</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">For 
+variable=début To fin</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">..</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Next 
+variable</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim i as Integer</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For i=1 to 10</span></font></p>
+<p class="MsoNormal" style="margin-top:0;text-indent:35.4pt; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox 
+i.toString</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Next i</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">En langage courant&nbsp;: Pour i allant de 1 à 
+10, afficher la valeur de i dans une MessageBox.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La <b>variable compteur</b> va prendre 
+successivement les valeurs 1&nbsp; puis 2 puis 3…… jusqu'à 10 et effectuer à chaque 
+fois le code qui est entre For et Next.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si on décompose&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">i=1&nbsp; Affiche «&nbsp;1&nbsp;», arrivé à Next, remonte 
+à For, i =2 , affiche «&nbsp;2&nbsp;»……</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">…… i=10 , affiche «&nbsp;10&nbsp;» poursuit après 
+Next.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">En effet i augmente d'une 
+unité à chaque 'tour'.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il peut y avoir un pas (<b>Step</b>), le 
+compteur s'incrémente de la valeur du pas à chaque boucle.&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim i as Integer</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For i=1 to 10 Step 2</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox 
+i.toString</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;<font color="#0000FF">Next i</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Affiche 1 puis 3 puis 5 puis 7 puis 9</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Attention si la valeur de sortie de boucle 
+est inférieure à celle d’entrée il faut indiquer un <b>pas négatif</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim i as integer</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For i=10 to 1 Step -2</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox 
+i.toString</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;<font color="#0000FF">Next i</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Affiche 10 puis 8 puis 6 puis 4 puis 2</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Bien sur on peut utiliser des expressions 
+calculées&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For i=A to B*10 Step X-2</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">MsgBox 
+i.toString</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Next i</font>&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La variable boucle peut être déclarée après 
+For, dans ce cas cette variable n'existe que dans la boucle:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">For K As Integer = 1 To 10<br>
+&nbsp;&nbsp;&nbsp; ...<br>
+Next K</span></font><br>
+</span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut quitter 
+prématurément la boucle avec <font color="#0000FF">Exit For</font></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">For K As Integer = 1 To 10<br>
+&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;&nbsp;&nbsp; If A=2 Then Exit For</span></font></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Next K</span></font></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Dans ce cas la boucle s'arrête de tourner, on 
+poursuit après Next.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Remarque:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Le nom de la variable de boucle est facultatif 
+après <font color="#0000FF">Next</font>:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">For K As Integer = 1 To 10<br>
+&nbsp;&nbsp;&nbsp; ...<br>
+Next</span></font><br>
+</span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Est correct.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">
+<img border="0" src="v2005.JPG" width="52" height="21"> Dans la version 2005 il 
+existe aussi <font color="#0000FF">Continue For</font> qui permet de sauter au 
+prochain Next et de poursuivre la boucle.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family:&quot;Courier New&quot;; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Do Loop</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">P</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ermet aussi de faire des <b>boucles</b> mais 
+sans que le nombre de boucle (d’itération) soit déterminé au départ.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0"><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Loop</span></font></p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2">La boucle
+précédente tournera sans fin. Aussi il faut ajouter <b>une condition d'arrêt</b>
+contenant:</font></p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2"><b>Until</b>  (jusqu’à ce 
+que).&nbsp;</font></p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2"> ou&nbsp;</font></p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2"> <b>While</b>  (tant que).</font></p>
+<p style="margin-top:6.0pt">
+&nbsp;</p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2">C’est la condition d’arrêt qui détermine la 
+sortie de la boucle.</font></p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2">La condition d'arrêt peut être en début,
+après <font color="#0000FF">Do</font> ou en fin après <font color="#0000FF">Loop</font>.</font></p>
+<blockquote>
+  <blockquote>
+<p style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2"><b>En début après Do</b>:</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+&nbsp;</p>
+<p style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2">Exemple avec Until:</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do Until condition&nbsp;&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;Code</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Loop</span></font></p>
+<p style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; ">'Boucler <i> jusqu'à ce que</i> : condition est 
+une condition de sortie.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si condition est fausse, effectuer le code, 
+boucler et recommencer le code jusqu’à ce que condition soit égale à True.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">A chaque boucle la condition est évaluée.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Attention, avant
+de débuter la boucle, la condition doit être fausse sinon la boucle ne sera
+jamais exécutée..</span></p>
+<p style="margin-top:6.0pt">
+&nbsp;</p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2"><b>ou en fin après <font color="#0000FF">Loop</font></b>.</font></p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple avec While.</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do &nbsp;&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp; Code</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Loop </span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">While</span></font><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"> condition </span></font></p>
+  </blockquote>
+</blockquote>
+<p style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; ">'Boucler <i>tant que que</i> : condition est 
+une condition de sortie.</span></p>
+<p style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+La condition étant en fin, le contenue de la boucle sera exécuté au moins une
+fois.</span></p>
+<p style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>En résumé: Loop</b> veut dire boucle. Après
+<b>Loop </b>ou <b>Do </b>(faire) on doit mettre <b>Until</b>  (jusqu’à ce 
+que) ou <b>While</b>  (tant que).</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p style="margin-top:6.0pt">
+<font face="Courier New" size="2">Créer une boucle affichant successivement dans
+une MessageBox les chiffres de 1 à 10.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span><font face="Courier New" size="2" color="#0000FF"><span class="keyword">Dim</span>&nbsp;i&nbsp;<span class="keyword">As</span>&nbsp;<span class="keyword">Integer</span>&nbsp;=&nbsp;0
+&nbsp;&nbsp;</font></span>
+<p style="margin-top: 0; margin-bottom: 0"><span class="keyword"><font face="Courier New" size="2" color="#0000FF">Do</font></span><font face="Courier New" size="2" color="#0000FF"><span>&nbsp;&nbsp;</span></font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span>&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;i&nbsp;+&nbsp;1&nbsp;</span><span class="comment"></span></font><span class="comment"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'incrémente&nbsp;i&nbsp;de&nbsp;1 </font></span><font face="Courier New" size="2"><span>&nbsp;&nbsp;</span></font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span>&nbsp;&nbsp;
+MsgBox(i.ToString)&nbsp;</span><span> </span></font><span class="comment"><font face="Courier New" size="2">'affiche&nbsp;la&nbsp;valeur&nbsp;de&nbsp;i
+dans une messageBox</font></span><font face="Courier New" size="2"><span>&nbsp;&nbsp;</span></font>
+<p style="margin-top: 0; margin-bottom: 0"><span class="keyword"><font face="Courier New" size="2" color="#0000FF">Loop</font></span><font face="Courier New" size="2" color="#0000FF"><span>&nbsp;</span><span class="keyword">Until</span><span>&nbsp;i&nbsp;=&nbsp;10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><span><font face="Courier New" size="2">'sort de la boucle quand
+i=10&nbsp;&nbsp;&nbsp;</font></span>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple pour chercher un mot dans une 
+liste&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Lire Premier Mot</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Do Until</font> MotCherché=MotPointé</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pointer Mot suivant</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Loop</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut aussi utiliser <b>While</b> (Tant que)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Lire Premier mot</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Do While </font>MotCherché&lt;&gt;MotPointé</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pointer Mot suivant</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Loop</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Tant que le mot cherché est différent du 
+mot pointé, boucler.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La condition peut être mise <b>en fin de 
+boucle</b>, cela permet d’effectuer au moins une fois le code. Cela évite aussi 
+d’avoir à démarrer le processus avant la boucle&nbsp;: dans notre exemple cela permet 
+d’éviter de lire le premier mot&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Les mots sont dans un 
+tableau Mot(); premier élément Mot(0)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><span style="background-color: #FFFFFF">IndexMot=-1&nbsp;</span></span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do </span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; IndexMot=IndexMot+1</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Loop While</font> MotCherché&lt;&gt;Mot(IndexMot)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il faudrait en plus boucler jusqu'à la fin 
+du tableau et pas plus.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple complet&nbsp;: Imposer la saisie d’un 
+nombre négatif à l’utilisateur&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On utilise <b>InPutBox</b> qui ouvre une fenêtre,
+et attend une réponse, InputBox retourne une String contenant le texte tapé.</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim Reponse as
+String</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim nombre As
+Single</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reponse=<font color="#0000FF">InPutBox</font>(«&nbsp;Entrer un nombre 
+négatif.&nbsp;»)</span></p>
+<p style="margin-top:0; margin-bottom:0">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Courier New" size="2" color="#0000FF">nombre=
+<span style="background-color: #FFFFFF">Csng( Reponse) </span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Loop&nbsp; While</font> 
+nombre &gt;=0 </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si le nombre n'est pas négatif, la boucle 
+fonctionne et la boite InPutBox s’ouvre de nouveau.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Comment créer une boucle qui tourne sans fin?</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Do</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><font color="#0000FF">Loop&nbsp; While</font>
+<font color="#0000FF">True</font> </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">While, End While</span></b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Permet une boucle qui tourne tant qu'une 
+condition est vraie.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>While</b>  =Tant que.</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">While Condition</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">...</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End While</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple: on incrémente un compteur, on sort 
+quand il est égal à 20.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Counter As Integer = 0<br>
+While Counter &lt; 10 </span>  </font>
+<span style="background-color: #FFFFFF">' Test la valeur du compteur.<font color="#0000FF"><br>
+&nbsp;&nbsp;
+Counter += 1 </font> ' Incrémente le compteur. </span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;</span><font face="Courier New" size="2" color="#0000FF"><span>
+MsgBox(Counter.ToString)</span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">
+<span style="background-color: #FFFFFF"><font color="#0000FF"><br>
+End While </font> </span><br>
+&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Affichera les nombre
+de 1 à 10.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family:&quot;Courier New&quot;; background-color:#C0C0C0">
+<font size="4" color="#0000FF">For Each</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">C’est une variante de la boucle For mais 
+elle permet de <b>parcourir les objets d’une collection sans utiliser d'indice
+de boucle.</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Prenons un contrôle <b>ListBox</b> il a une 
+collection <b>Items </b>qui contient tous les éléments de la ListBox&nbsp;  </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ListBox.item(0) 
+contient la première ligne</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ListBox.item(1)  </span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;contient la seconde ligne</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">ListBox.item(2)…contient la troisième.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Parcourir tous les éléments de la ListBox 
+et les mettre dans une variable V s’écrirait&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim V as string</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim item as objet</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For Each item in ListBox.items</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V=V+item</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">N</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">ext</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span><font face="Courier New" size="2">La 
+variable de boucle peut être déclarée après For:</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Dim V as string</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For Each item As 
+Objet in ListBox.items</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V=V+item</span></font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">N</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">ext</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Au lieu de déclarer Item comme un objet, on 
+aurait pu le déclarer comme un ListBox.Item</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Cette notion de collection&nbsp; est beaucoup 
+plus large que je le pensais: </font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+chaine </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+= &quot;aeiou&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> c
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Each</font><font SIZE="2" color="#0000FF"> car
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">In</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+chaine</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; c = car....</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Ici pour tester chaque caractère dans une 
+String, on peut utiliser For Each.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Switch.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Switch est utilisé avec des <b>couples d'arguments</b>, si le premier est vrai, 
+le second est retourné.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Réponse=Switch( Expression1, Reponse1, Expression2, Reponse2)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si Expression2 est vrai Reponse2 est retourné.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Monnaie= 
+Microsoft.VisualBasic.Switch(Pays = &quot;USA&quot;, &quot;Dollar&quot;, _<br>
+Pays = &quot;FRANCE&quot;, &quot;Euro&quot;, Pays = &quot;Angleterre&quot;, &quot;Livre&quot;)</span></font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si <font color="#0000FF">Pays=&quot;FRANCE&quot;, </font>
+cette expression est vrai, le second objet du couple est retourné. </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Retourne&nbsp; <font color="#0000FF">Euro</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b>
+<span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4">IIf</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">IIf est utilisé avec 3 arguments.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si le premier argument est vrai , le second 
+est retourné.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si le premier argument est faux c'est le 
+troisième qui est retourné.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Reponse = IIf( Nombre &gt; 
+0, &quot;Positif&quot;, &quot;Négatif ou 0&quot;)</span></font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Comme dans Switch on peut utiliser des 
+procédures comme argument.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4">Choose</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">La
+fonction <span class="keyword">Choose</span> retourne un membre de la liste passée
+dans <span class="parameter">Chooce()</span>, selon la valeur de <span class="parameter">Index.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">ElementRetourné
+=Choose (Index, Par1, Par2, Par3, Par4)</font></p>
+<p style="margin-top:6.0pt"><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Dim
+nom As String =Choose(2, <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Speedy&quot;,
+&quot;United&quot;, &quot;Federal&quot;)</span></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Retourne </font><font color="#0000FF"><span style="background-color: #FFFFFF"><span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;United&quot;</span></span></font><font face="Courier New" size="2">.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+</html>

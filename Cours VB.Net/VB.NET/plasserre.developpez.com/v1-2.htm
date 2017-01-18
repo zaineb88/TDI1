@@ -1,0 +1,823 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:19 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic Net intructions, sub, function </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les instructions,les procédures</font></b></td>
+    <td width="14%" height="76"><a href="v1-2-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#800080">Qu'est ce qu'une 
+instruction , une procédure?</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#800080">Quelle différence entre 
+les procédures:</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#800080">liées aux évènement?</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#800080">les procédures non liées?</font></b></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#800080">Les 'Sub', les 'Functions'.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Les instructions:</span></b></font></span><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF"> </font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Une instruction est le texte permettant 
+d'effectuer une opération, une déclaration, une définition.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim A As Integer</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+est une instruction (de déclaration)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A=1 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+est aussi une instruction qui effectue une opération. </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">C'est habituellement une '<b>ligne de code exécutable</b>'.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Une instruction est exécutée lorsque le 
+programme marche.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><b>Plusieurs instructions peuvent se suivre sur 
+une même ligne</b>, séparées par ':'</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim B As String : B=&quot;Bonjour&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font size="2" face="Courier New">Si une ligne est très longue, on peut 
+passer à la ligne grâce à ' _'</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">(caractère 'Espace' puis caractère&quot;_&quot; puis 
+immédiatement après, passage à la ligne) : </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim B As String = &quot;Bonjour 
+monsieur &quot;: C= _</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&quot;le professeur&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">est équivalent à:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim B As String = &quot;Bonjour 
+monsieur &quot;: C= &quot;le professeur&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Quand un programme tourne,
+<font color="#FF0000"><b>les instructions sont effectuées ligne après ligne</b></font>.</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">1&nbsp; Dim B As String  </font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">2&nbsp; B=&quot;Bonjour&quot;</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">3&nbsp; Dim A As Integer </font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">4&nbsp; A= 3</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">5&nbsp; A= A + 1</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">La ligne 1 est exécutée puis la ligne 2 puis 
+la 3, la 4...</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Bien que l'on puisse avoir des numéros de 
+ligne, ils ne sont plus utilisés actuellement et non visibles:</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim B As String  </font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">B=&quot;Bonjour&quot;</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim A As Integer </font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">A= 3</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">A= A + 1</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Pour mettre <b>des commentaires</b> dans un 
+programme, on le fait précéder de <b>&nbsp;&quot;'&quot;</b>&nbsp; .</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#008000">'Ceci est un commentaire, ce 
+n'est pas une instruction.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#800080">&nbsp;</font><font face="Courier New" size="2">Le 
+commentaire ne sera pas exécuté.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Les procédures:</span></b></font></span><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF"> </font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Une <b>procédure est un ensemble 
+d'instructions, de lignes de 
+code</b>, un groupement d'instructions bien définies effectuant une tache précise.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Les procédures sont bien délimitées:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Il y en a de 2 sortes:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Les procédures Sub:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Elles débutent par le mot <font color="#0000FF">
+Sub</font> et se terminent par <font color="#0000FF">End Sub.</font> </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Les procédures Function:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Elles débutent par&nbsp;
+<font color="#0000FF">Function</font> et se terminent par
+<font color="#0000FF">End Function</font>.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Maprocédure</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp; A=1</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple concret d'une procédure: la procédure 
+Button_Click du premier programme.(Celui qui affiche 'Bonjour'; elle ne contient 
+qu'une ligne de code. Le mot Sub est précédé de Private, on verra plus loin ce 
+que cela signifie.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vc1-2_3.gif" width="386" height="182"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Vous avez vu que l’on peut dessiner 
+l'interface, une fenêtre Form1 par exemple. En mode conception, après avoir 
+dessiné 
+l’interface, on doit avoir accès aux procédures.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#008000"><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Si 
+on double-clique sur la fenêtre, on a accès aux procédures évènement liées à 
+cette fenêtre, si on double-clique 
+sur un objet (bouton, case à cocher… on voit apparaître les procédures 
+évènement de ce contrôle. </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;<img border="0" src="vc1-2_3.gif" width="386" height="182"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Quand on voit ces 
+procédures, on peut y</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> inclure du code.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#008000">
+<span style="font-family: Courier New; font-weight: 700">Nous allons voir qu'il 
+y a 2 types de procédures: les procédures liées aux évènements 
+et celles qui ne sont pas liées.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Procédures liées aux 
+événements.</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si on <b>double clique sur le fond d’une 
+fenêtre</b>,(Celle du programme 'Bonjour') on voit apparaître <b>les procédures liées</b> à cette fenêtre 
+et aux contrôles contenus dans cette fenêtre&nbsp;:</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Public</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Class</span> Form1</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; <span style="color:blue">Inherits</span> System.Windows.Forms.Form</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; <span style="color:blue">Dim</span> a <span style="color:blue">As</span>
+<span style="color:blue">String</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+#<span style="color:blue">Region</span> &quot; Code généré par le Concepteur Windows 
+Form &quot;&nbsp; <font color="#008000">'&lt;===En VB 2003 uniquement</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Sub</span> Form1_Load(<span style="color:blue">ByVal</span> 
+sender <span style="color:blue">As</span> System.Object,
+<span style="color:blue">ByVal</span> e <span style="color:blue">As</span> 
+System.EventArgs) <span style="color:blue">Handles</span>
+<span style="color:blue">MyBase</span>.Load</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Label1.Text = &quot;&quot;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">End</span> <span style="color:blue">Sub</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Private</span> <span style="color:blue">Sub</span> 
+Button1_Click(<span style="color:blue">ByVal</span> sender
+<span style="color:blue">As</span> System.Object, <span style="color:blue">ByVal</span> 
+e <span style="color:blue">As</span> System.EventArgs) <span style="color:blue">
+Handles</span> Button1.Click</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Label1.Text = &quot;Bonjour&quot;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">End</span> <span style="color:blue">Sub</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Class</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Détaillons:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On voit 3 parties:</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span><span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">Public</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Class</span> Form1</span></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ce n’est pas une procédure mais la 
+définition de la fenêtre.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">La fenêtre fait partie des 
+Windows.Forms.Form..</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Ces lignes sont générées 
+automatiquement par VB.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">En VB 2003,si vous déroulez cette 
+partie, en cliquant sur le petit +, vous pouvez lire le code permettant de créer 
+la fenêtre, les contrôles.. C'est généré automatiquement par VB. (le chapitre
+<a href="v8-2.htm">8-2</a> explique en détails le code généré par VB, mais c'est 
+un peu complexe pour les débutants pour le moment!!)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">En VB 2005 cette partie 
+générée par VB n'est pas visible directement.&nbsp; </span></font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Sub</span> <b>Form1_Load</b></span></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Chaque fenêtre a une procédure
+<font color="#0000FF">Form_Load </font>qui est exécutée lorsque la fenêtre est 
+chargée, on y met généralement le code initialisant la feuille.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il y a bien d’autres procédures liées à la 
+fenêtre&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Dérouler la liste box en haut à gauche de 
+la fenêtre de code, cliquer sur (<b>Form1 events</b>), si vous déroulez 
+maintenant la liste à droite vous aurez <b>tous les événements qui génèrent une 
+procédure&nbsp;:</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Load</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Lors du chargement de la fenêtre</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Unload&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+Lors du déchargement de la fenêtre</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Activated&nbsp;</font>&nbsp; 
+Lorsque la fenêtre devient active</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">GotFocus</font>&nbsp;&nbsp;&nbsp; 
+Lorsque la fenêtre prend le focus</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Resize&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+Lorsque la fenêtre est redimensionnée</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; …</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp; </span></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color:blue">Sub</span> Button1_Click</span></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">C’est <b>la procédure liée au bouton</b> et qui 
+contient le code à effectuer quand l’utilisateur clique sur le bouton.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">C’est là que l’on écrit le code qui doit 
+s’effectuer lorsque l’utilisateur clique sur le bouton.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">De la même manière que pour la fenêtre, vous pouvez voir dans la 
+liste en haut, tous les événements liés aux boutons qui génèrent une procédure&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Click&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+&nbsp;Lorsque l'utilisateur clique sur le bouton.<font color="#0000FF"> </font>
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">DoubleClick&nbsp;&nbsp; </font></span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Lorsque l'utilisateur double-clique sur le 
+bouton.<font color="#0000FF"> </font>
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MouseDown&nbsp;</font>&nbsp; 
+‘se déclenche si appui du bouton de la souris</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MouseUp</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+‘se déclenche si relâchement du bouton de la souris</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; …</span></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#008000">
+<span style="font-family: Courier New; font-weight: 700">
+<img border="0" src="vicochev.GIF" width="32" height="34"> On voit donc que le 
+formulaire (la fenêtre) et tous les contrôles d'une application ont chacun&nbsp; des 
+procédures pour chaque évènement qui peut survenir.&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#C0C0C0">&nbsp;</span><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4">Procédures&nbsp;non 
+liées:</font></span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Parfois on a besoin de code qui fait une 
+tâche particulière, qui est utilisé à plusieurs endroits et qui <b>n’est pas 
+liée à un événement</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On crée dans ce cas <b>une procédure 
+indépendante des évènements</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#008000">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Le système des procédures permet aussi de 
+découper un problème complexe en quelques fonctions moins complexes et 
+indépendantes les unes des autres.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ces procédures sont en fait des 
+<b>sous-programmes&nbsp;</b>: si une ligne appelle une procédure, le programme ‘saute’ au 
+début de la procédure, il effectue le code de la procédure puis revient juste 
+après la ligne qui avait appelé la procédure et continue les lignes suivantes.
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>&nbsp;Exemple</b>&nbsp;: plusieurs fois dans le programme 
+j’ai besoin de calculer la surface d’un cercle à partir de son rayon et de 
+l’afficher sur un label.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Plutôt que de retaper dans chaque 
+procédure le code, je peux créer une procédure 'Sub' nommée <font color="#0000FF">
+AfficheSurfaceCercle.</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il suffit ensuite si nécessaire d’appeler 
+la procédure qui effectue le calcul et affiche le résultat puis revient 
+effectuer le code situé après l’appel.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Comment appeler une procédure?&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Par <font color="#0000FF">
+Call NomdeProcedure()</font>&nbsp; ou par </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; <font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; NomdeProcedure()</font></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#008000">'Call' est facultatif.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2" color="#008000">Noter les parenthèses après 
+le nom de la procédure.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">
+Procédures Sub&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Comment créer cette procédure&nbsp;Sub?</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Dans la fenêtre de code, tapez&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Sub AfficheSurfaceCercle&nbsp; puis validez. 
+Vous obtenez&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">Sub AfficheSurfaceCercle()</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">End sub</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le code de la procédure est compris entre 
+le <font color="#0000FF">Sub</font> et le <font color="#0000FF">End Sub</font>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour que le calcul se fasse, il faut 
+fournir, (transmettre de la procédure qui appelle à la procédure Sub) la valeur du rayon.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour indiquer que la Sub doit recevoir un <b>paramètre</b> 
+(un <b>argument</b> 
+en VB) ajouter entre les parenthèses&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:blue; background-color:#FFFFFF">Sub</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">AfficheSurfaceCercle( <b>Rayon as Single</b>)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Cela signifie qu’il existe une procédure 
+qui reçoit comme paramètre une variable de type Single (Réel simple précision) contenant le 
+Rayon.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Ajouter le code&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"> <font color="#0000FF">Label.text 
+=(3.14*Rayon*Rayon).ToString</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Que fait cette ligne&nbsp;?</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Elle</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> fait le calcul: '3.14*Rayon*Rayon' ('*' 
+signifie multiplier), on transforme le résultat 
+en chaîne de caractères (grâce à '.ToString') que l’on met dans la propriété .text du 
+label&nbsp;: Cela affiche le résultat. (On verra toute cette syntaxe en détail 
+ultérieurement)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On obtient:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<span style="color:blue">Sub</span> <font color="#0000FF">AfficheSurfaceCercle( Rayon as Single)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; Label.text 
+=(3.14*Rayon*Rayon).ToString</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="color:blue; font-size:10.0pt; font-family:Courier New; background-color:#FFFFFF">End 
+sub</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Comment 
+appeler cette Sub?</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">N’importe quelle procédure pourra <b>appeler 
+la Sub</b>&nbsp; AfficheSurfaceCercle&nbsp; en envoyant la valeur du rayon afin 
+d'afficher la surface du cercle dans un label. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple d’appel pour un rayon de 12&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">AfficheSurfaceCercle(12)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Affiche dans le label: 452.16</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">On peut sortir prématurément de la Sub
+avec <font color="#0000FF">Exit Sub</font>&nbsp; (ou aussi par <font color="#0000FF">Return</font>
+)</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<span style="color:blue">Sub</span>  <font color="#0000FF">AfficheSurface( Rayon as Single)</font></span>
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;
+Label.text =(3.14*Rayon*Rayon).ToString</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">&nbsp;
+<b>Exit Sub</b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">...</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="color:blue; font-size:10.0pt; font-family:Courier New; background-color:#FFFFFF">End 
+sub</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Procédures 'Function'&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Parfois on a besoin que la procédure <b>
+retourne un résultat, qu'elle donne en retour un résultat à la procédure appelante. </b>. Dans ce cas on utilise une <b>Fonction.</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple: je veux créer une fonction à qui je fournis 
+un rayon et avoir 
+en retour la surface d'un cercle.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Comment créer cette Function?</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Tapez <font color="#0000FF">Function SurfaceCercle</font> puis validez, 
+ajouter <font color="#0000FF">(Rayon As Single)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Tapez <font color="#0000FF">Return 3.14*Rayon*Rayon</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ce que la 
+fonction doit retourner est après <font color="#0000FF">Return</font> (ce que la procédure doit renvoyer à la procédure 
+appelante.)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;On obtient la fonction complète:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">Function SurfaceCercle( Rayon as Single)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;Return 3.14*Rayon*Rayon</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End Function</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Comment appeler cette Function?</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans la procédure qui 
+appelle, il faut une variable pour récupérer la valeur retourner par la 
+Fonction:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">S= NomdelaFonction()</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">N’importe quelle procédure pourra appeler 
+la fonction et obtenir le résultat dans la variable S par exemple pour un rayon 
+de 12&nbsp;:&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:35.4pt;margin-bottom:.0001pt;text-indent:35.4pt">
+<font color="#0000FF" face="Courier New" size="2">Dim S As Single</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:35.4pt;margin-bottom:.0001pt;text-indent:35.4pt">
+<font color="#0000FF">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">S=SurfaceCercle(12)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:35.4pt;margin-bottom:.0001pt;text-indent:35.4pt">
+<font size="2"><span style="font-family: Courier New">On appelle la fonction 
+SurfaceCercle en envoyant le paramètre 
+'12', ce qui fait que à l'entrée de la fonction, Rayon=12, le calcul est effectué et le résultat 
+du calcul (452.16) est retourné grâce à Return. S récupère ce résultat.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Après 
+l'appel de cette fonction, S est égal à 452.16</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il est possible de <b>spécifier le type 
+retourné par la fonction:</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">Function SurfaceCercle( Rayon as Single) <b>As Single</b></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">As Single
+</font><font size="2">en fin de ligne après () indique</font></span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;que la fonction retourne un Single. 
+Il faut donc que la variable qui reçoit la valeur retournée (S dans notre 
+exemple) soit aussi un Single. </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Il existe une <b>autre 
+manière de retourner le résultat d'une fonction</b>, reprenons l'exemple 
+précédent, on peut écrire:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;; background-color:#FFFFFF">
+<font color="#0000FF">Function SurfaceCercle( Rayon as Single)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; 
+<b>SurfaceCercle</b>= 3.14*Rayon*Rayon</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exit Function</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">End Function</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Ici on utilise le nom de 
+la fonction pour retourner le résultat , avec un signe '='.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Utilisez plutôt la méthode 
+Return.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"> <font color="#0000FF">Exit 
+Function</font> permet aussi de sortir de la fonction, cela a le même effet que
+<font color="#0000FF"> Return</font> sauf que Return peut 
+être suivi d'un argument de retour (et pas <font color="#0000FF"> Exit Function</font>).</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Module standard&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;La sub <b>AfficheSurfaceCercle</b> affiche le 
+résultat dans le formulaire où elle est située.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Par contre la fonction <b>SurfaceCercle</b> est 
+d’intérêt général, n’importe quelle procédure doit pouvoir l’appeler, de plus 
+elle n’intervient pas sur les contrôles des formulaires et n’est donc pas liée 
+aux formulaires.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On la placera donc dans un <b>module 
+standard</b> qui est un module du programme qui ne contient que du code. (Pas 
+d’interface utilisateur)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour créer un module standard Menu 
+Projet&gt;Ajouter un module.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Y mettre les procédures.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Private Public&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Avant le mot <font color="#0000FF">Sub</font> ou 
+<font color="#0000FF">Function</font> on peut 
+ajouter&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">Private</span></b></font><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"> 
+indiquant que la procédure est accessible uniquement dans le module.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">C’est donc une procédure <b>privée</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Les procédures liées aux évènements d’une 
+feuille sont privées par défaut.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">Public</span></b></font><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"> 
+indiquant que la procédure est accessible à partir de toute l’application.
+</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">S’il n’y a rien devant Sub la procédure est 
+publique</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family:&quot;Courier New&quot;; font-weight:700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Remarques&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">1- </span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour sortir d’une procédure Sub avant la fin, 
+utiliser <b>Exit Sub </b>(<b>Exit Function </b>pour une fonction).</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2">
+<span style="font-family: Courier New; font-weight: 700">2-Quand vous appelez une 
+procédure, il faut toujours mettre des parenthèses même s'il n'y a pas de 
+paramètres.</span></font></p>
+<font SIZE="2">
+<p><font face="Courier New" color="#0000FF">FrmSplash.ShowDialog ()</font></p>
+<p><font face="Courier New">Eventuellement on peut faire précéder l'appel du mot 
+clé</font><font face="Courier New" color="#0000FF"> Call, </font>
+<font face="Courier New">mais ce n'est pas obligatoire.</font></p>
+<p><font face="Courier New" color="#0000FF"><b>Call</b> FrmSplash.ShowDialog ()</font></p>
+<p><font face="Courier New">3- Quand vous créez une procédure</font><font face="Courier New" size="2">&nbsp;utilisez 
+&quot;la casse Pascal&quot; </font><font face="Courier New">&nbsp;pour créer les noms de 
+routine:</font></p>
+<p><font face="Courier New">&nbsp;la première lettre de chaque mot est une 
+majuscule (C'est donc une convention).</font></p>
+<p><font face="Courier New" color="#0000FF">Sub </font><code class="ce">
+<font face="Courier New" color="#0000FF">CalculTotal()</font></code><b><font face="Courier New" color="#FF0000">
+</font></b></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New">Call</font><font face="Courier New" size="2"> 
+= Appel.</font></p>
+<p><font face="Courier New">Return= Retour.</font></p>
+<p><font face="Courier New">Private= Privé.</font></p>
+<p><font face="Courier New">Show= spectacle, exposition.</font></p>
+<p><font face="Courier New">To show= montrer.</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-2-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:19 GMT -->
+</html>

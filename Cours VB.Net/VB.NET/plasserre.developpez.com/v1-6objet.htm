@@ -1,0 +1,367 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6objet.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET object liaison tardive nothing </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6val.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.8</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les variables 'Object'et 
+    les autres.</font></b></td>
+    <td width="14%" height="76"><a href="v1-6bol.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Il existe un autre type de variable: 
+le type 'Object'</span></b></font><font color="#800080"><b><span style="font-size: 10.0pt; font-family: Courier New">.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">Le 
+Type 'Object':</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Parfois on ne sait pas ce que va contenir une 
+variable: un Integer? une String? un Single?</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour résoudre ce problème on utilise une 
+variable de type '<font color="#0000FF">Object</font>'</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Cela remplace le type 'Variant' de VB6</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim myObjet As Object</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ensuite:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">myObjet=12</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">est accepté, et  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"> sera considéré comme un type 
+Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">myObjet=12.6</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">est accepté, et  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"> sera considéré comme un type 
+Single</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">myObjet=&quot;Visual Basic&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">est accepté aussi, et  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"> sera considéré comme 
+un type String</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Les 3 affectations  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2">= peuvent se suivre sans 
+planter, l'objet contenant successivement un type Integer, Single et String.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On rappelle qu'une variable objet est une 
+variable 'Par référence'.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut, suite au dernier exemple, récupérer 
+l'objet et le transformer en String.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim myObjet As Object</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">myObjet=&quot;Visual Basic&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim maString As String&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2">
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">maString= CType</font><font color="#0000FF">(</font></font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">,
+</font>
+<font SIZE="2" COLOR="#0000ff">String</font><font color="#0000FF">)</font></font></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><b>Comment savoir 
+quel type de variable contient&nbsp;la variable 'Objet'?</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Si on fait </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"><font color="#0000FF">.GetType.ToString</font>&nbsp; cela retourne 'System.string' indiquant que  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"> 
+contient bien une String.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"><font color="#0000FF">.GetType.Name</font> 
+retourne 'String'</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour tester si  </font>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" size="2"> est une String, il y a une 
+autre manière avec TypeOf Is:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If TypeOf myObjet Is String Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="1">Attention, TypeOf Is retourne True&nbsp; aussi 
+pour les Classes d'objet parent.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="1" color="#0000FF">Dim monlabel As New Label</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="1" color="#0000FF">If TypeOf monlabel Is Control Then </font>
+<font face="Courier New" size="1">' est vérifié car label dérive de control</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="1">monlabel est bien un label mais c'est aussi un 
+control.(On verra que tous les objet visuel comme Label dérive de la classe 
+Control).</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2">Comment utiliser les membres d'une 
+variable objet?</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: mettre une string dans une variable 
+Objet, connaître la longueur de la String.</font></p>
+<font SIZE="2">
+<ul>
+  <li><i><font face="Courier New"><font color="#800080">Si Option strict=Off&nbsp;
+  </font>(On force VB à ne pas être trop Strict!!! On verra cela plus loin)</font></i></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p>
+<font face="Courier New" size="2" color="#0000FF">Dim myObjet As New Object</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" color="#0000FF">=&quot;VB&quot;</font></p>
+<p><font face="Courier New"><font color="#0000FF">MessageBox.Show(</font></font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">.length)</font>&nbsp; affiche 2 </font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><i><font face="Courier New" color="#800080">Si Option strict=On (On force 
+  VB à ne rien tolérer)</font></i></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" color="#0000FF">MessageBox.Show(</font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">.length)</font>&nbsp; déclenche une 
+<font color="#FF0000">erreur</font>: les liaisons tardives ne sont pas acceptées.</font></p>
+<p><font face="Courier New">Il faut écrire simplement:(Merci le forum de 
+developpez.com)</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">Dim myObjet As New Object</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" color="#0000FF">=&quot;VB&quot;</font></p>
+<p><font face="Courier New"><font color="#0000FF">MessageBox.Show(</font><font SIZE="2" COLOR="#0000ff">DirectCast</font><font color="#0000FF">(</font></font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">,
+</font>
+<font SIZE="2" COLOR="#0000ff">String</font><font color="#0000FF">).Length.ToString)</font></font></p>
+<p><font face="Courier New">ou</font></p>
+<p><font face="Courier New"><font color="#0000FF">MessageBox.Show(</font><font SIZE="2" COLOR="#0000ff">CType</font><font color="#0000FF">(</font></font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">,
+</font>
+<font SIZE="2" COLOR="#0000ff">String</font><font color="#0000FF">).Length.ToString)</font></font></p>
+<p><font face="Courier New">DirectCase et CType transforme un type de variable 
+en un autre, DirectCase est moins 'tolérant' car la variable qui reçoit doit 
+être du bon type.</font></p>
+<p><font face="Courier New">Une autre méthode consiste à transformer par Ctype 
+le contenu de l'objet vers une variable String, puis à afficher la longueur de 
+cette variable String.</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">Dim myObjet As New Object</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" color="#0000FF">=&quot;VB&quot;</font></p>
+    <p><font face="Courier New" color="#0000FF">Dim&nbsp; myString&nbsp; As String</font></p>
+    <p><font face="Courier New"><font color="#0000FF">myString 
+    = </font><font SIZE="2" COLOR="#0000ff">CType</font><font color="#0000FF">(</font></font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"><font color="#0000FF">,
+    </font><font SIZE="2" COLOR="#0000ff">String</font><font color="#0000FF">)</font></font></p>
+    <p><font face="Courier New" color="#0000FF">
+    MessageBox.Show(myString.Length.ToString)</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p><img border="0" src="vicochev.GIF" width="32" height="34"><font face="Courier New" color="#008000">Du 
+fait que les membres utilisés avec une variable Object ne sont pas définis à 
+l'écriture du programme (on ne sait même pas quel type de variable sera dans 
+l'objet, on n'en connaît donc pas les membres), la recherche du membre se fait à 
+l'exécution, c'est plus long, de plus les contrôles et vérifications se font à 
+l'exécution.</font></p>
+<p><font face="Courier New" color="#008000">Cela se nomme <b>une liaison tardive</b>, 
+à éviter donc. On évitera donc d'utiliser si possible des variables 'Objet'.
+</font></p>
+<p><font face="Courier New" color="#008000">Utilisez plutôt <b>des variables&nbsp; 
+typées</b> (des variables String , Integer..) au départ, quand on les utilise, les 
+contrôles et appels sont vérifiés dés le départ, on appelle cela une </font>
+</font>
+<font face="Courier New" color="#008000"><b><font size="2">liaison anticipée ou 
+précoce</font></b></font><font SIZE="2"><font face="Courier New" color="#008000">.</font></font></p>
+<p><font face="Courier New" color="#008000" SIZE="2">&nbsp;</font></p>
+<font SIZE="2">
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Comparaison d'objet.</font></span></p>
+<p><font face="Courier New"><font color="#0033FF">Is</font> permet de savoir si 2 variables
+object se 
+rapportent à la même instance.&nbsp; </font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">Dim o1 As New Objet = monObjet</font></font></p>
+<p><font SIZE="2" color="#0000FF" face="Courier New">Dim o2 As Objet</font></p>
+<p><font SIZE="2" color="#0000FF" face="Courier New">o2= o1</font></p>
+<p><font SIZE="2"><font color="#0000FF" face="Courier New">If o1 Is o2 Then..</font></p>
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Nothing.</font></span></p>
+<p><font face="Courier New">Après </font><font face="Courier New" size="2" color="#0000FF">Dim myObjet As Object,</font>
+</font>
+ <font SIZE="2"><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New"> 
+contient</font><font face="Courier New" color="#0000FF"> 
+Nothing</font><font face="Courier New">, c'est à dire 'Rien': pas de référence à 
+une instance.</font></p>
+<p><font face="Courier New">Après avoir fait </font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New">=12,
+myObjet contient quelque chose.</font></p>
+<p><font face="Courier New">On peut aussi écrire</font><font face="Courier New" color="#0000FF"> </font><font face="Courier New" size="2" color="#0000FF">myObjet</font><font face="Courier New" color="#0000FF">=Nothing.</font></p>
+<p><font face="Courier New">Lorsque vous assignez <b>Nothing</b> à une variable 
+objet, cette dernière ne fait plus référence à une instance d'objet, elle ne 
+pointe sur rien. </font></p>
+</font>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="1">Si la variable avait fait référence à 
+    une instance au préalable, l'assignation de <b>Nothing</b> à la variable ne 
+    met pas fin à l'instance. L'instance se termine, et les ressources mémoire 
+    et système qui lui sont associées sont libérées uniquement lorsque le 
+    garbage collector (qui fait le ménage) détecte l'absence de toute référence 
+    active restante.</font></p>
+  </blockquote>
+</blockquote>
+<font SIZE="2" face="Courier New">
+<p>On peut tester si un Objet contient Nothing avec</font><font SIZE="2" face="Courier New" color="#0000FF">&nbsp; 
+.IsNothing</p>
+</font>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">Les 
+variables d'autres types:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On verra que l'interface utilisateur est 
+composée de contrôles, ces contrôles étant des objets, et bien, on peut déclarer 
+une variable de type 'contrôles': bouton, ou textbox ou formulaire.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim myButton As New Button&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'crée une variable myButton de type Button</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ensuite on peut utiliser les membres de la 
+classe Button</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">myButton.BackColor</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim myTextBox As New TextBox&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'crée une variable myTextBox de type TextBox</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><font size="2">
+<span style="font-family: Courier New; background-color:#C0C0C0"> <b>Utilisez 
+donc des variables le plus typées possible</b>.</span></font></p>
+<p><font face="Courier New" size="2">Eviter les <font color="#0000FF">Object</font>.</font></p>
+<p><font face="Courier New" size="2">Si une variable doit contenir des boutons, 
+créer une variable <font color="#0000FF">Button</font>.</font></p>
+<p><font size="2"><span style="font-family: Courier New">Si une variable doit 
+être utilisée pour contenir divers choses: Button, ListBox... plutôt que la 
+déclarer en Objet, il est préférable de la déclarer en <font color="#0000FF">
+System.Windows.Forms.Control</font></span></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim fistControl As New </font>
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+System.Windows.Forms.Control</font></span></font></p>
+<p><font size="2" color="#0000FF"><span style="font-family: Courier New">
+fistControl= New Button</span></font></p>
+</span>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label3">
+<p><font size="2"><b><span style="font-family: Courier New; background-color: #C0C0C0">Attention
+quand on met un objet dans un autre objet</span></b><span style="font-family: Courier New; background-color: #C0C0C0">:</span></font></p>
+<p><font size="2" face="Courier New">Si je met un Button dans une variable
+Object.</font></p>
+</span>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0033ff" size="2" face="Courier New">Dim
+MyObjet As Object</font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0033ff">MyObjet</font><font color="#0033ff">
+= Button1</font></font></p>
+</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">MyObjet
+donne accès aux propriétés des Object (Equals, GetType, ToString...); pour
+utiliser les propriétés de Button (comme Text par exemple, il faut d'abord
+transformer l'objet en Button en écrivant : <font color="#0033ff">CType(MyObjet,
+Button)</font>.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Par
+exemple, p</font><font face="Courier New" size="2">our mettre le texte du button
+contenu dans MyObjet dans la variable MyTexte, il faut écrire:</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0033ff" size="2" face="Courier New">Dim
+MyTexte As String = CType(MyObjet, Button).Text</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6val.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6bol.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6objet.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+</html>

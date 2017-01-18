@@ -1,0 +1,10 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateNaissance\DateNaissance\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateNaissance\DateNaissance\bin\Debug\DateNaissance.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateNaissance\DateNaissance\bin\Debug\DateNaissance.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateNaissance\DateNaissance\obj\x86\Debug\DateNaissance.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateNaissance\DateNaissance\obj\x86\Debug\DateNaissance.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\DateNaissance\DateNaissance\obj\x86\Debug\DateNaissance.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\DateNaissance\DateNaissance\obj\x86\Debug\DateNaissance.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\DateNaissance\DateNaissance\bin\Debug\DateNaissance.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\DateNaissance\DateNaissance\bin\Debug\DateNaissance.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\DateNaissance\DateNaissance\obj\x86\Debug\ResolveAssemblyReference.cache

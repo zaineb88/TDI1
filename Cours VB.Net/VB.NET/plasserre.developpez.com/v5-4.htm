@@ -1,0 +1,427 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les interfaces </title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les interfaces.</font></b></td>
+    <td width="14%" height="76"><a href="v5-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Définition: Interface et implémentation:</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Ce que je vois de l'objet, c'est son <b>interface</b> (le <b>nom</b> des propriétés, 
+le <b>nom</b> des méthodes..) exemple: le nom de la méthode <font color="#0000ff">Clear</font> fait partie 
+de l'interface d'une ListBox. Par contre le code qui effectue la méthode (celui 
+qui efface physiquement toutes les lignes de la listeBox), ce code se nomme <b>
+implémentation</b>, lui n'est ni visible ni accessible (Quand on est du coté du 
+développeur qui utilise l'objet).</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Un objet a donc une interface et une implémentation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand maintenant on est du coté du créateur 
+d'objet, dans un module de classe, si&nbsp; on a crée un objet et ses membres, sans le savoir, on&nbsp; 
+crée en même temps l'interface et l'implémentation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mais il est possible de dissocier les 2.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Quel intérêt d'utiliser les interfaces? </b>
+</font></p>
+<p><font face="Courier New" size="2">Vous pouvez développer des implémentations 
+avancées pour vos interfaces sans endommager le code existant, ce qui limite les 
+problèmes de compatibilité. Vous pouvez également ajouter de nouvelles 
+fonctionnalités à tout moment en développant des interfaces et implémentations 
+supplémentaires.</font></p>
+<p><font face="Courier New" size="2"><b>Différences entre Classe et Interface:</b></font></p>
+<p><font face="Courier New" size="2">Tout comme les classes, les interfaces définissent un ensemble de propriétés, 
+méthodes et événements. Cependant, contrairement aux classes, les interfaces 
+n'assurent pas l'implémentation. Elles sont implémentées par les classes et 
+définies en tant qu'entités distinctes des classes.</font></p>
+<p><font face="Courier New" size="2">Les interfaces&nbsp; ne peuvent pas être 
+modifiées après publication. En effet, toute modification apportée à une 
+interface publiée risque d'endommager le code existant. Il faut partir du principe 
+qu'une interface est une sorte de contrat.(La partie qui publie une interface accepte de ne jamais modifier cette 
+dernière et l'implémenteur accepte de l'implémenter exactement comme elle a été 
+conçue.)</font></p>
+<p><font face="Courier New" size="2" color="#FF0000">L'avantage de l'interface
+est que le codeur s'engage à fournir l'implémentation de toutes les méthodes
+décrites dans l'interface. Le compilateur le vérifiera!!</font></p>
+<p><b><font color="#008000" face="Courier New" size="2">Comme d'habitude:</font></b></p>
+<p><b><font color="#008000" face="Courier New" size="2">Il y a </font></b></p>
+<blockquote>
+<p><b><font color="#008000" face="Courier New" size="2">-les interfaces 
+présentes dans les classes du Framework&nbsp; (IList, ICollection...)</font></b></p>
+<p><b><font color="#008000" face="Courier New" size="2">-les interfaces que vous 
+créez de toutes pièces pour créer des objets.</font></b></p>
+</blockquote>
+<p><font color="#008000" face="Courier New" size="2">Visual Basic&nbsp;.NET 
+vous permet de définir des interfaces à l'aide de l'instruction <b>
+Interface</b> et de les implémenter avec le mot clé <b>
+Implements</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New"><font color="#0000FF"><b>
+<span style="background-color: #C0C0C0"><font size="4">L</font></span></b></font><b><font color="#0000FF"><span style="background-color: #C0C0C0"><font size="4">es 
+interfaces présentes dans les classes du Framework.</font></span></font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour 'uniformiser' le comportement des objets, 
+les interfaces sont largement utilisées dans VB. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Prenons l'exemple <b>des collections</b>: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Plutôt que 
+de rendre communs à toutes les collections une méthode( Clear par exemple), VB 
+donne la même interface à plusieurs types de Collections, ce qui uniformise la 
+totalité des membres. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les collections reposent sur l'interface
+<font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsICollectionClassTopic">
+ICollection</MSHelp:link>,
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsIListClassTopic">IList</MSHelp:link> 
+ou
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsIDictionaryClassTopic">
+IDictionary</MSHelp:link>.</font> Les interfaces <font color="#0000FF">IList</font> et
+<font color="#0000FF">IDictionary</font> 
+sont toutes les deux dérivées de l'interface <font color="#0000FF">ICollection</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34">Le nom des interfaces 
+commence toujours par 'I'.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans les collections fondées sur l'interface <b>
+IList</b> ou directement sur l'interface <b>ICollection</b> (telles que
+<MSHelp:link tabIndex="0" keywords="frlrfSystemArrayClassTopic">Array</MSHelp:link>,
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsArrayListClassTopic">
+ArrayList</MSHelp:link>,
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsQueueClassTopic">Queue</MSHelp:link> 
+ou
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsStackClassTopic">Stack</MSHelp:link>), 
+chaque élément contient une valeur unique. Dans les collections reposant sur 
+l'interface <b>IDictionary</b> (telles que
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsHashtableClassTopic">
+Hashtable</MSHelp:link> ou
+<MSHelp:link tabIndex="0" keywords="frlrfSystemCollectionsSortedListClassTopic">
+SortedList</MSHelp:link>), chaque élément contient à la fois une clé et une 
+valeur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Détaillons l'interface Ilist:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'interface Ilist permet de présenter une 
+collection d'objets accessibles séparément par index.</font></p>
+<p><font face="Courier New" size="2">Les méthodes de l'interface <b>IList</b> 
+sont répertoriées ici. </font></p>
+<h4 class="dtH4"><font face="Courier New" size="2">Méthodes publiques</font></h4>
+<div class="tablediv">
+  <table class="dtTABLE" cellSpacing="0">
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Add</font></td>
+      <td width="50%"><font face="Courier New" size="2">Ajoute un élément.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Clear</font></td>
+      <td width="50%"><font face="Courier New" size="2">Supprime tous les 
+      éléments.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Contains</font></td>
+      <td width="50%"><font face="Courier New" size="2">Détermine si la liste contient une valeur spécifique.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">IndexOf</font></td>
+      <td width="50%"><font face="Courier New" size="2">Détermine l'index d'un 
+      élément spécifique.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Insert</font></td>
+      <td width="50%"><font face="Courier New" size="2">Insère un élément 
+      dans la liste à la position spécifiée.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Remove</font></td>
+      <td width="50%"><font face="Courier New" size="2">Supprime la première 
+      occurrence d'un objet spécifique.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">RemoveAt</font></td>
+      <td width="50%"><font face="Courier New" size="2">Supprime l'élément 
+      correspondant à l'index spécifié.</font></td>
+    </tr>
+  </table>
+</div>
+<h4 class="dtH4"><font face="Courier New" size="2">Propriétés publiques</font></h4>
+<div class="tablediv">
+  <table class="dtTABLE" cellSpacing="0">
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">IsFixedSide</font></td>
+      <td width="50%"><font face="Courier New" size="2">Obtient une valeur 
+      indiquant si <b>IList</b> est de taille fixe.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">IsReadOnly</font></td>
+      <td width="50%"><font face="Courier New" size="2">Obtient une valeur 
+      indiquant si <b>IList</b> est en lecture seule.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="50%">
+      <font face="Courier New" size="2" color="#0000FF">Item</font></td>
+      <td width="50%"><font face="Courier New" size="2">Obtient ou définit 
+      l'élément correspondant à l'index spécifié. </font></td>
+    </tr>
+  </table>
+</div>
+<p><font face="Courier New" size="2">Les tableaux (Array) utilisent l'interface Ilist, mais aussi les 
+collections (ArrayList) , des contrôles utilisent aussi cette interface (les 
+ListBox, ComboBox), mais aussi les DataView... </font> </p>
+<p><font face="Courier New" size="2">Les ListBox possédent donc l'interface Ilist , on s'en doutait car on 
+utilisait les méthodes Clear, Insert, Item...</font></p>
+<p><font face="Courier New" size="2">Il y a plein d'autres interfaces.</font></p>
+<p><font face="Courier New" size="2">Autre exemple: <b>IEnumerable.</b></font></p>
+<p><font face="Courier New" size="2">La Classe <font color="#0000FF">
+System.Array</font> ( et d'autres ) implémente l'interface <font color="#0000FF">
+IEnumerable</font>, ce qui permet d'utiliser une boucle For Each pour parcourir 
+tous les éléments de l'Array.</font></p>
+<p><font face="Courier New" size="2">(Voir 8-5 pour plus de détail)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New"><font color="#0000FF"><b>
+<span style="background-color: #C0C0C0"><font size="4">L</font></span></b></font><b><font color="#0000FF"><span style="background-color: #C0C0C0"><font size="4">es 
+interfaces crées par le programmeur: </font></span></font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">De même que vous savez créer des classes, il 
+est possible de créer de toutes pièces des interfaces.</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour créer une 
+Interface</b></font></p>
+<ol type="1">
+  <li><font size="2" face="Courier New">Dans un nouveau Module, définissez votre 
+  Interface en commençant par le mot clé <font color="#0000FF">Interface</font> 
+  et le nom de l'interface et se terminant par l'instruction
+  <font color="#0000FF">End Interface</font>. 
+  Par exemple, le code suivant définit une Interface 
+  appelée </font><font size="2"><code><font face="Courier New">Cryptage</font></code><code class="ce"><font face="Courier New">&nbsp;</font></code></font><font size="2" face="Courier New">:
+  </font>
+  <pre class="code"><font color="#0000FF" face="Courier New">Interface Cryptage
+End Interface</font></pre>
+  </li>
+  <li><font size="2" face="Courier New">Ajoutez des instructions définissant les propriétés, méthodes et 
+  événements pris en charge par votre Interface. Par 
+  exemple, le code suivant définit deux méthodes, une propriété et un événement</font><font size="2"><code class="ce"><font face="Courier New">&nbsp;</font></code></font><font size="2" face="Courier New">:
+  </font>
+  <pre class="code"><font color="#0000FF" face="Courier New">Interface Cryptage
+   Function Encrypt(ByVal estring As String) As String
+   Function Decrypt(ByVal dstring As String) As String
+   Property CledeCodage() As Integer
+   Event FinDecoding(ByVal RetVal As Integer)
+End Interface</font></pre>
+  <pre class="code"><font face="Courier New">L'interface est créée.</font></pre>
+  </li>
+</ol>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour implémenter une 
+Interface </b></font> </p>
+<ol type="1">
+  <li><font face="Courier New" size="2">Si l'interface que vous implémentez ne fait pas partie de votre projet, 
+  ajoutez une référence à l'assembly qui contient l'interface. </font> </li>
+  <li><font face="Courier New"><b><font size="2">Créez une nouvelle classe</font></b><font size="2"> qui implémente votre 
+  Interface et 
+  ajoutez le mot clé <font color="#0000FF">Implements</font> dans la ligne à la suite du nom de la 
+  classe. Par exemple, pour implémenter l'interface </font></font>
+  <font size="2"><code><font face="Courier New">Cryptage</font></code><font face="Courier New"> , vous pouvez nommer la classe d'implémentation
+  </font>
+  <code class="ce"><font face="Courier New">MonEncrypte</font></code></font><font size="2" face="Courier New">, comme dans le code suivant&nbsp;:
+  </font>
+  <pre class="code"><font color="#0000FF" face="Courier New">Class MonEncrypte
+   Implements Cryptage
+End Class</font></pre>
+  </li>
+  <li><font face="Courier New" size="2">Ajoutez des procédures <b>pour implémenter les propriétés, méthodes et 
+  événements</b> de la classe : </font>
+  <pre class="code"><font color="#0000FF" face="Courier New">Class MonEncrypte
+   Implements Cryptage
+   Event FinDecoding(ByVal RetVal As Integer) Implements Cryptage.FinDecoding
+
+   Function Encrypt(ByVal estring As String) As String Implements Cryptage.Encrypt
+      ' Placer le code de cryptage ici.
+   End Function
+   Function Decrypt(ByVal dstring As String) As String Implements Cryptage.Decrypt
+      ' Placer le code de décryptage ici.
+   End Function
+        
+   Property CledeCodage() As Integer Implements Cryptage.CledeCodage
+      Get
+         </font><font face="Courier New">'Placer ici le code qui retourne la valeur de la propriété.</font><font color="#0000FF" face="Courier New">
+      End Get
+      Set
+         </font><font face="Courier New">'Placer ici le code qui donne une valeur à la propriété.</font><font color="#0000FF" face="Courier New">
+      End Set
+   End Property
+End Class</font></pre>
+  </li>
+</ol>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter que :</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour chaque membre implémenté dans ce code, une instruction <b>Implements</b> 
+  indique le nom de l'interface et du membre implémenté.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Tous</b> les membres de l'interface doivent être 
+implémentés. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Enfin utiliser la classe MonEncrypte dans 
+votre programme.</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim C As New MonEncrypte()</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">C.CledeCodage=3</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim ChaineEncryptée As String= C.Encrypt( 
+&quot;ChaineAEncrypter&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">ou</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut créer une instance de la classe 
+  qui implémente MonEncrypte, crée une variable du type 
+  de l'interface, qui associe un gestionnaire d'événements à l'événement déclenché 
+  par l'instance, qui définit une propriété et exécute une méthode via l'interface.
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim C As New MonEncrypte()
+</font><font face="Courier New" size="2">'Classe</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim I As  Cryptage()</font><font face="Courier New" size="2">'Variable 
+d'interface (ne pas mettre de 'New'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">I=C</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">I.CledeCodage=3</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim ChaineEncryptée As String = I.Encrypt( 
+&quot;ChaineAEncrypter&quot;)</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2" color="#FF0000">Les 2 versions marchent.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; S'il y a un RaiseEvent dans 
+une procédure qui déclenche un évènement de la classe il faut aussi ajouter une ligne
+AddHandler.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"> <br>
+<b>Il peut y avoir héritage de plusieurs interfaces:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New"><br>
+<font size="2" color="#0000FF">Interface IComboBox<br>
+&nbsp;&nbsp; Inherits ITextBox, IListBox <br>
+End Interface </font></font></p>
+<pre class="code"><font color="#0000FF">Public Class EditBox
+   Inherits Control
+   Implements ITextBox
+   Implements IListBox
+   Public Sub Paint()Implements ITextBox.Paint
+      ...</font></pre>
+<pre class="code"><font color="#0000FF">   End Sub
+   Public Sub Bind(b As string) Implements IListBox.Clear
+   End Sub
+End Class</font>
+</pre>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

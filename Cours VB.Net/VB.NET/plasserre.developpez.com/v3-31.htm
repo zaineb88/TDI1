@@ -1,0 +1,296 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-31.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:24 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-30.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.31</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Ordre des instructions.</font></b>
+      <p><b><font face="Courier New" size="6" color="#800080">Composant visuel
+      et Classe.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="ve3-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<b><span style="font-family: Courier New; background-color: #C0C0C0">Contenu des 
+modules.</span></b></font></p>
+<p><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Dans quel ordre écrire&nbsp; dans un 
+module?</span></b></font> </p>
+<p><font face="Courier New" size="2">Le code Visual Basic est stocké dans des modules 
+(modules de formulaire,modules standard, modules de classe ..), chaque module est dans un fichier 
+ayant&nbsp; l'extension '.vb&quot;. Les projets sont 
+composés de plusieurs fichiers '.vb', lesquels sont compilés pour créer des applications. </font> </p>
+<p><font face="Courier New" size="2">Respecter l'ordre suivant&nbsp;: </font> </p>
+<ol type="1">
+  <li><font face="Courier New" size="2">Instructions <b>Option</b> toujours en 
+  premier.(force des contraintes de déclaration de variables, de conversion de 
+  variables, de comparaison) </font> </li>
+  <li><font face="Courier New" size="2">Instructions <b>Imports</b> (charge des 
+  espaces de nom)</font></li>
+  <li><font face="Courier New" size="2">Les <b>énumérations</b>, les <b>
+  structures 'générales'</b>.</font></li>
+  <li><font face="Courier New" size="2">Instructions <b>Class</b>, <b>Module</b> et <b>Namespace</b>, le cas 
+  échéant </font> </li>
+  <li><font face="Courier New" size="2">En haut de la classe du module&nbsp; les
+  <b>énumérations et structures 'locales'</b>.</font></li>
+  <li><font face="Courier New" size="2">Les <b>Subs</b> et <b>Functions</b>.</font></li>
+</ol>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Exemple1: Un Formulaire.</font></b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Option</b></font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Explicit</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">On</font><font SIZE="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font SIZE="2" color="#008000">'Toujours en premier.</font></font><font SIZE="2" color="#008000"></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Imports</b></font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.AppDomain</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Imports</b></font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+Microsoft.VisualBasic.Conversion</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" COLOR="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Enum</b> Fichier</font></font><font SIZE="2" COLOR="#008000"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Ici une énumération utilisable dans <b>la totalité du programme</b></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; Doc</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; Rtf</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End Enum&nbsp;&nbsp;&nbsp;</font> </p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; </p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>
+<span style="background-color: #C0C0C0">Public</span></b></font></font><font face="Courier New"><b><font SIZE="2" color="#0000FF"><span style="background-color: #C0C0C0">
+</span>
+</font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">Class</span></font></b><font color="#0000FF" face="Courier New"><span style="background-color: #C0C0C0"> 
+Form1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><font SIZE="2" COLOR="#008000">'la classe, le moule du formulaire</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New">
+<span style="background-color: #C0C0C0">
+<font SIZE="2" COLOR="#0000ff">
+Inherits</font></span></font><font SIZE="2"><font face="Courier New"><font color="#0000FF"><span style="background-color: #C0C0C0"> 
+System.Windows.Forms.Form&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><span style="background-color: #C0C0C0">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Dim</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">WithEvents</font><font SIZE="2" color="#0000FF"> 
+m </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #C0C0C0">As</span></font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF"><span style="background-color: #C0C0C0"> 
+PrintDocument1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New">
+<span style="background-color: #C0C0C0">
+<font color="#0000FF">
+#</font></span></font></font><font SIZE="2" COLOR="#0000ff" face="Courier New"><span style="background-color: #C0C0C0">Region</span></font><font SIZE="2"><font face="Courier New"><font color="#0000FF"><span style="background-color: #C0C0C0"> 
+&quot; Code généré par le Concepteur Windows Form&quot;</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New">
+<span style="background-color: #C0C0C0">
+<font SIZE="2" COLOR="#0000ff">
+Public <b>Sructure</b> MaStructure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font SIZE="2" COLOR="#008000">'Structure utilisable dans <b>la Classe uniquement.</b></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+&nbsp;&nbsp;&nbsp; i As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+&nbsp;&nbsp;&nbsp; J As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New">
+<span style="background-color: #C0C0C0">
+<font size="2" color="#0000FF">
+End Structure</font></span><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><span style="background-color: #C0C0C0">
+<font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF"> 
+d
+</font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #C0C0C0">
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #C0C0C0">Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><span style="background-color: #C0C0C0">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Form1_Load(...) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2" color="#0000FF"> 
+Form.load&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></span><font SIZE="2" COLOR="#008000">'Ici une Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+&nbsp;&nbsp;&nbsp; Dim A As 
+integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> </span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+End Sub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="2" color="#0000FF">
+End Class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</span></b></p>
+<p><font face="Courier New" size="2">On remarque de nouveau l'importance de 
+l'endroit où les variables sont déclarées: Dans notre exemple A est 
+accessible uniquement dans Form_Load, alors que d est public. </font></p>
+<p><b><font face="Courier New" size="2">Exemple2: Un module standard Module2.</font></b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Imports</b></font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF"> 
+System.Activator</font></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Enum</b></font></font><font face="Courier New"><font face="Courier New" color="#0000FF"><b>
+</b>MyEnum </font><font SIZE="2" COLOR="#008000">
+&nbsp;'Ici une énumération utilisable dans <b>la totalité du programme</b></font></font><font SIZE="2"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; Toto</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; titi</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End</font></font><font SIZE="2" face="Courier New" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Enum</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Structure</b></font></font><font face="Courier New"><font face="Courier New" color="#0000FF" SIZE="2"> 
+MyStructure </font><font SIZE="2" COLOR="#008000">
+&nbsp;'Ici une structure utilisable dans <b>la totalité du programme</b></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Dim</font><font SIZE="2" color="#0000FF"> 
+i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End</font></font><font SIZE="2" face="Courier New" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Structure</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">
+<span style="background-color: #C0C0C0">Module</span></font></b></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0"> 
+Module2</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #C0C0C0">Sub</span></font></b><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0"> 
+Main()&nbsp;&nbsp;&nbsp; </span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">End</span></font><font SIZE="2" color="#0000FF"><span style="background-color: #C0C0C0">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #C0C0C0">Sub&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #C0C0C0">End</span></font></font><font SIZE="2" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #C0C0C0">Module&nbsp;&nbsp;&nbsp; </span></font></p>
+</font>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On remarque donc que <font color="#0000FF">
+Option</font> et <font color="#0000FF">Imports</font> sous toujours avant
+<font color="#0000FF">Class</font> et <font color="#0000FF">Module</font>.</font></p>
+<p><font face="Courier New" size="2">La position de <font color="#0000FF">Enum</font> 
+et <font color="#0000FF">Structure</font> (avant ou après les mots Class et 
+module) gère leur visibilité. </font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" color="#008000">Si vous entrez les instructions dans un ordre différent, vous risquez de 
+créer des erreurs de compilation.</font></b></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Composant
+visuel et Classe.</span></b></font></p>
+<p><font face="Courier New" size="2">Nous avons vu que pour utiliser un <b>composant
+visuel</b>, un bouton par exemple, il faut aller le chercher dans la boite à
+outils et le poser sur le formulaire (VB créera du code automatiquement pour
+cela).</font> </p>
+<p><img border="0" src="v2005p3.JPG" width="695" height="441"></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Une autre manière de procéder est
+d'utiliser<b> la Classe</b> 'Button' et d'instancier un bouton, puis de
+l'ajouter aux contrôles du formulaire.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="2">Créons
+le bouton.</font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<font color="#0000ff" size="2"><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New">D<font size="2">im
+Button1 As </font><font color="#0000ff" size="2">New</font></font></b><font size="2"><b><font face="Courier New">
+Button</font></b></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">Modifions
+ses propriétés</font></p>
+</font><font color="#0000ff" size="2"><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New"><font color="#0000ff" size="2">Me</font><font size="2">.Button1.Location
+= </font><font color="#0000ff" size="2">New</font></font></b><font size="2"><b><font face="Courier New">
+System.Drawing.Point(56, 144)</font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New" color="#0000ff" size="2">Me</font></b><font size="2"><b><font face="Courier New">.Button1.Name
+= &quot;Button1&quot;</font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New"><font color="#0000ff" size="2">Me</font><font size="2">.Button1.Size
+= </font><font color="#0000ff" size="2">New</font></font></b><font size="2"><b><font face="Courier New">
+System.Drawing.Size(104, 24)</font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New" color="#0000ff" size="2">Me</font></b><font size="2"><b><font face="Courier New">.Button1.TabIndex
+= 0</font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><b><font face="Courier New" color="#0000ff" size="2">Me</font></b><font size="2"><b><font face="Courier New">.Button1.Text
+= &quot;Button1&quot;</font></b></p>
+</font></font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Le
+bouton existe mais il faut l'ajouter&nbsp; à la collection <font color="#0000ff">Controls</font>
+de la fenêtre (Cette collection contient tous les contrôles contenus dans la
+fenêtre):</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" color="#0000ff" size="2">Me.Controls.Add(Button1)</font></b></p>
+<p><font face="Courier New" size="2">Il faudra gérer soi même les évènements
+mais on verra cela plus loin.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-30.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve3-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-31.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:24 GMT -->
+</html>

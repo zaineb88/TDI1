@@ -1,0 +1,181 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.8</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Fonctions,
+      paramètres.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">8</span></font></b><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">-
+Fonctions, Paramètres.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.1
+</font><font face="Courier New" size="2">Quand employer une 'Function' plutôt
+qu'une Sub?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.2
+</font><font face="Courier New" size="2">Créer le squelette d'une Sub nommée
+'Calcul' recevant 2 paramètres: Une String et un Integer (nommés dans la Sub
+'Nom' et 'Id'), paramètres passés 'Par Valeur'.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Comment
+utiliser cette Sub dans une autre&nbsp; Sub.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Expliquer
+ce qu'est un paramètre par valeur?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.3
+</font><font face="Courier New" size="2">Créer une Function nommée 'IsPaire'
+recevant 1 paramètre Integer (nommés dans la Sub 'Nombre'), paramètres passés
+'Par Valeur' et retournant un Boolean qui a la valeur True si nombre est pair.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New" color="#111111"><b>Écrire
+une procédure appelant cette fonction&nbsp; et
+afficher dans une MessageBox &quot;Le nombre est pair&quot; ou &quot;Le nombre
+est impair&quot; suivant le cas.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">8-
+Fonctions, Paramètres.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.1
+</font><font face="Courier New" size="2">Quand employer une 'Function' plutôt
+qu'une Sub?</font></b></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">Quand une
+procédure doit retourner une seule valeur.</font></p>
+<p style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.2
+</font><font face="Courier New" size="2">Créer le squelette d'une Sub nommée
+'Calcul' recevant 2 paramètres: Une String et un Entier (nommés dans la Sub
+'Nom' et 'Id'), paramètres passés 'Par Valeur'.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Sub Calcul
+(ByVal Nom As String, ByVal Id As Integer)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;&nbsp;&nbsp;<font color="#0000FF" size="2" face="Courier New">&nbsp;
+End Sub&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Comment
+utiliser cette Sub dans une autre&nbsp; Sub.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">Calcul
+(&quot;Titi&quot;,2)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">ou</font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">Dim
+n As String= &quot;Titi&quot;</font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">Dim
+i As Integer=2</font></p>
+<p style="margin-top: 6pt"><font size="2" face="Courier New" color="#0000FF">Calcul
+(n,i)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Expliquer
+ce qu'est un paramètre par valeur (ByVal)?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New" color="#111111">C'est
+la valeur qui est envoyée et non la référence(l'adresse en mémoire).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New" color="#111111">Dans
+l'exemple ci dessus c'est &quot;titi&quot; qui est envoyé en premier paramètre
+et pas l'adresse de &quot;titi&quot;. Si dans la Sub je fais
+Nom=&quot;Toto&quot;, dans la procédure appelante, n sera toujours égal à
+&quot;Titi&quot;. Si on avait passé Nom en 'ByRef' n aurait été modifié.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">8.3
+</font><font face="Courier New" size="2">Créer une Function nommée 'IsPaire'
+recevant 1 paramètre Integer (nommés dans la Sub 'Nombre), paramètres passés
+'Par Valeur' et retournant un Boolean qui a la valeur True si nombre est pair.</font></b></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Function</font><font face="Courier New">
+IsPaire(<font COLOR="#0000ff">ByVal</font> Nombre <font COLOR="#0000ff">As</font>
+<font COLOR="#0000ff">Integer</font>) <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Boolean</font></font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">If</font> Nombre <font COLOR="#0000ff">Mod</font>
+(2) = 0 <font COLOR="#0000ff">Then</font></font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">&nbsp;&nbsp; Return</font> <font COLOR="#0000ff">True</font></font></font></p>
+<font SIZE="2">
+<p></font><font face="Courier New" size="2" COLOR="#0000ff">Else</font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">&nbsp;&nbsp; Return</font> <font COLOR="#0000ff">False</font></font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> </font><font face="Courier New" COLOR="#0000ff">If</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Function</font></font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New" color="#111111"><b>Écrire
+une procédure appelant cette fonction en donnant un nombre et
+afficher dans une MessageBox &quot;Le nombre est pair&quot; ou &quot;Le nombre
+est impair&quot; suivant le cas.</b></font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">Private</font><font face="Courier New">
+Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+Handles Button1.Click</font></font></p>
+<p><font size="2"><font face="Courier New" color="#0000FF">If IsPaire(4) Then</font></font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">&nbsp; MsgBox(&quot;le
+nombre est pair&quot;)</font></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Else</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp; MsgBox(&quot;le
+nombre est impair&quot;)</font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">End If</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">End
+Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

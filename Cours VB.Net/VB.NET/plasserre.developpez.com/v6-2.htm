@@ -1,0 +1,317 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net ADO </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.2</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">ADO.NET</font></b></td>
+    <td width="9%" height="76"><a href="v6-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment travailler sur 
+les Base de données en VB.NET? Avec ADO.NET</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Généralités: </font></span>
+</p>
+<p align="left"><font face="Courier New" size="2">Pour avoir accès à partir de 
+VB.NET aux bases de données il faut utiliser ADO.NET.</font></p>
+<p align="left"><font face="Courier New" size="2">ADO veut dire <b>Activex 
+Database Objet</b> .</font></p>
+<p align="left"><font face="Courier New" size="2">C'est la couche d'accès aux 
+bases de données, le SGBD (Système de Gestion de Base de Données) de VB.</font></p>
+<p align="left"><font face="Courier New" size="2">ADO.NET est &quot;.NET&quot; donc <b>managé</b> 
+et géré par le CLR.</font></p>
+<p align="left"><font face="Courier New" size="2"><b>Il est indépendant de la 
+base de donnée</b>: alors que initialement chaque type de gestionnaire de base 
+de données avait ses instructions, sa manière de fonctionner, ADO.NET à un 
+langage unique pour ouvrir, interroger, modifier une base de données quelle que 
+soit la base de données.</font></p>
+<p align="left"><b><font face="Courier New" size="2">Le langage de requête est 
+le SQL.</font></b></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#0000FF" size="4" face="Courier New"><b>
+<span style="background-color: #C0C0C0">Les Managed Providers</span></b><span style="font-weight: 700; background-color: #C0C0C0">&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour avoir accès aux données il faut charger les <b>DRIVERS</b> (ou providers).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Comme d'habitude, il faut:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Charger les références des drivers (les Dll)</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Importer les espaces de nom.</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ainsi on a accès aux objets. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voyons cela:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>OLE DB</b> Managed Provider&nbsp; est 
+fourni dans 'System'; après avoir importé le NameSpace&nbsp; <font color="#0000FF">System.Data.OLEDB</font>, on peut travailler sur des base Access par exemple. </font> </p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>SQL Server</b> Managed Provider est fourni 
+dans 'System'; 
+après avoir importé le NameSpace&nbsp; <font color="#0000FF">System.Data.SqlClient</font>, on peut 
+travailler sur des base SqlServeur. </font> </p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un composant <b>ODBC</b> et un composant <b>
+ORACLE</b> sont disponible sur le site MSDN , il faudra charger la référence de 
+la Dll puis le NameSpace.&nbsp; </font> </p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour travailler sur une base <b>MySQL</b> 
+lisez le très bon didacticiel
+<a href="http://morpheus.developpez.com/MySQLDotNet/">MySQLDotNet</a> (sur 
+developpez.com bien sur);il utilise le Managed Provider
+<a href="http://www.bytefx.com/DotData.aspx">ByteFX</a></font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple, pour travailler sur une base Access, 
+il faudra taper:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Imports</font> </font> 
+<font color="#0000FF" face="Courier New" size="2">System.Data.OLEDB</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p align="left"><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Objets ADO.NET</span></font></b></p>
+<p align="left"><font face="Courier New" size="2">Pour avoir accès aux objets
+ADO (DataSet, DataTable...) il faut avoir importé l'espace de nom <font color="#0000FF">System.Data</font>.</font></p>
+<p align="left"><font face="Courier New" size="2">Il faut disposer d'un objet
+<font color="#0000FF">Connexion<b>
+
+</b></font>pour avoir accès à la base de données, on met dans la propriété
+<font color="#0000FF">ConnectionString </font>les paramètres de la base de données (nom de la base de 
+données, chemin, mot de passe..).</font></p>
+<p align="left"><font face="Courier New" size="2">En fonction de la BD les
+paramètres sont déférents. Un site nommé <a href="http://www.connectionstrings.com/">ConnetionStrings.com</a>
+donne une mine de renseignements pour écrire les paramètres pour une BD.</font></p>
+<p align="left"><font face="Courier New" size="2">Avec la méthode
+<font color="#0000FF">Open</font> 
+on ouvre la base.</font></p>
+<p align="left"><font face="Courier New" size="2">&nbsp;on peut ensuite 
+travailler de 2 manières:</font></p>
+<p align="left"><i><font face="Courier New" size="2">A- On envoie une requête 
+Sql 'SELECT' à la base , on récupère le résultat dans un objet.</font></i></p>
+<ul>
+  <li>
+  <p align="left"><font face="Courier New" size="2">Avec un objet <b>DataReader on 
+  extrait les données en lecture seule</b>: une requête SQL (sur un objet 
+  command) charge le DataReader. c'est rapide; on peut lire 
+  uniquement les données et aller à l'enregistrement suivant. Il travaille en 
+  mode connecté. Pour gérer un DataReader on a besoin d'un objet <b>Command</b>.</font></li>
+  <li>
+  <p align="left"><font face="Courier New" size="2">Avec un objet <b>DataSet on 
+  manipule les données</b>: une requête SQL (sur un objet command) charge le DataSet avec des 
+  enregistrements ou des champs, on travaille sur les lignes et colonnes du 
+  DataSet en local, en mode déconnecté(une fois que le DataSet est chargé, la 
+  connexion à la base de données est libérée). Pour alimenter un DataSet on a 
+  besoin d'un objet <font color="#0000FF">DataAdapter</font>&nbsp; qui fait l'intermédiaire entre la BD et le 
+  DataSet.</font></li>
+</ul>
+  <p align="left"><i><font face="Courier New" size="2">B- On manipule 
+  directement la base. (sans retour de résultats)</font></i><ul>
+  <li>
+  <p align="left"><font face="Courier New" size="2">Avec un objet <b>Command</b> 
+  on peut manipuler directement la BD (UPDATE, INSERT, DELETE CREATE DROP..), on 
+  utilise la propriété&nbsp; ExecuteNonQuery pour cela.</font></li>
+</ul>
+  <p align="left"><font face="Courier New" size="2">Avec la méthodes
+  <font color="#0000FF">Close</font> on ferme la base.</font><p align="left"><font face="Courier New" size="2">Résumons les différents objets 
+nécessaires pour travailler sur une BD:</font></p>
+<p align="center"><font face="Courier New" size="2">&nbsp;<img border="0" src="vado.gif" width="351" height="156"></font></p>
+<p align="left"><font face="Courier New" size="2">Noter bien le sens des 
+flèches:  </font></p>
+<ul>
+  <li>
+<p align="left"><font face="Courier New" size="2">le <b>DataReader</b> est en lecture seule, 
+les données lues dans la BD sont accessibles dans le DataReader. </font></p>
+  </li>
+  <li>
+<p align="left"><font face="Courier New" size="2">le <b>DataSet</b> peut lire et écrire 
+des données dans la BD, il faut un DataAdapter en plus de la connexion.</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Courier New" size="2">l'objet <b>Command</b> peut modifier la BD.</font></p>
+  </li>
+</ul>
+<p align="left"><font face="Courier New" size="2">Ce schéma souligne aussi les 
+objets intermédiaires nécessaires:</font></p>
+<ul>
+  <li>
+<p align="left"><font face="Courier New" size="2">&nbsp;un objet <b>connexion</b> dans tous les cas,</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Courier New" size="2">&nbsp;un objet 
+<b>Command</b> pour le <b>DataReader</b>,</font></p>
+  </li>
+  <li>
+<p align="left"><font face="Courier New" size="2">&nbsp;un objet <b>DataAdapter</b> 
+plus un objet <b>Command</b> pour le <b>DataSet</b> .</font></p>
+  </li>
+</ul>
+<p align="left"><font face="Courier New" size="2">L'objet <b>Command</b> permet 
+d'envoyer des ordres en SQL à la BD et de la modifier, il permet aussi, quand on 
+utilise un DataSet, d'envoyer une requête SELECT en SQL afin de remplir le 
+DataSet avec le résultat de la requête.</font></p>
+<p align="left"><font face="Courier New" size="2">Enfin certains contrôles comme 
+les DataGrid, les ListBox par exemple peuvent afficher des données à partir d'un DataSet. </font></p>
+<p align="left"><font face="Courier New" size="2">Pour mettre à jour la base après 
+modification du DataSet ou de la Grid il faut un objet <b>CommandBuilder</b>.</font></p>
+<p align="left"><font face="Courier New" size="2">Mode connecté ou déconnecté:
+</font></p>
+<ul>
+  <li>
+<p align="left"><font face="Courier New" size="2">le <b>DataReader</b> 
+fonctionne en mode connecté,la connexion entre la BD et le DataReader est 
+ouverte tant que le DataReader fonctionne. </font></p>
+  </li>
+  <li>
+<p align="left"><font face="Courier New" size="2">le <b>DataSet</b> peut 
+travailler en mode déconnecté: on ouvre la connexion, on charge le DataSet, on 
+ferme la connexion (il faut le faire, ce n'est pas automatique), on travaille sur le DataSet, on peut le rouvrir plus tard 
+pour les mises à jour.</font></p>
+  </li>
+</ul>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Remarque: En fonction du 
+provider, <b>le nom des objets change</b>:</font></p>
+<p align="left"><font face="Courier New" size="2">Avec le provider OleDb, après
+<font color="#0000FF">Imports</font> </font>
+<font color="#0000FF" face="Courier New" size="2">System.Data.OleDb</font></p>
+<p align="left"><font face="Courier New" size="2">on utilisera</font><font face="Courier New" size="2" color="#0000FF"> OleDbConnexion, OleDbAdapter...</font></p>
+<p align="left"><font face="Courier New" size="2">Avec le provider SQL, après
+<font color="#0000FF">Imports</font> </font>
+<font color="#0000FF" face="Courier New" size="2">System.Data.SqlClient</font></p>
+<p align="left"><font face="Courier New" size="2">on utilisera 
+ 
+</font><font face="Courier New" size="2" color="#0000FF">SqlConnexion,
+SqlAdapter...</font></p>
+<p align="left"><font face="Courier New" size="2">Un site nommé <a href="http://www.connectionstrings.com/">ConnetionStrings.com</a>
+donne une mine de renseignements pour écrire les paramètres pour une BD.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">A partir de VB 2008 (Framework
+3.5), On peut utiliser&nbsp; <font color="#0000FF">LINQ</font> pour interroger
+une base de données.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Le DataReader</font></b></span></p>
+<p align="left"><font face="Courier New" size="2">Le <font color="#0000FF">
+DataReader</font> permet donc de lire très rapidement une table, enregistrement 
+par enregistrement, du début à la fin.</font></p>
+<p align="left"><font face="Courier New" size="2">Il n'y a pas possibilité 
+d'écrire dans la base.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Le DataSet</font></b></span></p>
+<p align="left"><font face="Courier New" size="2">Le <font color="#0000FF">DataSet</font> a la structure 
+d'une base de données&nbsp; mais en local; il contient:</font></p>
+<p align="left"><font face="Courier New" size="2">Des <font color="#0000FF">
+DataTable</font> qui contiennent des <font color="#0000FF">DataRow</font> et des
+<font color="#0000FF">DataColumn</font>.</font></p>
+<p align="left"><font face="Courier New" size="2">Pour utiliser DataSet, 
+DataTable, DataRow.. il faut importer l'espace de nom Data:</font></p>
+<p align="left"><font face="Courier New" size="2"><font color="#0000FF">Imports</font>
+</font><font color="#0000FF" face="Courier New" size="2">System.Data</font></p>
+<p align="left"><font face="Courier New" size="2">On peut créer un Dataset de 
+toutes pièces, mais la plupart du temps, on charge le DataSet à partir d'une 
+base de données.</font></p>
+<p align="left"><font face="Courier New" size="2">Une requête SQL charge le DataSet, on travaille sur les lignes et colonnes du DataSet en local ( 
+sur des enregistrements ou des champs), en mode déconnecté (une fois que le DataSet est chargé, la 
+connexion à la base de données peut être libérée).</font></p>
+<p align="center"><img border="0" src="vdataset.gif" width="212" height="176"></p>
+<p align="left"><font face="Courier New" size="2">La structure de données du 
+DataSet reflétera automatiquement et exactement celle des données extraites. Si 
+j'extrais 2 colonnes de données avec l'instruction Sql fournis à l'objet 
+Command, le DataSet aura une table de 2 colonnes avec les données extraites.</font></p>
+<p align="left"><font face="Courier New" size="2">Exemple :</font></p>
+<p align="left"><font face="Courier New" size="2">Avec ADO.NET je lance une 
+requête SQL demandant toutes les fiches de la table 'nom' dont le champ 'prénom' 
+est 'Philippe', je récupère un DataSet local contenant tous les fiches (Le 
+DataColumn &quot;Prénom&quot; ne contient que des 'Philippe'). Je peux modifier en local 
+le DataSet, (modifier une date de naissance par exemple) et mettre à jour 
+automatiquement la base de données distante. </font></p>
+<p align="left">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:40 GMT -->
+</html>

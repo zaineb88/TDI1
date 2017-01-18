@@ -1,0 +1,365 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net base access</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="60">
+  <tr>
+    <td width="27%" height="60"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="60" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="60">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="60">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.7</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Créer une base de données. Ajouter une 
+    table.</font></b></td>
+    <td width="9%" height="76"><a href="v6-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">Comment créer une base de 
+données</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment ajouter une 
+table?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour <b>consulter une base de données</b> vous 
+pouvez utiliser L'explorateur de serveurs.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour accéder à l'Explorateur de serveurs, 
+sélectionnez Explorateur de serveurs dans le menu Affichage et regarder la doc.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="5" color="#0000FF">Créer une base de données:
+</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u><b>Base Access.</b></u></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec un&nbsp; Provider OleDB: (</font><font color="#0000ff" face="Courier New" size="2">System.Data.OLEDB</font><font face="Courier New" size="2">)
+<b>impossible</b> de créer une BD Access par du code.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On rappelle qu'on peut créer rapidement une BD 
+Access 'à la main':</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Sur le fond d'écran: Bouton 
+droit-&gt;Nouveau-&gt;Application Microsoft Access</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on veut absolument créer une BD Access par 
+code, il faut passer par <b>DAO</b>.</font></p>
+<blockquote>
+  <font SIZE="2">
+  <p><font face="Courier New">Référence: ajouter le composant COM 'Microsoft DAO 
+  3.6 Library 5'</font></p>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Imports</font><font SIZE="2"><font face="Courier New"> 
+  DAO</font></p>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Imports</font><font SIZE="2"><font face="Courier New"> 
+  DAO.LanguageConstants</font></p>
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+  result </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Boolean</font><font SIZE="2"> = </font></font>
+  <font SIZE="2" COLOR="#0000ff"><font face="Courier New">False</font></p>
+  </font><font SIZE="2">
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+  dbe </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New"> 
+  DBEngine</font></p>
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+  db </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New"> 
+  Database</font></p>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Try</p>
+  </font><font SIZE="2">
+  <p><font face="Courier New">db = dbe.CreateDatabase(&quot;c:\test.mdb&quot;, 
+  dbLangGeneral)</font></p>
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2"> (db </font>
+  <font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Nothing</font><font SIZE="2">) </font>
+  <font SIZE="2" COLOR="#0000ff">Then</font><font SIZE="2"> result = </font>
+  </font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">True</font></p>
+  </font><font SIZE="2">
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Catch</font><font SIZE="2"> 
+  ex </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New"> 
+  Exception : MsgBox(ex.Message)</font></p>
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Finally</font><font SIZE="2"> 
+  : </font><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2"> (db </font>
+  <font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Nothing</font><font SIZE="2">) </font>
+  <font SIZE="2" COLOR="#0000ff">Then</font></font><font SIZE="2"><font face="Courier New"> 
+  db.Close()</font></p>
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Try</font></font></p>
+  <p><font size="2" face="Courier New">Ensuite, on peut travailler en OleDB.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(merci les forums de developpez.com)</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u><b><font face="Courier New">SqlServer.</font></b></u></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec un&nbsp; Provider SqlServer: (</font><font color="#0000ff" face="Courier New" size="2">System.Data.SqlClient</font><font face="Courier New" size="2">)
+<b>on peut</b> créer une BD Sql Server par du code.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Protected</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">Const</font><font SIZE="2" color="#0000FF"> 
+  SQL_CONNECTION_STRING </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  = _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;Server=localhost;&quot; &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;DataBase=;&quot; &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;Integrated Security=SSPI&quot;</font></p>
+  </font>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+  <font SIZE="2" COLOR="#0000ff">
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+  strSQL </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  = _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;IF EXISTS (&quot; &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;SELECT * &quot; &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;FROM master..sysdatabases &quot; &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;WHERE Name = 'HowToDemo')&quot; &amp; vbCrLf 
+  &amp; _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;DROP DATABASE HowToDemo&quot; &amp; vbCrLf &amp; 
+  _</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&quot;CREATE DATABASE test&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+  northwindConnection </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  SqlConnection(connectionString)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> cmd
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  SqlCommand(strSQL, northwindConnection)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">northwindConnection.Open()</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">cmd.ExecuteNonQuery()</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">northwindConnection.Close()</font></p>
+</blockquote>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Code non testé.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="5" color="#0000FF">Ajouter une table à une BD 
+existante: </font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans un Dataset, on peut ajouter des <b>
+données</b> puis par un update mettre à jour la base de données.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi&nbsp;ajouter des tables en local dans 
+le Dataset,&nbsp; mais&nbsp; updater la base ne rajoute pas les tables dans la 
+base.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Comment donc ajouter une table à la base?</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#FF0000" face="Courier New" size="2">En fait pour ajouter une table à la base il 
+faut le faire avec l'objet Command et sa méthode <b>ExecuteNoQuery</b> et&nbsp;une 
+requête <b>SQL</b>:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" color="#111111">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" color="#111111">On crée une Connexion et un objet</font><font SIZE="2" COLOR="#0000ff"> 
+Command</font><font SIZE="2" color="#111111">, on indique à la propriété</font><font SIZE="2" COLOR="#0000ff"> 
+TypeCommand </font><font SIZE="2" color="#111111">que l'on envoie du texte (pas 
+une procédure stockée), on prépare le texte SQL avec</font><font SIZE="2" COLOR="#0000ff"> 
+CREATE </font><font SIZE="2" color="#111111">puis on exécute avec</font><font SIZE="2" COLOR="#0000ff"> 
+ExecuteNoQuery</font><font SIZE="2" color="#111111">.</font></font><font SIZE="2" COLOR="#0000ff"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" color="#111111">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple :</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il existe 
+une BD Acces nommée </font><font SIZE="2" color="#0000FF">NOM.MDB</font><font SIZE="2" color="#111111"> 
+, je veux y ajouter une Table nommée <b>PARENT</b> avec 3 champs CLI_ID&nbsp; CLI_NOM 
+CLI_PRENOM:</font></font><font SIZE="2" color="#111111"></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Data</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Data.OleDb</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans la zone déclaration de la fenêtre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'Déclarer la connexion</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+ObjetConnection </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration l'Objet Commande
+</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetCommand </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommand</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'Paramètres de connexion à la 
+DB</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+strConn </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans une routine&nbsp; Button1_Click créer une 
+table avec 3 champs dans la base de données.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button1.Click</font></p>
+</font>
+<div>
+  <font size="2">&nbsp;<p><font color="#0000FF" face="Courier New">strConn = 
+  &quot;Provider=Microsoft.Jet.OLEDB.4.0;&quot; &amp; &quot;Data Source= c:nom.mdb;&quot;</font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetConnection = </font></font>
+  <font color="#0000ff" size="2" face="Courier New">New</font><font size="2"><font color="#0000FF" face="Courier New"> 
+  OleDbConnection</font></p>
+  <p></font><font color="#008000" size="2" face="Courier New">'Donner à la 
+  propriété ConnectionString les paramètres de connexion</p>
+  </font><font size="2">
+  <p><font color="#0000FF" face="Courier New">ObjetConnection.ConnectionString = 
+  strConn</font></p>
+  <p></font><font color="#008000" size="2" face="Courier New">'Ouvrir la 
+  connexion</p>
+  </font><font size="2">
+  <p><font color="#0000FF" face="Courier New">ObjetConnection.Open()</font></p>
+  <p></font><font color="#008000" size="2" face="Courier New">'Instancier un 
+  objet Commande</p>
+  </font><font size="2" color="#0000FF">
+  <p><font face="Courier New">ObjetCommand = </font></font>
+  <font color="#0000ff" size="2" face="Courier New">New</font><font size="2"><font color="#0000FF" face="Courier New"> 
+  OleDbCommand</font></p>
+  <p><font face="Courier New" size="2" color="#008000">'Lier Commande et 
+  Connexion</font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetCommand.Connection = 
+  ObjetConnection</font></p>
+  <p><font face="Courier New" size="2" color="#008000">'Indiquer le type de 
+  commande</font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetCommand.CommandType = 
+  CommandType.Text</font></p>
+  <p><font face="Courier New" size="2" color="#008000">'Donner le texte de la 
+  commande SQL</font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetCommand.CommandText = &quot;CREATE 
+  TABLE PARENT (CLI_ID INTEGER NOT NULL PRIMARY KEY, CLI_NOM CHAR(32) NOT NULL, 
+  CLI_PRENOM VARCHAR(32))&quot;</font></p>
+  <p><font face="Courier New" size="2" color="#008000">'Ici on crée une table 
+  PARENT avec 3 champs ; CLI_ID est un entier non nul qui sert de clé primaire, CLI_NOM&nbsp; CLI_PRENOM sont des chaînes de 32 caractères.</font></p>
+  <p><font face="Courier New" size="2" color="#008000">'on exécute la commande
+  </font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetCommand.ExecuteNonQuery()</font></p>
+  <p><font color="#008000" face="Courier New">'Fermer la connexion</font></p>
+  <p><font color="#0000FF" face="Courier New">ObjetConnection.Close()</font></p>
+  <p><font face="Courier New" color="#0000FF">End Sub</font></font></div>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+</html>

@@ -1,0 +1,415 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:12 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET boutons  button wpf repeatbutton </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="53%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="13%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.23.11</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">WPF: Les Boutons.</font></b></td>
+    <td width="14%" height="76"><a href="v3-23.12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#800080"><span style="font-weight: 700">Ils sont omniprésent 
+dans les 
+'formulaires'.</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5"><i>A-
+les 'Button':</i></font></span></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">Créer
+un bouton WPF dans le designer:</span></b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Il
+y a le '<b>designer</b>' en haut qui permet de dessiner l'interface que verra
+l'utilisateur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"> Le designer génère
+le code<b> XAML</b>&nbsp; en bas qui
+décrit l'interface en XML.&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+ajouter un bouton, on clique sur le bouton dans
+les outils à gauche puis sur le formulaire, on appuie (bouton gauche de la
+souris), on déplace puis on lâche. Le bouton apparaît.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vb2008wpfbt.JPG" width="755" height="522"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En
+bas à droite, on a la fenêtre de propriétés du bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Le
+nom du contrôle est en haut, après 'Name'.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Dans
+le designer, la propriété '<b>Content</b>' contient le texte à afficher sur
+le bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+on double-clique sur un bouton, par exemple, on se retrouve dans la procédure
+évènement correspondante qui est <b> Button1_Click:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vb2008proc.JPG" width="735" height="200"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+se rend compte que les évènements là aussi ne sont pas les mêmes que pour
+les Windows Forms.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Créons
+un bouton avec du code XAML:</font></b></span></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Il
+faut taper dans la fenêtre XAML:</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;
+</font>Cela crée un bouton sur lequel est affiché 'Ok'. Il apparaît en haut.</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Faisons
+plus complet:</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;39&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;40,51,118,0&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;Button1&quot;</font><font COLOR="#ff0000">
+VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot; </font><font COLOR="#ff0000">
+Click</font><font COLOR="#0000ff">=&quot;OnClick5&quot;&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font></font></p>
+<blockquote>
+  <blockquote>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Voyons
+le détail de cette ligne:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font>
+crée un bouton.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Name</font><font COLOR="#0000ff">=&quot;Button1&quot;&nbsp;
+</font>indique le nom du contrôle dans le designer.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+peut indiquer sur quoi le contrôle est aligné:</font>
+</p>
+<blockquote>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;
+    </font>valeur possible:<font COLOR="#0000ff">Top, Bottom, Center</font><font COLOR="#ff0000">&nbsp;</font></font>
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">HorizontalAlignment</font><font COLOR="#0000ff">=&quot;Left&quot;</font><font COLOR="#ff0000">&nbsp;</font></font>
+</p>
+</blockquote>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#FF0000">Margin</font>
+définit l'espace entre les contrôles.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Si <font COLOR="#ff0000">VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;</font></font>
+<font face="Courier New" size="2">voici un exemple de margin.<font COLOR="#ff0000">&nbsp;</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfmargin.JPG" width="317" height="210">
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Width</font><font COLOR="#0000ff">=&quot;50&quot;</font><font COLOR="#ff0000">
+    Height</font><font COLOR="#0000ff">=&quot;30&quot;</font> indiquent les
+    dimensions du bouton (largeur, hauteur).</font>
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+    Name</font><font COLOR="#0000ff">=&quot;Button1&quot;&gt;</font><font color="#a31515">Ok</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;&nbsp;&nbsp;
+    </font>'Ok' correspond au texte inscrit sur le bouton.</font>
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+    aurait pu utiliser 'content et écrire </font><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+    Name</font><font COLOR="#0000ff">=&quot;Button1&quot; </font><font color="#ff0000">Content</font></font><font COLOR="#0000ff">=&quot;Ok&quot;</font><font face="Courier New" size="2"><font COLOR="#0000ff">&gt;</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;&nbsp;
+    </font></font>
+</p>
+    <p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Click</font><font COLOR="#0000ff">=&quot;OnClick5&quot;&nbsp;
+    </font>indique que l'action de cliquer sur le bouton déclenchera la
+    procédure OnClick5.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Cela
+crée automatiquement, dans le code VB, la routine suivante:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><span style="COLOR: blue">Sub</span>
+OnClick5(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span>
+<span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span>
+e <span style="COLOR: blue">As</span>  RoutedEventArgs)</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><span style="COLOR: blue">End</span>
+<span style="COLOR: blue">Sub</span></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<blockquote>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><font color="#0000FF">sender</font>
+    est l'objet qui a déclenché l'évènement.</font>
+</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><font color="#0000FF">e</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    contient les arguments de l'évènement, remarquons que <font color="#0000FF"> e</font> est de type
+    RoutedEventArgs (et pas EventArgs comme dans les Windows Forms).</font>
+</p>
+    <p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">Dans
+VB si on n'ajoute pas 'Click=...' dans le code XAML la routine <font color="#0000FF"> Button1_Click</font> est
+automatiquement créée.</font>
+</p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">On
+peut ajouter du code dans la routine, pour modifier l'aspect du bouton par
+exemple:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><span style="COLOR: blue">Sub</span>
+OnClick5(<span style="COLOR: blue">ByVal</span> sender <span style="COLOR: blue">As</span>
+<span style="COLOR: blue">Object</span>, <span style="COLOR: blue">ByVal</span>
+e <span style="COLOR: blue">As</span>  RoutedEventArgs)</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font size="2" face="Courier New">&nbsp;<font COLOR="#0000ff">Button1</font>.FontSize
+= 16</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font size="2" face="Courier New">&nbsp;<font COLOR="#0000ff">Button1</font>.Content
+= <span style="COLOR: maroon">&quot;Ok Ok..&quot;</span> </font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;<font COLOR="#0000ff">Button1</font>.Background
+= Brushes.Red</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><span style="COLOR: blue">End</span>
+<span style="COLOR: blue">Sub</span></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font size="2" face="Courier New">Voici
+le bouton de départ et le bouton quand on a cliqué dessus.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vb2008wpfbt2.JPG" width="217" height="48">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+<font color="#111111"><b> mettre une image dans un bouton</b></font>,
+pas de propriété 'Image'!! il faut avoir le fichier image et ajouter une
+balise Image:</font>
+</p>
+<p><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;38&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;94,22,14,0&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;Button2&quot;</font><font COLOR="#ff0000">
+VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;
+&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Image</font><font COLOR="#ff0000">
+Source</font><font COLOR="#0000ff">=&quot;oktransp.GIF&quot;&gt;&lt;/</font><font COLOR="#a31515">Image</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p></font><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p><font face="Courier New" size="2">Dans ce cas, pas de texte
+sur le bouton en même temps qu'une image: content=&quot;ok&quot; est refusé
+car content ne peut contenir d'un objet et il y a déjà une image. Pour mettre
+un texte et une image dans le bouton, il faut mettre un conteneur comme une grid
+dans le bouton puis mettre dans les cellules de la grid le texte et l'image.</font></p>
+<p><font face="Courier New" size="2">On a choisit un fichier GIF avec un fond
+'transparent' ce qui permet de ne pas voir le fond de l'image.&nbsp;</font></p>
+<p style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwpfbtimage.JPG" width="79" height="43">
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>Avec
+Expression Blend on peut créer des boutons d'aspect plus complexe </b>avec par
+exemple un gradient de couleur, le code Xaml est beaucoup plus complexe. Exemple
+correspondant au bouton situé en haut de la page:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font COLOR="#a31515">Button</font><font COLOR="#ff0000">
+HorizontalAlignment</font><font COLOR="#0000ff">=&quot;Left&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;25,47,0,0&quot;</font><font COLOR="#ff0000">
+VerticalAlignment</font><font COLOR="#0000ff">=&quot;Top&quot;</font><font COLOR="#ff0000">
+Width</font><font COLOR="#0000ff">=&quot;159&quot;</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;47&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;Button1&quot;</font><font COLOR="#ff0000">
+RenderTransformOrigin</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.5,0.5&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button.Background</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">LinearGradientBrush</font><font COLOR="#ff0000">
+EndPoint</font><font COLOR="#0000ff">=&quot;0.5,1&quot;</font><font COLOR="#ff0000">
+StartPoint</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.5,0&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;#FFFFFFFF&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;#FFF0E5E3&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.505&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;#FFC6C5D7&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">LinearGradientBrush</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button.Background</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button.RenderTransform</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">TransformGroup</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ScaleTransform</font><font COLOR="#ff0000">
+ScaleX</font><font COLOR="#0000ff">=&quot;1&quot;</font><font COLOR="#ff0000">
+ScaleY</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">SkewTransform</font><font COLOR="#ff0000">
+AngleX</font><font COLOR="#0000ff">=&quot;0&quot;</font><font COLOR="#ff0000">
+AngleY</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RotateTransform</font><font COLOR="#ff0000">
+Angle</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">TranslateTransform</font><font COLOR="#ff0000">
+X</font><font COLOR="#0000ff">=&quot;0&quot;</font><font COLOR="#ff0000"> Y</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0&quot;/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">TransformGroup</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button.RenderTransform</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Créons
+un bouton avec du code VB:</font></b></span>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New">
+myButton <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> Button&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Création du bouton</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">myButton.Content
+= </font><font face="Courier New" COLOR="#a31515">&quot;ok&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" color="#008000">'Afficher 'Ok' dans le bouton</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.Background
+= Brushes.AliceBlue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#008000">'Fond
+en bleu</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">grid.Children.Add(myButton)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Ajouter le bouton à la grid</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">AddHandler</font>
+myButton.Click, <font COLOR="#0000ff">AddressOf</font> click&nbsp;&nbsp;&nbsp; <font color="#008000">'Indiquer
+que le click sur le bouton</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">&nbsp;&nbsp;&nbsp;<font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'doit exécuter la Sub nommée 'Click'</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">On remarque
+que comme on crée par code, il faut soit même écrire la gestion des
+évènements.&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Quand on
+crée le bouton en mode designer, et que l'on doubble-clicke sur le bouton, la
+routine myButton_Click est automatiquement affichée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4" color="#0000FF" face="Courier New">
+<span style="font-weight: 700; font-style: italic; background-color: #C0C0C0">
+<i>
+Utiliser les évènements:</i></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">L’évènement principalement utilisé est</font></span><font size="2"><span style="font-family: Courier New; color: windowtext">
+<b>Click()</b>&nbsp;: quand l’utilisateur clique sur le bouton la procédure </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> Button1_Click(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.Windows.RoutedEventArgs) <font COLOR="#0000ff">Handles</font>
+Button2.Click</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub</font></font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: windowtext">est
+exécutée.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Cette procédure contient 
+le code qui doit être exécuté lorsque l'utilisateur clique sur le bouton.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le bouton peut être sélectionné grâce à un clic de souris, à la touche ENTRÉE ou 
+à la BARRE d'espacement si le bouton a le focus.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<br>
+&nbsp;</font></p>
+<p style="margin-top: 6pt"><span style="font-weight: 700; font-style: italic; background-color: #C0C0C0"><font color="#0000FF" size="5" face="Courier New"><i>B-
+Les 'RepeatButton':</i></font></span></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">C'est comme un
+bouton mais quand on click dessus et qu'on tient le bouton gauche appuyé, il déclenche l'évènement click plusieurs
+fois.</font></p>
+<p style="margin-top: 6pt">
+<font color="#0000FF"><font face="Courier New" size="2">&lt;RepeatButton Width=&quot;100&quot;
+DockPanel.Dock=&quot;Top&quot; Delay=&quot;500&quot; Interval=&quot;100&quot;
+Click=&quot;Increase&quot;&gt;&nbsp; &lt;/RepeatButton&gt;</font></font></p>
+<p style="margin-top: 6pt">
+<font face="Courier New" size="2"><span style="color: blue">Delay </span>indique
+à quel moment démarrer l'évènement Click.</font></p>
+<p style="margin-top: 6pt">
+<font face="Courier New" size="2"><span style="color: blue">Interval </span>indique
+l'intervalle entre chaque déclenchement.</font></p>
+<p style="margin-top: 6pt">
+<font face="Courier New" size="2"><font color="#0000FF">Click=</font> indique la
+sub évènement déclenchée par le Click.</font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">Exemple de la
+routine évènement qui affiche le nombre d'évènement dans un champ text.</font></p>
+<p style="margin-top: 6pt">
+<font color="#0000FF"><font face="Courier New" size="2">Sub Increase(ByVal sender
+As Object, ByVal
+e As RoutedEventArgs)&nbsp;</font></font></p>
+<p style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Num = CInt(valueText.Text)</font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;
+valueText.Text = ((Num +
+1).ToString())</font></p>
+<p style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext">&nbsp;</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-23.12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:12 GMT -->
+</html>

@@ -1,0 +1,1065 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:58 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET récursivité </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">1.15</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Récursivité.</font></b></td>
+    <td width="14%" height="76"><a href="v1-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p><font color="#800080" face="Courier New" size="2">La récursivité c'est quoi?</font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Définition:</span></font></b></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Exemple trouvé sur
+<a href="http://developpeur.journaldunet.com/tutoriel/theo/030509theo_recursivite1a.shtml">
+developpeur.journaldunet.com </a>:</font></p>
+<p align="center"><img border="0" src="vrecur.GIF" width="176" height="169"></p>
+<p><i><font size="2" face="Courier New">&quot;C'est l'histoire d'un petit garçon qui ne voulait pas 
+dormir et dont la mère lui raconte l'histoire de la petite grenouille qui ne 
+voulait pas dormir et dont la mère lui raconte l'histoire de l'ourson qui ne 
+voulait pas dormir et dont la mère lui raconte l'histoire du bébé écureuil qui 
+s'est endormi, et l'ourson s'endormi, et la petite grenouille s'endormi, et le 
+petit garçon s'endormi.&quot;</font></i></p>
+<p><font face="Courier New" size="2"><br>
+Cette histoire, permet de mieux voir ce qui se 
+produit lors de la récursivité: la procédure (le petit qui ne dort pas et à qui 
+on raconte une histoire) <b>appelle, la même procédure </b>(le petit qui ne dort pas et 
+à qui on raconte une histoire) qui appelle la même procédure..... on passe au 
+&quot;niveau&quot; suivant puis au suivant tant qu'on n'a pas atteint la condition d'arrêt 
+(ici, l'endormissement). Celle-ci atteinte, la récursion se termine pour les 
+autres niveaux en sens inverse en remontant.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2" color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Une procédure est 
+récursive si elle peut s'appeler elle même.</font></b></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">VB accepte les procédures récursives:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub Calcul()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Calcul()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><b><font face="Courier New" size="2" color="#008000">&nbsp;</font></b></p>
+<p><font face="Courier New" size="2">On voit ici que la procédure Calcul() 
+s'appelle elle même: la ligne centrale appelle de nouveau la procédure Calcul() 
+avec nouveaux paramètres, nouvelles variables locales, à la sortie de la 
+procédure (après End Sub), retour à la 'version' précédente de la procédure 
+Calcul() ou on retrouve les variables de la précédente version.&nbsp; </font></p>
+<p><font size="2" face="Courier New">Une procédure <b>non récursive</b> appelle, elle, d'autres 
+procédures.</font></p>
+<p><font face="Courier New" size="2"><b>Pourquoi utiliser la récursivité?</b></font></p>
+<p><font face="Courier New" size="2" color="#FF0000">Une procédure récursive 
+découpe le problème en morceaux plus petits et s'appelle elle même pour résoudre 
+chacun des plus petits morceaux, elle résout une petite partie du problème elle 
+même.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub Calcul(Gros)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If.. </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Résout petit problème</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Découpe</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Calcul(Petit)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font size="2" face="Courier New">Ici 'Résout petit problème' s'appelle <b>le point terminal</b> 
+ou le <b>point d'arrêt</b>, c'est la branche d'une condition&nbsp; qui 
+n'appelle pas de nouveau la fonction Calcul(). C'est indispensable.</font></p>
+<p><font size="2" face="Courier New">Si on n'est pas dans le cas du point d'arrêt,
+la procédure découpe le problème 
+en plus petit morceaux et pour chaque morceau on appelle de nouveau le procédure:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub Calcul(Gros)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If.. </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Découpe</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Calcul(Petit)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font size="2" face="Courier New">A un moment donné, la condition n'est pas remplie, cela 
+correspond au point terminal.</font></p>
+<p><b><font face="Courier New" size="2">On se rend compte qu'une bouche For Next 
+peut être transformée en procédure récursive:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Exemple :</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Créons une procédure qui ajoute N éléments par ordre décroissant 
+(ajoute l'élément N puis N-1 puis ... 2 puis 1) </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">On l'appelle avec Calcul(10) par exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Avec For:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Function Calcul(N As Integer)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Dim total 
+As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; For i= N to 
+1 Step-1 </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+total=total + i </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; Next 
+i </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Calcul=total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Avec la récursivité:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Function Calcul(N As Integer)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;Dim 
+total As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; If 
+N&gt;0 Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+total= N+ Calcul (N-1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; End 
+If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Calcul= 
+total</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Fonction</font></p>
+<p><font size="2" face="Courier New">On l'appelle avec Calcul(10)</font></p>
+<p><b><font size="2" face="Courier New">Mais la récursivité ne sert pas seulement à cela, elle sert 
+à résoudre aussi des problèmes qui seraient extrêmement complexes en 
+programmation non récursive.</font></b></p>
+<p>&nbsp;</p>
+<p><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4">Règles fondamentales d'une 
+fonction récursive:</font></span></b></p>
+<p><font face="Courier New" color="#FF0000" size="3">1-La récursivité doit 
+s'arrêter à un moment donné.</font></p>
+<p><font size="2" face="Courier New"><b>Il doit y avoir un point terminal </b>(ou point d'arrêt)</font></p>
+<p><font face="Courier New" size="2">Il doit y avoir dans la fonction récursive, 
+une expression conditionnelle dont au moins un des cas conduit à une expression 
+évaluable.</font></p>
+<p><font face="Courier New" size="2">Il doit donc y avoir<b> un chemin non 
+récursif </b>(chemin ou la fonction ne s'appelle pas de nouveau).</font></p>
+<p><font face="Courier New" size="2">Il doit y avoir un test qui survient 
+obligatoirement et qui arrête le fonctionnement récursif sinon la fonction 
+tourne sans fin (ou du moins, elle plante quand la pile est pleine). </font></p>
+<p><font face="Courier New" size="2">Dans notre exemple 1, quand n=1 la 
+récursivité s'arrête.</font></p>
+<p><font face="Courier New" size="2">Dans notre exemple 2, quand il n'y a plus de 
+parenthèse, on n'appelle plus la fonction Calcul, on fait le calcul simple et on 
+sort de la fonction ce qui la fait 'remonter'.</font></p>
+<p><font color="#FF0000" face="Courier New" size="3">2- A aucun moment les paramètres appelant de 
+nouveau la fonction doivent être les mêmes que l'appel précédent.</font></p>
+<p><font size="2" face="Courier New">Sinon cela tournera indéfiniment.</font></p>
+<p><font face="Courier New" color="#FF0000" size="3">3-Le nombre d'appel 
+récursif ne doit pas être très grand.</font></p>
+<p><font face="Courier New" size="2">Sous peine de 'StackOverflow': la pile des
+appels qui stocke les adresses de retour de chaque appel récursif est pleine,
+elle dépassent ses capacités.</font></p>
+<p><font face="Courier New" size="2">Certains ajoute dans le code de la fonction 
+récursive '<b>un compteur de sécurité</b>':</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub Calcul(ByRef Compteur As 
+Long)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If Compteur&gt; LIMITE Then&nbsp; 
+Exit Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">Compteur= Compteur+1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Calcul(Compteur)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font face="Courier New" size="2">Noter que le compteur est un paramètre 
+ByRef, ce qui permet de toujours incrémenter la même variable.</font></p>
+<p><font face="Courier New" size="2">Voir exemple sur les fractales.</font></p>
+<p><font face="Courier New" color="#FF0000" size="3">4-La fonction récursive ne 
+doit pas déclarer un grand nombre de variables ou d'objets.</font></p>
+<p><font face="Courier New" size="2" color="#FF0000">&nbsp;</font><font face="Courier New" size="2">Sous peine d'occuper 
+une place&nbsp; trop importante en mémoire.</font></p>
+<p><font face="Courier New" color="#FF0000" size="3">5-Limiter les fonctions 
+récursives à une seule procédure, éviter plusieurs fonctions récursives 
+imbriquées.</font></p>
+<p><font face="Courier New" size="2">Sinon cela devient vite trop complexe.</font></p>
+<p><font color="#FF0000" face="Courier New" size="3">6- Chaque fois qu'elle est appelée de 
+manière récursive (par elle-même, donc), un ou plusieurs des arguments qui lui 
+sont transmis doivent se rapprocher de la condition d'arrêt.</font></p>
+<p><font size="2" face="Courier New">Sinon il n'y aura pas d'arrêt.</font></p>
+<p><font size="2" face="Courier New"><br>
+</font><font color="#FF0000" face="Courier New" size="3">7- La complexité du problème doit être réduite à chaque 
+nouvel appel récursif.</font></p>
+<p><font color="#FF0000" face="Courier New" size="3">8- Ne peut -on pas faire
+plus simple avec une boucle For Next?</font></p>
+<p><font face="Courier New" size="2">Parfois une boucle simple 
+remplace avantageusement une fonction récursive. Dans ce cas utiliser la 
+boucle!!</font></p>
+<p><font face="Courier New" size="2">C'est le cas de la fonction factorielle!!</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Exemple 0: Inversion de chaîne</span></font></b></p>
+<p><font face="Courier New" size="2">Soit une chaîne de caractères, on veut
+une fonction qui inverse cette chaîne: dernier caractère en premier, avant
+dernier en second...</font></p>
+<p><font face="Courier New" size="2">Exemple: &quot;abcd&quot; retournera &quot;dcba&quot;</font></p>
+<p><font face="Courier New" size="2">Principe de la fonction 'inverse'
+récursive:</font></p>
+<p><font face="Courier New" size="2">La fonction 'inverse' met le dernier caractère au début et
+appelle la fonction 'inverse' avec comme paramètre la chaîne moins le dernier
+caractère.</font></p>
+<p><font face="Courier New" size="2">Exemple &quot;abcd&quot;, on met
+&quot;d&quot; au début et rappelle la fonction inverse avec comme paramètre &quot;abc&quot;</font></p>
+<p><font face="Courier New" size="2">Point d'arrêt: si la chaîne est vide on
+retourne une chaîne vide.</font></p>
+<p><font face="Courier New" size="2">&nbsp;</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Function</font><font face="Courier New">
+inverse(<font COLOR="#0000ff">ByVal</font> st <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">String</font>)
+<font COLOR="#0000ff">As</font> </font><font face="Courier New" COLOR="#0000ff">String</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">If</font> st = <font COLOR="#a31515">&quot;&quot;</font>
+<font COLOR="#0000ff">Then</font></font></font></p>
+<p><font size="2"><font face="Courier New">&nbsp;&nbsp; inverse = </font><font face="Courier New" COLOR="#a31515">&quot;&quot;</font></font></p>
+<font SIZE="2">
+<p></font><font face="Courier New" size="2" COLOR="#0000ff">Else</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">&nbsp;&nbsp; inverse = st.Substring(st.Length()
+- 1, 1) + inverse(st.Substring(0, st.Length() - 1))</font></p>
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> </font><font face="Courier New" COLOR="#0000ff">If</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Function</font></font></p>
+<p></font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Exemple 1: calcul de 'Factorielle'.</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<p>On rappelle que <b>N!</b> (factorielle N)= 1*2*3*...*(N-2)*(N-1)*N</p>
+<p>Exemple Factorielle 3 =1*2*3 </p>
+<p><font color="#0000FF">Dim R As Long</font></p>
+<p><font color="#0000FF">R=Factorielle(3)&nbsp;&nbsp;&nbsp; </font>'retournera 6</p>
+<p>Cette fonction n'est pas fournie par VB, créons <b>une fonction Factorielle 
+SANS récursivité</b>:</p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Function 
+Factorielle (ByVal N as Long) As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Dim i As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Resultat=1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+For i= 1 to N</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Resultat=i* Resultat</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Next i</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Return Resultat</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">end Function</font></span></p>
+<p>Cela crée une fonction recevant le paramètre N et retournant un long.</p>
+<p>La boucle effectue bien 1*2*3...*N-1*N.</p>
+<p><span style="font-weight: 700">Factorielle avec 'Récursivité':</span>&nbsp;&nbsp;&nbsp;
+</font></p>
+<p><font face="Courier New" size="2">Une autre manière de calculer une 
+factorielle est d'utiliser la <b>récursivité</b>.</font></p>
+<p><font face="Courier New" size="2">Comment faire?</font></p>
+<p><font face="Courier New" size="2">On sait que N!= N * (N-1) * (N-2).... 3 * 2 
+* 1</font></p>
+<p><font face="Courier New" size="2">on remarque donc que&nbsp; Factorielle
+<font color="#0000FF">N!= N * Factorielle(N-1)</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">N!= N*(N-1)!</font>&nbsp;&nbsp;&nbsp; 
+:&nbsp; en sachant que <font color="#0000FF">1!=1</font></font></p>
+<p><font face="Courier New" size="2">Créons la fonction:</font></p>
+<p><b><font face="Courier New" size="2">Si N=1 la fonction retourne 1 sinon elle 
+retourne N* factorielle(N-1)</font></b></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Function 
+Factorielle (ByVal N as Long) As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+If N=1 then</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return 1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Else</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return N* Factorielle(N-1)</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+End If</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">end Function</font></span></p>
+</font>
+<p><font face="Courier New" size="2">Dans la fonction Factorielle on appelle la 
+fonction Factorielle, c'est bien récursif.</font></p>
+<p><font face="Courier New" size="2">Pour N=4:</font></p>
+<p><font face="Courier New" size="2">La fonction 'descend' et appelle chaque 
+fois la factorielle du nombre inférieur.&nbsp; </font></p>
+<p><font face="Courier New" size="2">La fonction Factorielle est appelée 4 fois 
+:</font></p>
+<p><font face="Courier New" size="2">Factorielle (4) appelle Factorielle(3) qui 
+appelle&nbsp; Factorielle(2) qui appelle Factorielle (1)</font></p>
+<p><font face="Courier New" size="2">Puis la fonction remonte en retournant le 
+résultat de chaque factorielle.</font></p>
+<p><font face="Courier New" size="2">Factorielle (1) retourne 1</font></p>
+<p><font face="Courier New" size="2">Factorielle (2)retourne&nbsp; 2&nbsp;&nbsp;&nbsp; 
+'2*factorielle(1)</font></p>
+<p><font face="Courier New" size="2">Factorielle (3)retourne&nbsp; 6&nbsp;&nbsp;&nbsp; 
+'3*factorielle(2)</font></p>
+<p><font face="Courier New" size="2">Factorielle (4) retourne 24&nbsp;&nbsp; 
+'4*factorielle(3)</font></p>
+<p><font face="Courier New" size="2">Vb gère cela avec <b>une pile des appels</b>. 
+il met dans une pile les uns aux dessus des autres les appels, quand il remonte, 
+il dépile de haut en bas (Dernier rentré, premier sortie)</font></p>
+<p><font face="Courier New" size="2">Attention: La pile&nbsp; a une taille 
+maximum, si N est trop grand, on déclenche une erreur de type StackOverflow.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemple 
+2: calcul d'une expression 
+avec parenthèses multiples:</span></font></b></p>
+<p><font face="Courier New" size="2">Comment calculer la valeur de la chaîne
+</font><b><font face="Courier New" size="2">
+&quot;(4+2(2*8)-(5/(8+1)))&quot;</font></b></p>
+<p><font face="Courier New" size="2">Une partie du code nommée
+<font color="#0000FF">Calculsimple</font> sait calculer une chaîne de type &quot;8+1&quot; 
+ou &quot;4+2&quot; sans parenthèses.</font></p>
+<p><font face="Courier New" size="2">Il faut gérer les parenthèses,: la sub 
+découpe ce qui est entre parenthèse et s'appelle elle même pour calculer ce qui 
+est entre parenthèses:</font></p>
+<p><font face="Courier New" size="2">&nbsp;La sub calcul&nbsp; fait 2 choses:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Si il y a des parenthèses:&nbsp; appelle Calcul() avec 
+comme paramètre la chaîne entre parenthèse puis remplace la chaîne entre parenthèse par sa valeur</font></p>
+<p><font face="Courier New" size="2">Si il n'y a pas de parenthèses calcule l'expression 
+simple (= - * /).</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2" color="#0000FF">Sub Calcul(Chaine As 
+String) As String</font></b></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Si&nbsp; 
+Chaine contient&nbsp; &quot;(&quot;</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Decouper ValeurEntreParenthese</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Resultat=Calcul (ValeurEntreParenthese)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b></font><b><font face="Courier New" size="2">'Appel récursif</font></b></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Remplacer (ValeurEntreParenthese) par Resultat</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Sinon</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+CalculSimple</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Fin Si</font></p>
+<p><b><font face="Courier New" size="2" color="#0000FF">End Sub </font></b></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemple 
+3: PGCD</span></font></b></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">On rappelle que le PGCD est le 'Plus Grand Commun Diviseur'.</p>
+<p ALIGN="LEFT">Soit a et b 2 nombres.</p>
+<p ALIGN="LEFT">Si b divise a =&gt; PGCD=b. sinon, PGCD(a,b) = PGCD(b, a mod b)</p>
+<p ALIGN="LEFT"><font color="#0000FF">Function PGCD(ByVal P As Long, ByVal Q As 
+Long) As Long</font></p>
+<blockquote>
+  <p ALIGN="LEFT"><font color="#0000FF">If Q Mod P = 0 Then</font></p>
+  <p ALIGN="LEFT"><font color="#0000FF">Return P</font></p>
+</blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">Else</font></p>
+<b>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; </font></b>
+<font color="#0000FF">Return PGCD(Q, P Mod Q)</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">End If</font></p>
+</font>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemple 
+4: Tri récursif:</span></font></b></p>
+<p><b><font face="Courier New" size="2">Tri récursif</font></b></p>
+<p><font face="Courier New" size="2">Le principe est que la fonction récursive 
+scinde le tableau en 2 et pour chaque partie appelle de nouveau le tri récursif, 
+la condition d'arrêt survient quand le dernier élément est &lt; ou = au premier.
+</font></p>
+<div class="paragraph">
+  <font size="2" face="Courier New">Dans un premier temps on range le tableau de telle sorte que 
+  tous les éléments inférieurs à l'élément d'indice pivot se trouvent placés à 
+  la gauche de celui-ci et donc tous les éléments supérieurs à sa droite.Ensuite 
+  on appelle à nouveau (récursivement) la procédure QuickSort pour chacun des 
+  deux sous-tableaux.</font></div>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Cette méthode de tri récursif&nbsp; 
+qui se nomme <b>QuickSort</b> est proportionnellement efficace au désordre du 
+tableau à trier. Cette méthode mettra plus de temps (qu'une autre méthode) à 
+trier un tableau qui est déjà en parti trié qu'un tableau rangé au hasard... 
+Mais en cas de désordre intégral, c'est certainement la plus rapide.</font></p>
+                      <pre class="code"><font color="#0000FF"><span class="delphi_keyword">Sub</span> QuickSort(debut As Integer, fin As <span class="delphi_type">Integer</span>)
+<span class="delphi_keyword">Dim</span> pivot, gauche, droite, temp  As Integer
+
+  pivot  = debut
+  gauche = debut
+  droite = fin
+  <span class="delphi_keyword">do</span>
+    <span class="delphi_keyword">if</span> t(gauche) &gt;= t(droite) <span class="delphi_keyword">then</span>
+    <span class="delphi_keyword">'</span><span class="delphi_comment">échanger si nécessairet(droite) et t(gauche)</span>
+      temp = t(gauche)
+      t(gauche) = t(droite)
+      t(droite) = temp
+      pivot = gauche + droite - pivot<span class="delphi_comment"> 'nouvelle position du pivot</span>
+                    <span class="delphi_comment"> 'pivot est alors égal à droite ou à gauche car pivot était avant égal</span>
+                    <span class="delphi_comment"> 'à gauche ou à droite</span>
+    <span class="delphi_keyword">End</span> If
+    <span class="delphi_keyword">if</span> pivot = gauche <span class="delphi_keyword">then</span> droite=droite-1 <span class="delphi_keyword">else</span> gauche=gauche+1
+  <span class="delphi_keyword">loop until</span> gauche = droite
+  <span class="delphi_keyword">if</span> debut &lt; gauche - 1 <span class="delphi_keyword">then</span> QuickSort(debut, gauche - 1) '<span class="delphi_comment"> //appel récursif sur la partie gauche</span>
+  <span class="delphi_keyword">if</span> fin &gt; droite + 1 <span class="delphi_keyword">then</span> QuickSort(droite + 1, fin)<span class="delphi_comment">  'appel récursif sur la partie droite</span></font></pre>
+                      <pre class="code"><font color="#0000FF"><span class="delphi_comment">End Sub</span></font></pre>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Comment l'utiliser:</font></p>
+    <p><font face="Courier New" size="2">On crée un tableau Public d'integer contenant les valeurs à trier:</font></p>
+    <p><font size="2"><font face="Courier New" COLOR="#0000ff">Public t() As</font><font COLOR="#0000ff"><font face="Courier New">
+    Integer = {10, 
+    2, 7, 4, 1, 3, 12, 6}</font></font></font></p>
+    <font SIZE="2" COLOR="#0000ff">
+    <p>&nbsp;</p>
+    </font>
+    <p><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New"> i
+    <font SIZE="1" COLOR="#0000ff">
+    As</font> </font><font face="Courier New" COLOR="#0000ff">Integer</font></font></p>
+    <font SIZE="2">
+    <p><font COLOR="#0000ff" face="Courier New">Call</font><font face="Courier New">
+    <font color="#0000FF">QuickSort(0, 7) </font>'paramètre= premier et dernier 
+    élément du tableau</font></font></p>
+    <p><font face="Courier New" size="2">Affichage du tableau trié dans une texteBox1</font></p>
+    <p><font face="Courier New" size="2"><font COLOR="#0000ff">For</font><font SIZE="1" color="#0000FF"> 
+    I = 0 </font><font SIZE="1" COLOR="#0000ff">To</font><font color="#0000FF" size="1"> 
+    7</font></font></p>
+    <p><font color="#0000FF" size="2" face="Courier New">TextBox1.Text = TextBox1.Text + 
+    ControlChars.CrLf + t(i).tostring</font></p>
+    <p><font face="Courier New" size="2" COLOR="#0000ff">Next</font></p>
+  </blockquote>
+</blockquote>
+<pre>&nbsp;</pre>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemple 
+5: Parcours de répertoires et sous répertoires:</span></font></b></p>
+<p><b><font face="Courier New" size="2">On veut afficher dans une ListBox les 
+noms des répertoires, sous-répertoires et fichiers:</font></b></p>
+<p><font face="Courier New" size="2">On crée une routine <font color="#0000FF">
+AfficheTree</font> qui affiche </font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Le nom du répertoire courant.</font></p>
+<p><font face="Courier New" size="2">Le nom des fichiers du répertoire courant.</font></p>
+<p><font face="Courier New" size="2">Qui parcourt les sous-répertoires et pour 
+chacun d'eux appelle <font color="#0000FF">AfficheTree</font></font></p>
+</blockquote>
+<pre>&nbsp;</pre>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Imports</font><font face="Courier New" color="#0000FF" SIZE="2"> 
+System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF">Sub&nbsp; AfficheTree ( ByVal myDir As String, ByVal 
+Optional 
+Niveau As Integer =0)</font></p>
+<font SIZE="2" face="Courier New" color="#008080">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+'Affiche le répertoire myDir</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New" color="#0000FF">
+<span style="background-color: #FFFFFF">List1.Items.Add(New String (&quot; &quot;, niveau 
+*2) &amp; myDir)</span></font></p>
+</font>
+<font SIZE="2" face="Courier New" color="#008080">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+'Affiche les fichiers</p>
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">For Each fichier As String&nbsp; In 
+Directory.GetFiles( myDir)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; List1.Items.Add(New 
+String (&quot; &quot;, niveau *2+2) &amp; fichier)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Next</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New" color="#008080">
+'Parcourt les sous-répertoires</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">For each sousRepertoire As String In 
+Directory.GetDirectories( myDir)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; </span>
+<font SIZE="2" face="Courier New" color="#008080">
+'Appel de manière récursive 'AfficheTree pour afficher le contenu des sous 
+répertoires.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; AfficheTree (sousRepertoire, 
+niveau+1)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Next</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">End Sub</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemple 
+6: Évaluation d'un nombre écrit en chiffre romain:</span></font></b></p>
+<p><b><font face="Courier New" size="2">On veut taper III et voir s'afficher 3</font></b></p>
+<p><b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+taper M et voir s'afficher 1000</font></b></p>
+<p><b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+taper XLVIII et voir s'afficher 48</font></b></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On remarque (je l'ai pas fait tout seul!!) 
+que:</font></p>
+<p><font face="Courier New" size="2"><b>Pour un caractère</b> romain, il a une 
+valeur (I=1, V=5, X=10, L=50, C=100, D=500, M=1000)</font></p>
+<p><font face="Courier New" size="2"><b>Pour deux caractères</b>, on compare 
+leurs valeurs:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Si le premier est plus petit, on le 
+soustrait au second:&nbsp; IX = 10 - 1 = 9</font></p>
+<p><font face="Courier New" size="2">Si le premier est plus grand, on l'ajoute 
+au second:&nbsp; VI = 5 + 1 = 6</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>Pour une suite de n caractères</b>: en 
+partant de la gauche, si le premier chiffre a une valeur inférieure au deuxième, 
+alors on le soustrait de la valeur de tout le reste, sinon on l'additionne à la 
+valeur de tout le reste..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le 
+programme va donc comparer la valeur des 2 caractères de gauche; il va ajouter 
+(si la valeur du premier est plus grande) ou soustraire (si la valeur du premier 
+est plus petite) la valeur du premier caractère à la valeur de la chaîne 
+raccourcie du premier caractère.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Exemple: pour XLVIII</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">X 
+plus petit que L&nbsp; donc&nbsp; -10 +valeur de (LVIII)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">L 
+plus grand que V&nbsp; donc&nbsp; -10 +50 + valeur de (VIII)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">V 
+plus grand que I&nbsp; donc&nbsp; -10 +50 + 5 + valeur de (III)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">...&nbsp;&nbsp;&nbsp;
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il 
+faut créer un routine&nbsp; nommée valeur qui calcule la valeur d'un caractère.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Et 
+la routine Eval qui calcule l'expression </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+S'il y a un caractère dans la chaîne c passée en paramètre, on retourne sa 
+valeur, s'il y en a plusieurs, on compare les 2 premiers caractères, et on 
+additionne ou soustrait à la valeur du premier caractère l' Eval (appel récursif) du reste de la chaîne.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Function valeur(ByVal c As 
+Char) As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Select Case c</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;M&quot;c : valeur = 1000</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;D&quot;c : valeur = 500</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;C&quot;c : valeur = 100</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;L&quot;c : valeur = 50</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;X&quot;c : valeur = 10</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;V&quot;c : valeur = 5</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Case &quot;I&quot;c : valeur = 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Select</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Function eval(ByVal s As 
+String) As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Dim n As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">If s.Length = 1 Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; eval = 
+valeur(s.Chars(0))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; n = valeur(s.Chars(0))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; If n &lt; 
+valeur(s.Chars(1)) Then n = -n</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+eval = n + eval(s.Substring(1, s.Length - 1))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si 
+on veut tester: créer dans une form 2 texteBox: TextDecimal, TextRomain et un 
+bouton Button1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub Button1_Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp; TextDecimal.Text = eval(TextRomain.Text).ToString</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<pre>&nbsp;</pre>
+<pre>&nbsp;</pre>
+<p><font face="Courier New" size="3" color="#0000FF"><b><span style="background-color: #C0C0C0">Exemple
+7: Suite de Fibonacci</span></b></font></p>
+<dl>
+  <dd><font face="Courier New" size="2">«&nbsp;Possédant initialement un
+    couple de lapins, combien de couples obtient-on en douze mois si chaque
+    couple engendre tous les mois un nouveau couple à compter du second mois de
+    son existence&nbsp;?&nbsp;»</font></dd>
+</dl>
+<p><font face="Courier New" size="2">On suppose que&nbsp;:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">le premier mois, il y a juste <i>une</i>
+    paire de lapins&nbsp;;</font>
+  <li><font face="Courier New" size="2">les lapins ne sont pubères qu'à partir
+    du deuxième mois&nbsp;;</font>
+  <li><font face="Courier New" size="2">chaque mois, toute paire susceptible de
+    procréer engendre effectivement une nouvelle paire de lapins&nbsp;;</font>
+  <li><font face="Courier New" size="2">les lapins ne meurent jamais (donc la
+    suite de Fibonacci est strictement croissante).</font></li>
+</ul>
+<p><font face="Courier New" size="2">Sont notés en <font color="#ff0000">rouge</font>,
+les couples productifs.</font></p>
+<p><font face="Courier New" size="2">En janvier : 1 couple<br>
+En février : <font color="#ff0000">1</font> couple<br>
+En mars : 1 + <font color="#ff0000">1</font> = 2 couples<br>
+En avril : 1 + <font color="#ff0000">2</font> = 3 couples<br>
+En mai : 2 + <font color="#ff0000">3</font> = 5 couples<br>
+En juin : 3 + <font color="#ff0000">5</font> = 8 couples<br>
+En juillet : 5 + <font color="#ff0000">8</font> = 13 couples<br>
+En août : 8 + <font color="#ff0000">13</font> = 21 couples<br>
+En septembre : 13 + <font color="#ff0000">21</font> = 34 couples<br>
+En octobre : 21 + <font color="#ff0000">34</font> = 55 couples<br>
+En novembre : 34 + <font color="#ff0000">55</font> = 89 couples<br>
+En décembre : 55 + <font color="#ff0000">89</font> = 144 couples</font></p>
+<p><font face="Courier New" size="2">Les réponses constituent les nombres de la
+<b>suite de Fibonacci</b> : 1 - 1 - 2 - 3 - 5 - 8 - 13 - 21 - ..., dont <b>chaque
+terme à partir du 3ème est la somme des deux précédents</b>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Function
+Fibonacci(ByVal n As Integer)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'
+si n &gt; 91, cela entraîne un overflows sur les long.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">Dim
+result As Long = 0</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">If
+n &lt; = 2 Then</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+result = 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font color="#0000FF" face="Courier New" size="2">Else</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+result = Fibonacci(n - 1) + Fibonacci(n - 2)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" color="#0000FF" size="2">End
+If&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">Return
+result</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">End
+Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Programme
+itératif correspondant:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font color="#0000FF" face="Courier New">Function
+Fibonacci2(ByVal n As Integer)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0000FF" size="2">Dim
+u, v, w, i As Long</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">If
+n &lt;= 0 Then Return 0</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font color="#0000FF" face="Courier New">If
+n = 0 Then Return 1</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<blockquote>
+  <font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">u
+  = 0</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">v
+  = 1</font></p>
+  </blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">For
+  i = 2 To n</font></font></p>
+<blockquote>
+  <font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">w
+  = u + v</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">u
+  = v</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">v
+  = w</font></p>
+  </blockquote>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Next</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">Return
+v</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF"><font face="Courier New" size="2">End
+Function</font></font></p>
+<p>&nbsp;</p>
+<pre>&nbsp;</pre>
+<p><font size="2"><br>
+</font><font face="Courier New" size="3" color="#0000FF"><b><span style="background-color: #C0C0C0">Exemple
+8: Fractales</span></b></font></p>
+<p><font face="Courier New" size="2"><b>Calculs de fractales</b></font></p>
+<p><font face="Courier New" size="2">Les fonctions fractales sont des fonctions 
+récursives théoriquement infinies...</font></p>
+<p><font face="Courier New" size="2"><b>Le Flocon de Koch</b>, du nom du mathématicien
+suédois Helge Von Koch (1870-1924), est une courbe fermée,&nbsp; reproduisant
+un triangle équilatéral à des échelles de plus en plus petites. En répétant
+ce processus une infinité de fois, la courbe obtenue possède alors un périmètre
+infini mais une aire limitée. Pour ce faire, chaque segment formant un triangle
+équilatéral est lui-même décomposé en un triangle équilatéral dont la
+base mesure un tiers du segment, centrée et confondue à ce segment.</font></p>
+<p><img border="0" src="vfractal1.JPG" width="88" height="76">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vfractal2.JPG" width="90" height="98">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vfractal3.JPG" width="90" height="97">&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vfractal.JPG" width="89" height="96"></p>
+<p><br>
+</p>
+<p><font face="Courier New" size="2">On va donc créer une fonction récursive
+nommée 'flocon' qui décompose un segment en ajoutant un triangle puis qui pour
+chaque segment appelle la fonction 'flocon.</font></p>
+<p><font face="Courier New" size="2">Comme on ne peut pas afficher des points
+infiniment petits, on va ajouter une condition d'arrêt qui est déclenchée par
+le nombre d'appel récursif. Si la condition d'arrêt est remplie, on dessine le
+segment.</font></p>
+<p><font face="Courier New" size="2">Voici la fonction récursive:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> Flocon(<font COLOR="#0000ff">ByRef</font> gh <font COLOR="#0000ff">As</font>
+Graphics, <font COLOR="#0000ff">ByVal</font> a <font COLOR="#0000ff">As</font>
+Point, <font COLOR="#0000ff">ByRef</font> b <font COLOR="#0000ff">As</font>
+Point, <font COLOR="#0000ff">ByRef</font> n <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Integer</font>)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">'procédure
+récursive pour dessiner la fractale de Von Koch</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+d, c, e <font COLOR="#0000ff">As</font> Point</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+Couleur <font COLOR="#0000ff">As</font> Color = Color.Aqua</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">If</font>
+n = 0 <font COLOR="#0000ff">Then</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;&nbsp;
+'Condition de sortie de la récursivité</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">&nbsp;&nbsp;&nbsp;
+gh.DrawLine(</font><font COLOR="#0000ff" face="Courier New">New</font><font face="Courier New">
+Pen(Color.Red), a.X, a.Y, b.X, b.Y)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#0000ff">Else</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;&nbsp;
+'Appel récursif</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+c = Tiers(a, b)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+d = Tiers(b, a)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+e = Sommet(c, d)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Flocon(gh, a, c, n - 1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Flocon(gh, c, e, n - 1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Flocon(gh, e, d, n - 1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Flocon(gh, d, b, n - 1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+</font><font face="Courier New" COLOR="#0000ff">If</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Pour que
+cela fonctionne, il faut les trois routines suivantes:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Function</font> Sommet(<font COLOR="#0000ff">ByRef</font>
+a <font COLOR="#0000ff">As</font> Point, <font COLOR="#0000ff">ByRef</font> b <font COLOR="#0000ff">As</font>
+Point) <font COLOR="#0000ff">As</font> Point</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">'Calcule
+le sommet du triangle équilatéral</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">'dont
+la base est définie par 2 points</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Sommet.x = (b.x + a.x) / 2 + (b.y - a.y) * Racine3Sur2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Sommet.y = (b.y + a.y) / 2 - (b.x - a.x) * Racine3Sur2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Function</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Function</font> Milieu(<font COLOR="#0000ff">ByRef</font>
+a <font COLOR="#0000ff">As</font> Point, <font COLOR="#0000ff">ByRef</font> b <font COLOR="#0000ff">As</font>
+Point) <font COLOR="#0000ff">As</font> Point</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">'Calcule
+le milieu d'un segment</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Milieu.x = (b.x + a.x) / 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Milieu.y = (b.y + a.y) / 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Function</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Function</font> Tiers(<font COLOR="#0000ff">ByRef</font> a
+<font COLOR="#0000ff">As</font> Point, <font COLOR="#0000ff">ByRef</font> b <font COLOR="#0000ff">As</font>
+Point) <font COLOR="#0000ff">As</font> Point</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">'Calcul
+le premier tiers d'un segment</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">'Attention:
+Le résultat est orienté</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Tiers.x = (b.x - a.x) / 3 + a.x</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Tiers.y = (b.y - a.y) / 3 + a.y</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Function</font></font></font></p>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2"><b>Pour utiliser cet exemple</b> il
+    faut dans un formulaire&nbsp; un PictureBox nommé PictureBox1 pour afficher
+    la fractale, un TextBox1 permettant de saisir le nombre d'appel récursif(
+    ne pas dépasser 9 en pratique), et un bouton command1 exécutant le calcul
+    et l'affichage.</font></p>
+    <p><font face="Courier New" size="2">Mettre en haut du module:</font><font face="Courier New" size="2">&nbsp;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Const</font><font face="Courier New">
+    Racine3Sur2 <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Double</font>
+    = 0.866025404</font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+    <font COLOR="#0000ff">Sub</font> Command1_Click(<font COLOR="#0000ff">ByVal</font>
+    eventSender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+    eventArgs <font COLOR="#0000ff">As</font> System.EventArgs) <font COLOR="#0000ff">Handles</font>
+    Command1.Click</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+    newBitmap <font COLOR="#0000ff">As</font> Bitmap = <font COLOR="#0000ff">New</font>
+    Bitmap(400, 400)&nbsp;&nbsp;&nbsp; <font COLOR="#008000">'créons un BitMap</font></font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+    g <font COLOR="#0000ff">As</font> Graphics = Graphics.FromImage(newBitmap) <font COLOR="#008000">'créons
+    un Graphics et y mettre le BitMap</font></font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+    t <font COLOR="#0000ff">As</font> </font><font face="Courier New" COLOR="#0000ff">Integer</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#008080" face="Courier New">'déclarons
+    les 3 points du triangle initial</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+    a(2) <font COLOR="#0000ff">As</font> Point</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+    b(2) <font COLOR="#0000ff">As</font> Point</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2"><font color="#008080" face="Courier New">'donnons
+    une valeur à 2 points, calculons le troisième&nbsp;</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">a(0).X
+    = 164&nbsp;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">a(0).Y
+    = 10&nbsp;</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">b(1).X
+    = 20&nbsp;</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">b(1).Y
+    = 260&nbsp;</font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">b(0)
+    = Sommet(a(0), b(1))</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">a(1)
+    = b(0)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">a(2)
+    = b(1)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">b(2)
+    = a(0)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#008080" face="Courier New">'Pour
+    chaque coté</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">For</font>
+    t = 0 <font COLOR="#0000ff">To</font> 2</font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;
+    </font><font color="#008080" face="Courier New">'Appelons la fonction
+    récursive</font><font face="Courier New" size="2">&nbsp;&nbsp;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;<font face="Courier New">
+    </font><font face="Courier New" size="2">Flocon(g, a(t), b(t),
+    Val(Text1.Text))</font></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font COLOR="#0000ff" face="Courier New">Next</font><font face="Courier New">
+    t</font></font></p>
+    <font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#008080" face="Courier New">'Affichons</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">PictureBox1.Image
+    = newBitmap</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">End</font>
+    <font COLOR="#0000ff">Sub</font></font></font></p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">Code issu d'un code VB6&nbsp; situé sur <a href="http://www.vbfrance.com/codes/FRACTALE-FLOCON-KOCH-RECURSIVITE_36991.aspx">CodeS-SourceS</a>
+VBFrance.com écrit par&nbsp; D. Thuler et transcrit par moi en VB.Net.Merci
+David.</font></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Autres e</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">xemples: </span></font></b></p>
+<p><b><font face="Courier New" size="2">Recherche de chemin dans un labyrinthe.</font></b></p>
+<p><font face="Courier New" size="2">Le principe est que la fonction récursive 
+teste le déplacement à droite, à gauche, en haut, en bas. La condition d'arrêt 
+se produit quand on a trouvé la sortie; les endroits ou on est déjà passé sont 
+notés.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">L'article
+<a href="http://recursivite.developpez.com/">http://recursivite.developpez.com/</a> 
+donne des exemples et des explications extraordinaires de programme récursifs EN 
+PASCAL. Si vous avez le courage de les traduire en VB , envoyez les moi!!</font></b></p>
+<p><font face="Courier New"><font size="2">Exemple trouvé sur </font>
+<a href="http://developpeur.journaldunet.com/tutoriel/theo/030509theo_recursivite1a.shtml">
+<font size="2">developpeur.journaldunet.com </font></a></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:59 GMT -->
+</html>

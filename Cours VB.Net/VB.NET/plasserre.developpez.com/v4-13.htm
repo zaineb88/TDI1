@@ -1,0 +1,438 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:46 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net :créer une aide help </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-12.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.13</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Ajouter une aide.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vaidebras.JPG" width="58" height="86">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Quand un utilisateur 
+utilise votre logiciel, il se pose parfois des questions, comment l'aider?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Avec des aides que le 
+programmeur doit créer et ajouter au programme.</span></font></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Généralisées sur les 4 sortes 
+d'aide.</font></b></span></p>
+<p><font face="Courier New" size="2">A- La Class <font color="#0000FF">Help</font>&nbsp; 
+permet d'ouvrir un fichier d'aide.&nbsp;</font></p>
+<p><font face="Courier New" size="2">B- Le composant <font color="#0000FF">
+HelpProvider</font> offre 2 types d'aide. </font></p>
+<ul>
+  <li><font face="Courier New" size="2">Le premier consiste à <b>ouvrir un 
+  fichier d'aide grâce à F1</b>. </font></li>
+  <li><font face="Courier New" size="2">Quant au second, il peut afficher une <b>
+  aide brève</b> pour chacun des contrôles en utilisant <b>le bouton d'aide </b>
+  (?). Il s'avère particulièrement utile 
+  dans les boîtes de dialogue modale. </font></li>
+</ul>
+<p><font face="Courier New" size="2">C- Le composant <font color="#0000FF">ToolTip</font> offre lui:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">une aide propre à chaque contrôle des 
+  Windows Forms.</font></li>
+</ul>
+<p><font face="Courier New" size="2">D- Le composant <font color="#0000FF">
+ErrorProvider</font> est un moyen de signaler une erreur dans un contrôle.</font></p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Les fichiers d'aide:</span></font></p>
+<p><font face="Courier New" size="2">On peut utiliser les formats:</font></p>
+<p><font face="Courier New" size="2">HTML Fichier .htm</font></p>
+<p><font face="Courier New" size="2">HTMLHelp&nbsp;1.x ou version ultérieure) Fichier 
+.chm</font></p>
+<p><font face="Courier New" size="2">HLP Fichier .hlp les plus anciens.(attention,
+Vista ne supporte plus nativement les fichiers .hlp , pour que les fichiers .hlp
+fonctionnent il faut installer sur la machine utilisatrice le logiciel
+WInHelp32)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Comment créer ces fichiers:</font></p>
+<p><b><font face="Courier New" size="2">Pour les fichiers HTM:</font></b></p>
+<p><font face="Courier New" size="2">Utiliser Word, ou FrontPage, ou Netscape 
+Composeur...</font></p>
+<p><b><font face="Courier New" size="2">Pour les fichiers HLP:</font></b></p>
+<p><font face="Courier New" size="2">Utiliser Microsoft HelpWorkshop livré avec 
+VB6 (les fichiers .HLP fonctionnent nativement sous Windows 98 et XP mais ne
+fonctionne plus sous Windows Vista; si on veut quand même les utiliser, il faut
+télécharger puis installer WinHelp32.exe pour Vista&nbsp; (Télécharger <a href="http://www.microsoft.com/downloads/details.aspx?displaylang=fr&amp;FamilyID=6ebcfad9-d3f5-4365-8070-334cd175d4bb">Ici</a>).&nbsp;</font></p>
+<p><b><font face="Courier New" size="2">Pour les fichiers CHM:</font></b></p>
+<p><font face="Courier New" size="2">Thierry AIM fournit sur le site 
+developpez.com un excellent:</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><a href="http://thierryaim.developpez.com/tutoriel/chm/">
+<font face="Courier New"><b>Cours pour créer un fichier CHM</b></font></a></p>
+<p><b><font face="Courier New" size="2" color="#008000">On conseille d'utiliser 
+les fichiers chm.</font></b></p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Utilisation des 
+fichiers d'aide:</span></font></p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Appel direct:</font></span></p>
+<p><font face="Courier New" size="2">La classe <font color="#0000FF">Help</font> 
+permet d'ouvrir directement par code un fichier d'aide.</font></p>
+<p><font face="Courier New" size="2">C'est ce qu'on utilise dans le menu '?' 
+d'un programme (sous menu 'Aide'); dans la procédure 
+correspondante (Sub Aide_Click) on écrit:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Help.ShowHelp (Me, &quot;MonAide.html&quot;)</font></p>
+<p><font face="Courier New" size="2">MonAide.html doit être dans le répertoire de 
+l'application (répertoire Bin)</font></p>
+<p><font face="Courier New" size="2">Cela peut être un URL , l'adresse d'une 
+page sur Internet!!</font></p>
+<p><font face="Courier New" size="2">Il peut y avoir un 3ème paramètre: on 
+verra cela plus bas (C'est le même paramètre que la propriété HelpNagigator de 
+HelpProvider).</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Help.ShowHelp(Me,
+&quot;file://C:\Windows\Help\calc.chm&quot;, HelpNavigator.TableOfContents)</font></p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Appel par F1:</font></span></p>
+<p><font size="2" face="Courier New">Vous pouvez utiliser le composant
+<a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/vbcon/html/vborihelpproviderctltasks.htm">
+HelpProvider</a> pour <b>attacher</b> <b>des rubriques d'aide</b> figurant dans un 
+fichier d'aide (au format HTML, HTMLHelp&nbsp;1.x ou ultérieur) <b>à des contrôles 
+</b>de l'interface utilisateur.</font></p>
+<p><font size="2" face="Courier New">Quand on met un composant dans un 
+formulaire (avec dans la propriété
+<font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpProviderClassHelpNamespaceTopic">
+HelpNamespace</MSHelp:link></font>, le nom de fichier d'aide), cela ajoute aux 
+contrôles de ce formulaire les propriétés:</font></p>
+<ul>
+  <li><font size="2" face="Courier New"><font color="#0000FF">HelpNavigator</font> 
+  qui déterminent le <b>type</b> d'appel (par numéro de rubrique, mot clé..)
+  </font></li>
+  <li><font size="2" face="Courier New"><font color="#0000FF">HelpKeyword</font> 
+  qui contient le <b>paramètre de recherche</b> (le numéro de rubrique, le mot 
+  clé..) </font></li>
+</ul>
+<p><font face="Courier New" size="2">Quand l'utilisateur est sur le contrôle et 
+qu'il clique sur <b>F1</b> la rubrique d'aide s'ouvre.</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour créer cette aide:</b></font></p>
+<p class="labelproc"><font face="Courier New" size="2">Faites glisser un composant <b>HelpProvider</b> de la boîte 
+à outils vers votre formulaire. </font> </p>
+<p><font face="Courier New" size="2">Le composant se place dans la barre d'état située au bas de la fenêtre.</font></p>
+<p><img border="0" src="vhelp1.GIF" width="375" height="239"></p>
+<p><font face="Courier New" size="2">Dans la fenêtre Propriétés du HelpProvider , donner à&nbsp; la propriété
+<font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpProviderClassHelpNamespaceTopic">
+HelpNamespace</MSHelp:link></font>, un nom de fichier d'aide .chm,&nbsp; ou .htm.
+</font>
+</p>
+<p><font face="Courier New" size="2">Dans la fenêtre Propriétés du contrôle de 
+l'interface qui 
+doit déclencher l'aide, donner à la propriété <font color="#0000FF">
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpProviderClassSetHelpNavigatorTopic">
+  HelpNavigator</MSHelp:link></font> une valeur de l'énumération
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpNavigatorClassTopic">
+  HelpNavigator</MSHelp:link>. </font></p>
+  <p><font face="Courier New" size="2">Cette valeur détermine la façon dont la propriété <b>HelpKeyword </b>est 
+  passée au système d'aide. HelpNagigator peut prendre la valeur: </font> </p>
+  <div class="tablediv">
+    <table class="dtTABLE" cellSpacing="0">
+      <tr vAlign="top">
+        <th width="50%">&nbsp;</th>
+        <th width="50%">&nbsp;</th>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">AssociateIndex</font></td>
+        <td width="50%"><font face="Courier New" size="2">Indique que l'index d'une rubrique spécifiée est exécuté 
+        dans l'URL spécifiée.</font></td>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">Find</font></td>
+        <td width="50%"><font face="Courier New" size="2">Indique que la page de recherche d'une URL spécifiée est 
+        affichée.</font></td>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">Index</font></td>
+        <td width="50%"><font face="Courier New" size="2">Indique que l'index d'une URL spécifiée est affiché.</font></td>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">KeywordIndex</font></td>
+        <td width="50%"><font face="Courier New" size="2">Spécifie un mot clé à rechercher et l'action à effectuer 
+        dans l'URL spécifiée.</font></td>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">TableOfContents</font></td>
+        <td width="50%"><font face="Courier New" size="2">Indique que le sommaire du fichier d'aide HTML&nbsp;1.0 est 
+        affiché.</font></td>
+      </tr>
+      <tr vAlign="top">
+        <td width="50%"><font face="Courier New" size="2">Topic</font></td>
+        <td width="50%"><font face="Courier New" size="2">Indique que la rubrique à laquelle l'URL spécifiée fait 
+        référence est affichée.</font></td>
+      </tr>
+    </table>
+  </div>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Définisser la 
+propriété <font color="#0000FF">
+<MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpProviderClassSetHelpKeywordTopic">
+HelpKeyword</MSHelp:link></font> dans la fenêtre Propriétés. (la valeur de cette 
+propriété sera passé au fichier d'aide afin de déterminer la rubrique d'aide à 
+afficher) </font> </p>
+<p><font face="Courier New" size="2">Au moment de l'exécution, le fait d'appuyer sur <b>F1 </b>lorsque le contrôle 
+(dont vous avez défini les propriétés <b>HelpKeyword </b>et <b>HelpNavigator</b>) 
+a le focus ouvre le fichier d'aide associé à ce composant <b>HelpProvider</b>.</font></p>
+<blockquote class="dtBlock">
+  <p><font face="Courier New" size="2"><b class="le">Remarque</b>&nbsp;&nbsp;&nbsp;Vous pouvez définir, pour 
+  la propriété <b>HelpNamespace</b>, une adresse http:// (telle qu'une page 
+  Web). Cela permet d'ouvrir le navigateur par défaut sur la page Web avec la 
+  chaîne indiquée dans la propriété <b>HelpKeyword</b> utilisée comme ancre 
+  (pour accéder à une section spécifique d'une page HTML).</font></p>
+  <p><font face="Courier New" size="2">Dans le code il faut utiliser la syntaxe
+  <font color="#0000FF">HelpProvider.SetHelpKeyword=&quot;..&quot;</font></font></p>
+</blockquote>
+  <p><font face="Courier New" size="2">Exemple:</font></p>
+<blockquote class="dtBlock">
+  <p><font face="Courier New" size="2">Pour afficher la page d'aide sur les formes ovales, sélectionnez la valeur
+  <font color="#0000FF">HelpNavigator.KeyWordIndex </font>dans la liste déroulante <b>Help Navigator</b> &nbsp;; dans la zone de texte <b>
+  HelpKeyword</b>, 'tapez «&nbsp;ovales&nbsp;» (sans chevrons).</font></p>
+  <p>&nbsp;</p>
+</blockquote>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Utilisation du bouton 
+d'aide:</span></font></p>
+<p><font face="Courier New" size="2">Vous pouvez afficher l'aide pour un 
+contrôle via <b>le bouton Aide (?)</b> 
+situé dans la partie droite de la barre de titre .</font></p>
+<p><font face="Courier New" size="2">Il faut que l'utilisateur clique sur le 
+bouton d'aide (?) puis sur le contrôle qui nécessite une aide, ce qui entraîne 
+l'ouverture d'un carré blanc contenant un message d'aide. </font></p>
+<p><img border="0" src="vhelp2.GIF" width="333" height="133"></p>
+<p><font face="Courier New" size="2">L'affichage de l'aide de cette façon 
+convient particulièrement aux boîtes de dialogue. En effet, avec un affichage 
+modal des boîtes de dialogue, il n'est pas&nbsp; facile d'ouvrir des&nbsp; systèmes 
+d'aide externe, dans la mesure où les boîtes de dialogue modales doivent être 
+fermées avant que le focus puisse passer à une autre fenêtre. Le bouton Réduire ou Agrandir ne doit pas être 
+affiché dans la barre de titre. Il s'agit d'une convention pour les 
+boîtes de dialogue alors que les formulaires disposent généralement de boutons 
+Réduire et Agrandir.</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour afficher l'aide contextuelle</b>
+</font> </p>
+<font face="Courier New" size="2">Faites glisser un composant
+  <a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/vbcon/html/vborihelpproviderctltasks.htm">
+  HelpProvider</a> de la boîte à outils vers votre formulaire. </font>
+  <p><font face="Courier New" size="2">Le contrôle est&nbsp;placé dans la barre 
+  d'état des composants située au bas de la fenêtre.</font><p>
+<font face="Courier New" size="2">Attribuer aux propriétés
+    <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsFormClassMinimizeBoxTopic">
+    Minimize</MSHelp:link> et
+    <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsFormClassMaximizeBoxTopic">
+    Maximize de la fenêtre</MSHelp:link> la valeur <b>false</b>.</font><p><b>
+<font face="Courier New" size="2">Puis, </font></b><p>
+<font face="Courier New" size="2">Dans la fenêtre Propriétés <b>de la fenêtre</b>, donner à la propriété <b>HelpButton</b> la 
+  valeur <b>true</b>. Cette configuration permet d'afficher dans la partie 
+  droite de la barre de titre du formulaire un bouton contenant un point 
+  d'interrogation. </font>
+  <blockquote class="dtBlock">
+    <p>&nbsp;</p>
+  </blockquote>
+  <font face="Courier New" size="2">Sélectionnez le contrôle pour lequel vous 
+souhaitez afficher l'aide dans votre formulaire et mettre dans&nbsp;la propriété
+<font color="#0000FF">
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsHelpProviderClassSetHelpStringTopic">
+  HelpString</MSHelp:link></font> la chaîne de 
+  texte qui sera affichée dans une fenêtre de type
+  <a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/vbcon/html/vboritooltipctltasks.htm">
+  ToolTip</a>. </font>
+<p><b><font face="Courier New" size="2">Test:</font></b></p>
+<p><font face="Courier New" size="2">Appuyez sur&nbsp;<b>F5</b>. </font></p>
+<font face="Courier New" size="2">Appuyez sur le bouton Aide (?) de la barre de titre et cliquez sur le 
+  contrôle dont vous avez défini la propriété <b>HelpString</b>. Le toolTip 
+apparaît.</font><p>&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Utilisation des info 
+bulles.</span></font></p>
+<p><font face="Courier New" size="2">Le composant
+<a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/vbcon/html/vboritooltipctltasks.htm">
+ToolTip</a> peut servir à afficher des messages d'aide courts et spécialisés 
+relatifs à des contrôles individuels. </font>  </p>
+<p><font face="Courier New" size="2">Cela ouvre une petite fenêtre indépendante rectangulaire dans laquelle 
+s'affiche une brève description de la raison d'être d'un contrôle lorsque le 
+curseur de la souris pointe sur celui-ci.</font></p>
+<p><font face="Courier New" size="2">Il fournit une propriété qui précise le 
+texte affiché pour chaque contrôle du formulaire.</font></p>
+<p><font face="Courier New" size="2">&nbsp;En outre, il est possible de 
+configurer, pour le composant <b>ToolTip</b>, le délai qui doit s'écouler avant 
+qu'il ne s'affiche.</font></p>
+<font face="Courier New" size="2"><b>Comment faire:</b></font><p>
+<font face="Courier New" size="2">Ajoutez le contrôle<font color="#0000FF"> 
+ToolTip</font>&nbsp; au formulaire.</font></p>
+<p><font face="Courier New" size="2">Chaque contrôle à maintenant une propriété
+<font color="#0000FF">ToolTip</font> ou on peut mettre le texte a afficher dans 
+l'info bulle</font></p>
+<font face="Courier New" size="2">Utilisez la méthode<font color="#0000FF">
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsToolTipClassSetToolTipTopic">
+  SetToolTip</MSHelp:link></font> du composant <b>ToolTip</b>. </font>
+  <pre class="code"><b>On peut aussi le faire par code:</b></pre>
+  <pre class="code"><font face="Courier New">
+<font color="#0000FF">ToolTip1.SetToolTip(Button1, &quot;Save changes&quot;)
+</font>
+</font></pre>
+<p><b><font face="Courier New" size="2">Par code créons de toute pièce un 
+ToolTip.</font></b></p>
+<p><font face="Courier New" size="2">Dim toolTip1 As New ToolTip()<br>
+<br>
+<font color="#008000">' modifions les délais du ToolTip.</font><br>
+toolTip1.AutoPopDelay = 6000<br>
+toolTip1.InitialDelay = 2000<br>
+toolTip1.ReshowDelay = 500<br>
+<font color="#008000">' Force le ToolTip a être visible que la fenêtre soit 
+active ou non .</font><br>
+toolTip1.ShowAlways = True<br>
+<br>
+<font color="#008000">' donne le texte de l'info bulle à 2 contrôles.</font><br>
+toolTip1.SetToolTip(Me.button1, &quot;My button1&quot;)<br>
+toolTip1.SetToolTip(Me.checkBox1, &quot;My checkBox1&quot;)<br>
+&nbsp;</font></p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Utilisation de 
+ErrorProvider.</span></font></p>
+<p><font face="Courier New" size="2">Le composant <font color="#0000FF">
+ErrorProvider</font> peut servir à afficher un panneau d'erreur&nbsp; et un 
+message d'aide court. </font>  </p>
+<p><font face="Courier New" size="2">Exemple: une zone TextBox doit permettre de 
+saisir une valeur numérique. si cela n'est pas le cas et qu'on tente de sortir 
+du textbox ou de fermer la fenêtre, le panneau (!) s'affiche , et <b>on ne peut 
+pas sortir le focus du textbox</b>.</font></p>
+<p><font face="Courier New" size="2">Si on survole le panneau(!) cela affiche le 
+message.</font></p>
+<p><img border="0" src="verrorprov.JPG" width="369" height="154"></p>
+<p>&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Pour cela on 
+utilise l'évènement</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Validating </font>
+<font SIZE="2">
+du textBox qui est déclenché quand on tente de sortir, si le texte n'est par 
+numérique, on donne le message au </font>
+<font SIZE="2" COLOR="#0000ff">
+ErrorProvider </font>
+<font SIZE="2">
+et on annule la sortie (</font><font SIZE="2" COLOR="#0000ff">e.Cancel=True</font></font><font SIZE="2"><font face="Courier New">)</font></p>
+</font>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+MyBox_Validating(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.ComponentModel.CancelEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> MyBox.Validating</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+  <font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> 
+  IsNumeric(</font><font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2" color="#0000FF">.MyBox.Text)
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Me</font><font SIZE="2" color="#0000FF">.ErrorProvider1.SetError(</font><font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">.MyBox</font><font color="#0000FF" face="Courier New">, 
+  &quot;L'entrée doit être numérique&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New">&nbsp;&nbsp;&nbsp; 
+  e.Cancel = </font></font><font SIZE="2" COLOR="#0000ff">
+  <font face="Courier New">True</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Me</font><font SIZE="2" color="#0000FF">.ErrorProvider1.SetError(</font><font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">.MyBox</font><font color="#0000FF" face="Courier New">, 
+  &quot;&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</blockquote>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p>&nbsp;</p>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-12.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:48 GMT -->
+</html>

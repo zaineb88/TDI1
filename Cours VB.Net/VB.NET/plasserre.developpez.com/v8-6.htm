@@ -1,0 +1,468 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net délégué</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v8-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.6</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les délégués, les 
+    évènements.</font></b></td>
+    <td width="14%" height="76"><a href="v8-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Super complexe? non!!</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Définition.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Un délégué est une référence (un <b>type référence)</b> 
+qui fait référence à une méthode, qui pointe sur une méthode. L'équivalent le plus proche d'un délégué dans 
+d'autres langages est le pointeur de fonction.</font></p>
+<pre class="code"><font face="Courier New">On peut créer directement un délégué avec le mot <font color="#0000FF">Delegate </font>et<font color="#0000FF"> AddressOf</font>.</font></pre>
+<pre class="code"><font face="Courier New">Dans la gestion des évènements des contrôles on crée aussi des délégués avec <font color="#0000FF">Handles</font>  et <font color="#0000FF">AddHandler</font>.</font></pre>
+<pre class="code"><b><font size="4" color="#0000FF"><span style="background-color: #C0C0C0">A- Création d'un délégué avec 'Delegate'</span></font></b></pre>
+<pre class="code">Ici on ne parle pas d'évènement</pre>
+<pre class="code">On déclare un délégué (un pointeur):</pre>
+<pre class="code"><font color="#0000FF">Delegate Sub D()</font></pre>
+<pre class="code">on l'instance: on le fait pointer sur une fonction F().</pre>
+<pre class="code"><font color="#0000FF">Dim M As New D(AddressOf F)</font></pre>
+<pre class="code">Quand on utilise l'instance du délégué, cela exécute la fonction.</pre>
+<pre class="code"><font color="#0000FF">M() </font>exécute la fonction F()</pre>
+<pre class="code"><font color="#0000FF">AddressOf </font>permet de préciser l'adresse de la procédure F(), le pointeur vers la procédure F().</pre>
+<pre class="code"><span style="background-color: #C0C0C0">Exemple hyper simple:</span></pre>
+<pre class="code"><font color="#0000FF">Delegate Sub SimpleDelegate() </font><font color="#008000">'On crée un délégué sans paramètres</font></pre>
+<pre class="code"><font color="#0000FF">Module Test
+   
+   Sub MaSub() </font><font color="#008000">'On crée une Sub</font><font color="#0000FF">
+      System.Console.WriteLine(&quot;Test&quot;)
+   End Sub
+   
+   Sub Main()
+      Dim Mondelegue As New SimpleDelegate(AddressOf MaSub) </font><font color="#008000">'le délégué pointe sur la Sub</font><font color="#0000FF">
+      Mondelegue()	</font><font color="#008000">'On utilise le délégué</font><font color="#0000FF">
+   End Sub
+End Module </font></pre>
+<p><font face="Courier New" size="2">Il n'est pas d'un grand intérêt d'instancier un délégué pour une méthode et 
+d'appeler ensuite immédiatement la méthode via le délégué, puisqu'il serait plus 
+simple d'appeler directement la méthode, mais c'est un exemple.</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Exemple avec une fonction et des 
+paramètres:</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Bien sur le délégué peut pointer vers 
+une Sub ou une fonction avec des paramètres:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dans une Classe MaClasse:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On déclare un delegate en indiquant 
+paramètres envoyés et de retour :</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Delegate 
+Function maMethodDelegate(myInt As Integer) As [String]</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On déclare une fonction:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Public Shared 
+Function maMethode(myInt As Integer) As [String]</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Return myInt.ToString<br>
+End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici l'exemple est 
+bête: on donne un 
+Integer, cela retourne une String!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On crée le délégué:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Dim myD As New 
+maMethodDelegate(AddressOf maClasse.maMethode)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myD est maintenant un pointeur sur 
+maClasse.maMethode.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Je peux utiliser
+<font color="#0000FF">myD(2)</font> qui retournera une String &quot;2&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">
+<span style="background-color: #C0C0C0">Intérêts d'un délégué par rapport à une 
+fonction? </span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Un délégué est un type référence qui 
+fait référence à une méthode <b>Shared</b> d'un type <b>ou à une méthode d'instance</b> 
+d'un objet.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Un délégué peut 
+référencer à la fois des méthodes de classe (static) et des méthodes d'instance.</b> Lorsque le 
+délégué référence une méthode d'instance, il stocke non seulement une référence 
+au point d'entrée de la méthode, mais également une référence à l'instance de 
+classe pour laquelle la méthode est appelée. Contrairement aux pointeurs 
+fonction, les délégués sont orientés objet, de type sécurisé et fiables.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Voici un exemple de Microsoft utilisant un délégué avec les 2 types de méthodes.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Imports System<br>
+<br>
+Public Class SamplesDelegate<br>
+<br>
+<font color="#008000">' Declares un delegate à partir d'une méthode qui accepte 
+un paramètre integer et retourne une String.</font><br>
+<font color="#0000FF">Delegate Function myMethodDelegate(myInt As Integer) As [String]</font><br>
+<br>
+<font color="#008000">' Definir les méthodes.</font><br>
+<font color="#0000FF">Public Class mySampleClass</font><br>
+<br>
+<font color="#008000">' Definir une méthode d'instance.</font><br>
+<font color="#0000FF">Public Function myStringMethod(myInt As Integer) As [String]<br>
+If myInt &gt; 0 Then<br>
+Return &quot;positive&quot;<br>
+End If<br>
+If myInt &lt; 0 Then<br>
+Return &quot;negative&quot;<br>
+End If<br>
+Return &quot;zero&quot;<br>
+End Function 'myStringMethod</font><br>
+<br>
+<font color="#008000">' Definir une méthode de classe.</font><br>
+<font color="#0000FF">Public <b>Shared</b> Function mySignMethod(myInt As Integer) As [String]<br>
+If myInt &gt; 0 Then<br>
+Return &quot;+&quot;<br>
+End If<br>
+If myInt &lt; 0 Then<br>
+Return &quot;-&quot;<br>
+End If<br>
+Return &quot;&quot;<br>
+End Function 'mySignMethod<br>
+End Class 'mySampleClass</font><br>
+<br>
+<font color="#008000">'Utilisation du délégué</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<font color="#0000FF">Public Shared Sub Main()<br>
+</font>
+<br>
+<font color="#008000">' Instanciation de délégué pour chaque méthode.</font><br>
+<font color="#0000FF">Dim mySC As New mySampleClass()<br>
+Dim myD1 As New myMethodDelegate(AddressOf mySC.myStringMethod)<br>
+Dim myD2 As New myMethodDelegate(AddressOf mySampleClass.mySignMethod)<br>
+</font>
+<br>
+<font color="#008000">'Utilisation des délégués.</font><br>
+<font color="#0000FF">Console.WriteLine(&quot;{0} is {1}; use the sign &quot;&quot;{2}&quot;&quot;.&quot;, 5, myD1(5), myD2(5))<br>
+Console.WriteLine(&quot;{0} is {1}; use the sign &quot;&quot;{2}&quot;&quot;.&quot;, - 3, myD1(- 3), myD2(- 
+3))<br>
+Console.WriteLine(&quot;{0} is {1}; use the sign &quot;&quot;{2}&quot;&quot;.&quot;, 0, myD1(0), myD2(0))<br>
+<br>
+End Sub 'Main<br>
+<br>
+End Class 'SamplesDelegate </font> <br>
+<br>
+<br>
+<font color="#008000">'Le code produit les sorties suivantes:</font><br>
+' <br>
+'5 is positive; use the sign &quot;+&quot;.<br>
+'-3 is negative; use the sign &quot;-&quot;.<br>
+'0 is zero; use the sign &quot;&quot;.<br>
+<br>
+&nbsp;</font></p>
+<p><font size="2" face="Courier New">Les membres d'un délégué sont les membres hérités de la classe <b>
+System.Delegate</b>. Un délégué contient également un ensemble de constructeurs 
+et de méthodes définis par le système.&nbsp; </font></p>
+<p><font size="2" face="Courier New"><b>L'utilité des délégués réside dans leur 
+anonymat.</b> L'exemple suivant illustre une méthode </font><font size="2"> <code class="ce">
+<font face="Courier New">MultiCall</font></code><font face="Courier New"> 
+qui appelle de façon répétitive une instance </font> <code class="ce">
+<font face="Courier New">SimpleDelegate</font></code></font><font size="2" face="Courier New">&nbsp;:</font></p>
+<pre class="code"><font face="Courier New">   Sub MultiCall(d As SimpleDelegate, count As Integer)
+      Dim i As Integer
+      For i = 0 To count - 1
+         d()
+      Next i
+   End Sub</font></pre>
+<p><font size="2" face="Courier New">Pour la méthode </font><font size="2"> <code class="ce">
+<font face="Courier New">MultiCall</font></code><font face="Courier New">, l'identité de la méthode 
+cible de </font> <code class="ce"><font face="Courier New">SimpleDelegate</font></code><font face="Courier New"> n'a pas d'importance, pas plus 
+que l'accessibilité qu'a cette méthode, ni le fait qu'il s'agisse d'une méthode
+<b>Shared</b> ou non partagée.</font></font></p>
+<p><font size="2"> <font face="Courier New"><b>La seule chose qui importe est que la signature 
+de la méthode soit compatible </b>avec </font> <code class="ce">
+<font face="Courier New">SimpleDelegate</font></code></font><font size="2" face="Courier New">.</font></p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">B</font></span><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">-Délégué 
+et appel asynchrone </span></font></p>
+<p><font face="Courier New" size="2">Quand une procédure A appelle une autre 
+procédure B, cela se passe de manière <b>synchrone</b>: pendant l'exécution de 
+la procédure B, la procédure A est en attente, elle se poursuit après le retour 
+de la procédure B.</font></p>
+<p><font face="Courier New" size="2">Si vous appelé la procédure B à partir d'un 
+délégué avec <font color="#0000FF">BeginInvoke</font> , le fonctionnement sera <b>asynchrone</b>, c'est à dire que les 2 
+procédures se dérouleront en parallèle.</font></p>
+<p><font face="Courier New" size="2">Si la méthode <b>BeginInvoke</b> est appelée, le Common Language Runtime 
+mettra la demande en file d'attente et le retour à l'appelant sera immédiat. La 
+méthode cible sera appelée sur un autre thread . Le thread d'origine, qui a 
+soumis la demande, est libre de poursuivre en parallèle son exécution. La méthode<b> BeginInvoke</b> est 
+donc utilisée pour établir l'appel asynchrone. 
+Elle possède les mêmes paramètres que la méthode à exécuter de façon asynchrone, 
+plus deux paramètres. Le premier paramètre supplémentaire sert quand l'appel 
+asynchrone se termine (voir plus bas); le second paramètre supplémentaire sert à 
+fournir un objet quelconque. </font></p>
+<p>
+<font color="#0000FF" face="Courier New" size="2">Delegate Function myDelegate(myInt As Integer) As [String]</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim ta As New myMethodDelegate(AddressOf 
+MyMethode)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">ta.BeginInvoque(2 ,Nothing, 
+Nothing)
+</font><font face="Courier New" size="2">&nbsp;'On met les 2 paramètres 
+supplémentaire à Nothing pour le momment.</font></p>
+<p><font face="Courier New" size="2">Ici on a exécuté dans un autre thread, en 
+parallèle, MyMethode.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On reprend l'exemple bête, d'une fonction qui 
+transforme un integer en String.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Public Shared 
+Function myMethode(myInt As Integer) As [String]</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Return myInt.ToString<br>
+End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Le problème est de savoir quand 
+MyMethode se termine et éventuellement récupérer les résultats de MyMethode.
+</font></b></p>
+<p><font face="Courier New" size="2">Là intervient <b>le premier paramètre 
+supplémentaire:</b> il est chargé d'indiquer l'adresse de la procédure à 
+exécuter lorsque l'opération asynchrone se termine.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">ta.BeginInvoque(2 ,AdresssOf 
+AfficheResultat, Nothing)</font></p>
+<p><font face="Courier New" size="2">Ici quand ta se termine cela exécute la 
+procédure</font><font face="Courier New" size="2" color="#0000FF"> 
+AfficheResultat</font><font face="Courier New" size="2">.</font></p>
+<p><font face="Courier New" size="2">Il faut donc créer une procédure </font>
+<font face="Courier New" size="2" color="#0000FF">AfficheResultat </font>
+<font face="Courier New" size="2">avec comme paramètre une variable de type</font><font face="Courier New" size="2" color="#0000FF"> 
+IAsyncResult </font><font face="Courier New" size="2">qui permet de récupérer le 
+résultat.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Sub AfficheResultat (By Val 
+ia As IAsyncResult)</font></p>
+<blockquote>
+<p><font face="Courier New" size="2" color="#0000FF">Dim Resultat As String</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Resultat= ta.EndInvoke(ia)</font></p>
+</blockquote>
+<p><font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font face="Courier New" size="2">La méthode <b>EndInvoke </b>est utilisée pour 
+obtenir la valeur de retour de la fonction et les paramètres de sortie.</font></p>
+<p><b><font face="Courier New" size="2">On peut aussi&nbsp; 'surveiller' si ta 
+est terminé et récupérer le résultat:</font></b></p>
+<p><font face="Courier New" size="2">Il faut déclarer une variable de type</font><font face="Courier New" size="2" color="#0000FF"> 
+IAsyncResult:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim ia As </font>
+<font face="Courier New" size="2" color="#0000FF">IAsyncResult</font></p>
+<p><font face="Courier New" size="2">Quand on instance ta avec BeginInvoke cela 
+retourne un </font><font face="Courier New" size="2" color="#0000FF">
+IAsyncResult</font><font face="Courier New" size="2"> si on écrit:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">ia= ta.BeginInvoque(2 ,Nothing, 
+Nothing)</font></p>
+<p><font face="Courier New" size="2">Il suffit de tester ia avec
+<font color="#0000FF">ia.IsCompleted </font>pour voir si ta est terminé; a titre 
+d'exemple créons un bouton testant si la procédure asynchrone est terminée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub Button1_Click(..)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Dim 
+Resultat As String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; If 
+ia.IsCompleted Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Resultat=ta.EndInvoke(ia)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+MsgBox(&quot; Traitement en cours..&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font face="Courier New" size="2">Il faut cliquer sur le bouton à intervalle 
+régulier pour voir si ta est terminé. (L'exemple est débile car tout cela à de 
+l'intérêt que si la procédure asynchrone est très longue.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">C-Délégué et 
+évènement:</span></font></p>
+<p><font size="2" face="Courier New">Les <i>délégués sont utilisés</i> pour lier les événements aux 
+méthodes servant à les gérer. Lorsque l'événement se produit, le délégué appelle 
+la méthode liée.</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Délégué crée automatiquement par 
+Visual Basic .NET</span></font></p>
+<p><font size="2" face="Courier New">Dans le cas d'événements associés à des formulaires ou 
+contrôles, Visual Basic .NET crée automatiquement un gestionnaire d'événements 
+et l'associe à un événement.</font></p>
+<p><font size="2" face="Courier New">Effectivement, en mode design, lorsque vous double-cliquez sur 
+un bouton de commande dans un formulaire, Visual Basic .NET crée automatiquement 
+un gestionnaire d'événements vide et une variable WithEvents pour le bouton de 
+commande, comme dans le code suivant:<br>
+&nbsp;</font></p>
+<font SIZE="2" face="Courier New">
+<p>Dans la Region &quot; Code généré par le Concepteur Windows Form &quot; il y a:</p>
+</font>
+<p><font color="#0000FF" size="2" face="Courier New">Friend WithEvents Button1 As 
+System.Windows.Forms.Button<br>
+&nbsp;</font></p>
+<p><font color="#0000FF" size="2" face="Courier New">Protected Sub Button1_Click(ByVal sender As 
+System.Object, _ <br>
+ByVal e As System.EventArgs) Handles Button1.Click</font></p>
+<p><font color="#0000FF" size="2" face="Courier New"><br>
+End Sub</font></p>
+<p><font face="Courier New"><font size="2" color="#0000FF">WithEvents</font><font size="2"> 
+indique que l'objet Button1&nbsp; a des évènements.</font></font></p>
+<p><font size="2" face="Courier New">Le terme<b> </b><font color="#0000FF">Handles</font>&nbsp; 
+provoque l'association d'un événement (<font color="#0000FF">Button1.Click</font> 
+situé après Handles) à un gestionnaire d'événements ( la <font color="#0000FF">
+Sub Button1_Click</font>; la Sub pourrait d'ailleurs se nommer différemment, 
+cela n'a pas d'importance). </font></p>
+<p><font size="2" face="Courier New">L'association d'événements aux gestionnaires d'événements se 
+fait au moment de la compilation et ne peut pas être modifiée.</font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Lorsque vous cliquez sur un Button1 cela déclenche bien la Sub 
+Button1_Click.<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Délégué et évènements crées par vous:
+</span></font></p>
+<p><font face="Courier New" size="2">On reprend les mêmes concepts que dans le 
+chapitre sur le création de contrôles par code.</font></p>
+<p><font face="Courier New" size="2">Lorsque vous crée par code de toute pièce 
+des contrôles, vous pouvez faire de même avec <font color="#0000FF">Handles</font>:</font></p>
+<p><font face="Courier New" size="2">Déclaration <b>dans la partie déclaration 
+du module</b>(en haut):</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Private <b>WithEvents</b> 
+Button1 As&nbsp; New Button</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Me.Controls.Add(Button1)</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Sub OnClique ( sender As 
+Object, EvArg As EventArgs) <b>Handles </b>Button1.Click</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">End Sub&nbsp; </font></p>
+<p><font face="Courier New" size="2">La aussi, l'association d'événements aux 
+gestionnaires d'événements se fait <b>au moment de la compilation</b> et ne peut 
+pas être modifiée. On a bien crée un délégué.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Vous pouvez aussi utiliser la méthode
+<font color="#0000FF">AddHandler</font>:</font></p>
+<font face="Arial" size="2">
+<blockquote>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font>
+  <font face="Courier New" size="2"><font color="#0000ff" size="2">Dim TB As New</font><font size="2"><font color="#0000ff"> 
+  System.Windows.Forms.TextBox</font></p>
+  </font></font>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Arial" size="2">
+  <font face="Courier New" color="#0000ff" size="2">Me</font><font size="2"><font face="Courier New" size="2"><font color="#0000ff">.Controls.Add(TB)</font></p>
+  </font><font face="Arial" size="2">
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font></font></font>
+  <font face="Courier New" size="2"><b><font color="#0000ff" size="2">AddHandler</font></b><font color="#0000ff" size="2"><b>
+  </b><strong>TB</strong><b>.Keyup, </b></font><b>
+  <font color="#0000ff" size="2">AddressOf TextboxKeyup.</font></b></p>
+</blockquote>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff">&nbsp;</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff">Sub 
+TextboxKeyup.(</font><font color="#0000ff" size="2">ByVal</font><font color="#0000ff"> 
+sender </font><font color="#0000ff" size="2">As</font><font color="#0000ff">
+</font><font color="#0000ff" size="2">Object</font><font color="#0000ff">,
+</font><font color="#0000ff" size="2">ByVal</font><font color="#0000ff"> e
+</font><font color="#0000ff" size="2">As</font><font color="#0000ff"> 
+KeyEventArgs)</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2">
+...</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2">
+End</font><font color="#0000ff"> </font><font color="#0000ff" size="2">Sub</font></p>
+</font></font>
+<p><font face="Courier New" size="2">AddHandler permet donc d'associer à 
+l'évènement TB.Keyup la Sub TextboxKeyup. On a bien crée un délégué.</font></p>
+<p><font face="Courier New" size="2">le mot clé <b>addhandler </b>permet 
+d'associer un événement à une procédure <b>au moment de l'exécution et peut être 
+annulé par RemoveHandler</b>. </font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+</html>

@@ -1,0 +1,2326 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:45 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET algorithme</title>
+<style>
+<!--
+.Normal
+	{font-size:12.0pt;
+	font-family:"Times New Roman";}
+-->
+</style>
+</head>
+
+<body background="Documents%20and%20Settings/Philippe/Mes%20documents/Mes%20sites%20Web/vfond.html" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a><b><font size="6" color="#800080" face="Courier New"> 1.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Algorithmes</font></b></td>
+    <td width="14%" height="76"><a href="v1-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<b>
+<font color="#800080" face="Courier New" size="2">A- Pour écrire un programme.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<b><font face="Courier New" size="2" color="#800080">B- Définition de l'algorithme.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<b><font face="Courier New" size="2" color="#800080">C- Principe généraux</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Séquences</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Notion de variable</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Notion de constante</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Affectation</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Booléens</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Choix</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Répétition</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Logique: ET, OU, NON</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Saut</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Programmation structurée</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Sous programmes, fonctions</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Tableaux</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Collections</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Pile, Queue</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Liste chaînée</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Notion de Clé</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Hachage</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Sécurisation</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Flag et variables d'état.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<b><font face="Courier New" size="2" color="#800080">D -Code source,
+exécutable, interprétation, compilation.</font></b></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<b><font face="Courier New" size="2" color="#800080">D -Quelques algorithmes.</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Recherche dans un tableau</font></p>
+<p class="MsoNormal" style="margin-top:0; margin-bottom:0">
+<font color="#800080" face="Courier New" size="2">Tri de tableau</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">A - Pour écrire un programme:</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Pour écrire un programme</b>, aller du problème à résoudre à un programme 
+exécutable, il faut passer par les phases suivantes:</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse du cahier des charges.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Il doit être clair, exhaustif, structuré.</font></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse générale du problème.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp; Il existe des méthodes pour professionnels (MERISE, JACKSON..), 
+nous utiliserons plutôt <b>l'analyse fonctionnelle</b>: Le problème global est découpé 
+en sous problèmes nommés fonctions. Chaque fonction ne contient plus qu'une 
+partie du problème. Si une fonction est encore trop complexe, on itère le 
+processus par de nouvelles fonctions à un niveau plus bas.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font FACE="Courier New" SIZE="2">Cela se nomme la 'Conception structurée 
+descendante'. La 'Conception ascendante' existe aussi: en assemblant des 
+fonctions préexistantes, on résout le problème: attention, il faut que les 
+fonctions préexistantes soient cohérentes. (Pour le moment on ne fait pas de 
+programmation objet)</font></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse détaillée.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Chaque fonction&nbsp; est mise en forme, la 
+logique de la fonction est écrite dans un pseudo langage (ou <b>pseudo code</b>) 
+détaillant le fonctionnement de la fonction. Ce pseudo code est universel , il 
+comporte des mots du langage courant ainsi que des mots relatifs aux structures 
+de contrôle retrouvées dans tous les langages de programmation.&nbsp; </font></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Codage.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Traduction du pseudo code dans le langage que 
+vous utilisez.</font></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Test</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Car il faut que le programme soit valide.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple simpliste:</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse du cahier des charges.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Création d'un programme 
+affichant les tables de multiplication, d'addition, de soustraction.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse générale du problème.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Découpons le programme en diverses fonctions:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut créer une 
+fonction 'Choix de l'opération', une fonction 'Choix de la table', une fonction 
+'TabledeMultiplication', une fonction 'TabledAddition', une fonction 'Affiche'... </font> </p>
+  <font FACE="Courier New" SIZE="2"></font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Analyse détaillée.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Détaillons la fonction 'TabledeMultiplication'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Elle devra traiter 
+successivement (pour la table des 7 par exemple)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1X7</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2X7</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+3X7..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voici l'algorithme en <b>pseudo code</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Début</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Pour i 
+allant de 1 à 10</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ecrire (i*7)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Fin Pour</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Fin&nbsp; </font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Codage.</font></b></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Traduction du pseudo code en Visual Basic, en 
+respectant la <b>syntaxe</b> du VB.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Sub MultiplicationPar7</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Dim i As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">For i=1 to 10</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Call 
+Affiche(i*7)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">next i.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2" color="#008000">Test</font></b></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici il suffit de lancer le programme pour voir 
+si il marche bien..</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Pour des programmes complexes, il existe 
+d'autres méthodes.</font></p>
+<font FACE="Times New Roman">
+<p ALIGN="LEFT">&nbsp;</p>
+</font><font face="Courier New" size="5" color="#0000FF">
+<p ALIGN="LEFT"><span style="background-color: #C0C0C0"><b>B - Un Algorithme : 
+c'est quoi?</b></span></p>
+</font><font face="Courier New" size="2" color="#800080">
+<p ALIGN="LEFT">Un problème est traitable par informatique si :</p>
+</font>
+<ul>
+  <li>
+  <p ALIGN="LEFT"><font FACE="Courier New" size="2" color="#800080">on peut parfaitement définir 
+  les données (<b>entrées</b>) et les résultats (<b>sorties</b>),</li>
+  </font>
+  <li>
+  <p ALIGN="LEFT"><font face="Courier New" size="2" color="#800080">on peut décomposer 
+  <b>le 
+  passage</b> de ces données vers ces résultats en <b>une suite d'opérations 
+  élémentaires</b> exécutables.</li>
+</ul>
+</font><font FACE="Times New Roman">
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">
+<img border="0" src="vicochev.GIF" width="32" height="34"></font><b><u><font color="#008000" face="Courier New" size="4">L'algorithme</font></u><font size="2" color="#008000" face="Courier New"> 
+détaille, en pseudo code, le fonctionnement de ce passage et en décrit la 
+logique.</font></b></p>
+<table cellSpacing="0" cellPadding="0" width="100%" border="0">
+  <tr vAlign="top">
+    <td align="middle" width="79%">
+    <table cellSpacing="0" cellPadding="10" width="100%" border="0">
+      <tr vAlign="top">
+        <td><font face="Courier New" size="2"><b>L'algorithme est&nbsp; une succession de tests, décisions et 
+        actions dans le but de décrire le comportement d'une entité (objet, 
+        programme, personne).</b> Définition du Dicodunet.</font></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+écrit bien 'algotithme' et non 'algorythme'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+Étudions cette logique <b>valable pour tous les langages de programmation (ceux 
+qui sont des langages impératifs)</b>:</font></p>
+<font size="2">
+<p><font face="Courier New"><b>Pour représenter n'importe quel algorithme</b>, 
+il faut disposer des trois possibilités suivantes: </font></p>
+<ul>
+  <li><font face="Courier New">la <u><b>séquence</b> </u>qui indique que les 
+  opérations doivent être exécutées les unes après les autres.</font><p align="center">
+  <img border="0" src="vorganig1.GIF" width="87" height="140"></font></p>
+  </ul>
+  <p>&nbsp;<ul>
+  <li><font face="Courier New" size="2">le <u><b>choix</b></u> qui indique 
+  quelles instructions doivent être exécutées en fonction de circonstances.</font><p align="center">
+  <font size="4">
+  <img border="0" src="vorganig2.GIF" width="138" height="129"></p>
+  <p>&nbsp;</li>
+  <li><font face="Courier New" size="2">la <u><b>répétition</b> </u>qui indique que des 
+  instructions doivent être exécutées plusieurs fois. </font></li>
+</ul>
+<p align="center">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Exemple d'algorithme principalement composé 
+d'une répétition:</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Pour i allant de 1 à 10</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Ecrire (i*7)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Fin Pour</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Voyons cela en détails:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">C - Principes généraux :
+</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New">Le langage algorithmique et son pseudo-code n'est pas 
+vraiment standardisé, chacun l'écrit à sa manière, aussi vous verrez&nbsp; des 
+notations différentes dans les divers cours d'algorithme. Cela n'a pas 
+d'importance car un programme en pseudo-code ne sera jamais exécuté sur une 
+machine.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New">L'intérêt de d'étude des algorithmes est didactique: 
+elle permet de comprendre la logique d'un programme totalement indépendamment du 
+langage: ce qui suit est valable en C++, Delphi, Java, Visual Basic, 
+Assembleur...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">La séquence:Structure séquentielle d'un programme:</span></b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="2">
+<span style="font-family: Courier New">Au sein d'un programme, l</span></font><span style="font-size: 10.0pt; font-family: Courier New">a 
+structure est généralement séquentielle.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vorganig1.GIF" width="87" height="140"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le code est fait d’une succession de lignes (ou <b>instructions</b>) qui 
+seront lues et traitées les unes après les autres.&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Instruction 1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Instruction 2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Instruction 3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">En VB on peut mettre plusieurs 
+instructions sur la même ligne séparées par &quot;:&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Instruction1 : Instruction2</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Les variables, leur 'Type':</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Elles contiennent les 
+informations les données nécessaires au déroulement du programme (C'est le même sens qu'en
+mathématique).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Chaque variable a un <b>Nom</b> (identifiant) 
+et un <b>Type</b>. Ce dernier indique la nature de l'information que l'on 
+souhaite mettre dans la variable: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un type indique:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La nature des valeurs que peut prendre la variable.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les opérations possibles.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: un Type 'Entier' (<font color="#0000FF">Integer</font> 
+en VB) correspond au valeur entière, positive ou négative, les opérations 
+possibles sont l'addition, la soustraction, la multiplication...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La nature, le type peut être:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Type numérique:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 'Entier'(Integer en VB), 'réel'..
+(Single en VB) Exemple d'un 
+entier: 123</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Type alphanumérique:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 'Caractère' (Char en VB) contient 1 
+caractère. Exemple d'un caractère: &quot;a&quot; (avec des guillemets)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 'Chaîne de caractères',(String 
+en VB), contient plusieurs caractères. Exemple: &quot;toto&quot; (avec des guillemets)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Autres Type:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Booléen (Boolean en VB) ne peut contenir 
+que True ou False ('Vrai' ou 'Faux').</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Objet. (Object en VB)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Monétaire (Décimal en VB)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Date&nbsp; (Date en VB)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">A partir des types précédents on peut créer 
+des <b>types complexes (ou structurés):</b></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les tableaux (Array).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Collections.<br>
+&nbsp;</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: la variable nommée 'Total' contient un 
+réel dans un programme de comptabilité.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">on remarque qu'il ne faut pas confondre 1 qui 
+est une valeur numérique( sans guillemets) et &quot;1&quot; qui est le caractère '1' (avec 
+des guillemets).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Utilisation des variables:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les variables numériques serviront à faire des 
+calculs:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les variables alphanumériques, les chaînes
+de caractères, serviront entre 
+autres à afficher du texte.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment afficher les résultats de calcul?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On apprendra à transformer des variables 
+numériques en variables alphanumériques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Déclaration:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour utiliser une variable, il faut qu'elle 
+existe, il faut donc la créer, on dit il faut <b>la déclarer</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans un algorithme: <font color="#0000FF">
+Variable A en Numérique </font>'crée une variable nommée A et de Type Numérique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB: <font color="#0000FF">Dim A As Integer</font>&nbsp; 
+'crée une variable nommée A et de Type Integer.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut aussi <b>initialiser</b> une variable 
+c'est à dire définir sa valeur initiale. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">On peut utiliser un <b>littéral</b>: c'est une 
+donnée utilisée directement: sa valeur est écrite directement dans le code.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">X &lt;- 2</font>&nbsp;&nbsp;&nbsp; 
+veut dire: donner à la valeur X la valeur 2 ( 2 est une littéral)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB:
+<font color="#0000FF">X = 2</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Constante:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Comme
+une variable, une Constante a un <b>Nom</b> (identifiant) 
+et un <b>Type</b>. Elle contient une valeur: un nombre, une chaîne de
+caractères..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Son
+contenu ne peut pas être modifié.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">Constante
+A en Numérique =12</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB:
+<font color="#0000FF">Const A As Integer =12</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Ensuite
+on ne peut pas modifier sa valeur, on ne peut que la lire.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Affectation ( ou Assignation)</span></b></font></span><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est une instruction 
+consistant à donner une valeur à une variable.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">En langage algorithmique 
+on l'indique par '&lt;-'</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">X &lt;- 2</font>&nbsp;&nbsp;&nbsp; 
+veut dire: donner à la valeur X la valeur 2 ( 2 est une littéral)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Z &lt;- X</font>&nbsp;&nbsp; veut dire: donner à la 
+variable Z la valeur de la variable X .</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Z &lt;- X+1</font>&nbsp;&nbsp; veut dire: donner à la 
+variable Z la valeur de la variable X à laquelle on ajoute 1 (Z prendra la 
+valeur 2+1 =3).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Cela revient à évaluer l'expression de droite 
+et à en mettre la valeur dans la variable de gauche.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB le signe d'affectation est '='&nbsp; on 
+écrit donc:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Z=X+1 </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Attention ce n'est pas le même sens qu'en 
+mathématique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Exemple Visual Basic: A=B</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vaffect.gif" width="127" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Attention ce n'est pas une égalité mais une 
+affectation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">L'affectation ne marche que si le type de 
+variable est le même:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Variable B en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">B&lt;-12</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A&lt;-B</font>&nbsp;&nbsp; 
+'fonction B contient 12, on met 12 dans A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB:&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+ <font color="#0000FF" face="Courier New" size="2">Dim A As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim B As Integer</font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">B=12</font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">A=B</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on écrit:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Variable B en Alphanumérique</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">B&lt;-'toto</font>'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A&lt;-B</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'<font color="#FF0000">cela</font> <font color="#FF0000">ne fonctionne pas</font> car on tente de mettre le 
+contenue de B qui est alphanumérique dans une variable numérique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">L'affectation sert à effectuer des calculs:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">A&lt;-3+4-2&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'L'<b>expression</b> à droite est 
+évaluée et son résultat est affecté à la variable</font><font face="Courier New" size="2" color="#0000FF"> 
+A.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB:
+<font color="#0000FF">A= 3+4-2</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici les <font color="#0000FF">+ -</font> sont 
+des <b>opérateurs</b>; il y en a d'autres:&nbsp; <font color="#0000FF">*</font> 
+(multiplier) <font color="#0000FF">/ </font>(diviser)....</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0"><font size="4" color="#0000FF">
+Les booléens:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On a parfois besoin de 
+savoir si une assertion est vraie ou Fausse.(<font color="#0000FF">True</font> 
+ou <font color="#0000FF">False</font>)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour stocker une 
+information de ce type, on utilise <b>une variable de type booléen</b>. Une 
+variable de ce type ne peut contenir que <font color="#0000FF">True</font> ou
+<font color="#0000FF">False</font>. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le terme booléen vient de &quot;l'algèbre de 
+Boole&quot;, cette algèbre ne travaille que sur les valeurs 1 ou 0 (True ou False)
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Soit B une variable 
+booléenne:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut écrire
+<font color="#0000FF">B&lt;-True</font>&nbsp; (<font color="#0000FF">B=True</font> 
+en VB)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut aussi tester cette 
+variable:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B=False alors</font> &nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB:
+</font><font size="2"><span style="font-family: Courier New"><font color="#0000FF">If B=False Then</font>..&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'expression après <font color="#0000FF">Si</font> 
+est évaluée, si elle est vraie '<font color="#0000FF">alors</font>' se produit.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Autre exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Si C=2 alors..</font> (<font color="#0000FF">If 
+C=2 Then</font> ..en VB)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'expression C=2 est évaluée, si C est 
+effectivement égal à 2, C=2 est évalué et prend la valeur True; dans ce cas le 
+programme se poursuit après Then. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">si C est différent de 2, C=2 est évalué et 
+prend la valeur False; dans ce cas le programme ne se poursuit pas après Then.
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Les choix: Si..Alors</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le programme doit 
+pouvoir choisir parmi deux ou plusieurs possibilités en fonction d’une 
+condition&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vorganig2.GIF" width="138" height="129"></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Si Condition Alors</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Sinon</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 2</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Si Condition est vraie 
+Action 1 est effectuée, sinon Action 2 est effectué.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Parfois il n’y a pas 
+de seconde branche&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Si Condition Alors</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;ou sur une seule 
+ligne:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Si Condition Alors </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il peut y avoir 
+plusieurs conditions imbriquées&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Si Condition 1 Alors</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#FF00FF">Si Condition 2 Alors</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; margin-top: 0; margin-bottom:0">
+<font color="#FF00FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Sinon</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 2</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; margin-top: 0; margin-bottom:0">
+<font color="#FF00FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Sinon</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 3</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Noter bien le retrait 
+des lignes de la seconde condition afin de bien visualiser la logique du 
+programme&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Action 2 est effectuée 
+si la Condition 1 est remplie et la Condition 2 n’est pas remplie.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En VB cela correspond 
+à l’instruction <font color="#0000FF">IF THEN</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+If</font> Condition 1 <font color="#0000FF">Then</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Else</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 2</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">End If</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Remarque 
+sur les conditions</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une condition contient 2 
+valeurs et un opérateur:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+C&gt;2 Alors</font>&nbsp; est correcte.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B=3 Alors</font> est correcte.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B&gt;2 Et&nbsp; B&lt;7 Alors</font>&nbsp; est correct&nbsp;&nbsp;&nbsp; (<font color="#0000FF">If 
+B&gt;2 And B&lt;7 Then</font> en Visual Basic)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2"><span style="font-family: Courier New"><b>Exemple:</b> Trouver le 
+plus grand nombre entre x et y&nbsp; et le mettre dans max</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Variable x 
+en Numerique</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Variable y 
+en Numerique</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Variable 
+max en Numerique</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Si x&gt;y 
+Alors</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; 
+max&lt;-x</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Sinon</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; 
+Max&lt;-y</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Fin Si</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2"><span style="font-family: Courier New">En VB</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim x As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim y As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">DIm max As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">if x&gt;y 
+Then</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; 
+max=x</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">else</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; 
+max=y</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">End if</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Les choix: Sélectionner (Décider entre)&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il est parfois 
+nécessaire d’effectuer <b>un choix</b> parmi plusieurs solutions&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vorganig4.GIF" width="138" height="129"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On&nbsp; parle de sélection&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Sélectionner.</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Le cas&nbsp;: condition 1</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Le cas&nbsp;: condition 2</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 2</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Les autres cas</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">FinSélectionner</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la condition 1 est 
+remplie Action 1 est effectuée puis le programme saute après FinSelectionner.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la condition 1 
+n’est pas remplie, on teste la condition 2..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si aucune condition 
+n’est remplie on saute à <font color="#0000FF">Les autres cas</font>, on effectue Action 4.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">On parle parfois
+de <span style="background-color: #FFFFFF"><font color="#0000FF">Décider Entre </font>dans
+certains cours d'algorithme.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En VB cela correspond 
+à </span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Select Case Valeur</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Case </font>condition 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 1</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Case </font>condition 2</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 2</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Case Else</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action 4</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">End Select</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si Valeur=Condition 1 
+Action 1 est effectuée, si Valeur=Condition 2 Action 2 est effectuée... &nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Les répétitions: Pour...Répéter</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Permet de répéter une 
+séquence un nombre de fois déterminé&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le cas le plus 
+classique est&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Pour I variant de 0 à 
+N Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">FinRépéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">I prend la valeur 0, 
+'Action' est effectuée,</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">puis I prend la valeur 
+1, Action est effectuée,</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">puis I prend la valeur 
+2..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">cela jusqu'à N</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La boucle tourne N+1 
+fois&nbsp; (car ici on commence à 0 )</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cela se nomme une <b>
+itération</b>.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Intérêts?</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Au lieu de faire</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Afficher (1*7)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Afficher (2*7)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Afficher (3*7)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Afficher (4*7)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">on remarque qu'un élément 
+prend successivement la valeur 1, 2, 3, ..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une boucle peut faire 
+l'itération:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">Pour i allant 
+de 1 à 10 Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+Affiche (i*7)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Fin répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La variable dite 'de boucle' prend bien les 
+valeurs 1 puis 2 puis 3.. ; elle est utilisée dans le corps de la boucle. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une instruction <font color="#0000FF">Sortir</font> 
+permet de sortir prématurément de la boucle.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En VB</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+For</font> i=0 <font color="#0000FF">To</font> N</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ..</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">N</span></font><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">ext</span></font><span style="background-color: #FFFFFF"> 
+i</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'instruction <font color="#0000FF">Exit For</font> 
+permet de sortir prématurément de la boucle.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On peut aussi <b>boucler 
+en parcourant tous les éléments d’une collection</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">(Une collection est une 
+liste d'objets, liste de taille variable en fonction de ce qu'on ajoute ou 
+enlève.)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Pour Chaque élément de 
+la liste</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Fin Pour</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En VB&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">For each… In</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Next</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Les répétitions: Tant que&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Permet de faire une 
+<b>boucle sans connaître le nombre d’itérations à l’avance.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Tant Que Condition</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Fin Tant Que</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">L’action qui est dans 
+la boucle doit modifier la condition afin qu’à un moment ‘Tant que’ ne soit pas vérifié 
+et que l’on sorte de la boucle. Sinon la boucle tourne sans fin.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour plus cadrer avec 
+la réalité&nbsp;: </span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Faire tant que 
+condition</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Boucler</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;En VB&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+Do while</font> Condition</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Loop</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><u>
+<span style="text-decoration: none; font-size: 10.0pt; font-family: Courier New">
+&nbsp;</span></u></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il existe une boucle 
+équivalente&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+Jusqu’à </font>Condition</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En VB&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Do</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Action</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+Loop Until</font> Condition</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une instruction <font color="#0000FF">Exit Do</font> 
+permet de sortir prématurément de la boucle.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Logique:
+ET, OU, NON:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une condition contient 2 
+valeurs et un opérateur:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+C&gt;2 Alors</font>&nbsp; est correcte.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B=3 Alors</font> est correcte.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+2&lt;B&lt;7 Alors</font> est <font color="#FF0000">incorrecte</font> car il y a 2 
+opérateurs, il faut dans ce cas utiliser plusieurs conditions et des opérateurs 
+logiques:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B&gt;2 Et&nbsp; B&lt;7 Alors</font>&nbsp; est correct&nbsp;&nbsp;&nbsp; (<font color="#0000FF">If 
+B&gt;2 And B&lt;7 Then</font> en Visual Basic)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">La condition est évaluée:
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple : Soit 
+l'expression <font color="#0000FF">Si C&gt;2 Alors</font> , elle sera évaluée; si C 
+contient 3, C&gt;2 est vérifié donc Vrai.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>ET:</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On a vu </span></font>
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B&gt;2 Et&nbsp; B&lt;7 Alors</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">Il existe aussi:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2"><b>OU:</b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B&gt;2 Ou&nbsp; B&lt;7 Alors</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">Et</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2"><b>NON:</b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si
+NON(B&gt;2) Alors </font>est équivalent à<font color="#0000FF"> </font></span></font>
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Si 
+B&lt;=2 Alors</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">En VB on utilise les
+termes</font><font color="#0000FF" size="2"> AND OR NOT.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB:
+<font color="#0000FF">If Not(B&gt;2 Then..</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Saut:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="2">Aller
+à</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Permet
+de 'sauter' vers un label (une étiquette= un endroit du code)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable B en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable C en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">B&lt;-12</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">A&lt;-B</font>&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Aller
+à Poursuivre</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">C</font><font color="#0000FF" face="Courier New" size="2">&lt;-1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Étiquette
+Poursuivre</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">A&lt;-A+1</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Le
+programme saute de</font><font color="#0000FF" face="Courier New" size="2"> </font><b><font face="Courier New" size="2" color="#0000FF">Aller
+à Poursuivre </font><font face="Courier New" size="2">à</font><font face="Courier New" size="2" color="#0000FF">
+Étiquette Poursuivre</font><font face="Courier New" size="2">, </font></b><font face="Courier New" size="2">il
+n'exécute pas</font><b><font face="Courier New" size="2" color="#0000FF"> </font></b><font color="#0000FF" face="Courier New" size="2">C</font><font color="#0000FF" face="Courier New" size="2">&lt;-1</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En
+VB on utilise</font><font color="#0000FF" face="Courier New" size="2">  GoTo.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF" face="Courier New" size="2">monetiquette:</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">Goto
+monetiquette</font></p>
+<p style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Programmation
+structurée:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Avant
+on écrivait:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable B en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable C en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">B&lt;-12</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">A&lt;-B</font>&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Si
+A=B Aller à Poursuivre1</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">C</font><font color="#0000FF" face="Courier New" size="2">&lt;-1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Étiquette
+Poursuivre1</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Si
+A&lt;&gt;B Aller à Poursuivre2</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">C</font><font color="#0000FF" face="Courier New" size="2">&lt;-2</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Étiquette
+Poursuivre2</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+faisait des sauts dans tous les sens!! Code illisible, non structuré.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Maintenant
+on structure et on n'utilise pas de 'Aller à'.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable A en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable B en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Variable C en Numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">B&lt;-12</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">A&lt;-B</font>&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Si
+A=B Alors</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+C</font><font color="#0000FF" face="Courier New" size="2">&lt;-1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Sinon</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+C</font><font color="#0000FF" face="Courier New" size="2">&lt;-2</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2" color="#0000FF">Fin
+Si</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF">'Procédure':</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On a déjà vu cette 
+notion.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New">Une
+procédure est un ensemble d'instructions référencée par un nom et dont l'exécution
+est provoquée par le simple énoncé de ce nom.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Quand on appelle une 
+procédure, le logiciel ‘saute’ à la procédure, il effectue celle-ci puis 
+revient effectuer ce qui suit l’appel.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En algorithmie, une procédure commence par le
+mot <font color="#0000FF">Proc</font> et se termine par <font color="#0000FF">End
+Proc</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vprocedure.JPG"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le programme effectuera les instructions 1, 2, 
+3, <b>10</b>, <b>11</b>, 4, 5. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une opération complexe peut être découpée en 
+plusieurs procédures ou sous-programmes plus petits et plus simples qui seront 
+appelés.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Chaque procédure résout un problème.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB une procédure commence par <font color="#0000FF">Sub</font>&nbsp;
+et se termine par <font color="#0000FF">End Sub</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si dans un programme il y a des suites
+d'instructions qui effectuent la même action, cela plusieurs fois, on peut
+créer une procédure contenant la suite d'instructions; elle sera appelée de
+plusieurs endroits du programme.&nbsp;</font><font face="Arial"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On peut fournir aux 
+procédures des <b>paramètres, ce sont des variables qui seront transmises 
+à la procédure.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Création d'une Procédure 'MaProcédure' 
+recevant 2 paramètres:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New; background-color: #FFFFFF">Proc 
+MaProcédure(paramètre1, paramètre2)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">End Proc</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple d'appel de la procédure 'Maprocédure' 
+en envoyant 2 paramètres:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+    <span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;MaProcédure(premierparamètre,
+    secondparamètre)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple : si j'écris <font color="#0000FF">MaProcédure(2,3)</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">dans la procédure 
+MaProcédure paramètre1=2 et paramètre2=3.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Il est nécessaire de 
+définir le type des paramètres:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" size="2"><span style="background-color: #FFFFFF; font-family: Courier New">Proc</span></font>
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF"> MaProcédure(paramètre1 <b>En Integer</b>, 
+paramètre2 <b>En Integer</b>)</span></font></span><span style="font-family: Courier New; font-weight: 700">
+</span><span style="font-family: Courier New">indique que la procédure attend 2 
+entiers.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il y a 2 manières 
+d’envoyer des paramètres&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Par valeur</b>&nbsp;: 
+(<font color="#0000FF">By Val</font>)c’est la valeur, le contenu de la variable qui est envoyé.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Par référence</b>&nbsp;:(<font color="#0000FF">By Ref</font>) 
+c’est l’adresse (le lieu physique où se trouve la variable) qui est envoyée. Si 
+la Sub modifie la variable, cette modification sera visible dans la procédure 
+appelante après le retour.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois on a besoin que la procédure appelée 
+retourne une valeur dans ce cas il faut créer une <b>fonction</b></font><b>:</b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Function MaFonction()&nbsp; En Integer&nbsp;&nbsp;&nbsp; 
+'</span></font><span style="font-family: Courier New"><font size="2">MaFonction 
+qui retourne un entier</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Retourne 
+Valeur</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Function</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour appeler la fonction:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ValeurRetournée = MaFonction()</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Donc ValeurRetournée est aussi un entier</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><b>Exemple de fonction:</b> créer une fonction 
+qui retourne le plus petit nombre: </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Fonction Minimum (x en 
+Numerique, y en Numérique) en numérique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Si x&lt;y Alors</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Retourner x</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Sinon</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Retourner y</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Fin Si</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Fin Fonction</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Pour l'utiliser:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Variable Min en Numerique</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#0000FF">Min&lt;-Minimum (5,7)
+</font>'Appelle la fonction en donnant les 2 paramètres 5 et 7.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Min contient maintenant 5</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Et VB les sous-programmes 
+(ou procédures) sont des <font color="#0000FF">Sub</font>(procédures) ou des <font color="#0000FF">
+Function</font>. Pour appeler une procédure on utilise <font color="#0000FF">
+Call NomProcedure() ou NomProcedure()</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">En Vb</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Function Minimum(x As Integer, y As 
+Integer) As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; If x&lt;y Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return x</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Else</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return y</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; End If</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">End Function</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Pour l'utiliser:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim min As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Min= Minimum (5,7)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La fonction résout un problème et plus 
+précisément à partir de données, calcule et fournit un résultat.</font><font face="Arial"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Notion de 'tableau'</span></b></font></span><b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Un tableau de variables 
+permet de <b>stocker plusieurs variables de même type sous un même nom</b> de variable, 
+chaque élément étant repéré par un <b> <i>index</i></b> ou <b> <i>indice</i></b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est une suite finie 
+d'éléments.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Soit un tableau A de 4 
+éléments</span></font></p>
+<table id="AutoNumber5" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center">3</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">12</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">4</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">0</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour accéder à un élément il faut utiliser 
+l'indice de cet élément.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'élément d'index 0 se nomme A[0]&nbsp; et 
+contient la valeur 3.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#FF0000">On remarque que le premier 
+élément est l'élément d'index 0&nbsp; (ZERO) en .Net.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'élément d'index 1 se nomme A[1]&nbsp; et 
+contient la valeur 12.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand on crée un tableau, <b>il a un&nbsp; nombre 
+d'éléments bien défini</b>: 4 dans notre exemple d'index 0 à 3.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour donner une valeur à un des éléments , on 
+affecte la valeur à l'élément.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">A[2] &lt;- 4</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour lire une valeur dans un tableau et 
+l'affecter à une variable x:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">x &lt;- A[2]</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Traduction en VB</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">A(2)=4</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">x = A(2)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Pour parcourir tous les éléments d'un 
+tableau</b> on utilise une boucle:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: afficher tous les éléments du tableau 
+tab qui contient n éléments.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span class="code"><font color="#0000FF" size="2" face="Courier New">début<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Pour i allant de 0 à n-1 Répéter<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+écrire(tab[i])<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fin Répéter<br>
+fin</font><font face="Courier"><br>
+&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span class="code"><font face="Courier New" size="2">En VB:</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span class="code"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">For i=0 to n-1</font></font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span class="code"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Affiche ( tab(i))&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">
+'routine d'affichage</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Next i</font> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il existe des <b>tableaux multidimensionnels 
+avec plusieurs index</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voyons les index de chaque élément:</font></p>
+<table id="AutoNumber6" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="19%" border="1">
+  <tr>
+    <td align="middle" width="31%"><font face="Courier New" size="2">B(0,0)</font></td>
+    <td align="middle" width="35%"><font face="Courier New" size="2">B(0,1)</font></td>
+    <td align="middle" width="34%"><font face="Courier New" size="2">B(0,2)</font></td>
+  </tr>
+  <tr>
+    <td align="middle" width="31%">
+    <font color="#FF0000" face="Courier New" size="2">B(1,0)</font></td>
+    <td align="middle" width="35%"><font face="Courier New" size="2">B(1,1)</font></td>
+    <td align="middle" width="34%"><font face="Courier New" size="2">B(1,2)</font></td>
+  </tr>
+  <tr>
+    <td align="middle" width="31%"><font face="Courier New" size="2">B(2,0)</font></td>
+    <td align="middle" width="35%"><font face="Courier New" size="2">B(2,1)</font></td>
+    <td align="middle" width="34%"><font face="Courier New" size="2">B(2,2)</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">B[1,0]&nbsp; désigne l'élément rouge (ligne 2, colonne 1).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voyons par exemple, le contenu de chaque 
+élément:</font></p>
+<table id="AutoNumber9" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="19%" border="1">
+  <tr>
+    <td align="middle" width="31%"><font size="2">3</font></td>
+    <td align="middle" width="35%"><font size="2">12</font></td>
+    <td align="middle" width="34%"><font size="2">0</font></td>
+  </tr>
+  <tr>
+    <td align="middle" width="31%"><font color="#FF0000" size="2">18</font></td>
+    <td align="middle" width="35%"><font size="2">4</font></td>
+    <td align="middle" width="34%"><font size="2">5</font></td>
+  </tr>
+  <tr>
+    <td align="middle" width="31%"><font size="2">2</font></td>
+    <td align="middle" width="35%"><font size="2">2</font></td>
+    <td align="middle" width="34%"><font size="2">8</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici
+B[1,0]&nbsp; =18</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF">
+Notion de 'Collection':</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une collection 
+permet de stocker plusieurs variables ou objets, 
+chaque élément étant repéré par un <i>index</i> ou <i>indice</i>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Soit la collection <font color="#0000FF">Col,
+</font>au départ elle est vide.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">J'ajoute des éléments (ou items) à cette 
+collection.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Col.Ajouter (&quot;Toto&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voici la collection:</font></p>
+<table id="AutoNumber7" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La collection a maintenant 1 élément.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Col.Ajouter(&quot;Lulu&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Col.Ajouter(&quot;Titi&quot;)</font></p>
+<table id="AutoNumber7" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Lulu</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Titi</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La collection a 3 éléments maintenant.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Col.Retirer(2) </font>
+<font face="Courier New" size="2">enlève l'élément numéro 2</font></p>
+<table id="AutoNumber8" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Titi</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La collection n'a plus que 2 éléments 
+maintenant.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On voit que le nombre d'éléments n'est pas 
+connu à l'avance, il varie en fonction des éléments ajoutés (ou retirés)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un élément est repéré par un indice.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Col.Add</font>&nbsp;&nbsp;&nbsp; 
+'Ajoute un élément</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Col.Remove</font> 
+'Enlève une élément</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il existe des collections avec des clés 
+permettant de retrouver la valeur d'un élément rapidement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Pile
+et Queue:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><span style="font-size: 10pt; font-family: Courier New">Un
+</span><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">type
+<b>pile ( ou stack) </b> est<b>&nbsp;</b>  <b> LIFO</b> (Last In, First Out)</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font size="2"><span style="font-family: Courier New;">Dernier
+entré, premier sortie.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font size="2"><span style="font-family: Courier New;">Ce
+type de stack (pile) est très utilisé en interne par les programmes
+informatiques: on stocke dans une stack les adresses de retour des procédures
+appelées, au retour on récupère l'adresse du dessus.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>Push</b>
+insère un objet en haut de la pile</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>Pop</b>&nbsp;
+enlève et retourne un objet en haut de la pile</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;" align="center"><img border="0" src="vStack.gif"></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font face="Courier New" size="2">On
+peut utiliser une pile dans un programme pour gérer le déplacement de
+l'utilisateur dans un arbre, les éléments en cours sont stockés par Push,
+pour remonter en chemin inverse, on Pop.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt;"><b><span style="font-size: 10pt; font-family: Courier New">'Queue'</span></b><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>
+de type FIFO</b> (First In, First Out)</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">Premier
+arrivé premier servi.</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font size="2"><span style="font-family: Courier New;">C'est
+la queue devant un cinéma, le premier arrivé, prend son billet le premier.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font face="Courier New" size="2">Les
+éléments stockés dans <font color="#0000ff">Queue</font> sont insérés à
+une extrémité et extrait, supprimés à l'autre.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font size="2"><span style="font-family: Courier New;">&nbsp;&nbsp;&nbsp;
+Le nombre d'élément de la queue est géré automatiquement.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt;"><font size="2"><span style="font-family: Courier New">Généralement
+on à les possibilités suivantes:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt; text-indent: 35.4pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>DeQueue</b>
+supprime et retourne l’objet de début de liste</span></p>
+<p class="MsoNormal" style="margin-top: 6pt; text-indent: 35.4pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>EnQueue</b>
+ajoute un objet en fin de liste</span></p>
+<p class="MsoNormal" style="margin-top: 6pt; text-indent: 35.4pt;"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;"><b>Peek</b>
+retourne l’objet de début sans le supprimer</span></p>
+<p class="MsoNormal" style="margin-top: 6pt;" align="center"><span style="font-size: 10pt; font-family: &quot;Courier New&quot;;">&nbsp;<img border="0" src="vQueue.gif"></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Liste
+Chaînée:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Une
+liste chaînée est une liste d'éléments non classée. Dans chaque
+enregistrement il y a, outre le contenu de l'enregistrement, la localisation,
+l'adresse, l'index de l'enregistrement précédent et de l'enregistrement
+suivant.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2"><img border="0" src="vlistech.JPG" width="270" height="260"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Ainsi
+on peut parcourir la liste en allant d'enregistrement en enregistrement. il
+existe des algorithmes pour ajouter ou supprimer un enregistrement. La liste
+peut être ouverte ou fermée (le dernier enregistrement bouclant sur le
+premier).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Notion
+de Clé:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Quand
+on classe une série importante de données, on peut utiliser la notion de
+clé/Valeur (Key/Value).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Ici
+on utilise comme clé le numéro du département et comme valeur, le nom du
+département.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2"><img border="0" src="vhashtab.gif" width="153" height="107"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Si
+on a la clé, on peut retrouver la valeur correspondante.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Autre
+exemple: La clé peut être le nom, prénom.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2"><img border="0" src="vhash2.JPG" width="296" height="173"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Notion
+de Hachage:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une <b>fonction de hachage</b> est une
+fonction qui fait subir une succession de traitements à une donnée&nbsp;
+fournie en entrée pour en produire une <b>empreinte</b> servant à identifier
+la donnée initiale.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font face="Courier New" size="2">Donnée d'entrée=&gt; Fonction de hachage
+=&gt; Empreinte.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Le
+résultat d'une fonction de hachage peut être appelé selon le contexte
+empreinte, somme de contrôle (dans le cas de la CRC), résumé, condensé,
+condensat ou encore empreinte cryptographique (dans le cadre de la
+cryptographique). On l'appelait aussi autrefois aussi <i>signature.</i></font></p>
+<ul>
+  <li>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Les
+    fonctions de hachage sont&nbsp; utiles en <b>cryptographie</b> où elles
+    sont utilisées pour chiffrer une donnée initiale.</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Mot
+de passe: &quot;GftUi6h77&quot;=&gt; Fonction de hachage =&gt; Empreinte:
+&quot;4587213399545684246847&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">C'est
+l'empreinte qui va être enregistrée. Quant l'utilisateur rentre le mot de
+passe, on le 'hache&quot; et on compare l'empreinte du mot de passe tapé par
+l'utilisateur avec l'empreinte enregistrée pour voir si le mot tapé est bon.
+Ainsi a aucun moment le mot de passe est en clair.</font></p>
+<ul>
+  <li>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;Ces
+    fonctions sont très utilisées&nbsp; pour accéder rapidement à une
+    donnée contenue dans un grande nombre de données.</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Ceci
+grâce aux tables de hachage (ou <i>hash tables</i> en anglais).&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Un
+exemple classique et simpliste de fonction de hachage est la fonction modulo n&nbsp;:
+Si on dispose d'un grand nombre de données, à mettre dans un tableau de n
+cases, on pourra ranger l'élément numéro i dans la case i modulo n.
+Ainsi, pour aller chercher notre donnée, nous n'avons plus besoin de parcourir
+tous les éléments jusqu'à trouver l'élément i&nbsp;: Il suffit de
+parcourir les éléments contenus dans la case i modulo n. Si les données
+initiales étaient réparties uniformément, le temps de recherche en moyenne
+est divisé par n. En pratique, on utilise des fonctions de hachage bien plus
+complexes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">Le
+hachage est un nombre qui permet la localisation des éléments dans une table.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Nous
+avons une série de noms et adresses, on veut rapidement trouver l'adresse
+correspondant à un nom sans avoir à faire une boucle qui compare le nom
+cherché avec chaque élément du tableau pour le trouver.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+chaque nom la fonction de hachage, va créer un numéro (empreinte).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vhash1.JPG" width="296" height="173"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+crée des enregistrements&nbsp; indexée par le dit numéro (empreinte), chaque
+enregistrement contenant l'adresse.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font face="Courier New" size="2"><img border="0" src="vhash2.JPG" width="296" height="173"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si maintenant on cherche un nom, on calcul son
+empreinte, ce qui nous donne l'index de l'enregistrement que l'on trouve
+rapidement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font face="Courier New" size="2"><img border="0" src="vhash3.JPG" width="467" height="173"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+la fonction de hachage est <b>uniforme</b>, cela veut dire que pour des entrées
+différentes, il n'y a jamais la même empreinte. Ce qui est la plupart du temps
+impossible.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Deux
+noms peuvent donc donner la même empreinte parfois (on parle de <b>collision</b>).
+Dans ce cas, on range les enregistrements ayant la même empreinte les uns à la
+suite des autres (sous forme de liste chaînée). Si le premier enregistrement
+n'est pas le bon, on regarde le suivant.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vhash4.JPG" width="467" height="173"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p></p>
+<p></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Erreur d'exécution: Notion</span></font></span><span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0"><font size="4" color="#0000FF">
+de 'Sécurisation' du code:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<font FACE="Courier New">
+<p ALIGN="LEFT"><font size="2">Des instructions doivent </font><b>
+<font size="2">protéger certaines parties du code afin d'éviter d'effectuer des 
+opérations incohérentes.</font></b></p>
+<p ALIGN="LEFT"><font size="2">Si l'utilisateur entre 2 nombres X et Y et qu'une 
+instruction exécute&nbsp; <font color="#0000FF">Z&lt;=X/Y</font> ,&nbsp;alors 
+que Y=0 ,la division par 0 étant impossible, le logiciel 'plante': Il s'arrête et 
+donne un code d'erreur(du genre 'Erreur division par 0 interdite').</font></p>
+<p ALIGN="LEFT"><font size="2">Il s'agit d'une '<b>Erreur d'exécution</b>'.</font></p>
+<p ALIGN="LEFT"><font size="2">En VB on dit que X/Y 'lève une exception'.</font></p>
+<p ALIGN="LEFT">
+<font size="2"><span style="font-family: Courier New">Il appartient au 
+programmeur, une fois l'algorithme écrit, de le sécuriser: </span>Des instructions doivent </font><b>
+<font size="2">protéger certaines parties du code afin d'éviter d'effectuer des 
+opérations incohérentes.</font></b></p>
+<p ALIGN="LEFT"><font size="2">- On peut donc prévoir l'erreur et ajouter un contrôle
+avant l'exécution de la ligne :&nbsp;</font></p>
+<p ALIGN="LEFT"><font size="2">Si Y est différent de 0 
+alors on effectue la division.</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF">Si Y&lt;&gt;0 Alors</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Z&lt;=X/Y</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF">Sinon</font></p>
+</font><font FACE="TimesNewRoman">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">...</font></p>
+</font>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Fin Si</font></p>
+<font FACE="TimesNewRoman">
+<p ALIGN="LEFT"><font face="Courier New" size="2">En VB:&nbsp;</font></p>
+</font>
+<p ALIGN="LEFT"><font color="#0000FF" face="Courier New" size="2">If Y&lt;&gt; 0
+Then</font></p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp;<font color="#0000FF" face="Courier New" size="2">
+Z= X/Y</font></p>
+<p ALIGN="LEFT"><font color="#0000FF" face="Courier New" size="2">End If</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">-
+L'autre solution est de mettre en place un système de surveillance de
+l'exécution du code qui, s'il se produit une erreur, fait poursuivre le code à
+un endroit ou il sera géré.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Notion</span></font></span><span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0"><font size="4" color="#0000FF">
+de Drapeau ou 'Flag' et de variable d'état:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Un Flag (ou <b>drapeau</b>) est 
+une variable utilisée pour enregistrer un état, la valeur de cet état servant à 
+déclencher ou non des actions. C'est une manière de retenir qu'un évènement s'est 
+produit.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si le drapeau est abaissé, 
+les voitures roulent..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: Utiliser un Flag pour sortir d'une 
+boucle:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On utilise flagSortir.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">f</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">lagSortir=Faux </span> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Tant que </span></font></span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+&nbsp;flagSortir =Faux</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; "><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;
+</font>&nbsp;Si on doit sortir de la boucle, on met la valeur de flagSortir à 
+Vrai</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Boucler</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">f</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">lagSortir=Faux </span> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+Do while flagSortir =Vrai</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; "><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;
+</font>&nbsp;Si on doit sortir de la boucle, on met la valeur de flagSortir à 
+Vrai</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Loop</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Tant que flagSortir =Faux 
+la boucle tourne.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut généraliser cette notion en parlant de
+<b>variable d'état</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un variable d'état sert à décrire l'état du 
+programme.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">fileIsOpen&nbsp; est une variable indiquant si 
+un fichier est ouvert ou fermé.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">D</span></font></b>
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF"> - Interprétation,
+compilation :
+</font></b></span></p>
+<div class="Corps">
+  <font face="Courier New" size="2">Le texte que vous écrivez pour construire
+  une programme est le <b>code source</b>.</font>
+  <p><font face="Courier New" size="2">Tout langage doit
+  obligatoirement être traduit&nbsp; en <b>
+  langage machine</b> (le langage du processeur) pour que ce programme soit exécutable.</font></p>
+  <p>&nbsp;
+</div>
+<div class="Corps">
+  <font face="Courier New" size="2">
+  Il existe deux stratégies de traduction:.</font>
+</div>
+<ul>
+  <li><font face="Courier New" size="2">le langage traduit les instructions au fur et à mesure qu’elles se
+    présentent&nbsp; (<span class="red">à la volée)</span>au cours de
+    l'exécution.
+    Cela s’appelle <span class="red">l’<b>interprétation</b></span>.</font>
+  <li><font face="Courier New" size="2">le langage commence par traduire l’ensemble du programme
+    (programme source) en langage
+    machine, constituant ainsi un deuxième programme (un deuxième fichier)
+    distinct physiquement et logiquement du premier, c'est le fichier
+    exécutable. Cela s’appelle la <span class="red"><b>compilation.</b></span>
+    Ensuite, pour exécuter le programme, on exécute l'exécutable, ce second programme.&nbsp;</font></li>
+</ul>
+<div class="Corps">
+  <font face="Courier New" size="2">Les premiers langages Basic était interprétés.
+  Un langage interprété était&nbsp; plus maniable: on exécutait
+  directement son code&nbsp; au fur et à mesure qu’on le tapait, sans passer à chaque fois par l’étape supplémentaire de la
+  compilation. Un programme compilé s’exécute
+  beaucoup plus rapidement qu’un programme interprété&nbsp;: le gain est
+  couramment d’un facteur 10, voire 20 ou plus</font>
+</div>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le VB.Net est un langage compilé.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Le
+code source est dans des fichiers '.vb'&nbsp; et l'exécutable un un '.exe'. On
+verra que dans l'environnement de développement vb&nbsp; présente les
+avantages d'un langage interprété (exécution pas à pas, modification du
+source en cours de débogage...) On peut aussi créer une exécutable autonome.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Les
+choses sont plus complexes car en vb , entre le source et l'exécutable il y a
+un code 'intermédiaire'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">E</span></font></b>
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF"> - Quelques algorithmes :
+</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<span style="background-color: #C0C0C0">Recherche dans un 
+tableau.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Soit un tableau A() de 4 
+éléments</span></font></p>
+<table id="AutoNumber10" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center">3</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">12</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">4</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">0</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Je veux parcourir le tableau pour savoir s'il 
+contient le chiffre '4'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut faire une itération afin de balayer le 
+tableau: la variable dite de boucle ( I ) va prendre successivement les valeurs: 
+0 ,1 ,2 ,3. (Attention: dans un tableau de 4 éléments, l'index des éléments est 
+0,1,2,3)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Pour I variant de 0 à 
+3 Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+..</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">FinRépéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la boucle il faut tester si la valeur de 
+l'élément du tableau est bien la valeur cherchée.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Pour I variant de 0 à 
+3 Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Si A(I)= 4 Alors..</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">FinRépéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on a trouvé la bonne valeur, on met un flag 
+(drapeau) à Vrai.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">flagTrouvé&lt;-Faux</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Pour I variant de 0 à 
+3 Répéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Si A(I)= 4 Alors </font></span>
+<font color="#0000FF" face="Courier New" size="2">flagTrouvé&lt;-Vrai</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">FinRépéter</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ainsi si après la boucle flagTrouvé= Vrai, 
+cela veut dire que le chiffre 4 est dans le tableau.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" color="#0000FF" size="2">flagTrouve=False</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" color="#0000FF" size="2">For I=0 To 4</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" color="#0000FF" size="2">&nbsp;&nbsp;&nbsp; If A(I)=4 
+Then flagTrouve=True</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" color="#0000FF" size="2">Next I</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+le tableau était trié dans l'ordre croissant des nombres, on pourrait faire
+notre recherche plus rapidement:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table id="AutoNumber14" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center">0</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">3</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">4</td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center">12</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+regarderait au milieu du tableau 3 : plus petit que 4, donc on regarderait le
+milieu de la partie supérieure du tableau.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Puis
+le milieu de la partie ou se trouve le nombre cherché, puis le milieu....</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Dans
+un grand tableau cela limite considérablement le nombre de boucle.&nbsp;On
+parle de recherche dichotomique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font face="Courier New" size="2">Tri d'</font></span><font face="Courier New" size="2"><span style="background-color: #C0C0C0">un 
+tableau.</span></font></p>
+<font face="Courier New" size="2">
+<p>Pour trier un tableau de chaînes de caractères (des prénoms par exemple), il 
+faut comparer 2 chaînes contiguës, si la première est supérieure (c'est à dire 
+après l'autre sur le plan alphabétique: &quot;Bruno&quot; est supérieur à &quot;Alice&quot;))on 
+inverse les 2 chaînes, sinon on n'inverse pas. Puis on recommence sur 2 autres 
+chaînes en balayant le tableau jusqu'à ce qu'il soit trié.</p>
+<p>Tableau non trié:</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="21%" id="AutoNumber11">
+  <tr>
+    <td width="100%">Bruno</td>
+  </tr>
+  <tr>
+    <td width="100%">Alice</td>
+  </tr>
+  <tr>
+    <td width="100%">Agathe</td>
+  </tr>
+</table>
+<p>On compare les lignes 1 et 2, on inverse</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="21%" id="AutoNumber11">
+  <tr>
+    <td width="100%">Alice</td>
+  </tr>
+  <tr>
+    <td width="100%">Bruno</td>
+  </tr>
+  <tr>
+    <td width="100%">Agathe</td>
+  </tr>
+</table>
+<p>On compare les lignes 2 et 3, on inverse</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="21%" id="AutoNumber12">
+  <tr>
+    <td width="100%">Alice</td>
+  </tr>
+  <tr>
+    <td width="100%">Agathe</td>
+  </tr>
+  <tr>
+    <td width="100%">Bruno</td>
+  </tr>
+</table>
+<p>Le tableau n'étant pas encore trié, on recommence:</p>
+<p>On compare les lignes 1 et 2, on inverse</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="21%" id="AutoNumber13">
+  <tr>
+    <td width="100%">Agathe</td>
+  </tr>
+  <tr>
+    <td width="100%">Alice</td>
+  </tr>
+  <tr>
+    <td width="100%">Bruno</td>
+  </tr>
+</table>
+<p>On compare les lignes 2 et 3, on n'inverse pas.</p>
+<p>Le tableau est trié.</p>
+<p>Tout l'art des routines de tri est de faire le moins de comparaisons possible 
+pour trier le plus vite possible.&nbsp; </p>
+<p>On a utilisé ici le <b>Bubble Sort</b> (ou tri à bulle); on le nomme ainsi 
+car l'élément plus petit remonte progressivement au fur et à mesure jusqu'au 
+début du tableau comme une bulle. (&quot;Agathe&quot; est passé de la troisième à la 
+seconde puis à la première position).</p>
+<p>Une boucle externe allant de 1 à la fin du tableau balaye le tableau N fois ( 
+La boucle varie de 0 à N-1), une seconde boucle interne balaye aussi le tableau 
+et compare 2 élément contigus&nbsp; (les éléments d'index j et j+1)et les 
+inverse si nécessaire. La boucle interne fait remonter 1 élément vers le début 
+du tableau, la boucle externe le fait N fois pour remonter tous les éléments.</p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Pour</font></span><span style="background-color: #ffffff"><font color="#0000ff"> 
+i allant de 0 à N-1</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp; Pour j allant 
+de 0 à N-1</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Si 
+T(j)&gt;T(j+1) Alors </font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temp&lt;-T(j)
+</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span style="background-color: #ffffff"><font color="#0000ff">T(j)</font></span><span style="background-color: #ffffff"><font color="#0000ff">&lt;-</font></span><span style="background-color: #ffffff"><font color="#0000ff">T(j+1)</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span><span style="background-color: #ffffff"><font color="#0000ff">
+T(j+1)</font></span><span style="background-color: #ffffff"><font color="#0000ff">&lt;-</font></span><span style="background-color: #ffffff"><font color="#0000ff">Temp</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fin Si</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp; Fin Pour</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;Fin Pour</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">&nbsp;</p>
+<p style="margin-top: 2px; margin-bottom: 0px">En Visual Basic:</p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">Dim i, j , N&nbsp; As 
+Integer&nbsp;&nbsp;&nbsp; </font>'Variable de boucle i, j ; N= nombre d'éléments-1</span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">Dim Temp&nbsp; As 
+String</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">N=4&nbsp; </font>
+'tableau de 5 éléments.</span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">Dim T(N) As 
+String&nbsp; </font>'élément de 0 à 4</span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">For i=0 To N-1</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp; For j=0 To N-1</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If 
+T(j)&gt;T(j+1) then </font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temp=T(j): 
+T(j)=T(j+1):T(j+1)=Temp</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End if</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp; Next j</font></span></p>
+<p style="margin-top: 2px; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font color="#0000ff">&nbsp;Next i</font></span></p>
+<p>Remarque: pour inverser le contenue de 2 variables, on doit écrire</p>
+<p>&nbsp;<font color="#0000ff">Temp=T(j): T(j)=T(j+1):T(j+1)=Temp&nbsp; </font>
+(L'instruction qui faisait cela en VB6 et qui se nommait Swap n'existe plus)</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Cet algorithme de tri peut être optimisé, on 
+verra cela plus loin.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les algorithmes s'occupent aussi de décrire la&nbsp; 
+manière de rechercher des données dans des tableaux, de compresser 
+des données... Nous verrons 
+cela au fur et à mesure. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+If = Si.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Then= Alors</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Step=Pas</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Do (To)= faire</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">While= tant que</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Until= Jusqu'à ce que.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Loop= boucle</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:50 GMT -->
+</html>

@@ -1,0 +1,476 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-18.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:06 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net Link To Objects</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-17.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b><font face="Courier New" size="6" color="#800080">1.18</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">LINK To Objects.</font></b></td>
+    <td width="14%" height="76"><a href="v1-19.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2"><b>'L</b>anguage-<b>In</b>tegrated <b>Q</b>uery'<b>
+(LINQ), </b>veut dire</font> &quot;l<font face="Courier New" size="2">angage de requête
+intégré&quot;.</font></p>
+<p><font face="Courier New" size="2">&nbsp;On l'utilise dans VB à partir de VB2008 (Framework 3.5).</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">C'est un <b>langage de requêtes</b> (permettant d'interroger
+une source de données)&nbsp; directement <b> dans le code Visual Basic</b>&nbsp; et à
+l'aide de mots clés familiers (issues du SQL, le&nbsp; langage d'interrogation
+des bases de données).</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Cette source de données
+peut être une Base de données (Link To SQL et Link To DataSet voir 6.8)un
+fichier XML (Link To XML) mais aussi <b> une collection</b>, <b> un tableau</b>,
+<b> une chaîne
+de caractères</b>.</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+parle dans ce dernier cas de '<b>Link To Objects</b>' . Si un objet prend en charge l'interface <mshelp:link 
+tabIndex=0 keywords="T:System.Collections.IEnumerable">
+IEnumerable</mshelp:link>
+ ou <mshelp:link tabIndex=0 
+keywords="T:System.Collections.Generic.IEnumerable`1">
+IEnumerable<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of
+</span><span class="cpp">&lt;</span><span class="nu">(</span></span>T<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span></span></mshelp:link>
+, le fournisseur LINQ to Objects vous permet de l'interroger.&nbsp;</font></p>
+<p><font face="Courier New" size="2">Les requêtes LINQ (dixit Microsoft) offrent trois principaux avantages par rapport
+aux boucles <span class="keyword">for Each</span> traditionnelles&nbsp;:</font></p>
+<ol>
+  <li>
+    <p><font face="Courier New" size="2">Elles sont plus concises et lisibles, surtout lors du filtrage de
+    plusieurs conditions.</font></p>
+  <li>
+    <p><font face="Courier New" size="2">Elles fournissent des fonctions puissantes de filtrage, de classement et
+    de regroupement avec un minimum de code d'application.</font></p>
+  <li>
+    <p><font face="Courier New" size="2">Elles peuvent être appliquées à d'autres sources de données avec peu
+    ou pas de changement.</font></p>
+  </li>
+</ol>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p><span style="background-color: #FFFF00"><font face="Courier New" size="3">Pour que LINK
+soit pris en compte il faut:</font></span></p>
+<blockquote>
+<p class="procedureSubHeading"><font face="Courier New" size="2">Utiliser le<b>
+framework 3.5</b></font></p>
+<p><font face="Courier New" size="2">Dans les
+propriétés, onglet compile que <b> Option Infer=On</b></font></p>
+<p><font face="Courier New" size="2">Ajouter <b>System.Data.Linq</b>:</font></p>
+</blockquote>
+<div class="subSection">
+  <p><font face="Courier New" size="2">Si vous créez un nouveau projet dans VB
+  2008, toutes les conditions sont effectives par défaut, si vous modifiez un ancien
+  projet, il faut rajouter certaines références:</font></p>
+  <p><font face="Courier New" size="2">Dans l'<span class="ui">Explorateur de
+  solutions (Projet, Propriétés..)</span>, cliquez sur <span class="ui"><b>Références</b></span>,
+  puis cliquez sur <span class="ui"><b>Ajouter une référence</b></span>.</font></p>
+  <p><font face="Courier New" size="2">Cliquez sur <span class="ui">.NET</span>,
+  sur l'assembly <b>System.Data.Linq</b>, puis sur <span class="ui">OK, cela
+  ajoute la référence</span>.</font></p>
+  <p align="center"><img border="0" src="vlinq1.JPG" width="623" height="535"></p>
+  <p><font face="Courier New" size="2">Il faut ajouter l'espace de nom:</font></p>
+  <p><font face="Courier New" size="2">Dans l'explorateur de solution cocher
+  Systel.Data.Link comme ci-dessus ou ajouter les directives suivantes en haut
+  du <span class="code">Module1</span>&nbsp;:</font><span codeLanguage="VisualBasic"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font color="#0000FF" size="2" face="Courier New">Imports</font></span><font color="#0000FF" size="2" face="Courier New"> 
+  System.Data.Linq</font>
+      </span>
+  </p>
+</div>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFF00"><font face="Courier New" size="3">Principe
+d'une requête Link:</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">A
+titre d'exemple simpliste, on a des données dans MyData et chaque donnée a un
+champ 'Nom'. Comment chercher les enregistrements ayant comme nom
+&quot;toto&quot;?</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+Resultat = </font></font><font face="Courier New" size="2" color="#0000FF">From
+Element In MyData _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Where
+Element.Nom =</font> <font COLOR="#a31515">&quot;Toto&quot;</font> _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Select
+Element</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+crée une <b>variable de requête</b> (ici ' Dim Resultat') qui contient les
+résultats,</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">puis
+l'<b>expression de requête</b> composée de:</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">From&nbsp;
+  </font>: dans quoi chercher? dans chaque Element de MyData.</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Where</font>
+  : précise les conditions à appliquer.</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Select</font>:
+  Précise les éléments qui vont apparaître dans 'Resultat'</font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+que Dim From In Where Select doivent être sur une seule unique et même ligne;
+pour la lisibilité, on écrit sur plusieurs lignes en ajoutant des
+continuateurs de lignes &quot; _&quot;.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+aussi qu'initialement on connaît MyData et on sait que chaque élément de
+MyData a un champ 'Nom', c'est tout!! On utilise dans la requête les nouvelles
+variables 'Resultat' et 'Element' sans avoir à déclarer leurs types (on aurait
+pu le faire). 'Element' est une variable de portée déduite comme élément de
+MyData.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">'Et
+pour afficher les noms&nbsp; dans une ListBox:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">For
+Each P In Resultat</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;
+ListBox1.Items.Add(P.NOM )</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Next</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><u><font color="#0000FF">Order
+By</font> </u>permet de trier les résultats.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font face="Courier New" size="2" color="#0000FF">Dim</font></span><font face="Courier New" size="2" color="#0000FF">
+Resultat = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">From</span>
+Element <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">In</span>
+MyData _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<b>Order
+By</b> Element.Price Descending, Element.Nom _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Select</span>
+Element.Nom, Element.Price</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici
+on trie par prix décroissant, puis à prix égal sur le nom croissant.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+qu'on sélectionne seulement 2 'colonnes'.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF"><b>Link
+sur un tableau d'Integer</b></font></span></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Un
+tableau peut être interrogé par Link.</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Exemple:
+rechercher les nombres pairs dans un tableau d'Integer :</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: green"><font face="Courier New" size="2">'
+<u>La Data source</u>: c'est un tableau d'Integer</font></span><font face="Courier New" size="2">&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+numbers() <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>
+= {0, 1, 2, 3, 4, 5, 6}</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">'
+<u>Création de la requête.</u></span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Pour
+chaque élément num dans la source</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Si
+l'élément num est tel que num Mod 2=0 (condition pour qu'il soit pair)</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Selectionner
+num et le mettre dans réponses</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<span style="COLOR: blue">Dim</span>
+réponses = <font color="#0000FF">From</font> num <span style="COLOR: blue">In</span>
+numbers _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Where</font> num <span style="COLOR: blue">Mod</span> 2 =
+0&nbsp; _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Select</span> num&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">'
+<u>Exécution de la requête</u>.</span>&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'
+<font color="#008000">On utilise les réponses</font></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">For</span>
+<span style="COLOR: blue">Each</span> number <span style="COLOR: blue">In</span>
+ réponses&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Console.Write(number &amp; <span style="COLOR: maroon">&quot; &quot;</span>)</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Next</span></font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Cela affiche sur la console(menu
+Affichage puis Sortie):&nbsp; 0 2 4 6</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">On peut vouloir compter
+uniquement les nombres pairs:</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+nombredepair = (From num <span style="COLOR: blue">In</span> numbers _&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Where num <span style="COLOR: blue">Mod</span> 2 = 0 _&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Select</span>  num).Count()</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New" color="#0000FF">Console.Write(nombrepair)
+</font><font SIZE="2" face="Courier New" color="#008000">'pour afficher 4</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">On remarque que dans le
+premier exemple (Select num) l'exécution de la requête est effectuée au cours
+de la boucle For Each (<b>exécution différée par rapport à la création</b>)
+alors que dans le second exemple (count) , l'<b>exécution est immédiate.</b></font></p>
+<p xmlid="PARA006">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font color="#0000FF" size="4" face="Courier New"><b>Link sur
+les caractères d'une chaîne
+de caractères</b></font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Soit
+une chaîne de caractères <font color="#0000FF">MyString</font>, rechercher les
+caractères qui sont des nombres.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><br>
+<font face="Courier New" size="2"><font color="#008000">        ' Un string</font>&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">        Dim
+MyString As String = &quot;ABCjkjhkhs666KMOOP&quot;</font><br>
+<br>
+<font color="#008000">        ' Select les caractères qui sont des nombres</font><br>
+<font color="#0000FF">        Dim Query = From ch In MyString _<br>
+                          Where ch.IsDigit(ch) _<br>
+                          Select ch</font><br>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#008000">        '
+Exécution de la requête</font><br>
+<font color="#0000FF">        For Each c As Char In Query<br>
+&nbsp; Console.Write(c &amp; " ")<br>
+        Next<br>
+</font><br>
+<font color="#008000">        ' Combien y a t-il de nombres?</font><br>
+<font color="#0000FF">        Dim count As Integer = Query.Count()<br>
+Console.WriteLine("Count = " &amp; count)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+remarque qu'il n'est pas nécessaire de réexecuter la requête.</font><font face="Courier New" size="2"><br>
+<br>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#008000">        '
+Sélectionner tous les caractères avant '6'</font><br>
+<font color="#0000FF">        Dim Query2 = MyString.TakeWhile(Function(c) c &lt;>
+&quot;6&quot;)</font><br>
+<br>
+        ' Execute the second query<br>
+<font color="#0000FF">        For Each ch In Query2<br>
+&nbsp;Console.Write(ch)<br>
+        Next</font><br>
+<br>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font color="#0000FF" size="4" face="Courier New"><b>Link sur
+les mots d'une chaîne de caractères.</b></font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Rechercher
+combien de fois une String contient le mot 'Basic':</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><br>
+<font face="Courier New" size="2"><font color="#0000FF">        Dim text As String =
+&quot;Ceci est un cours Visual Basic&quot; &amp; _<br>
+                  " pour les débutants et les autres&quot;</font><br>
+<br>
+<font color="#0000FF">        Dim searchTerm As String = &quot;Basic&quot;</font><br>
+<br>
+<font color="#008000">        ' Conversion de la String en Tableau de mots:.</font><br>
+<font color="#0000FF">        Dim dataSource As String() = text.Split(New Char() {" ", ",", ".", ";", ":"}, _<br>
+                                                 StringSplitOptions.RemoveEmptyEntries)</font><br>
+<br>
+<font color="#008000">        ' Création et exécution de la requête</font><br>
+<font color="#008000">        ' Utiliser ToLower pour&nbsp; trouver &quot;Basic
+&quot; et &quot;Basic&quot;</font>&nbsp;<br>
+<font color="#0000FF">        Dim Query = From word In dataSource _<br>
+                      Where word.ToLowerInvariant() = searchTerm.ToLowerInvariant() _<br>
+                      Select word<br>
+</font><br>
+<font color="#008000">        ' Compter les 'Basic'.<br>
+</font><font color="#0000FF">        Dim count As Integer = Query.Count()<br>
+Console.WriteLine(count )</font><br>
+</font><br>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font color="#0000FF" size="4" face="Courier New"><b>Link
+pour rechercher la différence entre 2 listes de nom.</b></font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><br>
+<font face="Courier New" size="2">Rechercher dans la String nom1, les noms qui
+ne sont pas aussi dans nom2</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#008000">        '
+Soit 2 tableaux de Sting&nbsp;</font><br>
+<font color="#0000FF">        Dim nom1 As String() =&nbsp;<font SIZE="2"> {</font><font SIZE="2" COLOR="#a31515">&quot;</font></font><font color="#a31515">Philippe</font><font color="#0000FF"><font SIZE="2" COLOR="#a31515">&quot;</font><font SIZE="2">,
+</font><font SIZE="2" COLOR="#a31515">&quot;</font></font><font color="#a31515">Paul</font><font color="#0000FF"><font SIZE="2" COLOR="#a31515">&quot;</font><font SIZE="2">}</font><br>
+        Dim nom2 As String() <font SIZE="2">= {</font><font SIZE="2" COLOR="#a31515">&quot;</font></font><font color="#a31515">Paul</font><font color="#0000FF"><font SIZE="2" COLOR="#a31515">&quot;</font><font SIZE="2">,
+</font><font SIZE="2" COLOR="#a31515">&quot;</font></font><font color="#a31515">Jean</font><font color="#0000FF"><font SIZE="2" COLOR="#a31515">&quot;</font><font SIZE="2">}</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><br>
+<br>
+<font color="#008000">        ' Créer la requête.</font><br>
+<font color="#0000FF">        Dim difference = nom1.Except(nom2)</font><br>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><br>
+<font color="#008000">        ' Executer</font><br>
+<font color="#0000FF">        For Each name As String In difference<br>
+&nbsp;Console.WriteLine(name)<br>
+        Next</font><br>
+</font><br>
+<font face="Courier New" size="2">Affiche 'Philippe'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4"><b>Link
+sur ArrayList</b></font></span></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Exemple
+de Microsoft.</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+faut savoir utiliser les Classes.&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Créer
+4 étudiants ayant un nom, prénom et des notes. Rechercher les étudiants dont
+la première note est &gt;95.</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000"><span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'
+Création de la classe Student</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Public</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Class</span>
+Student&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&nbsp;&nbsp;&nbsp;
+Public</span> FirstName <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+String&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&nbsp;&nbsp;&nbsp;
+Public</span> LastName <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+String&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&nbsp;&nbsp;&nbsp;
+Public</span> Scores <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+Integer()&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">End</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Class</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<font color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Sub</span>
+Main()</font></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">&nbsp;<span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'Création
+de 4 étudiants avec nom prénom et note </span></font><font face="Courier New" size="2" color="#0000FF">&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&nbsp;Dim</span>
+student1 <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">With</span>
+{.FirstName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Svetlana&quot;</span>,
+.LastName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Omelchenko&quot;</span>,
+.Scores = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Integer() {98, 92, 81, 60}}&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Dim</span>
+student2 <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">With</span>
+{.FirstName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Claire&quot;</span>,&nbsp;
+.LastName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;O'Donnell&quot;</span>,
+.Scores = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Integer() {75, 84, 91, 39}}&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&nbsp;Dim</span>
+student3 <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">With</span>
+{.FirstName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Cesar&quot;</span>,&nbsp;
+.LastName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Garcia&quot;</span>,
+.Scores = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Integer() {97, 89, 85, 82}}&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Dim</span>
+student4 <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">With</span>
+{.FirstName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Sven&quot;</span>,&nbsp;
+.LastName = <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Mortensen&quot;</span>,
+.Scores = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+Integer() {88, 94, 65, 91}}&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">&nbsp;<span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'Création
+d'une ArrayList dans laquelle on met les 4 étudiants</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Dim</span>
+arrList <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">New</span>
+ArrayList()&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">arrList.Add(student1)&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">arrList.Add(student2)</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">arrList.Add(student3)&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">arrList.Add(student4)</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">&nbsp;<span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'
+Requête</span>: rechercher les étudiant dont la première note est &gt;95</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Dim</span>
+query = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">From</span>
+student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">In</span>
+arrList _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;Where
+student.Scores(0) &gt; 95 _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Select</span>
+student&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">'Affichage
+des résultats</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">For</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Each</span>
+student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">As</span>
+Student <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">In</span>
+query</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;
+Console.WriteLine(student.LastName &amp; <span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;:
+&quot;</span> &amp; student.Scores(0))&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font face="Courier New" size="2" color="#0000FF">Next</font></span></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;</font><span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font face="Courier New" size="2" color="#008000">'
+referme la console.</font></span><font face="Courier New" size="2" color="#008000">&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Console.WriteLine(<span class="literal" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">&quot;Press
+any key to exit.&quot;</span>)</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Console.ReadKey()</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">End</span>
+<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Sub</span>
+&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Module</span>
+<span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'
+Output:</span> <span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'
+Omelchenko: 98</span> <span class="comment" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">'
+Garcia: 97</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-17.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-18.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

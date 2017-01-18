@@ -1,0 +1,205 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-22.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET évènement surcharge </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-21.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.22</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Évènements, surcharge.</font></b></td>
+    <td width="14%" height="76"><a href="v1-30.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2">Lorsqu'un
+utilisateur exécute une action sur un formulaire ou l'un de ses contrôles, le contrôle
+génère un <b>événement</b>. Votre application réagit à ces événements et
+les traite lorsqu'ils se produisent.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Évènement</span><span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0"> 
+ et procédure évènement:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">Un objet
+pourra donc avoir un ou des évènements.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">L'objet 'Button1' à un évènement
+<font color="#0000FF">Button1.Click</font>&nbsp;qui est généré lorsque
+l'utilisateur clique sur le bouton. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Comment VB fait pour savoir que l'action de 
+cliquer sur le bouton1 exécute une procédure?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela est indiqué grâce à
+<font color="#0000FF">Handles</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on veut que le Click sur Button1 exécute la
+procédure(la Sub) MaRoutine, il faut écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Sub Maroutine() Handles 
+Button1.Click</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#111111">Ainsi quand l'utilisateur 
+clique sur le bouton, la procédure Maroutine est exécutée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#111111">VB, qui est vraiment très 
+sympa, écrit automatiquement le code pour vous:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#111111">En mode 'Design', créez un 
+bouton, double-cliquez dessus, vous vous retrouvez dans la procédure:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click() </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button1.Click</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par défaut il a nommé la procédure 
+Button1_Click (mais elle aurait pu se nommer autrement).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la réalité, il a&nbsp; 2 paramètres:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">'Sender'</font> qui 
+contient le nom de l'objet qui a déclenché l'évènement(c'est un objet)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">'e'</font>  est un objet qui 
+contient les arguments de cet évènement (de type EventAgrs mais pas toujours).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela donne:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+ </font><font SIZE="2" color="#0000FF"> 
+<b> 
+sender</b> </font><font SIZE="2" color="#0000FF"> 
+ </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+ <b> 
+e</b> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button1.Click</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font>
+</font>
+</p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les forts et pour être complet, dans <font color="#0000FF">
+Form1.InitializeComponent</font> (c'est une routine ou il&nbsp; y a le code créant les
+contrôles), il y a la ligne:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font COLOR="#0000ff">Friend</font> <font COLOR="#0000ff">WithEvents</font>
+<font color="#0000FF">Button1 As System.Windows.Forms.Button</font> qui indique
+que le bouton gère des évènements (<font color="#0000FF">WithEvents</font>).&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">En conclusion:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">VB écrit automatiquement les procédures 
+évènement. On verra plus loin qu'il est possible de créer nous même nos objets, 
+évènements et procédures évènement. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight:700; background-color:#C0C0C0">Surcharge 
+de Méthode:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Quand on utilise une 
+méthode avec des paramètres, il y a parfois possibilité d'utiliser, avec la même 
+méthode, un nombre différent de paramètres ou des paramètres de nature 
+différente: on appelle cela <b>surcharger la méthode</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Chaque manière d'écrire 
+les paramètres s'appelle une <b>signature</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voici une fenêtre MessageBox: </font>&nbsp;<img border="0" src="vmsgbox.gif" width="192" height="126"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;pour&nbsp; ouvrir 
+une fenêtre MessageBox il y a 12 signatures, en voici 2:</span></font></p>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt"><font color="#0000ff"><span style="background-color: #FFFFFF">Reponse= <b>MessageBox.show</b>(TexteAAfficher,Titre, TypeBouton etIcone, BoutonParDéfaut)</span></font></pre>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt"><span style="background-color: #FFFFFF">Ici on donne 4 paramètres.</span></pre>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt">&nbsp;</pre>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom:0">
+<font color="#0000ff" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Reponse= <b>MessageBox.show</b>(TexteAAfficher)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Ici 1 
+seul paramètre.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On voit qu'on peut appeler la méthode 
+MessageBox.Show avec un nombre différent de paramètres.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Comme on ne peut pas 
+connaître toutes les signatures, VB nous aide:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si on tape </span></font>
+<font color="#0000ff" face="Courier New" size="2">R= <b>MessageBox.show</b>(</font><font face="Courier New"><font size="2" color="#0000FF">
+</font><font size="2" color="#0000FF">&nbsp;</font><font size="2">VB</font></font><font face="Courier New" size="2"> affiche dans un cadre une signature, de petites flèches 
+permettent de faire défiler tous les autres signatures:&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsurchar.gif" width="410" height="56"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="BACKGROUND-COLOR: #c0c0c0"><b><font face="Courier New" color="#0000ff" size="4">Lexique
+anglais=&gt;Français:</font></b></span></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+HANDLE poignet, manette (nom), manipuler, exécuter (verbe).</font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+HANDLE Définition Valeur numérique identifiant un objet et permettant sa
+manipulation.</font><br>
+</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-21.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-30.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-22.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+</html>

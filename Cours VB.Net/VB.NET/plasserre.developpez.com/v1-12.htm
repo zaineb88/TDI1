@@ -1,0 +1,441 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET fonction paramètre </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.12</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Procédures et paramètres</font></b></td>
+    <td width="14%" height="76"><a href="v1-13.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" size="2" face="Courier New">On se souvient qu'en 
+programmation fonctionnelle (ou procédurale) on découpe les problèmes en 
+fonctions: les Sub et les Function. </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Revenons sur les 
+procédures et leurs paramètres</span></font><font color="#800080"><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">Quand on appelle&nbsp; une <b>procédure 
+(</b>un sous-programme, une routine), le logiciel ‘saute’ au sous-programme, il 
+effectue celui-ci puis revient effectuer ce qui est sous l’appel:</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">En algorithmie:</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<img border="0" src="vprocedure.JPG"></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">En VB les procédures sont des <font color="#0000ff">Sub</font> ou des
+<font color="#0000ff">Function</font>.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b><font face="Courier New" size="2">-
+Les procédures Sub:</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Elles
+débutent par le mot <font color="#0000ff">Sub</font> et se terminent par <font color="#0000ff">End
+Sub.</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b><font face="Courier New" size="2">-
+Les procédures Function:</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="font-size: 10pt; font-family: Courier New">Si</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">
+on a besoin que la procédure <b>retourne un résultat, </b>on utilise une <b>Fonction.</b></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Elles
+débutent par&nbsp; <font color="#0000ff">Function</font> et se terminent par <font color="#0000ff">End
+Function</font>.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">Sub
+Maprocédure</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;
+A=1</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">End
+Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">On peut fournir aux 
+procédures des <b>paramètres </b>qui sont envoyés à la fonction.</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font size="2"><span style="font-family: Courier New">Exemple avec une fonction:</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">Function Carré 
+( v as Single) as Single</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+Return v*v</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">End Function</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Cela crée une fonction qui se nomme 'Carré' , 
+on peut lui envoyer un paramètre (elle accepte un Single)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Cette fonction retourne un Single (indiqué
+par <font color="#0000FF"> As Single</font>), le carré du 
+paramètre fourni.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Pour l'utiliser :</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim resultat As Single</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">resultat= Carré(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><span style="background-color: #FFFFFF">&nbsp;'résultat est alors 
+égal à 4</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">On appelle la fonction carré avec le paramètre 
+2, elle retourne 4.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Les paramètres peuvent être des variables:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim resultat as Single</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim valeur as Single=3</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">resultat= Carré(valeur)&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2"><b>
+Remarque:</b> ici, on a un paramètre nommé 'valeur'; on appelle la fonction 
+Carré avec ce paramètre. Dans la fonction Carré on retrouve ce paramètre; il se 
+nomme 'v': Ce paramètre est passé à la fonction, mais il a un nom différent dans 
+la fonction.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicoexcl.gif" width="29" height="43"> On conseille, quand 
+le nom d'une procédure est 
+composé de plusieurs mots, de mettre <b>la première lettre de chaque mot en 
+majuscule.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">MyCalcul()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Les parenthèses.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Rappel, même s'il n'y a pas de paramètre, mettre des () lors de l'appel de 
+procédure.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MaRoutine()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Par Valeur, Par 
+Référence.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">Il y a 2 manières 
+d’envoyer des paramètres&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New"><b>Par valeur</b>&nbsp;: (By 
+Val)c’est la valeur (le contenu de la variable) qui est envoyée.</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font size="2"><span style="font-family: Courier New">(La variable est copiée 
+dans une autre partie de la mémoire pour être utilisée par la routine appelée.)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New"><b>Par référence</b>&nbsp;:(By 
+Ref) c’est l’adresse (le lieu physique ou se trouve la variable) qui est envoyée. 
+Si la Sub modifie la variable, cette modification sera visible dans la procédure 
+appelante après le retour.</span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">&nbsp;Exemple de procédures:</span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">Sub MaProcedure (ByRef x as Long, ByVal 
+y 
+As Long)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">Si j'appelle cette 
+procédure à partir d’une procédure nommé Main()&nbsp;:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">
+<span style="color: blue">Sub Main()</span></font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">
+<span style="color: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MaProcedure (A, B)</span></font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">
+<span style="color: blue">End sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">C'est l<b>'adresse de A</b> qui 
+est envoyée et <b>la valeur contenue dans la variable B. Elles se retrouvent dans les 
+variables x et y de la procédure </b>
+<font color="#0000FF">MaProcedure</font>. </font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Si dans cette dernière 
+je modifie x , A est modifié dans la Sub Main (puisque x et A pointe sur le même 
+endroit). Si dans Maprocedure je modifie y , B n’est pas modifié.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple permettant de bien différencier By Val 
+et By Ref:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Exemple avec ByVal:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" size="2" face="Courier New">Sub MaProcedure</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim A As Integer </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On créer une variable A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A=1 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On met 1 dans A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Call
+MaProcedure(&nbsp; A )</font> 'On appelle la procédure MaProcedure&nbsp; en envoyant le paramètre A </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Label1.Text= A.ToString </font>
+<font face="Courier New" size="2">'On affiche la valeur de A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Sub 
+MaProcedure ( <b>ByVal</b> Variable As Integer )</font>&nbsp;&nbsp;&nbsp; 'La 
+procédure reçoit la valeur de A donc&nbsp; 1</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="2"><span style="font-family: Courier New">' et la met dans 'Variable' </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;
+<font color="#0000FF">&nbsp;Variable=Variable+1 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Variable=2 <b>mais A=1</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Après&nbsp; l'appel de la 
+procédure A=1, Labe1 affiche '1'</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Exemple avec ByRef:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" size="2" face="Courier New">Sub MaProcedure</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim A As Integer </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On créer une variable A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A=1 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On met 1 dans A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Call 
+MaProcedure(&nbsp; A&nbsp; )</font> 'On appelle la procédure MaProcedure en envoyant le paramètre A </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Label1.Text= A.ToString </font>
+<font face="Courier New" size="2">'On affiche la valeur de A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Sub 
+MaProcedure ( <b>ByRef</b> Variable As Integer )</font>&nbsp;&nbsp;&nbsp; 'La 
+procédure reçoit l'adresse de A ; Variable et A ont donc même adresse</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="2"><span style="font-family: Courier New">'Variable et A contiennent 1 </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;
+<font color="#0000FF">&nbsp;Variable=Variable+1 </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Variable=2 <b>mais A=2 aussi</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">End Sub</span></font></p>
+<p style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Après&nbsp; l'appel de la 
+procédure <b>A=2, </b>, Labe1 affiche '2'</font></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+Compris!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vicocheb.gif" width="32" height="34"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#FF0000">L'avantage de passer un argument ByRef 
+est que la procédure peut retourner une valeur au code qui a appelé la procédure 
+en modifiant la valeur de la variable qui a été passée en argument.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#FF0000">L'avantage de passer un argument ByVal 
+est que cette variable est 'protégée' dans le code qui a appelé la procédure; 
+elle ne peut pas être modifiée par la procédure.</font></p>
+<p class="MsoNormal">
+&nbsp;</p>
+<p class="MsoNormal">
+<font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Par Défaut que se 
+passe t-il?.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on n'indique pas By Val ou By Ref:</font></p>
+<p style="margin-top: 6.0pt"><font color="#FFFFFF"><b><img border="0" src="vicocheb.gif" width="32" height="34"></b></font><b><font color="#FF0000" face="Courier New">ATTENTION:
+Pas défaut les paramètres sont transmis PAR VALEUR</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">
+</font><font size="2">Si je fais&nbsp; </font><span style="background-color: #FFFFFF"><font size="2" color="#0000FF">Sub MaProcedure( x as Long,
+y As Long)</font><font size="2">, x et y sont transmis par valeur.&nbsp;</font></span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight:700; background-color:#FFFFFF">
+<font color="#008000">Pour la clarté du code et pour éviter toute ambiguïté, spécifier ByRef ou ByVal, c'est plus lisible , plus clair.</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><b><font size="2">Taper</font><font size="2" color="#0000FF">
+</font></b><font size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub MaProcedure (ByRef x as Long, 
+ByVal y As Long)</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">Plutôt</font><font size="2" color="#0000FF">
+</font><font size="2">que </font><font size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub MaProcedure 
+( x as Long, y As Long)</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Optional</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un paramètre ou argument peut être
+<font color="#0000FF">Optional</font>, c'est à dire facultatif.  </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Indique que cet argument n'est pas 
+requis lorsque la procédure est appelée. Si ce mot clé est utilisé, tous les 
+arguments suivants doivent aussi être facultatifs et déclarés à l'aide du mot 
+clé <b>Optional</b>. Chaque déclaration d'argument facultative doit indiquer une 
+valeur par défaut qui sera utilisée dans la routine s'il n'y a pas de paramètre. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub MaRoutine (Optional X As 
+Integer=0)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Tableau de paramètres.</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est possible d'envoyer un tableau comme 
+paramètre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Reponses(10) As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">'Appel de la Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Affiche( Reponses())</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La Sub 'Affiche' débute par:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub Affiche ( R() As Integer )</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">ParamArray</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois il faut envoyer des paramètres <b>de même 
+type</b> mais dont on ne connaît pas le nombre, dans ce cas on utilise <b>ParamAray</b> 
+(Liste de paramètres):</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Function Somme ( ByVal 
+ParamArray Valeurs() as Integer) As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Dim i as 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Dim Total 
+as Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; For i=0 to 
+Valeurs.Length-1</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Total += Valeurs(i)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Next i</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Return&nbsp; 
+Total</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Pour appeler cette fonction:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim leTotal As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">leTotal= Somme (2, 5, 6, 8 ,5)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">ou</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">l</span></font><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">eTotal= Somme (2, 5,
+6)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">A noter que le paramètre <font color="#0000FF">ParamArray</font> 
+doit être le dernier des paramètres, c'est obligatoirement un paramètre ByVal et comme on 
+l'a dit, tous les paramètres sont de même type.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-13.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+</html>

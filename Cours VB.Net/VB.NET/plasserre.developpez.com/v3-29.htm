@@ -1,0 +1,278 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-29.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net programmation fonctionnelle</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.29</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">La programmation 
+    fonctionnelle.</font></b></td>
+    <td width="14%" height="76"><a href="v3-30.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vfonction.JPG" width="128" height="71"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">En programmation 
+'Fonctionnelle' ou 'procédurale':</span></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Chaque problème complexe est décomposé 
+  en '<b>Fonctions</b>'(Les Subs et Fonctions) plus simples.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Ces fonctions sont stockées <b>dans des 
+  modules standards</b> (ou dans les modules de formulaire).</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Dans une application en programmation 
+  'fonctionnelle' il y a habituellement:</span></font></p>
+  <blockquote>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+    <span style="font-family: Courier New">Des modules de formulaires</span></font></p>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+    <span style="font-family: Courier New">Des modules standard contenant des 
+    Sub et Function.</span></font></p>
+  </blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Chaque fonction peut être appelée d'une 
+  autre fonction.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Exemple:</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Créons une Function nommée CalculCarré.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">Public Function CalculCarré ( c As 
+  Single) As Single</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; Return c*c</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">End Function </span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <span style="font-family: Courier New"><font size="2">Cette fonction est</font><font size="2" color="#0000FF"> 
+  Public </font><font size="2">(elle peut être appelée de n'importe où dans le 
+  programme).</font></span></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Elle accepte un paramètre qui doit être un
+  </font><font face="Courier New" size="2" color="#0000FF">Single</font><font face="Courier New" size="2">.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Comme c'est une fonction, elle retourne une 
+  valeur qui est aussi un Single.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Comment l'appeler?</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font color="#0000FF" size="2" face="Courier New">Dim carré As Single</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">carré=</span></font><font size="2"><span style="font-family: Courier New"><font color="#0000FF"> 
+  CalculCarré (12)</font>&nbsp; </span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">Une Sub par contre ne retourne pas de 
+  valeur.</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">Public Sub Affiche Carré ( c As Single)</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">..</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+  <span style="font-family: Courier New">End Sub</span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Comment l'appeler?</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New"><font color="#0000FF">AfficheCarré (12) 
+  ou Call AfficheCarré (12)</font>&nbsp; </span></font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+  <span style="font-family: Courier New">L'autre manière de programmer en 
+  VisualBasic est la programmation 'Objet'</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Comment créer un module standard? une Sub?</span></b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Faire&nbsp; Menu 
+Projet&gt;Ajouter un module. Donner un nom au module. C'est Module1.vb par défaut.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Module Module1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'Nom du Module</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">...</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Module</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">On remarque que le module est bien 
+enregistré dans un fichier .vb</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Un module standard ne contient que du 
+code.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Comment ajouter une Sub 
+dans un module Standard?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Taper Sub Calcul puis valider, cela donne:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub Calcul()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<font size="4" color="#0000FF">Exemple&nbsp;d'utilisation de procédures et de 
+modules:</font></span></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple simple de programmation fonctionnelle.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">L'utilisateur saisit un 
+nombre puis il clique sur un bouton; cela affiche <b>le carré</b> de ce nombre:</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Il faut créer l'interface utilisateur</b>: 
+créer une fenêtre (Form1), y mettre un bouton (nommé Button1), une zone de texte 
+(Text1) permettant de saisir un nombre, un label (label1) permettant l'affichage 
+du résultat.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Créer un module standard (Module1) pour y 
+mettre les procédures communes.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On observera uniquement l'agencement des 
+procédures et non leur contenu. Pour un programme d'une telle complexité , la 
+structure aurait pu être plus simple, mais l'intérêt de ce qui suit est 
+didactique.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>On décompose le programme en taches plus 
+simples:</b> En particulier une procédure sert au calcul, une sert à 
+l'affichage.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">CalculCarré</font> 
+calcule le carré.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">
+AfficheCarre</font> affiche le résultat dans le label.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">
+Button1_Click</font> (qui est déclenchée par le Click de l'utilisateur):</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Lit le chiffre tapé par 
+l'utilisateur dans la zone texte.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Appelle la procédure
+<font color="#0000FF">CalculCarré</font> pour calculer le carré.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Appelle la procédure
+<font color="#0000FF">AfficheCarré</font> pour afficher le résultat.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Ou sont placées les procédures?</font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">
+Button1_Click</font> est automatiquement dans le module du formulaire, Form1 
+(elle est liée au contrôle Bouton1) elle est créée automatiquement quand on crée 
+le bouton. </font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">
+AfficheCarré</font> est créée <b>dans le module du formulaire</b> (Form1) car 
+elle agit sur le contrôle Label1 de ce formulaire.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La procédure <font color="#0000FF">CalculCarré</font> 
+est créée <b>dans le module Standard</b> (Module1) car elle doit être appelable 
+de n'importe où; elle est d'ailleurs 'Public' pour cette raison. Elle n'agit sur 
+aucune fenêtre, aucun contrôle, elle est 'd'intérêt général', c'est pour cela 
+qu'on la met dans un module standard.&nbsp; </font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vmod1.gif" width="474" height="272"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voyons le cheminement du programme:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vmod2.GIF" width="474" height="272"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Quand l'utilisateur clique sur le bouton la
+<font color="#0000FF">Sub Button1_Click</font> démarre. </font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Elle appelle <font color="#0000FF">CalculCarre
+</font>avec comme paramètre le nombre qui a été tapé dans le textbox (nommé 
+Text1).</font></p>
+<blockquote>
+  <p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <font face="Courier New" size="2">Val(Text1.Text) permet de transformer la 
+  String Text1.Text en numérique.</font></p>
+</blockquote>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">CalculCarre</font> 
+calcule le carré et renvoie la valeur de ce carré.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La Sub Button1_Click appelle ensuite
+<font color="#0000FF">AfficheCarre </font>(en envoyant le paramètre<font color="#0000FF"> 
+Carré)</font> qui affiche le résultat.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On appelle la <font color="#0000FF">Function 
+CalculCarre</font> par</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Carre= CalculCarre(Valeur)</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On envoie un paramètre Single , la fonction 
+retourne dans la variable Carre, la valeur du carré.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre la <font color="#0000FF">Sub 
+AfficheCarre</font> reçoit un paramètre, et ne retourne rien puisque c'est une 
+Sub!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-30.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-29.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:23 GMT -->
+</html>

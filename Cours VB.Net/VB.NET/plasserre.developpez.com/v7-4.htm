@@ -1,0 +1,398 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Court Visual Basic .Net chronométrer du code : stopwatch</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v7-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">7.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Chronométrer le code.</font></b></td>
+    <td width="14%" height="76"><a href="v7-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vchrono.JPG" width="83" height="77"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">On</span></b></font><font color="#800080"><font size="2"><b><span style="font-family: Courier New"> veut comparer 2 
+routines et savoir laquelle est la plus rapide</span></b></font><span style="font-size: 10.0pt; font-family: Courier New">.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">On peut pour compter le temps écoulé:</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Utiliser un Timer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Utiliser l'heure système</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Utiliser la Classe Environment.Tickcount</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Appeler </span></font>
+<font face="Courier New" SIZE="2"><span style="background-color: #FFFFFF">
+<font SIZE="2" color="#800080">QueryPerformanceCounter, une routine de Kernel32</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Utiliser </span></font>
+<font face="Courier New" size="2" color="#800080">System.Diagnostics.Stopwatch</font><font size="2" color="#800080"><span style="font-family: Courier New"> 
+(Framework 2 Vb 2005)</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Pour chronométrer une évènement long. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Entendons par évènement long, plusieurs 
+secondes ou minutes.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">3 solutions:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" SIZE="2">- On utilise un <b>Timer</b>, (dans 
+l'évènement Ticks qui survient toutes les secondes, une variable s'incrémente 
+comptant les secondes).</font><font face="Courier New" SIZE="2">(<a href="v4-5.htm">4-5</a>).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">- On peut utiliser l'<b>heure Système</b>.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Dim Debut, Fin As DateTime</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Dim Durée As TimeSpan </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Debut=Now</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">...Routine...</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Fin=Now</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Durée=Fin-Debut</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+(Utiliser <font color="#0000FF">Durée.ToString</font> pour afficher)</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">- </font><span class="093245308-02042005">
+<font face="Courier New" size="2">On peut utiliser la variable <b>
+Environment.tickcount()</b></font></span></p>
+<div dir="ltr" align="left" style="width: 749; height: 109">
+  <span class="093245308-02042005">
+  <font face="Courier New" size="2" color="#0000FF">Dim </font>
+  <font face="Courier New" color="#0000ff" size="2">Debut, Fin As int32</font></span><p>
+  <font face="Arial"><font color="#0000ff" size="2" face="Courier New">Debut=<span class="093245308-02042005">Environment.tickcount()</span></font></p>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">...Routine...</font></p>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font color="#0000ff" face="Courier New" size="2">Fin=<span class="093245308-02042005">Environment.tickcount()</span></font></font></div>
+<div>
+  <font face="Courier New" color="#0000ff" size="2">Durée=Fin-Debut</font></div>
+<div>
+  &nbsp;</div>
+<div>
+  <font face="Courier New" size="2">
+  <span class="093245308-02042005">Cela donne 
+  un temps écoulé en ms, sachant toutefois que le compteur de ticks (1tick=100 
+  nanosecondes) n'est mis à 
+  jour que toutes les 16ms environ...(</span>15,62468 ms) Now utilise la même
+  horloge.</font></div>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p><font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Créer un 
+compteur pour les temps très court (Framework 1 , VB2003).</span></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">C'est le cas 
+pour chronométrer des routines de durée bien inférieure à une seconde.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cela 
+semblait à première vue facile!!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">J'ai en 
+premier lieu utilisé un <b>Timer</b>, (dans l'évènement Ticks un compteur de 
+temps s'incrémente) mais les intervalles&nbsp; de déclenchement semblent longs et 
+aléatoires.  </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">J'ai ensuite 
+utilisé l'heure système:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Mais 'Durée' 
+est toujours égal à 0 pour les routines rapides!!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font face="Courier New">
+  <span class="093245308-02042005">Le</span></font><font face="Courier New" size="2">
+  <span class="093245308-02042005"> temps écoulé est en ms, sachant toutefois que le compteur de ticks (1tick=100
+  nanosecondes) n'est mis à 
+  jour que toutes les 16ms environ...(</span>15,62468 ms) Now utilise la même
+horloge.</font>
+<p class="MsoNormal"><font face="Courier New" size="2">En ce qui concerne le
+timer, tout intervalle inférieur à 15 donnera le même résultat, 15,6 ms
+d’attente. A noter également pour le timer que le délai d’attente ne
+commence pas au top précédent, mais à la fin de la procédure appelée par ce
+timer, ce qui peut augmenter sa période.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Par contre,
+QueryPerformanceCounter marche très bien:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">J'ai trouvé 
+la solution chez Microsoft:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Utilisation 
+d'une routine de Kernel32 qui retourne la valeur d'un compteur (QueryPerformanceCounter).</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">De plus QueryPerformanceFrequency &nbsp;retourne le nombre de 
+fois que le compteur tourne par seconde.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple: 
+comparer 2 boucles, l'une contenant une affectation de variable tableau (b=a(2)) 
+l'autre une affectation de variable simple (b=c), on gagne 33%.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Declare</span></font></font><font face="Courier New"><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+QueryPerformanceCounter </font><font SIZE="2" COLOR="#0000ff">Lib</font><font SIZE="2"> 
+&quot;Kernel32&quot; (</font><font SIZE="2" COLOR="#0000ff">ByRef</font><font SIZE="2"> X
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Long</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></span></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Short</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">Declare</font>
+<font SIZE="2" COLOR="#0000ff">Function</font> QueryPerformanceFrequency
+<font SIZE="2" COLOR="#0000ff">Lib</font> &quot;Kernel32&quot; (<font SIZE="2" COLOR="#0000ff">ByRef</font> 
+X <font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Long</font>)
+<font SIZE="2" COLOR="#0000ff">As</font> </span></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Short</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Sub</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+ButtonGo_Click(</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">ByVal</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+sender </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+System.Object, </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">ByVal</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+e </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+System.EventArgs) </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Handles</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+ButtonGo.Click</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+debut </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Long</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+fin </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Long</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+i </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Long</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+a(5) </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+b </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+c </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+d1 </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Long</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+d2 </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Long</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">
+<span style="background-color: #FFFFFF">'**********première routine</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">QueryPerformanceCounter(debut)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+i = 0 </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+10000</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">b = a(2)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">QueryPerformanceCounter(fin)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">d1 = fin - debut</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Label1.Text = d1.ToString </span></font>
+</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">
+<span style="background-color: #FFFFFF">'**********seconde routine</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">QueryPerformanceCounter(debut)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">c = a(2)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+i = 0 </span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+10000</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">b = c</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">QueryPerformanceCounter(fin)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">d2 = fin - debut</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Label2.Text = d2.ToString</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Label5.Text = &quot;Gain 2eme routine:&quot; &amp; 100 
+- Int(d2 / d1 * 100).ToString</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+</font>
+<p><font face="Verdana" size="1">&nbsp;</font><font size="2" face="Courier New">C'est 
+cette routine qui est utilisée pour étudier l'<a href="v7-3.htm">optimisation du 
+code</a>.&nbsp; </font></p>
+<p><font face="Courier New" size="2"><b>Elle n'est pas parfaite, car sujette à 
+variation</b>: les valeurs sont différentes d'un essai à l'autre en fonction des 
+processus en cours !</font></p>
+<div dir="ltr" align="left">
+  <span class="093245308-02042005"><font face="Courier New" size="2">Avec VB 
+  .Net (version antérieur au Build 1.1.4322.SP1)&nbsp; le problème est catastrophique: 
+  2 routines identiques ne donnent pas les mêmes temps (bug du compilateur VB?).</font></span></div>
+<div dir="ltr" align="left">
+  <font face="Courier New" size="2">&nbsp;</font></div>
+<div dir="ltr" align="left">
+  <span class="093245308-02042005"><font face="Courier New" size="2">Il reste 
+  que le problème de la variabilité des performances est absolument inévitable 
+  puisque Windows est un système préemptif qui peut prendre le contrôle de 
+  l'ordinateur à tout moment.</font></span><p><span class="093245308-02042005">
+  <font face="Courier New" size="2">C'est pourquoi la seule façon fiable de 
+  faire des tests consiste à avoir une <b>approche expérimentale</b> : on répète 
+  la mesure un&nbsp;certain nombre de fois&nbsp;et on fait une moyenne des essais 
+  individuels.</font></span></div>
+<div dir="ltr" align="left">
+&nbsp;<p><span class="093245308-02042005"><font face="Courier New" size="2">Pour 
+  des routines très très rapides, une autre façon de faire consiste à <b>
+  effectuer des tests sur de longues durées</b> (en répétant des milliers de 
+  fois la routine rapide à l'aide d'une boucle)pour arriver à des temps de 
+  plusieurs dizaines de secondes, de manière à diluer les interventions de 
+  Windows dans le processus. </font></span></p>
+  <p><span class="093245308-02042005"><font face="Courier New" size="2">Il y&nbsp; 
+  a peut-être d'autres solutions?</font></span><p><font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Créer un 
+compteur pour les temps très court (Framework 2 , VB2005)</span></font><p>
+<font face="Courier New" size="2">Le Framework 2.0 comporte une classe qui 
+encapsule l'utilisation de l' API QueryPerformanceCounter: <b>
+System.Diagnostics.Stopwatch</b>.</font></p>
+<p class="codeCS"><font color="#0000FF" face="Courier New" size="2">Dim 
+Stopwatch As  </font><font SIZE="2" color="#0000FF">System.Diagnostics.</font><font color="#0000FF" face="Courier New" size="2">stopWatch =  </font>
+<font SIZE="2" color="#0000FF">System.Diagnostics.</font><font color="#0000FF" face="Courier New" size="2">Stopwatch.StartNew()</font></p>
+<p class="codeCS"><font face="Courier New" size="2">' Code à mesurer<br>
+<font color="#0000FF">Debug.WriteLine(stopWatch.ElapsedMilliseconds.ToString())
+</font></font></p>
+<p><font face="Courier New" size="2">La première ligne crée une instance d'un 
+Stopwatch et démarre le compteur.<br>
+La propriété <font color="#0000FF">ElapsedMilliseconds</font> nous donne le 
+temps mesuré en millisecondes.<br>
+On a également la propriété <font color="#0000FF">ElapsedTicks </font>pour 
+compter les Ticks (1 Ticks: 100&nbsp;nanosecondes).<br>
+Enfin si l'on veut compter en&nbsp; TimeSpan, utilisons la propriété
+<font color="#0000FF">Elapsed</font>.</font></p>
+<p><font face="Courier New" size="2">On peut arrêter et redémarrer le compteur 
+plusieurs fois.</font></p>
+<p class="codeCS"><font face="Courier New" size="2"><font color="#0000FF">
+stopwatch.Stop</font>&nbsp;&nbsp;&nbsp;&nbsp; 'arrête le compteur</font></p>
+<p class="codeCS"><font face="Courier New" size="2"><font color="#0000FF">
+stopwatch.Start</font>&nbsp;&nbsp;&nbsp; 'fait redémarrer le compteur</font></p>
+<p class="codeCS"><font face="Courier New" size="2"><font color="#0000FF">
+stopwatch.Reset()</font>&nbsp; '<span class="green8">remet le compteur à zéro</span></font></p>
+  <p>&nbsp;</div>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v7-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v7-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+</html>

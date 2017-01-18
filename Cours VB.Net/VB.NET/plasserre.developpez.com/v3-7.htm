@@ -1,0 +1,1447 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:51 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET Listes: listbox checkedlistbox combo listview treeview </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="59%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours</font><font face="Arial" size="7" color="#0000FF"> </font><font size="7" color="#0000FF" face="Courier New">VB.net</font></b></td>
+    <td width="7%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.7</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les Contrôles 'liste'</font></b></td>
+    <td width="14%" height="76"><a href="v3-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Il y a 6 sortes de 
+contrôle affichant des 
+listes:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+ListBox.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+CheckedListBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+Combos</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les
+ListView.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">&nbsp;
+Les DomainUpDown et NumericUpDown</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+TreeView</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="5">Les 'ListBox'</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Le contrôle <b>ListBox</b>&nbsp; affiche une 
+liste d'éléments (d'objets) dans laquelle l'utilisateur peut faire un ou plusieurs choix. 
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vlistbox.gif" width="141" height="84"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La liste contient&nbsp; &quot;tarte&quot;, &quot;poisson&quot;, 
+&quot;viande&quot;, &quot;légumes&quot;, &quot;sauces&quot;.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici l'élément &quot;poisson&quot; est sélectionné, la 
+ligne correspondante 
+est en bleu. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008000" size="2">
+<span style="font-family: Courier New; font-weight: 700">
+La listBox 
+contient une collection d'&quot;Item&quot;:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Elle est vide au départ.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Si j'ajoute un élément à 
+la ListBox, cela ajoute un élément à la collection <font color="#0000FF">Items</font></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="2">ListBox1.Items</font><font face="Courier New" size="2"> est une <i>collection</i> contenant 
+tous les éléments (les objets) chargés dans la liste. </font></p>
+<p><font face="Courier New" size="2">La 
+propriété <font color="#0000FF">Items.Count</font> indique le nombre d'éléments contenus dans la liste 
+. Attention <b>le premier élément est toujours l’élément 0</b>, aussi le nombre 
+d’éléments est égal au numéro de l'élément le plus haut plus un.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Pour ajouter ou supprimer des éléments 
+dans un contrôle ListBox:</span></font></b></p>
+<p><font face="Courier New" size="2">Utilisez la méthode <font color="#0000FF">Items.Add,
+Items.Insert, Items.Clear</font> ou <font color="#0000FF">Items.Remove</font>. En mode conception, 
+vous pouvez également utiliser la propriété <font color="#0000FF"> <b>Items</b></font>.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Exemples&nbsp;:</font></p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Vider la ListBox:</span></font></b></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ListBox1.Items.Clear()</span></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0"><b>Ajouter</b> l'élément &quot;poisson&quot;</span></font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ListBox1.Items.Add(&quot;poisson&quot;)</span></font></p>
+<p><font face="Courier New" size="2">Ajouter '4'</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ListBox1.Items.Add(4.Tostring)</span></font></p>
+<p>ou</p>
+<p>
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">
+ListBox1.Items.Add(4) </font>
+<font face="Courier New" size="2">
+'accepté car les items sont des objets.</font></span></p>
+<p><font face="Courier New" size="2">Insérer 'lulu en 4éme position</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ListBox1.Items.Insert(4, &quot;lulu&quot;)</span></font></p>
+<p><font face="Courier New" size="2">Les listBox acceptent des objets, elles 
+affichent généralement ce qu'il y a dans la propriété 'Text' de l'objet.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0"><b>Charger</b> dans une ListBox1 les nombres de 1 
+à 100&nbsp;:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">For</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF"> 
+i = 1 </font> <span style="color: blue">To</span><font color="#0000FF"> 100</font></span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; ListBox1.Items.Add(i.ToString)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none">
+<font face="Courier New" size="2"><span style="color: blue">
+<span style="background-color: #FFFFFF">Next</span></span><font color="#0000FF"><span style="background-color: #FFFFFF"> i</span></font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Comment 
+enlever des éléments?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">' Enlever l'élément d'index 5:<br>
+<font color="#0000FF">ListBox1.Items.RemoveAt(5)</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">' Enlever l'élément sélectionné:<br>
+<font color="#0000FF">ListBox1.Items.Remove(ListBox1.SelectedItem)<br>
+&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">' Enlever l'élément &quot;Tokyo&quot;:<br>
+<font color="#0000FF">ListBox1.Items.Remove(&quot;Tokyo&quot;)</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment lire l'élément 3?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Dim t As String</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">t=ListBox1.Items(3).ToString</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(En Option=Strict il est nécessaire de
+transformer l'objet Items(3) en String avec .ToString)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment rechercher l'élément qui contient 
+une chaîne de caractères?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Dim x As Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">x=List1.FindString(&quot;pa&quot;)
+</font>&nbsp; retourne le numéro du premier élément <b>commençant</b> par 'pa'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">x=List1.FindString(&quot;pa&quot;,12)</font>&nbsp;&nbsp; 
+retourne le numéro de l'élément commençant par 'pa' en cherchant à partir de l'élément 
+numéro 12.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">x=List1.FindStringExact(&quot;papier&quot;)&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'permet de rechercher l'élément correspondant 
+exactement à la chaîne. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment sélectionner un élément par code?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">ListBox1.SetSelected(x, True) </font>
+<font face="Courier New" size="2">'la ligne contenant x devient bleue</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700; background-color: #C0C0C0">
+<font size="2">L’utilisateur double-clique sur un des éléments, comment 
+récupérer son numéro&nbsp;?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Grâce à <b>SelectedIndex</b>.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal">
+Private Sub </span>
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+ListBox_DoubleClick</span><span style="font-family: Courier New; color: #0000FF; font-weight: normal">.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: #0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; N=ListBox1.SelectedIndex</span></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End If</span></font></span><font size="2"><span style="font-family: Courier New; color: #0000FF">
+</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">‘N contient le numéro de l’élément sélectionné. Attention comme 
+d’habitude, si je sélectionne la troisième ligne c’est en faite l’élément numéro 2.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>SelectedIndex</b> retourne donc un entier 
+correspondant à l'élément sélectionné dans la zone de liste. Si aucun 
+élément n'est sélectionné, la valeur de la propriété <b>SelectedIndex</b> est&nbsp;égale 
+à 
+-1.  </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La propriété <b>SelectedItem</b>&nbsp; retourne l'élément sélectionné 
+(&quot;poisson&quot; dans l'exemple si dessus).</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Et la multi sélection, quels éléments 
+ont été sélectionnés?</span></font></b></p>
+<p><font face="Courier New" size="2">La propriété <b>SelectionMode</b> 
+indique le nombre d'éléments pouvant être sélectionnés en même temps.</font></p>
+<p><font face="Courier New" size="2">Lorsque plusieurs éléments sont sélectionnés, la valeur de la propriété <b>
+SelectedIndex</b> correspond au rang du premier élément sélectionné dans la 
+liste. Les collections <b>SelectedItems</b> et <b>SelectedIndices</b> 
+contiennent les éléments et les numéros d'index sélectionnées.&nbsp;  </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008000" size="2">
+<span style="font-family: Courier New; font-weight: 700">
+<img border="0" src="vicochev.GIF" width="32" height="34"> </span></font>
+<span style="font-family: Courier New; color: #008000; font-weight: 700">
+<font size="2">Si la propriété </font></span><font size="2">
+<span style="font-family: Courier New; color: #008000; font-weight: 700">
+Sorted = </span><font color="#008000">
+<span style="font-family: Courier New; font-weight: 700">True</span></font><span style="font-family: Courier New; color: #008000; font-weight: 700">, 
+la liste est triée automatiquement.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">On peut<b> 'charger' une ListBox automatiquement 
+avec un tableau</b> </span> en utilisant <font color="#0000FF">Datasource</font>:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim LaList() As String = 
+{&quot;one&quot;, &quot;two&quot;, &quot;three&quot;}<br>
+ListBox1.DataSource = LaList<br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">On 
+peut aussi utiliser</font><font face="Courier New" size="2" color="#0000FF"> 
+AddRange:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Ite(9) As System.Object<br>
+Dim i As Integer<br>
+For i = 0 To 9<br>
+Ite(i) = &quot;Item&quot; &amp; i<br>
+Next i<br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ListBox1.Items.AddRange(Ite)<br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment<b> 'charger' une ListBox automatiquement
+à partir d'un fichier texte.</b> </span> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font SIZE="2" face="Courier New" color="#0000FF">ListBox1.Items.AddRange(System.IO.File.ReadAllLines(&quot;c:\list.txt&quot;))</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">(le
+fichier list.txt est un fichier .txt crée avec&nbsp; NotePad par exemple et
+contenant les items&nbsp; séparés par des retours à la ligne&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Exemple
+de fichier:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">&quot;philippe</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">paul</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">jean</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">luc&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment connaître l'<b>index de l'élément que 
+l'on vient d'ajouter</b>? (et le sélectionner)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim x As Integer<br>
+x = List1.Items.Add(&quot;Hello&quot;)<br>
+List1.SelectedIndex = x</span><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On utilise 
+la valeur retournée (x dans notre exemple) par la méthode Add.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(NewIndex n'existe plus en VB.NET)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment affecter à chaque élément de la 
+liste un numéro, une clé?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple : Dans un programme, chaque
+utilisateur a un nom et un numéro; je charge dans une ListBox la liste 
+du nom des utilisateurs; quand on clique sur la liste, je veux récupérer le numéro 
+de l'utilisateur (pas l'index de l'élément).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Comment donc, à chaque élément de la
+Listbox, associer un numéro (différent de l'index). </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">-
+</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2">En VB6 on utilisait une propriété (ListBox.ItemData()) pour lier 
+à chaque élément de la ListBox un nombre (une&nbsp; clé); cela n'existe plus 
+en VB.Net!!</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Il existe des fonctions de compatibilité VB6, mais il faut éviter
+de les utiliser:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">VB6.SetItemData(ListBox1, 0, 123)</span></font> 'pour lier à l'élément 0 la valeur 123.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New"><br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>- Une alternative, pas très élégante:</b> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ajouter l'élément&nbsp; ¨Philippe&quot;+chr$(9)+chr$(9)+ 
+clé (clé n'est pas visible car les caractères de tabulation l'ont affichée hors de 
+la Listbox)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Quand l'utilisateur clique sur la ligne, on 
+récupère la partie droite donc la clé.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>- Une solution plus élégante:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">On
+utilise le Tag du ListBox (Le Tag est une propriété qui peut contenir un objet
+(un tableau par exemple; chaque élément de ce tableau va contenir le numéro
+de l'utilisateur.)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF"><font SIZE="2" face="Courier New">Dim
+pos As Integer</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font color="#0000FF" face="Courier New"><font SIZE="2">ReDim</font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF">
+ListBox1.Tag(100)</font>&nbsp;<font color="#008000"> 'Création du tableau dans
+le Tag</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2"><font face="Courier New">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">pos
+= ListBox1.Items.Add(</font></font><font SIZE="2" color="#0000FF" face="Courier New">&quot;Philippe&quot;</font><font SIZE="2"><font face="Courier New"><font color="#0000FF">)
+</font><font color="#008000">'On ajoute le nom de l'utilisateur1, pos est
+l'index de l'élément ajouté</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">ListBox1.Tag(pos)
+= 1&nbsp; </font><font color="#008000">'On ajoute dans le Tag&nbsp; le numéro
+de l'utilisateur</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">pos
+= ListBox1.Items.Add(</font></font><font SIZE="2" color="#0000FF" face="Courier New">&quot;Jean&quot;</font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">ListBox1.Tag(pos)
+= 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">pos
+= ListBox1.Items.Add(</font></font><font SIZE="2" color="#0000FF" face="Courier New">&quot;Paul&quot;</font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">ListBox1.Tag(pos)
+= 3</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000" face="Courier New">'Quand
+l'utilisateur double-clique dans la liste, on récupère le numéro
+correspondant</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font color="#0000FF" face="Courier New"><font SIZE="2">Private
+Sub ListBox1_DoubleClick()</font></font><font SIZE="2"></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">&nbsp;&nbsp;&nbsp;
+MsgBox(ListBox1.Tag(ListBox1.SelectedIndex))</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font SIZE="2" face="Courier New" color="#0000FF">End
+Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">La
+contrainte est qu'il faut connaître le nombre maximum d'élément à charger et
+charger la liste dans l'ordre; il faut être en Option Strict=Off (sinon il y a
+liaison tardive).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>- LA solution NET+++:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">&nbsp;On
+crée un DataTable (voir cours sur le base de données)&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">Dim
+dt As New DataTable</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'on&nbsp;
+ajoute au DataTable une colonne 'Numero' et une colonne 'Nom'.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Columns.Add(&quot;Numero&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Columns.Add(&quot;Nom&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'on
+remplit les lignes avec les numéro et nom.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Rows.Add(1,
+&quot;Philippe&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Rows.Add(3,
+&quot;Jean&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Rows.Add(2,
+&quot;Paul&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">dt.Rows.Add(4,
+&quot;Henry&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'on
+indique que la source de la liste est le DataTable</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MaList.DataSource
+= dt</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'la
+liste affichera les noms</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MaList.DisplayMember
+= &quot;Nom&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'on
+indique quelle valeur sera retournée quand on clique sur la liste: c' est le numéro</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MaList.ValueMember
+= &quot;Numero&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">'Quand
+l'utilisateur double clique sur un élément de la liste, on affiche le
+numéro:&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">Private
+Sub MaList_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs)
+Handles MaList.DoubleClick</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp;
+MsgBox(<b>MaList.SelectedValue</b>)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">End
+Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;Remarque:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Lorsque la propriété <b>MultiColumn</b> a la valeur <b>true</b>, la &nbsp;liste 
+s’affiche &nbsp;avec une barre de défilement horizontale. Lorsque la propriété <b>
+ScrollAlwaysVisible</b> a la valeur <b>true</b>, la barre de défilement 
+s'affiche, quel que soit le nombre d'éléments.  </font>
+<br>
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Comment à partir des coordonnées de la 
+souris connaître l'élément de la liste qui est survolé?</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: La souris survole ListBox2 , on a e.X 
+et e.Y, coordonnées de l'écran, comment obtenir l'index. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On va d'abord transformer e.X et e.Y en 
+coordonnées client (par rapport à la listBox)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;</font><font face="Courier New" color="#0000ff" size="2">ListBox2.PointToClient(New 
+Point(e.X, e.Y)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;Puis </font>
+<font face="Courier New" color="#0000ff" size="2">ListBox2.IndexFromPoint()</font><font face="Courier New" size="2"> 
+va retourner l'index survolé.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">Private</font></font><font color="#0000ff" size="2" face="Courier New"> 
+Sub ListBox2_DragOver(ByVal sender As Object, ByVal e As 
+System.Windows.Forms.DragEventArgs) Handles</font><font size="2"><font face="Courier New" color="#0000ff"> 
+ListBox2.DragOver</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff">IndexdInsertion = 
+ListBox2.IndexFromPoint(ListBox2.PointToClient(</font></font><font face="Courier New" color="#0000ff" size="2">New</font><font size="2"><font face="Courier New" color="#0000ff"> 
+Point(e.X, e.Y)))</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="5">Les CheckedListBox</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+C’est une Listbox mais avec une </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">case 
+à cocher</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+sur chaque ligne. </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vclistbo.GIF" width="96" height="55"></p>
+<p><font face="Courier New" size="2"><b>Attention&nbsp;: SelectedItems</b> et <b>
+SelectedIndices</b> ne déterminent pas les éléments qui sont cochés, mais ceux 
+qui sont en surbrillance. </font></p>
+<p><font face="Courier New" size="2">La collection&nbsp; <b>
+CheckedItems</b>&nbsp; vous donne par contre les éléments cochés. La méthode <b>GetItemChecked
+</b>(avec<b> </b>comme argument le numéro d'index) &nbsp;détermine si l’élément est 
+coché. </font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Exemple&nbsp;:</b></font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour déterminer les 
+éléments cochés dans un contrôle CheckedListBox :</b></font></p>
+<p class="MsoNormal" style="margin-left: 18.0pt">
+<font face="Courier New" size="2">Tester chaque élément de la collection <b>
+CheckedItems</b>, en commençant par&nbsp;0. Notez que cette méthode fournit le numéro 
+que porte l'élément dans la liste des éléments cochés, et non dans la liste 
+globale. Par conséquent, si le premier élément de la liste n'est pas coché alors 
+que le deuxième l'est, le code ci-dessous affiche une chaîne du type «&nbsp;Item 
+coché&nbsp;1&nbsp;= Dans la liste&nbsp;: 2&nbsp;». </font></p>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">If CheckedListBox1.CheckedItems.Count &lt;&gt; 0 Then</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;&nbsp; 'S’il y a des éléments cochés une boucle balaye les éléments cochés </pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">   '(collection CheckedItems) et affiche le numéro de l’élément DANS LA LISTE toutes lignes.</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;&nbsp; <font color="#0000FF"><span style="background-color: #FFFFFF">Dim x As Integer</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp; Dim s As String = &quot;&quot;</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp; For x = 0 To CheckedListBox1.CheckedItems.Count - 1</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; s = s &amp; &quot;Item coché &quot; &amp; (x+1).ToString &amp; &quot; = &quot; &amp; «&nbsp;Dans la liste&nbsp;:&nbsp;»&amp; CheckedListBox1.CheckedItems(x).ToString &amp; ControlChars.CrLf</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp; Next x</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp; MessageBox.Show(s)</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">End If</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 18.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">On rappelle comme toujours que quand on parle du 3eme élément 
+cela correspond à l’index 2.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="5">Les ComboBox</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Les listes Combo 
+(Liste combinée) possèdent &nbsp;deux caractéristiques essentielles par rapport aux ListBox. </span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Elles sont <b><i>
+modifiables</i></b>&nbsp;: c’est-à-dire que l’utilisateur a la possibilité d’entrer 
+un élément qui ne figure pas au départ dans la liste. Cette caractéristique 
+concerne donc les données proprement dites&nbsp;; cela se traduit par la présence 
+d’une zone de texte en haut de la liste. </span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Elles peuvent être <b>
+<i>déroulantes</i></b>&nbsp;ou déjà déroulée: c’est-à-dire qu’on ne voit qu’un seul 
+élément de la liste à la fois, et qu’il faut cliquer sur la flèche du côté pour 
+&quot;&nbsp;déplier&nbsp;&quot; la liste, ou bien que la liste est déjà visible. C’est la propriété
+<b>DropDownList</b> qui gère cela. </span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vcombos.gif" width="141" height="128"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La combos du bas a sa <font color="#0000FF">DropDownList=Simple</font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">L’utilisateur peut 
+donc cliquer dans la liste (ce qui met le texte cliqué dans la zone texte), ou 
+taper un nouveau texte.</span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Items.Add</span></b><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp; 
+(méthode) ajoute un élément à une liste. <br>
+<b>Items.Clear</b> (méthode)&nbsp;efface tous les éléments d’une liste&nbsp; <br>
+<b>Items.Count</b> (propriété) renvoie le nombre d’éléments d’une liste <br>
+<b>Multiselect</b> (propriété) permet la sélection multiple <br>
+<b>Item.Remove</b> (méthode) supprime un élément de la liste <br>
+<b>Sorted</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (propriété) trie les éléments d’une liste</span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: windowtext; text-decoration: none; font-weight: 700">
+Comment récupérer la zone texte quand elle change&nbsp;?</span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Elle est dans la 
+propriété <b>Text</b>.</span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">On utilise l'évènement <b>
+TextChanged</b> qui se déclenche quand le texte est modifié.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span> ComboBox1_TextChanged(<span style="color: blue">ByVal</span> 
+sender <span style="color: blue">As</span> <span style="color: blue">Object</span>,
+<span style="color: blue">ByVal</span> e <span style="color: blue">As</span> 
+System.EventArgs) <span style="color: blue">Handles</span> ComboBox1.TextChanged</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Label1.Text = ComboBox1.Text</font></span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; font-weight: normal; text-decoration: none; background-color:#FFFFFF">
+End</span><span style="font-size: 10.0pt; font-family: Courier New; font-weight: normal; text-decoration: none; background-color:#FFFFFF">
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; font-weight: normal; text-decoration: none; background-color:#FFFFFF">
+Sub</span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal; text-decoration: none">
+<font size="2">&nbsp;</font></span></p>
+<p class="titre4" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="text-decoration: none; font-family: Courier New; color: windowtext">
+<font size="2">&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="5" color="#0000FF">Le 
+Contrôle ListView&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">De plus en plus 
+puissant, le contrôle <font color="#0000FF">ListView</font> permet d’afficher des listes multi colonnes, ou 
+des listes avec icône ou case à cocher.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="background-color: #C0C0C0">A- Liste avec sous éléments.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ajouter un ListView nommé ListBox.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En mode conception&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La propriété <b>View</b> 
+permet de déterminer l’aspect général du contrôle, elle peut prendre les valeurs&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Details</b> 
+permet une liste avec sous éléments et titre de colonnes.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Liste utilise un 
+ascenseur horizontal.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>LargeIcon</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>SmallIcone</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par programmation cela 
+donne&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">ListBox.View= 
+View.Details</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Utilisons le mode 
+détails (Appelé mode Rapport)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Exemple</b>&nbsp;: Faire 
+un tableau de 3 colonnes, mettre les nombres de 1 à 100 dans la première, leur 
+carré dans la seconde, leur cube dans la troisième.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vlistview.jpg" width="211" height="108"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="2">
+<span style="font-family: Courier New">1-Comment</span></font><span style="font-size: 10.0pt; font-family: Courier New"> 
+remplir les en-têtes de colonnes?</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En mode conception,
+dans la fenêtre propriété du ListView, il 
+y a une propriété <b>Columns</b>, le fait de cliquer sur le bouton d’expansion (…) 
+ouvre une fenêtre, cliquer sur ‘Ajouter’ permet d’ajouter une colonne&nbsp;; la 
+propriété <b>Text</b> permet de donner un libellé qui apparaîtra en haut de la 
+colonne. On peut ainsi nommer les 3 colonnes («&nbsp;Nombre&nbsp;», «&nbsp;Carré&nbsp;», «&nbsp;Cube&nbsp;» dans 
+notre exemple)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par programmation on 
+peut aussi créer des colonnes; cela 
+donne:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">ListBox.Columns.Add 
+(&quot;Nombre&quot;, 60, HorizontalAlignment.Left)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">ListBox.Columns.Add 
+(&quot;Carré&quot;, 60, HorizontalAlignment.Left)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">ListBox.Columns.Add 
+(&quot;Cube&quot;, 60, HorizontalAlignment.Left)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font size="2" face="Courier New">Une
+  autre manière est de créer une colonne et de l'ajouter:</font></span></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;Dim
+  MyCol1 As ColumnHeader = New ColumnHeader&nbsp;</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;MyCol1.Text
+  = &quot;Nombre&quot;</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;MyCol1.Width
+  = 60</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;MyCol1.TextAlign
+  = HorizontalAlignment.Center</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;ListBox.Columns.Add(MyCol1)</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si
+  on créer 3 columns (MyCol1 , MyCol2, MyCol3), on peut les ajouter en une fois
+  avec AddRange.</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">Dim
+  cols() As ColumnHeader = {MyCol1, MyCol2, MyCol3}</font></font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;ListBox.Columns.AddRange(cols)</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">2-Comment remplir le tableau?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour remplir le 
+tableau, on pourrait, sur la ligne Items de la fenêtre des propriétés, cliquer 
+sur … et rentrer les valeurs ‘à la main’. On le fait le plus souvent par 
+programmation:</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Pour <u>chaque 
+ligne</u></b> il faut créer un objet<b> ListViewItem</b>:</span></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New">sa propriété <b>Text</b> 
+contient le texte de la première cellule</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New">j’ajoute à cet objet des <b>SubItems</b> 
+qui correspondent aux cellules suivantes. </span></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New">Enfin j’ajoute le <b>ListViewItem</b> au contrôle <b>
+ListView.</b></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"> 
+i <span style="color: blue">As</span> <span style="color: blue">Integer</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">For</span><font color="#0000FF"> i = 1 </font> <span style="color: blue">To</span><font color="#0000FF"> 
+100</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<span style="color: blue">Dim</span><font color="#0000FF"> LVI </font> <span style="color: blue">As</span><font color="#0000FF">
+</font>
+<span style="color: blue">New</span><font color="#0000FF"> ListViewItem</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; LVI.Text = 
+i.ToString&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'première cellule</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; LVI.SubItems.Add((i * i).ToString)&nbsp;&nbsp;&nbsp;&nbsp; </span>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+'seconde cellule</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; LVI.SubItems.Add((i * i * i).ToString) </span>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+'troisième cellule</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top:0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;ListBox.Items.Add(LVI)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'ajout de la ligne</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">&nbsp;</font><span style="color: blue">Next</span><font color="#0000FF"> i</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Autre manière: ajouter la ligne ' 2&nbsp;
+4&nbsp; 8'</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim MyLine As ListViewItem =
+New ListViewItem(&quot;2&quot;)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim subLine As
+ListViewItem.ListViewSubItem = New ListViewItem.ListViewSubItem(MyLine, &quot;4&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;MyLine.SubItems.Add(subLine)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;subLine = New
+ListViewItem.ListViewSubItem(MyLine, &quot;8&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;MyLine.SubItems.Add(subLine)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;MyLine.SubItems.Add(subLine)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" size="2" color="#0000FF">ListBox.Items.Add(MyLine)</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b><font face="Courier New" size="2">3-Comment relire une cellule, récrire dans 
+une cellule?</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Voyons d'abord comment on peut localiser une 
+cellule:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+  <tr>
+    <td width="33%"><font face="Courier New" size="2">ListBox.Items(0).Subitems(0).text</font></td>
+    <td width="33%"><font face="Courier New" size="2">ListBox.Items(0).Subitems(1).text</font></td>
+    <td width="34%"><font face="Courier New" size="2">ListBox.Items(0).Subitems(2).text</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Courier New" size="2">ListBox.Items(1).Subitems(0).text</font></td>
+    <td width="33%"><font face="Courier New" size="2">ListBox.Items(1).Subitems(1).text</font></td>
+    <td width="34%"><font face="Courier New" size="2">ListBox.Items(1).Subitems(2).text</font></td>
+  </tr>
+  <tr>
+    <td width="33%">...</td>
+    <td width="33%">...</td>
+    <td width="34%">...</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les lignes sont contenues dans la collection
+<font color="#0000FF">Items</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La première ligne est <font color="#0000FF">
+ListBox.Items(0)</font>, la seconde ligne<font color="#0000FF">: ListBox.Items(1)</font>...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les cellules sont contenues dans la collection
+<font color="#0000FF">Items().SubItems</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La première cellule est </font>
+<font color="#0000FF" face="Courier New" size="2">ListBox.Items(0).SubItems(0) 
+ou ListBox.Items(0).Text</font><font face="Courier New" size="2"><font color="#0000FF">
+</font>, la seconde </font><font color="#0000FF" face="Courier New" size="2">
+ListBox.Items(0).SubItems(1).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour lire le texte de la seconde ligne seconde 
+colonne:</font><font face="Courier New" size="2" color="#0000FF"> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Texte=ListBox.Items(1).SubItems(1).
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour écrire dans une cellule:</font></p>
+<font SIZE="2" color="#0000FF" face="Courier New">
+<p>listBox.Items(1).SubItems(1).Text = &quot;88&quot;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+Comment intercepter le numéro de la ligne qui a été cliquée&nbsp;par l’utilisateur 
+(et l’afficher)?</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span> Listview1_Click(<span style="color: blue">ByVal</span> 
+sender <span style="color: blue">As</span> <span style="color: blue">Object</span>,
+<span style="color: blue">ByVal</span> e <span style="color: blue">As</span> 
+System.EventArgs) <span style="color: blue">Handles</span> Listview1.Click</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">Label1.Text = Listview1.SelectedIndices(0).ToString</font></span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">End</span> <span style="color: blue">Sub</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la propriété <b>
+MultiSelect</b> est à <font color="#0000FF">False</font> il y a, bien sur, une 
+seule ligne sélectionnée, sinon les lignes sélectionnées sont dans la collection
+<font color="#0000FF">SelectedIndices()</font>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si on veut récupérer 
+le texte de la ligne sélectionnée, il faut utiliser&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">ListBox.SelectedItems(0)</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Pour récupérer les textes de
+toutes les lignes sélectionnées:</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF"><font face="Courier New" size="2">Private Sub
+ListView1_SelectedIndexChanged_UsingItems&nbsp; (ByVal sender As Object, ByVal e
+As System.EventArgs)&nbsp; Handles ListView1.SelectedIndexChanged&nbsp;</font></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim groupeItem As
+ListView.SelectedListViewItemCollection =&nbsp; Me.ListView1.SelectedItems&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim item As ListViewItem&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim myText As String&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">For Each item In groupeItem&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;
+Mytext +=&nbsp; item.SubItems(1).Text</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Next&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBox1.Text = Mytext</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la propriété <b>
+GridLine</b> est à True, des lignes matérialisant les cases apparaissent.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la propriété <b>
+CheckedBox</b> est à True , des cases à cocher apparaissent.</span></p>
+<font SIZE="2">
+<p><font face="Courier New"><font color="#0000FF">listBox.LabelEdit </font>=
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">True </font><font SIZE="2">
+<font face="Courier New">autorise la 
+modification d'une cellule <b>de la première colonne </b>(pour modifier, il faut 
+cliquer une fois (sélection) puis une seconde fois (modification). Pour le 
+colonnes suivantes, il n'y a pas d'édit. </font> </p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Attention&nbsp;: si la 
+somme des colonnes est plus large que le contrôle, un ascenseur horizontal 
+apparaît&nbsp;!!</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour ne pas voir cet 
+ascenseur, ruser sur la largeur des colonnes (c’est le 2eme paramètre de la 
+méthode .Columns.Add)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Afficher des images dans 
+les SubItems en VB 2005: voir annexe en bas de page </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="background-color: #C0C0C0">B- Liste d'icônes</span>.</b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Permet de faire un menu d'icône à gauche d'un 
+formulaire, du plus bel effet:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vlistview2.JPG" width="343" height="410"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La propriété
+<font color="#0000FF">View</font> 
+permet de déterminer l’aspect général du contrôle, ici on la met à la valeur
+<font color="#0000FF">LargeIcon</font><b>.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voyons certaines propriétés du Listview (nommé 
+menu_graphique):</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+Dock= Left</font><b>&nbsp;&nbsp;&nbsp; </b>'cela le 'colle' sur le rebord 
+gauche. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+MultiSelected= False</font><b>&nbsp;&nbsp;&nbsp; </b>'on n'utilise qu'un bouton 
+à la fois.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+Activation= OnClick</font><b>&nbsp;&nbsp;&nbsp;&nbsp; </b>'les icônes marchent 
+comme des boutons&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+LabelEdit= False </font><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>'impossible 
+de modifier le texte sous les icônes</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+LargeIconeList= NOMdeIMAGELIST </font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">'En effet, il faut créer 
+un contrôle ImageList&nbsp; y mettre les images du menu et indiquer au Listview 
+le nom de l'ImageList&nbsp; dans la propriété LargeIconeList.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans la collection
+<font color="#0000FF">Items</font> du Listview (fenêtre des propriétés), dans 
+chaque élément, <font color="#0000FF">ImageIndex</font> donne le numéro de 
+l'image du imageList à mettre dans l'élément (ainsi que le texte qui est sous 
+l'image).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><b><span style="font-family: Courier New">Quand l'utilisateur 
+clique sur une image, la procédure suivante se déclenche:</span></b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub 
+menu_graphique_Click(ByVal sender As Object, ByVal e As System.EventArgs) 
+Handles menu_graphique.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Select Case 
+menu_graphique.SelectedItems(0).Text</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Case 
+&quot;Rendez-vous&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; ...</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Case 
+&quot;Quitter&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Application.Exit()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Select</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On voit que<b> </b></font>
+<font color="#0000FF" face="Courier New" size="2">menu_graphique.SelectedItems(0).Text
+</font><font face="Courier New" size="2">permet de savoir sur quel bouton 
+l'utilisateur à cliqué et ainsi d'appeler&nbsp; la procédure correspondant au 
+choix de l'utilisateur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="5" color="#0000FF">Le 
+Contrôle DomainUpDown&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">L</span></font><span style="font-size: 10.0pt; font-family: Courier New">e contrôle
+<font color="#0000FF">DomainUpDown</font> permet d’afficher une liste occupant
+peu de place: on ne voit qu'une ligne, on se déplace avec les boutons up et
+down:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vdomainupdw.JPG" width="187" height="39"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On charge la liste avec:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">MondomainUpDown.Items.Add(&quot;une
+ligne&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Quand
+l'utilisateur change de ligne cela déclenche <font color="#0000FF">SelectedItemChanged</font>.
+Le texte sélectionné est dans <font color="#0000FF">SelectedItem</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">La
+sub suivante affiche dans une messageBox l'index et le texte sélectionné.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Private Sub MondomainUpDown1_SelectedItemChanged
+_ (sender As System.Object, e As System.EventArgs)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">MessageBox.Show((&quot;Index sélectionné:
+&quot; &amp; MondomainUpDown1.SelectedIndex.ToString() &amp; _ ControlChars.Cr
+&amp; &quot;Item sélectionné: &quot; &amp; MondomainUpDown1.SelectedItem.ToString()))&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">End
+Sub&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Attention la liste contient des objets, il
+peut être nécessaire lorsqu'on utilise un des items de caster l'objet en
+string grace à ToString.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il existe aussi un contrôle <font color="#0000FF">NumericUpDown</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="5" color="#0000FF">Le 
+Contrôle TreeView&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">L</span></font><span style="font-size: 10.0pt; font-family: Courier New">e contrôle
+<font color="#0000FF">TreeView</font> permet d’afficher des listes 
+'arborescentes' avec des nœuds.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<img border="0" src="vtreenod.JPG" width="236" height="235"></font><span style="font-size: 10.0pt; font-family: Courier New"> </span></p>
+<font SIZE="2">
+<p><font face="Courier New">Un arbre (Tree) est composé de noeuds (nodes) qui sont des objets.</font></p>
+</font>
+<p><font face="Courier New" size="2">Chaque noeud est composé d'une
+<font color="#0000FF">Image</font> et d'un <font color="#0000FF">Text</font>.</font></p>
+<p><font face="Courier New" size="2">Les noeuds du premier niveau sont dans la collection
+<font color="#0000FF">Nodes</font> du TreeView, ils sont repérés par un index unique.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(0)
+</font>est le premier noeud.</font></p>
+<p><font face="Courier New" size="2"><br>
+Dans le TreeView ci dessus:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(0).Text = &quot;Paul&quot;</font>	'collection dont le premier élément est zéro</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(1).Text = &quot;Luc&quot;</font>	'c'est bien le second élément du premier niveau</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(2).Text</font>&nbsp;
+<font color="#FF0000">retourne une erreur</font>: la collection ne comporte que les noeuds du premier niveau.<br>
+</font></p>
+<p><font face="Courier New" size="2">Chaque noeud à un Parent (au dessus), des noeuds 
+enfants (au dessous)&nbsp; </font> </p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(10).Children
+</font>'retourne le nombre d'enfant<br>
+</font></p>
+<p><font face="Courier New" size="2">Pour voir les enfants il y a plusieurs méthodes:</font></p>
+<font SIZE="2">
+<p><code><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(0).Nodes(0).Text
+= &quot;Odile&quot; </font>' on utilise la collection Nodes du noeud Nodes(0) </font></code></p>
+<p><code><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(0).FirstNode.Text
+= &quot;Odile&quot; </font>' on utilise FirstNode qui donne le premier enfant.</font></code></p>
+</font>
+<p><font face="Courier New" size="2">Il existe aussi <font color="#0000FF">
+LastNode</font>. </font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">NextNode</font>,
+<font color="#0000FF">PrevNode</font> <font color="#0000FF">Parent</font> 
+permettent, par rapport à un noeud (sur une instance de noeud et pas sur nodes()), 
+de voir respectivement le noeud suivant, le précédent au même niveau ou le noeud parent.</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes(0).FirstNode.NextNode</font>&nbsp; 
+permet dans les enfants de Nodes(0), de voir celui qui est après le premier.</font></p>
+</font>
+<pre>&nbsp;</pre>
+<pre><font face="Courier New">On peut modifier l'image:</font></pre>
+<pre><font face="Courier New" color="#0000FF">MyTree.Nodes(7).Image = &quot;closed&quot; </font></pre>
+<pre>&nbsp;</pre>
+<pre><font face="Courier New">Nombre de noeuds:</font></pre>
+<pre><font face="Courier New"><font color="#0000FF">MyTree.GetNodeCount(True)</font> donne le nombre de nœuds (nœuds enfants compris car l'argument est True).</font></pre>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.GetNodeCount(False)</font> donne les
+nœuds de premier niveau</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">P</font></b><font SIZE="2"><font face="Courier New"><b>our 
+ajouter des noeuds en mode Desig, utiliser la propriété Nodes dans la 
+fenêtre de propriété.</b> Cela donne accès à une fenêtre qui permet de rajouter des 
+noeuds au même niveau ou des noeuds enfants. </font> </p>
+<p><font face="Courier New">On peut aussi ajouter un noeud par code (au niveau de 'Paul' et 'Luc')</font></p>
+<p><font face="Courier New">A partir d'un noeud, on travaille sur la collection <font color="#0000FF">
+nodes</font> et la méthode <font color="#0000FF">Add</font> de cette collection.</font></p>
+<p><font color="#0000FF" face="Courier New">MyTree.Nodes.Add(&quot;Lucienne&quot;)</font></p>
+<p><font face="Courier New">On peut ajouter un noeud sous le noeud sélectionné.</font></p>
+<p><font face="Courier New"><font color="#0000FF">MyTree.SelectedNode.Nodes.Add(</font><font SIZE="2" COLOR="#0000FF">&quot;toto&quot;</font><font color="#0000FF">)</font></font></p>
+<p><font face="Courier New">ou en développant:</font></font></p>
+<pre class="code"><font face="Courier New" color="#0000FF">Dim node As System.Windows.Forms.TreeNode
+node = MyTree.SelectedNode
+node.Nodes.Add(&quot;Nouveau noeud sous la sélection&quot;)</font></pre>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On peut enlever un noeud:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.Nodes.RemoveAt(0)</font><br>
+&nbsp;</font></p>
+<font SIZE="2">
+<p>&nbsp;</p>
+<p><font face="Courier New">Un noeud peut être <font color="#0000FF">expanded</font> or
+<font color="#0000FF">collaped </font>on peut modifier l'état de l'arbre par<font color="#0000FF"> 
+CollapsedAll </font>ou<font color="#0000FF"> ExpandedAll , </font>on peut 
+travailler sur les noeuds visibles, voir ou non les '+' et les '-' grâce à la 
+propriété <font color="#0000FF">ShowPlusMinus</font>.</font></p>
+</font>
+<p><font face="Courier New" size="2">Le noeud sélectionné par l'utilisateur est dans
+<font color="#0000FF">SelectedNode</font></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim node As System.Windows.Forms.TreeNode<br>
+node = MyTree.SelectedNode</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MyTree.SelectedNode.Tex</font>t retourne 'Tree Node: 
+Paul' si on a cliqué sur&nbsp; le premier noeud.</font></p>
+<p><font face="Courier New" size="2">Quand on est perdu <font color="#0000FF">FullPath</font> donne le chemin du noeud.</font></p>
+<font SIZE="2">
+<p><font face="Courier New">Comment savoir si l'utilisateur à sélectionné un noeud, ou double cliqué sur 
+un noeud?</font></p>
+<p><font face="Courier New">On utilise les procédures évènements suivantes:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> MyTreeAfterSelect(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.TreeViewEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> <b>MyTree.AfterSelect</b></font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+MyTreeDoubleClick(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font color="#0000FF">
+<b>MyTree.DoubleClick</b></font></font></p>
+<p><font color="#0000FF" face="Courier New">TextBox1.Text = TreeView1.SelectedNode.ToString</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="dtH4">&nbsp;</p>
+<h4 class="dtH4"><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Exemple
+complet 1 :</span><span style="font-weight: 400"> 
+<span style="background-color: #C0C0C0"> </span> 
+sur <font color="#0000FF">MyTree, </font>rentrer les clients et leurs commandes 
+.</span></font></h4>
+</font>
+<p class="dtH4"><font face="Courier New" size="2">(Exemple librement inspiré de Microsoft)</font></p>
+<pre class="code"><font face="Courier New" color="#0000FF">Dim node As TreeNode
+node = MyTree.Nodes.Add(&quot;Noeud de niveau 1&quot;)
+node.Nodes.Add(&quot;noeud de niveau 2&quot;)</font></pre>
+<p>&nbsp;</p>
+<p>
+<font SIZE="2" face="Courier New">
+' Créer une ArrayList pour Customer objects.</font><font face="Courier New"><font SIZE="2" COLOR="#0000ff"><br>
+Private MyClientArray As New ArrayList()<br>
+<br>
+Private Sub FillMyTreeView()<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' On ajoute des éléments à l'ArrayList.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; Dim x As Integer<br>
+&nbsp;&nbsp; For x = 0 To 999<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyClientArray.Add(New MyClient(&quot;MyClient&quot; + 
+x.ToString()))<br>
+&nbsp;&nbsp; Next x<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' On ajoute des commandes (order) pour chaque client dans ArrayList.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; Dim MyClient1 As MyClient<br>
+&nbsp;&nbsp; For Each MyClient1 In MyClientArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim y As Integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For y = 0 To 14<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+MyClient1.MyClientOrders.Add(New Order(&quot;Order&quot; + y.ToString()))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next y<br>
+&nbsp;&nbsp; Next MyClient1<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' on met d'un curseur d'attente.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; Cursor.Current = New Cursor(&quot;MyWait.cur&quot;)<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' on gèle la mise à jour du contrôle.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; MyTree.BeginUpdate()<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' on efface le précédent contenu.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; MyTree.Nodes.Clear()<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' On ajoute des root TreeNode pour chaque MyClient object.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; Dim MyClient2 As MyClient<br>
+&nbsp;&nbsp; For Each MyClient2 In MyClientArray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyTree.Nodes.Add(New TreeNode(MyClient2.MyClientName))<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font SIZE="2">
+' on ajoute des TreeNode enfant pour chaque commande (Order) object .</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim order1 As Order<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Each order1 In MyClient2.MyClientOrders<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MyTree.Nodes(MyClientArray.IndexOf(MyClient2)).Nodes.Add( 
+_<br>
+&nbsp;&nbsp;&nbsp; New TreeNode(MyClient2.MyClientName + &quot;.&quot; + order1.OrderID))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next order1<br>
+&nbsp;&nbsp; Next MyClient2<br>
+<br>
+&nbsp;&nbsp; </font>
+<font SIZE="2">
+' On permet la mise à jour.</font><font SIZE="2" COLOR="#0000ff"><br>
+&nbsp;&nbsp; MyTree.EndUpdate()</font></font></p>
+<p><font face="Courier New"><font size="2" color="#0000FF">&nbsp;&nbsp; </font>
+<font SIZE="2">
+' On remet le curseur normal.</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New"><br>
+&nbsp;&nbsp; Cursor.Current = System.Windows.Forms.Cursors.Default<br>
+<br>
+End Sub <br>
+&nbsp;</font>
+</font>
+</p>
+<p>
+<font SIZE="2">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">Exemple
+complet 2 :</span><span style="font-weight: 400"><span style="background-color: #C0C0C0">
+Simple et élégant!!</span></span></font></font></p>
+<p><font face="Courier New" size="2"><span style="font-weight: 400">Un TreeView
+nommé <font color="#0000FF">MyTree, </font>Une<font color="#0000FF"> ImageList1</font>,
+2 images sur le disque symbolisant les fruits et les légumes.&nbsp;</span></font></p>
+<p><font SIZE="2" COLOR="#0000ff"><font face="Courier New">ImageList1.Add(Image.FromFile(&quot;c:\Fruit.jpg&quot;)</font>
+</font>
+</p>
+<p><font face="Courier New" SIZE="2" COLOR="#0000ff">ImageList1.Add(Image.FromFile(&quot;c:\Legume.jpg&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">MyTreeView.ImageList=
+ImageList1.ImageList</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">Dim
+Noeud1, noeud2 As TreeNode</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">noeud1=
+New TreeNode</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">noeud2=New
+TreeNode</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">With
+noeud1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Text= &quot;Fruit&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.ImageIndex = 0</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Nodes.Add (&quot;Banane&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Nodes.Add(&quot;Pomme&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">End
+With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">With
+noeud2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Text= &quot;Légume&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.ImageIndex = 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Nodes.Add (&quot;Choux&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+.Nodes.Add(&quot;carotte&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">End
+With</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">With
+MyTree</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;<font color="#0000ff">
+.Nodes.Add(noeud1)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;<font color="#0000ff">
+.Nodes.Add(noeud2)</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2" face="Courier New">End
+With</font></p>
+<p><font size="2" color="#0000ff"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="5" color="#0000FF">Annexe: Afficher des images dans un ListView&nbsp;<img border="0" src="v2005.JPG" width="52" height="21">:</font></span></p>
+</font>
+<font SIZE="2">
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New">
+Débutant s'abstenir.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">De plus en plus 
+puissant: on a vu que dans le mode 'détails' d'un ListView, on avait&nbsp; des 
+colonnes de SubItems. Comment afficher des images dans ces cellules?</span></p>
+<p><font face="Courier New">Il faut mettre la propriété du ListView
+<font color="#0000FF">OwnerDraw</font> à True, cela permet au programmeur 
+d'utiliser la <font color="#0000FF">Sub DrawSubItem</font> qui se déclenche 
+quand le subitem doit être dessiné et de dessiner soi même dans la cellule en 
+utilisant l'argument e qui correspond au bitmap de la cellule.</font></p>
+<p><font face="Courier New">Dans cette sub <font color="#0000FF">DrawSubItem,
+</font>par exemple, au lieu d'afficher un + dans la première colonne , j'affiche 
+une image (avec </font><font color="#0000FF" face="Courier New">e.Graphics.DrawImage)</font><font face="Courier New">. 
+Si par contre je veux laisser s'afficher le texte normal, je dois écrire
+<font color="#0000FF">e.DrawDefault = </font><font SIZE="2" COLOR="#0000ff">True.</font></font></p>
+</font>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListView1_DrawSubItem(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.DrawListViewSubItemEventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ListView1.DrawSubItem</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+e.ColumnIndex = 1 </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+  e.SubItem.Text = &quot;+&quot; </font></font><font SIZE="2" COLOR="#0000ff">
+  <font face="Courier New">Then</font></p>
+  </font><font SIZE="2" COLOR="#0000FF">
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; 
+  e.Graphics.DrawImage(Image.FromFile(&quot;c:\b.bmp&quot;), </font> </font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+  Point(e.Bounds.X, e.Bounds.Y))</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+  </font><font SIZE="2" color="#0000FF">
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; e.DrawDefault =
+  </font>
+  </font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">True</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</blockquote>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">else</p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">e.DrawDefault =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">True</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">end</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">if</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2" face="Courier New">
+<p>Ne pas oublier d'afficher normalement les têtes de colonnes.</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListView1_DrawColumnHeader(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.DrawListViewColumnHeaderEventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ListView1.DrawColumnHeader</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">e.DrawDefault =
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">True</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:53 GMT -->
+</html>

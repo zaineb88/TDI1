@@ -1,0 +1,411 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:34 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  : assembly</title>
+<style>
+<!--
+	.RightPanel { margin-right:-15px;}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="vd1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">D 1.1.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Assembly</font></b></td>
+    <td width="14%" height="76"><a href="vd1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800000">
+<span style="font-family: Courier New"><b>Avant VB.Net</b>, o</span></font><font face="Courier New" size="2" color="#800000">n 
+enregistrait les références des programmes, des dll.. dans le <b>registre</b>, 
+l'installateur enregistrait le nom et l'emplacement du fichier .exe ou de la Dll; 
+c'était une belle pagaille: </font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800000">quand on installait 2 dll 
+différentes de même nom.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800000">quand il y avait plusieurs 
+versions d'une même dll </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800000">quand on déplaçait un 
+programme!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800000">quand on mettait à jour une 
+dll qui ne respectait pas la compatibilité ascendante.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800000">Maintenant cela ne se fait 
+plus; en VB.Net on utilise les <b>Assembly</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" size="5" face="Courier New"><span style="background-color: #C0C0C0"><b>&nbsp;Assembly: 
+définition, composition.</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un Assembly est <b>une unité de déploiement 
+indivisible</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il se caractérise par son identité (propriétés 
+de l'assembly)</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">un nom</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">une version</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">un identificateur de culture</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">une clé publique</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il contient:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">la liste de l'ensemble des fichiers (exe, dll, 
+données, images, ressources)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">les méta données (informations descriptives 
+des Types et Classes publiques)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'énumération des autres Assembly dont 
+l'application dépend et leurs dépendances.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font SIZE="2" face="Courier New">
+l'ensemble des autorisations requises pour que l'assembly fonctionne 
+correctement.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font SIZE="2" face="Courier New">
+Ces informations sont utilisées au moment de l'exécution pour 
+résoudre les références, appliquer la stratégie de liaison des versions et 
+valider l'intégrité des assemblys chargés.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Toutes ses informations sont stockées dans le 
+&quot;<b>manifeste</b>&quot; de l'Assembly.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En conclusion:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font SIZE="2" face="Courier New">
+Pour les installations de programme , mises à jour, utilisation de composants 
+propres au programme ou partagés avec d'autres programmes; pour gérer les 
+versions, éviter les problèmes de conflit de composants, VB.Net utilise donc les <b>
+assembly</b> (ou <b>assemblage</b>).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<font face="Courier New">
+<p><font color="#0000FF" size="5"><span style="background-color: #C0C0C0"><b>&nbsp;Les 
+propriétés de l'assembly:</b></span></font></p>
+</font><font SIZE="2" face="Courier New">
+<p><b>Voir les propriétés de l'Assembly:</b></p>
+<p>Pour cela ouvrir les propriétés du projet (cliquer sur MyProjet dans 
+l'explorateur de solution ou passer par le menu Projet-&gt;Propriétés de..)</p>
+<p>Dans l'onglet Application cliquer sur le bouton 'Informations de l'assembly':</p>
+<p><img border="0" src="vassembl.JPG" width="800" height="571"></p>
+<p>On a accès au titre, à la description, à la société, au produit, au 
+copyright, à la marque, à la version de l'assembly, à la version du fichier, au 
+GUID, à la langue.</p>
+<p>On peut aussi le voir en XML: dans l'explorateur de solution, double-cliquer sur <b>Assemblyinfo.vb</b>, 
+la fenêtre principale s'ouvre permettant d'avoir accès à certaines données:</p>
+<font SIZE="2" COLOR="#008080">
+<p style="margin-top: 0; margin-bottom: 0">Imports</font><font SIZE="2"> System</p>
+</font><font SIZE="2" COLOR="#008080">
+<p style="margin-top: 0; margin-bottom: 0">Imports</font><font SIZE="2"> 
+System.Reflection</p>
+</font><font SIZE="2" COLOR="#008080">
+<p style="margin-top: 0; margin-bottom: 0">Imports</font><font SIZE="2"> 
+System.Runtime.InteropServices</p>
+</font><font SIZE="2" COLOR="#008000">
+<p style="margin-top: 0; margin-bottom: 0">' Les informations g‚n‚rales 
+relatives … un assembly d‚pendent de </p>
+<p style="margin-top: 0; margin-bottom: 0">' l'ensemble d'attributs suivant. 
+Changez les valeurs de ces attributs pour modifier les informations</p>
+<p style="margin-top: 0; margin-bottom: 0">' associ‚es … un assembly.</p>
+<p style="margin-top: 0; margin-bottom: 0">' V‚rifiez les valeurs des attributs 
+de l'assembly</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyTitle(</font><font SIZE="2" COLOR="#800000">&quot;Bonjour&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyDescription(</font><font SIZE="2" COLOR="#800000">&quot;&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyCompany(</font><font SIZE="2" COLOR="#800000">&quot;Polytel&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyProduct(</font><font SIZE="2" COLOR="#800000">&quot;Bonjour&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyCopyright(</font><font SIZE="2" COLOR="#800000">&quot;Copyright 
+¸ Polytel 2006&quot;</font><font SIZE="2">)&gt; </p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyTrademark(</font><font SIZE="2" COLOR="#800000">&quot;&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: ComVisible(</font><font SIZE="2" COLOR="#008080">False</font><font SIZE="2">)&gt;</p>
+</font><font SIZE="2" COLOR="#008000">
+<p style="margin-top: 0; margin-bottom: 0">'Le GUID suivant est pour l'ID de la 
+typelib si ce projet est expos‚ … COM</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: Guid(</font><font SIZE="2" COLOR="#800000">&quot;9a8cb33c-3392-44a0-a86d-c7164dfa91c1&quot;</font><font SIZE="2">)&gt;
+</p>
+</font><font SIZE="2" COLOR="#008000">
+<p style="margin-top: 0; margin-bottom: 0">' Les informations de version pour un 
+assembly se composent des quatre valeurs suivantesÿ:</p>
+<p style="margin-top: 0; margin-bottom: 0">'</p>
+<p style="margin-top: 0; margin-bottom: 0">' Version principale</p>
+<p style="margin-top: 0; margin-bottom: 0">' Version secondaire </p>
+<p style="margin-top: 0; margin-bottom: 0">' Num‚ro de build</p>
+<p style="margin-top: 0; margin-bottom: 0">' R‚vision</p>
+<p style="margin-top: 0; margin-bottom: 0">'</p>
+<p style="margin-top: 0; margin-bottom: 0">' Vous pouvez sp‚cifier toutes les 
+valeurs ou indiquer les num‚ros de build et de r‚vision par d‚faut </p>
+<p style="margin-top: 0; margin-bottom: 0">' en utilisant '*', comme indiqu‚ 
+ci-dessousÿ:</p>
+<p style="margin-top: 0; margin-bottom: 0">' &lt;Assembly: AssemblyVersion(&quot;1.0.*&quot;)&gt;
+</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyVersion(</font><font SIZE="2" COLOR="#800000">&quot;1.0.0.0&quot;</font><font SIZE="2">)&gt;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;Assembly: AssemblyFileVersion(</font><font SIZE="2" COLOR="#800000">&quot;1.0.0.0&quot;</font><font SIZE="2">)&gt;
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><font color="#0000FF" size="5" face="Courier New"><span style="background-color: #C0C0C0"><b>
+&nbsp;Le manifeste:</b></span></font></p>
+<p>Toutes les informations de l'assembly sont stockées dans le 
+&quot;<b>manifeste</b>&quot;.</p>
+<p>Le manifeste qui est un fichier en XML se trouve dans:</p>
+<p>&nbsp;myapplication\myapplication\bin\debug\myapplication.publish\myapplication_1_0_0_0\myapplivation.exe.manifest</p>
+<p>myapplication\myapplication\publish\myapplication_1_0_0_0\myapplivation.exe.manifest</p>
+<p>Pour info, voici un exemple de contenu:</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&lt;?</font><font SIZE="2" COLOR="#800000">xml</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">version</font><font SIZE="2" COLOR="#0000ff">=&quot;1.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">encoding</font><font SIZE="2" COLOR="#0000ff">=&quot;utf-8&quot;?&gt;</p>
+<p style="margin-top: 0; margin-bottom: 0">&lt;</font><font SIZE="2" COLOR="#800000">asmv1:assembly</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#800000">xsi</font><font SIZE="2" COLOR="#ff00ff">:</font><font SIZE="2" COLOR="#ff0000">schemaLocation</font><font SIZE="2" COLOR="#0000ff">=&quot;urn:schemas-microsoft-com:asm.v1 
+assembly.adaptive.xsd&quot;</font><font SIZE="2" COLOR="#ff00ff"> </font>
+<font SIZE="2" COLOR="#ff0000">manifestVersion</font><font SIZE="2" COLOR="#0000ff">=&quot;1.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#800000">xmlns</font><font SIZE="2" COLOR="#ff00ff">:</font><font SIZE="2" COLOR="#ff0000">dsig</font><font SIZE="2" COLOR="#0000ff">=&quot;http://www.w3.org/2000/09/xmldsig#&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">xmlns</font><font SIZE="2" COLOR="#0000ff">=&quot;urn:schemas-microsoft-com:asm.v2&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#800000">xmlns</font><font SIZE="2" COLOR="#ff00ff">:</font><font SIZE="2" COLOR="#ff0000">asmv1</font><font SIZE="2" COLOR="#0000ff">=&quot;urn:schemas-microsoft-com:asm.v1&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#800000">xmlns</font><font SIZE="2" COLOR="#ff00ff">:</font><font SIZE="2" COLOR="#ff0000">asmv2</font><font SIZE="2" COLOR="#0000ff">=&quot;urn:schemas-microsoft-com:asm.v2&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#800000">xmlns</font><font SIZE="2" COLOR="#ff00ff">:</font><font SIZE="2" COLOR="#ff0000">xsi</font><font SIZE="2" COLOR="#0000ff">=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">asmv1:assemblyIdentity</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">name</font><font SIZE="2" COLOR="#0000ff">=&quot;myapplication.exe&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">version</font><font SIZE="2" COLOR="#0000ff">=&quot;1.0.0.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">publicKeyToken</font><font SIZE="2" COLOR="#0000ff">=&quot;612c3b94c96b9edf&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">language</font><font SIZE="2" COLOR="#0000ff">=&quot;neutral&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">processorArchitecture</font><font SIZE="2" COLOR="#0000ff">=&quot;msil&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">type</font><font SIZE="2" COLOR="#0000ff">=&quot;win32&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">application</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">entryPoint</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">assemblyIdentity</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">name</font><font SIZE="2" COLOR="#0000ff">=&quot;myapplication&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">version</font><font SIZE="2" COLOR="#0000ff">=&quot;1.0.0.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">language</font><font SIZE="2" COLOR="#0000ff">=&quot;neutral&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">processorArchitecture</font><font SIZE="2" COLOR="#0000ff">=&quot;msil&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">commandLine</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">file</font><font SIZE="2" COLOR="#0000ff">=&quot;myapplication.exe&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">parameters</font><font SIZE="2" COLOR="#0000ff">=&quot;&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">entryPoint</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">trustInfo</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">security</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">applicationRequestMinimum</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">PermissionSet</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">Unrestricted</font><font SIZE="2" COLOR="#0000ff">=&quot;true&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">ID</font><font SIZE="2" COLOR="#0000ff">=&quot;Custom&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">SameSite</font><font SIZE="2" COLOR="#0000ff">=&quot;site&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">defaultAssemblyRequest</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">permissionSetReference</font><font SIZE="2" COLOR="#0000ff">=&quot;Custom&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">applicationRequestMinimum</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">security</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">trustInfo</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependentOS</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">osVersionInfo</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">os</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">majorVersion</font><font SIZE="2" COLOR="#0000ff">=&quot;4&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">minorVersion</font><font SIZE="2" COLOR="#0000ff">=&quot;10&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">buildNumber</font><font SIZE="2" COLOR="#0000ff">=&quot;0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">servicePackMajor</font><font SIZE="2" COLOR="#0000ff">=&quot;0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">osVersionInfo</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependentOS</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependentAssembly</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">dependencyType</font><font SIZE="2" COLOR="#0000ff">=&quot;preRequisite&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">allowDelayedBinding</font><font SIZE="2" COLOR="#0000ff">=&quot;true&quot;&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">assemblyIdentity</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">name</font><font SIZE="2" COLOR="#0000ff">=&quot;Microsoft.Windows.CommonLanguageRuntime&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">version</font><font SIZE="2" COLOR="#0000ff">=&quot;2.0.50727.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependentAssembly</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dependentAssembly</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">dependencyType</font><font SIZE="2" COLOR="#0000ff">=&quot;install&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">allowDelayedBinding</font><font SIZE="2" COLOR="#0000ff">=&quot;true&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">codebase</font><font SIZE="2" COLOR="#0000ff">=&quot;myapplication.exe&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">size</font><font SIZE="2" COLOR="#0000ff">=&quot;28672&quot;&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">assemblyIdentity</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">name</font><font SIZE="2" COLOR="#0000ff">=&quot;myapplication&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">version</font><font SIZE="2" COLOR="#0000ff">=&quot;1.0.0.0&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">language</font><font SIZE="2" COLOR="#0000ff">=&quot;neutral&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">processorArchitecture</font><font SIZE="2" COLOR="#0000ff">=&quot;msil&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">hash</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dsig:Transforms</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dsig:Transform</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">Algorithm</font><font SIZE="2" COLOR="#0000ff">=&quot;urn:schemas-microsoft-com:HashTransforms.Identity&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dsig:Transforms</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dsig:DigestMethod</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">Algorithm</font><font SIZE="2" COLOR="#0000ff">=&quot;http://www.w3.org/2000/09/xmldsig#sha1&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#800000">dsig:DigestValue</font><font SIZE="2" COLOR="#0000ff">&gt;</font><font SIZE="2">IK0J8Ge5ABv5RfyMrgdRoMoy/Gc=</font><font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dsig:DigestValue</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">hash</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependentAssembly</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#800000">dependency</font><font SIZE="2" COLOR="#0000ff">&gt;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>&lt;</b></font><b><font SIZE="2" COLOR="#800000">publisherIdentity</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">name</font><font SIZE="2" COLOR="#0000ff">=&quot;CN=CABINET\Philippe&quot;</font></b><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">issuerKeyHash</font><font SIZE="2" COLOR="#0000ff">=&quot;6d35a155f760c5d6ce1866b24dc5b27e833af918&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#0000ff">/&gt;&lt;</font><font SIZE="2" COLOR="#800000">Signature</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">Id</font><font SIZE="2" COLOR="#0000ff">=&quot;StrongNameSignature&quot;</font><font SIZE="2" COLOR="#ff00ff">
+</font><font SIZE="2" COLOR="#ff0000">xmlns</font><font SIZE="2" COLOR="#0000ff">=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;&lt;</font><font SIZE="2" COLOR="#800000">SignedInfo</font><font SIZE="2" COLOR="#0000ff">&gt;&lt;</font><font SIZE="2" COLOR="#800000">CanonicalizationMethod</font><font SIZE="2" COLOR="#ff00ff">
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#FF00FF">.....</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#FF00FF">.....</font></p>
+<p>Vous n'avez pas à l'ouvrir et à le modifier.</p>
+</font>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<p><b><span style="background-color: #C0C0C0">Signature d'un Assembly</span></b></font><font SIZE="2" face="Courier New"><font color="#0000FF" size="5" face="Courier New"><span style="background-color: #C0C0C0"><b>:</b></span></font></p>
+<p>&nbsp;</p>
+<p><a href="http://webman.developpez.com/articles/dotnet/assemblysigning/">
+Article par webman sur developpez.com</a>+++</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</font>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="vd1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vd1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:35 GMT -->
+</html>

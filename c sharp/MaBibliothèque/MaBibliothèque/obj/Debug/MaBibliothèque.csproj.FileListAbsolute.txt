@@ -1,0 +1,4 @@
+D:\Mes Cours\MaBibliothèque\MaBibliothèque\bin\Debug\MaBibliothèque.dll
+D:\Mes Cours\MaBibliothèque\MaBibliothèque\bin\Debug\MaBibliothèque.pdb
+D:\Mes Cours\MaBibliothèque\MaBibliothèque\obj\Debug\MaBibliothèque.dll
+D:\Mes Cours\MaBibliothèque\MaBibliothèque\obj\Debug\MaBibliothèque.pdb

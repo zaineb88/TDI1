@@ -1,0 +1,784 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-2.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:20:49 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic 2008 .Net nouveautés VB.Net 2008 Framework 3.5 </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v7-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">7.2.2</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">VB.NET
+      2008 et le Framework 3.5</font></b></td>
+    <td width="14%" height="76"><a href="v7-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vvb20081.JPG" width="347" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+peut <b>charger VB Express 2008 et le Framework 3.5 en français </b>(usage
+gratuit) <a href="http://www.microsoft.com/express/download/">ICI</a></font></p>
+<div>
+  <font face="Arial" size="2">Pour la version française, dans le cadre bleu
+  'Visual Basic Edition Express' dérouler la liste et choisir 'French' puis 'Download'</font>
+</div>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><a href="http://msdn2.microsoft.com/fr-fr/default.aspx">Msdn
+2008</a>&nbsp; </font><font face="Arial" size="2"><a href="http://code.msdn.microsoft.com/vbsamples">Exemples de programme Vb
+2008</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#A31515">On
+verra les nouveautés dans:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#A31515">A-
+le Frameworks 3.5</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#A31515">B-
+l'IDE</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#A31515">C-
+le langage visual basic</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">A-
+LE
+FRAMEWORK 3.5</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Un
+Framework est donc un ensemble de Classes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 2.0 était </b>utilisé par VB 2005.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 3.0 </b>c'est
+  le Framework 2 auquel s'ajoute WPF WCF WF WCS.</font></p>
+<blockquote>
+  <blockquote>
+    <font face="Courier New" size="2"><i>Windows Presentation Foundation</i> (WPF)
+    ex 'avalon'&nbsp;</font>
+    <div class="paragraph">
+      <font face="Courier New" size="2">utilise un moteur de rendu vectoriel et
+      des accélérations matériels pour afficher. Présent dans la version
+      Express.</font>
+    </div>
+    &nbsp;
+    <div class="paragraph">
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><i>Windows
+      Communication Foundation</i> (WCF) ex 'indigo'&nbsp;</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">permet
+      de développer des applications distribuées inter opérables, fiables et
+      sécurisées. WCF simplifie le développement d'applications connectées.
+      Non présent dans la version Express.</font>
+    </div>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><i>Windows
+Workflow Foundation</i> (WF) est constitué d'un modèle de programmation, d'un
+moteur d'exécution et d'outils, pour développer et intégrer des workflows
+dans les applications .NET. (un workflow est une succession d'actions ou d'étapes
+qui s'exécutent dans un ordre prédéfini).&nbsp;Non présent dans la version
+Express.<br>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><i>Windows
+CardSpace</i> (WCS), ex Infocard, est une nouvelle technologie qui permet aux
+utilisateurs de prouver leur identité. Non résent dans la version Express.</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 3.5 est </b>utilisé par VB2008.</font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">C'est
+  le Framework 3 auquel s'ajoute AJAX (utilisable dans les WebForms), LINQ et
+  REST (C'est quoi?).</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vframw35.JPG" width="197" height="223"></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Vista
+comporte nativement le Framework 3.0.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>VB
+2008 permet de choisir et d'utiliser le Framework&nbsp; 2.0, 3.0 ou 3.5.089</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Depuis
+le Framework 2 le CLR (Common Langage Runtime), le moteur, est toujours le même: c'est la
+version 2.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vframw35tt.JPG" width="871" height="674"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#FF0000"><u><b>Attention:</b></u></font></p>
+<ul>
+  <li><font face="Courier New" size="2">WPF fonctionne dans l'édition VB
+    Express 2008. Le designer WPF de Visual Studio (Cider), ne fonctionne que
+    partiellement sur les versions Express.&nbsp;</font>
+  <li><font face="Courier New" size="2">Les extensions pour Windows WorkFlow
+    Foundation&nbsp; ne peuvent pas être utilisées avec les versions Express :
+    il vous faudra, au minimum, une version &quot; Professionnel &quot; de
+    Visual Studio 2008 :</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><span style="background-color: #C0C0C0">Collection
+HashSet</span></b></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">&nbsp;Cette nouvelle
+collection travaille sur les ensembles.</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il s'agit d'une collection <b>sans ordre</b> qui contient des <b>éléments
+uniques</b>. <font color="#0000FF"> HashSet</font>&nbsp; possède comme toutes les collections
+<font color="#0000FF">Add</font>, <font color="#0000FF"> Remove</font> et <font color="#0000FF">Contains</font>.. et fournit plusieurs <b> opérations d'ensembles</b> (notamment l'union,
+l'intersection et la différence symétrique)ce qui permet de prendre en charge
+la plupart des opérations mathématiques qui sont généralement réalisées
+sur des ensembles (sens mathématique du terme).</font> </p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim hs As New HashSet(Of String)</font></p>
+<p><font face="Courier New" size="2"><b>Ajout d'éléments</b>:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;toto&quot;)</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;lulu&quot;)</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;titi&quot;</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">La méthode <font color="#0000FF"> Add
+</font> renvoie True ou False pour indiquer si elle a
+fonctionné (s'il n'y avait pas déjà dans la HashSet l'élément que l'on veut
+ajouter).</font> </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim caMarche As Boolean =
+hs.Add(&quot;toto&quot;)&nbsp; </font><font size="2" face="Courier New">'retourne False</font> </p>
+<font FACE="Courier New" size="2">
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.Count</font> donne le nombre
+d'élément. </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT">On peut <b>effacer un élément</b>: </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.Remove(&quot;lulu&quot;)</font> </p>
+<p ALIGN="LEFT"><font color="#111111">On peut effacer sous condition:</font> </p>
+<p ALIGN="LEFT">Exemple: effacer tous les éléments contenant un &quot;t&quot;: </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.RemoveWhere( Adress Of Test)</font> </p>
+<p ALIGN="LEFT">'La fonction Test reçoit chaque string de la table et retourne
+un booléen qui indique si la condition est rempli ce qui déclenche le Remove. </p>
+<p ALIGN="LEFT"><span style="COLOR: blue">Private</span> <span style="COLOR: blue">Shared</span>
+<span style="COLOR: blue">Function</span> Test(<span style="COLOR: blue">ByVal</span>
+s <span style="COLOR: blue">As</span> <span style="color: blue">String</span>) <span style="COLOR: blue">As</span>
+<span style="COLOR: blue">Boolean</span>&nbsp; </p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp; <span style="COLOR: blue">Return</span> (Instr(s,&quot;t&quot;)&lt;&gt;0) </p>
+<p ALIGN="LEFT"><span style="COLOR: blue">End</span> <span style="COLOR: blue">Function</span> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+</font>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>ajouter la collection hs2 à hs grâce à <font color="#0000FF">UnionWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">UnionWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Les éléments doublons (qui
+existent déjà dans hs ne sont pas ajoutés.</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Cela correspond à un <b>And</b>
+sur les 2 ensembles.</font> </p>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>rechercher les éléments commun à hs2 et à hs grâce à <font color="#0000FF">IntersectWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">IntersectWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui étaient présent dans hs et hs2</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Cela correspond à un <b>Or</b>
+sur les 2 ensembles.</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><b><font face="Courier New" size="2">On peut supprimer tous les éléments
+de hs qui sont aussi contenus dans la collection passée en paramètre (hs2)
+avec <font color="#0000FF">ExceptWith&nbsp;</font></font></b> </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">ExceptWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui n'étaient pas présent dans hs et hs2</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>rechercher les éléments contenus dans hs2 et dans hs mais pas dans
+les 2 grâce à <font color="#0000FF">SymmetricExceptWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">SymmetricExceptWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui étaient présent dans hs ou&nbsp; hs2 mais pas les deux.</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">On peut <b>rechercher si hs2
+est un sous ensemble de hs grâce à <font color="#0000FF">IsSubsetOf</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim b As
+Boolean= hs<code class="csharp_operator">.</code><code class="csharp_function">IsSubsetOf</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">b est égal à True si hs est
+un sous ensemble de hs2 (tous les éléments de hs sont dans hs2).</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il existe aussi:</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><font color="#0000FF">IsProperSubstOf</font>
+qui retourne True si hs est un sous ensemble de hs2 et si hs différent de
+hs2&nbsp; (sous ensemble strict)</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">On peut <b>rechercher si&nbsp;
+hs est un sur ensemble de hs grâce à <font color="#0000FF">IsSupersetOf</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim b As
+Boolean= hs<code class="csharp_operator">.</code><code class="csharp_function">IsSupersetOf</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">b est égal à True si hs est
+un sur ensemble de hs2 (tous les éléments de hs2 sont dans hs).</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il existe aussi:</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><font color="#0000FF">IsProperSupersetOf</font>
+qui retourne True si hs est un sur ensemble de hs2 et si hs est différent de
+hs2&nbsp; (sur ensemble strict)</font> </p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">TimeZone</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Les
+nouvelles classes <font color="#0000FF">DateTimeOffset</font>&nbsp; et&nbsp; <font color="#0000FF">TimeZoneInfo
+</font><font color="#000000">permettent de mieux gérer les applications&nbsp;
+qui utilisent les zones dates et&nbsp; heures.&nbsp;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">Suite
+B</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Vb
+2008 gère la cryptographie avec les algorithmes 'Suite B' de la NSA.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">Support
+du Peer to Peer</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Vb
+2008 gère le Peer to Peer grace à l'espace de nom <font color="#0000FF">System.Net.PeerToPeer</font>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><span style="background-color: #C0C0C0">AddIn</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Il
+est possible à l'utilisateur d'ajouter à son application des Add-In.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">WPF</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2"><span style="font-family: Courier New">Plutôt
+que de travailler</span></font><span style="font-family: Courier New"><font size="2">
+avec les WinForms (formulaire habituel utilisant GDI+); en VB 2008 on peut
+utiliser un mode graphique vectoriel extrêmement performant pour dessiner les
+formulaires et contrôles</font></span><span style="font-size: 10pt; font-family: Courier New">:
+pour cela on utilise les <b>WFP</b> (<b>W</b>indows <b>P</b>resentation <b>F</b>oundation).&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="font-size: 10pt; font-family: Courier New">Faire
+menu 'Fichier', 'Nouveau', 'Projet'.</span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><img border="0" src="vb2008open.JPG" width="855" height="521"></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+choisit 'Application WPF', on se retrouve dans un nouvel environnement:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vb2008wpf.JPG" width="1107" height="550"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Les
+formulaires et contrôles sont différents, ainsi que les propriétés des
+objets graphiques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Il
+y a le '<b>designer</b>' en haut qui permet de dessiner l'interface que verra
+l'utilisateur. Le designer génère un <b>fichier XAML</b>&nbsp; en bas qui
+décrit en XML l'interface.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Dans
+la version Express, il n'y a pas&nbsp;'cider'&nbsp;qui permet de faire une
+interface&nbsp; extrêmement élaborée (dégradé de couleur, animation...) Si
+on était un peu 'maso' on écrirait du code XAML pour faire du graphisme
+élaboré.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+on double-clique sur un bouton, par exemple, on se retrouve dans la procédure
+évènement correspondante:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vb2008proc.JPG" width="735" height="200"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+se rend compte que les évènements là aussi ne sont pas les mêmes que pour
+les WindowsForm.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Il
+y a aussi d'autres modifications comme dans les propriétés du
+projet:&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vb2008wpf1.JPG" width="649" height="380"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">Support
+Windows Vista</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">VB
+2008 utilise sous Windows Vista les CommonDialogBox de Vista et à accès à la
+gestion des droits avec l'usage de&nbsp; l'UAC.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p><b><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="5">B-
+L'IDE
+VB 2008</font></span></b>
+<font size="4">
+<a href="http://msdn2.microsoft.com/en-us/library/aa286509.aspx"><br>
+</a>
+</font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Dans
+l'ensemble elle ressemble beaucoup à celle de VB 2005. Voir <a href="v1d3.htm">l'IDE
+de VB 2008&nbsp;</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>-Le
+changement majeur est de pouvoir travailler avec les WPF (voir plus bas).</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>-L'aide
+est plus élaborée:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="2">Des
+que je tape une lettre VB propose dans une liste des mots.</font></b></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Exemple,
+    je tape 'd', il affiche 'Dim', 'Dir'..., de plus si je me met sur un des
+    mots, il ouvre une petite fenêtre d'explication sur le mot avec sa syntaxe.</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vb2008aide.JPG" width="652" height="236"></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2"><b> il est possible de 
+  rechercher des informations d'aide par le menu '?' </b></font>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+  <font face="Courier New" size="2"><img border="0" src="vb2008aide2.JPG" width="308" height="358">&nbsp;</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+  <font face="Courier New" size="2">La ligne 'Exemple' permet même de charger
+  des exemples de code.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>-VB
+2008 permet de choisir et d'utiliser le Framework&nbsp; 2.0, 3.0 ou 3.5.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+changer de Framework, passer par le menu 'Projet' puis 'Propriétés de..',
+onglet 'Compiler', en bas il y a un bouton nommé 'Options avancées de
+compilation...', cliquez dessus:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vb2008fram.JPG" width="768" height="516"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+peut en bas de la fenêtre modifier le Framework et utiliser le Framework 2, 3,
+3.5.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="background-color: #C0C0C0"><b><font color="#0000FF" face="Courier New" size="5">C-
+NOUVEAUTÉS DANS VISUAL
+BASIC 2008</font></b></span></p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Initialisation simplifiée.</span></font></b></p>
+<p><font size="2" face="Courier New">Soit une Classe<font COLOR="#0000ff">
+Personne </font>ayant les property<font COLOR="#0000ff"> Nom </font>et<font COLOR="#0000ff">
+Id</font></font></p>
+<p><font face="Courier New" size="2">En VB 2005 on pouvait écrire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" COLOR="#0000ff" size="2">Dim
+per2 As New Personne</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font COLOR="#0000ff" size="2" face="Courier New"><font COLOR="#0000ff">With</font>
+per2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" COLOR="#0000ff" size="2">&nbsp;
+.Nom = <font COLOR="#a31515">&quot;Philippe&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#0000ff">&nbsp;
+.Id = 2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font COLOR="#0000ff" size="2" face="Courier New"><font COLOR="#0000ff">End</font>
+ <font COLOR="#0000ff">With</font></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+le constructeur le permet (si il accepte 2 arguments pour New)on peut aussi
+écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New" COLOR="#0000ff"><font COLOR="#0000ff">Dim</font>
+per1 <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> Personne (<font COLOR="#a31515">&quot;Philippe&quot;</font>,
+2)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">En VB 2008 on peut écrire:</font></p>
+<p><font size="2" face="Courier New"><font COLOR="#0000ff">Dim</font>
+per1 <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> Personne <font COLOR="#0000ff">With</font>
+{.Nom = <font COLOR="#a31515">&quot;Philippe&quot;</font>, .Id = 2}</font></p>
+<p>&nbsp;</p>
+<p><b><font size="2" face="Courier New"><span style="background-color: #C0C0C0">Inférence de Type</span></font></b></p>
+<p><font face="Courier New" size="2">Il faut pour cela que<font color="#0000FF">
+Option Infer =On</font>&nbsp;&nbsp;&nbsp;&nbsp; (Off par défaut)</font></p>
+<p><font face="Courier New" size="2">Passer par le menu 'Projet' puis 'Propriétés
+de..', onglet 'Compiler'</font></p>
+<p><img border="0" src="vb2008prp2.JPG" width="670" height="431"></p>
+<p><font face="Courier New" size="2">En plus des options Explicit, Compare,
+Strict, on peut modifier <b> Option Infer</b>.</font></p>
+<p><font face="Courier New" size="2"><b>L'inférence est la capacité de déduire le type d'une variable&nbsp;
+par analyse des types fournis en entrées ainsi que des opérations
+effectuées sur ceux-ci. C'est donc le compilateur qui déduit le type de la
+variable.</b></font></p>
+<blockquote>
+  <p><font face="Courier New" size="2"><em>' Type explicite pour une String<br>
+  </em><font color="#0000FF">Dim Myname1 As String = &quot;Rouge&quot;</font></font></p>
+  <p><font face="Courier New" size="2"><em>' Exploitation de l'inférence de type<br>
+  </em><font color="#0000FF">Dim Myname2 = &quot;Vert&quot;</font></font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Le passage du curseur de la&nbsp; souris sur Myname2 vous
+permet de découvrir que
+celui-ci est bien un type &quot;String&quot;.</font></p>
+<p><font face="Courier New" size="2">On avait dit qu'il fallait travailler&nbsp; avec Option Implicit = True et
+là on ne déclare même pas le type!!! En fait l'inférence existe&nbsp; afin de
+supporter par exemple les types anonymes ou encore LINQ.</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Il existe des cas pour lesquels l'inférence de type ne se produit
+pas. Pour les instructions Dim locales, l'inférence de type survient uniquement
+lorsqu'il y a une assignation sur la ligne de déclaration. Par conséquent,
+pour les assignations effectuées hors de la déclaration de la variable, le
+compilateur supposera que le type est Object. Object est également toujours déduit
+comme type des membres de niveau classe, si bien que l'inférence de type ne
+s'applique pas aux fonctions, sous-routines, propriétés, champs de
+classe/structure, etc</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Lorsque Option Explicit est Off , une variable locale peut être
+utilisée dans le code sans déclaration explicite. La variable est supposée être
+dans ce cas de type Object et tous les appels sont liés tardivement. L'inférence de type ne survient pas sur les variables définies implicitement.</font></p>
+<p>&nbsp;</p>
+<p><b><font size="2" face="Courier New"><span style="background-color: #C0C0C0">Link</span></font></b></p>
+<p><font face="Courier New" size="2"><b>L</b>anguage-<b>In</b>tegrated <b>Q</b>uery<b> (LINQ),</b></font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Langage de requête
+intégré.</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">C'est un <b>langage de requêtes</b> (permettant d'interroger
+une source de données)&nbsp; directement dans le code Visual Basic&nbsp; et à
+l'aide de mots clés familiers (issues du SQL, le&nbsp; langage d'interrogation
+des bases de données).</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">De plus, ce qui est 'magique', ce langage de requêtes est
+utilisable, non seulement sur les bases de données SQL Serveur&nbsp; et
+ADO.NET mais aussi sur des documents XML et un ensemble d'objets comme les
+String, Collections, ListArray..&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Exemple:
+rechercher les nombres pairs dans un tableau d'Integer :</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: green"><font face="Courier New" size="2">'
+<u>La Data source</u>: c'est un tableau d'Integer</font></span><font face="Courier New" size="2">&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+numbers() <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>
+= {0, 1, 2, 3, 4, 5, 6}</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">'
+<u>Création de la requête.</u></span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Pour
+chaque élément num dans la source</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Si
+l'élément num est tel que num Mod 2=0</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">'Selectionner
+num et le mettre dans réponses</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<span style="COLOR: blue">Dim</span>
+réponses = <font color="#0000FF">From</font> num <span style="COLOR: blue">In</span>
+numbers _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Where</font> num <span style="COLOR: blue">Mod</span> 2 =
+0&nbsp; _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Select</span> num&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">'
+<u>Exécution de la requête</u>.</span>&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'
+<font color="#008000">On utilise les réponses</font></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">For</span>
+<span style="COLOR: blue">Each</span> number <span style="COLOR: blue">In</span>
+reponses&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+Console.Write(number &amp; <span style="COLOR: maroon">&quot; &quot;</span>)</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Next</span></font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Cela affiche sur la
+console:&nbsp; 0 2 4 6</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">On peut vouloir compter
+uniquement les nombres pairs:</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+nombredepair = (From num <span style="COLOR: blue">In</span> numbers _&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Where num <span style="COLOR: blue">Mod</span> 2 = 0 _&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Select</span> num).Count()</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">On remarque que dans le
+premier exemple (Select num) l'exécution de la requête est
+effectuée au cours de la boucle For Each (<b>exécution différée par rapport
+à la création</b>) alors que dans le second exemple (count) , l'<b>exécution
+est immédiate.</b></font></p>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><b><span style="background-color: #C0C0C0">Méthodes d'extension.</span></b></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Permet d'ajouter des fonctionnalités à une Data Type ( sans devoir faire une Classe dérivée)</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Exemple:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Soit le DataType 'String', je veux y ajouter une méthode Print qui affichera la String sur la console: </pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><font color="#0000FF">Imports System.Runtime.CompilerServices
+
+Module StringExtensions
+
+    &lt;Extension()&gt; _
+    Public Sub Print(ByVal aString As String)
+        Console.WriteLine(aString)
+    End Sub
+
+End Module</font>
+</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">C'est le &quot;<span style="COLOR: blue">ByVal</span> aString <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>&quot; qui indique que c'est une extension sur les 'String'.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl22VisualBasic" space="preserve">Comment utiliser la méthode Print?</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl22VisualBasic" space="preserve"><font color="#0000FF">Imports ConsoleApplication2.StringExtensions
+
+Module Module1
+
+    Sub Main()
+
+        Dim exemple As String = &quot;Bonjour&quot;
+        </font><font color="#008000">' Appel de  l'extension method Print.</font><font color="#0000FF">
+        exemple.Print()
+
+       </font><font color="#008000"> ' Appel de la méthode d'instance  'ToUpper'.</font><font color="#0000FF">
+        exemple.ToUpper()
+        exemple.ToUpper.Print()
+
+    End Sub
+
+End Module</font>
+</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl22VisualBasic" space="preserve">Si on veut ajouter un paramètre à la méthode Print, il faut l'ajouter au premier paramètre qui lui indique le DataType.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl22VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl25VisualBasic" space="preserve"><font color="#0000FF">&lt;Extension()&gt; _
+Public Sub PrintPonctuation(ByVal aString As String,  ByVal punc As String)
+    Console.WriteLine(aString &amp; punc)
+End Sub
+</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Ensuite pour l'utiliser:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><font color="#0000FF">Dim exemple As String = &quot;Exemple&quot; </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><font color="#0000FF">exemple.PrintPonctuation(&quot;.&quot;)</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><b><span style="background-color: #C0C0C0">Lambda Expression</span></b></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Une expression lambda est une fonction permettant de calculer et retourner une valeur unique.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Exemple: Créons une expression lambda qui incrémente un Integer.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Création de la fonction:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><span style="COLOR: blue">Dim</span> ajoute1 = <span style="COLOR: blue">Function</span>(num <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>) num + 1</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Utilisation de la fonction dans la même sub:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><font color="#0000FF">Console.WriteLine(ajoute1(5))   </font>Affiche 6.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">On dit que la fonction lambda 'ajoute1( num As Integer)' conduit à num+1.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">On peut déclarer et utiliser la fonction en même temps:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl03VisualBasic" space="preserve"><font color="#0000FF">Console.WriteLine((Function(num As Integer) num + 1)(5))</font>
+
+Dans ce cas il n'y a pas de nom de fonction.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl03VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl03VisualBasic" space="preserve">Attention:</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl03VisualBasic" space="preserve">On n'a pas de 'End Function' ni de 'Return' ni de 'As', on ne peut pas utiliser les génériques.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Si on veut déclarer l'expression lambda dans la tête du module afin d'avoir un accès public,</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">c'est plus complexe:</pre>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Class
+Window1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Delegate
+Function ajoute(ByVal num As Integer) As Integer</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">Public
+ajoute1 As ajoute = Function(num) num + 1</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font color="#0000FF">Private
+Sub Button_Click(ByVal sender As System.Object, ByVal e As
+System.Windows.RoutedEventArgs) Handles Button.Click</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+MsgBox(ajoute1(3).ToString)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF"><font face="Courier New" size="2">End
+Sub</font></font></p>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End Class</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Voyons comment on peut passer à une Sub une fonction lambda en argument.</b></font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">On crée une fonction 'testResult' qui a pour argument une valeur et une fonction lambda.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">Cette fonction affiche &quot;Success&quot; ou &quot;Failure&quot; en fonction de la valeur True ou False</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">retournée par la fonction lambda qui a reçu la valeur.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">Pour utiliser cette sub on l'appelle avec comme argument la valeur à tester et la fonction Lambda.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;<span style="COLOR: blue"><font face="Courier New" size="2">Module</font></span><font face="Courier New" size="2"> Module1</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"> <span style="COLOR: blue">Sub</span> Main() </font></pre>
+<blockquote>
+  <pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#008000">'On appelle une fonction en envoyant une valeur et une fonction lambda.</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">' La ligne affiche &quot;Success&quot; car 4 est pair.</span> </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">testResult(4, <span style="COLOR: blue">Function</span>(num) num <span style="COLOR: blue">Mod</span> 2 = 0) </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: green">' La ligne affiche &quot;Failure&quot; car</span></font><span style="COLOR: green"><font face="Courier New" size="2"> 5 n'est pas &gt; 10.</font></span></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">testResult(5, <span style="COLOR: blue">Function</span>(num) num &gt; 10)</font></pre>
+</blockquote>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"> <span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span> </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: green"><font face="Courier New" size="2">' Sub testResult a 2 arguments, 'value' un Integer  et 'fun' la fonction lambda </font></span></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: green"><font face="Courier New" size="2">' On teste la fonction lambda 'fun(value)' </font></span></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">' en fonction du resultat True ou False on affiche &quot;Success&quot; ou &quot;Failure&quot;</span></font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Sub</span> testResult(<span style="COLOR: blue">ByVal</span> value <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>, <span style="COLOR: blue">ByVal</span> fun <span style="COLOR: blue">As</span> Func(<span style="COLOR: blue">Of</span> <span style="COLOR: blue">Integer</span>, <span style="COLOR: blue">Boolean</span>)) </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">If</span> fun(value) <span style="COLOR: blue">Then</span></font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"> Console.WriteLine(<span style="COLOR: maroon">&quot;Success&quot;</span>) </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Else</font></span></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"> Console.WriteLine(<span style="COLOR: maroon">&quot;Failure&quot;</span>) </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">End</span> <span style="COLOR: blue">If</span> </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">End</span> <span style="COLOR: blue">Sub</span> </font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">End</span> <span style="COLOR: blue">Module</span></font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"> </pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><b><span style="background-color: #C0C0C0">Méthode partielle</span></b></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Elle sont présentes dans des Classes Partielles. Et sur des méthodes privées.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl04VisualBasic" space="preserve">Voici la syntaxe.</pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl04VisualBasic" space="preserve"><font color="#0000FF"><b>Partial</b> Private Sub MyMethode()
+End Sub
+</font></pre>
+<pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">Exemple:</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">Voici la Classe:</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Partial Class Product </font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Private _Quantity As Integer </font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Property Quantity() As Integer </font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">...</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">End Property</font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF"><b>Partial</b> Private Sub QuantityChanged() </font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">End Sub </font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">End Class</font></pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">Ici dans la Classe initiale la méthode partielle <font color="#0000FF">QuantityChanged() </font>sert à donner la signature.</pre>
+<pre class="code" space="preserve" style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">L'autre
+Classe partielle, qui est dessous, ajoute des fonctionnalités à la méthode partielle.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Partial
+Class Product</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;Private
+Sub QuantityChanged()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;
+MsgBox(&quot;Quantity was changed to &quot; &amp; Me.Quantity)&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+Sub&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">End
+Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><span style="background-color: #C0C0C0">XML</span></b></p>
+<div name="snippetGroup">
+  <div class="code" id="ctl00_rs1_mainContentContainer_ctl17_VisualBasic">
+    <pre class="code" id="ctl00_rs1_mainContentContainer_ctl17VisualBasic" space="preserve">On peut créer directement de l'XML dans le code.</pre>
+    <pre class="code" id="ctl00_rs1_mainContentContainer_ctl17VisualBasic" space="preserve">On peut créer <b>un élément</b> XML:</pre>
+    <pre class="code" id="ctl00_rs1_mainContentContainer_ctl17VisualBasic" space="preserve"><span style="COLOR: blue">Dim</span> contact1 <span style="COLOR: blue">As</span> XElement = _
+    &lt;contact&gt;
+      &lt;name&gt;Patrick Dupont&lt;/name&gt;
+      &lt;phone type=<span style="COLOR: maroon">&quot;home&quot;</span>&gt;206-555-0144&lt;/phone&gt;
+      &lt;phone type=<span style="COLOR: maroon">&quot;work&quot;</span>&gt;425-555-0145&lt;/phone&gt;
+    &lt;/contact&gt;
+
+</pre>
+  </div>
+</div>
+<div name="snippetGroup">
+  <div class="code" id="ctl00_rs1_mainContentContainer_ctl20_VisualBasic">
+    <pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve">On peut créer <b>un document</b> XML:</pre>
+    <pre class="code" id="ctl00_rs1_mainContentContainer_ctl20VisualBasic" space="preserve"><span style="COLOR: blue">Dim</span> contactDoc <span style="COLOR: blue">As</span> XDocument = _
+    &lt;?xml version=<span style="COLOR: maroon">&quot;1.0&quot;</span>?&gt;
+    &lt;contact&gt;
+      &lt;name&gt;Patrick Dupont&lt;/name&gt;
+      &lt;phone type=<span style="COLOR: maroon">&quot;home&quot;</span>&gt;206-555-0144&lt;/phone&gt;
+      &lt;phone type=<span style="COLOR: maroon">&quot;work&quot;</span>&gt;425-555-0145&lt;/phone&gt;
+    &lt;/contact&gt;
+</pre>
+  </div>
+</div>
+<p><font face="Courier New" size="2">On peut mettre dans le XML&nbsp; des
+expressions qui sont évaluées au cours de l'exécution, ces expressions sont
+de la forme: <span class="keyword">&lt;%=</span>&nbsp;<span class="parameter">expression</span>&nbsp;<span class="keyword">%&gt;</span>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Exemple:
+Inclure dans l'élément XML un nombre et une date:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+MyNumber <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>
+= <span style="COLOR: maroon">&quot;12345&quot;</span>&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+MyDate <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>
+= <span style="COLOR: maroon">&quot;3/5/2006&quot;</span>&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+livre <span style="COLOR: blue">As</span> XElement = _&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&lt;livre
+category=<span style="COLOR: maroon">&quot;fiction&quot;</span> isbn=&lt;%= MyNumber
+%&gt;&gt; &lt;TheDate&gt;&lt;%= MyDate %&gt;&lt;/TheDate&gt; &lt;/livre&gt;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">Type
+Nullable.</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Les
+types Par Valeur peuvent être étendus afin d'accepter une valeur normale
+habituelle ou une valeur Null (Nothing en VB).</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;On
+peut déclarer un type Nullable de 3 manières:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Dim
+MyInteger As Nullable (Of Integer)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Mais
+aussi:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Dim
+MyInteger? As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Dim
+MyInteger As Integer?</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">C'est
+le '?' qui force la variable&nbsp; Nullable.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Sur
+la seconde déclaration, la variable est <font color="#0000FF">MyInteger</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Autre
+exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Dim
+MyBol As Boolean?&nbsp;&nbsp; MyBol </font><font size="2" face="Courier New">pourra
+prendre la valeur </font><font color="#0000FF" size="2" face="Courier New">True</font><font size="2" face="Courier New">,</font><font color="#0000FF" size="2" face="Courier New">
+False </font><font size="2" face="Courier New">et</font><font color="#0000FF" size="2" face="Courier New">
+Nothing.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Cela
+a de l'intérêt quand on travaille avec les bases de données qui ont des
+champs qui contiennent un Null&nbsp; et avec Linq.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><span style="background-color: #C0C0C0">Type
+anonyme</span></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Habituellement,
+on peut déclarer Mycustomer, une instance de la classe Customer et renseigner
+une propriété .Name.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+MyCustomer = <span style="COLOR: blue">New</span> Customer <span style="COLOR: blue">With</span>
+{.Name = <span style="COLOR: maroon">&quot;Philippe&quot;</span>}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Grâce
+au <b>type anonyme</b>, on peut écrire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+AnomyneCustomer = <span style="COLOR: blue">New</span> <span style="COLOR: blue">With</span>
+{.Name = <span style="COLOR: maroon">&quot;Philippe&quot;</span>}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarque=
+avant New il doit y avoir '='&nbsp; et pas As.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><b>Cela
+créer une nouvelle classe anonyme (sans nom) possédant une propriété .Name.&nbsp;</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Les
+types anonymes sont surtout utilisés avec Link:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Dim</font></span><font face="Courier New" size="2">
+namePriceQuery = From prod <span style="COLOR: blue">In</span> products _&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Select</span> prod.Name, prod.Price</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Si
+products est une liste d'objets avec plein de propriétés, namePriceQuery est
+une collection de type anonyme qui posséde 2 propriétés: .Name et .Price&nbsp;
+.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v7-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v7-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-2.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:20:56 GMT -->
+</html>

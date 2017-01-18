@@ -1,0 +1,311 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.5</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Boucles</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">5-
+Boucles.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">5.1
+Écrire une boucle qui affiche les nombres pairs de 2 à 100 dans le label
+'label1'.&nbsp;</font></b><font face="Courier New" size="2"><b> Affiche 2 puis
+4, 6 ,8,....100.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>5.2</b></font><font face="Courier New" size="2"><b>
+Écrire une boucle qui affiche les nombres allant d'un nombre demandé à
+l'utilisateur et descendant de ce nombre jusqu'à 1 mais n'affichant pas le
+nombre 4 ( si l'utilisateur tape 8 cela affichera: 8 puis 7 ,6 ,5 ,3 ,2
+,1).&nbsp;&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>5.3</b></font><font face="Courier New" size="2"><b>&nbsp;
+Afficher le plus grand nombre possible dont le carré est &lt;1000. En d'autres
+termes, écrire une boucle qui affiche dans label1 les nombres croissant 1,2 ,3,
+4...tant ce que le nombre au carré est inférieur à 1000. Utiliser While pour
+cette boucle et une variable 'Counter'.&nbsp;</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">5.4</font><font face="Courier New" size="2">
+Chercher
+l'erreur</font></b> <font face="Courier New" size="2"> <b> dans ce code qui affiche dans une boite de message les résultats
+de la table de multiplication de 1 à 9:</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+i, j as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">For
+i=1 to 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;For
+j=1 To 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 35.4pt"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">MsgBox
+(i*j.ToString)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">Next
+i</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Next
+j</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">5.5</font><font face="Courier New" size="2">
+ </font></b> <font face="Courier New" size="2"><b>Demander par une InputBox à l'utilisateur de taper un chiffre entre 1 et 12, vérifier que ce chiffre est
+bien compris entre 1 et 12 ; si ce n'est pas le cas, reposer la question
+(utiliser une boucle Do.. loop pour boucler en cas de mauvaise réponse.)</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Si
+l'utilisateur tape sur 'Annuler' dans la InputBox cela retourne une chaîne vide
+et cela plante. Comment gérer cela?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">5.6</font><font face="Courier New" size="2">
+ </font></b> <font face="Courier New" size="2"><b>Faire une boucle avec Do Loop,
+tournant de 1 à 100 et additionnant à une variable 'somme' à chaque tour la
+variable de boucle.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">5-
+Boucle.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>5.1</b></font><font face="Courier New" size="2"><b>
+Écrire une boucle qui affiche les nombres pairs de 2 à 100 dans le label
+'Label1'. Affiche 2 puis 4, 6 ,8,....100.</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+i as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">For
+i=2 to 100 Step 2</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font face="Courier New" color="#0000ff" size="2">
+Label1.Text= i.ToString</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font face="Courier New" color="#0000ff" size="2">
+Label1.Refresh</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">Next
+i</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2" color="#111111">Ici,
+comme on connaît les valeurs de début et de fin, on utilise une boucle </font><font face="Courier New" size="2" color="#0000FF">For
+Next</font><font face="Courier New" size="2" color="#111111">.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2" color="#111111">Step
+permet de 'boucler' de 2 en 2.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2" color="#111111">Ne
+pas oublier </font><font face="Courier New" color="#0000ff" size="2">L</font><font face="Courier New" color="#0000ff" size="2">abel1.Refresh
+</font><font face="Courier New" size="2" color="#111111">qui force l'affichage
+pour chaque tour de la boucle. Sans cela l'affichage serait mis à jour
+uniquement en fin de procédure.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Noter
+que le code entre</font><font color="#0000FF" face="Courier New" size="2"> For </font><font face="Courier New" size="2">et</font><font color="#0000FF" face="Courier New" size="2">
+Next&nbsp; </font><font face="Courier New" size="2">est décalé à droite par
+l'ajout d'espace ou de Tab, ce qui permet une meilleur lecture du code.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>5.2</b></font><font face="Courier New" size="2"><b>
+Écrire une boucle qui affiche les nombres allant d'un nombre demandé à
+l'utilisateur et descendant de ce nombre jusqu'à 1 mais n'affichant pas le
+nombre 4 ( si l'utilisateur tape 8 cela affichera: 8 puis 7 ,6 ,5 ,3 ,2
+,1).&nbsp;&nbsp;</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+i as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">Dim
+sfin As String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">Dim
+fin As Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">sfin=
+InputBox (&quot;Donner un nombre entier&quot;)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff"><font color="#0000ff">fin=
+CInt(sFin) </font><font color="#111111">'on transforme sfin, une String saisie
+par l'utilisateur en fin , un Integer.</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">For
+i= fin to 1 Step -1</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font face="Courier New" color="#0000ff" size="2">
+if i &lt;&gt;4 Then Label1.Text= i.ToString</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font face="Courier New" color="#0000ff" size="2">
+Label1.Refresh</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">Next
+i</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Ici
+on ne connaît pas la valeur de la fin de la boucle mais elle sera saisie par
+l'utilisateur et on peut la mettre dans la variable nommée 'fin'. La boucle c'est une
+boucle descendante, il faut donc un pas négatif: Step -1.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">On
+pourrait aussi vérifier par un <font color="#0000FF">If fin&gt;1</font> <font color="#0000FF">Then</font>
+que la valeur de fin n'est pas inférieur ou égale à 1.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="3"><b>5.3</b></font><font face="Courier New" size="2"><b>&nbsp;
+Afficher le plus grand nombre possible dont le carré est &lt;1000. En d'autres
+termes, écrire une boucle qui affiche dans label1 les nombres croissant 1,2 ,3,
+4...tant ce que le nombre au carré est inférieur à 1000. Utiliser While pour
+cette boucle et une variable 'Counter'.&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">A
+priori, on ne connaît pas la valeur de fin de boucle, donc on va utiliser une
+boucle <font color="#0000FF">While</font> plutôt que <font color="#0000FF">For
+Next</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Il
+faut gérer soit même la variable de boucle et l'incrémenter mais en fin de
+boucle.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+Counter As Integer = 0<br>
+While Counter* Counter &lt; 1000&nbsp; </span></font><span style="BACKGROUND-COLOR: #ffffff">'
+Test la valeur du compteur.<font color="#0000ff"><br>
+&nbsp;&nbsp; label1.Text= Counter.ToString</font></span></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;&nbsp;&nbsp;<font color="#0000ff"><span style="background-color: #ffffff; font-size: 10pt; font-family: Courier New">
+</span></font><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Counter
++= 1 </font>' Incrémente le compteur.<font color="#0000ff"><br>
+End While</font></span><br>
+</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">5.4</font><font face="Courier New" size="2">
+Chercher
+l'erreur</font></b> <font face="Courier New" size="2"> <b> dans ce code qui affiche dans une boite de message les résultats
+de la table de multiplication de 1 à 9:</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+i, j as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">For
+i=1 to 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;For
+j=1 To 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 35.4pt"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">MsgBox
+(i*j.ToString)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">Next
+i</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Next
+j</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Réponse:
+erreur sur les variables dans les 2 <font color="#0000FF">Next</font>:&nbsp; si le premier For utilise la
+variable de boucle i, c'est le dernier Next&nbsp; qui&nbsp; doit indiquer la
+variable i: La boucle interne doit tourner DANS la boucle externe; le bon code est:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+i, j as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">For
+<b>i</b>=1 to 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;For
+<b>j</b>=1 To 9</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; TEXT-INDENT: 35.4pt"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">MsgBox
+(i*j.ToString)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">Next
+<b>j</b></font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Next
+<b>i</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">5.5</font><font face="Courier New" size="2">
+ </font></b> <font face="Courier New" size="2"><b>Demander par une InputBox à l'utilisateur de taper un chiffre entre 1 et 12, vérifier que ce chiffre est
+bien compris entre 1 et 12 ; si ce n'est pas le cas, reposer la question
+(utiliser une boucle Do.. loop </b></font><font face="Courier New" size="2"><b>pour
+boucler en cas de mauvaise réponse.</b></font><font face="Courier New" size="2"><b>):</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+rep As String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+r As Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Do</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;&nbsp;&nbsp;
+rep=InputBox (&quot;Tapez un chiffre entre 1 et 12&quot;)&nbsp;</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;&nbsp;&nbsp;<font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;&nbsp;
+r= CType(rep,Integer)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2" color="#0000FF">Loop
+Until r&gt;0 And r&lt;13</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="2">Si
+l'utilisateur tape sur 'Annuler' dans la InputBox cela retourne une chaîne vide
+et cela plante. Comment gérer cela?</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+rep As String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Dim
+r As Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">Do</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;&nbsp;&nbsp;
+rep=InputBox (&quot;Tapez un chiffre entre 1 et 12&quot;)&nbsp;</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;&nbsp; <font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;
+<b><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> rep = </font><font SIZE="2" COLOR="#a31515">&quot;&quot;</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Then</font><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Exit</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Do</font> </b></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;&nbsp; <font color="#0000ff" size="2" face="Courier New"><span style="background-color: #ffffff">&nbsp;
+r= CType(rep,Integer)</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2" color="#0000FF">Loop
+Until r&gt;0 And r&lt;13</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="background-color: #ffffff">
+<b> <font color="#0000ff" size="2" face="Courier New"><font SIZE="2" COLOR="#0000ff">Exit</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Do </font> </font> </b><font SIZE="2" face="Courier New">permet
+de sortir de la boucle Do Loop.</font> </span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">5.6</font><font face="Courier New" size="2">
+ </font></b> <font face="Courier New" size="2"><b>Faire une boucle avec Do Loop,
+tournant de 1 à 100 et additionnant à une variable 'somme'à chaque tour la
+variable de boucle.</b></font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim i As Integer = 0</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim somme As Integer</font></p>
+<font SIZE="2">
+<p></font><font size="2" face="Courier New" color="#0000FF">Do</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">&nbsp;i=i+1</font></p>
+<font SIZE="2">
+<p></font><font size="2" face="Courier New" color="#0000FF">&nbsp;Somme = somme
++ i </font></p>
+<font SIZE="2">
+<p></font><font size="2" face="Courier New" color="#0000FF">Loop Until i = 100 </font><font size="2" face="Courier New">'
+sort de la boucle quand i=100</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" face="Courier New" color="#0000FF">MsgBox(somme.ToString)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

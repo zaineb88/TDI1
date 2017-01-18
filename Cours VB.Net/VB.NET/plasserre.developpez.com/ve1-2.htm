@@ -1,0 +1,551 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 1.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Programmes de 
+    maths.</font></b></td>
+    <td width="14%" height="76"><a href="ve1-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p><font color="#800080" face="Courier New">On prendra des exemples de routines mathématiques 
+simples:</font></p>
+<ul>
+  <li><font color="#800080" face="Courier New">Calcul de l'hypoténuse d'un triangle rectangle</font></li>
+  <li><font color="#800080" face="Courier New">Somme de N entiers</font></li>
+  <li><font color="#800080" face="Courier New">Afficher les tables de
+    multiplication</font></li>
+  <li><font color="#800080" face="Courier New">Valeur maximum d'un tableau</font></li>
+  <li><font color="#800080" face="Courier New">Calcul de factorielle (avec ou sans récursivité)</font></li>
+  <li><font color="#800080" face="Courier New">Un nombre est-il premier?</font></li>
+  <li><font color="#800080" face="Courier New">Décomposition en nombre premier</font></li>
+  <li><font color="#800080" face="Courier New">Diviseurs d'un nombre</font></li>
+</ul>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Calcul de l'hypoténuse d'un 
+triangle rectangle</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<p>On crée pour cela une fonction, on envoie 2 paramètres de type Single: les 2 
+cotés du triangle; la fonction retourne l'hypoténuse.</p>
+</font>
+<p>
+<span style="font-family: Courier New; color: #0000FF; background-color: #FFFFFF">
+<font size="2">Function Hypotenuse (ByVal Side1 As Single, ByVal Side2 As 
+Single) As Single<br>
+&nbsp;&nbsp;&nbsp; Return Sqrt((Side1 ^ 2) + (Side2 ^ 2))<br>
+End Function</font></span></p>
+<p>
+<font size="2"><span style="font-family: Courier New">Pour les nuls, on rappelle 
+que le carré de l'Hypoténuse est égal à la somme des carrées des 2 autres cotés.</span></font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Somme
+de N entiers.</span></font></b></p>
+<p><font face="Courier New" size="2">Calculer par exemple pour Nombre=20&nbsp;la
+Somme=1+2+3+4...+18+19+20</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+Somme As Integer&nbsp;&nbsp;&nbsp; </span></font><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" size="2">'Variable
+somme</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+Nombre As Integer=20</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+i As Integer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" size="2">'Variable
+de boucle</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">For
+i=0 To Nombre</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+Somme += i</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Next
+i</span></font></p>
+<p><font face="Courier New" size="2">On rappelle que <font color="#0000ff">Somme
++= i</font> est équivalent à <font color="#0000ff">Somme =Somme + i</font></font></p>
+<p><font face="Courier New" size="2">Pour afficher le résultat, si il existe
+une TextBox:</font></p>
+<p class="MsoNormal"><font face="Courier New" color="#0000ff" size="2">TextBox1.Text
+= Cstr(Somme)&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'Somme
+est transformé en String puis affecté à la propriété Text du TextBox</font></p>
+<p>&nbsp;</p>
+<p><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4">Afficher
+les tables de multiplication.</font></span></b></p>
+<p><font face="Courier New" size="2">On fait 2 boucles:</font></p>
+<p><font face="Courier New" size="2">celle avec i&nbsp; (qui décide de la
+table: table des 1, des 2..)</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; On affiche 'table des'
+puis valeur de i</font></p>
+<p><font face="Courier New" size="2">celle avec j (allant de 1 à 10 pour chaque
+table)</font></p>
+<p><font face="Courier New" size="2">Pour chaque ligne, on affiche la valeur de
+i puis ' X ' puis la valeur de j puis ' = ' puis la valeur de i fois j</font></p>
+<p><font face="Courier New" size="2">ControlChars.Crlf permet un saut à la
+ligne</font></p>
+<p><font face="Courier New" size="2">A chaque fois que l'on a quelque chose à
+afficher, on l'ajoute à la variable String T</font></p>
+<p><font face="Courier New" size="2">A la fin on affecte T à la propriété
+Text d'un TextBox pour rendre visible les tables.</font></p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">Dim</span></font></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">
+i As </span></font></font><font color="#0000ff" size="2"><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">Integer</span></font></p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+j As Integer</span></font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+T As </span></font></font><font color="#0000ff" size="2"><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">String</span></font></p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">For
+i = 1 To</span></font></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+10</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">&nbsp;&nbsp;&nbsp;
+T += ControlChars.CrLf</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">&nbsp;&nbsp;&nbsp;
+T += &quot;Table des &quot; &amp; i &amp; ControlChars.CrLf</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+For j = 1 To</span></font></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+10</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+T += i.ToString &amp; &quot; X &quot; &amp; j.ToString &amp; &quot;=&quot; &amp;
+i * j &amp; ControlChars.CrLf</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+Next</span></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+j</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Next</span></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+i</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">TextBox1.Text
+= T</font></span></p>
+</font>
+<p><font face="Courier New" size="2">Affiche:</font></p>
+<p><font face="Courier New" size="2">Table des 1</font></p>
+<p><font face="Courier New" size="2">1 X 1 =1</font></p>
+<p><font face="Courier New" size="2">1 X 2 =2</font></p>
+<p><font face="Courier New" size="2">...</font></p>
+<font face="TheSansMonoConSemiLight" size="1">
+<p align="left">&nbsp;</p>
+</font>
+<p align="left"><b><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="4">Trouver
+la valeur la plus élevée d'un tableau d'entier:</font></span></b></p>
+<font face="Courier New" size="2">
+<p align="left">Pour cela on crée une Fonction, on l'appelle en donnant en
+paramètre le tableau d'entier; la fonction retourne l'entier le plus grand.</p>
+<p align="left"><font color="#0000ff">Function FindMax(ByVal a() As Integer) As
+Integer</font></p>
+<p align="left"><font color="#0000ff">Dim fin As Integer = UBound(a)</font></p>
+<p align="left"><font color="#0000ff">Dim valeurMax As Integer = a(0)</font></p>
+<p align="left"><font color="#0000ff">Dim i As Integer</font></p>
+<p align="left"><font color="#0000ff">For i = 0 To fin</font></p>
+<p align="left"><font color="#0000ff">If a(i) &gt; valeurMax Then valeurMax =
+a(i)</font></p>
+<p align="left"><font color="#0000ff">Next i</font></p>
+<p align="left"><font color="#0000ff">Return valeurMax</font></p>
+<p align="left"><font color="#0000ff">End Function</font></p>
+</font>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Un boucle compare chaque valeur du tableau
+a() avec valeurMax, si l'élément du tableau est plus grand que valeurMax,
+valeurMax prend la valeur de l'élément.&nbsp;</font></p>
+<p>
+&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Factorielle.</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<p>On rappelle que N! (factorielle N)= 1*2*3*...*(N-2)*(N-1)*N</p>
+<p>Exemple Factorielle 3 =1*2*3 </p>
+<p><font color="#0000FF">Dim R As Long</font></p>
+<p><font color="#0000FF">R=Factorielle(3)&nbsp;&nbsp;&nbsp; </font>'retournera 6</p>
+<p>Cette fonction n'est pas fournie par VB, créons <b>une fonction 'Factorielle'</b>:</p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Function 
+Factorielle (ByVal N as Long) As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Dim i As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Resultat=1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+For i= 1 to N</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Resultat=i* Resultat</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Next i</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Return Resultat</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">end Function</font></span></p>
+<p>Cela crée une fonction recevant le paramètre N et retournant un long.</p>
+<p>Une boucle effectue bien 1*2*3...*N-1*N.</p>
+<p>&nbsp;</p>
+</font><font face="Courier New" size="4" color="#0000FF">
+<p><span style="font-weight: 700; background-color: #C0C0C0">Factorielle avec 'Récursivité':</span></font><font SIZE="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+</font></p>
+<p><font face="Courier New" size="2">Une autre manière de calculer une 
+factorielle est d'utiliser la <b>récursivité</b>:</font></p>
+<p><font face="Courier New" size="2" color="#008000">Une procédure est récursive 
+si elle peut s'appeler elle même.</font></p>
+<p><font face="Courier New" size="2">VB gère la récursivité.</font></p>
+<p><font face="Courier New" size="2">Comment faire pour les factorielles?</font></p>
+<p><font face="Courier New" size="2">On sait que Factorielle
+<font color="#0000FF">N= N * Factorielle(N-1)</font></font></p>
+<p><font face="Courier New" size="2">N!= N*(N-1)!&nbsp;&nbsp;&nbsp; :&nbsp; en 
+sachant que <font color="#0000FF">1!=1</font></font></p>
+<p><font face="Courier New" size="2">Créons la fonction:</font></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Function 
+Factorielle (ByVal N as Long) As Long</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">If N=1 then</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return 1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Else</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Return N* Factorielle(N-1)</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+End If</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">end Function</font></span></p>
+</font>
+<p><font face="Courier New" size="2">Dans la fonction Factorielle on appelle la 
+fonction Factorielle, c'est bien récursif.</font></p>
+<p><font face="Courier New" size="2">Pour N=4, la fonction Factionnelle est 
+appelée 4 fois :Factorielle (4) puis Factorielle(3) puis Factorielle(2) puis 
+Factorielle (1)</font></p>
+<p><font face="Courier New" size="2">Factorielle (1) retourne 1</font></p>
+<p><font face="Courier New" size="2">Factorielle (2)retourne&nbsp; 2&nbsp;&nbsp;&nbsp; 
+'2*factorielle(1)</font></p>
+<p><font face="Courier New" size="2">Factorielle (3)retourne&nbsp; 6&nbsp;&nbsp;&nbsp; 
+'3*factorielle(2)</font></p>
+<p><font face="Courier New" size="2">Factorielle (4) retourne 24&nbsp;&nbsp; 
+'4*factorielle(3)</font></p>
+<p><font face="Courier New" size="2">Vb gère cela avec <b>une pile des appels</b>. 
+il met dans une pile les uns aux dessus des autres les appels, quand il remonte, 
+il dépile de haut en bas (Dernier rentré, premier sortie)</font></p>
+<p><font face="Courier New" size="2">Attention: La pile&nbsp; a une taille 
+maximum, si N est trop grand, on déclenche une erreur de type StackOverflow.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Un nombre est-il 
+premier?</span></font></p>
+<p><font face="Courier New" size="2">Un nombre premier est seulement divisible 
+par 1 et lui-même.</font></p>
+<p><font face="Courier New" size="2">Pour voir si N est entier on regardera 
+successivement si ce nombre est divisible par&nbsp; 2 puis 3 puis 4... jusqu'a 
+N-1</font></p>
+<p><font face="Courier New" size="2">Un nombre est divisible par un autre si la 
+division donne un entier.<font color="#0000FF"> N/B= A</font> Comment voir si le 
+nombre A est entier? Pour ma part, j'utilise la méthode suivante: A est entier 
+si <font color="#0000FF">A=Int(A)</font>.</font></p>
+<p><font face="Courier New" size="2">Une autre méthode pour voir si N est 
+divisible par B: il est divisible si </font>
+<font color="#0000FF" face="Courier New" size="2">N Mod(B)=0.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font face="Courier New" size="2">Avec une boucle For Next:</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:blue">
+Dim</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"> 
+IsPremier <span style="color:blue">As</span> <span style="color:blue">Boolean</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New; color: blue">
+Dim</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New"> 
+j, k <span style="color:blue">As</span> <span style="color:blue">Long</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New; color: blue">
+&nbsp;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font size="2"><span style="font-family: Courier New">IsPremier</span></font><span lang="DE" style="font-size: 10.0pt; font-family: Courier New"> 
+= <span style="color:blue">True</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="DE" style="font-size: 10.0pt; font-family: Courier New">j = 2</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New; color: blue">
+For</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New"> 
+k = 2 <span style="color:blue">To</span> </span>
+<span style="font-size: 10.0pt; font-family: Courier New">N</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:blue">If</span> 
+(</span><span style="font-size: 10.0pt; font-family: Courier New">N</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">
+<span style="color:blue">Mod</span> k = 0) <span style="color:blue">And</span> 
+(k &lt;&gt; </span><span style="font-size: 10.0pt; font-family: Courier New">N</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">)
+<span style="color:blue">Then</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font size="2"><span style="font-family: Courier New">IsPremier</span></font><span lang="DE" style="font-size: 10.0pt; font-family: Courier New"> 
+= <span style="color:blue">False</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="DE" style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j 
+= n</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="DE" style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New; color: blue">End</span><span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">
+<span style="color:blue">If</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span lang="EN-GB" style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j = 
+j + 1</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;color:blue">
+Next</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2">
+<span style="font-family: Courier New">En sortie de boucle si IsPremier= true , 
+le nombre N est premier.</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font face="Courier New" size="2">Avec un <font color="#0000FF">Do Loop</font>.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim IsPremier As Boolean</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Dim N As Double=59 </font>
+<font face="Courier New" size="2">
+'nombre à étudier</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim I As Double</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">I=2:&nbsp; IsPremier=True</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Do</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; If N/I= 
+Int(N/I) then</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+IsPremier=False</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Else</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+i += 1</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; End if</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Loop While IsPremier=True And 
+I&lt;N</span></font></p>
+<p><font face="Courier New" size="2">Pour 59 IsPremier sera égal à True.</font></p>
+<p><font face="Courier New" size="2">On peut améliorer la routine en remarquant:</font></p>
+<p><font face="Courier New" size="2">Si un nombre n'est pas premier il admet 2 
+diviseurs dont un est inférieur à racine N.</font></p>
+<p><font face="Courier New" size="2">on peut donc :</font></p>
+<p><font face="Courier New" size="2">-Vérifier que le nombre n'est pas pair 
+puis</font></p>
+<p><font face="Courier New" size="2">-Vérifier s'il est divisible par les nombres 
+allant de&nbsp; 3...jusqu'à racine de N en ne tenant compte que des nombres 
+impairs.</font></p>
+<font SIZE="1" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font size="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">Remarque pour ceux qui veulent tester 
+le code :</p>
+</font><font size="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Pour 
+utiliser la routine sur les nombres premiers, il faut créer une petite 
+interface: dans un formulaire créer un bouton nommé 'Button1' et une TextBox 
+nommée 'TextBox1', enfin mettre dans la routine Button1_Click le code 
+ci-dessous.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Quand on 
+lance le programme, on saisie un nombre dans le textbox , puis on clique sur le 
+bouton , cela affiche True ou False dans une MessageBox, si le nombre est 
+premier ou non:</font></p>
+</font><font SIZE="1" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="1">
+</font><font SIZE="1" COLOR="#0000ff">Sub</font><font SIZE="1"> Button1_Click(</font><font SIZE="1" COLOR="#0000ff">ByVal</font><font SIZE="1"> 
+sender </font><font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1"> 
+System.Object, </font><font SIZE="1" COLOR="#0000ff">ByVal</font><font SIZE="1"> 
+e </font><font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1"> 
+System.EventArgs) </font><font SIZE="1" COLOR="#0000ff">Handles</font></font><font face="Courier New" size="1"> 
+Button1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">Dim</font><font SIZE="1"> IsPremier </font>
+<font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1"> </font></font>
+<font SIZE="1" COLOR="#0000ff"><font face="Courier New">Boolean</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">Dim</font><font SIZE="1"> N </font>
+<font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1"> </font></font>
+<font SIZE="1" COLOR="#0000ff"><font face="Courier New">Double</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">Dim</font><font SIZE="1"> I </font>
+<font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1"> </font></font>
+<font SIZE="1" COLOR="#0000ff"><font face="Courier New">Double</font></p>
+</font><font SIZE="1">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">N = 
+Val(TextBox1.Text)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">I = 2 : 
+IsPremier = </font></font><font SIZE="1" COLOR="#0000ff">
+<font face="Courier New">True</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="1" COLOR="#0000ff" face="Courier New">Do</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">If</font><font SIZE="1"> N / I = Int(N / I)
+</font></font><font SIZE="1" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="1">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">IsPremier =
+</font></font><font SIZE="1" COLOR="#0000ff"><font face="Courier New">False</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="1" COLOR="#0000ff" face="Courier New">Else</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">I 
++= 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1"> </font></font>
+<font SIZE="1" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">Loop</font><font SIZE="1"> </font>
+<font SIZE="1" COLOR="#0000ff">While</font><font SIZE="1"> IsPremier = </font>
+<font SIZE="1" COLOR="#0000ff">True</font><font SIZE="1"> </font>
+<font SIZE="1" COLOR="#0000ff">And</font></font><font face="Courier New" size="1"> 
+I &lt; N</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">
+MsgBox(IsPremier.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1"> </font></font>
+<font SIZE="1" COLOR="#0000ff"><font face="Courier New">Sub</font>
+</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">Decomposition
+en nombre premier?</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" color="#0000FF" face="Courier New">Dim
+nbr As Integer = 1000 </font><font SIZE="2" face="Courier New">'nombre à
+étudier</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" color="#0000FF" face="Courier New">Dim
+div As Integer</font><font SIZE="2"><font color="#0000FF" face="Courier New"> =
+2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" color="#0000FF" face="Courier New">Dim
+t As String = &quot;&quot;</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" color="#0000FF">While</font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF">
+div &lt;= nbr</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" color="#0000FF">While</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">
+nbr / div = Int(nbr / div)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">t
+= t &amp; div &amp; </font></font><font SIZE="2" color="#0000FF" face="Courier New">&quot;
+x &quot;</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">nbr
+= nbr / div</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font color="#0000FF"><font SIZE="2" face="Courier New">End
+While</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">div
+= div + 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font color="#0000FF"><font SIZE="2" face="Courier New">End
+While</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New">TextBox1.Text
+= t</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">Diviseurs
+d'un nombre?</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">C'est
+une fonction qui retourne une collection de type List contenant des integers
+(tous les diviseurs de Numbre.</font>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Si
+Numbre Mod i est égale à zéro c'est que i est un diviseur de Numbre; on
+l'ajoute à la liste.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: #0000ff">Public</span> <span style="COLOR: #0000ff">Function</span>
+ Diviseur (<span style="COLOR: #0000ff">ByVal</span> Number <span style="COLOR: #0000ff">As</span>
+    <span style="COLOR: #0000ff">Integer</span>) <span style="COLOR: #0000ff">As</span>
+    List(<span style="COLOR: #0000ff">Of</span> <span style="COLOR: #0000ff">Integer</span>)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: #0000ff">Dim</span> 
+Diviseur <span style="COLOR: #0000ff">As</span>
+    <span style="COLOR: #0000ff">New</span> List(<span style="COLOR: #0000ff">Of</span>
+    <span style="COLOR: #0000ff">Integer</span>)</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: #0000ff">For</span>
+  i <span style="COLOR: #0000ff">As</span>
+    <span style="COLOR: #0000ff">Integer</span> = 1 <span style="COLOR: #0000ff">To</span>
+    Number</font>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: #0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  If</span> Number <span style="COLOR: #0000ff">Mod</span> i = 0 <span style="COLOR: #0000ff">Then</span> 
+  Diviseur.Add(i)</font>
+  <p style="margin-top: 0; margin-bottom: 0"><span style="COLOR: #0000ff"><font face="Courier New" size="2">Next</font></span>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: #0000ff">End</span> <span style="COLOR: #0000ff">Function</span></font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve1-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve1-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+</html>

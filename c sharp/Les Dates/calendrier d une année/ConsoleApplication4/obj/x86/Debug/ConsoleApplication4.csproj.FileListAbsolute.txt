@@ -1,0 +1,12 @@
+D:\Mes Cours\ConsoleApplication4\ConsoleApplication4\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Mes Cours\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+D:\Mes Cours\ConsoleApplication4\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+D:\Mes Cours\ConsoleApplication4\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.exe
+D:\Mes Cours\ConsoleApplication4\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.pdb
+G:\ConsoleApplication4\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.exe
+G:\ConsoleApplication4\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\calendrier d une année\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\calendrier d une année\ConsoleApplication4\obj\x86\Debug\ConsoleApplication4.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\calendrier d une année\ConsoleApplication4\bin\Debug\ConsoleApplication4.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\calendrier d une année\ConsoleApplication4\bin\Debug\ConsoleApplication4.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\calendrier d une année\ConsoleApplication4\obj\x86\Debug\ResolveAssemblyReference.cache

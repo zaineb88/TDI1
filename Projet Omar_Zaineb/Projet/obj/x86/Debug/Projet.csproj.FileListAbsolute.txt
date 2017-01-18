@@ -1,0 +1,60 @@
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\bin\Debug\Projet.exe
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\bin\Debug\Projet.pdb
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.APropos.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.ConsultationDesNotes.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionDesNoteDuEléves.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionEléve.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.Recherche.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.TournoiDesEléves.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\WindowsFormApplication1.Properties.Resources.resources
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\Projet.csproj.GenerateResource.Cache
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\Projet.exe
+C:\Users\Younes\Desktop\Projet_Maha_Et_Aouatif_TARIAF2\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\Projet.pdb
+C:\Users\Younes\Downloads\Projet\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\Projet.exe
+C:\Users\Younes\Downloads\Projet\Projet_Maha_Et_Aouatif_TARIAF\obj\x86\Debug\Projet.pdb
+C:\Users\Younes\Downloads\Projet\Projet\obj\x86\Debug\Projet.exe
+C:\Users\Younes\Downloads\Projet\Projet\obj\x86\Debug\Projet.pdb
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\Projet.exe
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\Projet.pdb
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\bin\Debug\Projet.exe
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\bin\Debug\Projet.pdb
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.APropos.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.ConsultationDesNotes.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionDesNoteDuEléves.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionEléve.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.Recherche.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.TournoiDesEléves.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\WindowsFormApplication1.Properties.Resources.resources
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\Omar Saad\Bureau\Projet\Projet\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.exe
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.pdb
+G:\Projet Omar_Zaineb\Projet\bin\Debug\Projet.exe
+G:\Projet Omar_Zaineb\Projet\bin\Debug\Projet.pdb
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.APropos.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.ConsultationDesNotes.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionDesNoteDuEléves.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionEléve.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.Recherche.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.TournoiDesEléves.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Properties.Resources.resources
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Projet Omar_Zaineb\Projet\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.exe
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.pdb
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\bin\Debug\Projet.exe
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\bin\Debug\Projet.pdb
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.APropos.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.ConsultationDesNotes.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionDesNoteDuEléves.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.GestionEléve.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.Recherche.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Couche_Interface.TournoiDesEléves.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\WindowsFormApplication1.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\Projet Omar_Zaineb\Projet\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI 1er\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.exe
+C:\Users\ZIZI\Desktop\TDI 1er\Projet Omar_Zaineb\Projet\obj\x86\Debug\Projet.pdb

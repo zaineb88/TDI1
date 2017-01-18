@@ -1,0 +1,368 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET Image : image imagelist picturebox </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.14</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Image.</font></b></td>
+    <td width="9%" height="76"><a href="v3-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment afficher des 
+images ?</span></font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Le contrôle 'PictureBox':</span></font></b></p>
+<p><font face="Courier New" size="2">Le contrôle <b>PictureBox</b>&nbsp; sert à 
+afficher des graphismes au format bitmap, GIF, JPEG, métafichier ou icône 
+(Extension <b>.BMP&nbsp; .GIF&nbsp; .JPG&nbsp; .WMF&nbsp; .ICO</b>)</font></p>
+<p><font face="Courier New" size="2">L'image à affichée est déterminée par la 
+propriété <b>Image</b>, laquelle peut être définie au moment de l'exécution ou du design. La propriété <b>SizeMode</b> détermine la façon dont l'image et 
+le contrôle se dimensionnent l'un par rapport à l'autre.</font></p>
+<p>&nbsp;</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="13%" id="AutoNumber4">
+        <tr>
+          <td width="100%" align="center">
+          <img border="0" src="vcar1.gif" width="82" height="42"></td>
+        </tr>
+      </table>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">On peut charger une image en mode 
+conception par le fenêtre 'propriétés' et la propriété 'Image' ou dans le code:</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">PictureBox1.Image = Image.FromFile(&quot;vimage.gif&quot;)</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>(la Classe Image (Shared) possède une fonction qui retourne une image à
+partir d'un fichier. On l'affecte ensuite à la propriété Image du PictureBox1.)</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ho! merveille, les GIF animés sont acceptés 
+et s'animent sous VB.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Comment effacer une image?</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">If Not (PictureBox1.Image Is Nothing) Then<br>
+&nbsp;&nbsp;&nbsp; PictureBox1.Image.Dispose()<br>
+&nbsp;&nbsp;&nbsp; PictureBox1.Image = Nothing<br>
+End If</span><span style="background-color: #FFFFFF"><br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Les objets de la Classe Image</b> ont comme 
+d'habitude des propriétés et des méthodes.</font></p>
+<font SIZE="2" face="Courier New">
+<p>La méthode <b>RotateFlip</b> permet par exemple d'effectuer une rotation de 
+l'image; quand on tape le code, VB donne automatiquement la liste des paramètres 
+possible.</p>
+</font><font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">PictureBox1.Image.RotateFlip(RotateFlipType.Rotate90FlipX)</span></p>
+</font><font SIZE="2" face="Courier New">
+<p>La méthode <b>Save</b> sauvegarde&nbsp; l'image dans un fichier.</p>
+</font><font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">PictureBox1.Image.Save(&quot;c:\image.bmp&quot;)</span></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Bien Noter que le nom de l'extension suffit à 
+imposer le format de l'image sur le disque.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut charger une image .GIF puis la 
+sauvegarder en&nbsp; .BMP</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a bien d'autres propriétés gérant les 
+dimensions, la palette de l'image.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il est possible de définir une couleur comme 
+'transparente': voir le page sur les boutons.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Charger une image à partir d'un fichier,
+mais sans 'bloquer' ce fichier.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On a vu qu'on peut 'charger' une image
+par&nbsp; <span style="background-color: #FFFFFF"><font SIZE="2" face="Courier New" color="#0000FF">PictureBox1.Image =
+Image.FromFile(&quot;vimage.gif&quot;)
+</font>
+</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font size="2" face="Courier New">L'inconvénient
+de cette méthode est que tant que le programme est ouvert, le fichier correspondant
+sur le disque est utilisé et par conséquence il est impossible de travailler
+dessus. (Impossible d'effacer le fichier par exemple!!)</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New"><span style="background-color: #FFFFFF">Une
+méthode pour libérer le fichier est d'utiliser un Stream (Merci la Faq de
+Developpez.com)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New"><span style="background-color: #FFFFFF">'En
+haut du module</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Imports
+System.IO</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><code class="vbnet_comment1"><font size="2" face="Courier New">'
+Créer le FileStream sur le fichier </font></code><span style="background-color: #FFFFFF"><font size="2" face="Courier New"><font color="#000000">vimage.gif</font></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF"><code class="vbnet_keyword1">Dim</code>
+MyStream <code class="vbnet_keyword1">As</code> FileStream <code class="vbnet_operator">=</code>
+<code class="vbnet_keyword1">New</code> <code class="vbnet_function">FileStream</code>(<code class="vbnet_literal1">&quot;C:\</code><span style="background-color: #FFFFFF">vimage.gif</span><code class="vbnet_literal1">”,
+FileMode.Open)</code></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">&nbsp;</font><code class="vbnet_comment1"><font size="2" face="Courier New">'
+affecter l'image à pictureBox1</font></code><font size="2" face="Courier New">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New" color="#0000FF">pictureBox1<code class="vbnet_function">.Image</code>
+<code class="vbnet_operator">=</code> Image<code class="vbnet_function">.FromStream</code>(MyStream)&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<code class="vbnet_comment1"><font size="2" face="Courier New">' libérer les
+ressources</font></code><font size="2" face="Courier New">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF" face="Courier New">MyStream<code class="vbnet_function">.Close</code>&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<code class="vbnet_comment1"><font size="2" face="Courier New">' supprimer le
+fichier </font></code><span style="background-color: #FFFFFF"><font size="2" face="Courier New">vimage.gif</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">File</font></font><code class="vbnet_function"><font color="#0000FF" face="Courier New" size="2">.Delete</font></code><font color="#0000FF" face="Courier New" size="2">(<code class="vbnet_literal1">&quot;C:\</code><span style="background-color: #FFFFFF">vimage.gif</span><code class="vbnet_literal1">”)</code></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Comment placer l'image dans le PictureBox?</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<div class="corps">
+  <span class="red"><font face="Courier New" size="2">La propriété <font color="#0000FF">SizeMode</font>
+  impose comment l'image sera placée dans le contrôle PictureBox:</font></span><font face="Courier New" size="2">&nbsp;</font>
+</div>
+<ul>
+  <li><font face="Courier New" size="2"><span class="red"><font color="#0000FF">aucun</font></span>
+    :&nbsp; L'image est alignée en haut à gauche du contrôle. Elle peut être
+    trop grande ou trop petite, mais rien ne change de taille.</font>
+  <li><font face="Courier New" size="2"><span class="red" clas="red"><font color="#0000FF">stretch</font></span>
+    : l'image est automatiquement étirée afin que sa taille s'adapte à celle
+    du contrôle qui la contient.</font>
+  <li><font face="Courier New" size="2"><span class="red"><font color="#0000FF">autosize</font></span>
+    : la taille du contrôle est modifiée pour faire la taille de&nbsp;
+    l'image.</font>
+  <li><font face="Courier New" size="2"><span class="red"><font color="#0000FF">centerImage</font></span>
+    : l'image est centrée par rapport au contrôle.</font></li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">La propriété 'Image' des contrôles:</span></font></b></p>
+<p><font face="Courier New" size="2">De nombreux contrôles Windows Forms peuvent 
+afficher des images. L'image affichée peut être une icône symbolisant la 
+fonction du contrôle&nbsp;ou une image ; par exemple, l'image d'une disquette sur un 
+bouton indique généralement une commande d'enregistrement. L'icône peut 
+également être une image d'arrière-plan conférant au contrôle une certaine 
+apparence.  </font></p>
+<p><font face="Courier New" size="2">Pour tous les contrôles affichant des 
+images:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">l'image peut être 
+définie à l'aide des propriétés <font color="#0000FF">Image</font> ou
+<font color="#0000FF">BackgroundImage </font>directement <b>en mode Design</b> 
+  par la fenêtre des propriétés. Il faut sélectionner Image puis cliquez sur 
+  &quot;...&quot; et choisir une fichier contenant une image. Dans ce cas, une fois 
+  chargée, l'image fait partie intégrante du programme. (Il n'est pas utile de 
+  fournir le fichier .BMP ou .GIF avec l'application)</font></li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Lorsque le programme 'tourne' on peut aussi 
+charger une Image. Le code affecte à la propriété Image ou BackgroundImage un objet de type System.Drawing.Image, en général, vous 
+utiliserez la méthode <b>FromFile</b> de la classe Image pour charger une Image 
+à partir d'un fichier.(Dans ce cas le fichier contenant l'image doit être 
+fourni)</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple pour un bouton:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">button1.Image = 
+Image.FromFile(&quot;C:\Graphics\MyBitmap.bmp&quot;)</font><br>
+' Aligne l'image.<br>
+<font color="#0000FF">button1.ImageAlign = ContentAlignment.MiddleRight</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple pour un label:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim Label1 As New 
+Label()<br>
+Dim Image1 As Image</font><br>
+<br>
+<font color="#0000FF">Image1 = Image.FromFile(&quot;c:\\MyImage.bmp&quot;)</font><br>
+<br>
+' modifier la taille du label pour qu'il affiche l'image.<br>
+<br>
+<font color="#0000FF">Label1.Size = Image1.Size </font><br>
+<br>
+' Mettre l'image dans le label.<br>
+<br>
+<font color="#0000FF">Label1.Image = Image1<br>
+&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on renseigne la propriété Image, on ne peut 
+pas utiliser en même temps la propriété ImageList décrite ci-dessous.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Le contrôle ImageList:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il sert de containeur à images, c'est une <b>
+collection d'images</b>. les images 
+qu'il contient seront utilisées par d'autres contrôles (PictureBox, Listview, 
+TreeView, Button....)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il n'est pas visible en exécution.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En conception il apparaît en bas sous la 
+fenêtre. A droite figurent ses propriétés, en particulier, <b>la collection 
+Images</b> qui contient les images et la propriété <b>TransparentColor </b>qui 
+indique la couleur qui doit être transparent, c'est à dire non visible.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut l'ajouter au formulaire, il apparaît 
+en dessous.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vimglt1.gif" width="407" height="277"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si je clique sur le bouton '...' en face de<b> Images</b>, <b>l'éditeur de collections d'image</b> 
+s'ouvre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vimgl2.gif" width="489" height="255"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut ajouter des images avec le bouton 'Ajouter'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'ImageList est ainsi chargé.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite&nbsp; pour utiliser une image de l'ImageList dans un autre contrôle, il 
+faut modifier les propriétés de cet autre contrôle( un bouton par exemple):</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La propriété <b>ImageList</b>&nbsp; du bouton&nbsp; doit contenir le nom du 
+contrôle imageList et&nbsp; <b>ImageIndex</b> du bouton doit contenir l'index de 
+l'image dans l'ImageList. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">btOk.ImageList</span><span style="background-color: #FFFFFF"> 
+= imagelist1</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">btOk.ImageIndex</span><span style="background-color: #FFFFFF"> 
+= 2</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un ImageList peut aussi être <b>chargé par code</b>:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">imageList1.Images.Add(Image.FromFile(NomImage))</span></font><br>
+On ajoute à la collection Images une image venant d'un fichier nommé NomImage.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut surcharger la méthode Add en fournissant en plus la couleur transparente.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">imageList1.Images.Add(Image.FromFile(imageToLoad), 
+CouleurTransparente)</span></font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La taille des images peut aussi être modifiée par code:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">imageList1.ImageSize = New Size(255, 255)<br>
+imageList1.TransparentColor = Color.White</span><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:08 GMT -->
+</html>

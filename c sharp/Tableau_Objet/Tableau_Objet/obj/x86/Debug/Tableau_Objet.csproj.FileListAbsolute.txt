@@ -1,0 +1,10 @@
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Tableau_Objet\Tableau_Objet\bin\Debug\Tableau_Objet.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Tableau_Objet\Tableau_Objet\bin\Debug\Tableau_Objet.pdb
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.pdb
+F:\Tableau_Objet\Tableau_Objet\bin\Debug\Tableau_Objet.exe.config
+F:\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.exe
+F:\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Tableau_Objet\Tableau_Objet\bin\Debug\Tableau_Objet.exe.config
+C:\Users\ZIZI\Desktop\TDI\c sharp\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Tableau_Objet\Tableau_Objet\obj\x86\Debug\Tableau_Objet.pdb

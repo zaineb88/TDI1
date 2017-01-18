@@ -1,0 +1,176 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-30.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-22.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.30</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Le
+      code est plutôt 'compact'.</font></b></td>
+    <td width="14%" height="76"><a href="v1-31.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Comment
+'compacter'?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">Habituellement
+on écrit une instruction par ligne:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Mais:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New"><b>On
+peut créer une variable et l'initialiser en même temps:</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">Au
+lieu de:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Dim
+s As String</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF"><span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">s
+</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">=&nbsp;&quot;Philippe.
+Jean&nbsp;. Toto&quot;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+peut écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Dim
+s As String=</font>&nbsp;&quot;Philippe. Jean&nbsp;. Toto&quot;&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Rien
+n'empêche d'<b>initialiser avec une expression complexe</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Dim
+t As Single </font><font color="#0000FF">=&nbsp; (3* Int(u))-2)</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Autre
+exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">Ici
+par exemple on découpe la string s en utilisant des séparateurs et on met les
+noms dans un tableau:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">Version
+non compact:</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Dim
+s As String=</font>&nbsp;&quot;Philippe. Jean&nbsp;. Toto&quot;&nbsp;</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><font color="#0000FF">Dim
+sep() As Char={</font></font><font color="#0000FF"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">&quot;
+&quot;c, &quot;,&quot;c, &quot;.&quot;c}</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="BACKGROUND-COLOR: #ffffff"><span style="FONT-FAMILY: Courier New"><font color="#0000ff" size="2">Dim
+nom() As String </font><font size="2" color="#111111">'Tableau des noms</font></span></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff" size="2"><span style="font-family: Courier New; background-color: #ffffff">nom
+=</span></font><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">
+s.Split ( sep, 100, StringSplitOptions.RemoveEmptyEntries )</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#111111">Mais on peut compacter le
+code:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">Dim
+nom() As String = </font><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff"><font color="#0000FF">&quot;Philippe. Jean&nbsp;. Toto&quot;</font></span><font face="Courier New" size="2" color="#0000FF">.Split(New Char() {&quot; &quot;c, &quot;,&quot;c,
+&quot;.&quot;c, &quot;:&quot;c}, 100, StringSplitOptions.RemoveEmptyEntries)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On crée la variable nom, on l'initialise en
+même temps avec une méthode, les paramètres étant directement crées au
+niveau de l'appel de la méthode.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Même chose avec des fonctions:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Le paramètre d'une fonction peut être le
+résultat d'une fonction.</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Soit</font><font face="Courier New" size="2">
+une fonction qui se nomme 'Carré' , on peut lui envoyer un paramètre (elle
+accepte un Single), elle retourne le carré du paramètre:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Function
+Carré ( v as Single) as Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+Return v*v</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">End
+Function</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Soit
+une fonction qui se nomme 'Inverse' , on peut lui envoyer un paramètre (elle
+accepte un Single), elle retourne le paramètre après avoir inversé le signe:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Function
+Inverse ( v as Single) as Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+Return -v</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">End
+Function</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Si
+on veut&nbsp; prendre le carré de 2 puis l'inverse et enfin la partie entière
+du résultat:.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+resultat As Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2"><span style="background-color: #ffffff">Dim
+</span><span style="BACKGROUND-COLOR: #ffffff">resultatintermediaire1 As Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff" face="Courier New" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+resultatintermediaire2 As Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">resultatintermediaire1=
+Carré(2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font><span style="BACKGROUND-COLOR: #ffffff">&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000ff" face="Courier New" size="2"><span style="BACKGROUND-COLOR: #ffffff">resultatintermediaire2
+</span></font><font face="Courier New" size="2" color="#0000FF">= Inverse (</font><font color="#0000ff" face="Courier New" size="2"><span style="BACKGROUND-COLOR: #ffffff">resultatintermediaire1)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000ff" face="Courier New" size="2"><span style="BACKGROUND-COLOR: #ffffff">resultat=
+Int(resultatintermediaire2)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="background-color: #ffffff"><font face="Courier New" size="2">Ou
+de manière compact:</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+resultat As Single = Int(Inverse(Carré(2)))</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><span style="background-color: #ffffff"><font face="Courier New" size="2" color="#FF0000"><img border="0" src="vicoexcl.gif" width="29" height="43">
+ <b>L'écriture compact du code est&nbsp; plus ramassée, moins 'lourde', avec moins
+de variables intermédiaires</b> </font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><span style="background-color: #ffffff"><font face="Courier New" size="2" color="#FF0000"><b>mais
+on perd en lisibilité parfois.</b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff" size="2">Dim
+resultat As Single = Int(Inverse(Carré(2))) </font><font face="Courier New" size="2">'Cet
+exemple est compact mais lisible.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">Dim
+nom() As String = S.Split(New Char() {&quot; &quot;c, &quot;,&quot;c,
+&quot;.&quot;c, &quot;:&quot;c}, 100, StringSplitOptions.RemoveEmptyEntries)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">'C'est
+moins lisible</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000ff" face="Courier New" size="2"><span style="background-color: #ffffff">&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-22.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-31.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-30.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+</html>

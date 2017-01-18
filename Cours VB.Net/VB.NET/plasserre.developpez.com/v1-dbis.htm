@@ -1,0 +1,782 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-dbis.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:20:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net, SharpDevelop&nbsp; (#develop)</title>
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+span.SpellE
+	{}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">SiteVB</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="59%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1d3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.D Bis</font></b></td>
+    <td width="49%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">L'IDE:</font></b><p>
+    <b><font face="Courier New" size="6" color="#800080">SHARPDEVELOP 2</font><font face="Courier New" size="6" color="#800080">
+    </font><font face="Courier New" color="#800080" size="2">MAJ 07/02/2007</font></b></td>
+    <td width="10%" height="76"><a href="v1-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="13%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">C'est l'IDE (Integrated 
+Development Environment): 
+Environnement de développement intégré GRATUIT,  </span>
+<span style="font-family: Courier New; ">alternative à VisualStudio.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vsharpdev.JPG" width="63" height="69"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font color="#FF0000" face="Courier New">Oui, vous pouvez faire du Visual 
+Basic.Net&nbsp; gratuitement et légalement.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font color="#FF0000" face="Courier New">&nbsp;Depuis sa version 2 #develop
+est un très bon produit et n'a rien à envier à Visual Studio.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font face="Courier New" size="2">VB 2005 Express de Microsoft est 
+gratuit; la prochaine version&nbsp; sera t-elle aussi gratuite?&nbsp;</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font face="Courier New" size="2">&nbsp;#Develop
+sera toujours gratuit.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">C'est un <b>logiciel libre</b> en <b>Open Source</b>&nbsp; (GPL), 
+fonctionne officiellement sous Windows XP et 2000 (Pas officiellement sous ME et 98)</font></p>
+<blockquote>
+  <p class="MsoNormal"><font face="Courier New"><font size="1">Il parait que 
+  SharpDevelop fonctionne sous Windows 98 (non testé, si vous avez essayé, m'en 
+  faire part), Millenium (testé), NT 4, Windows 2000 (testé) , XP (testé). Alors 
+  que </font><i><font size="1">Visual Studio ne fonctionne pas sur un PC non NT 
+  (exit Windows 98 et Millenium).</font></i></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Où le trouver? Comment 
+l'installer?</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF" size="4"><u><b>SharpDevelop 2.. et 
+le FrameWork 2</b></u></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Respecter l'ordre d'installation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><u><font face="Courier New">1</font></u></b><font face="Courier New"><u><b>/ Télécharger et installer le FrameWork.</b> 
+(impérativement en premier)</u></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Installer <b>Microsoft .NET version 2 Redistibutable package</b>.<br>
+</font><b><font face="Courier New" size="2">C'est</font></b><font face="Courier New" size="2"><b> le Framework</b> 
+(la couche logiciel entre l'application et le système), il est téléchargeable 
+sur le Net sur le site Microsoft.
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5&amp;DisplayLang=en-">Télécharger le FrameWork</a>
+puis l'installer. (<font color="#FF0000">Gratuit</font>)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"> Attention, changer la langue (French) avant
+le téléchargement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vframw2.JPG" width="800" height="502"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<u><font face="Courier New">2/ Télécharger et installer le <b>SDK 2.</b></font></u></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">C'est le</font></b><font face="Courier New" size="2"> <b>Kit de 
+Développement Microsoft .NET Framework: SDK du Framework 2.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En bas de la page précédente ou par le lien
+suivant:<br>
+<a href="http://www.microsoft.com/downloads/details.aspx?familyid=FE6F2099-B7B4-4F47-A244-C96D69C35DEC&amp;displaylang=en">Télécharger le SDK</a>&nbsp; 
+(<font color="#FF0000">Gratuit</font>) Attention, changer la langue (French).
+<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+</font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New"><u>3/ Télécharger et installez <b>SharpDevelop 2.2 (le
+22/12/2007)</b></u></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">
+<a href="http://www.icsharpcode.net/OpenSource/SD/Download/">Télécharger SharpDevelop
+2.1</a> 
+(<font color="#FF0000">Gratuit</font>)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'installer en exécutant le fichier '</font><i>SharpDevelop_2.1.0.2201_Setup.exe'</i><font face="Courier New" size="2">.
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+<br>
+</font><font face="Courier New"><u>4/<b> </b>Configurer<b> SharpDevelop</b></u></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Lancer Sharpdevelop 2.1</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Aller dans le menu&nbsp; 'Outils' - 'Options'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">La
+langue de l'utilisateur est 'French', si cela n'est pas le cas, modifier la
+langue.&nbsp;</font></p>
+<p class="MsoNormal">
+<img border="0" src="vsharp12.JPG" width="558" height="325"><font face="Courier New" size="2"><br>
+<br>
+&nbsp;&nbsp;<br>
+Dans&nbsp; 'Style visuel' : Choisir VBNET dans la liste.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Codage' : Éditer les en-têtes standard: VB.Net&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Codage' : Modèle de code: extension&nbsp; '.vb</font></p>
+<p class="MsoNormal">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Editeur de
+texte' : Surlignement, VB.net dans la liste de gauche.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b><font color="#FF0000" face="Courier New">Le Framework, le SDK et&nbsp; #develop 
+suffisent pour faire des programmes.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Quelques liens</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><a href="http://community.sharpdevelop.net/">
+Site SharpDevelop</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><a href="http://community.sharpdevelop.net/blogs/mattward/articles/FeatureTour.aspx">Didacticiel
+sur #develop utilisant C# en anglais&nbsp;</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<a href="http://wiki.sharpdevelop.net/default.aspx/SharpDevelop">
+WikiSharpDevelop</a> (en anglais)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<a href="http://wiki.sharpdevelop.net/default.aspx/SharpDevelop.DebuggingInSharpDevelop">
+WikiDeboguage</a> (en anglais)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Fenêtre Projet.</span></font></b></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Lancer SharpDevelop:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2"><b>Au lancement de 
+l’application, on peut&nbsp;:</b></font></p>
+<p class="MsoNormal" style="text-indent: -18pt; margin-left: 72pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></span><font face="Courier New" size="2">ouvrir une solution 
+existante: Bouton 'Ouvrir une solution' (ou cliquer sur le nom d'un projet récent
+en haut)</font></p>
+<p class="MsoNormal" style="text-indent: -18pt; margin-left: 72pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></span><font face="Courier New" size="2">créer un nouveau projet 
+(une nouvelle solution) .</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si l'on veut rajouter des fichiers à notre projet 
+faire :<br>
+&nbsp;&nbsp; 'Fichier'-'Ouvrir'-'Fichier' et catégorie VB</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New"><b>Détaillons
+la création d'un nouveau projet.</b></font></p>
+<p class="MsoNormal" style="text-indent: -18pt; margin-left: 72pt; margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Courier New" size="2">&nbsp;Bouton 'Nouvelle solution' ou</font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Menu 'fichier'-'Nouveau'-'Solution'</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><img border="0" src="vsharp7.JPG" width="631" height="798"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Sélectionner la catégorie 'VBNET' et choisir le type d'application à créer.(Dans le cas d'une création d'un projet Visual 
+Basic, il faudra choisir dans les 'Modèles': <b>Application Windows</b>.) On remarque que #Develop 
+permet aussi d'écrire du C#, du C++ du ILAsm un setup.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0; margin-bottom:0">
+<font face="Courier New" size="2">Puis il faut donner un <b>nom</b> 
+au projet (il n'y a pas de nom par défaut), modifier si nécessaire le <b>chemin de l'emplacement du projet</b> 
+qui est par défaut ' C:\Documents and Settings\NomUtilisateur\Mes documents\SharpDevelop 
+Projects' ( cocher si nécessaire 'Créer le répertoire source') enfin valider sur 
+le bouton 'Créer'. 
+Une fenêtre 'MainForm' apparaît.</font></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si, comme dans notre exemple, on a tapé 'Prog2', #develop
+crée une '<b>solution</b>' nommée 'SolutionProg2'(ensemble, groupe de projets) contenant un
+<b> projet</b> (Prog2) contenant&nbsp; un <b>
+formulaire</b> nommé 'MainForm'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">L'écran principal se présente ainsi:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vSharp0.JPG" width="780" height="596"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Au
+centre, sont visible les écrans du code et des formulaires ; on peut changer
+d'écran grâce aux onglets du haut. Ici on voit 'MainForm'.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">A
+gauche, les onglets du bas donnent accès au <b>projet</b> en cours (les
+solutions, projets, formulaires, autres fichiers: ressources, assembly..) ou aux
+<b>outils</b> : Table ascii, Presse papier et surtout (si on a un formulaire au
+centre et non du code) aux objets (bouton, texteBox, ListBox...)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">A
+droite, en bas , les <b>classes</b> et surtout la <b>fenêtre de Propriétés</b>
+(Name, Text..) de l'objet sélectionné au centre.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">&nbsp;En
+bas les fenêtres de 'sortie' (affichage de la console) liste des 'erreurs' des
+'taches', définitions', 'Résultat des recherches'..</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF"><font size="4">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Dans un nouveau projet, 
+c</span></font><span style="FONT-WEIGHT: 700; FONT-FAMILY: Courier New"><font size="4"><span style="background-color: #C0C0C0">réer 
+une fenêtre&nbsp;:</span></font></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Pour ajouter un fenêtre 
+(un formulaire) ouvrir le gestionnaire de projet et solution (Onglets en bas à
+gauche), il donne le nom de la solution (solutionprog2) et du projet (prog2 ici)
+Cliquer avec le bouton droit sur prog2&nbsp; puis dans les menus sur 'Ajouter',
+'Nouveau fichier'. Cela ouvre la fenêtre 'Nouveau fichier'.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<img border="0" src="vsharp13.JPG" width="860" height="522"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Dans la fenêtre qui 
+s'ouvre , à gauche, choisir 'VB' puis 'Application Windows' , à droite 'Formulaire'
+, taper un nom de formulaire&nbsp; (Form1 par exemple)puis 'Créer<b>' </b>, une 
+fenêtre ‘Form1’ apparaît. La première fenêtre qui s'ouvre
+automatiquement quand on crée un 
+projet se nomme 'MainForm'.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">La zone de travail se trouve au centre de 
+l'écran: On voit les </span></font><font face="Courier New" size="2">onglets <b>
+MainForm, Form1.vb pour chaque formulaire (fenêtre)</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<img border="0" src="vSharp1.JPG" width="326" height="380"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+En bas les onglets '<b>Source</b>' et '<b>Design</b>' permettent de passer de l'affichage du 
+code('Source') à la conception de l'interface utilisateur ('Design'): affichage de la 
+fenêtre et de ses contrôles permettant de dessiner l'interface.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font size="4" color="#0000FF">
+<span style="FONT-WEIGHT: 700; FONT-FAMILY: Courier New; background-color:#C0C0C0">
+Ajouter des contrôles au formulaire.</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Ajoutons 
+u</span></font><span style="FONT-WEIGHT: 700; FONT-SIZE: 10pt; FONT-FAMILY: Courier New">n bouton&nbsp;par exemple:</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4" height="103">
+  <tr>
+    <td width="31%" height="103">
+    <img border="0" src="vsharp3.JPG" width="161" height="510"></td>
+    <td width="69%" height="103">
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Cliquer sur 
+    l'onglet ‘<b>Outils</b>’ à gauche en bas , bouton <b>'Windows Forms'</b>, puis sur ‘<b>Button</b>’,cliquer 
+    dans la MainForm, déplacer le curseur sans lâcher le bouton, puis lâcher le 
+    bouton&nbsp;: </span></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;<img border="0" src="vSharp1.JPG" width="326" height="380"></span></p>
+    <p><font face="Courier New" size="2">Un bouton apparaît.</font></td>
+  </tr>
+</table>
+<p>
+&nbsp;</p>
+<p>
+<font size="4" color="#0000FF">
+<span style="FONT-WEIGHT: 700; FONT-FAMILY: Courier New; background-color:#C0C0C0">
+Modifier les propriétés d'un contrôle ou du formulaire.</span></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber5" height="164">
+  <tr>
+    <td width="50%" height="164"><font face="Courier New" size="2">Quand une feuille ou un contrôle est 
+    sélectionné dans la fenêtre Design, <b>ses propriétés sont accessibles</b> dans l<b>a 
+    fenêtre de propriétés à droite en bas</b>:(Si elles ne sont pas visible,
+      cliquer sur l'onglet 'Propriètés' en bas ).</font><p>
+    <font face="Courier New" size="2">Ici ce sont les propriétés du 
+    contrôle 'Button1' (BackColor, Image, Texte..)</font></p>
+    <p>
+    <font face="Courier New" size="2">Un petit texte d'aide concernant la 
+    propriété en cours apparaît en bas.</font></p>
+    <p><font face="Courier New" size="2">(on peut modifier les propriétés directement.)</font></td>
+    <td width="50%" height="164">
+    <img border="0" src="vsharp4.JPG" width="248" height="375"></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Voir les procédures:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'onglet <b>'Source' </b>en bas &nbsp;donne accès aux 
+procédures (au code) liées à Form1.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vSharp2.JPG" width="482" height="231"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La combo déroutante de droite donne la <b>liste des objets</b>. 
+Si on en choisit un, le pointeur va sur les procédures liées à cet objet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Malheureusement, contrairement à Visual 
+Studio, la combo de gauche ne <br>
+contient que les formulaires et pas les objets. Par exemple, on aura <br>
+MainForm, mais pas Label1... Du coup la recherche se fait directement <br>
+dans la combo de droite et c'est forcément beaucoup moins clair dès <br>
+qu'il y a beaucoup de contrôles sur un formulaire...<br>
+</font><br>
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#FF0000">Il est possible en 
+double-cliquant dans le formulaire ou sur un contrôle de se retrouver directement 
+dans le code de la procédure correspondant à cet objet.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">Si la procédure n'existe pas 
+(ButtonClick par exemple),le fait de double-cliquer sur le bouton la crée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour créer les autres procédures évènements, 
+utiliser le bouton&nbsp;
+<img border="0" src="vsharp8.JPG" width="27" height="28"> qui est sur la fenêtre 
+des propriétés à droite, il fait apparaître la liste des évènements,
+double-cliquant sur un évènement cela permet d'ouvrir la fenêtre de code et de 
+créer les procédures.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Voir tous les 
+composants d'un projet:</span></font></span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber6">
+  <tr>
+    <td width="71%"><font face="Courier New" size="2">Pour cela il faut utiliser<b> 
+    La fenêtre Projet </b>à gauche (Si elles ne sont pas visible, cliquer sur
+      l'onglet 'Propriètés' en bas), 
+    elles permettent de 
+    voir et d'avoir accès au contenu du projet:</font>
+      <p><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> le gestionnaire de projet et solution
+      donne le nom de la solution (solutionprog2) et du projet (prog2 ici)
+Cliquer</span><font face="Courier New" size="2"> sur les '+' pour développer:
+      vous verrez apparaître les formulaires, les modules.. et:&nbsp;&nbsp;</font></p>
+      <p><font face="Courier New" size="2"><font color="#0000FF">Références</font> qui contient les espaces de nom.</font><p>
+    <font face="Courier New" size="2">A<font color="#0000FF">ssembly</font>: info 
+    nécessaire pour générer le projet.. </font> </td>
+    <td width="29%">&nbsp;</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Remarque relative aux 
+fenêtres de l'IDE:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour <b>faire apparaître une fenêtre</b> qui a 
+disparu (fenêtre projet par exemple) utiliser le menu 'Affichage' puis 'projet'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand le fenêtre est ancrée (accrochée aux 
+bords), le fait de la déplacer&nbsp; avec sa barre de titre la 'dé ancre', et elle 
+devient autonome.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour la 'ré ancrer', il faut double-cliquer dans 
+sa barre de titre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Tester son logiciel:</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut compiler le projet avec le premier 
+bouton ci-dessous. Créer le projet avec le second.&nbsp; </font><font size="2"><b>
+<span style="font-family: Courier New">L</span></b><span style="FONT-FAMILY: Courier New"><b>ancer 
+l'exécution avec le 
+bouton flèche verte (débogueur actif), le point d'exclamation lance l'exécution
+sans débogage, le rond à droite (qui devient rouge pendant l'exécution) </b>
+sert à terminer l'exécution.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsharp5.JPG" width="279" height="28"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La liste déroutante permet de choisir la
+configuration des fenêtres de l'IDE:</font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Défaut:</b>
+  c'est les fenêtres habituelles précédemment décrites.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Débogage</b>:
+  ouvre les fenêtres: variables locales, points d'arrêt, modules chargés..</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Texte
+  simple:</b> uniquement les fenêtres centrales.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Editer:</b>
+  ouvre la fenêtre Edit Layout?</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">La <b>sauvegarde</b> du projet se 
+fait comme dans tous les logiciels en cliquant sur l'icône du paquet de disquettes.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Fichiers, Chemins des sources.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Avant, en #develop 1:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#0000FF">.prjx</font></b>&nbsp; 
+est le fichier de projet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#0000FF">.cmbw</font></b> est 
+le fichier solution.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New"><b>Avec Sharpdevelop 2 c'est comme en VB:</b> les solutions sont 
+maintenant des fichiers <b><font color="#0000FF">.sln</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#0000FF">.vb</font></b> sont 
+tous les fichiers Visual Basic (Feuille module...)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les sources sont par défaut dans ' 
+C:\Documents and Settings\NomUtilisateur\Mes documents\SharpDevelop 
+Projects'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on compile le projet l'exécutable est dans 
+un sous répertoire <font color="#008000">\Bin\Debug </font>ou<font color="#008000"> 
+ \Bin\Realese</font></font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">Si vous avez plusieurs versions du framework 
+sur votre machine (version 1.0, &nbsp;version 1.1 voire version 2.0 Bêta), il vous 
+est possible de choisir le compilateur dans les options du projet.</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 70.5pt; TEXT-INDENT: 0.15pt">
+<font face="Courier New"><font size="2">Visual Studio 2003 </font></font>
+<font size="2"><span style="font-family: Courier New">à</span></font><font size="2" face="Courier New"> 
+version 1.1 du framework.</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 70.5pt; TEXT-INDENT: 0.15pt">
+<font face="Courier New"><font size="2">Visual Studio 2005 </font></font>
+<font size="2"><span style="font-family: Courier New">à</span></font><font face="Courier New"><font size="2"> 
+version 2.0 du framework.</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font size="4" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">Propriétés
+du projet.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Menu 'Projet', 'Option du projet' permet
+l'accès aux propriétés du projet en cours.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le quatrième onglet (Compiler) est le plus intéressant:&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsharp14.JPG" width="667" height="606"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Compiler le programme en mode 'Debug' ou
+'Release'.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Forcer
+  le programmeur a travailler en <b>Option Strict</b>= On ( empêcher les
+  conversions automatiques)</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Option Explicit</b>=On (Forcer la déclaration des variables)</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Choisir
+  le <b>Framework</b> avec lequel on travaille (1 ou 2, pas le trois encore)</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">...</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans l'onglet Import, on peut importer des
+espaces de noms.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">#Develop</font></b></span><b><font size="4" color="#0000FF" face="Courier New"><span style="background-color: #C0C0C0"> 
+propose des&nbsp;AIDES.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La fenêtre d'aide à droite donne accès à 
+des aides:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>De #develop&nbsp; </b>en anglais, non à 
+jour!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Du Framework</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">De zipLib</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si vous avez installé le SDK (SDK Framework 
+.Net et/ou SDK Direct X) , vous avez accès à l’aide (partie en haut à droite de 
+l’écran) , et donc également à l’intellisense, qui affiche les propriétés, les 
+méthodes des objets, les paramètres des fonctions, des types, … , des différents 
+objets.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsharp9.JPG" width="665" height="114"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici par exemple on a tapé MessageBox.&nbsp; , 
+la liste des membres (Equals, Show...) est affichée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Erreur
+de compilation :</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Si on fait une faute dans le code, elle est
+détectée lorsque l'on lance l'exécution.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici on a tapé 'Texte' à la place de 'Text'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La ligne en cause est soulignée en rouge et
+la fenêtre des erreurs située en bas s'ouvre, elle indique et décrit
+l'erreur:.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsharp18.JPG" width="758" height="269"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;L'aide dynamique à droite propose des
+liens en rapport avec le contexte.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Erreur
+d'exécution: Exceptions</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Si
+il y a une erreur d'exécution (division par zéro par exemple), l'exécution s'arrête
+et la fenêtre d'exception s'ouvre:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsharp21.JPG" width="648" height="237"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+peut choisir d'arrêter le programme, de continuer, d'ignorer.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">
+Débogage :</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le deboguer est maintenant intégré dans la
+version 2.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;<font face="Courier New" size="2">Une fois l'exécution lancée, on peut:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font face="Courier New" size="2"><b>Suspendre
+l'exécution </b> par <b> ALT+CTRL+B</b> , reprendre par <b> F6</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">Ajouter des points d'arrêt.</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+grâce à <b>des points d'arrêt</b> (pour définir un point d'arrêt en mode de 
+conception, cliquez en face d'une ligne dans la marge grise, cela fait 
+apparaître un rond&nbsp; et une ligne rouge. Quand le code est exécuté, il s'arrête sur cette 
+ligne). </font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><img border="0" src="vsharp15.JPG" width="591" height="85"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">(Recliquer
+sur le rond pour l'enlever).</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><b>Ajouter
+des marques pages.</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut ajouter des marques pages, en cliquant (quand on est sur la ligne à
+marquer) sur le petit carré bleu de la barre d'outils:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><img border="0" src="vsharp17.JPG" width="120" height="24">
+<font face="Courier New" size="2">Ensuite, on peut se déplacer de marque en
+marque avec les 2 boutons qui suivent.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">En
+mode 'Run', si on clique sur l'onglet 'Points d'arrêt' à droite, on voit la
+liste des points d'arrêt et des marques; on peut rendre inactif tous les points
+d'arrêt (3eme bouton) ou un seul en le décochant dans la liste.&nbsp;</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><img border="0" src="vsharp16.JPG" width="922" height="200"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>Voir la valeur d'une variable</b>, simplement en positionnant le curseur sur 
+cette variable.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><img border="0" src="vsharp19.JPG" width="866" height="263"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">En
+plus en mode Run , la fenêtre '<b>Variables locales</b>' située en bas affiche
+la valeur de toutes les variables de la procédure. (Y compris 'e' et 'sender'
+qui sont les paramètres de la Sub)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Enfin
+à droite on peut voir les <b>modules chargés</b> et les <b>threads</b>.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><b>Exécution
+pas à pas:</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>F11</b> permet l'exécution pas à pas (y compris des procédures appelées)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>F10</b> permet le pas à pas (sans détailler les procédures appelées)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>Maj+F11</b> exécute jusqu'à la fin de la procédure en cours.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut aussi utiliser les boutons :<img border="0" src="vsharp20.JPG" width="90" height="28"></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#FF0000">Attention,</font> comme 
+dans Visual Studio, il n'est pas possible de modifier<br>
+les fichiers sources à partir du moment où vous avez démarré le débogage.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><a href="http://community.sharpdevelop.net/blogs/mattward/archive/2005/11/09/MissingFeaturesInSharpDevelop2.aspx"><font face="Courier New" size="2">Fonctions
+présentes dans #develop 1 mais pour l'instant absente dans #develop 2</font></a><font face="Courier New" size="2">:
+C++ NProf Wix NAnt, générateur de MessageBox</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><font face="Courier New" size="2"><a href="http://community.sharpdevelop.net/blogs/mattward/archive/2007/01/08/CreatingAnInstallerWithSharpDevelop.aspx">Créer
+un installateur.</a>(en anglais)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">
+Conclusion:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Programme permettant de faire du VB.net 
+gratuitement (rapport qualité/prix infiniment élevé).
+</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt"><font face="Courier New"><b>
+<u>CONCLUSION&nbsp;D'UN UTILISATEUR: </u></b></font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">SharpDevelop est un IDE agréable à utiliser, 
+pour le développement des programmes .NET, en mode WYSIWYG.</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">Il est possible d’atteindre un niveau de 
+qualité équivalent à Visual Studio ou à Borland C# Builder en faisant une 
+installation complète. Très ouvert, on peut lui rajouter des plugins. Certains 
+programmes externes peuvent être utilisés également avec Visual Studio ou 
+Borland C# Builder.</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">&nbsp;SharpDevelop est en perpétuelle évolution.
+</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">&nbsp;Un forum permet de déposer le descriptif des 
+erreurs rencontrées mais également de vos demandes de modifications, si vous 
+pensez à une évolution qu'il serait bien que SharpDevelop possède. En plus vous 
+pouvez récupérer le code source et pouvez donc modifier à loisir l’IDE.</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">&nbsp;Bien sur, pour les débutants, il manque les 
+assistants de Visual Studio (Crystal report, ADO .NET, …). Le problème avec les 
+assistants est qu’une fois qu’on pratique un peu, ils deviennent vite un gêne, 
+et souvent, il faut repasser derrière eux, pour enlever le superflu de code 
+qu’ils ont écrit (souvent ils n’optimisent pas le code).</font></p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt">
+<font face="Courier New" size="2">Il manque également la partie UML de Visual 
+Studio Architecte, mais là on attaque le haut du panier des développeurs. </font>
+</p>
+<p class="MsoNormal" style="MARGIN-LEFT: 35.25pt"><b>
+<font face="Courier New" size="2">Par contre SharpDevelop apporte en plus:</font></b></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Aide&nbsp;à la génération&nbsp; automatique des MessageBox</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aide à la 
+conversion C# vers VB.NET et de VB.NET vers C#</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Aide à la 
+génération d’expression régulière.</font></p>
+<blockquote>
+  <p class="MsoNormal">
+  <span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Courier New">
+  <font size="2">&nbsp;</font></span><font face="Courier New" size="2"><span style="font-style: normal; font-variant: normal; font-weight: normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></p>
+</blockquote>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Il fournit les logiciels:</b></font></p>
+<blockquote>
+  <p class="MsoNormal" style="MARGIN-LEFT: 35.4pt">
+  <font face="Courier New" size="2"><b>NDoc :</b> permet de faire des fichiers 
+  d’aide compilée au format MSDN, à partir de lignes commentées dans le code.</font></p>
+  <p class="MsoNormal" style="MARGIN-LEFT: 35.4pt">
+  <font face="Courier New" size="2"><b>NUnits&nbsp;:</b> permet de faire des tests 
+  unitaires (!).</font></p>
+  <p class="MsoNormal" style="MARGIN-LEFT: 35.4pt">
+  <font face="Courier New" size="2"><b>SharpQuery&nbsp;:</b> Permet de se connecter 
+  aux bases de données .</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">J'ai
+besoin d'aide:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment créer facilement un installateur (SetUp) avec #develop?&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment utiliser NDoc NUnits? </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment utiliser simplement des ressources?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment utiliser des bases de données?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Qui utilise le menu 'Outils' et ses
+différentes options?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" align="left"><font face="Courier New" size="2">Merci à 
+    Fabrice SAGE pour son aide.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Merci à Hubert WENNEKES, CNRS Institut de 
+Biologie de Lille pour son aide.</font></p>
+  </blockquote>
+</blockquote>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;</p>
+</font>
+<p><b><font face="Courier New" SIZE="2">Remarque pour les forts:</font></b></p>
+<p><font size="2" face="Courier New">On peut s'étonner qu'il n'y aie pas</font><font COLOR="#0000ff" size="2" face="Courier New">
+Handles Button1.Click </font><font size="2" face="Courier New">à la fin de la
+ligne suivante (comme dans VB 2005)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Sub Button1Click(ByVal
+sender As Object, ByVal e As EventArgs)</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">End Sub</font></p>
+<p><font face="Courier New" size="2">En fait si on va voir dans <font color="#0000FF">InitializeComponent</font>,
+il y a un <font color="#0000FF">AddHandler</font> après la description du
+bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2" color="#0000FF">Private Sub
+InitializeComponent()</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font size="2" face="Courier New" color="#0000FF">...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2"><font color="#0000FF">AddHandler
+Me.button1.Click, AddressOf Me.Button1Click</font><br>
+&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1d3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-dbis.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:41 GMT -->
+</html>

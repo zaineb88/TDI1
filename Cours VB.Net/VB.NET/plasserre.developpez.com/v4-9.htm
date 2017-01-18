@@ -1,0 +1,294 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:43 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net curseur , souris</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-8.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.9</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Le curseur et la souris.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-family: Courier New; font-weight:700"><font size="2" color="#111111">
+<img border="0" src="vwindow.JPG" width="99" height="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vsouris.gif" width="169" height="150"></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment modifier 
+l'apparence du curseur?</span></font></p>
+<p><font face="Courier New" size="2">Un curseur est une petite image dont 
+l'emplacement à l'écran est contrôlé par la souris, un stylet ou un trackball. 
+Quand l'utilisateur déplace la souris, le système d'exploitation déplace le 
+curseur.</font></p>
+<p><font face="Courier New" size="2">Différentes formes de curseur sont 
+utilisées pour informer l'utilisateur de l'action que va avoir la souris. </font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Apparence du curseur</font></b></span></p>
+<p><font face="Courier New" size="2">Pour modifier l'aspect du curseur il faut 
+modifier l'objet <font color="#0000FF">Cursor.Current; </font>
+<font color="#111111">l'énumération</font><font color="#0000FF"> Cursors </font>
+<font color="#111111">contient les différents curseurs disponibles:</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+System.Windows.Forms.Cursor.Current = System.Windows.Forms.Cursors.WaitCursor</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">ou plus simplement pour afficher le 
+sablier:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Cursor.Current = 
+Cursors.WaitCursor</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#111111">
+<span style="font-family: Courier New">Pour revenir au curseur normal:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Cursor.Current = 
+Cursors.Default</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#111111">Comme 
+d'habitude il suffit de taper </font><font size="2" color="#0000FF">Cursors.</font><font size="2" color="#111111"> 
+pour voir la liste des curseurs.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#111111">
+<span style="font-family: Courier New">Le curseur peut disparaître et être de 
+nouveau affiché par </span> </font>
+<span style="font-family: Courier New"><font size="2" color="#0000FF">Hide</font><font size="2" color="#111111"> 
+et </font><font size="2" color="#0000FF">Show</font><font size="2" color="#111111">.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#111111" face="Courier New">Les
+fichiers curseur sont des </font><font size="2" face="Courier New" color="#0000FF">.Cur</font><font size="2" color="#111111" face="Courier New">
+ou des </font><font size="2" face="Courier New" color="#0000FF">.Ico </font><font size="2" face="Courier New">;
+pour 'charger' le curseur personnalisé:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">Button1.Cursor
+= New Cursor(&quot;MyCurseur.cur&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Curseur sur un contrôle:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#111111">Un 
+contrôle dans une fenêtre possède une propriété </font>
+<font size="2" color="#0000FF">Cursor</font><font size="2" color="#111111">; en 
+mode design, si je donne une valeur autre que celle par défaut, </font>
+<font size="2" color="#0000FF">CursorWait</font><font size="2" color="#111111"> 
+par exemple, cela modifie le curseur quand la souris passe au dessus de l'objet 
+(cela met un sablier dans notre exemple). </font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">La souris</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<font face="Courier New" size="2"><b>Chaque contrôle&nbsp; ou formulaire possède
+des procédures évènements déclenchées par la souris.&nbsp;</b></font>
+<p><font face="Courier New" size="2"><span class="red"><font color="#0000FF">MouseEnter</font></span>
+: s'exécute lors de l'arrivée de la souris sur un contrôle</font></p>
+<font face="Courier New" size="2"><span class="red"><font color="#0000FF">MouseLeave</font></span>
+:s'exécute lors de la sortie de la souris d'un contrôle</font>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<span style="font-family: Courier New; font-weight:700"><font size="2" color="#111111">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#111111"><span style="font-family: Courier New; font-weight: 700">Plus
+important</span></font><span style="font-family: Courier New; font-weight:700"><font size="2" color="#111111">:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">MouseUp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><font face="Courier New" size="2">se produit lorsque l'utilisateur 
+appuie sur le bouton de la souris</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">MouseDown&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><font face="Courier New" size="2">se produit lorsque l'utilisateur 
+lâche sur le bouton de la souris</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>le déplacement de la souris exécute:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">MouseMove&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><font face="Courier New" size="2">se produit lorsque l'utilisateur 
+déplace le pointeur de la souris</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un paramètre e de type <font color="#0000FF">
+MouseEventsArgs</font> est&nbsp; alors disponible pour les 3 évènements. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La procédure évènement se produit 
+quand l'utilisateur appuie sur le bouton de la souris.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2">
+<font color="#0000FF">Form1_MouseDown(</font></font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+ <b> 
+e</b> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" face="Courier New" color="#0000FF">
+System.Windows.Forms.MouseEventArgs</font><font face="Courier New"><font SIZE="2" color="#0000FF">)
+</font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">MyBase</font></font><font face="Courier New" color="#0000FF" SIZE="2">.MouseDown</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le paramètre e de type MouseEventsArgs&nbsp; 
+permet de connaître la position de la souris et l'état des boutons:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">e.X</font> et
+<font color="#0000FF">e.Y</font>&nbsp; contiennent les coordonnées de la souris 
+dans le contrôle en cours.</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="1">Attention ce sont bien les coordonnées du 
+control alors que dans les opérations de drag and drop ce 
+sont par contre les coordonnées 'écran' qui sont utilisées, il faudra les transformer en coordonnées 'contrôl' avec PointToClient 
+: voir le chapitre sur les coordonnées.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">e.Button()</font> 
+retourne le bouton qui a été enfoncé.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if</font></font><font SIZE="2" color="#0000FF" face="Courier New"> 
+e.Button()=MouseButtons.Left </font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then..</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">e.Click()</font> 
+retourne le nombre de Click</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">e.Delta()</font> 
+retourne le nombre de cran de la molette souris.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Si
+la souris n'est pas sur le contrôle et que l'on veut quand même récupérer
+les évènements de la souris sur ce contrôle, il faut mettre la propriété <font color="#0000FF">Capture</font>
+de ce contrôle à True.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Exemples:</span></font></p>
+<p style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" size="2"><b>Dans un programme de dessin</b>, quand 
+l'utilisateur enfonce le bouton gauche de la souris, on peut récupérer les 
+coordonnées du point ou se trouve la souris.</font></p>
+<p style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">Private Sub 
+PictureBox1_MouseDown(ByVal sender As Object, ByVal e As 
+System.Windows.Forms.MouseEventArgs) Handles PictureBox1.MouseDown</font></p>
+<blockquote>
+  <p style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">Dim NewPoint As New Point(e.X, 
+  e.Y)</font></p>
+</blockquote>
+<p style="MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour voir un exemple complet de dessin, regarder
+<a href="ve4-3.htm">Programme simple de Dessin</a></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><b><font face="Courier New" size="2">Exemple affichant dans une 'bulle' le 
+numéro d'index de l'élément survolé dans une listbox:</font></b></p>
+<p><font face="Courier New" size="2">Dans<font color="#0000ff"> MouseMove </font>
+les coordonnées de la souris permettent de déterminer l'index survolé grâce à
+<font color="#0000ff">IndexFromPoint</font>. L'index est affiché dans un 
+ToolTip.</font></p>
+<font color="#0000ff">
+<p><font face="Courier New"><font size="2">Private</font></font></font><font size="2" face="Courier New"><font color="#0000FF">
+</font><font color="#0000ff">Sub</font><font color="#0000FF"> 
+ListBox1_MouseMove(</font><font color="#0000ff">ByVal</font><font color="#0000FF"> 
+sender </font><font color="#0000ff">As</font><font color="#0000FF"> </font>
+<font color="#0000ff">Object</font><font color="#0000FF">, </font>
+<font color="#0000ff">ByVal</font><font color="#0000FF"> e </font>
+<font color="#0000ff">As</font><font color="#0000FF"> 
+System.Windows.Forms.MouseEventArgs) </font><font color="#0000ff">Handles</font><font color="#0000FF"> 
+ListBox1.MouseMove</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+ToolTip1.SetToolTip(ListBox1, </font><font color="#0000ff">&quot;Index:&quot;&amp; CType</font><font color="#0000FF">(ListBox1.IndexFromPoint(e.X, 
+e.Y), </font><font color="#0000ff">String</font><font color="#0000FF">))</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000ff">End</font><font color="#0000FF">
+</font><font color="#0000ff">Sub</font></font></p>
+<p><font face="Courier New" size="2">la propriété <font color="#0000FF">
+IndexFromPoint</font> n'existe pas pour les combos.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Voir aussi la page sur le Drag and Drop.</font></b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-8.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:45 GMT -->
+</html>

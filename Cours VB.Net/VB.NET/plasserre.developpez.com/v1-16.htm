@@ -1,0 +1,344 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:59 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-15.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.16</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" face="Courier New" color="#800080">Le GoTo</font></b></td>
+    <td width="14%" height="76"><a href="v1-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vkangou.JPG" width="128" height="85"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b>
+<font face="Courier New">Et hop!! On saute..</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" color="#800080" size="2">Le Goto c'est quoi?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Faut-il utiliser le 
+GoTo ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Goto</font></b></span><b><font size="4" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'instruction <font color="#0000FF">GoTo</font> permet de transférer le contrôle 
+à l'emplacement d'une étiquette(on dit parfois un label) locale.<br>
+Une étiquette permet de localiser un endroit du code Les étiquettes sont 
+toujours terminées par deux points(:).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">Goto</font> permet un saut <b>non</b> conditionnel : <b>
+aller à, </b>sauter vers une étiquette:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2"><b>
+<span style="background-color: #FFFFFF">...</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2"><b>
+<span style="background-color: #FFFFFF">GoTo FIN</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">A=2</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">B=A+2</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2"><b>
+<span style="background-color: #FFFFFF">FIN:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">FIN:</font>&nbsp; est une étiquette, un mot en début de ligne qui désigne un endroit du 
+code; pour créer une étiquette, taper en début de ligne un mot suggestif de 
+l'endroit, puis ajouter &quot;:&quot;.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le programme saute de la ligne <font color="#0000FF">GoTo FIN</font> à 
+l'étiquette <font color="#0000FF">FIN:</font> puis se poursuit après FIN (Les 
+instructions entre GoTo FIN et FIN: ne sont pas exécutées :</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le GoTo est souvent utilisé avec une instruction If (pour rendre le saut 
+conditionnel):</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">If A=0 Then GoTo FIN</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">FIN:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Pourquoi éviter le 'GoTo'</font></b></span><b><font size="4" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'utilisation du GoTo&nbsp; est peu élégante et à éviter: </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">C</font></b><font face="Courier New" size="2"><b>ela casse la 
+structure du code qui se déroule de haut en bas</b>, le cheminement du programme est 
+moins évident, moins visible; s'il y a plusieurs GoTo <b>le programme devient 
+vite illisible</b>. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On parle dans ce cas de &quot;code spaghetti&quot;
+<img border="0" src="vshaghet.JPG" width="142" height="81"> ou de &quot;code 
+kangourou&quot; </font>
+<img border="0" src="vkangou.JPG" width="128" height="85"><font face="Courier New" size="2"> (à cause des sauts). </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">Dans la 
+<b>programmation structurée</b> il faut bannir le 'GoTo'. On le remplacera 
+avantageusement par des <font color="#0000FF">If..Then </font>et des boucles.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">
+Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On peut remplacer avantageusement la ligne:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">If A=0 Then GoTo FIN </span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">B=1</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">FIN:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">
+par:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">If A&lt;&gt;0 Then </span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; B=1</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End if</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Autre exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Saisir à l'aide d'une InPutBox un nombre. S'il 
+n'est pas entre 1 et 31, ressaisir.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Avec GoTo:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Dim reponse As String </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Question:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">reponse= InPutBox (&quot;Donner un 
+nombre entre 1 et 31&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">If Val(Reponse)&lt;1 Or Val(Reponse) 
+&gt;31 Then GoTo Question</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Sans GoTo:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Dim reponse As String </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">While Val(Reponse)&lt;1 Or Val(Reponse) 
+&gt;31</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; reponse= 
+InPutBox (&quot;Donner un nombre entre 1 et 31&quot;)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Wend</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Quant utiliser le 'GoTo'</font></b></span><b><font size="4" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Il est cependant parfois utilisé pour la 
+clarté du code, car il permet de sortir de plusieurs blocs de code qui se 
+suivent.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Exemple: détection d'erreur avant l'écriture 
+sur une fichier.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">If Not Exit(File) Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; errorState=File.NotExist</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; <b>GoTo FIN</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">If Not Open(File) Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; errorState=File.NotOpen</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; <b>GoTo FIN</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">If Not Overwrite(File) Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; errorState=File.NotOverwrite</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; <b>GoTo FIN</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b>
+<font face="Courier New" color="#0000FF" size="2">FIN:</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" face="Courier New">C'est propre.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Là aussi on aurait pu utiliser des If 
+imbriqués:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; If&nbsp; Exit(File) 
+Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#0000FF">&nbsp;If&nbsp; 
+Open(File) Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If&nbsp; Overwrite(File) Then</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+errorState=File.Ok</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Else&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+errorState=File.NotOverwrite</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Else&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+errorState=File.NotOpen</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; Else&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+errorState=File.NotExit</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; End if</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">La solution avec les GoTo à l'avantage d'être 
+plus lisible.</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Pour info, il existe une autre solution 
+élégant et originale utilisant&nbsp; un Select Case: Les &quot;Case&quot; peuvent contenir 
+n'importe quelle expression.</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">Select Case true</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Case&nbsp;len(File) =&nbsp;0&nbsp;</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  msgbox &quot;Pas de nom de fichier&quot;&nbsp;&nbsp;&nbsp; </font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Case&nbsp;Not Exit(File)</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  errorState=File.NotExist</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;</font><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp; 
+  Case&nbsp;Not Open(File)</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  errorState=File.NotOpen</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Case Not Overwrite(File) </font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  errorState=File.NotOverwrite</font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <font color="#0000FF">Case else</font></font><font color="#0000FF"></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New"><font size="2"><font color="#0000FF">&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </font><font size="2" color="#33cc00">'placer les exceptions ici</font></font></p>
+  <p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" color="#0000ff" size="2">End Select</font><br clear="all">
+&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-15.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:00 GMT -->
+</html>

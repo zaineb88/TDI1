@@ -1,0 +1,1013 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-18.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net parametre application: ini setting</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center">
+    <font face="Courier New" size="2"><a href="v4-17.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.18</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Paramètres des applications.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-19.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><p><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p><font face="Courier New" size="2" color="#800080">En plus des données, une 
+application a besoin d'utiliser <b>des paramètres</b>:</font></p>
+<p><font face="Courier New" size="2" color="#800080">Ceux de l'<b>application</b>:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2" color="#800080">Base de données à ouvrir.</font></p>
+<p><font face="Courier New" size="2" color="#800080">Chemin des bases de 
+données. </font></p>
+<p><font face="Courier New" size="2" color="#800080">Chaînes de connexion</font></p>
+</blockquote>
+<p><font face="Courier New" size="2" color="#800080">Ceux de chaque <b>
+utilisateur</b>:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2" color="#800080">Etat, position et dimension 
+des formulaires.</font></p>
+<p><font face="Courier New" size="2" color="#800080">Couleurs.</font></p>
+<p><font face="Courier New" size="2" color="#800080">Paramètres d'imprimante: 
+dimension du papier, police de caractères.</font></p>
+<p><font face="Courier New" size="2" color="#800080">Préférences de 
+l'utilisateur.</font></p>
+<p><b><font face="Courier New" size="2" color="#800080">..</font></b></p>
+</blockquote>
+<p><b><font face="Courier New" size="2" color="#800080">Toutes ces informations 
+doivent bien être stockées quelque part!!!</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">On peut les stocker dans:</font></b></p>
+<blockquote>
+<p><b><font face="Courier New" size="2" color="#800080">De simples fichiers.</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">Des fichiers .INI</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">Le registre.</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">Des fichiers de 
+configuration .Config (VB 2003)</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">Des fichiers de 
+configuration .Config (VB 2005)</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">En VB2005 on peut même 
+lier une propriété à un paramètre de configuration.</font></b></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Les Fichiers:</span></font></p>
+<p><font face="Courier New" size="2"><b>Il y a longtemps </b>on utilisait un <b>
+fichier séquentiel</b>.</font></p>
+<p><font face="Courier New" size="2">On ouvrait le fichier avec FileOpen(), on 
+écrivait les paramètres avec Writeline.</font></p>
+<p><font face="Courier New" size="2">Lors d'une utilisation ultérieure du 
+logiciel on lisait les paramètres avec LineInput.</font></p>
+<p><font face="Courier New" size="2">(voir chapitre 4-6)</font></p>
+<p><font face="Courier New" size="2">On utilisait aussi parfois&nbsp; <b>une 
+table dans une base de données</b> pour stocker les paramètres.</font></p>
+<p><font face="Courier New" size="2">Avec Vb.Net certains stockent les 
+paramètres dans <b>un fichier XML</b> (directement ou à l'aide de la 
+serialization)</font></p>
+<p><font face="Courier New" size="2">Mais VB offre d'autres méthodes dédiées à 
+cet usage.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Fichiers .INI.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il y a quelques temps (jusqu'à Windows 95 
+et même après), on utilisait les fichiers .INI.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Chaque application avait son fichier INI, Windows avait aussi ses propres 
+fichiers INI: System.Ini Boot.Ini..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Exemple d'un fichier MonApp.INI</b> 
+, il est situé dans le répertoire 
+de l'application ou dans le répertoire Windows.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si 
+on le regarde avec NotePad:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<span style="background-color: #C0C0C0">[Configuration Matérielle]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+RépertoireDonnées=C:\M\Donnees&nbsp; <br>
+RépertoireSauvegardes=C:\M\Sauve<br>
+RépertoireLocal=C:\M\Local&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+[Configuration Logiciel]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+SoftAgenda=Calendar.Exe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+TypeAgenda=0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+PathAgenda=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></font><font face="Courier New" size="2" color="#C0C0C0"><br>
+&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Dans notre exemple, le fichier donne les répertoires de données et le nom de l'agenda à 
+utiliser.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il 
+comporte de grande rubrique,<span style="background-color: #C0C0C0">[Configuration Matérielle]</span> 
+entourées de <span style="background-color: #C0C0C0">[]</span>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Dans chaque rubrique, il y a des clés, <span style="background-color: #C0C0C0">RépertoireDonnées</span> 
+par exemple, suivis d'un <span style="background-color: #C0C0C0">=</span> puis 
+de la valeur correspondant à la clé <span style="background-color: #C0C0C0">
+C:\M\Donnees </span>ici.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0"><b>Comment lire ou écrire dans un 
+fichier Ini 'Privé' (propre à l'application).</b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut pour cela utiliser des 
+fonctions fournis par les API Windows (elles se trouvent dans Kernel32.dll).</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">
+GetPrivateProfileString</font>&nbsp; permet de lire une string correspondant à 
+une clé.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">
+GetPrivateProfileInt</font>&nbsp; permet de lire un entier correspondant à une 
+clé.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">
+PutPrivateProfileString</font>&nbsp; permet d'ecrire une string correspondant à 
+une clé.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">
+PutPrivateProfileInt</font>&nbsp; permet d'écrire un entier correspondant à une 
+clé</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><u>A- Avant, il faut les déclarer.</u></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" face="Courier New">'Fonction 
+lisant un Integer</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Declare</font></font><font face="Courier New"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+GetPrivateProfileInt </font><font SIZE="2" COLOR="#0000ff">Lib</font><font SIZE="2"> 
+&quot;Kernel32&quot; </font><font SIZE="2" COLOR="#0000ff">Alias</font><font SIZE="2"> &quot;GetPrivateProfileIntA&quot; 
+(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+lpApplicationName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> nDefault </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Long</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpFileName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Long</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" SIZE="2" face="Courier New">
+'Fonction lisant une string</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Declare</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+GetPrivateProfileString </font><font SIZE="2" COLOR="#0000ff">Lib</font><font SIZE="2"> 
+&quot;Kernel32&quot; </font><font SIZE="2" COLOR="#0000ff">Alias</font><font SIZE="2"> &quot;GetPrivateProfileStringA&quot; 
+(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+lpApplicationName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpDefault </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpReturnedString
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> nSize </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Short</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpFileName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" SIZE="2" face="Courier New">
+'Fonction écrivant une string</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Declare</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+WritePrivateProfileString </font><font SIZE="2" COLOR="#0000ff">Lib</font><font SIZE="2"> 
+&quot;Kernel32&quot; </font><font SIZE="2" COLOR="#0000ff">Alias</font><font SIZE="2"> &quot;WritePrivateProfileStringA&quot; 
+(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+lpApplicationName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lpString </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> lplFileName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Long</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" SIZE="2" face="Courier New">'Il 
+existe aussi une fonction écrivant un Entier </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><u><font face="Courier New" size="2">
+B- Pour utiliser plus simplement ces appels à la dll , écrivons des fonctions 
+qui gèrent les appels.</font></u></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> <b>
+Get_Private_Profile_Int</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+cAppName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> nKeyDefault </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cProfName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Long</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' LIRE UN ENTIER</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Parametres:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cAppName Correspond à 
+[Rubrique]</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyName Nom de l'entrée, de 
+la clé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' nKeyDefault Valeur par 
+défaut de la chaîne cherchée</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cProfName Nom du Fichier 
+&quot;INI&quot; Privé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Sortie:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' La fonction retourne une 
+valeur numérique entière</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;Get_Private_Profile_Int 
+= GetPrivateProfileInt(cAppName, cKeyName, nKeyDefault, cProfName)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font></font>
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> <b>
+Get_Private_Profile_String</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+cAppName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cKeyDefault </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByRef</font><font SIZE="2"> cKeyValue </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cProfName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' LIRE UNE STRING</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Parametres:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cAppName Correspond à 
+[Rubrique]</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyName Nom de l'entrée, de 
+la clé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyDefault Valeur par 
+défaut de la chaîne cherchée</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyValue Valeur lue en face 
+de l'Entrée ou cKeyDefault si l'Entrée est vide</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cProfName Nom du Fichier 
+&quot;INI&quot; Privé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Sortie:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Valeur lue dans cKeyValue</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' La fonction retourne le 
+nombre de caractères dans cKeyValue </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> iReaded </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Const</font><font SIZE="2"> sLongueur </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Short</font></font><font SIZE="2"><font face="Courier New"> 
+= 255</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> cKeyName = &quot;&quot; </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">cKeyValue = 
+Space$(1025)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">iReaded = 
+GetPrivateProfileString(cAppName, &quot;&quot;, &quot;&quot;, cKeyValue, 1024, cProfName)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">cKeyValue = 
+Space$(255)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">iReaded = 
+GetPrivateProfileString(cAppName, cKeyName, cKeyDefault, cKeyValue, sLongueur, 
+cProfName)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">cKeyValue = 
+Trim$(cKeyValue)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Enlever le dernier caractère?</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'If Len(cKeyValue) &lt;&gt; 0 Then</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyValue = Mid$(cKeyValue, 
+1, Len(cKeyValue) - 1)</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'End If</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+Get_Private_Profile_String = iReaded</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Function</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> <b>
+Put_Private_Profile_String</b>(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+cAppName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cKeyName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cKeyValue </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> cProfName </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Boolean</font></p>
+</font><font SIZE="2" color="#008000">
+<p style="margin-top: 0; margin-bottom: 0">' ECRIRE UNE STRING</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' Parametres:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cAppName Correspond à 
+[Rubrique]</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyName Nom de l'entrée de 
+la clé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cKeyValue Valeur lue en face 
+de l'Entrée ou cKeyDefault si l'Entrée est vide</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' cProfName Nom du Fichier 
+&quot;INI&quot; Privé</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Sortie:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' La fonction retourne True si 
+cela a marché</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> Status </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Long</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Status = 
+WritePrivateProfileString(cAppName, cKeyName, cKeyValue, cProfName)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> (Status &lt;&gt; 0) </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+Put_Private_Profile_String = </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">True</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+Put_Private_Profile_String = </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">False</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End</font></font><font SIZE="2" face="Courier New">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Class</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><u><font face="Courier New" size="2">
+C- Exemple de lecture et d'écriture:</font></u></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">- 
+<u>Lecture</u> du répertoire de données dans MonApp.Ini:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> cRubrique </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New"> 
+= &quot;Configuration Matérielle&quot;&nbsp;&nbsp;&nbsp; <font color="#008000">'Nom de la 
+rubrique</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<font color="#0000FF">Dim</font> cKey <font color="#0000FF">As String</font> = &quot;RépertoireDonnées&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Nom de la clé</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> cRepertoire </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font face="Courier New" SIZE="2"> 
+= Space(255)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Variable récupérant la string&nbsp; </font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> cIniFile </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New"> 
+= &quot;c:\MonApp\MonApp.ini&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Nom du fichier Ini </font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> istat </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Appel de la 
+fonction</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">istat = 
+Get_Private_Profile_String(cRubrique, cKey, &quot;&quot;, cRepertoire, cIniFile)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Affichage du 
+répertoire de données dans une textbox par exemple</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+TextBox1.Text = <font color="#0000FF">Trim(</font>cRepertoire)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font color="#008000">' Dans notre exemple cela affiche</font> </font>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">C:\M\Donnees</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">- 
+<u>Ecriture</u> :Dans MonApp.Ini, dans la rubrique &quot;Configuration Matérielle&quot;, derrière la clé &quot;cRepOld&quot;, 
+écrire &quot;No&quot;:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> cRubrique </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font face="Courier New" SIZE="2"> 
+= &quot;Configuration Matérielle&quot;&nbsp;&nbsp;&nbsp; <font color="#008000">'Nom de la 
+rubrique</font></font><font color="#008000" face="Courier New" SIZE="2">&nbsp;
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> cIniFile </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New"> 
+= &quot;c:\MonApp\MonApp.ini&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Nom du fichier Ini </font></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> bOk </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Boolean</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">bOk = 
+Put_Private_Profile_String(cRubrique, &quot;cRepOld&quot;, &quot;No&quot;, cIniFile)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#111111">'on note que la clé </font>
+<font face="Courier New"><font color="#111111">&quot;</font>cRepOld&quot; qui n'existait 
+pas a été créée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il a bien 
+été ajouté dans le fichier .Ini : cRepOld=No</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p><font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Registre.</span></font></p>
+<p><font face="Courier New" size="2">A partir de Windows95 et WIndows NT</font></p>
+<p><font face="Courier New" size="2">Attention : l'application doit posséder des 
+droits d'accès au registre suffisants. </font></p>
+<pre class="code"><font face="Courier New"><b>Ecriture dans le registre:</b></font></pre>
+<pre class="code">Exemple: ajouter la clé &quot;Nom&quot; et la valeur &quot;Philippe&quot; au Registre de l'utilisateur en cours.</pre>
+<pre class="code">Cela sous la clé &quot;Noms&quot; dans HKEY_CURRENT_USER du Registre.</pre>
+<pre class="code"><font face="Courier New">
+<font color="#0000ff">Dim key As Microsoft.Win32.RegistryKey
+key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(&quot;Noms&quot;)
+key.SetValue(&quot;Nom&quot;, &quot;Philippe&quot;)
+</font></font></pre>
+<pre class="code"><b>Pour voir dans le registre le résultat:</b></pre>
+<pre class="code">Menu 'Démarrer'-&gt; menu 'Exécuter' taper  'Regedit'</pre>
+<pre class="code"><img src="vregistre.JPG" border="0" width="650" height="232"> </pre>
+<pre class="code">&nbsp;<font face="Courier New"> </font></pre>
+<pre class="code"><font face="Courier New"><b>Lecture de valeur.</b></font></pre>
+<pre class="code"><font face="Courier New" color="#0000ff">Dim key As Microsoft.Win32.RegistryKey
+key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(&quot;Noms&quot;)
+Dim name As String = CType(key.GetValue(&quot;Nom&quot;), String)
+</font></pre>
+<p><font face="Courier New" size="2">La méthode <b>GetValue</b> retourne un <b>
+Object</b>. Si votre code comporte </font><font size="2"><code class="ce">
+<font face="Courier New"><font color="#0000ff">Option Strict O</font>n</font></code></font><font face="Courier New" size="2">, 
+vous devez effectuer un cast de la valeur de retour vers le type de données que 
+vous avez placé précédemment dans la valeur.</font></p>
+<p><font face="Courier New" size="2"><b>GetValue</b> retourne <b>Nothing</b> si 
+la valeur n'existe pas.</font></p>
+<p><font face="Courier New" size="2">voir le chapitre 4-16 pour les détails.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Fichier de 
+configuration. App.Config File de VB2003 (Framework 1)</span></font></p>
+<p><font face="Courier New" size="2">On enregistre dans un fichier au format XML.</font></p>
+<p><b><font face="Courier New" size="2">Créer le fichier de configuration:</font></b></p>
+<p><font face="Courier New" size="2">Projet-&gt;Ajouter un nouvel élément-&gt; 
+cliquer sur 'Fichier 
+de configuration':'<font color="#0000FF">App.config</font>' le fichier de 
+configuration en XML est ajouté au projet;(cela ne parrait pas possible en VB
+2005 Express)</font></p>
+<p><font face="Courier New" size="2">On le voit dans une fenêtre:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;?</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">xml</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">version</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">=&quot;1.0&quot;</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">encoding</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">=&quot;utf-8&quot;</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #C0C0C0">?&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">configuration</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">configuration</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+</font>
+<p><font face="Courier New" size="2">Il faut ajouter la partie 'AppSettings' qui 
+contient la configuration, cela donne:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;?</span><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">xml</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">version</span></font><span style="background-color: #C0C0C0">=&quot;1.0&quot;</span><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">encoding</span></font><span style="background-color: #C0C0C0">=&quot;utf-8&quot;</span><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><span style="background-color: #C0C0C0">?&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;</span><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">configuration</span></font><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">appSettings</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">add</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">key</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">=&quot;TaillePage&quot;</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#ff0000">
+<span style="background-color: #C0C0C0">value</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">=&quot;5&quot;</span></font><font SIZE="2" COLOR="#ff00ff"><span style="background-color: #C0C0C0">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #C0C0C0">/&gt;&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">appSettings</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #C0C0C0">&lt;/</span></font><font SIZE="2" COLOR="#800000"><span style="background-color: #C0C0C0">configuration</span></font><font SIZE="2" COLOR="#0000ff"><span style="background-color: #C0C0C0">&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p><font face="Courier New" size="2">On remarque que l'on a ajouté les balises &lt;appSettings&gt; 
+et &lt;/appSettings&gt;.</font></p>
+<p><font face="Courier New" size="2">Entre ces balises, on peut ajouter des 
+lignes contenant une clé et sa valeur:</font></p>
+<p><font face="Courier New" size="2">&lt;add key=&quot;TaillePage&quot; value=&quot;5&quot; /&gt;</font></p>
+<p><font face="Courier New" size="2">On peut modifier les couples 'clé-valeur' 
+dans l'ide ou bien en ouvrant le fichier App.config avec NotePad.</font></p>
+<pre class="code"><font face="Courier New"><b>Pour lire un élément de la configuration:</b></font></pre>
+<pre class="code"><font face="Courier New"><font color="#0000FF">Dim TaillePage As String = Configuration.ConfigurationSettings.AppSettings(&quot;TaillePage&quot;)
+ </font>(on récupère une string :&quot;5&quot; dans l'exemple)</font></pre>
+<pre class="code"><font face="Courier New"><b>Pour lire tous les éléments:</b></font></pre>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> mAppSet
+</font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New"> 
+Specialized.NameValueCollection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">mAppSet = 
+Configuration.ConfigurationSettings.AppSettings</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Affiche dans MaList les clés:</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2"> mAppSet </font>
+<font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Nothing</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.maliste.Items.Clear()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> keys() </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">keys = mAppSet.AllKeys</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> key </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Each</font><font SIZE="2"> key </font>
+<font SIZE="2" COLOR="#0000ff">In</font></font><font SIZE="2"><font face="Courier New"> keys</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.maliste.Items.Add(key &amp; 
+&quot;: &quot; &amp; mAppSet.Item(key))</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">If</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+met utilise une collection mAppSet de type 'NameValueCollection', on y met 
+AppSettings</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+peut voir les clé grâce à <font color="#0000FF">mAppSer.GetKey</font> et les 
+valeurs grâce à&nbsp; <font color="#0000FF">mAppSet.Item()</font></font></p>
+<p><font face="Courier New" size="2">Le problème est que pour modifier une 
+valeur par code, il faut charger le fichier XML, modifier puis enregistrer le fichier XML. 
+C'est complexe!! Il existe des classes qui font cela automatiquement.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Configuration par 
+paramètres Settings de VB2005 (Framework 2)</span></font></p>
+<p><font face="Courier New" size="2">Dans le Framework 2 <font color="#0000FF">Configuration.ConfigurationSettings
+</font>n'existe plus!!&nbsp;</font></p>
+<p><font face="Courier New" size="2">il faut utiliser<font color="#0000FF">
+Configuration.ConfigurationManager </font>mais il y a beaucoup plus simple avec
+la classe My .</font></p>
+<p><font face="Courier New" size="2">Les valeurs des paramètres sont enregistrées automatiquement. (Si dans les 
+propriétés du projet, dans l'infrastructure de l'application, &quot;Enregistrer My.setting lors de l'arrêt&quot; est coché. )</font></p>
+<p><font face="Courier New" size="2">Les paramètres de configuration concernent <b>l'application</b> 
+ou <b>l'utilisateur</b>.</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Les paramètres d'application sont en 
+lecture seule. Dans la mesure où ces paramètres sont des informations du 
+programme, vous n'avez en principe pas besoin de les modifier. Ce sont par 
+exemple le chemin d'une base de données ou un URL. </font></p>
+<p><font face="Courier New" size="2">En revanche, les paramètres d'utilisateur 
+peuvent être lus et modifiés. Ce sont les positions de formulaires, couleur..</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>On peut créer les paramètres dans le 
+'Projet designer':</b></font></p>
+<p><font face="Courier New" size="2">En vb 2005, pas besoin d'ajouter le fichier 
+comme en vb 2003, le fichier de configuration&nbsp; est crée et ajouté au 
+projet dès que l'on crée un paramètre.</font></p>
+<p><font face="Courier New" size="2">Les paramètres de configuration sont donc directement accessible dans 
+les propriétés du projet (dans l'explorateur de solution double cliquer sur&nbsp; My 
+Projet ou passer par le menu Projet-&gt; Propriétés de..:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Onglet 'Paramètres' , créons un paramètre nommé 'Para1' et contenant '1' (c'est 
+une string)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2">
+<img border="0" src="vparam.JPG" width="526" height="238"></font></p>
+<font SIZE="2">
+<p><font face="Courier New">Un paramètre à un nom, un type, une portée (Application ou Utilisateur), une 
+valeur.</font></p>
+<p>Pour créer, se mettre dans la colonne 'Nom' dans la ligne '*' et taper le nom 
+du paramètre, choisir le type en déroulant la liste avec le bouton de la colonne 
+type, choisir la portée puis éventuellement une valeur.</p>
+<p><font face="Courier New">Donc pas besoin de passer par NotePad et de manipuler de l'XML.</font></p>
+<p><font face="Courier New">Les fichiers de configuration sont automatiquement crées lors du démarrage de 
+l'application (avec les valeurs par défaut indiquées dans l'onglet 'paramètres').</font></p>
+<p><font face="Courier New"><b>Pour  utiliser un paramètre dans le programme:</b></font></p>
+<p><font face="Courier New">&nbsp;on fera:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">MonParamètre= My</font></font><font SIZE="2" color="#0000FF"><font face="Courier New">.Parametre.Para1</font></p>
+</font>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Les Paramètres sont en&nbsp; <font color="#FF0000">Read-Only </font>
+<font color="#111111">si la portée est 'Application', et en</font>&nbsp; Read-Write&nbsp; 
+(donc modifiable par code)<font color="#FF0000"> </font><font color="#111111">si la portée est 
+'Utilisateur'.</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Ces 'variables paramètres utilisateur' ont des valeurs 
+qui seront conservées et enregistrées automatiquement dans l' 'environnement' 
+d'un utilisateur (en WindowsForms). Si on en modifie la valeur, on retrouve la valeur modifiée 
+lors d'une utilisation ultérieure ce qui permet de conserver les habitudes des 
+utilisateurs.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Modifions un paramètre utilisateur:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+My</font><font SIZE="2" color="#0000FF">.Parametre.Para1= &quot;666&quot;
+</font>
+</font>
+</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font size="2" color="#111111" face="Courier New">La 
+nouvelle valeur sera automatiquement enregistrée dans le fichier de config.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2">Bien sur le paramètre&nbsp; 'NomConnexuinS' 
+qui est un paramètre application n'est pas modifiable.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<b>
+<font face="Courier New" size="2" color="#111111">En VB2005 vous pouvez créer 
+des paramètres de type Color, Font, Point, Size:</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2" color="#0000FF">My.Settings.MyFont= New Font (Me.Font, 
+FontStyle.Italics)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font color="#111111" face="Courier New" size="2">Profil utilisateur:</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font SIZE="2" face="Courier New">
+On peut créer des 'Profils' avec plusieurs noms de profil qui auront chacun 
+des paramètres ayant leur propre valeur pour chaque utilisateur Windows.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New"><font size="2">On peut par exemple 
+créer un profil &quot;Philippe&quot; et, dans ce profil, donner à Para1 la valeur '333'. 
+Créer un second profil &quot;Odile&quot; et, dans ce profil, donner à Para1 la valeur 
+'222'. Dans ce cas si l'utilisateur Philippe ouvre une session Windows sous le 
+nom l'utilisateur 'Philippe' et qu'il lance l'application, c'est la valeur '333' 
+qui se trouvera dans </font><font SIZE="2" COLOR="#0000ff">
+My</font><font SIZE="2" color="#0000FF">.Parametre.Para1</font><font size="2">
+</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p><b><font face="Courier New" size="2">Evènement survenant lors du changement 
+de valeur des paramètres.</font></b></p>
+<p><font face="Courier New" size="2">En haut à droite, il y a un bouton ou un 
+menu déroulant qui donne accès à 'Afficher le code'.</font></p>
+<p><font face="Courier New" size="2">Cela donne accès à une Classe partielle 
+Setting&nbsp; qui donne accès aux routines <font color="#0000FF">
+PropertySettings</font>, <font color="#0000FF">ChangingSettings</font>,
+<font color="#0000FF">SavingSettings</font>; ainsi quand un paramètre change par 
+exemple, on peut mettre ici le code nécessaire à la mise à jour.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Dans quels fichiers et ou est enregistré 
+le 'setting'?</font></b><font face="Courier New" size="2"> :</font></p>
+<p><font face="Courier New" size="2">Dans des fichiers XML.</font></p>
+<p><u><font face="Courier New" size="2">En mode design:</font></u></p>
+<p><font face="Courier New" size="2">Les paramètres d'application et 
+utilisateurs (ceux de départ qui ont été écrits à la main dans les propriétés) sont stockés 
+dans la section MonApplication.My.Settings de:</font></p>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2"><font color="#0000FF">app.Config</font> qui 
+est dans le source, dans &quot;c:\Documents and 
+setting\NomUtilisateur\Mes Document\Visual Studio 2005\MonApplication\MonApplication&quot; 
+</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+MonApplication.exe.config</font> dans les répertoires bin et release quand on&nbsp; 
+génère l'application. (c'est ce fichier qui sera déployé)</font></p>
+  </blockquote>
+</blockquote>
+<p><u><font face="Courier New" size="2">En cours d'exécution:</font></u></p>
+<blockquote>
+<p><font face="Courier New" size="2">Les paramètres d'application sont dans</font></p>
+  <blockquote>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+MonApplication.exe.config</font> dans le répertoire de l'exécutable. (c'est ce 
+fichier qui sera déployé), on rappelle que ces paramètres ne sont pas 
+modifiables.</font></p>
+  </blockquote>
+<p><font face="Courier New" size="2">Les paramètres utilisateurs sont dans</font></p>
+  <blockquote>
+<p><font face="Courier New" size="2"><font color="#0000FF">user.config</font> 
+dans le répertoire C:\Documents and Settings\NomUtilisateur\Local Settings\Application 
+Data\NomSociete\MonApplication.exe_Url_43f52d0fihtu0kzyyxxngiyacs5ljtnb\1.0.0.0 
+. On remarque que VB crée un répertoire dans C:\Documents and Settings\NomUtilisateur\Local 
+Settings\Application Data . Vb utilise ensuite le nom de la société qui 
+distribue le logiciel (le nom qui est dans l'assembly) puis le nom de 
+l'application et enfin la version du programme. Comme le framework s'occupe de 
+tout, à priori, on n'a pas à s'occuper des chemin. </font></p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2"><b>Contenu du fichier 
+WindowsApplication1.exe.config</b> :</font></p>
+<p><font face="Courier New" size="2">Situé dans &quot;c:\Documents and 
+setting\NomUtilisateur\Mes Document\Visual Studio 2005\WindowsApplication1\WindowsApplication1&quot; 
+(et dans bin\release après génération)</font></p>
+<p><font face="Courier New" size="2">L'application se nomme &quot;WindowsApplication1&quot; 
+, on regarde ou est enregistré 'Para1':</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;configuration&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;configSections&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;userSettings&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;<b><font face="Courier New" size="2">WindowsApplication1</font>.My.MySettings&gt;</b></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;setting name=&quot;<b>parmetre1</b>&quot; 
+serializeAs=&quot;String&quot;&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;value&gt;<b>12</b>&lt;/value&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/setting&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/Bonjour.My.MySettings&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/userSettings&gt;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0">&lt;/configuration&gt;</span></p>
+</font>
+<p><font face="Courier New" size="2">On peut le voir plus rapidement&nbsp; en 
+cliquant dans l'explorateur de solution&nbsp; sur <b>App.Config</b></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="5" color="#0000FF">Liaison propriétés &lt;=&gt;</font></span><font face="Courier New" size="5" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0"> Settings de VB2005 (PropertyBinding)</span></font></p>
+<p><font face="Courier New" size="2">En VB2005, on peut '<b>lier</b>'&nbsp; la propriété d'un contrôle avec un paramètre. 
+C'est à dire enregistrer automatiquement les valeurs d'une propriété dans les 
+paramètres de configuration.</font></p>
+<p><font face="Courier New" size="2">Prenons un exemple:</font></p>
+<p><font face="Courier New" size="2">J'ai crée une Form1, je veux que l'utilisateur, lorsqu'il lance 
+l'application, retrouve Form1 à la position où il l'avait laissée.</font></p>
+<p><font face="Courier New" size="2">Il faut donc enregistrer la valeur de la propriété <font color="#0000FF">Location</font> 
+de Form1 
+dans le Setting, la configuration, pour cela on va faire du <b>PropertyBinding</b>: On va lier 
+cette propriété à un paramètre du setting.</font></p>
+<p><font face="Courier New" size="2">Dans la fenêtre de propriété de Form1, aller en haut de la liste, cliquer sur 
+le '+'de (ApplicationSettings), puis au niveau de la ligne (PropertyBinding), 
+cliquer sur le bouton à droite. Cela ouvre la fenêtre 'Paramètres d'application 
+de Form1'</font></p>
+<p><img border="0" src="vsetting2005.JPG" width="870" height="501"></p>
+<p><font face="Courier New" size="2">Cliquer sur la ligne &quot;location&quot;, puis sur 
+le bouton à droite.</font></p>
+<p align="center"><img border="0" src="vsetting2005-3.JPG" width="384" height="282"></p>
+<p><font face="Courier New" size="2">Dans la liste qui s'ouvre, cliquer sur 
+'Nouveau&quot;: La fenêtre 'Nouveau paramètre d'application' s'ouvre:</font></p>
+<p align="center">
+<img border="0" src="vsetting2005-4.JPG" width="337" height="225"></p>
+<p><font face="Courier New" size="2">Taper un nom pour le nouveau paramètre (mylocation par exemple), une valeur par défaut 
+si necessaire.</font></p>
+<p><font face="Courier New" size="2">Puis Ok, Ok</font></p>
+<p><font face="Courier New" size="2">C'est fait: le paramètre 'mylocation' est 
+lié à la propriété Location de Form1.</font></p>
+<p><font face="Courier New" size="2">Regardons dans les paramètres de 
+l'application (menu Projet=&gt;Propriétés de..)</font></p>
+<p>&nbsp;</p>
+<p><img border="0" src="vsetting2005-2.JPG" width="531" height="115"></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On voit bien le nouveau paramètre 
+mylocation de type System.Drawing.Point. Il est lié à Form1.Location (Dans la 
+fenêtre de propriété de form1, sur la ligne location, il y a une toute petite 
+icône qui le signale).</font></p>
+<p><font face="Courier New" size="2">La valeur de Form1.Location sera enregistrée 
+automatiquement et restituée lorsque l'on lancera ultérieurement le programme.
+</font></p>
+<p><font face="Courier New" size="2">En fait VB génère du code prenant en charge 
+ce BindingProperty: dans l'explorateur de solution cliquer sur MyProjet-&gt;Setting.Setting-&gt;Setting.Designer.vb 
+on voit le code généré.
+</font></p>
+<p>&nbsp;</p>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-17.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-19.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-18.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:56 GMT -->
+</html>

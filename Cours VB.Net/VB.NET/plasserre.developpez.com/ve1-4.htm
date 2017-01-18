@@ -1,0 +1,151 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve1-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 1.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Calculs financiers.</font></b></td>
+    <td width="14%" height="76"><a href="v3-0.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Conversion Francs=&gt;Euros</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<p>Si un objet coute 100F, cela fait combien d'euros?</p>
+</font><font size="2">
+<blockquote>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font>
+  <font face="Courier New"><font color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">Dim</span></font><span style="BACKGROUND-COLOR: #ffffff"><font size="2" color="#0000FF"> 
+  Valeur </font><font color="#0000ff" size="2">As</font></span><font size="2" color="#0000FF"><span style="BACKGROUND-COLOR: #ffffff">
+  </span></font></font><font color="#0000ff" size="2"><font face="Courier New">
+  <span style="BACKGROUND-COLOR: #ffffff">Double=100</span></font></p>
+  </font><font size="2">
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font>
+  <font face="Courier New"><font color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">Dim</span></font><span style="BACKGROUND-COLOR: #ffffff"><font size="2" color="#0000FF"> 
+  Resultat </font><font color="#0000ff" size="2">As</font></span><font size="2" color="#0000FF"><span style="BACKGROUND-COLOR: #ffffff">
+  </span></font></font><font color="#0000ff" size="2"><font face="Courier New">
+  <span style="BACKGROUND-COLOR: #ffffff">Double</span></font></p>
+  </font>
+</blockquote>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000FF">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">R</font></span></font><font size="2"><font color="#0000FF"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New">esultat 
+=</font></span><font face="Courier New">Math.Round(</font><span style="background-color: #ffffff"><font face="Courier New">(Valeur 
+/ 6.55957)</font></span><font face="Courier New">, 2)</font></font></p>
+</font>
+<p><font face="Courier New" size="2">On divise par 6.55957 puis on arrondi à 2 
+chiffres après la virgule.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Coût d'augmentation de la vie</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<p>Si un objet de 100€ augmente de 3% par an, combien coûtera -t-il dans 10 ans.</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Prix As Decimal=100<br>
+Dim Taux As Decimal=3</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim Periode As 
+Integer=10</font></span><font color="#0000FF"><span style="background-color: #FFFFFF"><br>
+Dim i As Integer<br>
+For i= 1 to Periode<br>
+&nbsp;Prix=Prix+(Prix*Taux/100)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Next i</font></span><font color="#0000FF"><br>
+&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">On peut remplacer les 3 dernières 
+lignes par:</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">
+Prix=Prix*(1+Taux/100)^Periode</font></span></p>
+<p>Noter que l'on utilise des variables de type décimales, c'est une bonne 
+habitude pour faire des calculs financiers (pas d'erreurs d'arrondis).</p>
+<p>&nbsp;</p>
+</font><font SIZE="4" face="Courier New" color="#0000FF">
+<p><span style="background-color: #C0C0C0"><b>Remboursement d'un prêt.</b></span></p>
+</font><font SIZE="2" face="Courier New">
+<p>Quel est le remboursement mensuel d'un prêt d'une somme S durant une durée D 
+(en année) à un taux annuel T ?</p>
+<p>R=S x T / 1-(1+T)^-D (ici avec T en % mensuel et D en mois</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim R, S , D, T&nbsp; 
+As Decimal&nbsp;&nbsp; </font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">S=5000&nbsp;
+</font>'5000€</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">D=15&nbsp;&nbsp;&nbsp;
+</font>'Sur 15 ans</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T=4&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'4% par an</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T=T/12/100 </font>
+</span>'Taux au mois</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">D=D*12&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'Durée en mois</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp; 
+R=S*T/(1-(T+1)^(-D))</font>'Formule connue par tous bon comptable!!</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">Si on voulait afficher le résultat 
+dans un label (on verra cela plus loin)</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Label1.text= 
+R.ToString(&quot;C&quot;)</font></span></p>
+<p>Ici le résultat est transformé en chaîne de caractères (grâce à ToString) au 
+format monétaire (&quot;C&quot;), on obtient '36,98€' que l'on met dans le label pour 
+l'afficher.</p>
+<p>Ultérieurement on verra un exemple plus complet utilisant les fonctions 
+financières de VB.</p>
+</font>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve1-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-0.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+</html>

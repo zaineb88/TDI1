@@ -1,0 +1,274 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:45 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net : shell process </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-9.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.10</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Lancer une application, 
+    une page Web.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment lancer une 
+autre application, un autre programme ?</span></font></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">L'ancienne méthode VisualBasic toujours 
+valable: Shell</font></b></span></p>
+<p><font face="Courier New" size="2"><b>Shell</b> lance un programme exécutable.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Id=Shell (NomdeProgramme) </span></font>&nbsp;&nbsp; 
+'lance l'application NomdeProgramme</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">on peut utiliser aussi:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Id=Shell( NomdeProgramme, TypedeFenetre, 
+Wait, TimeOut)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><i>TypedeFenêtre</i> utilise l'énumération <b>
+AppWinStyle </b>pour définir le type de fenêtre de l'application lancée: </font>
+<font size="2" face="Courier New">AppWinStyle.MaximizedFocus ouvre par exemple 
+l'application en plein écran.&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si vous souhaitez attendre la fin du programme 
+avant de continuer, vous devez définir <i>Wait</i> à <b>True</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><i>TimeOut</i>&nbsp; est le&nbsp; nombre de 
+millisecondes à attendre pour la fin du programme si Wait est True. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ID = Shell(&quot;&quot;&quot;C:\Program Files\MonFichier.exe&quot;&quot; 
+-a -q&quot;, , True, 100000)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans une chaîne une paire de guillemets 
+doubles adjacents (&quot;&quot;)&nbsp; est interprétée comme un caractère de guillemet 
+double dans la chaîne. Ainsi, l'exemple précédent présente la chaîne suivante à 
+la fonction Shell :<br>
+<font color="#0000FF">&quot;C:\Program Files\MonFichier.exe&quot; -a -q</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La fonction <b>AppActivate</b> rend active 
+l'application ou la fenêtre définie par son nom ou son Id (Numéro 
+indentificateur).</font></p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim ID As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">
+<font face="Courier New" size="2">On peut utiliser:</font></p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">AppActivate(&quot;Untitled - Notepad&quot;) </span>
+<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">
+<font face="Courier New" size="2">ou</font></p>
+<p class="MsoNormal" style="margin-top: 3; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">ID = Shell(NOTEPAD.EXE&quot;, 
+AppWinStyle.MinimizedNoFocus)<br>
+AppActivate(ID)</span><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2"><br>
+</font><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">On peut utiliser la Classe 'Process' du 
+Framework.</font></b></span></p>
+<p><font face="Courier New" size="2"><b>La Classe Process </b>fournit 
+l'accès à des processus locaux ainsi que distants, et vous permet de démarrer et 
+d'arrêter des processus système locaux.</font></p>
+<p><font face="Courier New" size="2">Classe de nom à importer :<font color="#0000FF">Imports</font> <font color="#0000FF">
+System.Diagnostics</font></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut <b>instancier</b> un Process</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim monProcess As New Process()</span></font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ensuite il faut fournir à la classe fille 
+StartInfo&nbsp; <b>les informations nécessaires au démarrage</b>.<br>
+<br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">
+monProcess.StartInfo.FileName = &quot;MyFile.doc&quot;<br>
+monProcess.StartInfo.Verb = &quot;Print&quot;<br>
+monProcess.StartInfo.CreateNoWindow = True</font></span><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Enfin <b>on lance</b> le process</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">monProcess.Start()</span></font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter la puissance de cette classe: on donne 
+le nom du document et VB lance l'exécutable correspondant, charge le document, effectue 
+certaines actions.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans l'exemple du dessus on ouvre Word on y 
+charge MyFile , on l'imprime, cela sans ouvrir de fenêtre.</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut utiliser la classe Process en statique 
+(sans instanciation)</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Process.Start(&quot;IExplore.exe&quot;)</span></font><br>
+<br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">Process.Start(MonPathFavori)</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">ou en une ligne:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Process.Start(&quot;IExplore.exe&quot;, &quot;</span></font><span style="background-color: #FFFFFF">http//:developpez.com</span><font color="#0000FF"><span style="background-color: #FFFFFF">&quot;)<br>
+</span></font><br>
+En local on peut afficher un fichier html ou asp</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<font face="Courier New" size="2"><span style="background-color: #FFFFFF">
+Process.Start(&quot;IExplore.exe&quot;, &quot;C:\monPath\Fichier.htm&quot;)<br>
+Process.Start(&quot;IExplore.exe&quot;, &quot;C:\monPath\Fichier.asp&quot;)</span></font><span style="background-color: #FFFFFF"><br>
+&nbsp;</span></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut enfin <b>utiliser un objet StartInfo</b></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim startInfo As New ProcessStartInfo(&quot;IExplore.exe&quot;)<br>
+startInfo.WindowStyle = ProcessWindowStyle.Minimized<br>
+<br>
+Process.Start(startInfo)<br>
+<br>
+startInfo.Arguments = &quot;hrrp//:developpez.com&quot;<br>
+<br>
+Process.Start(startInfo)<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Des propriétés du processus en cours 
+permettent de connaître l'Id du processus (<font color="#0000FF">Id</font>) les
+<font color="#0000FF">threads</font>, les <font color="#0000FF">modules</font>, 
+les <font color="#0000FF">Dll ,la mémoire</font> , de connaître le texte de la 
+barre de titre (<font color="#0000FF">MainWindowsTitle</font>)..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut fermer le processus par
+<font color="#0000FF">Close</font> ou <font color="#0000FF">CloseMainWindows</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>On peut instancier un 'Process' sur une 
+application déjà en cours d'exécution</b> avec GetProcessByName et GetProcessById:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim P As Process() = 
+Process.GetProcessesByName(&quot;notepad&quot;)<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;' <b>On peut récupérer le processus 
+courant.</b><br>
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim 
+ProcessusCourant As Process = Process.GetCurrentProcess()</span><br>
+</font><br>
+<br>
+' <b>Récupérer toutes les instances de&nbsp; Notepad qui tournent en local.</b><br>
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim localByName As 
+Process() = Process.GetProcessesByName(&quot;notepad&quot;)</span></font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">' <b>Récupérer tous les processus en cours</b> 
+d'exécution grâce à <font color="#0000FF">GetProcesses</font>:<br>
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim localAll As 
+Process() = Process.GetProcesses()</font></span><br>
+<br>
+&nbsp;</font></p>
+<h4 class="dtH4"><font face="Courier New" size="2">Processus sur ordinateur 
+distant.</font></h4>
+<p><font face="Courier New" size="2">Vous pouvez afficher des données 
+statistiques et des informations sur les processus en cours d'exécution sur des 
+ordinateurs distants, mais vous ne pouvez pas appeler Kill, Start, 
+CloseMainWindows sur ceux-ci.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-9.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:45 GMT -->
+</html>

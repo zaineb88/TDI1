@@ -1,0 +1,222 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-0.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET la console </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve1-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.0</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">L'interface utilisateur,La Console.</font></b></td>
+    <td width="14%" height="76"><a href="v3-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">L'<b>interface
+utilisateur</b> ou <b>interface homme-machine</b> est la partie du programme qui
+permet à l'utilisateur du logiciel de communiquer avec le
+programme.&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Quand on crée une application VB, on a&nbsp; le choix sur le
+<b>TYPE&nbsp; D'ENTRÉE ET DE SORTIE.</b> &nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Où&nbsp; est-il possible de saisir des données au 
+clavier, où seront affichés les résultats ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="5"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">A</span></font><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0"><font size="5">-
+Les 3 Interfaces utilisateur disponibles.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+  <b><font size="4" color="#0000FF"><span style="font-family: Courier New">&nbsp;
+  </span><span style="background-color: #C0C0C0; font-family: Courier New">1</span></font></b><span style="font-family: Courier New; "><b><font size="4" color="#0000FF"><span style="background-color: #C0C0C0">- Faire une application purement 
+  'Console':Saisir et afficher sur la console</span></font></b><font size="2">
+  qui est une simple fenêtre de type DOS. Cette 
+  méthode utilisant la console, est peu évoluée, archaïque. </font></span>
+  <font size="2"><span style="font-family: Courier New">Pour une <b>Application Console</b>: Menu 
+'Projet'-&gt; 'Propriétés de ...' Combo 'Type de sortie' :Application Console. Dans 
+ce cas&nbsp; la console correspond à une fenêtre type DOS. Et là, on peut entrer des 
+touches à partir du clavier.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+  <font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+  On peut écrire du texte sur la console.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vconsol1.gif" width="253" height="151"></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <span style="font-family: Courier New; "><font size="4" color="#0000FF">
+  <b>&nbsp; <span style="background-color: #C0C0C0">2- Faire une application 'WinForms': Créer des fenêtres
+  </span></b></font></span>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <span style="font-family: Courier New; "><font size="2">
+  (ou formulaires WinForms ), y mettre des boutons, des textbox... pour saisir et 
+  afficher. <b>C'est l'interface 
+  habituelle des programmes Windows</b>, nous l'étudierons en détail dans les 
+  chapitre 3.1 et suivant.</font></span>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Une <b>Application Windows</b> (option 
+par défaut), c'est celle que nous utiliserons dans le reste du cours. Menu 'Projet'-&gt; 
+'Propriétés de ...' Combo 'Type de sortie' :Application Windows.</span></font></p>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">On utilise des fenêtres Windows:<img border="0" src="vmsgbox.gif" width="192" height="126"> 
+pour créer l'application.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Dans ce cas, en plus on peut aussi écrire 
+sur <b>la 'console'</b>; on ne peut qu'écrire sur la 
+'Console'. La console correspond à la fenêtre de 'Sortie':</span></font><font face="Courier New" size="2">Menu 
+Affichage&gt;Autres fenêtres&gt;Sortie . (Ctrl Alt O)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vconsol2.gif" width="261" height="186"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici on est dans l'interface de développement 
+VB. </font><font size="2"><span style="font-family: Courier New">On utilise 
+habituellement cette fenêtre de sortie pour le mise au point et pour afficher 
+des informations de déboguage. (voir le chapitre sur le déboguage)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici on est dans l'interface de développement 
+VB. </font><font size="2"><span style="font-family: Courier New">On utilise 
+habituellement cette fenêtre de sortie pour le mise au point et pour afficher 
+des informations de déboguage. (voir le chapitre sur le déboguage)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="4" color="#0000FF"><span style="font-family: Courier New">&nbsp;
+</span><span style="background-color: #C0C0C0; font-family: Courier New">3</span></font></b><span style="font-family: Courier New; "><b><font size="4" color="#0000FF"><span style="background-color: #C0C0C0">-
+A partir de Visual Basic 2008, on peut aussi utiliser les WPF.</span></font></b><font size="2">&nbsp; </font></span>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">WPF
+utilise lui un <b> moteur de rendu vectoriel</b> et
+      des <b> accélérations matériels</b> (Direct X) pour afficher. Cela
+permet d'afficher de la 2D, de la 3D, des animations, de plus l'affichage étant
+vectoriel, il n'y a pas de dépendance avec les dimensions de l'écran.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Mais
+c'est un peu complexe pour les débutants.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="4" color="#0000FF"><span style="font-family: Courier New">&nbsp;
+</span><span style="background-color: #C0C0C0; font-family: Courier New">4</span></font></b><span style="font-family: Courier New; "><b><font size="4" color="#0000FF"><span style="background-color: #C0C0C0">-
+Programme sans interface</span></font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Rarement,
+on n'a pas besoin d'interface, on lance un programme qui effectue une tache puis
+se ferme sans avoir besoin de recevoir ou de donner des informations à
+l'utilisateur. C'est possible en VB.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="2" color="#FF0000"><img border="0" src="vicoexcl.gif" width="29" height="43">
+</font><font face="Courier New" color="#FF0000" size="4">On travaillera dans ce
+cours principalement en sortie 
+'Application Windows'.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0"><font size="5">B-
+Utilisation de la console.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">
+<font size="4">&nbsp;Entrée au clavier:</font></span></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Les données provenant du clavier&nbsp; proviennent de&nbsp; 
+l'objet <font color="#0000FF">Console.In</font><i> </i>de type <i>StreamReader</i>. 
+Ce type d'objets permet de lire une ligne de texte avec la méthode <font color="#0000FF"><i>ReadLine
+</i></font>:</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Dim </font><font FACE="Courier New" SIZE="2" color="#0000FF">
+ligneTapée </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String
+</font><font FACE="Courier New" SIZE="2" color="#0000FF">= Console.In.ReadLine()</font></p>
+<p ALIGN="LEFT"><font FACE="Courier New" SIZE="2" color="#0000FF">Console.ReadLine()
+</font><font FACE="Courier New" SIZE="2">marche aussi.</font></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">La ligne tapée au clavier se retrouve dans la variable <i>
+ligneTapée&nbsp; </i>et peut ensuite être exploitée par le programme. </p>
+<p ALIGN="LEFT">Cela semble ne marcher que pour les applications 'Console'.</p>
+<p ALIGN="LEFT"></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">
+<font size="4">&nbsp;Affichage sur la console:</font></span></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Les données à afficher son envoyée à l'objet </font>
+<font SIZE="2" color="#0000FF" face="Courier New">Console.Out</p>
+</font><font FACE="Courier" SIZE="1" color="#0000FF">
+<p ALIGN="LEFT">Console.Out.WriteLine((&quot;ligne à afficher&quot;))</p>
+</font><font FACE="Courier" SIZE="1">
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">
+<font size="4">&nbsp;Exemple en 'Sortie console':</font></span></p>
+</font><font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Affiche 'Tapez une ligne'; quand l'utilisateur a tapé du texte 
+puis a validé, affiche: 'Ligne tapée=..'</p>
+<p ALIGN="LEFT"><font color="#0000FF">Console.Out.Write(&quot;Tapez une ligne : &quot;)</font></p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Dim </font><font FACE="Courier New" SIZE="2" color="#0000FF">ligne
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String </font>
+<font color="#0000FF" face="Courier New" size="2">= Console.In.ReadLine()</font></p>
+<p ALIGN="LEFT"><font color="#0000FF" face="Courier New" size="2">Console.Out.WriteLine((&quot;ligne tapée=&quot; + 
+ligne))</font></p>
+<font face="Courier New" color="#0000ff" size="2">
+<p><span style="BACKGROUND-COLOR: #ffffff">Console.WriteLine( ) </span>
+</font>
+<span style="BACKGROUND-COLOR: #ffffff">
+<font face="Courier New" size="2">
+est aussi accepté.</font></span><font face="Courier New" size="2"></p>
+</font>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">
+<font size="4">&nbsp;En résumé:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On travaillera uniquement en sortie 
+'Application Windows', on utilisera la console uniquement pour afficher les 
+informations de déboguage.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext">&nbsp;</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve1-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-0.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+</html>

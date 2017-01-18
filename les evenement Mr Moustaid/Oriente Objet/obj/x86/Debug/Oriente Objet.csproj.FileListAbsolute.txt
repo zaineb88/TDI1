@@ -1,0 +1,24 @@
+C:\Users\Pc-Info\Desktop\Oriente Objet\Oriente Objet\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Pc-Info\Desktop\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente_Objet.Properties.Resources.resources
+C:\Users\Pc-Info\Desktop\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Pc-Info\Desktop\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente_Objet.Properties.Resources.resources
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\moustaid\Oriente Objet\Oriente Objet\bin\Debug\Oriente Objet.exe
+G:\moustaid\Oriente Objet\Oriente Objet\bin\Debug\Oriente Objet.pdb
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente Objet.exe
+G:\moustaid\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente Objet.pdb
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente Objet.exe
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente Objet.pdb
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente_Objet.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente_Objet.les_classes.AjouterPatient.resources
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\Oriente_Objet.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\bin\Debug\Oriente Objet.exe
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet\Oriente Objet\bin\Debug\Oriente Objet.pdb
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet(CB)\Oriente Objet\obj\x86\Debug\Oriente Objet.exe
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet(CB)\Oriente Objet\obj\x86\Debug\Oriente Objet.pdb

@@ -1,0 +1,953 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  optimiser la vitesse</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v7-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">7.5</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Optimiser en vitesse.</font></b></td>
+    <td width="14%" height="76"><a href="v8-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vchrono.JPG" width="83" height="77"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2" color="#800080"><b>L'optimisation</b> est la 
+pratique qui consiste généralement à réduire le temps d'exécution d'une 
+fonction, l'espace occupé par les données et le programme. Elle ne doit 
+intervenir qu'une fois que le programme fonctionne et répond aux spécifications. 
+L'expérience montre qu'optimiser du code avant&nbsp; revient le plus souvent à 
+une perte de temps et s'avère néfaste à la clarté du code et au bon 
+fonctionnement du programme.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF" size="5">
+<span style="font-family: Courier New; background-color: #C0C0C0"><b>Comment 
+accélérer une application VB.net</b>?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Utilisation des nouvelles 
+fonctionnalités:</span></b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">I<b>l faut raisonner différemment </b>et 
+<b>utiliser judicieusement les classes et les méthodes</b> au lieu de taper de longues 
+routines.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font SIZE="2"><b>
+<font face="Courier New">La méthode 'Sort' d'un tableau est hyper plus rapide 
+que la routine de tri écrite en code.</font></b></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Array.Sort(A)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">est hyper plus rapide que:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" SIZE="2"><font color="#0000FF">For i = 0 To N - 1<br>
+&nbsp;&nbsp;&nbsp; For j = 0 To N - i - 1<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If A(j) &gt; A(j + 1) Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temp = A(j): 
+A(j) = A(j + 1): A(j + 1) = Temp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If<br>
+<br>
+&nbsp;&nbsp;&nbsp; Next j<br>
+Next i</font><b><br>
+&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2"><b>
+<font face="Courier New">La méthode BinarySearch de la Classe Array est hyper 
+plus rapide que n'importe quelle routine écrite en code pour rechercher un 
+élément dans un tableau trié.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">I=Array.BinarySearch(Mois,&nbsp;&quot;Février&quot;)</span></font> </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Choix des variables:</span></b></font></span></p>
+<p><font face="Courier New" size="2">Les types de données les plus efficaces 
+sont ceux qui emploient la largeur de données native de la plateforme 
+d'exécution. Sur les plateformes courantes, la largeur de données est 32 bits, 
+pour l'ordinateur et le logiciel d'exploitation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Sur les ordinateurs actuels et en VB la 
+largeur de donnée native est donc de 32 bits:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les entiers les <b>Integer</b> <b>sont 
+donc les plus rapides</b> car le processeur calcul en Integer .</font><b> </b>
+<font face="Courier New" size="2">Viennent ensuite les<b> Long</b>, <b>Short</b>, 
+et <b>Byte</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans les nombres en virgule flottante, les <b>
+Double</b> sont les plus rapides car le processeur à virgule flottante calcul en 
+Double, ensuite se sont les <b>Single</b> puis les <b>Decimal.</b> </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#008000">Si c'est possible utiliser les 
+entiers plutôt que les nombres en virgules flottantes car le travail sur les 
+nombres entiers est beaucoup plus rapide.</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Bon choix des unités:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: pour stocker les dimensions d'une 
+image, on utilisera les pixels: l'image aura un nombre entier de pixels et on 
+peut ainsi utiliser une variable Integer, alors que si on utilise les 
+centimètres on devra travailler sur des fractionnaires donc utiliser par exemple 
+des Singles ce qui est plus lent.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#008000">L'usage de constantes 
+est plus rapide que l'usage de variable</font></b>, car la valeur d'une 
+constante est directement compilée dans le code.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour stocker une valeur, une variable est plus 
+rapide qu'une propriété d'objet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Les variables 'par valeur' peuvent être plus 
+rapide que celle 'par référence'.</b> Les premières sont stockées directement 
+dans la pile, les secondes sur le 'tas':</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si vous utilisez une valeur entière, créer une 
+variable Integer et non une variable Object.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Tableau:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Le CLR est optimisé pour les tableaux 
+unidimensionnel.</b> Employer le moins de dimension possible dans un tableau.
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>L'usage des tableaux de tableau 'A(9),(9)' 
+est plus rapide</b> que les tableaux multidimensionnels 'A(9,9)'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Tableau ou Collections?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour rechercher un élément dans un ensemble 
+l'élément à partir de son index , utilisez un tableau (l'accès à un élément 
+d'index i est plus rapide dans un tableau que dans une collection)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">L'accès a une variable simple est plus rapide 
+que l'accès à un élément d'un tableau:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Si vous utilisez de nombreuse fois à la suite 
+le même élément d'un tableau, le mettre dans une variable simple, elle sera plus 
+rapide d'accès:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim a As Integer= P(6)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">b=a*3</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">c=a+2</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">z=a*5</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Est plus rapide que:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">b=P(6)*3</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">c=P(6)+2</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">z=P(6)*5</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">L'usage d'un tableau est plus rapide qu'une 
+multitude de SelectCase ou de If Then:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: obtenir le nom du mois en fonction de 
+son numéro d'ordre.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt; margin-bottom: 0">
+<font color="#0000ff">
+<span style="font-size: 10pt; font-family: Courier New; background-color: #ffffff">
+Dim Mois() As String ={Janvier,Février,Mars,Avril,Mai,Juin,Juillet}</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">nomDuMois=Mois(i-1)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Est plus rapide que:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Select Case i</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Case 1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+nomDuMois=&quot;Janvier&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Case 2</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+nomDuMois=&quot;Février&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; ....</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Select.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<font FACE="Courier New" size="2">
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>Pour rechercher rapidement un 
+élément dans un tableau:</b></p>
+<p class="MsoNormal" style="margin-top: 6pt; margin-bottom: 0">
+Utiliser la méthode Binaryscearch plutôt que IndexOf.</p>
+<p class="MsoNormal" style="margin-top: 6pt; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Pour la méthode Binaryscearch , le 
+tableau doit être trié. (Le trier avant la recherche).</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>On peut utiliser des méthodes 
+génériques (VB 2005) pour travailler sur les tableaux. c'est beaucoup plus rapide.</b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">Exemple recherche dans un tableau 
+de short nommé monTab l'élément 2</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">index= Array.indexOf (Of 
+Short)(monTab, 2) </font><font face="Courier New" size="2" color="#111111">est
+<b>hyper plus rapide</b> que</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">index= Array.indexOf (monTab, 
+2) </font><font face="Courier New" size="2" color="#111111">car la première 
+version avec généric est directement optimisée pour les Short.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">Il est est de même pour 
+Binarysearch et Sort.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#111111">Cela est valable pour les 
+types 'valeur' (peu d'intérêts pour les strings par exemple).</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Collections:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on ne connaît pas le nombre d'éléments 
+maximum et que l'on doit ajouter, enlever des éléments, il vaut mieux utiliser 
+une collection (ArrayList) plutôt qu'un tableau avec des Dim Redim Preserve. 
+Mais attention une collection est composée d'objets, </font>
+<font face="Arial" size="2">
+<span lang="FR" style="font-size: 10pt; font-family: Courier New">ce qui 
+implique une exécution plus lente</span></font><font face="Courier New" size="2">.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour rechercher un élément dans un ensemble 
+d'éléments à partir d'un index, utilisez un tableau. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour rechercher un élément dans un ensemble 
+d'éléments à partir d'une clé (KeyIndex) , utilisez une collection (l'accès à un 
+élément ayant la clé X&nbsp; est plus rapide dans une collection que dans un 
+tableau; dans une tableau il faut en plus écrire la routine)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB2005 on peut utiliser les Collections 
+génériques plus rapides car typées (Les éléments ne sont pas des Objets).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Eviter la d</font></span><span style="font-weight: 700; background-color: #c0c0c0"><font face="Courier New" color="#0000ff" size="4">éclaration 
+de variables 'Objet' et les liaisons tardives, les variables non typées:</font></span></p>
+<p><b><font face="Courier New" size="2">Eviter de créer des variables Objet:</font></b></p>
+<p><font face="Courier New" size="2">Pour créer une variable et y mettre une 
+String:&nbsp;</font></p>
+<p><font size="2" color="#0000FF"><span style="font-family: Courier New">Dim A
+</span></font><span style="font-size: 10pt; font-family: Courier New">
+<span style="color: blue">&nbsp;</span>crée un 'Objet' A</span></p>
+<p><font size="2"><span style="font-family: Courier New">Il est préférable 
+d'utiliser:</span></font></p>
+<p><font color="#0000FF"><font size="2"><span style="font-family: Courier New">
+Dim A As String</span></font><span style="font-size: 10pt; font-family: Courier New">
+</span></font></p>
+<p><font size="2"><span style="font-family: Courier New">La gestion d'un objet 
+est plus lente que la gestion d'une variable typée.</span></font></p>
+<p><font size="2"><span style="font-family: Courier New">Il faut aussi éviter <b>
+les liaisons tardives</b>: Une liaison tardive consiste à utiliser une variable 
+Objet. A l'exécution, donc tardivement, on lui assigne un type, une String ou un 
+Objet ListBox par exemple. Dans ce cas, à l'exécution, VB doit analyser de quel 
+type d'objet il s'agit et le traiter, alors que si la variable a été déclarée 
+d'emblée comme une String ou une ListBox, VB a déjà prévu le code nécessaire en 
+fonction du type de variable. <b>Utilisez donc des variables typées</b>.</span></font></p>
+<p><font size="2"><span style="font-family: Courier New"><b>Utilisez donc des 
+variables le plus typées possible</b>.</span></font></p>
+<p><font size="2"><span style="font-family: Courier New">Si une variable doit 
+être utilisée pour une assignation de Button, ListBox... plutôt que la déclarer 
+en Objet, il est préférable de la déclarer en <font color="#0000FF">
+System.Windows.Forms.Control</font></span></font></p>
+<p><font size="2"><span style="font-family: Courier New"><b>Utilisez donc des 
+variables ByVal plutôt que ByRef</b>.&nbsp; Les types ByVal sont gérés sur la 
+pile, les types ByRef sur 'le tas' c'est plus long.</span></font></p>
+<p><font face="Courier New" size="2">De manière générale, si le compilateur sait 
+quel type de variable il utilise, il fait des contrôles lors de la compilation; 
+si il ne sait pas, il fait des contrôles lors de l'exécution et cela prend du 
+temps à l'exécution. </font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #c0c0c0">
+<font face="Courier New" color="#0000ff" size="4">Utiliser les bonnes 'Options':</font></span></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Option Strict On
+</font>&nbsp;permet de convertir les variables de manière explicite et accélère le 
+code. De plus on est poussé à utiliser le bon type de variable.</font></p>
+<p><font face="Courier New" size="2">Si on affecte une valeur 'par référence' à 
+un objet, le CLR doit créer un objet, transformer la valeur, la mettre dans 
+l'objet et gérer le pointeur. (On nomme cela 'boxing'), c'est très long. 
+L'inverse c'est du 'unboxing'.</font></p>
+<p><font face="Courier New" size="2">Si on utilise </font>
+<font color="#0000FF" face="Courier New" size="2">Option Strict Off </font>
+<font face="Courier New" size="2">le boxing se fait automatiquement et
+systématiquement et c'est 
+long. </font></p>
+<p><font face="Courier New" size="2">Si on utilise</font><font color="#0000FF" face="Courier New" size="2"> 
+Option Strict On, </font><font face="Courier New" size="2">on a tendance (ce qui 
+est bien) à moins utiliser des variables de type différent, ce qui diminue le 
+nombre de boxing-unboxing; et cela oblige si on utilise des variables 
+différentes à caster à l'aide d'instructions qui sont plus rapide.&nbsp;&nbsp;
+</font></p>
+<p><b><font face="Courier New" size="2">Donc utiliser <font color="#0000FF">Option Strict On
+</font>&nbsp;et choisir&nbsp; des variables du même type dans une routine afin
+de réduire au minimum les conversions.</font></b></p>
+<p><font face="Courier New" size="2">Choisir les méthodes de conversion, quand
+elle sont nécessaire, les plus typées possible:</font></p>
+<p><font face="Courier New" size="2">Pour les conversions en entier par exemple
+<font color="#0000FF">CInt</font> est plus rapide que <font color="#0000FF">
+CType</font> car <font color="#0000FF">CInt</font> est dédié aux entiers.</font></p>
+<p><font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+Option Compare Binary</font> accélère les comparaisons et les tris (la 
+comparaison binaire consiste à comparer les codes unicode des chaînes de 
+caractère).</span></font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #c0c0c0">
+<font face="Courier New" color="#0000ff" size="4">Pour les fichiers utiliser 
+System.IO:</font></span></p>
+<p><font face="Courier New" size="2">L'utilisation des&nbsp; <b>System.IO</b> 
+classes accélère les opérations sur fichiers (en effet, les autres manières de 
+lire ou d'écrire dans des fichiers comme les FileOpen font appel à System.IO: 
+autant l'appeler directement!!) </font></p>
+<p><font face="Courier New" size="2">Utiliser donc:</font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2"><b>Path</b>, <b>Directory</b>, et <b>
+  File</b> </font></li>
+  <li><font face="Courier New" size="2"><b>FileStream</b>&nbsp; pour lire ou 
+  écrire </font></li>
+  <li><font face="Courier New" size="2"><b>BinaryReader</b> and <b>BinaryWriter</b> 
+  pour les fichiers binaires. </font></li>
+  <li><font face="Courier New" size="2"><b>StreamReader</b> and <b>StreamWriter</b> 
+  pour les fichiers texte.</font></li>
+</ul>
+<p><font face="Courier New" size="2">Utiliser des buffers entre 8 et 64K</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">If..Then ou Select Case?</font></span></p>
+<p><font face="Courier New" size="2">Plutôt qu'un <font color="#0000FF">If Then</font> 
+et une longue série de <font color="#0000FF">ElseIf</font>, il est préférable 
+d'utiliser un <font color="#0000FF">SelectCase</font> qui en Vb est plus rapide 
+(20%) </font></p>
+<p><font face="Courier New" size="2">Dans les <font color="#0000FF">Select Case</font>
+<b>mettre les '<font color="#0000FF">case</font>' fréquent et qui reviennent 
+souvent en premier</b>, ainsi il n'y a pas besoin de traiter tous les Case:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Select Case Variable</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Case Valeur1</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">... </font>
+<font face="Courier New" size="2" color="#008000">Valeur1 revient souvent</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Case Valeur2</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Case Valeur25</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">... </font>
+<font face="Courier New" size="2" color="#008000">Valeur25 survient rarement</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">End Select</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">If..Then </font></span></p>
+<p><font face="Courier New" size="2">Plutôt qu'un <font color="#0000FF">If B= 
+True Then..</font> il est préférable 
+d'utiliser un <font color="#0000FF">If B Then</font> ..&nbsp;&nbsp; cela va 2 
+fois plus vite en VB (par en C#). B étant une opération booléenne quelconque.</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Utiliser les bonnes 
+'Opérations':</font></span></p>
+<p><b><font face="Courier New" size="2">Si possible:</font></b></p>
+<p><font face="Courier New" size="2"><b>Utiliser :&quot;\&quot;</b></font></p>
+<p><font face="Courier New" size="2">Pour faire une vraie division on utilise 
+l'opérateur '/'</font></p>
+<p><font face="Courier New" size="2">Si on a seulement besoin du quotient d'une 
+division (et pas du reste ou du résultat fractionnaire) on utilise '\', c'est 
+beaucoup plus rapide.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Utiliser :&quot;+=&quot;</b></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">A+= 2</font> est plus 
+rapide que <font color="#0000FF">A= A+2</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Utiliser :AndAlso et ElseOr</b></font></p>
+<p><font face="Courier New" size="2">AndAlso&nbsp; et ElseOr sont plus rapide 
+que And et Or.</font></p>
+<p><font face="Courier New" size="2">(puisque la seconde expression n'est 
+évaluée que si nécessaire)</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Arrêter le test lorsqu'on connaît la 
+réponse:</font></b></p>
+<p><font face="Courier New" size="2" color="#0000FF">if x&lt;3 And y&gt;15 then</font></p>
+<p><font face="Courier New" size="2">Les 2 expressions sont évaluées x&lt;3 et x&gt;15 
+puis le And est évalué alors que dès que x&lt;3 on pourrait arrêter de tester.</font></p>
+<p><font face="Courier New" size="2">Solution:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">if x&lt;3 then</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; If y&gt;15 then</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p><b><font face="Courier New" size="2">Réduire les opérations gourmandes:</font></b></p>
+<p><font face="Courier New" size="2">Remplacer une multiplication par une 
+addition quand c'est possible.</font></p>
+<p><font face="Courier New" size="2">Les fonctions Sinus Cosinus... sont très 
+gourmandes.</font></p>
+<p><font face="Courier New" size="2">(Je me souviens d'un programme , en 
+QuickBasic!! qui affichait de la 3D; plutôt que de calculer plein de sinus , on 
+allait chercher les sinus stockés dans un tableau; cela entraînait un gain de 
+temps phénoménal.) </font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Calculer des expressions à l'avance:</b></font></p>
+<p><font face="Courier New" size="2">- Log(2) est très long à calculer surtout 
+s'il est dans une boucle.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ 
+Log(2)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p><font face="Courier New" size="2">utiliser plutôt le résultat calculé à la 
+main:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ 
+0.693147</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p><font face="Courier New" size="2">- De même si on utilise un membre d'une 
+classe:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ </font></span>
+<font color="#0000FF" size="2">Myobjet.MyPropriété</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p><font face="Courier New" size="2">mettre la valeur de la propriété dans une 
+variable simple, c'est plus rapide:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2">Dim valeur As Integer = Myobjet.MyPropriété</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ 
+valeur</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p><font face="Courier New" size="2">- L'accès à un élément d'un tableau est 
+lent:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ </font></span>
+<font color="#0000FF" size="2">MyTableau (2 ,3 )</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p><font face="Courier New" size="2">mettre la valeur du tableau dans une 
+variable simple, c'est plus rapide si on utilise cette valeur 10000 fois:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2">Dim valeur As Integer= MyTableau (2 ,3) </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P+ 
+valeur</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p><b><font face="Courier New" size="2">Pour les conversions utilisez
+<font color="#0000FF">DirectCast</font> plutôt que CType</font></b><font face="Courier New" size="2"><b>:</b></font></p>
+<p><font face="Courier New" size="2">CType est moins rapide.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Utiliser les conversion typées plutôt que 
+CType:</font></b></p>
+<p><font face="Courier New" size="2">Faire&nbsp; <font color="#0000FF">d=Cdbl(i)</font> 
+plutôt que <font color="#0000FF">d= CType(i, Double)</font></font></p>
+<p><font face="Courier New" size="2">Cdbl est fait pour convertir en Double 
+alors de Ctype qui converti 'tout' en 'tout' doit analyser en quel type il faut 
+convertir puis appeler les routines correspondantes.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF"><b>Utiliser :With End With</b></font></span></p>
+<p><font face="Courier New" size="2">With.. End With accélère le code:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">With Form1.TextBox1</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; .BackColor= 
+Red</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; .Text=&quot;BoBo&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; .Visible= 
+True</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End With</font></span></p>
+<p><font face="Courier New" size="2">est plus rapide que</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Form1.TextBox1.BackColor= Red</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Form1.TextBox1.Text=&quot;BoBo&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Form1.TextBox1.Visible= True</font></span></p>
+<p><font face="Courier New" size="2">car Form1.TextBox1 est 'évalué' 1 fois au 
+lieu de 3 fois.</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Optimiser les boucles:</font></span></p>
+<p><b><font face="Courier New" size="2">En mettre le moins possible dans les 
+boucles:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Soit un tableau J(100,100) d'entiers:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Soit un calcul répété 100 000 fois sur un élément du tableau, par exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*J(1,2)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+va 100000 fois chercher un élément d'un tableau,c'est toujours le même!</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Pour accélérer la routine (c'est plus rapide de récupérer la valeur d'une 
+variable simple plutôt d'un élément de tableau), on utilise une variable 
+intermédiaire P:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim P as Integer</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">P=J(1,2)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; R=i*P</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+c'est plus rapide.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">De 
+la même manière si on utilise une propriété (toujours la même) dans une boucle, 
+on peut stocker sa valeur dans une variable car l'accès à une variable simple 
+est plus rapide que l'accès à une propriété.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>
+Les opérations qui ne sont pas modifiées dans la boucle doivent donc être mises 
+à l'extérieur.</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Eviter les <font color="#0000FF">On 
+Error</font> dans des grandes boucles</b>, qui ralentissent considérablement; 
+par contre, contrairement à ce qu'on entend, le <font color="#0000FF">Try Catch 
+Finally</font> dans une très grande boucle ralentissent très peu.</font></p>
+<p><font face="Courier New" size="2">Dans une boucle tournant </font>
+<font SIZE="2">1000000000 fois:</font></p>
+<p><font size="2">5 s sans gestion d'erreur.</font></p>
+<p><font size="2">6 s si la boucle contient Try Catch</font></p>
+<p><font size="2">2 mn si la boucle contient on error resume next!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">
+Fusionner plusieurs boucles si nécessaire:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Au 
+lieu de faire 2 boucles:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; P(i)=i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Q(i)=i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p><font face="Courier New" size="2">Faire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; P(i)=i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Q(i)=i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p><font face="Courier New" size="2">C'est possible quand les 2 boucles ont même 
+valeur initiale et finale.</font></p>
+<p><b><font face="Courier New" size="2">En cas de boucles imbriquées placer la 
+boucle la plus grande à l'intérieur:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'100 itérations</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For j=1 to 10&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'100 X 10 itérations</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; ...</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next j</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p><font face="Courier New" size="2">100+(100X10) =<i> 1100 itérations de 
+compteur</i></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For j=1 to 10&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'10 itérations</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">'100 X 10 itérations</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; ...</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next j</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p><font face="Courier New" size="2">10+(100X10) = <i>1010 itérations de 
+compteur</i></font></p>
+<p><font face="Courier New" size="2">En conclusion:</font></p>
+<p><font face="Courier New" size="2">(1100-1010)/1100&nbsp; gain 8% d'itérations 
+de compteur en moins (le nombre de boucle restant égal) </font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Sortir avec exit for dès qu'on a trouvé 
+ou qu'il n'y a plus rien a chercher.</font></b></p>
+<p><font face="Courier New" size="2">Exemple: rechercher un élément dans un 
+tableau avec une boucle.</font></p>
+<p><font face="Courier New" size="2">Des que l'élément a été trouvé ou que le 
+tableau ne contient plus rien, on quitte la boucle avec un <font color="#0000FF">
+Exit For</font>. </font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">
+Appel de procédure:</font></span></b></p>
+<p><b><font face="Courier New" size="2">Si on appelle une petite procédure dans 
+une grande boucle, on a parfois intérêts à mettre le contenu de la procédure 
+directement dans la boucle. Cela évite les appels et retour. C'est plus rapide.</font></b></p>
+<blockquote dir="ltr" style="margin-right: 0px">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Si on a:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; resultat= 
+Calcul(i,j)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Functin Calcul (i As Integer, 
+j As Integer)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; i=i+3</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Return i*j</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></span></p>
+  <p><font size="2" face="Courier New">C'est plus rapide d'écrire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For i=1 to 100000</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; i=i+3</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; resultat= 
+i*j</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></span></p>
+  <p>&nbsp;</p>
+  <p><font face="Courier New" size="2">Si la procédure est longue et complexe et 
+  surtout si on a besoin de l'utiliser à différents endroits dans le programme, 
+  il est préférable d'utiliser une procédure.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Usage de thread</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p><b><font face="Courier New" size="2">Il peut être judicieux d'utiliser des 
+threads, pour accélèrer certaines applications. </font></b></p>
+<p>&nbsp;</p>
+</span>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Comment accélérer quand on utilise des 
+'String'</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><b><font face="Courier New" size="2">Utiliser <font color="#0000FF">&amp;</font> 
+pour la concaténation de chaîne plutôt que <font color="#0000FF">+</font>.</font></b></p>
+<blockquote dir="ltr" style="margin-right: 0px">
+  <p><font face="Courier New" size="2">Utiliser:</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">s &amp;= &quot;mon&quot; &amp; &quot;ami&quot;</font></p>
+  <p><font face="Courier New" size="2">plutôt que:</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">s += &quot;mon&quot; + &quot;ami&quot;</font></p>
+  <p>&nbsp;</p>
+</blockquote>
+<p><b><font face="Courier New" size="2">Utiliser les StringBuilder.</font></b></p>
+<p><font face="Courier New" size="2">Exemple d'une opération coûteuse en temps:</font></p>
+<blockquote dir="ltr" style="margin-right: 0px">
+  <p><font face="Courier New" size="2" color="#0000FF">Dim s As String = 
+  &quot;bonjour&quot;<br>
+&nbsp;</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">s += &quot;mon&quot; + &quot;ami&quot;</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><br>
+En réalité le Framework va créer 3 chaînes en mémoire avec toutes les pertes en 
+mémoire et en temps que cela implique.</font></p>
+<p><font face="Courier New" size="2">Pour effectuer des opérations répétées sur 
+les string, le framework dispose donc d'une classe spécialement conçue et
+<strong>optimisée </strong>pour ça : System.Text.StringBuilder.</font></p>
+<p><font face="Courier New" size="2">Pour l'utiliser, rien de plus simple </font>
+</p>
+<blockquote dir="ltr" style="margin-right: 0px">
+  <p><span style="background-color: #FFFFFF">
+  <font face="Courier New" size="2" color="#0000FF">Dim sb As new 
+  System.Text.StringBuilder()</font></span></p>
+  <p><span style="background-color: #FFFFFF">
+  <font face="Courier New" size="2" color="#0000FF">sb.Append(&quot;bonjour&quot;)</font></span></p>
+  <p><span style="background-color: #FFFFFF">
+  <font face="Courier New" size="2" color="#0000FF">sb.Append(&quot;mon ami&quot;)</font></span></p>
+  <p><font face="Courier New" size="2" color="#0000FF">Dim s As String</font></p>
+  <p><span style="background-color: #FFFFFF">
+  <font face="Courier New" size="2" color="#0000FF">s = sb.ToString()</font></span></p>
+</blockquote>
+<p><font face="Courier New" size="2">La méthode <em>ToString</em> de la classe 
+StringBuilder renvoi la chaîne qu'utilise en interne l'instance de StringBuilder.</font></p>
+<p><font face="Courier New" size="2">Pour comparer 2 StringBuilder utiliser la 
+méthode <font color="#0000FF">Equals</font> plutôt que =.</font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Comment accélérer l'affichage?</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p><font face="Courier New" size="2"><b>Formater le plus vite possible le texte:</b></font></p>
+<p><font face="Courier New" size="2">Pour mettre en forme des nombres et les 
+afficher <font color="#0000FF">Format</font> est puissant (Prise en charge de la 
+culture..), mais si on peut 
+utiliser <font color="#0000FF">ToString </font>c'est plus rapide (ToString est 
+aussi plus rapide que Cstr).</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">ChrW</font> utilisé 
+pour afficher un caractère(et <font color="#0000FF">AscW</font>) sont plus 
+rapide que Chr et Asc car ils travaillent directement sur les Unicodes.</font></p>
+<p><b><font face="Courier New" size="2">Précharger les fenêtres et les données.</font></b></p>
+<p><font face="Courier New" size="2">Quand une fenêtre en ouvre une autre, le 
+temps de chargement est long, l'utilisateur attend!</font></p>
+<p><font face="Courier New" size="2">Solution:</font></p>
+<p><font face="Courier New" size="2">En début de programme pré charger les 
+fenêtres en les rendant invisible. Lors de l'utilisation de ces fenêtres il 
+suffira de les rendre visible, ce qui est plus rapide que de les charger.</font></p>
+<p><font face="Courier New" size="2">Certaines données (liste..)doivent être 
+chargées une fois pour toute, le faire en début de programme, lors de 
+l'affichage de la fenêtre 'Splach' par exemple.</font></p>
+<p><b><font face="Courier New" size="2">Afficher les modifications en une fois 
+dans un TextBox:</font></b></p>
+<p><font face="Courier New" size="2">A chaque fois que l'on fait une 
+modification de propriété (couleur, taille..) ou de contenu (texte dans un 
+TextBox) Vb&nbsp; met à jour chaque modification . Si on modifie tout 
+et que l'on re-affiche tout, cela va plus vite.</font></p>
+<p><font face="Courier New" size="2">Pour le cas du TextBox ne pas faire.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBox1.Text = TextBox1.Text 
++ &quot;Bonjour&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBox1.Text = TextBox1.Text 
++ &quot;&quot;Monsieur&quot;</font></p>
+<p><font face="Courier New" size="2">faire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim T as string</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">T = &quot;Bonjour&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">T &amp;= &quot;Monsieur&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBox1.Text = T</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le 
+texte est affiché en une fois, en plus, cela ne 'clignote' pas.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>
+Rendre l'affichage de l'objet inactif, faire toutes les modifications puis 
+réactiver l'affichage.</b> </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Cas 
+d'affichage dans une grid (MsFlexGrid).</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" size="2">Afficher en 2 fois dans une ListBox:</font></b></p>
+<p><font face="Courier New" size="2">A l'inverse pour ne pas faire attendre un 
+affichage très long, afficher le début (l'utilisateur voit apparaître quelque 
+chose à lire) il est occupé un temps, ce qui permet d'afficher le reste.</font></p>
+<p><font face="Courier New" size="2">Exemple : remplir une listBox avec un grand 
+nombre d'éléments: en afficher 5 rapidement puis calculer et afficher les 
+autres. L'utilisateur à l'impression de voir la ListBox se remplir 
+immédiatement. </font></p>
+<p><font face="Courier New" size="2">Pour les images utiliser le <b>DoubleBuffer</b>.</font></p>
+<p><font face="Courier New" size="2"><b>Pour faire patienter l'utilisateur lors 
+d'une routine qui dure longtemps ?</b>(et lui montrer que l'application n'est 
+pas bloquée):</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Transformer le curseur en sablier en 
+  début de routine, remettre un curseur normal en fin de routine.</font></li>
+  <li><font face="Courier New" size="2">Utiliser une ProgressBar (pour les 
+  chargements longs par exemple)</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Utiliser les tableaux en mémoire plutôt 
+que la lecture de fichier sur disque:</span></b></font></span></p>
+<p><font face="Courier New" size="2">On a un fichier de 300 noms, plutôt que de 
+lire 300 enregistrements sur disque pour rechercher le bon, charger en mémoire 
+le fichier dans un tableau( en début de programme); la recherche sera ensuite, 
+dans le tableau en mémoire, extrêmement rapide.</font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Ce qui n'influence pas la rapidité du 
+code</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p><font face="Courier New" size="2">Les boucles For , Do , While ont toutes une 
+vitesse identique.</font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Compilation Dll</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></b></p>
+<p><font face="Courier New" size="2">Le chargement de dll est gourmant en temps; 
+moins il y en a, plus c'est rapide.</font></p>
+<p><font face="Courier New" size="2">Les dll ne sont chargées qu'une fois.</font></p>
+<p><font face="Courier New" size="2">La compilation en mode Debug fourni un code 
+plus lent.</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font color="#0000FF" face="Courier New" size="4">En conclusion:</font></span></p>
+<p><font face="Courier New" size="2">Une optimisation sur une ou deux 
+instructions apporte un gain de temps négligeable.</font></p>
+<p><font face="Courier New" size="2">L'optimisation dans les grandes boucles est 
+perceptible.</font></p>
+<p><font face="Courier New" size="2">Le travail en mémoire plutôt que sur disque 
+accélère considérablement.</font></p>
+<p>&nbsp;</p>
+<p><b><font color="#FF0000" face="Courier New">Les goulots d'étranglement sont 
+les longues boucles et l'accès aux bases de données.</font></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</span>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v7-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+</html>

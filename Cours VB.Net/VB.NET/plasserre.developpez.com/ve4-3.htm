@@ -1,0 +1,364 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve4-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:10 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve4-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 4.3</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Dessin avec 
+    souris</font></b></td>
+    <td width="14%" height="76"><a href="v5-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Un source très simple très didactique, 
+pour dessiner avec la souris:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vdessin.JPG" width="277" height="158"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On appuie sur le bouton de la souris, on 
+déplace la souris: cela dessine un trait.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on clique sur les boutons Rouge, Vert, Bleu 
+cela change la couleur du trait.</font></p>
+<p><b><font face="Courier New" size="2">Comment faire?</font></b></p>
+<p><font face="Courier New" size="2">Dans Form1 on crée :</font></p>
+<p><font face="Courier New" size="2">Une PictureBox définissant la zone de 
+dessin: <font color="#0000FF">PictureBox1</font></font></p>
+<p><font face="Courier New" size="2">Les boutons <font color="#0000FF">
+ButtonRouge, ButtonVert, ButtonBleu</font> ayant dans leur propriété text 
+respectivement 'Rouge', 'Vert', 'Bleu'.</font></p>
+<p><font face="Courier New" size="2">Au niveau de la Classe on crée les 
+variables <font color="#0000FF">ThePen</font> de type Pen contenant la couleur 
+en cours et <font color="#0000FF">PreviousPoint </font><font color="#111111">de 
+type Point</font> qui désigne le dernier point ou était la souris.</font></p>
+<p><font face="Courier New" size="2">Les évènements Click des boutons
+<font color="#0000FF">ButtonRouge, ButtonVert, ButtonBleu </font>modifie la 
+couleur en cours:<font color="#0000FF"><br>
+</font></font><font color="#0000FF" face="Courier New" size="2">ThePen.Color = 
+Color.Blue</font></p>
+<p><font face="Courier New" size="2">Le dessin est effectué par les procédures 
+évènement de la souris:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">MouseDown</font><font face="Courier New" size="2"> 
+enregistre le précédent Point (les coordonnées de la souris sont fournis par le 
+paramètre <font color="#0000FF">e</font>, ce sont <font color="#0000FF">e.X</font> 
+et <font color="#0000FF">e.Y</font>)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">MouseMove: </font>
+<font face="Courier New" size="2">On teste si la souris est 'capturée' sur le 
+PictureBox (c'est à dire si on est en glissé: déplacement de la souris bouton 
+appuyé, cela donne à PictureBox1.Capture la valeur True).</font></p>
+<p><font face="Courier New" size="2">Si la souris est capturée:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">If PictureBox1.Capture Then</font></p>
+<p><font face="Courier New" size="2">On récupère le Graphics de PictureBox1:
+</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim NewGraphic As Graphics 
+= PictureBox1.CreateGraphics()</font></p>
+<p><font face="Courier New" size="2">On trace sur le graphics une ligne du 
+PreviousPoint au Point actuel avec </font>
+<font face="Courier New" size="2" color="#0000FF">ThePen:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;NewGraphic.DrawLine(ThePen, 
+PreviousPoint, NewPoint)</font></p>
+<p><font face="Courier New" size="2">On détruit le graphics, puis on met dans 
+PreviousPoint le point actuel.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Cela donne:</font></b></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Imports System.Drawing</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Public Class Form1</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Inherits 
+System.Windows.Forms.Form</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private PreviousPoint As Point
+</font><font face="Courier New" size="2">' Dernier point de la souris</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private ThePen As New 
+System.Drawing.Pen(Color.Red) </font><font face="Courier New" size="2">'Un Pen 
+pour dessiner.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub 
+PictureBox1_MouseDown(ByVal sender As Object, ByVal e As 
+System.Windows.Forms.MouseEventArgs) Handles PictureBox1.MouseDown</font></p>
+<blockquote>
+  <p style="margin-top: 2; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New" size="2">Dim NewPoint As New Point(e.X, 
+  e.Y)</font></p>
+  <p style="margin-top: 2; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New" size="2">PreviousPoint = NewPoint</font></p>
+</blockquote>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub 
+PictureBox1_MouseMove(ByVal sender As Object, ByVal e As 
+System.Windows.Forms.MouseEventArgs) Handles PictureBox1.MouseMove</font></p>
+<blockquote>
+  <p style="margin-top: 2; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New" size="2">If PictureBox1.Capture Then</font></p>
+  <blockquote>
+    <p style="margin-top: 2; margin-bottom: 0">
+    <font color="#0000FF" face="Courier New" size="2">Dim NewPoint As New Point(e.X, 
+    e.Y)</font></p>
+    <p style="margin-top: 2; margin-bottom: 0">
+    <font color="#0000FF" face="Courier New" size="2">Dim NewGraphic As Graphics 
+    = PictureBox1.CreateGraphics()</font></p>
+    <p style="margin-top: 2; margin-bottom: 0">
+    <font color="#0000FF" face="Courier New" size="2">NewGraphic.DrawLine(ThePen, 
+    PreviousPoint, NewPoint)</font></p>
+    <p style="margin-top: 2; margin-bottom: 0">
+    <font color="#0000FF" face="Courier New" size="2">NewGraphic.Dispose()</font></p>
+    <p style="margin-top: 2; margin-bottom: 0">
+    <font color="#0000FF" face="Courier New" size="2">PreviousPoint = NewPoint</font></p>
+  </blockquote>
+  <p style="margin-top: 2; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New" size="2">End If</font></p>
+</blockquote>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub ButtonRouge_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles ButtonRouge.Click</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">ThePen.Color = Color.Red</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub ButtonVert_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles ButtonVert.Click</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">ThePen.Color = Color.Green</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Private Sub ButtonBleu_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles ButtonBleu.Click</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">ThePen.Color = Color.Blue</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+<p align="left" style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Dans une version VB6 de ce 
+programme, je n'utilisais pas Capture, aussi j'utilisais une variable Globale 
+'Tracer': MouseDown lui donnait la valeur True, MouseUp la valeur False et dans 
+MouseMove on traçait si 'Tracer' était à True.</font></p>
+<p align="left"><font face="Courier New" size="2">Mais c'est plus facile avec 
+Capture.</font></p>
+<p align="left"><b><font face="Courier New" size="2">Problème:</font></b></p>
+<p align="left"><font face="Courier New" size="2">Si une fenêtre est positionnée 
+sur notre fenêtre de dessin puis enlevée, le dessin disparaît!!</font></p>
+<p align="left"><font face="Courier New" size="2">En VB6, la propriété 
+<b>AutoRedraw </b>de l'image permettait de rappeler automatiquement le BitMap du dessin 
+et de faire réapparaître l'image, cela n'existe plus en VB.Net!!</font></p>
+<p align="left"><font face="Courier New" size="2"><b>A-</b> On peut écrire une 
+nouvelle méthode OnPaint 
+de l'image (on la substitue grâce à Overrides), elle est déclenchée à chaque fois que le contrôle est redessiné; 
+on y met du 
+code qui redessine (forme géométrique..).</font></p>
+<p align="left"><font face="Courier New" size="2">Exemple afficher une ligne 
+dans une form, qui restera affichée même si on redimensionne.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">Protected</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Overrides</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> OnPaint(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> PaintEventArgs)</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> myPen </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2"> System.Drawing.Pen(System.Drawing.Color.Red)</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> formGraphics </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> System.Drawing.Graphics</p>
+<p style="margin-top: 0; margin-bottom: 0">formGraphics = </font>
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.CreateGraphics()</p>
+<p style="margin-top: 0; margin-bottom: 0">formGraphics.DrawLine(myPen, 0, 0, 
+200, 200)</p>
+<p style="margin-top: 0; margin-bottom: 0">myPen.Dispose()</p>
+<p style="margin-top: 0; margin-bottom: 0">formGraphics.Dispose()</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</p>
+</font>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">&nbsp;mais dans notre programme à moins 
+d'enregistrer dans un tableau les coordonnées et couleur de chaque point puis de 
+les redessiner un à un, ce n'est pas possible.</font></p>
+<p align="left"><font face="Courier New" size="2"><b>B- </b>Comment faire l'équivalent de 
+l'autoRedraw?</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Class Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+PreviousPoint </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+Point </font></font><font SIZE="2" COLOR="#008000"><font face="Courier New">' 
+Dernier point de souris</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ThePen </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Drawing.Pen(Color.Red)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+MyBitMap </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+Bitmap = </font><font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New" color="#0000FF"> 
+Bitmap(200, 200)</font><font face="Courier New" color="#008000"> 'Je crée un 
+BitMap</font></b></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+NewPoint </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Point </font><font face="Courier New" color="#008000">'point actuel</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+PictureBox1_MouseDown(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.MouseEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PictureBox1.MouseDown</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">NewPoint = </font></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Point(e.X, e.Y)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">PreviousPoint = NewPoint</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+PictureBox1_MouseMove(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.MouseEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PictureBox1.MouseMove</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+PictureBox1.Capture </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+NewPoint </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Point(e.X, e.Y)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+newgraphic </font><font SIZE="2" COLOR="#0000ff">As</font></font></b><font SIZE="2"><b><font face="Courier New" color="#0000FF"> 
+Graphics = Graphics.FromImage(MyBitMap) </font>
+<font face="Courier New" color="#008000">'je crée un Graphics à partir du BitMap</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" color="#0000FF">newgraphic.DrawLine(ThePen, 
+PreviousPoint, NewPoint)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" color="#008000">'je dessine sur le Graphics&nbsp; </font>
+</b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" color="#0000FF">PictureBox1.Image = MyBitMap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" color="#008000">'je passe le BitMap dans le 
+PictureBox1&nbsp; </font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">PreviousPoint = NewPoint</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><span class="postbody">Quand on crée un 
+Graphics depuis un contrôle comme dans la première version, le graphics ne 
+pointe pas sur la propriété image mais sur son affichage à l'instant T. Ce n'est 
+pas mémorisé. <br>
+<br>
+Beaucoup de contrôles .net ont une propriété image. A chaque rafraîchissement du 
+contrôle si un bitMap est &quot;attaché&quot; à la propriété, le fond du contrôle est 
+affiché automatiquement. Le picturebox est le plus simple de ces contrôles ... 
+il ne fait que ça. <br>
+<br>
+Donc en fait pour dessiner sur un contrôle (quel qu'il soit) tu n'as que 2 
+possibilités : <br>
+<br>
+- Redessiner tout à chaque fois dans l'évènement Onpaint <br>
+- Lui affecter une image de fond et travailler sur celle ci <br>
+&nbsp;</span></font></p>
+<p align="left">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve4-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve4-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:11 GMT -->
+</html>

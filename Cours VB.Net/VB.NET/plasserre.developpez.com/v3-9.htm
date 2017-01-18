@@ -1,0 +1,504 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:57 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET: panel groupbox  tabcontrol splitcontainer layoutpanel , groupe de controles </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.9</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Regroupement de contrôles.</font></b></td>
+    <td width="14%" height="76">
+    <a href="v3-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On peut regrouper des 
+contrôles dans :</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; </span>
+<span style="font-family: Courier New">Les GroupBox.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; Les 
+Panels.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; Les PictureBox.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; Les TabControl.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;
+</span></font><font color="#800080" face="Courier New" size="2">Les 
+SplitContainer.(Framework 
+2 Vb2005)</font><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Les LayoutPanel.(Framework 
+2 Vb2005)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font color="#800080" face="Courier New" size="2">Comment
+se passer des groupes de contrôles de VB6 qui n'existent plus en VB.Net?</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Comment plusieurs contrôles 
+peuvent-ils déclencher un même évènement?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Comment travailler sur 
+plusieurs contrôles identiques?</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+GroupBox et Panel</span></font></p>
+<p><font face="Courier New" size="2">Il est possible de regrouper des contrôles 
+dans un <b>container</b>, on peut par exemple regrouper plusieurs RadioButton. Le container peut 
+être un <b>GroupBox</b> ou un <b>Panel</b>.</font></p>
+<p><img border="0" src="vgroupb.gif" width="301" height="98"></p>
+<p><font face="Courier New"><b>GroupBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Panel </b><font size="2">avec AutoScroll =True et BorderStyle=Single</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Pour l'utilisateur, le fait que toutes les 
+options soient regroupées dans un panneau est un indice visuel logique (Tous les 
+RadioButton permettrons un choix dans une même catégorie de données). Au moment 
+de la conception, tous les contrôles peuvent être déplacés facilement&nbsp;; si vous 
+déplacez le contrôle GroupBox ou Panel, tous les contrôles qu'il contient sont 
+également déplacés. Les contrôles regroupés dans un panneau ou un GroupBox sont 
+accessibles au moyen de la propriété Controls du panneau.</font></p>
+<p><font face="Courier New" size="2">Le contrôle <b>Panel</b> est similaire au 
+contrôle <b>GroupBox&nbsp;</b>; mais, seul le contrôle Panel peut disposer de barres 
+de défilement et seul le contrôle <b>GroupBox</b> peut afficher une légende.</font></p>
+<p><font face="Courier New" size="2">La légende de la <b>GroupBox</b> est 
+définie par la propriété <b>Text</b>.</font></p>
+<p><font face="Courier New" size="2">Pour faire apparaître les barres de 
+défilement dans le <b>Pannel</b> mettre </font><font face="Courier New"><font color="#0000FF">
+<font size="2">AutoScroll 
+=True</font></font><font size="2"> et </font></font>
+<font size="2" face="Courier New" color="#0000FF">AutoScrollMinSize =100;100
+</font></p>
+<p><font face="Courier New" size="2">Dans un Panel, pour afficher des barres de 
+défilement, attribuez à la propriété <b>AutoScroll</b> la valeur <b>true</b>.. 
+La propriété <b>BorderStyle</b> détermine si la zone est entourée d'une bordure 
+invisible (<b>None</b>), d'une simple ligne (<b>FixedSingle</b>) ou d'une ligne 
+ombrée (<b>Fixed3D</b>).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Comment créer un 
+contrôle Panel&nbsp;?</span></b></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Faites glisser un 
+contrôle <b>Panel</b> de l'onglet <b>Windows Forms</b> de la boîte à outils 
+jusqu'à un formulaire. </font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ajoutez des contrôles au 
+panneau en les déposant dans le panneau. </font></p>
+<p><font face="Courier New" size="2">Si vous voulez mettre dans le panneau des 
+contrôles existants, sélectionnez-les tous, coupez-les dans le Presse-papiers, 
+sélectionnez le contrôle <b>Panel</b> et collez-les.</font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">PictureBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le contrôle <b>
+PictureBox</b> peut afficher une image mais peut aussi servir de conteneur à 
+d'autres contrôles.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Retenons la <b>notion de conteneur</b> 
+qui est le contrôle <b>parent</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">TabControl</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ce contrôle permet de créer des onglets 
+comme dans un classeur, onglets entièrement gérés par VB. Chaque page peut contenir 
+d'autres contrôles.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En mode conception, en passant par la 
+propriété <b>TabPages,</b> 
+on ajoute des onglets dont la propriété <b>Text</b> contient le texte à 
+afficher en haut (Ici: Page 1..). il suffit ensuite de cliquer sur chaque onglet et d'y ajouter les 
+contrôles.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vtab.gif" width="167" height="89"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En mode run les onglets fonctionnent 
+automatiquement: cliquez sur Page 2 affiche la page correspondante (et déclenche 
+l'événement <b>Click</b> de cet objet <b>TabPage)</b></font>.<font face="Courier New" size="2">.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La propriété <b>Alignment</b> permet de mettre 
+les onglets en haut, en bas, à droite, à gauche.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">SplitContainer</span><span style="background-color: #C0C0C0">:</span> </font>
+</p>
+<p><font face="Courier New" size="2">VB
+<img border="0" src="v2005.JPG" width="52" height="21"> Framework 2.</font></p>
+<p><font face="Courier New" size="2">Permettant de créer facilement une 
+séparation déplaçable entre 2 zones.</font></p>
+<p><img border="0" src="vsplitc2.JPG" width="313" height="156"></p>
+<p><font face="Courier New" size="2">On met le SplitContainer, dans les 2 zones 
+on met par exemple 2 textbox. Il faut mettre la propriété Dock de ces 2 textbox 
+à <font color="#0033FF">Fill</font>.</font></p>
+<p><font face="Courier New" size="2">En mode Run, cela marche : si je déplace la 
+zone de séparation centrale, cela agrandit un textbox et diminue le second.</font></p>
+<p><img border="0" src="vsplitc.JPG" width="188" height="162"></p>
+<p><font face="Courier New" size="2"><font color="#0033FF">Margin</font>&nbsp; 
+indique la largeur de la séparation.</font></p>
+<p><font face="Courier New" size="2"><font color="#0033FF">Orientation</font> 
+permet une séparation horizontale ou verticale.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">LayoutPanel</span></font></p>
+<p><font face="Courier New" size="2">VB
+<img border="0" src="v2005.JPG" width="52" height="21"> Framework 2.</font></p>
+<p><font face="Courier New" size="2">
+<font color="#0000FF">P</font>ermettent <b>de positionner</b> les contrôles dans une Form en 
+mode conception. On ne les voit pas en mode Run.</font></p>
+<blockquote>
+  <blockquote>
+<p><font color="#0000FF" face="Courier New" size="2">FlowLayoutPanel: </font>
+<font size="2" face="Courier New">Place les contrôles à droite du précédent, 
+passe 'à la ligne' si nécessaire, c'est génial pour créer plusieurs lignes de 
+label, TextBox, Bouton:</font></p>
+<p><font face="Courier New" size="2"><img border="0" src="vflowlyp.JPG" width="301" height="155"></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">TableLayoutPanel:</font><font size="2" face="Courier New">On 
+crée un tableau de panel, puis on met les contrôles dans les cellules:</font></p>
+<p><font face="Courier New" size="2"><img border="0" src="vtablelyp.JPG" width="367" height="180"></font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4">Comment
+se passer des groupes de contrôles de VB6 qui n'existent plus en VB.Net?</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En VB6</b> on pouvait créer un groupe de
+plusieurs contrôles identiques et les repérer par un Index.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0033FF"><font face="Courier New" size="2">Text</font><font face="Courier New" size="2">e(0),
+Texte(1), Texte(2)..</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+parcourir le groupe, on avait une boucle For Next sur l'index:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0033FF">For
+i=1 To 10</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0033FF">Texte(i).text...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0033FF">Next</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;de
+plus il n'y avait qu'une routine évènement pour l'ensemble du groupe.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0033FF">Sub
+Texte_Click (Index)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Cela
+n'existe plus en VB.Net!!!!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Comment
+donc utiliser un groupe de contrôle en VB.Net?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+1 - Evènement commun.(Comment pallier à la disparition des groupes de contrôles?)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple: 3 cases à 
+cocher permettent de colorer un label en vert rouge ou bleu.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Comment gérer les 
+évènements?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">On peut écrire 3 routines 
+complètes pour chaque case à cocher.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Il est aussi toujours 
+possible dans chacune des 3 procédures CouleurX.checkedChanged de vérifier si la 
+case est cochée et de modifier la couleur.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">C'est plus élégant d'avoir 
+une procédure unique qui, en fonction de la case à cocher qui a déclenché 
+l'évènement, change la couleur.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">On 
+désire donc parfois que l'<b>évènement de plusieurs contrôles différents soit dirigé sur 
+une seule et même procédure</b>.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mais, la notion de groupe de contrôle&nbsp; 
+comme en VB6 n'existe plus!!! </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par contre par l'intermédiaire du Handles, </font>
+<font size="2"><span style="font-family: Courier New">il est possible d'associer 
+plusieurs évènements à une seule procédure:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Private Sub 
+CouleurCheckedChanges (ByVal <b>sender</b> As System.Object, ByVal <b>e</b> As 
+System.EventArgs) </span> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><b>
+<span style="background-color: #FFFFFF">Handles</span></b><span style="background-color: #FFFFFF">
+<b>CouleurVert.CheckedChanged, CouleurRouge.CheckedChanged, 
+CouleurBleu.CheckedChanged</b></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;
+</span></font>
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">End Sub</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Cette procédure est 
+activée quand les cases à cocher CouleurVert CouleurBleu, CouleurRouge changent 
+d'état.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">A noter que <b>Sender</b> 
+est le contrôle ayant déclenché l'évènement et <b>e</b> l'évènement 
+correspondant.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Pour modifier la couleur 
+il faut ajouter dans la procédure:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">Select 
+Case sender</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; 
+Case CouleurRouge</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">..</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">ou</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">Select Case True<br>
+&nbsp;&nbsp; Case sender Is CouleurRouge<br>
+.<br>
+End Select</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Enfin 
+la ligne suivante marche !</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">If sender Is&nbsp; 
+CouleurRouge Then...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">2 - Comment travaillez sur 
+plusieurs contrôles</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">.(Comment 
+pallier à la disparition des groupes de contrôles?)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si j'ai une interface utilisateur avec 20 
+Textbox, comment modifier la couleur de fond des 20 Textbox?</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(En VB6 on créait un groupe de contrôle, cela 
+n'existe plus en VB.net!!)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Solution 1</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">TextBox1.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">TextBox2.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">TextBox3.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">.....&nbsp; !!!!!!Bof</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Solution 2</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mettre les 20 TextBox dans un Panel 
+(invisible); la collection <font color="#0033FF">Controls</font> du Panel 
+contient tous les contrôles contenus dans le panel, on utilise cette collection 
+pour atteindre tous les textbox:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">Dim i As Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">For i=0 to 
+Panel1.Controls.Count</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Panel1.Controls(i).BackColor=Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">Next</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">ou</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">For Each TB As TextBox in 
+Panel1.Controls</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+TB.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">Next</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+ou</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">S'il n'y a pas que des TextBox dans le Panel 
+et qu'on ne veut modifier que les TextBox:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">For Each TB As Control in 
+Panel1.Controls</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; If TypeOf (TB)= 
+TextBox then&nbsp;&nbsp;&nbsp; </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+TB.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0033FF">&nbsp;&nbsp;&nbsp; End if</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0033FF" face="Courier New" size="2">Next</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">ou</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si les textbox se nomme 'TexteBox1',
+'TextBox2', 'TextBox2'....</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF"><font face="Courier New" size="2">D</font><font face="Courier New" size="2">im
+i As Integer</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp; For i=1 to 8</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Panel1.controls<span>(</span>&quot;TextBox&quot;+cstr<span>(</span>i<span>))</span>.BackColor= Color.Red</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2" color="#0000FF">Next&nbsp;&nbsp;&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Solution 3</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mettre les 20 TextBox dans un tableau:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Créer les textbox suivantes:&nbsp; <font color="#0000FF">TextBox0,
+TextBox1,...</font>
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'En haut du module</font></p>
+<div style="width: 1070; height: 19">
+  <font face="Courier New" size="2" color="#0000FF">Dim Textes(19) As TextBox&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</div>
+<div>
+  <font face="Courier New" size="2" color="#0000FF">&nbsp;</font>
+</div>
+<div>
+  <font face="Courier New" size="2">'puis dans le form_load</font><font face="Courier New" size="2" color="#0000FF"><br>
+  Textes(0) = TextBox0<br>
+  Textes(1) = TextBox1<br>
+  Textes(2) = TextBox2<br>
+  ...</font>
+  <p><font face="Courier New" size="2" color="#0000FF">'</font><font face="Courier New" size="2">ensuite,
+  on peut bien utiliser la syntaxe de&nbsp;VB 6.0</font></p>
+  <p><font color="#0000FF"><font face="Courier New" size="2">Dim i As integer</font><font face="Courier New" size="2"><br>
+  For i = 0 To 19<br>
+  &nbsp;Dim MyTexte As Integer= Textes(i).Text<br>
+  ..<br>
+  Next</font></font></p>
+</div>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Noter
+qu'on a créer un tableau de TexBox, si on utilise un tableau d'objet, il faut
+caster l'objet en textbox pour utiliser sa propriété text:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0033FF"><font face="Courier New">Dim
+Textes(19) As Object</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0033FF">Textes(1)
+= TextBox1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0033FF">Textes(2)
+= TextBox2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0033FF">...</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0033FF">Dim
+i As Integer</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0033FF">For
+i = 1 To 2</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#0033FF" size="2">Dim
+MyTexte As String = CType(Textes(i), TextBox).Text</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0033FF">Next</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="v3-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:58 GMT -->
+</html>

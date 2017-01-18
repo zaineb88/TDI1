@@ -1,0 +1,566 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-100.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net programmation fonctionnelle objet</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-90.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.100</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Approche 'fonctionnelle', approche 'Objet'.</font></b></td>
+    <td width="9%" height="76"><a href="v5-110.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vfonction.JPG" width="128" height="71"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On a vu qu'on pouvait 
+créer des programmes avec des Sub et des Functions mais aussi avec des objets. 
+Détaillons.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">L'approche fonctionnelle</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Elle découpe le problème en fonctions:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque fonction effectue une tache précise. Avec l'aide de variables et de 
+structures.</font></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">La base de la réflexion est effectuée autour des traitements. Le concepteur 
+considère ainsi les tâches que doit accomplir le programme, en décomposant celui-ci en une série de tâches 
+simples (approche descendante) ou en le construisant par composition de 
+traitements (fonctions) disponibles (approche ascendante).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a donc </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="57%" id="AutoNumber6" height="60">
+  <tr>
+    <td width="100%" height="60" bgcolor="#C0C0C0">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>&nbsp;</b></font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Une logique de classification de données</b> 
+en&nbsp; variables , structures.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Une logique de traitement:</b> les Fonctions et Sub 
+contiennent le code.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+    </td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Calcul du salaire d'un employé. (Nombre 
+d'heure * Taux horaire)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Il faut écrire une Fonction CalculSalaire:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public Function CalculSalaire(Taux 
+As Single, Heure As Single) As Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Return 
+Taux*Heure</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Function</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour calculer un salaire il faut appeler la 
+fonction avec les bons paramètres.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim TauxHoraire As Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim HeuresTravaillées As 
+Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim Salaire As Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">TauxHoraire=30</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">HeureTravaillées=70</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;Salaire=<b>CalculSalaire</b>(TauxHoraire,HeuresTravaillées)
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour structurer le programme, on utilise des '<b>Modules Standards</b>' contenant les 
+divers fonctions Un module contient par exemple </font>
+<font color="#0000FF" face="Courier New" size="2">Function CalculSalaire</font><font face="Courier New" size="2">. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Le point d'entrée du programme</b> est une 
+procédure Main():</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Module </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">module1</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<blockquote>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Sub </font>
+<font face="Courier New" size="2">main()</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">....Créer une instance 
+du formulaire de démarrage et l'ouvrir</p>
+</font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Sub</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">Public Function CalculSalaire(Taux 
+As Single, Heure As Single) As Single</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Return 
+Taux*Heure</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font color="#0000FF" face="Courier New" size="2">End Function</font></p>
+</blockquote>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Module</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on utilise des <b>variables globales 
+visible dans la totalité du programme (c'est 
+à éviter)</b>, 
+il faut les mettre dans un module standard et les définir comme Public:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: Nom du programme et version du 
+programme.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple nom et version du programme:</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Module </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">module1</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<blockquote>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public nomProgramme As 
+String= &quot;Calcul Salaire&quot;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public versionProgramme 
+As String= &quot;1.2&quot;</p>
+  </font>
+<font face="Courier New" size="2">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">....</p>
+</font>
+</blockquote>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Module</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ainsi le nom du programme et sa version sont 
+accessibles partout:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans un formulaire on peut afficher le nom du 
+programme dans la barre supérieure.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Me.Text= nomProgramme</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">Cette accessibilité&nbsp; semble un avantage, en fait c'est dangereux: n'importe 
+quelle procédure peu modifier les données.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour structurer les données</b>, on peut 
+utiliser les <font color="#0000FF">Structures</font>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: créons une structure 'Salarié'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Structure Salarié</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public Nom As String</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Public TauxHoraire As Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Public HeuresTravaillées As 
+Single</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Structure</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite pour avoir 100 salariés</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim Salaries(100) As Salarié</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On pourra utiliser <font color="#0000FF">
+Salaries(1).Nom </font>ou <font color="#0000FF">Salaries(2).TauxHoraire</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On verra plus loin qu'utiliser des variables&nbsp; 
+dites 'globales'( visible partout) n'est pas une bonne chose, il vaut mieux 
+créer des <b>procédures d'accès aux données</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Plutôt que d'écrire <font color="#0000FF">
+Salaries(1).Nom=&quot;Lulu&quot; </font>il est préférable d'écrire une procédure 
+<font color="#0000FF">SalariesAdd()</font> qui ajoute un salarié avec son nom dans le tableau.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Approche Objet</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Elle est centrée sur les Objets (et non sur 
+les taches).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Elle nécessite de créer une Classe (le moule).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec l'aide de la classe on peut déclarer des 
+objets.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque Objet à des propriétés, des méthodes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="57%" id="AutoNumber5" height="60">
+  <tr>
+    <td width="100%" height="60" bgcolor="#C0C0C0">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>&nbsp;</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">&nbsp;</font></b><font face="Courier New" size="2"><b>Les&nbsp; données</b> sont dans les propriétés de 
+l'objet.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>&nbsp;Le traitement</b>&nbsp; est implémenté dans les méthodes de l'objet.</font></p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Calcul du salaire d'un employé. (Nombre 
+d'heure * Taux horaire)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Il faut écrire dans un module de Class une 
+Class Employé:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public Class Employé</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Private T As Single&nbsp;&nbsp;&nbsp;
+</font><font color="#008000">&nbsp;'propriétés privées à la classe pour stocker 
+les heures et taux horaires</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Private H As Single</font></span><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff"><br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Property Taux As Single
+</font><font face="Courier New" size="2" color="#008000">'propriété Taux</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Get<br>
+&nbsp;&nbsp;&nbsp; Return T<br>
+End Get<br>
+Set(By Val Value)<br>
+&nbsp;&nbsp;&nbsp; T=value<br>
+End Set</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Property</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Property Heure As 
+Single </font><font face="Courier New" size="2" color="#008000">'propriété heure</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Get<br>
+&nbsp;&nbsp;&nbsp; Return H<br>
+End Get<br>
+Set(By Val Value)<br>
+&nbsp;&nbsp;&nbsp; H=value<br>
+End Set</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Property</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Property Salaire As 
+Single </font><font face="Courier New" size="2" color="#008000">'méthode Salaire</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Get<br>
+&nbsp;&nbsp;&nbsp; Return T*H<br>
+End Get<br>
+End Property</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour calculer un salaire il faut créer un 
+objet Employé,donner les bonnes valeurs aux propriétés et appeler la méthode 
+salaire.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim UnEmployé As new Employé</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">UnEmployé.Taux=30</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">UnEmployé.Heure=70</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;Dim Salaire As Single =<b>UnEmployé.Salaire</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">On voit donc qu'il faut créer des 'Modules 
+de Classe' pour y mettre les nouvelles classes.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On évitera les modules standards qui ne sont 
+pas dans l'esprit 'Objet'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Le point d'entrée du programme</b> pourrait être 
+une Classe statique (Classe ne nécessitant pas d'instancier un objet):</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public Class </font>
+<font FACE="Courier New" SIZE="2">main2</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public Shared Sub </font>
+<font face="Courier New" size="2">main()</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">...</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Sub</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Class</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on utilise des <b>variables qui doivent 
+être accessibles</b>, il faut les mettre dans une Classe et les définir comme Shared:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ainsi une variable partagée d'une classe (Shared) 
+a non seulement une valeur commune à toutes les instances de la classe, mais en 
+plus on peut travailler directement sur la Classe (sans instancier):</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple nom et version du programme:</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Class MonProgramme</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<blockquote>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public Shared 
+nomProgramme As String= &quot;Calcul Salaire&quot;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Public Shared 
+versionProgramme As String= &quot;1.2&quot;</p>
+  </font>
+<font face="Courier New" size="2">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">....</p>
+</font>
+</blockquote>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End Class</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ainsi le nom du programme et sa version sont 
+accessibles partout:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans un formulaire on peut afficher le nom du 
+programme dans la barre supérieure.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Me.Text= 
+MonProgramme.nomProgramme</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut&nbsp; créer une classe <b>qui 
+hérite</b> des propriétés d'une autre classe:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans notre exemple en programmation Objet, on 
+créera une Class 'Patron' qui hérite de la classe 'Employé', mais dont la 
+méthode Salaire sera redéfinie (</font><font face="Courier New" size="2" color="#0000FF"> </font>
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff"><b>Overrides</b></span></font><font face="Courier New" size="2" color="#0000FF"> 
+)</font><font face="Courier New" size="2">. (En programmation fonctionnelle il faudra écrire 
+une nouvelle fonction SalairePatron).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public Class Patron</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF"></font><font size="2"><font color="#0000FF">Inherit</font>
+</font>
+<font color="#0000FF" face="Courier New" size="2">Employé</font></p>
+<blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff"><br>
+</span></font>
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Property </font></span>
+<font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff"><b>Overrides</b></span></font><font face="Courier New" size="2" color="#0000FF">&nbsp; </font>
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Salaire As 
+Single </font><font face="Courier New" size="2" color="#008000">'méthode Salaire</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Get<br>
+&nbsp;&nbsp;&nbsp; Return T*H<br>
+End Get<br>
+End Property</span></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour gérer un ensemble, un groupe de données</b>, 
+on utilise une classe encapsulant une collection privée d'objets 
+voir chapitre 5-7<b>.</b></font></p>
+<p class="code"><font face="Courier New" color="#0000ff" size="2">Public Class 
+LesEmployes<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b><!-- #EndLibraryItem -->Private 
+maCol As ArrayList</b><br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+Sub New()<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol 
+= New ArrayList()&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'cela crée une 
+ArrayList</font><font face="Courier New" color="#0000ff" size="2"><br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+Sub<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" --><br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+Function Add(ByVal LEmploy As Employe) As Employe&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;...<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+Function<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+Property Item(ByVal lIndex As Integer) As Employe&nbsp;<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+Property<br>
+<br>
+<!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><br>
+End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On rappelle que les classes peuvent contenir 
+des méthodes, des variables publiques ou privées, mais elles sont 'PAR REFERENCE'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Les partisans de la programmation Objet auront 
+tendance à utiliser exclusivement les classes du Framework plutôt que les 
+instructions de Microsoft.VisualBasic dans leur code.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Conclusion</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La programmation&nbsp; fonctionnel se focalise 
+sur les <b>actions à effectuer</b>, alors que la programmation Objet se focalise 
+sur <b>les données</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La méthode fonctionnelle est plus intuitive, 
+on a l'impression d'être plus proche de la réalité 'physique', 
+le code est probablement plus rapide.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'emploi d'objet permet une abstraction plus 
+importante, une puissance inégalée grâce à l'héritable, aux surcharges.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut être puriste et ne programmer qu'en 
+fonctionnelle ou ne programmer qu'en&nbsp; objet. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Visual Basic permet de mélanger les 2 
+approches.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-90.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-110.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-100.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

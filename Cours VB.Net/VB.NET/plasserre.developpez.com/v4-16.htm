@@ -1,0 +1,278 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net le registre registry</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    x<img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-15.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.16</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Utiliser le registre.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><p><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p><font face="Courier New" size="2"><b>Le Registre</b> est un fichier de <b>
+stockage des informations relatives aux applications, aux utilisateurs et aux 
+paramètres système</b>. Les applications peuvent utiliser le Registre pour 
+stocker les informations à conserver après leur fermeture et accéder à ces mêmes 
+informations après leur rechargement. On peut stocker les paramètres de 
+taille, couleur, les positions d'affichage ou la taille de la fenêtre. Vous 
+pouvez contrôler ces paramètres pour chaque utilisateur en stockant les 
+informations qui lui correspondent à un emplacement différent du Registre.</font></p>
+<font face="Courier New" size="2">Le dictionnaire de l'informatique Microsoft (<i>Microsoft
+Computer Dictionary</i>, cinquième édition), définit le Registre&nbsp;:</font>
+<div class="indent">
+  <font face="Courier New" size="2"><b>Base de données hiérarchique centrale,
+  utilisée dans Microsoft Windows&nbsp;9x, Windows&nbsp;CE, Windows&nbsp;NT et
+  Windows&nbsp;2000, permettant de stocker les informations nécessaires pour
+  configurer le système pour un ou plusieurs utilisateurs, programmes et périphériques
+  matériels, les profils des utilisateurs, les applications installées sur
+  l'ordinateur et les types de documents qu'elles peuvent créer, les paramètres
+  de la feuille de propriétés pour les dossiers et les icônes des
+  applications, le matériel du système et les ports utilisés.</b><br>
+  <br>
+  Le Registre remplace la plupart des fichiers texte .ini utilisés dans les
+  fichiers de configuration Windows&nbsp;3.x et MS-DOS, tels que Autoexec.bat et
+  Config.sys. Bien que le Registre soit commun à&nbsp; Windows 9x Xp Vista ,
+  il&nbsp; y a certaines différences.</font>
+</div>
+<p><font face="Courier New" size="2">voir <a href="http://support.microsoft.com/kb/256986/fr">Informations
+Microsoft sur le registre</a></font></p>
+<p><font face="Courier New" size="2">On peut modifier directement le registre 'à 
+la main' en lançant le logiciel Regedit mais un programme VB peut aller écrire 
+ou lire dans le registre.</font></p>
+<p><font face="Courier New" size="2">Le registre est composé de Clé, sous-clé et 
+valeur. (une valeur a 'un nom de valeur' et une valeur); cela forme une 
+arborescence.</font></p>
+<p><font face="Courier New" size="2">Une clé donnée peut avoir des sous-clés. 
+Chaque clé peut également avoir plusieurs valeurs qui servent à stocker les 
+informations relatives à l'application qui vous intéresse. Chaque valeur 
+contient des informations spécifiques qui peuvent être extraites ou mises à 
+jour (noms de valeur et valeurs). </font></p>
+<p><font face="Courier New" size="2">Vous remarquerez que les informations 
+stockées dans le Registre sont accessibles aux autres applications et 
+utilisateurs, aussi il est fortement déconseillé d'y mettre des codes d'accès.
+</font></p>
+<p><font face="Courier New" size="2">Microsoft nous donne les <b>Clés de base</b>, 
+(elles sont en lecture seule) Les clés de base sont le premier niveau de 
+l'arborescence des clés:</font></p>
+<p><font face="Courier New" size="2"><font color="#008000">CurrentUser </font>
+<br>
+Stocke les informations relatives aux préférences de l'utilisateur. <br>
+<font color="#008000">LocalMachine </font><br>
+Stocke les informations de configuration pour l'ordinateur local. <br>
+<font color="#008000">ClassesRoot </font><br>
+Stocke les informations relatives aux types (et classes) et à leurs propriétés.
+<br>
+<font color="#008000">Users </font><br>
+Stocke les informations relatives à la configuration utilisateur par défaut. <br>
+<font color="#008000">PerformanceData </font><br>
+Stocke les informations relatives aux performances pour les composants 
+logiciels. <br>
+<font color="#008000">CurrentConfig </font><br>
+Stocke les informations concernant le matériel qui ne sont pas spécifiques à 
+l'utilisateur. <br>
+<font color="#008000">DynData </font><br>
+Stocke les données dynamiques.</font></p>
+<pre class="code"><b>Pour voir les clés de base et l'arborescence des clés exécutons 'Regedit':</b></pre>
+<pre class="code">Menu 'Démarrer'-&gt; menu 'Exécuter' taper  'Regedit'</pre>
+<pre class="code"><img border="0" src="vregistre.JPG" width="650" height="232"> </pre>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On voit ici les 2 <b>premières clés de base</b> 
+HKEY_CLASSES_ROOT et HKEY_CURRENT_USER, on a développé <b>les sous-clés</b> de 
+HKEY_CURRENT_USER qui sont 'AppEvents', 'AutoSetup'..., &quot;Noms&quot;. La sous-clé 
+'Noms' à un <b>nom de valeur</b> nommé 'Nom' qui contient la <b>valeur</b> 
+'Philippe'.</font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Pour des raisons de sécurité, il est 
+préférable d'écrire des données dans le dossier utilisateur (</font><font size="2"><code class="ce"><font face="Courier New">Microsoft.Win32.Registry.CurrentUser</font></code><font face="Courier New">) 
+plutôt que sur l'ordinateur local (</font><code class="ce"><font face="Courier New">Microsoft.Win32.Registry.LocalMachine</font></code></font><font size="2" face="Courier New">).</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Attention, c'est très 
+dangereux de modifier des clés de registre: une erreur sur une clé important et 
+une application ou Windows plante!!</font></b></p>
+<p><font face="Courier New" size="2">L'auteur de ce cours décline toute 
+responsabilité.... .... .... ....bla bla bla</font></p>
+<p>&nbsp;</p>
+<pre class="code"><font face="Courier New"><b>Comment ça marche?</b></font></pre>
+<pre class="code"><font face="Courier New">L'objet <font color="#0000FF">RegistryKey</font> représente <b>un nœud</b> de niveau clé dans le Registre</font></pre>
+<pre class="code"><font face="Courier New">On instance un noeud:</font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">Dim key As Microsoft.Win32.RegistryKey</font></pre>
+<pre class="code"><font face="Courier New"><b>La classe Registry fourni les Clés de base </b>(CurrentUser, LocalMachine, ClassesRoot, Users, CurrentConfig...)</font></pre>
+<pre class="code"><font face="Courier New">On met par exemple dans key le noeud CurrentUser:</font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">key = Microsoft.Win32.Registry.CurrentUser</font></pre>
+<pre class="code"><font face="Courier New">Ensuite on peut:</font></pre>
+<blockquote>
+  <pre class="code"><font face="Courier New">Créer une sous-clé<font color="#0000FF"> </font>avec <font color="#0000FF">.CreateSubKey</font></font></pre>
+  <pre class="code"><font face="Courier New">Ouvrir une sous-clé avec <font color="#0000FF">.OpenSubKey</font></font></pre>
+  <pre class="code"><font face="Courier New">Ecrire ou lire une valeur avec<font color="#0000FF"> .GetValue ou .SetValue</font></font></pre>
+  <pre class="code"><font face="Courier New">Effacer une valeur avec <font color="#0000FF">.DeleteValue</font></font></pre>
+</blockquote>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font face="Courier New"><b>Création d'une Key, écriture de valeur.</b></font></pre>
+<pre class="code">Cet exemple ajoute le nom de valeur &quot;Nom&quot; et la valeur &quot;Philippe&quot; au Registre de l'utilisateur en cours.</pre>
+<pre class="code">Cela sous la clé &quot;Noms&quot; dans HKEY_CURRENT_USER du Registre.</pre>
+<pre class="code">Exemple<font face="Courier New">
+<font color="#0000FF">Dim key As Microsoft.Win32.RegistryKey
+key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey(&quot;Noms&quot;)
+key.SetValue(&quot;Nom&quot;, &quot;Philippe&quot;)
+</font></font></pre>
+<pre class="code"><b>Pour voir dans le registre le résultat:</b></pre>
+<pre class="code">Menu 'Démarrer'-&gt; menu 'Exécuter' taper  'Regedit'</pre>
+<pre class="code"><img border="0" src="vregistre.JPG" width="650" height="232"> </pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font face="Courier New">on obtient dans le registre: </font></pre>
+<pre class="code"><font face="Courier New"><b>Lecture de valeur.</b></font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">Dim key As Microsoft.Win32.RegistryKey
+key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(&quot;Noms&quot;)
+Dim name As String = CType(key.GetValue(&quot;Nom&quot;), String)
+</font></pre>
+<p><font size="2" face="Courier New">La méthode <b>GetValue</b> retourne un <b>
+Object</b>. Si votre code comporte </font><font size="2"><code class="ce">
+<font face="Courier New"><font color="#0000FF">Option Strict O</font>n</font></code></font><font size="2" face="Courier New">, 
+vous devez effectuer un cast de la valeur de retour vers le type de données que 
+vous avez placé précédemment dans la valeur.</font></p>
+<p><font face="Courier New" size="2"><b>GetValue</b> retourne <b>Nothing</b> si 
+la valeur n'existe pas.</font></p>
+<pre class="code"><font face="Courier New">
+<b>Supprimer la Key</b></font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF">Dim key As Microsoft.Win32.RegistryKey
+key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(&quot;Noms&quot;, True)
+key.DeleteValue(&quot;Nom&quot;)
+</font></pre>
+<p><font size="2" face="Courier New">Lorsque vous changez le paramètre <b>True</b> 
+par <b>False</b>, la clé est accessible en lecture seule et vous ne pouvez pas 
+la supprimer à l'aide de la variable</font><font size="2"><code class="ce"><font face="Courier New"> 
+key</font></code></font><font size="2" face="Courier New">.</font></p>
+<pre class="code"><font face="Courier New">Bien sur on peut tout faire: ajouter, supprimer une Clé, une valeur, voir la liste des sous-clé, la liste des valeurs...</font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b><font color="#FF0000">En VB 2005</font></b> la Classe <font color="#0000FF">My.Computer.Registry</font> permet un accès à la base de registre<font face="Courier New">:</font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">Dim key As RegistryKey = My.Computer.Registry.ClasseRoot </font><font face="Courier New">pointe sur la classe de base ClassRoot.</font></pre>
+<p><font face="Courier New" size="2">Pour un noeud on a les propriétés:
+<font color="#0000FF">Name</font>, <font color="#0000FF">SubKeyCount</font>;si 
+ce dernier est supérieur à 0 <font color="#0000FF">GetSubKeyNames</font> 
+retourne un tableau de chaînes contenant le nom des sous-clés. On peut ensuite 
+ouvrir le sous nœud grâce à <font color="#0000FF">OpenSubKey</font>.</font></p>
+<p><font face="Courier New" size="2">Si <font color="#0000FF">ValueCount</font>&nbsp; 
+est supérieur à 0, le noeud contient des valeurs&nbsp; <font color="#0000FF">
+GetValueNames</font> retourne un tableau de chaîne contenant le nom des valeurs. 
+On peut ensuite lire la valeur avec&nbsp; <font color="#0000FF">GetValue</font>.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>N'oublier pas de fermer tous les objets 
+RegistryKey (ouverts ou crées) par</b> <font color="#0000FF">Close</font>.</font></p>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b><font face="Courier New" size="3">Exemples pratiques:</font></b></pre>
+<pre class="code"><b><font face="Courier New" size="2">Exemple 1:</font></b></pre>
+<pre class="code"><font face="Courier New" size="2"><b>Word est-il installé? </b>il faut voir si le registre contient HKEY_CLASSES_ROOT\Word.Application</font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">Dim key As RegistryKey = My.Computer.Registry.ClasseRoot.OpenSubKey (&quot;Word.Application&quot;)</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF">If key Is Nothing: </font><font face="Courier New">Word n'est pas installé.</font></pre>
+<font SIZE="2" face="Courier New">
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b>Exemple 2:</b></pre>
+<pre class="code"><b>Lire rapidement une valeur? (sans instanciation) </b></pre>
+<pre class="code"><font color="#0000FF" face="Courier New">Dim valeur As String = My.Computer.Registry.GetValue (&quot;</font>HKEY_CLASSES_ROOT\<font face="Courier New">Noms</font><font color="#0000FF" face="Courier New">&quot;,&quot;nom&quot;,&quot;&quot;)</font></pre>
+<p>3 paramètres: nom de la clé, nom de la valeur (mettre NOTHING pour la valeur 
+par défaut), valeur à retourner si pas de valeur.</p>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><b>Exemple 3:</b></pre>
+<pre class="code"><b>Modifier rapidement une valeur?  </b></pre>
+<p>Il existe&nbsp; <font color="#0000FF">SetValue</font>. </p>
+<p>Avant de l'utiliser il faut ouvrir un registryKey en écriture:</p>
+<p><font color="#0000FF" face="Courier New">Dim rc As RegistryKey = 
+My.Computer.ClasseRoot.OpenSubKey (&quot;</font><font face="Courier New">Noms</font><font color="#0000FF" face="Courier New">&quot;,True) </font>
+<font face="Courier New">'True permet l'écriture</font></p>
+<p><font color="#0000FF">rc.SetValue(&quot;Nom valeur&quot;, valeur)</font></p>
+<p>Il existe<font color="#0000FF"> </font>enfin<font color="#0000FF">&nbsp; 
+DeleteValue, DeleteSubKey </font>et<font color="#0000FF"> DeleteSubTreeKey..</font></p>
+<p>&nbsp;</p>
+<p><b>Exemple 4:</b></p>
+<p>Ajouter une ligne dans le menu contextuel de Windows: clique droit&nbsp; sur 
+un raccourci ou sur un fichier dans l'explorer. Cela ouvre un menu contextuel 
+avec une ligne 'MonProgram'. Si on clique dessus, on lance l'exécutable 
+'MonProg.exe' et on charge le fichier pointé.</p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+regKey </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+RegistryKey</font></p>
+<p><font color="#0000FF" face="Courier New">regKey = </font></font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.Registry.ClassesRoot.CreateSubKey(&quot;*\Shell\MonProgram\command&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.Registry.SetValue(&quot;HKEY_CURRENT_USER\*\Shell\MonProgram\command&quot;, 
+&quot;&quot;, </font><font SIZE="2" COLOR="#0000ff">My</font></font><font SIZE="2" color="#0000FF"><font face="Courier New">.Application.Info.DirectoryPath 
+&amp; &quot;\&quot; &amp; &quot;MonProg.exe -o&quot; &amp; Chr(34) &amp; &quot;%L&quot; &amp; Chr(34))</font></p>
+</font>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font face="Courier New">Si MonProg.exe est en VB, il faut récupérer au démarrage le nom du fichier (voir 4-1)</font></pre>
+<pre class="code">&nbsp;</pre>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-15.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-17.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-16.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+</html>

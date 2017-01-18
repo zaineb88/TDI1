@@ -1,0 +1,651 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:36 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net application multidocument MDI</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.4</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Travailler sur une fenêtre 
+    multi document.</font></b></td>
+    <td width="9%" height="76"><a href="v4-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment créer un 
+programme MDI </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">(Multi Document 
+Interface)</span><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700"> 
+en VB 2003 puis en VB 2005 
+?</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+<font size="4" color="#0000FF">Comprendre les programmes MDI&nbsp;:</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">L’exemple de Word&nbsp;: la 
+fenêtre principale (fenêtre MDI) contient les menus en haut, on peut ouvrir 
+plusieurs documents dans des <b>fenêtres filles</b>.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Ci dessous l'exemple de 
+LDF (Programme de comptabilité écrit par l'auteur):</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+<img border="0" src="vmdi.jpg" width="282" height="273"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+<font face="Courier New" size="2">On a une fenêtre MDI (conteneur) contenant 2 fenêtres filles affichant 
+chacune 
+une année de comptabilité.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans VB.NET, un <b>MDIForm</b> </font>
+<span style="font-size: 10.0pt; font-family: Courier New">(fenêtre principale MDI) </span><font face="Courier New" size="2">est une fenêtre quelconque dont la 
+propriété <font color="#0000FF">:</font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">IsMDIContainer = True.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans la fenêtre fille, la propriété
+<font color="#0000FF">MDIParent</font> indique le conteneur (C'est à dire le nom de la fenêtre MDI)&nbsp;.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Les applications MDI peuvent avoir plusieurs 
+conteneurs MDI.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Une fenêtre principale MDI peut contenir 
+plusieurs fenêtres filles de même type ou de type différente.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font color="#0000FF" size="5"><span style="background-color: #C0C0C0">A - En VB 
+2003</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<font size="4" color="#0000FF">Création de la fenêtre conteneur parent&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<span style="font-family: Courier New"><font size="2">Exemple d'un programme MDI.</font></span></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On va créer une Form1 qui 
+est le conteneur.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une Form2 qui est la 
+fenêtre fille.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans Form1 le menu 
+principal contient la ligne '&amp;Nouvelle' qui crée une nouvelle instance de la 
+fenêtre fille.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Créer la fenêtre Form1&nbsp;:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la fenêtre <b>Propriétés</b>, affectez la 
+valeur <b>True</b> à la propriété <font color="#0000FF">IsMDIContainer<b>.</b></font> Ce faisant, vous 
+désignez la fenêtre comme le <b>conteneur MDI</b> des fenêtres enfants. </font>
+</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span><font face="Courier New" size="2"><b>Remarque</b>&nbsp;&nbsp;&nbsp;Affecter 
+la valeur <b>Maximized</b> à la propriété <b>WindowState</b>, car il est plus 
+facile de manipuler des fenêtres MDI enfants lorsque le formulaire parent est 
+grand. Sachez par ailleurs que le formulaire MDI parent prend la couleur 
+système (définie dans le Panneau de configuration Windows).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ajouter les menus du conteneur&nbsp;:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">A partir de la <b>boîte à outils</b>, faire 
+glisser un contrôle <b>MainMenu</b> sur le formulaire. Créer un élément de menu 
+de niveau supérieur en définissant la propriété <b>Text</b> avec la valeur <b>
+&amp;File</b> et des éléments de sous-menu appelés <b>&amp;Nouvelle</b> et <b>&amp;Close</b>. 
+Créer également un élément de menu de niveau supérieur appelé <b>&amp;Fenêtre</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la liste déroulante située en haut de la 
+fenêtre <b>Propriétés</b>, sélectionnez l'élément de menu correspondant à 
+l'élément <b>&amp;Fenêtre</b> et affectez la valeur <b>true</b> à la propriété <b>
+MdiList</b>. Vous activez ainsi le menu <b>Fenêtre</b> qui permet de tenir à 
+jour une liste des fenêtres MDI enfants ouvertes et indique à l'utilisateur par une coche la 
+fenêtre enfant active.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est 
+conseillé de créer <b>un module standard </b>&nbsp;qui contient une procédure Main qui affiche la fenêtre principale:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Module StandartGénéral</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Public FrmMDI as Form1</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Sub Main()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; FrmMDI.ShowDialog()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">End Module</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Noter bien que <b>FrmMDI</b> est donc la 
+fenêtre conteneur et est <b>Public</b> donc accessible à tous.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<font size="4">Création</font><font size="4"> des fenêtres filles&nbsp;:</font></span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour créer une fenêtre fille, il suffit de 
+donner à la propriété <font color="#0000FF">MDIParent</font><b> d'une fenêtre</b> le nom de la fenêtre 
+conteneur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dessiner dans Form2 les objets nécessaire dans 
+la fenêtre fille.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Comment créer une instance de la fenêtre 
+fille à chaque fois que l'utilisateur clique sur le menu '&amp;Nouvelle'?</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">En premier lieu, déclarez dans le haut du formulaire Form1 une variable 
+nommée<b> MDIFilleActive</b> qui contient&nbsp; la fenêtre fille active.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim MDIFilleActive As Form2</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La routine 
+correspondant au <font color="#0000FF">MenuItem &amp;Nouvelle</font>&nbsp; (dans 
+la fenêtre MDI) doit créer une 
+instance de la fenêtre fille&nbsp;:</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Protected Sub MDIChildNouvelle_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles MenuItem2.Click</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp;
+</span> </font><span style="background-color: #FFFFFF">MDIFilleActive<font color="#0000FF"> = New </font>Form2</span><font color="#0000FF"><span style="background-color: #FFFFFF">()</span></font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+&nbsp;&nbsp;</font> 'Indique à la fenêtre fille son ‘parent’.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+&nbsp;&nbsp;  </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+MDIFilleActive</span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New"><span style="background-color: #FFFFFF">.MdiParent</span><span style="background-color: #FFFFFF"> = Me</span></span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+&nbsp;&nbsp; </font>'Affiche la fenêtre fille</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+&nbsp;&nbsp;  </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+MDIFilleActive</span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New"><span style="background-color: #FFFFFF">.Show</span><span style="background-color: #FFFFFF">()</span></span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight:700"><font size="4">
+<font color="#0000FF"><span style="background-color: #C0C0C0">Comment connaître 
+la fenêtre fille active?</span></font>&nbsp;</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand on en a ouvert plusieurs?</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">La fenêtre fille active est dans
+<font color="#0000FF">Me.ActiveMdiChild </font>du conteneur</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment voir s'il existe une fenêtre active?</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">If Not Me.ActiveMdiChild Is Nothing 
+then&nbsp;</span>&nbsp;&nbsp; </font><font face="Courier New" size="2">'elle existe</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">En&nbsp; mettant dans la 
+variable <b>MDIFilleActive la fenêtre active, </b>on est sûr de l'avoir toujours 
+à disposition: pour cela dans la procédure <b>Form1_MdiActivate de la fenêtre 
+MDI </b> (qui se 
+produit à chaque fois que l'on change de fenêtre fille) je récupère <b>
+Me.ActiveMdiChild </b>qui retourne la fenêtre fille active.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans Form1</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Private Sub 
+Form1_MdiChildActivate..</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+MDIFilleActive=Me.ActiveMdiChild</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Il faut comprendre que peut 
+importe le nom de la fenêtre fille active, on sait simplement que la fenêtre 
+fille active est dans <b>MIDFilleActive</b>, variable que l'on utilise pour 
+travailler sur cette fenêtre fille.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" color="#0000FF" size="4">
+<span style="background-color: #C0C0C0">Comment avoir accès aux objets de la 
+fenêtre fille à partir du conteneur?</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">De la fenêtre conteneur j'ai accès aux objets 
+de la fenêtre fille par l'intermédiaire de la variable <font color="#0000FF">MDIFilleActive</font> 
+précédemment mise à jour; par exemple le texte d'un label:</font><font face="Courier New" size="2" color="#0000FF">
+</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;<span style="background-color: #FFFFFF">MDIFilleActive.label1.text</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2">C<b>omment
+avoir accès à des éléments de cette fenêtre fille</b>, une sub
+Affichetotaux par exemple à partir de </font><span style="background-color: #FFFFFF"><font face="Courier New" size="2"><font color="#0000FF">ActiveMdiChild</font></font></span><font face="Courier New" size="2">:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2">Si
+me tape
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">
+Me.ActiveMdiChild.AfficheTotaux </font>cela plante!!&nbsp; (car ActiveMdiChild
+est une instance de la classe Form)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><span style="background-color: #FFFFFF"><font face="Courier New" size="2">Il
+faut écrire:<font color="#0000FF"> <font COLOR="#0000ff">CType</font>(ActiveMdiChild,
+Form2).Affichetotaux() </font></font></span><font face="Courier New" size="2">
+<span style="background-color: #FFFFFF">(car il faut convertir ActiveMdiChild en
+classe Form2)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Comment parcourir 
+toutes les fenêtres filles?</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">La collection <b>MdiChildren</b> contient 
+toutes les fenêtres filles, on peut les parcourir:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim ff As Form2</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">For Each ff In Me.MdiChildren</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">...</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Next</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><span style="background-color: #FFFFFF"><font size="2" face="Courier New">Cela
+est valable s'il n'y a qu'un type de formulaire permettant de créer des
+formulaires fils (Form2 par exemple)</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><span style="background-color: #FFFFFF"><font size="2" face="Courier New">Mais
+si on a 2 formulaires Form1 et Form2 cela se complique.</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2"><font color="#0000FF">dim
+i_form as Form </font><font color="#000000">' on utilise une variable Form
+:formulaire&nbsp;</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2"><font color="#0000FF">dim
+i_form1 as form1<br>
+dim i_form2 as form2<br>
+<br>
+For Each i_form&nbsp; In Me.mdichildren<br>
+&nbsp;&nbsp;&nbsp; if typeof&nbsp; i_form is form2 then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i_form2 = ctype(i_form,form2)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgbox i_form2.property_du_form2<br>
+&nbsp;&nbsp;&nbsp; end if</font></font></p>
+<blockquote>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font color="#0000FF" face="Courier New" size="2">if
+  typeof&nbsp; i_form is form1 then<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i_form1 = ctype(i_form,form1)<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; msgbox i_form2.property_du_form1<br>
+  &nbsp;&nbsp;&nbsp; end if</font><font face="Courier New" size="2"><font color="#0000FF"><br>
+  next</font><br>
+  </font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2">Merci
+Gaël.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Comment fermer toutes 
+le fenêtres filles?</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> form
+</font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Form</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Each</font><font SIZE="2" color="#0000FF"> form
+</font><font SIZE="2" COLOR="#0000ff">In</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF">.MdiChildren</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">form.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Comment avoir accès aux objets du conteneur à partir de la fenêtre fille?</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">En utilisant
+<font color="#0000FF">Me.MdiParent</font> qui contient le nom du conteneur.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans la fenêtre fille le 
+code <font color="#0000FF">Me.MdiParent.text =&quot;Document 1&quot;</font> affichera 
+'Document&nbsp; 1' dans la barre de titre du conteneur.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Comment u</font></b></span><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">ne 
+routine du module conteneur appelle une routine dans la fenêtre fille active? </span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Si une routine public de la fenêtre 
+fille se nomme Affiche, on peut l'appeler par:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MDIFilleActive.Affiche()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il n'est pas possible d'appeler les évènements 
+liés aux objets.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Agencement des fenêtres filles&nbsp;:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>La propriété LayoutMdi</b> de la fenêtre 
+conteneur 
+modifie l’agencement des fenêtres filles.</font></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>0 - MdiLayout.Cascade</b> </font></p>
+<p style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>1 - MdiLayout.TileHorizontal</b> </font>
+</p>
+<p style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>2 - MdiLayout.TileVertical</b> </font></p>
+<p style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>3 - MdiLayout.ArrangeIcons</b> </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le menu Item Cascade 
+met les fenêtres filles en cascade.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+&nbsp;&nbsp; Me.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+End Sub</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font color="#0000FF" size="5"><span style="background-color: #C0C0C0">A - En 
+VB 2005</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF">
+<img border="0" src="v2005.JPG" width="52" height="21"></font></b></span><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0"> </span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>90% </b>du travail est fait 
+automatiquement: c'est merveilleux!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'explorateur de solution: Click droit 
+sur le nom du programme ('mdi' ici):</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vmdi20052.JPG" width="403" height="323"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans le menu, passer par 'Ajouter' puis 
+'Formulaire Windows':</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="v2005p11.JPG" width="685" height="418"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cliquer sur 'MDI Parent Form' ('Formulaire 
+Parent MDI')</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On obtient un formulaire MDI parent avec les 
+menus, la barre d'icône, d'état, les menus déroutants avec image:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(Le logiciel a rajouté les 4 outils en bas, 
+nécessaire pour réaliser l'interface.)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vmdi2005.JPG" width="443" height="319"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le code qui génère les formulaires enfants est 
+automatiquement crée:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Public</font></font><font face="Courier New"><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font face="Courier New"> 
+MDIParent1</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> ShowNewForm(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+NewToolStripMenuItem.Click, NewToolStripButton.Click, 
+NewWindowToolStripMenuItem.Click</font></p>
+<blockquote>
+  <p></font><font SIZE="2" COLOR="#008000" face="Courier New">' Créer une nouvelle instance du 
+  formulaire enfant.</p>
+  </font><font SIZE="2">
+  <p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> ChildForm
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New"> 
+  System.Windows.Forms.Form</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#008000" face="Courier New">' Make it a child of this MDI form before 
+  showing it.</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ChildForm.MdiParent =
+  </font> </font>
+  <font SIZE="2" COLOR="#0000ff"><font face="Courier New">Me</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">m_ChildFormNumber += 1</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ChildForm.Text =
+  </font> </font>
+  <font SIZE="2" COLOR="#800000" face="Courier New">&quot;Window &quot;</font><font SIZE="2"><font face="Courier New"> &amp; 
+  m_ChildFormNumber</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ChildForm.Show()</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+ExitToolsStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2"> 
+ExitToolStripMenuItem.Click</font></font></p>
+<blockquote>
+  <p><font size="2" color="#008000" face="Courier New">'Quitter l'application</font></p>
+  <p><font SIZE="2" COLOR="#0000ff" face="Courier New">Global</font><font SIZE="2"><font face="Courier New">.System.Windows.Forms.Application.Exit()</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font></font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+CascadeToolStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+CascadeToolStripMenuItem.Click</font></p>
+<blockquote>
+  <p><font color="#008000" face="Courier New">'Positionnement des formulaires enfant</font></font></p>
+  <p><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.LayoutMdi(MdiLayout.Cascade)</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+TileVerticleToolStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+TileVerticalToolStripMenuItem.Click</font></p>
+<blockquote>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.LayoutMdi(MdiLayout.TileVertical)</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+TileHorizontalToolStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+TileHorizontalToolStripMenuItem.Click</font></p>
+<blockquote>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.LayoutMdi(MdiLayout.TileHorizontal)</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+ArrangeIconsToolStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+ArrangeIconsToolStripMenuItem.Click</font></p>
+<blockquote>
+  <p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.LayoutMdi(MdiLayout.ArrangeIcons)</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+CloseAllToolStripMenuItem_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+CloseAllToolStripMenuItem.Click</font></p>
+<p></font><font SIZE="2" COLOR="#008000" face="Courier New">' Ferme tous les formulaires enfant</p>
+</font><font SIZE="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Each</font><font SIZE="2"> ChildForm </font>
+  <font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> Form </font>
+  <font SIZE="2" COLOR="#0000ff">In</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font face="Courier New">.MdiChildren</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ChildForm.Close()</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">Next</p>
+</blockquote>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> 
+m_ChildFormNumber </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New"> = 0</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:40 GMT -->
+</html>

@@ -1,0 +1,517 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:09 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET couleur et font</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.15</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Couleurs, 
+    police de caractères .</font></b></td>
+    <td width="9%" height="76"><a href="v3-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="7" face="Courier New"><font color="#0000FF">C</font><font color="#FF0000">o</font><font color="#FFFF00">u</font><font color="#00FF00">l</font><font color="#FF00FF">e</font><font color="#00FFFF">u</font>r
+</font><font size="7" face="Century Gothic"><font color="#FF0000">e</font><font color="#008000">t</font></font><font size="7" face="Courier New">
+</font><font size="7" face="Arial">F<font color="#00FF00">o</font><font color="#FF00FF">n</font><font color="#00FFFF">t</font></font><font size="7" face="Courier New">.</font></p>
+<p><b><font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">Les couleurs:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">A- Généralités:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une couleur est représentée par <b>3 octets</b> correspondent aux composants de 
+couleur <font color="#FF0000">rouge</font>, <font color="#008000">vert</font> et
+<font color="#0000FF">bleu</font>. Chaque octet peut prendre la valeur 0 à 255 
+(ou 0 à FF en hexadécimal).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Si on utilise la notation hexadécimale, il faut mettre <font color="#0000FF">&amp;H
+</font>avant:&nbsp; <font color="#0000FF">&amp;HFF </font>correspond à 255.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple : valeur des 3 composantes couleurs et couleurs correspondantes:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="32%" id="AutoNumber5">
+  <tr>
+    <td width="25%" align="center"><font face="Courier New">&nbsp; rouge</font></td>
+    <td width="25%" align="center"><font face="Courier New">&nbsp; vert</font></td>
+    <td width="28%" align="center"><font face="Courier New">&nbsp; bleu</font></td>
+    <td width="22%" align="center">&nbsp;</td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="32%" id="AutoNumber4" height="79">
+  <tr>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="28%" align="center" height="19"><font face="Courier New">FF</font></td>
+    <td width="22%" align="center" bgcolor="#0000FF" height="19">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%" align="center" height="19"><font face="Courier New">FF</font></td>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="28%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="22%" align="center" bgcolor="#FF0000" height="19">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%" align="center" height="19"><font face="Courier New">80</font></td>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="28%" align="center" height="19"><font face="Courier New">80</font></td>
+    <td width="22%" align="center" bgcolor="#FF00FF" height="19">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="25%" align="center" height="19"><font face="Courier New">0</font></td>
+    <td width="28%" align="center" height="19">
+    <font face="Courier New">0</font></td>
+    <td width="22%" align="center" bgcolor="#000000" height="19">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%" align="center" height="19"><font face="Courier New">FF</font></td>
+    <td width="25%" align="center" height="19"><font face="Courier New">FF</font></td>
+    <td width="28%" align="center" bgcolor="#FFFFFF" height="19">
+    <font face="Courier New">FF</font></td>
+    <td width="22%" align="center" bgcolor="#FFFFFF" height="19">&nbsp;</td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+En plus, dans certains cas, il y a une <b>composante alpha</b> qui indique la transparence. 255 
+indique que la couleur est opaque, 1 à 254 indique que la couleur est 
+transparente.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Il y a une Classe <font color="#0000FF">Color</font> dans <font color="#0000FF">
+SystemDrawing</font>. On peut instancier un Objet <font color="#0000FF">Color</font>:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim myColor As Color</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On peut voir ou modifier les composants de cette couleur avec: </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myColor.A </font>
+<font face="Courier New" size="2">composante alpha</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myColor.B </font>
+<font face="Courier New" size="2">composante bleue</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myColor.R </font>
+<font face="Courier New" size="2">composante rouge</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myColor.G </font>
+<font face="Courier New" size="2">composante verte</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">voir
+aussi&nbsp; <a href="v2-30.htm">Annexe: Les couleurs&nbsp;</a></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">B- Constantes:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Le plus simple est, pour modifier la couleur d'un objet par du code, d'utiliser 
+les constantes VB qui contiennent le code d'une couleur toute faite (en RGB sans 
+composante Alpha):</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Color.Back,</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Color.Fuchsia</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Color.Chocolate </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Color.Red ...</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">Voici
+toutes les couleurs à votre disposition:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vallcolor.JPG" width="605" height="381"></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Elles font partie de</font><font face="Courier New" size="2" color="#0000FF">&nbsp; 
+System.Drawing</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Comme d'habitude il suffit de taper <font color="#0000FF">Color.</font> et la 
+liste très longue des couleurs s'ouvre.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">Bouton.BackColor=Color.Red </font>&nbsp;&nbsp;&nbsp; 'modifie la 
+couleur de fond du bouton</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vBoutonR.gif" width="82" height="33"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">C</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">- 
+Rouge,vert, bleu</span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Plus puissant:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">Color.FromArgb</font></font></p>
+<p><font face="Courier New" size="2">Crée une couleur à partir des valeurs des 
+quatre composants ARVB (argb en anglais) 8&nbsp;bits (alpha, rouge, vert et bleu).</font></p>
+<p><font face="Courier New" size="2">alpha indique la transparence. 255 indique 
+que la couleur est opaque, 1 à 254 indique que la couleur est transparente.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'octet le plus significatif, représenté par 
+AA, correspond à la valeur du composant alpha. Les second, troisième et 
+quatrième octets, représentés par RR, VV et BB, correspondent aux composants de 
+couleur rouge, vert et bleu, respectivement. Chaque octet prend la 
+valeur 0 à 255 ou 0 à FF en hexadécimal.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le paramètre correspond à 4 X 8bits=32 bits= 
+un Integer. Pour plus de clarté on rentre généralement les données en 
+hexadécimal:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.BackColor= 
+Color.FromArgb(&amp;H780000FF)</font>&nbsp;&nbsp;&nbsp; 'correspond à un bleu 
+transparent.<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a des surcharges:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut passer chaque paramètre séparément:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.BackColor=Color.FromArgb(120, 
+0, 0, 255)</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi&nbsp; passer l'alpha et la 
+couleur en second paramètre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Plus simple:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut définir une couleur avec la fonction 
+RGB&nbsp; (red, green, blue) , pas de composantes alpha ici.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim red As Color = RGB(255, 0, 0)
+</font>' fait partie de Microsoft.VisualBasic<br>
+<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">D-
+Couleurs 'system'</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ce sont les couleurs utilisées par Windows 
+pour afficher la barre de titre, les fonds, couleurs d'éléments actifs ou non. 
+On peut modifier ces couleurs en passant par le panneau de configuration (option 
+'Affichage'). Toutes les applications les utilisent. On peut aussi les utiliser.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'énumération KnownColor contient les couleurs 
+système (couleur des barres, texte, fenêtre active..)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mais pour utiliser une couleur system, il faut 
+employer <font color="#0000FF">SystemColors</font>.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Me</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">.BackColor 
+= SystemColors.ActiveBorder
+</font>
+<font SIZE="2">'modifie la couleur de fond du formulaire en cours</font></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+E- Couleur dans les objets:</span></font></b></p>
+<p><font face="Courier New" size="2">Pour changer la couleur d'arrière-plan du 
+contrôle, utilisez la propriété <font color="#0000FF">BackColor</font>, la 
+propriété d'avant plan est <font color="#0000FF">Forcolor</font>.</font></p>
+<p><font face="Courier New" size="2">
+<img border="0" src="vBoutonR.gif" width="82" height="33">  Ici pour ce bouton, 
+BackColor est égal à Color.Red&nbsp; et ForColor est à Color.Black</font></p>
+<p><font face="Courier New" size="2"><b>Dans le code</b> <font color="#0000FF">MyButton.BackColor
+= Color.Red</font></font></p>
+<p><font face="Courier New" size="2"><b>En mode Design</b> (conception), on peut
+modifier la couleur&nbsp; directement en cliquant sur le bouton '...' en face de
+BackColor par exemple: la fenêtre de choix des couleurs apparaît:</font></p>
+<p><img border="0" src="vcolor3.gif" width="202" height="220"></p>
+<p><font face="Courier New" size="2">On a le choix entre les couleurs
+habituelles dites &quot;Personnalisé&quot; (custom), les couleurs &quot;Web&quot; (couleurs standard web visibles sur tous
+les environnements) et couleurs &quot;System&quot; (Windows).&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+E- Choix d'une couleur par l'utilisateur.</span></font></b></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Pour permettre à l'utilisateur de choisir une couleur, il faut 
+mettre dans le formulaire une <font color="#0000FF">ColorDialog</font> à partir 
+de la boite à outils; elle vient se placer sous le formulaire:</p>
+<p ALIGN="LEFT"><img border="0" src="vcolor1.GIF" width="114" height="37"></p>
+<p ALIGN="LEFT">Il faut ensuite, par code, ouvrir cette <font color="#0000FF">
+ColorDialog</font>.</p>
+<p ALIGN="LEFT">La classe&nbsp; <font color="#0000FF">ColorDialog</font><i> </i>&nbsp;a 
+une méthode <font color="#0000FF">ShowDialog</font><i>, </i>analogue à la 
+méthode ShowDialog des classes OpenFileDialog et</p>
+<p ALIGN="LEFT">SaveFileDialog, qui permet d'afficher la boite de dialogue.</p>
+<p ALIGN="LEFT"><img border="0" src="vcolor2.JPG" width="223" height="333"> </p>
+<p ALIGN="LEFT">Si l'utilisateur quitte la boîte de dialogue en cliquant sur le 
+bouton <i>'OK'</i>,&nbsp;&nbsp; la méthode <font color="#0000FF">ShowDialog
+</font>retourne <font color="#0000FF">DialogResult.OK</font><i> </i>et la 
+couleur choisie est dans la propriété <font color="#0000FF">Color</font><i> </i>
+de l'objet <font color="#0000FF">ColorDialog</font><i> </i>. </p>
+</font>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2">L'utilisateur clique sur un bouton nommé 'CouleurButton' 
+cela ouvre la ColorDialog, l'utilisateur clique sur une couleur puis sur 'Ok', 
+cela donne aux caractères de la TextBox 'Texte' la couleur choisie.</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Private Sub </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">CouleurButton_Click(</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">ByVal
+</font><font FACE="Courier New" SIZE="2" color="#0000FF">sender </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As Object</font><font FACE="Courier New" SIZE="2" color="#0000FF">,
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">ByVal </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">e </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">System.EventArgs) _</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Handles </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">CouleurButton.Click</p>
+</font><font FACE="Courier New" SIZE="2" color="#008000">
+<p ALIGN="LEFT">' Ouverture de la dialogBox colordialog1</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">If </font><font FACE="Courier New" SIZE="2" color="#0000FF">
+colorDialog1.ShowDialog() = DialogResult.OK </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">Then</p>
+</font><font FACE="Courier New" SIZE="2" color="#008000">
+<blockquote>
+  <p ALIGN="LEFT">' on met la couleur dans la propriété forecolor du TextBox</p>
+  </font><font FACE="Courier New" SIZE="2" COLOR="#0000FF">
+  <p ALIGN="LEFT">Texte.ForeColor = colorDialog1.Color</p>
+</blockquote>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">End If</p>
+<p ALIGN="LEFT">End Sub</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="5" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Police de caractères 
+(ou Font)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une 'Font' est définie par:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Un nom.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Une taille</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Un style (gras, italique,
+souligné..)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">voir <a href="v2-30.htm">Annexe: Les
+caractères, codage font&nbsp;</a></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&quot;<font face="Courier" size="3"><b>Mon texte</b></font>&quot; <font face="Courier New" size="2">est
+en font&nbsp; 'Courier', d'une taille de 12 points et en gras.&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour modifier la police de caractère utilisée 
+dans un contrôle, il faut lui assigner un objet '<b>Font</b>'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">label1.Font = New 
+System.Drawing.Font(&quot;Arial&quot;, 10)&nbsp;&nbsp;&nbsp; </font>'on indique le nom de 
+la font et la taille, on aurait pu&nbsp; ajouter un troisième argument: le style 
+(gras, italique, souligné).<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">label1.Font = New 
+System.Drawing.Font(label1.Font, FontStyle.Bold Or FontStyle.Italic)</font><br>
+Ici c'est une autre signature Font, Style<br>
+</font><br>
+<font face="Courier New" size="2">Visual Basic&nbsp;.NET ne prend plus en charge que 
+les polices <b>TrueType</b> et <b>OpenType </b>(voir explication plus bas).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Les propriétés de police sont 
+automatiquement héritées du parent, sauf lorsqu'elles sont explicitement 
+définies pour l'objet enfant.</b> Par exemple, si vous avez deux contrôles 
+d'étiquette dans un formulaire et que vous changiez les propriétés de police du 
+formulaire en Arial, les polices du contrôle d'étiquette sont également changées 
+en Arial. Si par la suite vous changez la police d'une étiquette en Times Roman, 
+les modifications qui pourront être apportées à la police du formulaire ne 
+remplaceront pas la police de l'étiquette.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour lire les fonts installées</b> utiliser 
+l'espace de noms <font color="#0000FF">System.Drawing.FontFamily</font>.<br>
+&nbsp;<br>
+<font color="#0000FF">Dim ff As FontFamily<br>
+For Each ff In System.Drawing.FontFamily.Families<br>
+listBox1.Items.Add(ff.Name)<br>
+Next<br>
+&nbsp;</font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour que l'utilisateur modifie la police </b>
+du contrôle <font color="#0000FF">List1</font>.<br>
+&nbsp;<br>
+<span codeLanguage="VisualBasic"><font color="#0000FF">Dim myFontDialog As 
+FontDialog<br>
+&nbsp;&nbsp; myFontDialog = New FontDialog()<br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp; If myFontDialog.ShowDialog() = DialogResult.OK Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List1.Font = myFontDialog.Font<br>
+&nbsp;&nbsp; End If</font><br>
+&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vdialogfont.JPG" width="438" height="352"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span codeLanguage="VisualBasic">On ouvre une 
+fenêtre de choix de police (ici en vb 2008), si une police est sélectionnée par l'utilisateur, on 
+l'applique à List1.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Les
+polices True Type sont précédées d'un TT.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Les
+polices Open Type sont précédées d'un O.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour mettre la font de la form en gras:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" size="2" face="Courier New">
+<span codeLanguage="VisualBasic">If Not (Me.Font.Bold) Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Me.Font = New Font(Me.Font, 
+FontStyle.Bold)<br>
+End If<br>
+&nbsp;</span></font></p>
+<font SIZE="2">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Pour qu'un TextBox utilise la font &quot;Courier 
+New&quot; de taille 12 en italique:</b></font></p>
+<p><font face="Courier New">TextBox1.Font = </font></font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2"> 
+Font(</font><font SIZE="2" COLOR="#800000">&quot;Courier New&quot;</font></font><font SIZE="2"><font face="Courier New">, 
+12, FontStyle.Italic)</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2" color="#FF0000">Attention:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Ne
+pas utiliser dans votre programme des font 'exotiques' que vous trouvez très
+belle mais qui ne seront pas présentes sur l'ordinateur des utilisateurs (
+elles seront dans ce cas substituées par d'autres avec un résultat
+aléatoire). Utilisez de l'Arial, il n'y aura pas de problèmes!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font color="#0000FF" face="Courier New" size="4">Police
+BitMap, 'True Type', 'Open Type'.</font></b></p>
+<p><font face="Courier New" size="2">Avant les années 1990 il y avait des
+polices au <b>format BitMap</b> (image matricielle). Elle ne sont plus
+utilisées par VB.Net.</font></p>
+<p><font size="2" face="Courier New">Depuis 1980</font><font size="2" face="Courier New">
+existe <b>True Type</b><sup><b>®</b></sup>, un format de police multiplateforme
+vectorielle, développé&nbsp; par Apple et vendu ensuite à Microsoft.</font></p>
+<p><font face="Courier New" size="2">(concurrent du format Type1 de PostScript
+d'Adobe)</font></p>
+<p><font size="2" face="Courier New">On utilise depuis 2001 <b>OpenType<sup>®</sup></b>
+qui est un nouveau format de police multiplateforme vectorielle, développé
+conjointement par Adobe et Microsoft. Adobe propose plusieurs milliers de
+polices OpenType.</font></p>
+<p><font size="2" face="Courier New">Les deux principaux atouts du format
+OpenType résident dans sa compatibilité multiplateforme (un seul et même
+fichier de polices exploitable sur les postes de travail Macintosh et Windows)
+et sa prise en charge de jeux de caractères et de fonctions de présentation très
+étendus, qui offrent de meilleures capacités linguistiques et un contrôle
+typographique évolué.</font></p>
+<p><font size="2" face="Courier New">Une police Open&nbsp; Type est basée sur
+le numéro de caractères <b>Unicode</b> et peut contenir jusqu'à 65000
+glyphes.</font></p>
+<p><font size="2" face="Courier New">Le format OpenType est une extension du
+format TrueType SFNT qui gère également les données des polices Adobe<sup>®</sup>
+PostScript<sup>®</sup> et des fonctions typographiques inédites.&nbsp;</font></p>
+<p><font size="2" face="Courier New">Les noms de fichier des polices OpenType
+contenant des données PostScript possèdent l'extension .otf, tandis que les
+polices OpenType de type TrueType portent l'extension .ttf.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font color="#0000FF" face="Courier New" size="4">Notion
+de Font proportionnelle.</font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+existe des fonts proportionnelles, comme l'Arial, où les différents
+caractères n'ont pas la même largeur (le i est plus étroit que le P)c'est
+plus joli.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2"><img border="0" src="vfontprop.JPG" width="315" height="109"></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">&nbsp;Par
+contre dans les fonts non proportionnelles, comme le 'Courier New', tous les
+caractères ont même largeur. C'est parfois plus pratique quand on veut
+afficher des lignes qui concorder sur le plan alignement vertical (et qu'on ne
+veut pas utiliser les tabulations).</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">En
+Arial</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Arial">Philippe
+Pier:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Arial">Philippe
+Wolf:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">&nbsp;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">En
+Courier new</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Philippe
+Pier:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Philippe
+Wolf:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-14.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-16.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-15.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:13 GMT -->
+</html>

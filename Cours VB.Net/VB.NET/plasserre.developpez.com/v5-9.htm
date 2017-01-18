@@ -1,0 +1,359 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net surcharge</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.9</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Surcharge.</font></b></td>
+    <td width="14%" height="76"><a href="v5-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" color="#800080">
+<span style="font-family: Courier New"><b>Quand on utilise une méthode avec des 
+paramètres, il y a parfois possibilité d'utiliser, avec la même méthode, un 
+nombre différent de paramètres ou des paramètres de nature différente: on 
+appelle cela surcharger la méthode.</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Chaque manière d'écrire les paramètres 
+s'appelle une <b>signature</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Voici une fenêtre MessageBox: </font>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;pour&nbsp; ouvrir une fenêtre MessageBox il y 
+a 12 signatures, en voici 2:</span></font></p>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt"><font color="#0000ff"><span style="background-color: #ffffff">Reponse= <b>MessageBox.show</b>(TexteAAfficher,Titre, TypeBouton etIcone, BoutonParDéfaut)</span></font></pre>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt"><span style="background-color: #ffffff">Ici on donne 4 paramètres.</span></pre>
+<pre style="font-size: 10pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: 0pt">&nbsp;</pre>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #ffffff">Reponse= <b>MessageBox.show</b>(TexteAAfficher)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0pt; margin-bottom: 0px">
+<span style="background-color: #ffffff"><font face="Courier New" size="2">Ici 1 
+seul paramètre.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On voit qu'on peut appeler la méthode MessageBox.Show avec un nombre différent 
+de paramètres.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Comme on ne peut pas connaître toutes les 
+signatures, VB nous aide:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Si on tape </span></font>
+<font face="Courier New" color="#0000ff" size="2">R= <b>MessageBox.show</b>(</font><font face="Courier New"><font color="#0000ff" size="2"> 
+&nbsp;</font><font size="2">VB</font></font><font face="Courier New" size="2"> 
+affiche dans un cadre une signature, de petites flèches permettent de faire 
+défiler tous les autres signatures:&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Quand on crée une Classe, il est bien sur possible d'écrire une property ou un 
+constructeur qui accepte la surcharge:&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #CCCCCC">Surcharge en VB 2003</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">1- On peut <b>surcharger un constructeur</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour&nbsp; cela il suffit de rajouter autant 
+de procédure New que l'on veut avec <b>pour chacune un nombre de paramètre 
+différent</b> (signatures différentes).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: <b>On peut surcharger un constructeur</b>:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Figure</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Bla Bla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New( ByVal X As Integer, ByVal Y As 
+Integer)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; Blabla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub. </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;On 
+peut donc instancier la classe correspondante de 2 manières:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim A As New Figure</span></font><span style="background-color: #FFFFFF">
+</span>&nbsp;&nbsp; 'Constructeur par défaut</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">ou</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">Dim A As New 
+Figure(100,150)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">2- On peut <b>surcharger une property</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour&nbsp; cela il suffit de rajouter  des procédure Property
+<b>ayant le même nom de méthode </b>avec pour chacune un nombre de paramètre différent (signature différente)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut ajouter <font color="#0000FF">
+Overloads</font> mais c'est facultatif.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple: surchargeons un 
+membre:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Figure</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Overloads Property 
+Calcul</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Bla Bla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Overloads Property 
+Calcul</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">( ByVal X As Integer, ByVal Y As 
+Integer)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; Blabla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub. </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#FF0000" face="Courier New">c'est un bon exemple de polymorphisme.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font color="#0000FF" face="Courier New" size="4">
+<span style="background-color: #CCCCCC">Surcharge en VB 2005: nouveautés</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>On peut surcharger les opérateurs <font color="#0000FF">+ - *</font> </b>/ mais aussi 
+<font color="#0000FF">_ ^ &amp; Like And Or 
+Xor Not &lt; &gt; = &lt;&lt; &gt;&gt;&nbsp; Ctype IsTrue, IsFalse</font></font></p>
+<span codeLanguage="other">
+<blockquote>
+  <blockquote>
+    <pre>Exemple: surchargeons l'opérateur +</pre>
+    <pre><font color="#0000ff">Public Structure height
+    ...
+    <b>Public Shared Operator</b> +(ByVal h1 As height, ByVal h2 As height)As height
+        Return New height(h1.feet + h2.feet, h1.inches + h2.inches)
+    <b>End Operator</b>
+End Structure</font></pre>
+    </span>
+    <p class="MsoNormal" style="margin-top: 6pt">
+    <font face="Courier New" size="2">La routine doit être Shared, de plus si on 
+    surcharge certains opérateurs, il faut aussi surcharger leur inverse: si on 
+    surcharge '&gt;' , il faut surcharger '&lt;'. </font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Surcharge de IsTrue, IsFalse Ctype</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si on teste un boolean, il a la valeur True ou False.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si par contre je crée une classe nommée 'Personne', je peux définir comment une 
+instance sera considérée comme égale à True. Il faut surcharger l'opérateur 
+IsTrue en lui indiquant dans quelle condition l'instance sera considérée comme =True:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+J'ai une instance e de type Personne, si e.Present =True, dans ce cas je veux 
+que e soit considéré comme True; il faut écrire dans la Classe 'personne':
+</font></p>
+<font face="Courier New" size="2">
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Public Shared Operator IsTrue(ByVal e As Personne) As 
+Boolean</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">If e Is Nothing Then</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; Return False</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Else</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; Return e.Present</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End If</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End Operator</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">Pour définir 
+l'opérateur IsFalse, c'est simple: c'est Not e</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Public Shared Operator IsFalse(ByVal e As Personne) As 
+Boolean</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; Return Not e</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End Operator</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p align="left">Ensuite je pourrais utiliser des instructions de la forme:</p>
+<p align="left"><font color="#0000ff">If e then..</font> </p>
+</font>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Surcharge de Ctype:</font></b></p>
+<font face="Courier New" size="2">
+<p align="left">Je peux définir dans une classe comment <font color="#0000FF">CType</font> va fonctionner:</p>
+<p align="left">Pour cela dans la classe Personne, je vais définir les 3 
+possibilités:</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Public Shared Widening Operator CType(ByVal e As Personne) 
+As String</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Return e.Nom + &quot; &quot; + e.Prenom</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End Operator</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Public Shared Widening Operator CType(ByVal&nbsp; e As 
+Personne) As Date</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">If e Is Nothing Then</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; Return Nothing</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Else</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; Return e.DateDeNaissance</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End If</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End Operator</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">&nbsp;</p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">Public Shared Widening Operator CType(ByVal&nbsp; e As 
+Personne) As Boolean</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">&nbsp;&nbsp;&nbsp; If e Is Nothing Then Return False Else Return 
+e.Present</font></p>
+<p style="margin-top: 0px; margin-bottom: 0px" align="left">
+<font color="#0000ff">End Operator</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6pt">Ainsi</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">Ctype(UnePersonne,String)</font> retourne&nbsp; Nom Prenon</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">Ctype(UnePersonne,Date)</font> retourne&nbsp; la date de 
+naissance</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">Ctype(UnePersonne,Boolean)</font> retourne&nbsp; True ou False.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Les exemples&nbsp; sont des surcharges, car le type des paramètres est modifié.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-9.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

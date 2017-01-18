@@ -1,0 +1,516 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6val.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : by val , by ref valeur référence </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6struct.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.7</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les variables par valeur 
+    ou par référence.</font></b></td>
+    <td width="14%" height="76"><a href="v1-6objet.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080">
+<font size="2"><b><span style="font-family: Courier New">Résumons la notion très 
+importante</span></b></font><b><span style="font-size: 10.0pt; font-family: Courier New"> 
+de variable&nbsp; par valeur ou par référence.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Un type de données est un <i><b>type
+valeur</b></i> s'il contient des données dans l'espace qui lui est alloué en mémoire.
+Un <i><b>type référence</b></i> contient un pointeur vers un autre emplacement
+en mémoire contenant les données.(dixit MicroSoft)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">La 
+variable 'par Valeur':</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Contient réellement une valeur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Prenons pour exemple une variable de type 
+'Long'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As Long</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">L= 1456 </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">L</font> occupe 8 octets 
+nécessaire pour coder un long, ici L a une valeur de 1456, donc dans ces 8 
+octets il est codé 1456.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quels sont les types de variables par 'Valeur'?</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Integer, les Long les Short</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Single, Double, Decimal</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Booleans, Char, Date</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Structures</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les énumérations</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">La 
+variable 'par Référence':</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Elles ne contiennent pas la valeur de l'objet 
+mais son adresse en mémoire, sa référence.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim O As Object</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">O contient l'adresse de l'objet codée sur 4 
+octets.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quels sont les types de variables par référence:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Objets</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Strings</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les tableaux</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Classes</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">Influence sur
+l'Affectation:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Posons le problème: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Travaillons sur A et B, 2 variables ayant la 
+même 'nature'.</font></p>
+<p style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim A As ...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">A existe donc, faisons:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim B=A</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Puis<font color="#FF0000"> modifions la valeur de A,</font> <b>
+<font color="#FF0000">cela modifie t-il B?</font></b>&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Les variables par Valeur ou par Référence 
+ne réagissent pas de la même manière:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si le type de variable est <b>par valeur</b> 
+(valable pour les entiers, les Long.. les structures..), chaque variable ayant sa valeur, 
+B n'est pas modifié.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si le type de variable est <b>par référence</b>&nbsp; 
+(valable pour les tableaux, les objets, les string..), chaque variable est définie par sa référence (son 
+lieu physique); faire A=B entraîne que A et B ont même référence. Si on modifie 
+A, B est&nbsp; modifié car il pointe au même endroit.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Voyons des exemples:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Même si on affecte une variable <b>par valeur</b> 
+à une autre, les deux variables restent différentes: elles conservent leur 
+propre espace de stockage:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As Long</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim P As Long</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">L=0</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">L=P&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'on affecte P à L</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">P=4&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'on modifie P</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">=&gt; L=0 P=4&nbsp;&nbsp;&nbsp; Modifier P n'a 
+pas modifié L</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre si on affecte <b>une variable par 
+référence</b> à une autre, elle pointe toutes les 2 sur le même endroit mémoire: si 
+j'en modifie une, cela modifie l'autre. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Créons une Classe 
+contenant un entier (Exemple à relire quand vous aurez étudié les Classes)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<code class="ce"><font color="#0000FF">Class Class1<br>
+&nbsp;&nbsp; Public Value As Integer = 0<br>
+End Class<br>
+<br>
+Dim C1 As New Class1()<br>
+Dim C2 As Class1 =</font></code><code><font color="#0000FF">C1&nbsp;&nbsp;&nbsp; </font>'on 
+crée C2, on affecte C1 à C2</code><code class="ce"><font color="#0000FF"><br>
+C2.Value = 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>'on modifie C2<br>
+&nbsp;</code></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<code class="ce">=&gt; C1.Value=123&nbsp; C2.Value=123&nbsp;&nbsp;&nbsp; Modifier 
+C2 a modifié C1 car elles pointent sur le même endroit mémoire. </code></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">On se 
+méfiera donc du type 'référence ' ou 'Valeur' des données que l'on utilise: 
+exemple des Tableaux</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font SIZE="2">
+<b><font face="Courier New">Exemple 
+sur les tableaux qui sont 'Par référence':</font></b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+A(3) </span> </font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">A(1) = &quot;a&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> B(3) </font>
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">B(1) = &quot;b&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><b>
+<font face="Courier New" color="#0000FF">B = A</font></b></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">A(1) = &quot;c&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Label1.Text() = B(1)</font></span>&nbsp;&nbsp;&nbsp; 'Affiche 'c'</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En effet un tableau est 'par référence' et le 
+fait de faire <font color="#0000FF">A=B</font> donne la même adresse mémoire aux 2 tableaux, aussi , modifier 
+l'un modifie l'autre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">B= A.Clone</span></font> aurait 
+copié le tableau A dans B en conservant 2 tableaux distinct et la dernière 
+instruction aurait affiché 'a'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Remarque: <font color="#0000FF">A(2)=B(2)</font> 
+affecte un élément d'un tableau à un élément d'un autre tableau, cela ne modifie 
+que <b>la valeur</b> d'un élément et n'affecte pas le tableau.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2"><b><font face="Courier New">
+<span style="background-color: #C0C0C0">Le cas particulier des 'String' qui sont 
+'Par référence':</span></font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">Attention: par contre :</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+A </span> </font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">A = &quot;a&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> B </font>
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">B = &quot;b&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">B = A</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">A = &quot;c&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Label1.Text() = B&nbsp;</font></span>&nbsp;&nbsp; 'Affiche 'a'</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Bien que cela soit par référence, <b> B=A affecte 
+simplement la valeur de A à B</b>, si on modifie ultérieurement A, B n'est pas 
+modifié. (idem pour clone et copy!!) Pour une string qui est 'par référence',
+il parait donc impossible 
+de la dupliquer, elle se comporte comme une variable par valeur!! <b>Avez -vous des 
+idées pour expliquer cela?</b></font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <div>
+        <font face="Courier New" size="2">L'opérateur d'affectation
+        &quot;=&quot; de deux strings &quot;A=B&quot; a simplement été</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">défini de manière restrictive pour
+        les strings. Les créateurs de vb .net</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">lui ont permis uniquement une copie de
+        la valeur de la string et non de la référence.</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">I</font><font face="Courier New" size="2">l
+        vaut mieux ne pas</font>&nbsp; <font face="Courier New" size="2">permettre l'
+        affectation de la même référence pointant sur le même</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">objet c'est dangereux pour les
+        débutants et cela serait totalement incompatible avec les versions
+        précédentes..</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">Ensuite, parce que la copie de la
+        valeur d'une string dans une autre est</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">une opération extrêmement courante
+        chez les programmeurs. Ce qui n'est</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">pas le cas de l'affectation de la même
+        référence pointant sur le même</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">objet.</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">En conclusion, rien de choquant dans
+        le fait qu'un type string se comporte</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">comme un type par valeur: car c'est
+        juste la définition de l'opérateur</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">d'affectation &quot;=&quot; qui a été
+        redéfinie, et c'est tout. Tout ce qui concerne</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">l'implémentation du type string est
+        strictement comme tous les types</font>
+      </div>
+      <div>
+        <font face="Courier New" size="2">par référence. (Merci Sabri)</font>
+      </div>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<div>
+  &nbsp;
+</div>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="2">D</font></span><font face="Courier New" size="2"><span style="font-weight: 700; background-color: #C0C0C0">éclaration 
+avec New ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En théorie, il faut utiliser
+<font color="#0000FF">New</font> quand on déclare une variable 'par référence':
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As Long&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'un long est 'par valeur'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim F As New Button&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'un bouton est un objet 'par référence'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En fait</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As New Long&nbsp; '</font><font face="Courier New" size="2">est 
+accepté</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim O As Object&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'est accepté mais il faudra redéfinir
+O avec New pour l'utiliser.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim S As String&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'est accepté.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les Classes ou les objets graphiques , il 
+faut par contre bien taper New pour créer l'objet:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim F As New Button</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on tape</font><font face="Courier New" size="2" color="#0000FF">&nbsp; Dim 
+F As Button </font><font face="Courier New" size="2">on crée une référence vide, 
+mais pas d'objet Button.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">&nbsp;Valeur après 
+déclaration:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Après création (avant initialisation) une 
+variable numérique 'par Valeur' contient 0,</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As Long&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'L contient 0</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre une String&nbsp; (par référence) qui a été créée par Dim 
+et non initialisée contient <font color="#0000FF">Nothing</font>. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim O As Object&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'O contient Nothing: il ne pointe sur 
+aucun objet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut le tester par&nbsp;
+<font color="#0000FF">If IsNothing( O ) then.. </font>ou<font color="#0000FF"> 
+If O Is Nothing..</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les tableaux, bien que le tableau soit 
+'par Référence', c'est le type de variable utilisée dans le tableau qui décide de 
+la valeur des éléments après déclaration.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim T(3) As Long </font>&nbsp;&nbsp; 
+'=&gt;T(0)=0 </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="2">Comparaison</font></span><font face="Courier New" size="2"><span style="font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">1-Une variable par Valeur peut être comparée à 
+une autre par &quot;<font color="#0000FF"><b>=</b></font>&quot;,</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim L As Long=12</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim P As Long=24</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">If L=P Then..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">2-Par contre une variable par référence peut 
+être comparée à une autre par &quot;<font color="#0000FF">Is</font>&quot;. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim O As Object</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Q As Object&nbsp;&nbsp;
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">If O Is Q then..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">NB: pour les String '=' et 'Is' peuvent être 
+utilisés.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">3-<font color="#0000FF">Equals</font> peut 
+être utilisé pour comparer les 2 types de données:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Obj1.Equals(Obj2))&nbsp; 
+'</font>Retourne True si Obj1 et Obj2 ont le même pointeur.<br>
+<br>
+ou</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">N1.Equals(N2)&nbsp;&nbsp;&nbsp; 
+'</font>Retourne True si la valeur de N1= la valeur de N2<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les types référence, l'égalité est 
+définie comme une égalité d'objets, c'est-à-dire si les références renvoient ou 
+non au même objet. Pour les types valeur, l'égalité est définie comme une 
+égalité au niveau du bit de la valeur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Il 
+existe une instruction permettant de voir si une variable est de type 'Par 
+référence'</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cet exemple utilise la fonction <b>IsReference
+(</b></font><font face="Courier New" size="2">Microsoft.VisualBasic.Information</font><font face="Courier New" size="2">.IsReference)<br>
+</font>
+<font face="Courier New" size="2">&nbsp;pour vérifier si plusieurs variables font référence à des types référence.
+</font>
+<font face="Courier New" size="2"><br>
+</font><font color="#0000FF" face="Courier New" size="2"><br>
+<span style="background-color: #FFFFFF">Dim R as Boolean</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim MyArray(3) As Boolean</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim MyString As String<br>
+Dim MyObject As Object<br>
+Dim MyNumber As Integer<br>
+R = IsReference(MyArray) </span> </font><span style="background-color: #FFFFFF"><font color="#0000FF">
+'&nbsp; R= True. Tableau<br>
+R = IsReference(MyString) ' R= True. String<br>
+R = IsReference(MyObject) ' R= True. Objet<br>
+R = IsReference(MyNumber) ' R= False. Entier</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6struct.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6objet.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6val.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+</html>

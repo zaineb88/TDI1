@@ -1,0 +1,1863 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6col.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:54 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET collection </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="53%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="13%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6tab.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.5</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Collections</font></b></td>
+    <td width="14%" height="76"><a href="v1-6struct.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vcollect.JPG" width="100" height="95"></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#800080">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Une alternative aux tableaux est l’usage de 
+Collection.</span></font></p>
+        <p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New">Il
+        existe par ordre chronologique d'apparition :</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New">
+- La classe 'Collection' de <b>VisualBasic</b> 
+ à partir de VB6; à éviter.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">-les <b>classes du Framework</b>  non
+génériques (ArrayList, 
+Stack, Queue, BitArray, HashTable, SortedList, StringCollection)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#800080">-les <b> classes du Framework génériques</b> de VB 2005 (List, Dictionnary..)</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;
+-les collections <b>HashSet de VB 2008</b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New">Il
+est intéressant de classer les collections plutôt par fonction:</span></font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" color="#800080"><span style="font-family: Courier New">-<b>Exemple simpliste</b> sur la notion
+de bases des collections.</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#800080" face="Courier New" size="2">A- <b>Les Listes</b></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#800080" face="Courier New" size="2">ArrayList</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#800080" face="Courier New" size="2">List(Of..) VB 2005</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#800080" face="Courier New" size="2">B- <b>Les Dictionnaires</b></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#800080" face="Courier New" size="2">HashTable&nbsp;</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">Dictionary
+  (Of..) VB 2005</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">C-
+<b>Les Listes-Dictionnaires</b></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">SortedList</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">DictionaryList
+  VB 2005</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">D-
+<b>Les Queue</b> et les Queue (Of..)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">E-
+<b>Les Piles</b>: Les Stack et les Stack (Of..)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">F-
+<b>Les Listes chaînées</b> Les LinkedList(Of....) VB 2005&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">G-
+<b>Gestion des&nbsp; ensembles</b>: Les HashSet&nbsp; VB 2008</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">H-
+<b>Collections travaillant sur les Bits</b></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">BitArray</font></p>
+  <p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2">BitVector32</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2"><b>I-
+Autres</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#800080" face="Courier New" size="2"><b>J-
+Quelques remarques</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;<font color="#800080" face="Courier New" size="2"><b>
+</b>Les pièges de la boucle ForEach</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;<font color="#800080" face="Courier New" size="2">
+Base 0 ou 1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;<font color="#800080" face="Courier New" size="2">
+Généralisation de la notion de Collection.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Exemple simpliste permettant de comprendre les notions de base des collections:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Une collection fonctionne plutôt comme <b>
+un groupe d'éléments</b> dans laquelle il est possible d’ajouter ou d’enlever un 
+élément à n’importe quel endroit sans avoir à se préoccuper de la taille de la 
+collection, ni ou se trouve 
+l'élément.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Le nombre d'élément n'est 
+pas défini au départ comme dans un tableau. Dans une collection il n'y a que les 
+éléments que l'on a ajouté.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Les éléments sont repérés grâce à un <b>
+index </b>ou avec une<b>
+Clé unique</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Les items affichées dans 
+une ListBox donnent une idée concrète de ce qu'est une collection.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Soit la collection <font color="#0000ff">Col, </font>au départ elle est vide.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+J'ajoute des éléments (ou items) à cette collection.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Col.Add (&quot;Toto&quot;)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Voici la collection:</font></p>
+<table id="AutoNumber7" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+La collection a maintenant 1 élément.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Col.Add(&quot;Lulu&quot;)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Col.Add(&quot;Titi&quot;)</font></p>
+<table id="AutoNumber7" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Lulu</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Titi</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+La collection a 3 éléments maintenant.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Col.Remove(1) </font>
+<font face="Courier New" size="2">enlève le second élément (le numéro 1 ).</font></p>
+<table id="AutoNumber8" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Titi</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2" color="#FF0000">Attention
+le premier élément est l'élément de numéro 0 puis le 1, 2, 3.. jusqu'à
+n-1,&nbsp; n étant le nombre d'élément.&nbsp;</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+La collection n'a plus que 2 éléments maintenant.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On voit que le nombre d'éléments n'est pas connu à l'avance, il varie en fonction 
+des éléments ajoutés (ou retirés)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Un élément est repéré par son indice.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">Col.Item(1)</font> contient &quot;Titi&quot; (le second
+<font color="#0000FF">Item</font> de la collection)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Remarque: </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">J'ai pris une collection de 'Base 0': le 
+premier élément à l'indice 0; c'est du .Net. Il existe aussi des collections (celles venant des 
+classes Visual Basic) de Base 1.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On vient de voir une List, il existe aussi les
+dictionnaires ou on retrouve les éléments par une clé.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font color="#0000FF" size="5">A- Les Listes: ArrayList&nbsp; et&nbsp;
+List(Of..).</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Ce sont des collections sous forme de Liste,
+comme dans l'exemple simpliste. On a un <b>Index</b> pour repérer les
+éléments.(Pas de clé)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0"><font color="#0000FF" size="3">1-ArrayList:Liste
+d'objets</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New"><font size="2">Fait partie de</font><font size="2" color="#0000FF">
+</font></span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">System.Collections</font>&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il faut donc ajouter
+en haut du module:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="COLOR: blue">Imports</span> <font color="#0000FF">System.Collections</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La ArrayList est une collection 
+particulière: On peut y mettre des <b>objets</b>&nbsp;: 
+chaînes, nombres… rien n’empêche que le premier élément soit un entier, le second 
+une chaîne… </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Il n'y a pas de clé</b>. </span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+&nbsp;</p>
+<table id="AutoNumber9" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Bonjour</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Lulu</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font SIZE="2"><font face="Courier New" color="#FF0000">
+<b>
+<img border="0" src="vicocheb.gif" width="32" height="34"> </b>Attention le premier 
+élément est&nbsp; l'élément 0 (l'index va de 0 à count-1) ; c'est du .NET!!</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim L As New ArrayList()</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;&nbsp; 
+'On crée une 
+collection ArrayList</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim L As ArrayList = 
+ArrayList.Repeat(&quot;A&quot;, 5) </span> </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<font face="Courier New" size="2">'On crée une ArrayList de 5 éléments 
+contenant chacun&nbsp; &quot;A&quot; (on répète &quot;A&quot;)<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">L.Add(&quot;Bonjour&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On ajoute un élément à la collection</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(L(0))</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'On affiche le premier élément</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size: 10.0pt; font-family: Courier New">ou </span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(L.Item(0))</span></font><span style="background-color: #FFFFFF">&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<font color="#111111"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">Honte
+à moi j'avais écrit MsgBox(L(0).Item)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MsgBox(L.Count.ToString)&nbsp;</font>&nbsp;&nbsp;&nbsp; 
+'On affiche le nombre d’élément.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Attention c'est le nombre d'éléments. 
+S'il y a 3 éléments dans la  ArrayList ce sont les éléments d'index 0,1,2.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">L.Remove(&quot;Bonjour&quot;)&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On enlève un élément de la liste, celui qui contient </span>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF">&quot;Bonjour&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">L.RemoveAt(0)&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On enlève l’élément d'index 0 de la liste</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">L.Sort()&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Trie la collection</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF">L.Clear()&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Efface tous les 
+éléments</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">&nbsp;L.Contains (élément)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>' Retourne True si la liste contient 'élément'.<font color="#0000FF">&nbsp;&nbsp;
+</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Insert</b> permet d’insérer à un index 
+spécifié.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF" face="Courier New" size="2">L.Insert( position, Ainserrer)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp; <font color="#0000FF">InsertRange</font> 
+insère une ArrayList dans une Autre ArrayList.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10pt; font-family: Courier New"><font color="#0000ff">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Recherche d'un élément dans une 
+collection NON TRIEE</b> avec <font color="#0000FF">IndexOf</font>:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim<font SIZE="2" color="#0000FF"> 
+  l </font>As<font SIZE="2" color="#0000FF"> </font>New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  ArrayList</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;toto&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">i = l.IndexOf(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">MsgBox(i.ToString)&nbsp;&nbsp; </font></font></font><font face="Courier New" SIZE="2">&nbsp;'Affiche 1
+qui est l'index de &quot;lulu&quot; dans la collection.</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+rappelle qu'il existe aussi <font color="#0000FF">LastIndexOf</font> qui démarre 
+par la fin et une surcharge permettant de débuter la recherche à partir d'un 
+indice donné (</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New" color="#0000FF">i 
+= l.IndexOf(3,&quot;lulu&quot;) </font></font><font SIZE="2" face="Courier New">recherche 
+à partir du 3ème élément</font><font SIZE="2" COLOR="#0000ff" face="Courier New">)</font><font face="Courier New" size="2">.</font></p>
+<blockquote>
+  <font SIZE="2" COLOR="#0000ff">
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+  <span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></font></p>
+</blockquote>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">ToArray</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Recherche d'un élément dans une 
+collection TRIEE</b> avec<font SIZE="2" COLOR="#0000ff"> BinarySearch:</font></font></font><font SIZE="2" COLOR="#0000ff"></p>
+</font>
+<blockquote>
+  <font SIZE="2" COLOR="#0000ff">
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+  l </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  ArrayList</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;toto&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Sort()</font><font face="Courier New">'Il 
+  est nécessaire que le tableau soit trié </font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">i = l.BinarySearch(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">MsgBox(i.ToString)</font></p>
+</blockquote>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">La recherche est plus rapide mais il faut que
+la collection soit triée.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour <b>parcourir une collection</b>, 3 
+méthodes&nbsp;:</span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#008000">
+<span style="font-family: Courier New; font-weight: 700">-</span></font><font color="#008000"><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">Avec 
+l’index de l’item</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Dim
+i As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Dim
+A As String</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">For i=0 to L.Count-1</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A=L.Item(i)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">Next i</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">NB: Comme vu plus haut, on utilise 
+<font color="#0000FF">Count</font> 
+pour trouver le nombre d'élément, aussi la boucle doit balayer de 0 à count<b>-1</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#008000">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+-Avec For Each</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim o As Objet</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">For Each o in L</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox(o)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Next</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Attention
+A est un objet, si je veux l'afficher par exemple, il faut le 'caster' en
+String:&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF" face="Courier New" size="2">Dim
+s As String= CType(A,String)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">(voir
+remarques sur les pièges des boucles For Each section J en bas)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#008000">
+<span style="font-family: Courier New; font-weight: 700">-</span></font><font color="#008000"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Avec l'objet IEnumerator 
+(débutant passe ton chemin)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">On crée un objet
+<font color="#0000FF">C </font>de type <font color="#0000FF">IEnumerator</font> pour parcourir la collection, cet 
+objet a 3 propriétés:</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+MoveNext</font> qui avance d'un élément dans la collection. S'il ne peut plus 
+avancer (s'il est déjà après le dernier) il retourne False</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+Reset</font> qui place l'élément courant au début, avant le premier élément 
+(Comme au départ)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+Current</font> désigne l'élément courant.</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple montrant la seule 
+manière de faire pour parcourir la collection:</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" color="#0000FF" face="Courier">Dim L As 
+New ListArray</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" color="#0000FF" face="Courier">Dim C As IEnumerator=
+L.GetEnumerator()</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" color="#0000FF" face="Courier">While C.MoveNext())</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" color="#0000FF" face="Courier">&nbsp;&nbsp;&nbsp;&nbsp; A=C.Current</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" color="#0000FF" face="Courier">End While</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b>-<font face="Courier New" size="2">Attention, si Option Explicit=On </font>
+</b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Les éléments de la ListArray étant des <b>objets</b>, 
+on ne peut pas les affecter à une variable String par exemple, il faut écrire:</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">Str = </font></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(L(0),
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF">)&nbsp;&nbsp;&nbsp;
+</font></font><font SIZE="2"><font face="Courier New">'on convertit (on cast) 
+l'objet en String.</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New">Remarque:</font></p>
+</font>
+<p><font face="Courier New" size="2"><font color="#0000FF">L.Add(</font><font SIZE="2" COLOR="#0000ff">Nothing</font><font color="#0000FF">)&nbsp;&nbsp;&nbsp;</font></font><font face="Courier New">
+</font><font SIZE="2" color="#111111"><font face="Courier New">'est accepté: on ajoute un élément vide</font></p>
+</font>
+<p>&nbsp;</p>
+<p><font color="#0000FF" size="3"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">2-</span></font><span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0"><font color="#0000FF" size="3">List
+(Of..):Liste Générique typée</font></span></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Avant VB 2005 on avait des
+collections qui pouvaient contenir ce qu'on voulait; ArrayList pouvait contenir
+par exemple des objets.</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><b>A partir de 2005</b> on a des
+collections que l'on peut typer, c'est à dire qu'elles ne pourront contenir
+qu'un type de donnée, <b>que</b>
+des String, des entiers, des instances de telle classe... On parle de <b>collections
+génériques</b>. Le terme <font color="#0000FF">Of</font> permet de définir le
+type de la collection.</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><font color="#0000FF">Dim lst
+As New List (Of Decimal)</font>&nbsp; crée une liste ne contenant que des 'decimal'.</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Nécessite:</font></p>
+<p ALIGN="LEFT"><span style="COLOR: blue"><font face="Courier New" size="2">Imports</font></span><font face="Courier New" size="2">
+<font color="#0000FF">System.Collections.Generic</font></font></p>
+<font FACE="Courier New" size="2">
+<p>&nbsp;</p>
+</font>
+<p><b><u><font face="Courier New" size="3">La Collection <font color="#0000FF">List (Of..)</font></font></u></b></p>
+<font FACE="Courier New" size="2">
+<font SIZE="2">
+<p>C'est comme une ArrayList mais elle est typée. Le type indiqué après Of
+indique le type de la collection.</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+&nbsp;</p>
+<table id="AutoNumber11" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Lulu</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">Titi</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>Exemple: créons une collection de String <font FACE="Courier New" size="2"><font SIZE="2" color="#0000FF">List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2"><font color="#0000FF">)</font>: 
+Elle est typée car elle ne peut contenir que des 'String'.</font></font></p>
+<p><font SIZE="2" FACE="Courier New" color="#0000FF">D</font></font><font SIZE="2" COLOR="#0000ff">im</font><font SIZE="2" color="#0000FF"> 
+lst </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+ List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2"><font color="#0000FF">)</font></p>
+<p>&nbsp;</p>
+<p>Il s'agit d'une List avec <b>Index</b>.</p>
+<p><font color="#0000FF">lst(0)&nbsp;</font> est le premier élément.</p>
+<p><font color="#111111">ou </font><font color="#0000FF">lst.item(0)&nbsp;</font><font color="#111111">&nbsp;&nbsp;
+PAS lst(0).Item</font></p>
+<p>On <b> ajoute</b> une string:</p>
+<p><font color="#0000FF">lst.Add(</font></font><font SIZE="2" COLOR="#0000FF">&quot;toto&quot;)&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+S </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF"> 
+= lst.Item(0) </font><font SIZE="2">' l'item est bien typé : même avec 'Option 
+Strict=on' pas besoin de CType.</font><font SIZE="2" color="#0000FF"> </p>
+</font>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Nombre d'éléments</b> de la list:</p>
+<p ALIGN="LEFT"><font color="#0000FF">lst.Count</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT">La liste <b>contient</b> t-elle &quot;toto&quot;?</p>
+<p ALIGN="LEFT"><font color="#0000FF">Dim present As Boolean =lst.Contains(&quot;toto&quot;)</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Insérer</b> un élément à une position donnée:</p>
+<p ALIGN="LEFT"><font color="#0000FF">lst.Insert(2, &quot;lulu&quot;)&nbsp;</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Parcourir</b> tous les éléments et les afficher:</p>
+<p ALIGN="LEFT"><span style="COLOR: blue">For</span> <span style="COLOR: blue">Each</span>
+element <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>
+<span style="COLOR: blue">In</span> lst&nbsp;</p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp; Console.WriteLine(element)&nbsp;</p>
+<p ALIGN="LEFT"><span style="COLOR: blue">Next</span></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Rechercher</b> un élément dans la liste:</p>
+<p ALIGN="LEFT"><font color="#0000FF">lst.IndexOf(&quot;lulu&quot;)</font>
+retourne l'index de l'élément qui contient &quot;lulu&quot;&nbsp;</p>
+<p ALIGN="LEFT"><font color="#0000FF">lst.IndexOf(&quot;lulu&quot;, 2,7) </font>recherche
+à partir de l'élément 2 et sur 7 éléments.</p>
+<p ALIGN="LEFT">Il existe aussi LastIndexOf</p>
+<p ALIGN="LEFT">Sur un tableau trié on utilise <font color="#0000FF">BinaryScearch</font>.</p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Rechercher</b> tous les éléments qui répondent à une
+condition: <font color="#0000FF">lst.FindAll</font></p>
+<p ALIGN="LEFT">J'ai une liste lst, je veux mettre dans listerecherche tous les
+éléments de lst qui se terminent par 'lu'.</p>
+<p ALIGN="LEFT">'on crée une liste (listerecherche) qui grâce à<font color="#008000">
+</font><font color="#0000FF">FindAll </font>se chargera des éléments de lst
+qui répondent à une condition:</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Dim
+listrecherche As List(Of String) = lst.FindAll(AddressOf SeTermineParLU)&nbsp;</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">'en argument de FindAll
+on a l'adresse d'une fonction: ici la fonction 'SeTermineParLU'. Pour chaque
+élément de lst si SeTermineParLU retourne True, l'élément correspondant est
+passé dans&nbsp; listerecherche</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">'on affiche
+listerecherche sur la console.</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">For
+Each s As String In listerecherche</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;
+Console.WriteLine(s)&nbsp;</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Next</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">'voici la fonction de
+teste</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue">Private</span>
+<span style="COLOR: blue">Shared</span> <span style="COLOR: blue">Function </span>SeTermineParLU
+(<span style="COLOR: blue">ByVal</span> s <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>)
+<span style="COLOR: blue">As</span> <span style="COLOR: blue">Boolean</span>&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue">If</span>
+(s.Length &gt; 2) <span style="COLOR: blue">AndAlso</span>&nbsp; (s.Substring(s.Length
+- 2).ToLower() = <span style="COLOR: maroon">&quot;lu&quot;</span>) <span style="COLOR: blue">Then</span></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp;<span style="color: blue">&nbsp;</span>
+<span style="COLOR: blue">Return</span> <span style="COLOR: blue">True</span>&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue">Else</span>&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; <span style="COLOR: blue">Return</span>
+<span style="COLOR: blue">False</span>&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue">End</span>
+<span style="COLOR: blue">If</span>&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue">End</span>
+<span style="COLOR: blue">Function</span></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>Trier:</b></p>
+<p ALIGN="LEFT"><span style="color: blue">lst.sort</span></p>
+</font>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0"><b>B-
+Dictionnaire basé sur le hashage:</b></span></font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Un dictionnaire est une
+collection avec les clés permettant de retrouver des valeurs.</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">La <b>H</b><b>ashTable</b>
+contient des objets, le <b>Dictionary</b> est une collection générique.</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Voir le cours sur l'algorithme
+pour comprendre ce qu'est un 'hachage' ou (hashage).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">
+1-HashTable</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">C'est un '<b>Dictionnaire</b>' qui comporte des couples <b>clé-élément</b>, 
+des paires <b>clé-valeur (Objet, Objet)</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vhashtab.gif" width="153" height="107"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La clé toujours <b>unique</b> permet de 
+retrouver la valeur: 2 clés ne peuvent être égales.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">La clé ne doit pas être vide non plus.
+Par contre il peut y avoir plusieurs fois la même 'valeur'.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">H.Add(Clé,Valeur)&nbsp;</span>&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+Ajoute un élément</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">H.Item(Clé)&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Retourne l’élément correspondant à une clé.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">H(Clé)&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Retourne l’élément correspondant à une clé (Item peut être omis car c'est
+la propriété par défaut).</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">H.ContainsKey(Clé)&nbsp;</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;Retourne True si la Clé est dans la table.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><span style="font-size: 10.0pt; font-family: Courier New">Cela
+permet de tester si la clé existe déjà avant de faire un Add:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;</font><span style="color: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><font color="#0000FF" face="Courier New" size="2">If Not H.ContainsKey(&quot;ht&quot;)
+Then</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+H.Add(&quot;ht&quot;, &quot;hypertrm.exe&quot;)</font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  End If</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">H.ContainsValues(Valeur)</span></font>Retourne True si la valeur est dans la table.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+H.Clear </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Efface tous les éléments</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+H.Remove(Clé)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Supprime l'élément ayant une clé spécifiée.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Les collections <font color="#0000FF"> H.Values</font> 
+et <font color="#0000FF"> H.Keys </font> contiennent les valeurs et les clés.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><b>Pour
+parcourir la HashTable</b>, on utilise une boucle For Each;&nbsp; le couple Key
+Value étant de type <font color="#0000FF">DictionaryEntry.</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">For Each de As
+DictionaryEntry In H</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; Console.WriteLine(&quot;Key
+= {0}, Value = {1}&quot;,&nbsp; de.Key, de.Value)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Next de</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font SIZE="2"><b><font face="Courier New" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34">  Attention on
+n'utilise pas de numéro d'index mais uniquement la clé.</font></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#008000">'&nbsp; Creation d'une 
+Hashtable.</font><br>
+<font color="#0000FF">Dim myHT As New Hashtable()</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">' Mettre des éléments dans la HashTable<br>
+<font color="#0000FF">myHT.Add(&quot;un&quot;, &quot;premier&quot;)<br>
+myHT.Add(&quot;deux&quot;, &quot;second&quot;)<br>
+myHT.Add(&quot;trois&quot;, &quot;troisième&quot;)<br>
+myHT.Add(&quot;quatre&quot;, &quot;quatrième&quot;)<br>
+&nbsp;</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#008000">'Recherche la valeur 
+correspondant à la clé &quot;trois&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">myReponse=myHT.Item(&quot;trois&quot;)&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">&nbsp;'Retourne &quot;troisième&quot;<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#008000" face="Courier New" size="2">'Parcourir la HashTable</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#008000">'Création d'un 
+IDictionaryEnumerator</font><br>
+<font color="#0000FF">Dim myEnumerator As IDictionaryEnumerator = 
+myHT.GetEnumerator()<br>
+<br>
+While myEnumerator.MoveNext()</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#008000">'Afficher clé et valeur</font><br>
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; MsgBox( myEnumerator.Key+ 
+myEnumerator.Value)<br>
+End While</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">En
+interne, pour chaque élément, la clé est 'hachée' pour créer un code de
+hashage qui sert à pointer l'élément et sa valeur.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p ALIGN="LEFT"><b><u><font face="Courier New" size="3"><font color="#0000FF" size="3"><span style="background-color: #C0C0C0">2-Dictionary(Of..)</span></font>
+ Dictionnaire générique avec Clé et valeur&nbsp;</font></u></b></p>
+<font FACE="Courier New" size="2">
+<p ALIGN="LEFT">A partir de VB 2005.</p>
+<p ALIGN="LEFT">La clé doit être unique (pas de doublon de clé).&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p ALIGN="LEFT">La récupération d'une valeur à partir de sa clé est très
+rapide.(Utilisation d'un hachage)</p>
+<p ALIGN="LEFT"><font color="#0000FF">Of</font> permet de choisir le type de la
+clé et celui des valeurs.</p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim Dic As New
+Dictionary(Of String, String)&nbsp;</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">' Ajout d'élément</span></p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dic.Add(&quot;txt&quot;,
+&quot;notepad.exe&quot;)&nbsp;</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; Dic.Add(&quot;bmp&quot;,
+&quot;paint.exe&quot;)</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">' Ajout d'élément </span><font color="#008000">en
+vérifiant avant si la clé n'existe pas&nbsp;&nbsp;&nbsp;&nbsp;</font></p>
+<p ALIGN="LEFT"><span style="COLOR: blue">&nbsp;&nbsp;&nbsp; </span><font color="#0000FF">If
+Not Dic.ContainsKey(&quot;ht&quot;) Then</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dic.Add(&quot;ht&quot;, &quot;hypertrm.exe&quot;)</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp; End If&nbsp;</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">' Modifier la valeur correspondant à
+la clé 'doc'</span></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dic(&quot;doc&quot;) = &quot;winword.exe&quot;</font></p>
+<p ALIGN="LEFT">&nbsp;'<span style="color: green">Parcours du Dictionary (le
+type de clé/Value est KeyValuePair)</span><span style="COLOR: green">.</span>&nbsp;</p>
+<blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">For Each kvp As KeyValuePair(Of String,
+String) In Dic</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;Key
+= {0}, Value = {1}&quot;,&nbsp; kvp.Key, kvp.Value)&nbsp;</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Next kvp</font></p>
+</blockquote>
+<p ALIGN="LEFT"><span style="COLOR: green">' Récupérer une valeur correspondant
+à une clé</span></p>
+<p ALIGN="LEFT">Dic(<span style="COLOR: maroon">&quot;rtf&quot;</span>)</p>
+<p ALIGN="LEFT">'<span style="color: green">TryGetValue permet de rechercher une
+valeur correspondant à une clé, retourne False si la clé n'existe pas (sans
+déclencher d'erreur).</span></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dim value As String = &quot;&quot;&nbsp;</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">If Dic.TryGetValue(&quot;tif&quot;, value)
+Then</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;For
+key = &quot;&quot;tif&quot;&quot;, value = {0}.&quot;, value)</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;Else</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;Key
+= &quot;&quot;tif&quot;&quot; non trouvée.&quot;)&nbsp;</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">End If</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dic..ContainsKey(<span style="COLOR: maroon">&quot;ht&quot;</span>)
+</font>permet aussi de tester si une clé existe.</p>
+<p ALIGN="LEFT"><font color="#008000">'Enlever un élément</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dic.Remove(&quot;doc&quot;)</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p ALIGN="LEFT"><font face="Courier New" size="5" color="#0000FF"><b><span style="background-color: #C0C0C0">C</span></b></font><span style="background-color: #C0C0C0"><b><font face="Courier New" size="5" color="#0000FF"><font FACE="Courier New" size="2">-
+</font>
+<font face="Courier New">Collection combinant les d</font>ictionnaires et les
+List.</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New">Pour trouver un élément on peut utiliser une clé ou
+un Index et la collection est triée automatiquement.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF" face="Courier New">1-SortedList:</font></span></p>
+<font FACE="Courier New" size="2">
+<p class="MsoNormal" style="margin-top:6.0pt">
+Il permet l'accès aux valeurs par 
+l'intermédiaire des clés associées ou des index.</p>
+<p>C'est un hybride de HashTable et de Array.</p>
+<p>On ajoute un élément par
+<font color="#0000FF">mySL.Add(Clé,Valeur)</font></p>
+<p>La séquence d'index est basée sur la 
+séquence de tri. Quand un élément est ajouté, il est inséré dans l'ordre de tri 
+adéquat, et l'indexation s'ajuste en conséquence. Le tri est donc automatique.</p>
+<p><font color="#0000FF"><b>On peut donc lire une valeur par sa Clé ou 
+son Index++++:</b></font></p>
+<ul>
+  <li>Quand la clé d'un élément permet 
+  d'accéder à celui-ci à l'aide de la propriété d'indexeur <font color="#0000FF">
+  Item</font>, l'élément se comporte comme <b>Hashtable</b>.</li>
+</ul>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font color="#0000FF">mySL.Item(CLE)</font> 
+      'retourne la valeur correspondant à la clé CLE</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>Quand l'index d'un élément permet 
+  d'accéder à celui-ci à l'aide de
+  <a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/cpref/html/frlrfsystemcollectionssortedlistclassgetbyindextopic.htm">
+  GetByIndex</a> ou de
+  <a href="ms-help__/MS.VSCC.2003/MS.MSDNQTR.2003FEB.1036/cpref/html/frlrfsystemcollectionssortedlistclasssetbyindextopic.htm">
+  SetByIndex</a>, l'élément se comporte comme <b>Array </b>(tableau avec un 
+  Index).</li>
+</ul>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p><font color="#0000FF">mySL.GetKey(3)</font> 
+      'retourne la Clé qui est dans l'élément d'index 3<br>
+      <br>
+      <font color="#0000FF">mySL.GetByIndex(3)</font> 'retourne la valeur qui 
+      est dans l'élément d'index 3<br>
+&nbsp;</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>SortedList maintient en interne deux 
+tableaux&nbsp;, un tableau pour les clés et un autre pour les valeurs associées.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#FF0000"><span style="font-family: Courier New">Index de 
+base 0: Le premier élément est 0.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim mySL As New SortedList()<br>
+mySL.Add(&quot;1&quot;, &quot;Hello&quot;)<br>
+mySL.Add(&quot;2&quot;, &quot;World&quot;)<br>
+mySL.Add(&quot;3&quot;, &quot;!&quot;)<br>
+<br>
+<br>
+Console.WriteLine(&quot; Count: {0}&quot;, mySL.Count)&nbsp;&nbsp;&nbsp; </font>'Nombre d'éléments<font face="Courier New" size="2" color="#0000FF"><br>
+Console.WriteLine(&quot; Capacity: {0}&quot;, mySL.Capacity) </font>
+'nombre d'éléments possible mais il augmente 
+automatiquement, on n'a pas à s'en occuper.<br>
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Integer<br>
+For i = 0 To mySl.Count - 1<br>
+&nbsp;&nbsp;&nbsp; Console.WriteLine( myList.GetKey(i)&amp; myList.GetByIndex(i))
+</font>&nbsp;'affiche les éléments de la 
+collection</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+' par index croissant.<font face="Courier New" size="2" color="#0000FF"><br>
+Next i<br>
+&nbsp;</font></p>
+<font SIZE="2" color="#111111">
+<p><u><b>Les </b></u> 
+</font>
+<u><b><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="3">SortedList(Of..)</font></span><font FACE="Courier New" size="2">..</font></b></u>
+<font FACE="Courier New" size="2" color="#111111"><font FACE="Courier New" size="2">
+générique avec Clé et valeur ,trié sur la clé. Ressemble
+à SortedDictionary, mais occupe moins de mémoire et est moins rapide pour les
+insertions/suppressions.</font></p>
+<p>&nbsp;</p>
+</font>
+</font>
+<p ALIGN="LEFT"><font color="#0000FF" face="Courier New" size="4"><u><b><span style="background-color: #C0C0C0">2-
+Les &nbsp;SortedDictionnary(Of..)</span></b></u></font>
+<font FACE="Courier New" size="2">
+<font color="#0000FF"> </font>avec Clé et valeur
+,trié sur la clé.</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" size="5"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+D- Les Queue:&nbsp;</span></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Collection d'objets de type FIFO</b> (First In, First 
+Out)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Premier arrivé premier servi.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est la queue devant un 
+cinéma, le premier arrivé, prend son billet le premier. </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Les objets (String, Integer,....) stockés dans 
+<font color="#0000FF">Queue</font> sont insérés à une extrémité et supprimés à l'autre.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; Le 
+nombre d'élément de la queue est géré automatiquement.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><b>DeQueue</b> 
+supprime et retourne l’objet de début de liste</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><b>EnQueue</b> 
+ajoute un objet en fin de liste</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><b>Peek</b> 
+retourne l’objet de début sans le supprimer</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;<img border="0" src="vQueue.gif" width="99" height="127"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim myQ As New Queue()<br>
+myQ.Enqueue(&quot;One&quot;)<br>
+myQ.Enqueue(&quot;Two&quot;)<br>
+myQ.Enqueue(&quot;Tree&quot;)<br>
+<br>
+<br>
+Console.WriteLine ( myQ.Count)</font> 'Affiche le nombre d'éléments.<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Console.WriteLine (myQ.Dequeue())</font> 
+'Affiche le premier sorti en le sortant. &quot;one&quot; dans notre exemple.<br>
+'S'il n'y a plus d'élément cela lève une exception (une erreur), il faut donc 
+gérer l'exception ou contrôler le nombre d'élément avec la propriété 
+Count.</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">If MyQ.Count&gt;0 then</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+myQ.Dequeue..</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Console.WriteLine (</font><font face="Courier New" size="2"><font color="#0000FF">myQ.Peek())
+</font>'Affiche le premier élément sans l'enlever de la Queue<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">myQ.Clear()</font> 
+'Efface tous les éléments de la queue<br>
+</font></p>
+<p><font FACE="Courier New" size="2"></p>
+<font SIZE="2">
+<p><font color="#0000FF"><u><b>Les</b></u></font></font><u><b><font color="#0000FF" SIZE="2" FACE="Courier New">
+</font></b></u>
+</font>
+<b><u><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="3"> 
+Queue(Of..)</font></span><font color="#0000FF" FACE="Courier New" size="2"> </font></u></b><font FACE="Courier New" size="2"><font color="#111111">Comme
+les Queue mais avec un généric</font></p>
+<font SIZE="2" color="#111111">
+<p>&nbsp;</p>
+</font>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font color="#0000FF" size="5">E- Les Stack:</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Collection d'objets de type <b>pile ( ou stack)</b> LIFO (Last In, 
+First Out)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Dernier entré, premier sortie.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Ce type de stack (pile) est très utilisé en 
+interne par les programmes informatiques: on stocke dans une stack les adresses 
+de retour des procédures appelées, au retour on récupère l'adresse du dessus.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Push</b> insère un objet en haut de la 
+pile</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><b>Pop</b>&nbsp; enlève et retourne un objet en 
+haut de la pile</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vStack.gif" width="169" height="127"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On peut utiliser une pile dans un programme pour gérer le déplacement de 
+l'utilisateur dans un arbre, les éléments en cours sont stockés par Push, pour 
+remonter en chemin inverse, on Pop.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font SIZE="2"><font face="Courier New" color="#FF0000">
+<b>
+<img border="0" src="vicocheb.gif" width="32" height="34"> </b>Attention le premier 
+élément est ici l'élément 1 (élément d'index 1 à count) A vérifier!!</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim MaPile As New Stack()</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Str As String</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">'Ajouter des éléments à la pile</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MaPile.Push (&quot;A&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MaPile.Push (&quot;B&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MaPile.Push (&quot;C&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">'Récupérer un objet de la pile:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF"><span style="background-color: #FFFFFF">Srt 
+=MaPile.Pop()</span></font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Str est maintenant égal à &quot;C&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Attention, si Option Explicit=On, les éléments 
+de la pile étant des objets, on ne peut pas les affecter à une variable String, 
+il faut écrire:</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">Str = </font></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(MaPile.Pop(),
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF">)&nbsp;&nbsp;&nbsp;
+</font></font><font SIZE="2"><font face="Courier New">'on convertit (cast) 
+l'objet en String</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si la pile est vide et que l'on 'Pop', une 
+exception&nbsp; non gérée du type 'System.InvalidOperationException' se produit.(une 
+erreur se produit et cela plante!!), là aussi vérifier que <font color="#0000FF">
+MaPile.Count</font> (qui indique le nombre d'éléments dans la pile) n'est pas 
+égale à 0 avant de 'Poper'.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Mapile.Clear() </font>&nbsp;&nbsp;&nbsp; 
+'Supprime tous les objets.</font></p>
+<font FACE="Courier New" size="2" color="#111111">
+<p>&nbsp;</p>
+<p><b><u><font color="#0000FF" FACE="Courier New" size="2">Les </font></u></b>
+</font>
+<b><u><font color="#0000FF" face="Courier New" size="3"><span style="background-color: #C0C0C0">Stack(Of..)</span></font></u></b><font FACE="Courier New" size="2"><b><u><font color="#0000FF">
+</font></u></b><font color="#111111">Comme les track mais avec un généric</font>
+</font>
+</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p ALIGN="LEFT"><span style="background-color: #C0C0C0"><font color="#0000FF" face="Courier New" size="5"><u><b>F-
+Les LinkedList(Of..)</b></u> &nbsp;</font></span></p>
+<p ALIGN="LEFT">
+<font FACE="Courier New" size="2">
+Liste Chaînée de générique , chaque élément comportant une propriété<font color="#0000FF"> 
+Value, Next et Previous. </font>A partir d'un élément, on peut connaître le
+suivant ou le précédent.</p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><img border="0" src="vlistech.JPG" width="270" height="260"></p>
+<p ALIGN="LEFT"><span style="COLOR: blue">Imports</span> <font color="#0000FF">System.Collections.Generic&nbsp;</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">' Création d'une list.</span>&nbsp;</p>
+<p ALIGN="LEFT"><span style="COLOR: blue">Dim</span> <font color="#0000FF">words()
+As String = {&quot;the&quot;, &quot;fox&quot;, &quot;jumped&quot;, &quot;over&quot;,
+&quot;the&quot;, &quot;dog&quot;}&nbsp;</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">' Création d'une <b>Linkedlist.</b></span>&nbsp;</p>
+<p ALIGN="LEFT"><font color="#0000FF">Dim lk As New LinkedList(Of String)(words)</font></p>
+<p ALIGN="LEFT"><span style="COLOR: green">&nbsp;Ajouter le mot 'today' au
+début.</span></p>
+<p ALIGN="LEFT"><font color="#0000FF">&nbsp;lk.AddFirst(&quot;today&quot;)</font></p>
+<p ALIGN="LEFT"><span style="color: green">'Effacer le dernier élément</span><span style="COLOR: green">.</span></p>
+<p ALIGN="LEFT">&nbsp;<font color="#0000FF">lk.RemoveLast()</font></p>
+<p ALIGN="LEFT"><span style="color: green">'Les éléments sont des </span><font color="#008000">LinkedListNode,
+on peut en chercher un avec Find FindFirst, FindLast.</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dim current As LinkedListNode(Of String) =
+lk.FindLast(&quot;the&quot;)</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><font color="#008000">'A partir de l'élément courant, on peut
+ajouter avant ou après.</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">lk.AddAfter(current, &quot;old&quot;)</font>&nbsp;
+<font color="#008000">'il y a aussi AddBefore</font></p>
+<p ALIGN="LEFT"><font color="#008000">'A partir de l'élément courant, on peut
+parcourir la linkedList</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Dim element As LinkedListNode(Of String) =
+current.Previous</font>&nbsp; <font color="#008000">'il y a aussi Next</font></p>
+<p ALIGN="LEFT"><font color="#008000">'On peut déplacer un élément</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">lk.AddBefore(current, element)</font></p>
+<p ALIGN="LEFT"><font color="#008000">'On peut voir le contenue d'un </font><font color="#0000FF">LinkedListNode</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">c</font><font color="#0000FF">urrent.Value</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">current.Previous</font><font color="#0000FF">.Value</font></p>
+<p ALIGN="LEFT"><font color="#008000">'on peut voir la valeur du premier ou du
+dernier élément:</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">lk.First.Value</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">lk.Last.Value</font></p>
+<p ALIGN="LEFT"><font color="#008000">'Il existe aussi</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">Containst, Count</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<font FACE="Courier New" size="2">
+</font>
+<p ALIGN="LEFT"><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5">G-Les
+HashSet'
+en </font><font face="Courier New" color="#000080" size="5"> VB 2008</font></span></b> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Travailler sur les ensembles.</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il s'agit d'une collection <b>sans ordre</b> qui contient des <b>éléments
+uniques</b>. <font color="#0000FF"> HashSet</font>&nbsp; possède comme toutes les collections
+<font color="#0000FF">Add</font>, <font color="#0000FF"> Remove</font> et <font color="#0000FF">Contains</font>.. et fournit plusieurs <b> opérations d'ensembles</b> (notamment l'union,
+l'intersection et la différence symétrique)ce qui permet de prendre en charge
+la plupart des opérations mathématiques qui sont généralement réalisées
+sur des ensembles (sens mathématique du terme).</font> </p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim hs As New HashSet(Of String)</font></font></p>
+<p><font face="Courier New" size="2"><b>Ajout d'éléments</b>:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;toto&quot;)</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;lulu&quot;)</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">hs.Add(&quot;titi&quot;</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">La méthode <font color="#0000FF"> Add
+</font> renvoie True ou False pour indiquer si elle a
+fonctionné (s'il n'y avait pas déjà dans la HashSet l'élément que l'on veut
+ajouter).</font> </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim caMarche As Boolean =
+hs.Add(&quot;toto&quot;)&nbsp; </font><font size="2" face="Courier New">'retourne False</font> </p>
+<font FACE="Courier New" size="2">
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.Count</font> donne le nombre
+d'élément. </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT">On peut <b>effacer un élément</b>: </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.Remove</font><font color="#0000FF">(&quot;lulu&quot;)</font> </p>
+<p ALIGN="LEFT"><font color="#111111">On peut effacer sous condition:</font> </p>
+<p ALIGN="LEFT">Exemple: effacer tous les éléments contenant un &quot;t&quot;: </p>
+<p ALIGN="LEFT"><font color="#0000FF">hs.RemoveWhere( Adress Of Test)</font> </p>
+<p ALIGN="LEFT">'La fonction Test reçoit chaque string de la table et retourne
+un booléen qui indique si la condition est rempli ce qui déclenche le Remove. </p>
+<p ALIGN="LEFT"><span style="COLOR: blue">Private</span> <span style="COLOR: blue">Shared</span>
+<span style="COLOR: blue">Function</span> Test(<span style="COLOR: blue">ByVal</span>
+s <span style="COLOR: blue">As</span> <span style="color: blue">String</span>) <span style="COLOR: blue">As</span>
+<span style="COLOR: blue">Boolean</span>&nbsp; </p>
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp; <span style="COLOR: blue">Return</span> (Instr(s,&quot;t&quot;)&lt;&gt;0) </p>
+<p ALIGN="LEFT"><span style="COLOR: blue">End</span> <span style="COLOR: blue">Function</span> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+</font>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>ajouter la collection hs2 à hs grâce à <font color="#0000FF">UnionWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">UnionWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Les éléments doublons (qui
+existent déjà dans hs ne sont pas ajoutés.</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Cela correspond à un And</font><font size="2" face="Courier New">.</font> </p>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>rechercher les éléments commun à hs2 et à hs grâce à <font color="#0000FF">IntersectWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">IntersectWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui étaient présent dans hs et hs2</font> </p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">Cela correspond à un Or</font><font size="2" face="Courier New">.</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><b><font face="Courier New" size="2">Supprime tous les éléments
+de hs qui sont aussi contenus dans la collection passée en paramètre (hs2)
+avec <font color="#0000FF">ExceptWith&nbsp;</font></font></b> </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">ExceptWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui n'étaient pas présent dans hs et hs2</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT">
+<font face="Courier New" size="2">
+On peut <b>rechercher les éléments contenus dans hs2 et dans hs mais pas dans
+les 2 grâce à <font color="#0000FF">SymmetricExceptWith</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">hs<code class="csharp_operator">.</code><code class="csharp_function">SymmetricExceptWith</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">hs contient&nbsp; maintenant
+les éléments qui étaient présent dans hs ou&nbsp; hs2 mais pas les deux.</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">On peut <b>rechercher si hs2
+est un sous ensemble de hs grâce à <font color="#0000FF">IsSubsetOf</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim b As
+Boolean= hs<code class="csharp_operator">.</code><code class="csharp_function">IsSubsetOf</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">b est égal à True si hs est
+un sous ensemble de hs2 (tous les éléments de hs sont dans hs2)</font><font face="Courier New" size="2">.</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il existe aussi:</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><font color="#0000FF">IsProperSubstOf</font>
+qui retourne True si hs est un sous ensemble de hs2 et si hs différent de
+hs2&nbsp; (sous ensemble strict)</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">On peut <b>rechercher si&nbsp;
+hs est un sur ensemble de hs grâce à <font color="#0000FF">IsSupersetOf</font></b>:
+</font>
+ </p>
+<p ALIGN="LEFT"><font color="#0000FF" size="2" face="Courier New">Dim b As
+Boolean= hs<code class="csharp_operator">.</code><code class="csharp_function">IsSupersetOf</code>(hs2)</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">b est égal à True si hs est
+un sur ensemble de hs2 (tous les éléments de hs2 sont dans hs)</font><font face="Courier New" size="2">.</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Il existe aussi:</font> </p>
+<p ALIGN="LEFT"><font face="Courier New" size="2"><font color="#0000FF">IsProperSupersetOf</font>
+qui retourne True si hs est un sur ensemble de hs2 et si hs est différent de
+hs2&nbsp; (sur ensemble strict)</font> </p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT">&nbsp; </p>
+<font FACE="Courier New" size="2">
+</font>
+<p ALIGN="LEFT"><b><font face="Courier New" color="#0000FF" size="5"><span style="background-color: #C0C0C0">H-
+Collection travaillant sur les Bits.</span></font></b> </p>
+<font FACE="Courier New" size="2">
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">BitArray</font>
+permet de travailler sur un nombre quelconque de Bit.</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">BitVector32</font>
+ne permet de travailler que sur 32 bits mais est plus rapide.</p>
+</font><p class="MsoNormal" style="margin-top:6.0pt">
+<b>
+<span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">1-
+BitArray:</font></span></b><font FACE="Courier New" size="2"><span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0"><font size="4" color="#0000FF">
+&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">Necessite:</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">Imports
+System.Collection</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+Crée <b>une collection de booléens</b> (codés 
+sur un bit). La valeur de 
+chaque élément est <font color="#0000FF">True</font> ou <font color="#0000FF">False</font>.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">BitArray</font> permet de travailler sur un nombre
+quelconque de Booléens ou Bit.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;</font>Creation 
+de BitArray.<font face="Courier New" size="2" color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Dim myBA As New BitArray(5)&nbsp;&nbsp;&nbsp;
+</span>
+</font><span style="background-color: #FFFFFF">'BitArray 
+de 5 bits<font face="Courier New" size="2" color="#0000FF"><br>
+<br>
+Dim myBA As New BitArray(5, False)
+</font>'BitArray de 5 bits à False<font face="Courier New" size="2" color="#0000FF"><br>
+<br>
+Dim myBA() As Boolean = {True, True, False, False, False}<br>
+Dim myBA As New BitArray(myBytes)
+</font>'on crée un&nbsp; tableau de Booleans 
+que l'on met dans le BitArray</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><span style="background-color: #FFFFFF">Le 
+premier élément est l'élément 0.</span></b><font face="Courier New" size="2" color="#0000FF">
+<b>
+<span style="background-color: #FFFFFF"><br>
+</span>
+</b>
+<br>
+</font>On peut mettre tous les bits à True 
+avec <font color="#0000FF">SetAll</font>:</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myBA.SetAll(True)<br>
+<br>
+</font>' Mettre le dernier Bit à False avec
+<font color="#0000FF">Set</font>.<font face="Courier New" size="2" color="#0000FF"><br>
+myBA.Set(myBA.Count - 1, False)<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+'Obtenir la valeur du second Bit</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myBA.Get(1)<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">myBA(1) </font>
+ou<font face="Courier New" size="2" color="#0000FF"> 
+myBA.Item(1) </font>donnent aussi la valeur du 
+second Bit.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<br>
+On peut effectuer des opérations logiques entre 2 BitArray (<font color="#0000FF">Or, 
+Xor, And Not</font>):</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+Exemple pour Or:</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">myBA1.Or(myBA2)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Count </font>
+et<font face="Courier New" size="2" color="#0000FF"> 
+length </font>donnent le nombre d'éléments, 
+mais count est en lecture seule, Length permet, lui, de modifier le nombre 
+d'éléments.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+</font><p class="MsoNormal" style="margin-top:6.0pt">
+<b><span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">2-
+</font><font face="Courier New" color="#0000FF" size="4">Bit</font><font face="Courier New" size="4" color="#0000FF">Vector32:</font></span></b><font FACE="Courier New" size="2"><span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0"><font size="4" color="#0000FF">
+&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+Ne permet de travailler que sur 32 bits mais est plus rapide.</p>
+<p ALIGN="LEFT"><font color="#0000FF">Imports System.Collection.Specialized</font> </p>
+<p ALIGN="LEFT">&nbsp; </p>
+</font>
+<p ALIGN="LEFT"><b><font face="Courier New" color="#0000FF" size="5"><span style="background-color: #C0C0C0">I</span></font></b><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5"><font FACE="Courier New" size="2">-
+</font>
+</font><font face="Courier New" color="#0000FF" size="5">Autres <font face="Courier New">collections:</font></font></span></b> </p>
+<font SIZE="2" color="#111111">
+<font FACE="Courier New" size="2">
+<p>&nbsp;</p>
+</font>
+</font>
+<p><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="3">Collections spécialisées:</font></span></b></p>
+<font FACE="Courier New" size="2">
+<font SIZE="2" color="#111111">
+<p>L'espace
+</font>
+<font SIZE="2" COLOR="#0000ff">
+<font SIZE="2" FACE="Courier New">System.Collections.Specialized </font></font>
+<font SIZE="2" color="#111111">fournit de 
+nouveaux types de collection très spécifiques, elles ne sont faites que pour
+un seul type:</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font color="#0000FF" face="Courier New" size="3">StringCollection:&nbsp;</font></span></p>
+<font FACE="Courier New" size="2">
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">N</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">e peut contenir que des chaînes (cela 
+devrait aller plus vite)</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+&nbsp;</p>
+<table id="AutoNumber10" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="13%" border="1">
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">&quot;Toto&quot;</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">&quot;Lulu&quot;</font></td>
+  </tr>
+  <tr>
+    <td width="100%">
+    <p align="center"><font face="Courier New" size="2">&quot;Titi&quot;</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+' Créer une StringCollection.<br>
+<font color="#0000FF">Dim myCol As New StringCollection()<br>
+</font><br>
+'Créer un tableau de String, l'ajouter( en fin) à la collection.<br>
+<font color="#0000FF">Dim myArr() As [String] = {&quot;rouge&quot;, &quot;vert&quot;, &quot;orange&quot;, 
+&quot;vert&quot;,)<br>
+myCol.AddRange(myArr)</font><br>
+<br>
+'Ajouter un élément à la fin de la collection<br>
+<font color="#0000FF">myCol.Add(&quot;marron&quot;)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+'Insérer un élément à l'index 3<br>
+<font color="#0000FF">myCol.Insert(3, &quot;bleue&quot;)</font><br>
+<br>
+'Enlever une élément<br>
+<font color="#0000FF">myCol.Remove(&quot;orange&quot;)</font><br>
+<br>
+<br>
+' chercher et enlever tous les éléments &quot;vert&quot; <br>
+<font color="#0000FF">Dim i As Integer = myCol.IndexOf(&quot;vert&quot;)<br>
+While i &gt; - 1<br>
+&nbsp;myCol.RemoveAt(i)<br>
+&nbsp;i = myCol.IndexOf(&quot;vert&quot;)<br>
+End While<br>
+</font><br>
+' La collection contient t'elle &quot;jaune&quot;?<br>
+<font color="#0000FF">If myCol.Contains(&quot;jaune&quot;) Then..</font><br>
+<br>
+' Copie la collection dans un tableau.<br>
+<font color="#0000FF">Dim myArr2(myCol.Count) As [String]<br>
+myCol.CopyTo(myArr2, 0)</font><br>
+<br>
+' Efface toutes les strings de la Collection.<br>
+<font color="#0000FF">myCol.Clear()</font><br>
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+'Afficher la liste des Strings</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">Dim myEnumerator As 
+System.Collections.IEnumerator = myCol.GetEnumerator()<br>
+<br>
+While myEnumerator.MoveNext()<br>
+&nbsp; Console.WriteLine(&quot; {0}&quot;, myEnumerator.Current)<br>
+End While</font><br>
+'C'est un peu complexe!! on y reviendra.<br>
+<font face="Courier New" color="#FF0000">
+<b>
+<img border="0" src="vicocheb.gif" width="32" height="34"> </b>Attention le premier 
+élément est ici l'élément 0 (l'index va de 0 à count-1) ; c'est du .NET!!</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT">Intérêts de ses collections est qu'elle sont <b>fortement typées</b>: 
+Elle n'acceptent que des éléments d'un type: des String dans le dernier 
+exemple.&nbsp; </p>
+<p ALIGN="LEFT"><font color="#0000FF">SortedDictionary</font> </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="3">Pour
+mémoire: L'objet 'Collection' c'est du
+VisualBasic: </font><font face="Courier New" color="#0000FF" size="4"> A eviter.</font></span></b></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+'Collection' existait déjà en VB6!!
+</font>
+    </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b>
+<font color="#FF0000" size="1" FACE="Courier New">
+Utiliser plutôt les collections du Framework.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+L'objet collection utilise un couple Clé-Valeur, pour chaque élément.
+</font>
+    </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+<img border="0" src="vhashtab.gif" width="153" height="107">
+</font>
+    </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+Ici le premier élément a pour clé: 69, pour 
+valeur:'Rhône'
+</font>
+    </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+C'est pratique car cela permet de retrouver 
+une valeur à partir de la clé.
+</font>
+    </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font FACE="Courier New" size="1">
+Pour utiliser une collection d'objets, vous devez 
+premièrement créer l'objet <b>maCollection</b>.
+<span style="font-family: Courier New">&nbsp;</span>
+</font>
+    </p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" COLOR="#0000ff" size="1">Dim</font></span>
+<font FACE="Courier New" size="1">
+<font face="Courier New"><span style="background-color: #FFFFFF">
+<font color="#0000FF">maCollection </font><font SIZE="2" COLOR="#0000ff">
+As</font><font SIZE="2" color="#0000FF"> </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">New</span></font></font><span style="background-color: #FFFFFF"> 
+<font face="Courier New" color="#0000FF"> 
+Collection</font></span>
+</font>
+    </p>
+<p><font face="Courier New" size="1">Dès que cet objet est créé, vous pouvez 
+ajouter (avec Add), enlever ou manipuler des éléments.</font></p>
+<p><font face="Courier New" size="1">On utilise la syntaxe: <font color="#0000FF">
+NomCollection.Add( élément, Clé)</font></font></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF" size="1">maCollection.Add(&quot;Bonjour&quot;, &quot;30&quot;)</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF" size="1">maCollection.Add(&quot;Monsieur&quot;, &quot;31&quot;)</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF" size="1">maCollection.Add(&quot;Et&quot;, &quot;32&quot;)</font></span></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF" size="1">maCollection.Add(&quot;Madame&quot;, &quot;33&quot;)</font></span></p>
+<p><font face="Courier New" size="1">Il peut y avoir 2 autres paramètres:</font></p>
+<p><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF" size="1">maCollection.Add(Element, Clé, 
+Before, After)</font></span></p>
+<p><font face="Courier New" size="1">Before <b>ou</b> After peuvent être utilisés pour 
+placer l'élément à insérer avant ou après un élément de la collection. Si Before 
+ou After est un nombre c'est l'index des éléments qui est utilisé, si c'est une 
+string c'est la clé.</font></p>
+<p><b><font face="Courier New" size="1">Pour récupérer un objet de la collection</font></b><font face="Courier New" size="1">, on peut 
+utiliser</font></p>
+<ul>
+  <li><b><font face="Courier New" size="1">l'index:</font></b></li>
+</ul>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" face="Courier New" size="1">Label1.Text =
+maCollection.Item(2)</font></span> 
+<font FACE="Courier New" size="1">
+<font face="Courier New"> </font>
+<font face="Courier New" COLOR="#008000">'Affiche le second élément: 
+Monsieur</font>
+</font>
+    </p>
+<p>
+<b>
+<font FACE="Courier New" size="1">
+<font face="Courier New" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> </font>
+</font>
+ </b>
+<font FACE="Courier New" size="1">
+<font face="Courier New" color="#FF0000">
+Attention le 
+premier élément est ici l'élément 1 (l'index&nbsp; va de 1 à </font><b>
+<font face="Courier New" color="#0000FF">
+Count</font></b><font face="Courier New" color="#FF0000">); c'est hérité du VB!!</font>
+</font>
+    </p>
+<ul>
+  <li><b><font face="Courier New" size="1">La&nbsp; clé</font></b></li>
+</ul>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" face="Courier New" size="1">Label1.Text = 
+maCollection.Item(&quot;33&quot;)</font></span> 
+<font FACE="Courier New" size="1">
+<font face="Courier New"> 'Affiche Madame </font>
+</font>
+    </p>
+<font FACE="Courier New" size="2">
+<p>&nbsp;</p>
+</font>
+<p><b><font face="Courier New" size="1">Pour effacer un objet de la collection</font></b><font face="Courier New" size="1">, on peut 
+utiliser</font></p>
+<ul>
+  <li><b><font face="Courier New" size="1">l'index:</font></b></li>
+</ul>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" face="Courier New" size="1">
+maCollection.Remove(2)</font></span> 
+<font FACE="Courier New" size="1">
+<font face="Courier New"> </font>
+<font face="Courier New" COLOR="#008000">'Efface le second élément: 
+Monsieur</font>
+</font>
+    </p>
+<p>
+<b>
+<font face="Courier New" color="#FF0000" size="1">
+&nbsp;</font></b></p>
+<ul>
+  <li><b><font face="Courier New" size="1">La&nbsp; clé</font></b></li>
+</ul>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" face="Courier New" size="1">
+maCollection.Remove(&quot;33&quot;)</font></span> 
+<font FACE="Courier New" size="1">
+<font face="Courier New"> </font>
+<font face="Courier New" COLOR="#008000">'Efface Madame</font>
+</font>
+    </p>
+<font FACE="Courier New" size="2">
+<p>&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font FACE="Courier New" size="1">
+On 
+peut utiliser For each pour <b>parcourir</b> la Collection:
+</font>
+    </p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="1">For Each S As string In 
+maCollection</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="1">&nbsp;&nbsp;&nbsp; MsgBox(S)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="1">Next S</font></p>
+<font FACE="Courier New" size="2">
+<blockquote>
+<p>&nbsp;</p>
+</font>
+<p>
+<font FACE="Courier New" size="1">
+Remarque pour les 'bons':
+</font>
+</p>
+<p>
+<font FACE="Courier New" size="1">
+Noter que <font color="#0000FF">Collection</font> 
+peut contenir <b>des Objets</b> donc n'importe quoi.
+</font>
+</p>
+<p><span style="background-color: #FFFFFF"><font color="#0000FF" size="1" FACE="Courier New">Label1.Text = 
+maCollection.Item(2)</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font FACE="Courier New" size="1">
+Est 
+accepté si <font face="Courier New" size="2" color="#0000FF">Option 
+Strict=Off </font>car il y a y a conversion 
+implicite.
+</font>
+</span></p>
+<p><span style="background-color: #FFFFFF">
+<font FACE="Courier New" size="1">
+Si 
+Option<font face="Courier New" size="2" color="#0000FF"> Strict=On</font>, 
+il faut écrire:
+</font>
+</span></p>
+<p><span style="background-color: #FFFFFF">
+<font FACE="Courier New" size="1">
+<font color="#0000FF">Label1.Text = 
+CType(maCollection.Item(2), String) </font>pour convertir explicitement l'objet 
+en String
+</font>
+</span></p>
+</blockquote>
+  </blockquote>
+</blockquote>
+<p><b><font face="Courier New" color="#0000FF" size="5"><span style="background-color: #C0C0C0">J</span></font></b><b><span style="background-color: #C0C0C0"><font FACE="Courier New" size="2"><font FACE="Courier New" size="2">-
+</font>
+</font><font face="Courier New" color="#0000FF" size="5">Remarques</font><font FACE="Courier New" size="2"><font face="Courier New">:</font>
+</font>
+</span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">For
+Each : le piège</span></font></b></p>
+<font FACE="Courier New" size="2">
+<p><font SIZE="2">Créons une collection List de Single, <b>dans une boucle For
+Each, tentons de modifier la valeur de chaque élément de la List</b>
+(incrémentons de 1 la valeur de chaque élément).</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p>Dim</font><font SIZE="2"> l </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2"> List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2">)</font></p>
+<font SIZE="2"><font SIZE="2" FACE="Courier New">
+<p><font color="#0000FF">l.Add(1)</font></p>
+<p><font color="#0000FF">l.Add(2)</font></p>
+<p><font color="#0000FF">l.Add(3)</font></p>
+</font></font>
+<p><font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Each</font><font SIZE="2">
+s </font><font SIZE="2" COLOR="#0000ff">In</font><font SIZE="2"> l</p>
+<p>s = s + 1</p>
+<p></font><font SIZE="2" COLOR="#0000ff">Next</p>
+</font>
+<p>On s'attendrait, après For Each, à avoir les valeurs 2, 3, 4 dans la
+collection l. <font color="#FF0000">Faux</font>, on a toujours 1, 2, 3!!</p>
+<p><b>For Each est en READ ONLY en quelque sorte:</b> une modification&nbsp; de
+'s' dans la boucle, modifie bien 's' (qui est bien incrémenté); 's' est en
+fait une copie locale mais la liste 'l' n'est pas modifiée.</p>
+<p>Un ajout ou une suppression d'élément sont aussi non pris en compte dans
+une boucle For Each: Il est aussi fortement déconseillé de modifier la liste
+en cours de boucle For Each.</p>
+<p><font color="#FF0000">For Each ne doit servir qu'a parcourir et lire une
+Collection.</font></p>
+<p>Pour modifier une liste il faut passer par:</p>
+<font SIZE="2">
+<p></font><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Byte</p>
+</font>
+<p><font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> i = 0 </font><font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2">
+l.Count - 1</p>
+<p>l(i) = l(i) + 1</p>
+<p></font><font SIZE="2" COLOR="#0000ff">Next</p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Pourquoi le premier élément est 0 ou 1?</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vicocheb.gif" width="32" height="34"> <font color="#FF0000">Le .NET&nbsp;Framework normalise les collections 
+comme étant des collections de base zéro (ArrayList par exemple). Les Collections de Visual&nbsp;Basic&nbsp; 
+fourni des collections de base 1.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p ALIGN="LEFT">&nbsp; </p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF">
+<font face="Courier New"><span style="background-color: #C0C0C0">&nbsp;</span></font><b><font face="Courier New" size="4"><span style="background-color: #C0C0C0">Généralisation 
+de la notion de collection.</span></font></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Certains objets ont une liste de données, 
+d'items, Vb 
+les organise en <b>Collections.</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Une collection peut donc faire partie des&nbsp; 
+propriétés d'un objet.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On verra plus loin qu'un contrôle nommé
+<font color="#0000FF">TextBox</font> peut contenir du texte, ce 
+contrôle à une collection nommée <font color="#0000FF">.lines</font> qui contient 
+chaque ligne du texte (s'il y en a plusieurs)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si le texte contient 3 lignes, elles seront 
+dans la collection <font color="#0000FF">.lines</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">
+Texbox1.lines(0)&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">
+'remarquer, ici le premier élément est 0!!</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Textbox1.lines(1)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Textbox1.lines(2)&nbsp;&nbsp;&nbsp;
+</span>
+</font> </p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">L'indice des éléments va de 0 à count-1</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Autres exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Les contrôles <font color="#0000FF">ListBox</font> 
+possèdent une collection <font color="#0000FF">Items</font> dans laquelle est 
+placé tous les éléments contenus dans la liste. Pour ajouter un élément on 
+utilise la méthode Add de 
+la collection Items: <font color="#0000FF">ListBox.Items.Add( )</font> </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Un tas d'objets possèdent des collections.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Encore plus:</font>
+<font face="Courier New" size="2">chaque formulaire (fenêtre)possède une <b>Collection
+'Controls'</b>. Il s'agit d'une collection qui contient tous les contrôles
+(boutons, list, textBox..) de ce 
+formulaire.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Exemples</font></b></span><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0"> 
+sur les collections:</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">Créer une ArrayList, une queue, ajouter la 
+queue à la&nbsp; ArrayList, chercher un&nbsp; élément, insérer un élément.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Les collections font partie de<b> </b>l'espace de nom<b> Systeme.Collections</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">I<span style="background-color: #FFFFFF">mports 
+System.Collections</span></font><span style="background-color: #FFFFFF"><br>
+<br>
+<br>
+' Créer une ArrayList.<br>
+<font color="#0000FF">Dim myAL As New ArrayList()<br>
+myAL.Insert(0, &quot;un&quot;)<br>
+myAL.Insert(1, &quot;deux&quot;)<br>
+</font><br>
+' Créer une Queue.<br>
+<font color="#0000FF">Dim myQueue As New Queue()<br>
+myQueue.Enqueue(&quot;trois&quot;)<br>
+myQueue.Enqueue(&quot;quatre&quot;)</font></span><br>
+<br>
+<br>
+' Copies la Queue dans ArrayList à l'index 1.<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">myAL.InsertRange(1, myQueue)</font></span><br>
+<br>
+<br>
+' Chercher &quot;deux&quot; et ajouter &quot;moins de deux&quot; avant .<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">myAL.Insert(myAL.IndexOf(&quot;deux&quot;), &quot;moins de deux&quot;)</font></span><br>
+<br>
+<br>
+' Ajouter &quot;!!!&quot; à la fin.<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">myAL.Insert(myAL.Count, &quot;!!!&quot;)</font><br>
+&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Array = tableau, table.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">lenght= longueur</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">Key= clé</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">Remove (to)= enlever</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Stack= tas</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6tab.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6struct.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6col.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+</html>

@@ -1,0 +1,431 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:42 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net affichage , cultureinfo</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.8</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Afficher, CultureInfo.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><font face="Courier New" size="2"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">A- Remarque sur le 
+rafraîchissement de l'affichage.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">B- Comment afficher du 
+texte , du numérique suivant le format désiré ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">C- Comment utiliser les 
+'CultureInfo'</span></font></p>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p style="MARGIN: 6pt 0cm 0pt"><font color="#0033FF">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4">A - </font></span>
+<font face="Courier New" size="4">
+<span style="FONT-WEIGHT: 700; BACKGROUND-COLOR: #c0c0c0">Remarque sur la mise à 
+jour de l'affichage: </span></font></font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">La mise à jour 
+de l'affichage d'un Label (comme les autres contrôles d'ailleurs) est effectuée 
+en fin de Sub:</font></p>
+<p style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Si on écrit:</font></p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">
+<span style="BACKGROUND-COLOR: #ffffff">Dim</span></font></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff"> 
+i </span></font><span style="BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff" size="2">As</font></span><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">
+</span></font></font><font color="#0000ff" size="2"><font face="Courier New">
+<span style="BACKGROUND-COLOR: #ffffff">Integer</span></font></p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New">
+<font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">For</span></font><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"> 
+i = 0 </font></span><font color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">To</span></font></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff"> 
+100</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff">
+<span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp; Label1.Text = i.ToString</span></font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font>
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Next i</span></p>
+</font>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">La variable i 
+prend les valeurs 1 à 100, mais à l'affichage rien ne se passe pendant la 
+boucle, VB affiche uniquement 100 à la fin; si on désire voir les chiffres 
+défiler avec affichage de 0 puis 1 puis 2... il faut rafraîchir l'affichage à 
+chaque boucle avec la méthode <font color="#0000ff">Refresh():</font></font></p>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">
+<span style="BACKGROUND-COLOR: #ffffff">Dim</span></font></font><font face="Courier New"><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff"> 
+i </span></font><span style="BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff" size="2">As</font></span><font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">
+</span></font></font><font color="#0000ff" size="2"><font face="Courier New">
+<span style="BACKGROUND-COLOR: #ffffff">Integer</span></font></p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New">
+<font color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">For</span></font><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"> 
+i = 0 </font></span><font color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">To</span></font></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff"> 
+100</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">
+<span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff">&nbsp;&nbsp;&nbsp; Label1.Text = 
+i.ToString: <b>Label1.Refresh()</b></font></span></font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font>
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Next i</span></p>
+</font>
+<p style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Une alternative 
+est de mettre un </font><font size="2"><font face="Courier New">
+<font color="#0000ff">Application.DoEvents()</font> qui donne à Windows le temps 
+de traiter les messages et de rafraîchir l'affichage.</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0033FF">B</font></span><font color="#0033FF"><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4"> 
+- </font></span><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4">A</font></span><font face="Courier New" size="4"><span style="FONT-WEIGHT: 700; BACKGROUND-COLOR: #c0c0c0">fficher 
+du text: </span></font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">On a vu que pour 
+afficher du texte il fallait l'affecter à la propriété 'Text' d'un label ou d'un 
+textBox (ou pour des tests l'afficher sur la fenêtre 'console').</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Pas de problème pour 
+afficher des chaînes de caractères, par contre, pour les valeurs numériques, il 
+faut d'abord les transformer en 'String' et les formater (définir les 
+séparateurs, le nombre de décimales...) .</span></font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">ToString</span></font></b></p>
+<p><font face="Courier New" size="2">On a déjà vu que pour afficher une variable numérique, il fallait la 
+transformer en 'string' de la manière suivant:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">MyDouble.ToString</span></font></p>
+<p><font face="Courier New" size="2">Mais ToString peut être surchargé par un paramètre appelé <b>chaîne de format</b>. 
+Cette chaîne de format peut être standard ou personnalisée.</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>Chaîne de format standard:</b></font></li>
+</ul>
+<p><font face="Courier New" size="2">Cette chaîne est de la forme 'Axx' ou A donne le type de format et xx le 
+nombre de chiffre après la virgule. Le format est défini par la 'culture' en 
+cours sur le thread courant.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Imports System<br>
+Imports System.Globalization<br>
+Imports System.Threading<br>
+<br>
+Module Module1<br>
+Sub Main()<br>
+<br>
+Thread.CurrentThread.CurrentCulture = New CultureInfo(&quot;en-us&quot;)</font>'changement 
+de culture<font color="#0000FF"><br>
+Dim UnDouble As Double = 123456789<br>
+<br>
+Console.WriteLine(&quot;Cet exemple est&nbsp; en-US culture:&quot;)</font></span><font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Console.WriteLine(UnDouble.ToString(&quot;C&quot;))&nbsp;&nbsp;&nbsp; </span>'</font>format 
+monétaire (C) affiche $123,456,789.00<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Console.WriteLine(UnDouble.ToString(&quot;E&quot;))</span>&nbsp;&nbsp;&nbsp; '</font>format 
+scientifique (E) affiche&nbsp;&nbsp;&nbsp;&nbsp; 1.234568E+008<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Console.WriteLine(UnDouble.ToString(&quot;P&quot;))&nbsp;&nbsp;</span>&nbsp; '</font>format %&nbsp;&nbsp; 
+(P)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; affiche&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+12,345,678,900.00%<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Console.WriteLine(UnDouble.ToString(&quot;N&quot;))</span>&nbsp;&nbsp;&nbsp; '</font>format 
+nombre (N)&nbsp;&nbsp;&nbsp; affiche&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+123,456,789.00<font color="#0000FF"><br>
+<span style="background-color: #FFFFFF">Console.WriteLine(UnDouble.ToString(&quot;F&quot;))&nbsp;</span>&nbsp;&nbsp; '</font>format 
+virgule fixe (F) affiche&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 123456789.00</font><font face="Courier New" size="2" color="#0000FF"><br>
+<br>
+<span style="background-color: #FFFFFF">End Sub<br>
+End Module</span><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Autre exemple:</font></p>
+<font SIZE="2" face="Courier New">
+<p><span style="background-color: #FFFFFF"><font color="#0000FF">S=(1.2).ToString(&quot;C&quot;)</font></span> retourne en CurrentCulture 
+Français (par défaut sur mon ordinateur):1,2€ </p>
+</font>
+<p><font face="Courier New" size="2">Il existe aussi <b>D</b> pour décimal, <b>G</b> pour général <b>X</b> pour 
+hexadécimal.<br>
+&nbsp;</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>Chaîne de format personnalisé:</b></font></li>
+</ul>
+<p><font face="Courier New" size="2">On peut créer de toute pièce un format, on utilise pour cela 
+les caractères suivants:</font></p>
+<p><font face="Courier New" size="2">0 indique une espace réservé de 0</font></p>
+<blockquote>
+  <p><font face="Courier New" size="1">Chaque '0' est réservé à un chiffre.<b>
+  </b>Affiche un chiffre ou un zéro. Si le nombre contient moins de chiffres que 
+  de zéros, affiche des zéros non significatifs. Si le nombre contient davantage 
+  de chiffres à droite du séparateur décimal qu'il n'y a de zéros à droite du 
+  séparateur décimal dans l'expression de format, arrondit le nombre à autant de 
+  positions décimales qu'il y a de zéros. Si le nombre contient davantage de 
+  chiffres à gauche du séparateur décimal qu'il n'y a de zéros à gauche du 
+  séparateur décimal dans l'expression de format, affiche les chiffres 
+  supplémentaires sans modification.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>#&nbsp;</b> indique un espace réservé de chiffre.</font></p>
+<blockquote>
+  <p><font face="Courier New" size="1">Chaque '#' est réservé à un chiffre.<b>
+  </b>Affiche un chiffre ou rien. Affiche un chiffre si l'expression a un 
+  chiffre dans la position où le caractère <b>#</b> apparaît dans la chaîne de 
+  format&nbsp;; sinon, n'affiche rien dans cette position. </font></p>
+  <p><font face="Courier New" size="1">Ce symbole fonctionne comme l'espace 
+  réservé au&nbsp;<b>0</b>, sauf que les zéros non significatifs et à droite ne 
+  s'affichent pas si le nombre contient moins de chiffres qu'il n'y a de 
+  caractères <b>#</b> de part et d'autre du séparateur décimal dans l'expression 
+  de format.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>. (point)</b>&nbsp;indique l'emplacement du séparateur décimal (celui affiché 
+sera celui du pays )</font></p>
+<blockquote>
+<p><font face="Courier New" size="1">Vous devriez donc utiliser le point comme 
+espace réservé à la décimale, même si vos paramètres régionaux utilisent la 
+virgule à cette fin. La chaîne mise en forme apparaîtra dans le format correct 
+pour les paramètres régionaux.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>, (virgule) </b> indique l'emplacement du séparateur de millier.</font></p>
+<blockquote>
+<p><font size="1" face="Courier New">Séparateur de milliers. Il sépare les 
+milliers des centaines dans un nombre de quatre chiffres ou plus à gauche du 
+séparateur décimal.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>&quot;Littéral&quot;</b> la chaîne sera affichée telle quelle.</font></p>
+<p><font face="Courier New" size="2"><b>%</b> affichera en&nbsp; pour cent.</font></p>
+<blockquote>
+<p><font face="Courier New" size="1">Multiplie l'expression par&nbsp;100. Le 
+caractère du pourcentage (<b>%</b>) est inséré</font></p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>E0</b> affiche en notation scientifique.</font></p>
+<p><font face="Courier New" size="2"><b>: et / </b>sont séparateur d'heure et de date.</font></p>
+<p><font face="Courier New" size="2"><b>;</b> est le séparateur de section : on peut donner 3 formats (un pour les 
+positifs, un pour les négatifs, un pour zéro) séparés par ;</font></p>
+<p><font face="Courier New" size="2"><b>Exemple:</b></font></p>
+<p><font face="Courier New" size="2">Chaîne de format '0000', le chiffre 145 
+cela affiche&nbsp; '0145'</font></p>
+<p><font face="Courier New" size="2">Chaîne de format '####', le chiffre 145 
+cela affiche&nbsp; '145'</font></p>
+<p><font face="Courier New" size="2">Chaîne de format '000.00', le chiffre 45.2 
+cela affiche&nbsp; '045.20'</font></p>
+<p><font face="Courier New" size="2">Chaîne de format '#,#', le chiffre 12345678 
+cela affiche&nbsp; '12,345,678'</font></p>
+<p><font face="Courier New" size="2">Chaîne de format '#,,' le chiffre 12345678 
+cela affiche&nbsp; '12'</font></p>
+<p><font face="Courier New" size="2">La chaîne de formatage' #,##0.00 ' veut 
+dire obligatoirement 2 chiffres après le séparateur décimal et un avant:</font></p>
+<p><font face="Courier New" size="2">Si on affiche avec ce format </font></p>
+<p><font face="Courier New" size="2">&nbsp;1.1 cela donne&nbsp;&nbsp;&nbsp;&nbsp; 
+1,10</font></p>
+<p><font face="Courier New" size="2">&nbsp;.5&nbsp; cela donne&nbsp;&nbsp;&nbsp;&nbsp; 
+0,50</font></p>
+<p><font face="Courier New" size="2">4563 cela donne&nbsp; 4 563,00<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2"><b>Exemple:</b></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim N As Double = 
+19.95<br>
+<br>
+Dim MyString As String = N.ToString(&quot;$#,##0.00;($#,##0.00);Zero&quot;)</span></font><span style="background-color: #FFFFFF"><br>
+</span>
+<br>
+' En page&nbsp; U.S. English culture, MyString =&quot;$19.95&quot;.<br>
+' En page&nbsp; Française , MyString =&quot;19,95€&quot;.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Exemple 2:</b></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim UnEntier As Integer = 42<br>
+MyString = UnEntier.ToString( &quot;Mon nombre &quot; + ControlChars.Lf + &quot;= #&quot; )</span></font></p>
+<p><font face="Courier New" size="2">Affiche: <br>
+<b>Mon nombre<br>
+&nbsp;= 42</b><br>
+&nbsp;</font></p>
+<pre class="code" style="DISPLAY: block"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Str() de Microsoft.VisualBasic est toujours accepté </span></font></b></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Il permet de transformer une variable numérique et String, qui peut ensuite être affichée.</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New" color="#0000FF">MyString=Str( LeNombre)</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New" color="#0000FF">Label1.Text=MyString</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Pas de formatage..</font></pre>
+<pre class="code" style="DISPLAY: block">&nbsp;</pre>
+<pre class="code" style="DISPLAY: block"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">String.Format du Framework</span></font></b></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Permet de combiner des informations littérales à afficher sans modification et des zones formatées.</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Les arguments de String.Format se décomposent en 2 parties séparées d'une virgule.</font></pre>
+<ul>
+  <li>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Chaîne de formatage entre guillemets: Exemple &quot;{0} + {1} = {2}&quot;: les numéros indiquent l'ordre des valeurs. </font></pre>
+  </li>
+  <li>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Valeurs à afficher dans l'ordre, la première étant d'indice zéro. Exemple= A, B, A+B</font></pre>
+  </li>
+</ul>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Exemple:</font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><span style="background-color: #FFFFFF">Si <font color="#0000FF">A=3</font> et </span><font color="#0000FF"><span style="background-color: #FFFFFF">B=5</span></font></font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(String.Format(&quot;{0} + {1} = {2}&quot;,A, B, A+B))</span></font> affiche  <b>3+5=8</b></font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New">Autre exemple:</font></pre>
+<pre class="code" style="DISPLAY: block"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF">Dim MonNom As String = &quot;Phil&quot;
+String.Format(&quot;Nom = {0}, heure = {hh}&quot;, MonNom, DateTime.Now)</span></font></pre>
+<p><font size="2" face="Courier New">Le texte fixe est &quot;</font><font size="2"><code class="ce"><font face="Courier New" color="#0000FF">Nom 
+=</font></code><font face="Courier New"><code class="ce"><font face="Courier New">&quot;</font></code> et  &nbsp;&quot;</font><code class="ce"><font face="Courier New" color="#0000FF">, heure =</font><font face="Courier New">
+</font>
+</code><font face="Courier New">&nbsp;&quot;, les éléments de format sont «&nbsp;</font><code class="ce"><font face="Courier New">{0}</font></code><font face="Courier New">&nbsp;» et «&nbsp;</font><code class="ce"><font face="Courier New">{hh}</font></code><font face="Courier New">&nbsp;» 
+et la liste de valeurs est </font> <font color="#0000FF"><code>
+<font face="Courier New">MonNom</font></code></font><font face="Courier New"> et
+</font></font>
+<font color="#0000FF"><font size="2"><code class="ce"><font face="Courier New">DateTime.Now</font></code></font><font size="2" face="Courier New">.</font></font></p>
+<p><font face="Courier New" size="2">Cela affiche: <b>Nom = Phil&nbsp;&nbsp; Heure= 10</b></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Là aussi on peut utiliser les formats:</b></font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>Prédéfinis: </b>Ils utilisent là aussi les paramètres régionaux, . Ils 
+  utilisent C, D, E, F,G,N,P,R,X comme ToString.</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2">&nbsp;&nbsp; <font color="#0000FF">MsgBox(String.Format(&quot;{0:C}&quot;,-456.45))&nbsp;&nbsp;&nbsp; 
+Affiche -456,45€</font></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp; MsgBox(String.Format(&quot;{0:D8}&quot;, 456))&nbsp;&nbsp;&nbsp; 
+Affiche 00000456&nbsp;&nbsp;&nbsp; Décimal 8 chiffres</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp; MsgBox(String.Format(&quot;{0:P}&quot;, 0.14))&nbsp;&nbsp;&nbsp; 
+Affiche&nbsp;&nbsp; 14%&nbsp;&nbsp;&nbsp; Pourcent</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp; MsgBox(String.Format(&quot;{0:X}&quot;, 65535))&nbsp;&nbsp;&nbsp; 
+Affiche&nbsp; FFFF&nbsp;&nbsp;&nbsp; Hexadécimal</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><b>Personnalisés</b>: avec des # et des 0</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p><font color="#0000FF" face="Courier New" size="2">MsgBox(String.Format(&quot;{0:##,##0.00}&quot;, 6553.23))</font></p>
+    </blockquote>
+<p>&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">La fonction Format 
+de Microsoft.VisualBasic </span>(pas 
+la classe String.Format) fournit des fonctions similaires mais les arguments sont 
+dans l'ordre inverse (valeur, chaîne de formatage) et il n'y a pas de numéro 
+d'ordre et de{}!! C'est pratique pour afficher une seule valeur.</b></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">MyStr = Format(5459.4, &quot;##,##0.00&quot;) '  </font>
+<font face="Courier New" size="2">Returns 
+&quot;5,459.40&quot;.</font><font color="#0000FF" face="Courier New" size="2"><br>
+MyStr = Format(334.9, &quot;###0.00&quot;) '  </font>
+<font face="Courier New" size="2">Returns &quot;334.90&quot;.</font><font color="#0000FF" face="Courier New" size="2"><br>
+MyStr = Format(5, &quot;0.00%&quot;) '  </font><font face="Courier New" size="2">Returns &quot;500.00%&quot;.</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">C - CultureInfo
+<img border="0" src="vdrapeaux.JPG" width="209" height="23"></span></font></p>
+<p><font face="Courier New" size="2">On se rend compte que l'affichage est 
+dépendant de la <font color="#0000FF">CurrentCulture</font> du Thread en cours.</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2">Si la CurrentCulture est la 'CultureInfo&nbsp; 
+Us' et que j'affiche avec le format 'C' (monétaire)&nbsp; cela affiche un $ 
+avant, si je suis en 'CurrentCulture&nbsp; Français' cela affiche un € après.</font></p>
+<p><font face="Courier New" size="2">Par défaut la CultureInfo est celle définie 
+dans Windows<b>, </b></font><b><font SIZE="2" face="Courier New">probablement 'fr-FR' 
+sur votre ordinateur .</font></b></p>
+<p><font face="Courier New" size="2">On peut modifier la CurrentCulture par code (voir 
+exemple plus haut).</font></p>
+<font SIZE="2" COLOR="#0000FF">
+<p><font face="Courier New">Imports</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Threading</font></p>
+</font>
+<p><font face="Courier New" size="2">
+<span style="background-color: #FFFFFF"><font color="#0000FF">
+Thread.CurrentThread.CurrentCulture = New Globalization.CultureInfo(&quot;en-us&quot;)</font>'passage 
+en culture US culture</span></font></p>
+<p><font face="Courier New" size="2">En VB
+<img border="0" src="v2005.JPG" width="52" height="21">, on peut utiliser 
+l'objet <font color="#0000FF">My</font>.</font></p>
+<font SIZE="2" color="#0033FF">
+<p><font face="Courier New">MsgBox(My.Application.Culture.ToString)</font></font><font SIZE="2" COLOR="#008000" face="Courier New"> 
+'affiche 'fr-FR'</font></p>
+<p><font face="Courier New"><font size="2" color="#008000">(</font><font SIZE="2" color="#0033FF">My.Application.ChangeCulture</font><font size="2" color="#008000"> 
+'permettra de changer la culture )</font></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2" color="#008000">En français par défaut:</font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Le séparateur de décimal 
+numérique est le '.'</font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Exemple :&nbsp;&nbsp; 
+1.20</font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Le séparateur décimal 
+monétaire est la ','</font></b></p>
+<p><b><font face="Courier New" size="2" color="#008000">Exemple :&nbsp;&nbsp; 
+1,20€</font></b></p>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:43 GMT -->
+</html>

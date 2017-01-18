@@ -1,0 +1,484 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net comparaison VB6 VB.Net</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v7-2.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">7.3</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Comparaison VB6 VB.Net.
+    </font></b></td>
+    <td width="14%" height="76"><a href="v7-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#FF0000">Page
+m</font><font face="Courier New" size="2" color="#FF0000">ise à jour le
+06/02/2008.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#800080"><b><span style="font-family: Courier New">VB.NET 
+est t-il rapide?</span></b></font></p>
+<p><font color="#0000FF" size="5" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Comment VB.NET 2003 est 
+situé en comparaison avec les autres langages de programmation?</span></font></p>
+<p><font face="Verdana" size="1">&nbsp;</font><font size="2" face="Courier New">&nbsp;&nbsp; Le 
+site OsNews.com publie les résultats d'un petit benchmark comparant les 
+performances d'exécution sous Windows de plusieurs langage de programmation en
+2003 avec <b>VB 2003</b>. <br>
+Les langages .NET - et donc le code managé en général - n'ont pas à rougir devant 
+Java, pas plus que face au langage C compilé grâce à GCC. Voici un aperçu des 
+résultats chiffrés (valeurs les plus faibles = les meilleures performances) :</font></p>
+<pre><font face="Arial" size="2">                     int        long    double  trig      I/O     <b>TOTAL</b>
+
+Visual C++      9.6       18.8    6.4       3.5    10.5    <b>48.8</b>
+Visual C#        9.7       23.9    17.7     4.1     9.9     <b>65.3</b>
+gcc C              9.8       28.8    9.5       14.9  10.0    <b>73.0</b>
+<b><font color="#FF0000">Visual Basic </font>  </b>9.8       23.7    17.7     4.1    30.7    <font color="#FF0000"><b>85.9</b></font>
+Visual J#         9.6       23.9    17.5     4.2     35.1   <b>90.4</b>
+Java 1.3.1       14.5      29.6    19.0     22.1   12.3    <b>97.6</b>
+Java 1.4.2        9.3      20.2    6.5       57.1   10.1    <b>103.1</b>
+Python/Psyco  29.7     615.4   100.4   13.1  10.5    <b>769.1</b>
+Python           322.4   891.9   405.7   47.1   11.9    <b>1679.0</b>
+</font></pre>
+<p><font face="Courier New" size="2">-
+<a class="titre" href="http://www.dotnet-fr.org/redirect.php3?sid=987&amp;url=www.osnews.com/story.php%3Fnews_id=5602" target="_blank">
+Nine Language Performance Round-up: Benchmarking Math &amp; File I/O [OsNews.com]
+</a></font></p>
+<p><font face="Courier New" size="2">Article publier sur
+<a class="titre" href="http://www.dotnet-fr.org/" target="_blanck">
+www.DotNet-fr.org&nbsp; </a></font></p>
+<p>&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p>
+<span style="font-weight: 700; background-color: #C0C0C0"><font color="#0000FF" size="5" face="Courier New">
+VB.NET(2003</font></font><font color="#0000FF" size="5" face="Courier New">,
+2005, 2008) est-il plus 
+rapide que VB6?</font></span></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="3"><u>A- En mode Design, pour écrire un
+programme</u></font><font face="Courier New" size="2">,</font></b><font face="Courier New" size="2">
+l'IDE<b> </b>VB 2008 est beaucoup plus rapide que VB 2005.</font></p>
+<p align="center"><img border="0" src="v2005vs2008.png" width="458" height="395"></p>
+<p align="center"><font face="Courier New" size="2"><a href="http://blogs.msdn.com/vbteam/archive/2008/01/04/vb2008-outperforms-vb2005-lisa-feigenbaum.aspx">Source</a></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="3"><u>B- En cours d'exécution.</u></font></b></p>
+<p><u><i><font face="Courier New" size="4">Exemple No1</font></i></u></p>
+<font SIZE="2">
+<p><font face="Courier New"><b>Sur une même machine P4 2.4 G faisons tourner un 
+même programme: 2 boucles imbriquées contenant une multiplication, l'addition à 
+un sinus et l'affichage dans un label:</b></font></p>
+</font>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">En VB6</font></b></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Private Sub Command1_Click()<br>
+Dim i As Long<br>
+Dim j As Long<br>
+Dim k As Long<br>
+For i = 0 To 100<br>
+For j = 0 To 1000<br>
+Label1.Caption = Str(k * 2 + Sin(4)): Label1.Refresh<br>
+k = k + 1<br>
+Next<br>
+Next<br>
+End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">9 secondes dans l'IDE , <b>7 secondes avec un 
+exécutable</b> après compilation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<font SIZE="2">
+<ul>
+  <li><b><font face="Courier New">En Vb.Net 2003</font></b></li>
+</ul>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+System.Math</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Private</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.EventArgs) </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Handles</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+Button1.Click</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+i </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+j </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+k </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+i = 0 </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+100</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+j = 0 </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+1000</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">Label5.Text = 
+(k * 2 + Sin(4)).ToString : Label5.Refresh()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">k = k + 1</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">35 secondes dans l'IDE,&nbsp;<b>25 secondes 
+avec un exécutable</b> après compilation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En utilisant des 'Integer' ou des 'Long', il y a 
+peu de différence.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En Vb.Net 2005&nbsp;</b> <img border="0" src="v2005.JPG" width="52" height="21"></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Même code:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">55 secondes dans l'IDE,&nbsp;<b>45 secondes 
+avec un exécutable</b> après compilation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Dur, dur!!!.</font></b></p>
+<p>&nbsp;</p>
+<ul>
+  <li><font face="Courier New" size="2"><b>En Vb.Net 2008</b></font></li>
+</ul>
+<p><font face="Courier New" size="2">On rappelle que ce qui fait tourner le
+Framework c'est le <b>CLR</b> (Commnon Language RunTime); depuis la version 2 du
+Framework, c'est toujours&nbsp; la <b>version 2.0.50727</b>: toujours la même.</font></p>
+<p><font face="Courier New" size="2"><b>La
+vitesse d'exécution des programmes est identique en VB2005 et VB 2008.</b></font></p>
+<p><font face="Courier New" size="2">Sur mon ordinateur, depuis que j'ai ajouté
+VB 2008 Express (VB6 et VB 2005 Express étaient installés) , et alors que VB 6
+tourne toujours aussi vite, VB 2005 et 2008 tourne beaucoup plus lentement temps
+d'exécution x 3!!). Explication?</font></p>
+<p><u><i><font face="Courier New" size="4">Exemple No2</font></i></u></p>
+<font SIZE="2">
+<p><font face="Courier New"><b>Sur une même machine P4 2.4 G faisons tourner un 
+même programme: On crée un tableau de 10000 String dans lequel on met des 
+chiffres Puis on trie le tableau.</b></font></p>
+<ul>
+  <li>
+<b><font face="Courier New" size="2">En VB6</font></b></li>
+</ul>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Private Sub Command1_Click()<br>
+<br>
+Dim i As Integer<br>
+Dim A(10000) As String<br>
+Dim j As Integer </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Dim N As Integer<br>
+Dim Temp As String<br>
+N = 9999</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#008000">'remplir le tableau</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font color="#0000FF">For i = 9999 To 0 Step -1<br>
+&nbsp;&nbsp;&nbsp; A(i) = Str(9999-i)<br>
+Next i<br>
+<br>
+</font><font color="#008000">'trier</font><font color="#0000FF"><br>
+For i = 0 To N - 1<br>
+&nbsp;&nbsp;&nbsp; For j = 0 To N - i - 1<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If A(j) &gt; A(j + 1) Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Temp = A(j): 
+A(j) = A(j + 1): A(j + 1) = Temp<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If<br>
+<br>
+&nbsp;&nbsp;&nbsp; Next j<br>
+Next i</font><b><br>
+</b><font color="#0000FF">End Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">35 
+secondes</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><font face="Arial" size="2"><o:p>
+</o:p>
+</font></span><font size="2" face="Courier New">On peut optimiser la routine de
+tri (merci Claude: temps d'exécution 6s ) et cela va beaucoup plus vite:</font><font face="Arial" size="2"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><o:p>
+</o:p>
+</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>Dim i As <span class="SpellE">Integer</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>Dim A(10000) As String<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>Dim j As <span class="SpellE">Integer</span>, <span class="SpellE">iMax</span>
+As <span class="SpellE">Integer</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>Dim N As <span class="SpellE">Integer</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>Dim <span class="SpellE">Temp</span> As String<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span></font><font face="Courier New" size="2" color="#008000">'<span class="GramE">remplir</span>
+le tableau</font><font face="Courier New" size="2" color="#0000FF"><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>N = 9999<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>For i = 9999 To 0 <span class="SpellE">Step</span> -1<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span>A(i) = <span class="GramE">Str(</span>9999 - i)<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><span class="SpellE">Next</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span></font><font face="Courier New" size="2" color="#008000">'<span class="GramE">trier</span></font><font face="Courier New" size="2" color="#0000FF"><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span>For i = 0 To 9997<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span><span class="GramE">iMax</span> = 0<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span>For j = i + 1 To 9999<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>If A(i) &gt; A(j) <span class="SpellE">Then</span> <span class="SpellE">iMax</span>
+= j<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">Next</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span>If A(i) &lt; <span class="GramE">A(</span><span class="SpellE">iMax</span>)
+<span class="SpellE">Then</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span class="SpellE">Temp</span> = A(j)<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A(j) = A(i)<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>A(j) = <span class="SpellE">Temp</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;
+</span>End If<o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><span style="mso-spacerun: yes">&nbsp;
+</span><span class="SpellE">Next</span><o:p>
+</o:p>
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF"><o:p>
+&nbsp;</o:p>
+</font><font face="Arial" size="2"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Arial"><o:p>
+</o:p>
+</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<ul>
+  <li><b><font face="Courier New">En Vb.Net 2003</font></b></li>
+</ul>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font color="#0000FF"> A(10000) </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font color="#0000FF"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">For</font><font color="#0000FF"> i = 9999 </font>
+<font SIZE="2" COLOR="#0000ff">To</font><font color="#0000FF"> 0 </font>
+<font SIZE="2" COLOR="#0000ff">Step</font><font color="#0000FF"> -1</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">&nbsp;&nbsp;&nbsp; A(i) = (9999 - i).ToString</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Next</font><font color="#0000FF"> i</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Array.Sort(A)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Label1.Text = &quot;ok&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font color="#0000FF"> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p><b><font face="Courier New">&lt; 1 seconde</font></b></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En Vb.Net 2005 beta2</b>
+<img border="0" src="v2005.JPG" width="52" height="21"></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Même code:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New">&lt; 1 seconde </font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Moins d'une 
+seconde avec VB.NET, 35 secondes en VB6.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">La 
+méthode 'Sort' est hyper plus rapide que la routine de tri.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">(Pour 
+être honnête, il faut dire que mon test n'est pas rigoureux car le tri VB.NET 
+est probablement un tri 'rapide' alors qu'en VB6 la routine basic n'est pas 
+optimisée, je ne compare donc pas les mêmes routines.)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+</font><b><font face="Courier New" size="2" color="#FF0000">En conclusion:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#FF0000">La couche du Framework semble<b> 
+ralentir considérablement la vitesse du code. </b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#FF0000">Mais, en VB.net,<b> 
+il faut raisonner différemment </b>et utiliser judicieusement les classes et les 
+méthodes au lieu de taper de longues routines.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#FF0000">Cela fait que en VB.Net:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#FF0000">&nbsp;&nbsp; Le code est plus 
+court et compact (moins de temps de développement)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#FF0000">&nbsp;&nbsp; Le code est plus 
+rapide.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#FF0000">&nbsp;</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p>&nbsp;</p>
+</span>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v7-2.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v7-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+</html>

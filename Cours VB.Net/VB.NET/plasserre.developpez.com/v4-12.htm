@@ -1,0 +1,720 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:46 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net : dessin </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="68">
+  <tr>
+    <td width="29%" height="68" align="center"><font face="Courier New" size="2">
+    &nbsp;<a href="v4-11.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.12</font></b></td>
+    <td width="52%" height="68" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Dessiner.</font></b></td>
+    <td width="9%" height="68"><font face="Courier New" size="2">
+    <a href="v4-13.htm"><img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="68"><p><font face="Courier New" size="2">
+    &nbsp;<a href="vsommair.htm"><img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Avec <b><font color="#0000FF">GDI+</font></b> 
+utilisé par VB.NET, on utilise des&nbsp; <font color="#0000FF">Graphics</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un<font color="#0000FF"> Graphics</font> est
+<b>une simple référence</b> à</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">une</font><font face="Courier New" size="2" color="#0000FF">
+</font>
+<font face="Courier New" size="2"><font color="#0000FF">Image</font> ( un BitMap ou 
+un MetaFile).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">la surface de dessin d'un contrôle.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le Graphics n'est pas le dessin lui même, il 
+&quot;pointe&quot; simplement sur le dessin.&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut utiliser le Graphics pour dessiner 
+(des points, lignes, rectangles, ellipses, couleur..) ou y écrire.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Rectangle</font> permet 
+de 
+définir une zone.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Pen</font>&nbsp; 
+correspond à un Stylet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Font</font> correspond à une 
+police de caractères</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Brush</font> est une 
+brosse.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+A-
+Sur quoi dessiner?</span></font></p>
+<p><font face="Courier New" size="2">Il faut définir une référence, <b>un objet <font color="#0000FF">Graphics</font></b>. 
+On peut y associer des objets <font color="#0000FF">Image</font> (des BitMap ou 
+des MetaFile)</font></p>
+<p><font face="Courier New" size="2">Pour obtenir un objet <font color="#0000FF">Graphics</font>, il y a plusieurs 
+façons:</font></p>
+<ul>
+  <li><u><font face="Courier New" size="4"><b>Soit on instance&nbsp; un objet Graphics.
+  </b>
+  </font></u></li>
+</ul>
+<blockquote>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim g as Graphics&nbsp;&nbsp;&nbsp; </font>&nbsp;'Graphics 
+contient Nothing, je ne peux rien en faire.</font></p>
+<p><font face="Courier New" size="2">Il faut donc&nbsp; y associer un<b> objet Image</b> (un BitMap ou 
+un MetaFile)pour pouvoir travailler dessus.</font></p>
+<p><font face="Courier New" size="2">Pour obtenir un BitMap par exemple, on 
+peut: </font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Soit créer un objet BitMap vide:</font></p>
+  <font SIZE="2" COLOR="#0000ff">
+  <blockquote>
+    <p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+    newBitmap </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+    Bitmap = </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New"><font color="#0000FF"> 
+    Bitmap(600, 400) </font></font></font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Dim g as Graphics = Graphics.FromImage(newBitmap)&nbsp;&nbsp; </font>
+    </p>
+    <p><font face="Courier New" size="2">P</font><font SIZE="2"><font face="Courier New">aramètres= 
+    taille du BitMap mais il y a plein de surcharges</font></p>
+  </blockquote>
+  </font>
+<p><font face="Courier New" size="2">Soit créer un BitMap à partir d'un fichier 
+sur disque</font></p>
+  <blockquote>
+<p><font face="Courier New" size="2">C'est pratique si on veut<b> modifier une image </b>qui est dans un fichier: 
+on la lit dans un BitMap puis on passe la référence dans l'objet Graphics.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim myBitmap as New Bitmap(&quot;maPhoto.bmp&quot;)&nbsp;&nbsp;&nbsp; </font>
+'Charge maPhoto dans le BitMap<font color="#0000FF"><br>
+Dim g as Graphics = Graphics.FromImage(myBitmap)&nbsp;&nbsp;&nbsp; </font>'Crée 
+un Graphics et y associe le BitMap<font color="#0000FF"><br>
+&nbsp;</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">g </font>est un Graphics 
+&quot;pointant&quot; sur l'image 'maPhoto.bmp' 
+et je peux la modifier.</font></p>
+  </blockquote>
+<p><font face="Courier New" size="2"><b>Attention:</b> le Graphics n'est pas 
+'visible', pour le voir il faut le mettre dans un composant (un PictureBox par 
+exemple) qui lui sera visible. On verra cela plus bas.</font></p>
+<p>&nbsp;</p>
+</blockquote>
+</blockquote>
+<ul type="disc">
+  <li><u><font face="Courier New" size="4"><b>Soit on appelle la méthode
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassCreateGraphicsTopic">
+  CreateGraphics</MSHelp:link> d'un contrôle ou d'un formulaire </b></font></u></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">On <b>appelle la méthode <font color="#0000FF">
+  <MSHelp:link tabIndex="0" keywords="frlrfSystemWindowsFormsControlClassCreateGraphicsTopic">
+  CreateGraphics</MSHelp:link></font></b> d'un contrôle ou d'un formulaire afin 
+  d'obtenir une référence à un objet Graphics représentant la surface de dessin 
+  de ce contrôle ou formulaire.</font></p>
+  </blockquote>
+  <p><font face="Courier New" size="2">Cette méthode est utilisée si vous voulez dessiner sur un formulaire ou un 
+  contrôle existant&nbsp;;</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim g as Graphics<br>
+g = Me.CreateGraphics&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'Pour un formulaire</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim g as Graphics<br>
+g = Panel1.CreateGraphics&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'Pour un contrôle Panel</font></p>
+<p><font face="Courier New" size="2">On peut ensuite dessiner sur
+<font color="#0000FF">g</font>, cela sera immédiatement visible sur le contrôle 
+ou le formulaire (car g n'est pas un nouvel objet, il contient seulement la 
+référence, le handles, de l'image du contrôle; quand on dessine sur g, en fait, 
+on dessine sur l'image du contrôle).</font></p>
+<p><font face="Courier New" size="2">Il faut quand on n'utilise plus l'objet 
+graphics, utiliser la méthode </font>
+<font face="Courier New" size="2" color="#0000FF">Dispose </font>
+<font face="Courier New" size="2">pour le libérer.</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<ul>
+  <li><u><font face="Courier New" size="4"><b>Soit on récupère la référence de l'objet Graphics argument de l'évènement Paint d'un contrôle.</b></font></u></li>
+</ul>
+<blockquote>
+  <p><font face="Courier New" size="2">L'événements <b>Paint</b>&nbsp; des contrôles se déclenche lorsque le 
+  contrôle est redessiné, un objet<font color="#0000FF"> Graphics </font>est 
+  fourni comme une valeur de <b>PaintEventArgs</b>. </font> </p>
+  <p class="labelproc"><font face="Courier New" size="2"><b>Pour obtenir une référence à un objet</b><font color="#0000FF"> 
+  Graphics </font><b>à partir des PaintEventArgs de l'événement Paint et 
+  dessiner:</b> </font> </p>
+  <ol type="1">
+    <li><font face="Courier New" size="2">Déclarez l'objet<font color="#0000FF"> Graphics </font>
+    </font></li>
+    <li><font face="Courier New" size="2">Assignez la variable pour qu'elle référence l'objet<font color="#0000FF"> 
+    Graphics </font>passé dans les <b>PaintEventArgs</b>. </font> </li>
+    <li><font face="Courier New" size="2">Dessinez dans l'objet Graphics. </font> </li>
+  </ol>
+  <p><font face="Courier New" size="2"><br>
+  <font color="#0000FF">Private Sub Form1_Paint(sender As Object, <b>e</b> As 
+  PaintEventArgs) Handles _<br>
+&nbsp;&nbsp; MyBase.Paint&nbsp;&nbsp;&nbsp; </font>'appelle la méthode Paint 
+  'normale'<font color="#0000FF"><br>
+&nbsp;&nbsp; <br>
+&nbsp;&nbsp; Dim g As Graphics = <b>e</b>.Graphics <br>
+&nbsp;&nbsp;  </font>' Dessiner avec g , cela affichera dans la Form1<font color="#0000FF"><br>
+  End Sub</font><br>
+&nbsp;</font></p>
+  <p><font face="Courier New" size="2">Là aussi <font color="#0000FF">e</font> 
+  est la référence à l'objet qui a déclenché Paint (Form1 ici), si je dessine 
+  sur <font color="#0000FF">e</font>, en fait je dessine sur Form1. </font></p>
+  <p><font face="Courier New" size="2">Noter bien que <font color="#0000FF">e</font> 
+  est visible uniquement dans Form1_Paint</font></p>
+  <p><font face="Courier New" size="2">Pour forcer le déclenchement de l'évènement Paint et 
+  dessiner, on utilise la méthode <font color="#0000FF">OnPaint</font></font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" size="2"><br>
+</font><b><font color="#0000FF" face="Courier New" size="4">
+<span style="background-color: #C0C0C0">B-Comment dessiner?</span></font></b></p>
+<p><font face="Courier New" size="2">La classe <b>Graphics</b> fournit des méthodes permettant de dessiner
+</font>  </p>
+<p><font color="#0000FF" face="Courier New" size="2">DrawImage&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp;'Ajoute une image (BitMap ou MetaFile) à 
+un gr^phics déjà crée.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">DrawLine&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp;'Trace une ligne</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">DrawString&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp;'Ecrit un texte</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">DrawPolygon&nbsp;&nbsp;&nbsp;</font><font face="Courier New" size="2">'Dessine un polygone</font></p>
+<p><font face="Courier New" size="2">...</font></p>
+<p><b><font face="Courier New" size="2">En GDI+ on envoie des paramètres à la méthode pour dessiner:</font></b></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MonGraphique.DrawEllipse( New Pen(Couleur),r) </font>&nbsp;&nbsp; 
+'cela dessine une ellipse</font></p>
+<p><font face="Courier New" size="2">Les 2 paramètres sont: la couleur et le 
+rectangle dans lequel on dessine l'ellipse.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Pour travailler on utilise les objets:</font></p>
+<table class="mydd" cellPadding="5" border="1" style="border-collapse: collapse" bordercolor="#111111" cellspacing="0" height="421">
+  <tr>
+    <td vAlign="top" height="32"><font face="Courier New" size="2"><strong>Brush (Brosse)</strong></font></td>
+    <td height="32"><font face="Courier New" size="2">Utilisé pour <b>remplir</b> des surfaces 
+    fermées avec des motifs, des couleurs ou des bitmaps.</font><p>
+    <font face="Courier New" size="2">Il y a plusieurs types de brush:</font></p>
+    <p>
+    <font face="Courier New" size="2">La brosse peut être pleine et ne contenir 
+    qu'une couleur.</font></p>
+    <p><font face="Courier New" size="2" color="#0000FF">Dim SB= New SolidBrush(Color.Red)</font></p>
+    <p><font face="Courier New" size="2">TextureBrush utilise une image pour 
+    remplir.</font></p>
+    <p><font face="Courier New" size="2" color="#0000FF">Dim SB= New TextureBrush(MonImage)</font></p>
+    <p><font face="Courier New" size="2">LinéarGradientBrush permet des dégradés 
+    (passage progressive d'une couleur à une autre).</font></p>
+    <p><font face="Courier New" size="2" color="#0000FF">Dim SB= New 
+    LinearGradientBrush(PointDébut, PointFin,Color1, Color2)</font><p>
+    <font face="Courier New" size="2">Les HatchBrush sont des brosse hachurées</font><p>
+    <font face="Courier New" size="2" color="#0000FF">Dim <a name="Using Brushes">HatchBrush hb = new HatchBrush(HatchStyle.ForwardDiagonal, Color.Green,Color.FromArgb(100, Color.Yellow))</a></font><p>
+    <font face="Courier New" size="2">Les</font><font face="Courier New" size="2" color="#0000FF"> 
+    PathGradient </font><font face="Courier New" size="2">sont des brosses plus 
+    complexes.</font></td>
+  </tr>
+  <tr>
+    <td vAlign="top" height="299"><font face="Courier New" size="2"><strong>Pen (Stylet)</strong></font></td>
+    <td height="299"><font face="Courier New" size="2">Utilisé pour dessiner des lignes et 
+    des polygones, tels que des rectangles, des arcs et des secteurs.</font><p>
+    <font face="Courier New" size="2">Comment créer un Stylet?</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Dim blackPen As New Pen(Color.Black)
+    </font><font face="Courier New" size="2">on donne la couleur</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Dim blackPen As New Pen(Color.Black, 
+    3)</font><font face="Courier New" size="2">on donne couleur et l'épaisseur</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Dim blackPen As New Pen(MyBrush)
+    </font><font face="Courier New" size="2">on peut même créer un stylet avec 
+    une brosse</font></p>
+    <p><font face="Courier New" size="2">Propriétés de ce Stylet:</font></p>
+    <p><font face="Courier New" size="2"><font color="#0000FF">DashStyle</font> 
+    permet de faire des pointillés.</font></p>
+    <p><font face="Courier New" size="2"><font color="#0000FF">StartCap</font> 
+    et <font color="#0000FF">EndCap</font> définissent la forme du début et de 
+    la fin du dessin (rond, carré, flèche..)</font></p>
+    <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" height="16"><font face="Courier New" size="2"><strong>Font 
+    (Police)</strong></font></td>
+    <td height="16"><font face="Courier New" size="2">Utilisé pour décrire la police 
+    utilisée pour afficher le texte.</font><p><font face="Courier New" size="2" color="#0000FF">Dim 
+    Ft= New Font(&quot;Lucida sans unicode&quot;,60) </font>
+    <font face="Courier New" size="2">'paramètres=nom de la font et taille</font></p>
+    <p><font face="Courier New" size="2">Il y a de nombreuses surcharges.</font></p>
+    <p><font face="Courier New" size="2" color="#0000FF">Dim Ft= New Font(&quot;Lucida 
+    sans unicode&quot;,60, FontStyle.Bold)</font><font face="Courier New" size="2">'pour 
+    écrire en gras</font><font face="Courier New" size="2" color="#0000FF"> </font>
+    </p>
+    <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" height="31"><font face="Courier New" size="2"><strong>Color (Couleur)</strong></font></td>
+    <td height="31"><font face="Courier New" size="2">Utilisé pour décrire la couleur 
+    utilisée pour afficher un objet particulier. Dans GDI+, la couleur peut être 
+    à contrôle alpha.</font><p>
+    <font face="Courier New" size="2" color="#0000FF">System.Drawing.Color.Red
+    </font><font face="Courier New" size="2">pour le rouge</font></p>
+    <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" height="31"><strong><font face="Courier New" size="2">Point</font></strong></td>
+    <td height="31">
+<p><font face="Courier New" size="2">Ils ont des cordonnées x, y</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim point1 As New 
+Point(120, 120) </font><font face="Courier New" size="2">' <font color="#0000FF">
+Point</font> avec des Integer</font></p>
+<p><font face="Courier New" size="2">ou</font><font face="Courier New" size="2" color="#0000FF"> 
+des PointF&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'avec des 
+Singles</font></p>
+    <p>&nbsp;</td>
+  </tr>
+  <tr>
+    <td vAlign="top" height="31"><font face="Courier New" size="2"><b>Rectangle</b></font></td>
+    <td height="31">
+<p><font face="Courier New" size="2">Permet de définir un rectangle.</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+r </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font face="Courier New" color="#0000FF" SIZE="2"> 
+RectangleF(0, 0, 100, 100)</font></p>
+<p><font face="Courier New" size="2">On remarque que le F après Point ou 
+Rectangle veut dire 'Float', et nécessite l'usage de Single.</font></p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment faire?</span></font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">
+Dessiner une ligne</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0"> 
+sur le graphique:</span></b></font></p>
+<p><font face="Courier New" size="2">Pour dessiner une ligne, on utilise
+<font color="#0000FF">DrawLine.</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim blackPen As New 
+Pen(Color.Black, 3) </font>&nbsp;&nbsp; <font color="#008000">'créer un stylet 
+noir d'épaisseur 3</font><br>
+<font color="#008000">' Créer des points</font><br>
+<font color="#0000FF">Dim point1 As New Point(120, 120)&nbsp;&nbsp;&nbsp; </font>
+<font color="#008000">'créer des points</font><font color="#0000FF"><br>
+Dim point2 As New Point(600, 100)</font><br>
+<font color="#008000">' Dessine la ligne</font><br>
+<font color="#0000FF">e.Graphics.DrawLine(blackPen, point1, point2)</font></font><br>
+&nbsp;</p>
+<p><font face="Courier New" size="2">On aurait pu utiliser une surcharge de 
+Drawline en spécifiant directement les <b>coordonnées</b> des points.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim x1 As Integer = 120<br>
+Dim y1 As Integer = 120<br>
+Dim x2 As Integer = 600<br>
+Dim y2 As Integer = 100<br>
+e.Graphics.DrawLine(blackPen, x1, y1, x2, y2)<br>
+&nbsp;</font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">
+Dessiner une ellipse</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">:</span></b></font></p>
+<font SIZE="2" face="Courier New">
+<p>Définir un rectangle dans lequel sera dessiné l'ellipse.</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+r </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+RectangleF(0, 0, 100, 100)</font></p>
+<p><font face="Courier New" color="#0000FF">g.DrawEllipse(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font face="Courier New" color="#0000FF" SIZE="2"> 
+Pen(Color.Red), r)</font><font face="Courier New" color="#008000" SIZE="2">' 
+Dessinons l' ellipse</font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">
+Dessiner une rectangle</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">:</span></b></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">myGraphics.DrawRectangle(myPen, 
+100, 50, 80, 40)</font><br>
+&nbsp;</p>
+<p><font face="Courier New" size="2">Comme d'habitude on peut fournir après le 
+stylet des coordonnées(4), des points (2) ou un rectangle.</font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">
+Dessiner un polygone</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">:</span></b></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim MyPen As New Pen(Color.Black, 
+3)<br>
+</font><font face="Courier New" size="2" color="#008000">' Créons les points qui 
+définissent le polygone</font><font color="#0000FF" face="Courier New" size="2"><br>
+Dim point1 As New Point(150, 150)<br>
+Dim point2 As New Point(100, 25)<br>
+Dim point3 As New Point(200, 5)<br>
+Dim point4 As New Point(250, 50)<br>
+Dim point5 As New Point(300, 100)<br>
+Dim point6 As New Point(350, 200)<br>
+Dim point7 As New Point(250, 250)<br>
+Dim curvePoints As Point() = {point1, point2, point3, point4, _<br>
+point5, point6, point7}<br>
+</font><font face="Courier New" size="2" color="#008000">' Dessinons le 
+Polygone.</font><font color="#0000FF" face="Courier New" size="2"><br>
+e.Graphics.DrawPolygon(MyPen, curvePoints</font><br>
+&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="2">
+Dessiner un rectangle plein</font></b></span><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">:</span></b></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">e.FillRectangle(new 
+SolidBrush(Color.red), 300,15,50,50)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il existe aussi <font color="#0000FF">
+DrawArc, DrawCurve, DrawBezier DrawPie..</font></font></p>
+<p>&nbsp;</p>
+<p> <font face="Courier New" size="2"> <b><span style="background-color: #C0C0C0">Ecrire du texte 
+sur le graphique:</span></b></font></p>
+<p><font face="Courier New" size="2">Pour cela on utilise la méthode
+<font color="#0000FF">DrawString</font> de l'objet graphique:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">g.DrawString (&quot;Salut&quot;, 
+Me.Font, New SolidBrush (ColorBlack), 10, 10)</font></p>
+<p><font face="Courier New" size="2">Paramètres:</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Texte à afficher.</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Police de caractères</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Brosse , cela permet 
+d'écrire avec des textures.</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Coordonnées.</font></p>
+<p><font face="Courier New" size="2"><b>Si on spécifie un rectangle</b> à la 
+place des 2 derniers paramètres, le texte sera affiché dans le rectangle <b>avec 
+passage à la ligne</b> si nécessaire:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim rectangle As New 
+RectangleF (100, 100, 150, 150 )</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim T as String= &quot;Chaîne de 
+caractères très longue&quot;</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">g.DrawString (T, Me.Font, 
+New SolidBrush (ColorBlack), Rectangle)</font></p>
+<p><font face="Courier New" size="2">On peut même <b>imposer un format</b> au 
+texte: </font></p>
+<p><font face="Courier New" size="2">Exemple: centrer le texte. </font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim Format As New 
+StringFormat()</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Format.Aligment=StringAlignment.Center</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">g.DrawString (T, Me.Font, 
+New SolidBrush (ColorBlack), Rectangle, Format)</font></p>
+<p><font face="Courier New" size="2">On peut <b>mesurer la longueur (ou le 
+nombre de lignes) d'une chaîne</b>:</font></p>
+<p><font face="Courier New" size="2">Avec</font><font face="Courier New" size="2" color="#0000FF"> 
+MeasureString</font></p>
+<p><font face="Courier New" size="2">Exemple 1: centrer le texte: pour cela, 
+calculer la longueur de la chaîne, puis calculer le milieu de l'écran moins la 1/2 
+longueur de la chaîne:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim W As Double= 
+Me.DisplayRectangle.Width/2</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim L As SizeF= 
+e.Graphics.MeasurString (Texte, TextFont)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim StartPos As Double = W 
+- (L.Width/2)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">g.Graphics.MeasureString (T, 
+Me.Font, New SolidBrush (ColorBlack), Rectangle, StartPos, 10)</font></p>
+<p><font face="Courier New" size="2">Exemple 2:Calculer le nombre de ligne et le 
+nombre de caractères d'une chaîne:</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">g.Graphics.MeasureString (T, 
+Me.Font, New SolidBrush (ColorBlack), Rectangle,New StringFormat() 
+NombredeCaractères, NombredeLignes)</font></p>
+<p> <span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="2">Ajouter une image </font></b></span> <font face="Courier New" size="2"> <b><span style="background-color: #C0C0C0">sur le graphique:</span></b></font></p>
+<p><font face="Courier New" size="2">Pour cela on utilise la méthode
+<font color="#0000FF">DrawImage</font> de l'objet graphique:</font></p>
+<p><a name="Using images"><font face="Courier New" size="2" color="#0000FF">g.Graphics.DrawImage(New Bitmap(&quot;sample.jpg&quot;), 29, 20, 283, 212)</font></a></p>
+<p><font face="Courier New" size="2">On peut&nbsp; travailler avec des images .jpeg 
+.png .bmp .Gif .icon .tiff .exif</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">C- Travailler sur un Objet Image</span></font></b></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; <b>
+<span style="background-color: #C0C0C0">Charger une image:</span></b></font></p>
+<p><font face="Courier New" size="2">Si on veut afficher une image bitmap ou 
+vectoriel, il faut&nbsp; que&nbsp; Graphics&nbsp; référence un&nbsp; objet bitmap ou vectoriel. C'est la méthode
+<font color="#0000FF">DrawImage</font> qui reçoit l'objet Metafile ou 
+Bitmap comme argument. L'objet BitMap, si on le désire 
+peut charger un fichier qui sera affiché.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim myBMP As New BitMap (&quot;MonImage.bmp&quot;)<br>
+</font><br>
+<font color="#0000FF">myGraphics.DrawImage(myBMP, 10, 10)</font></font></p>
+<p><font face="Courier New" size="2">Le point de destination du coin supérieur gauche de l'image, (10, 10), est 
+spécifié par les deuxième et troisième paramètres.</font></p>
+<p>
+<font color="#0000FF" face="Courier New" size="2">myGraphics.FromImage(myBMP) </font>
+<font face="Courier New" size="2">est aussi possible </font> </p>
+<p><font face="Courier New" size="2">On peut utiliser plusieurs formats de fichier graphique&nbsp;: BMP, GIF, JPEG, EXIF, PNG, 
+TIFF et ICON.</font></p>
+<p>&nbsp;&nbsp;&nbsp; <font face="Courier New" size="2"><b>&nbsp;<span style="background-color: #C0C0C0">Cloner 
+une image:</span></b></font></p>
+<p><font face="Courier New" size="2">La classe Bitmap 
+fournit une méthode <b>Clone</b> qui permet de créer une copie d'un objet 
+existant. La méthode <b>Clone</b> admet comme paramètre un rectangle source qui 
+vous permet de spécifier la portion de la Bitmap d'origine 
+à copier. L'exemple suivant crée un objet Bitmap en 
+clonant la moitié supérieure d'un objet Bitmap 
+existant. Il dessine ensuite les deux images. </font> </p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim originalBitmap As New Bitmap(&quot;Spiral.png&quot;)</font><font face="Courier New" size="2" color="#008000">'on 
+charge un fichier png dans un BitMap</font><font face="Courier New" size="2" color="#0000FF"><br>
+Dim sourceRectangle As New Rectangle(0, 0, originalBitmap.Width, _<br>
+originalBitmap.Height / 2) </font>
+<font face="Courier New" size="2" color="#008000">'on définit un rectangle<br>
+</font><font face="Courier New" size="2" color="#0000FF">
+<br>
+Dim secondBitmap As Bitmap = originalBitmap.Clone(sourceRectangle, _<br>
+PixelFormat.DontCare)</font><font face="Courier New" size="2" color="#008000">'on 
+définit un second BitMap Clonant une partie du 1ere BitMap avec le rectangle</font><font face="Courier New" size="2" color="#0000FF"><br>
+<br>
+</font><font face="Courier New" size="2" color="#008000">'On met les 2 BitMap 
+dans un&nbsp; Graphics</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">myGraphics.DrawImage(originalBitmap, 10, 10)<br>
+myGraphics.DrawImage(secondBitmap, 150, 10)<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp; </font>
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Enregistrer une image sur disque:</span></font></b></p>
+<p><font face="Courier New" size="2">On utilise pour cela la méthode Save.</font></p>
+<p><font face="Courier New" size="2">Exemple: enregistrer le BitMap newBitMap 
+dans 'Image1.jpg'</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">newBitmap.Save(&quot;Image1.jpg&quot;, ImageFormat.Jpeg)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">D- Comment voir un 
+Graphics?</span></font></p>
+<font SIZE="2" face="Courier New">
+<ul>
+  <li>Si on a instancé un objet Graphics, on ne le voit pas. Pour le voir il faut 
+le mettre dans un <font color="#0000FF">PictureBox </font>par exemple:</li>
+</ul>
+<blockquote>
+  <blockquote>
+<p>Exemple:</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+newBitmap </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+Bitmap = </font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+Bitmap(200, 200) </font></font><font SIZE="2">
+<font face="Courier New" color="#008000">'créons un BitMap</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+g </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Graphics = Graphics.FromImage(newBitmap)</font><font face="Courier New" color="#008000">'créons 
+un Graphics et y mettre le BitMap</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+r </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+RectangleF(0, 0, 100, 100)</font><font face="Courier New" color="#008000">' 
+Dessinons une ellipse</font></p>
+<p><font face="Courier New" color="#0000FF">g.DrawEllipse(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Pen(Color.Red), r)</font></font></p>
+<p><font face="Courier New" SIZE="2">Comment voir l'ellipse?</font></p>
+<p><font SIZE="2"><font face="Courier New">Ajoutons un <font color="#0000FF">
+PictureBox </font>au projet, et donnons à la propriété <font color="#0000FF">
+Image</font> de ce PictureBox le nom du BitMap du Graphics:</font></p>
+<p><font face="Courier New" color="#0000FF">PictureBox1.Image = newBitmap</font></p>
+</font>
+<p><font face="Courier New" size="2">L'ellipse rouge apparaît!! Si ,Si!!</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Si on utilise un objet Graphics 
+  représentant la surface de dessin d'un contrôle:</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2">Le fait de dessiner sur le graphics affiche 
+automatiquement le dessin sur le contrôle.</font></p>
+<p>&nbsp;</p>
+  </blockquote>
+<p><font face="Courier New" size="2">Pour que le dessin soit 'persistant' voir 
+l'exemple e4-3 (logiciel de dessin)</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Paint&nbsp; déclenché 
+par Resize.</span></font></p>
+<p><font face="Courier New" size="2">Par défaut Paint n'est pas déclenché quand 
+un contrôle ou formulaire est redimensionné, pour forcer à redessiner en cas de 
+redimensionnement, il faut mettre le style <font color="#0000FF">
+Style.Resizedraw</font> du formulaire ou du contrôle à true.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">SetStyle (Style.Resizedraw, 
+true)</font></p>
+<p><font face="Courier New" size="2">Cette syntaxe marche, la suivante aussi 
+(pour le formulaire)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Me.SetStyle 
+(Style.Resizedraw, true) </font><font face="Courier New" size="2">'pour tous les 
+objets du formulaire?</font></p>
+<p><font face="Courier New" size="2">Mais <font color="#0000FF">
+PictureBox1.SetStyle (Style.Resizedraw, true)</font> n'est pas accepté!!</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">E- Un exemple: Afficher un texte en 3D</font></b></span></p>
+<p class="MsoNormal"><span style="font-size: 10.0pt; font-family: Courier New">
+Afficher un texte en 3d.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+PrivateSub</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+TextEn3D(</span><span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+g </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+As</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+Graphics, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+position </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+As</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+PointF, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+text </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+AsString</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">,
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+ft </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+As</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+Font, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+c1 </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+As</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+Color, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+ByVal</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+c2 </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+As</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+Color)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; Dim</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+rect </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+AsNew</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+RectangleF(position, g.MeasureString(text, ft))</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Dim</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+bOmbre </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+AsNew</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+LinearGradientBrush(rect, Color.Black, Color.Gray, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: purple; background-color: #FFFFFF">
+90.0F</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; g.DrawString(text, ft, bOmbre, position)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; position.X -= </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: purple; background-color: #FFFFFF">
+2.0F</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; position.Y -= </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: purple; background-color: #FFFFFF">
+6.0F</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; rect = </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+New</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+RectangleF(position, g.MeasureString(text, ft))</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+Dim</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+bDegrade </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+AsNew</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF"> 
+LinearGradientBrush(rect, c1, c2, </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: purple; background-color: #FFFFFF">
+90.0F</span><span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: black; background-color: #FFFFFF">
+&nbsp;&nbsp;&nbsp; g.DrawString(text, ft, bDegrade, position)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color: #FFFFFF">
+EndSub</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Espace de nom</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour utiliser les graphiques il faut que 
+<font color="#0000FF">System.Drawing</font> soit importé (ce qui est fait par défaut).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">(Systém.Drawing.DLL comme références de l'assembly)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-11.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-13.htm"><img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:46 GMT -->
+</html>

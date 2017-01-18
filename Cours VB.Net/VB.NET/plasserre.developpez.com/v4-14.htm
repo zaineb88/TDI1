@@ -1,0 +1,804 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  et api </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><font face="Courier New" size="2">
+    <a href="v4-13.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.14</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Appel d'une API.</font></b></td>
+    <td width="9%" height="76"><font face="Courier New" size="2">
+    <a href="v4-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="76"><p><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Api (Application Programming Interface) sont des bibliothèques de 
+liaisons dynamiques (DLL, <i>Dynamic-Link Libraries</i>), se sont&nbsp; des 
+fonctions (généralement écrites en C) et qui sont compilées dans une DLL.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Elles&nbsp; font :</font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">soit partie intégrante du 
+  système d'exploitation Windows.(API Windows)</font></li>
+</ul>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">&nbsp;Ce sont ces Api 
+  (Kernel32.Dll=coeur du système, User32Dll= fonctionnement des applications, 
+  gdi32..dll=interface graphique) que Windows utilise pour fonctionner.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Les fonctions sont donc écrites pour Windows; parfois on n'a pas d'équivalent VB, aussi, plutôt que de les 
+  réécrire quand on en a besoin, on appelle celles de Windows.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font size="2" face="Courier New">Elles permettent d'effectuer 
+  des tâches lorsqu'il s'avère difficile d'écrire des procédures équivalentes. 
+  Par exemple, Windows propose une fonction nommée </font><font size="2"> <code class="ce">
+  <font face="Courier New">FlashWindowEx</font></code></font><font size="2" face="Courier New"> qui vous permet de varier l'aspect de la barre de titre 
+  d'une application entre des tons clairs et foncés.</font></p>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Il faut avouer que, le Framework 
+  fournissant des milliers de classes permettant de faire pratiquement tout ce 
+  que font les Api Windows, on a rarement besoin d'utiliser les Api Windows. Chaque 
+  fois que cela est possible, vous devez utiliser du code managé à partir 
+  du&nbsp;.NET Framework plutôt que les appels API Windows pour effectuer des tâches.&nbsp;
+  </font> </p>
+</blockquote>
+<ul>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">soit partie de dll spécifiques fournies par des tiers 
+  pour permettre d'appeler des fonctions n'existant pas dans VB ni Windows.</font></li>
+</ul>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Par exemple , il existe des Api 
+  MySql qui donnent accès aux divers fonctions permettant d'utiliser une base de 
+  données MySql.&nbsp; (Ces Api contiennent 'le moteur' de la base de données.)</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Api Windows sont en code non managé. 
+De plus elles n'utilisent souvent pas les mêmes types de données que VB . 
+L'appel des Api se faisant avec des passages de paramètres, il y a des 
+précautions à prendre!! Sinon cela plante!!!cela plante vraiment.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il y a des API .Net en code managé.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Appel d'une fonction
+dans une Api&nbsp;</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Il faut déclarer la fonction en haut du
+module:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF" size="2" face="Courier New">Declare&nbsp;
+Function&nbsp; MyFonction Lib &quot;MyLibary.dll&quot; () as Integer</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">On
+indique ici qu'on veut utiliser la fonction MyFonction situé dans la dll&nbsp;
+MyLibrary.dll; cette fonction retourne un Integer.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Ensuite
+on peut utiliser MyFonction dans le code:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF" size="2" face="Courier New">Dim
+a = MyFonction()</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">On
+va récupérer le nom de l'utilisateur en appelant la fonction GetUserNameA de
+la dll&nbsp; &quot;advapi32.dll&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="COLOR: blue"><font face="Courier New" size="2"><font color="#000000">Declare</font></font></span><font face="Courier New" size="2">
+<span style="COLOR: blue">Function</span> getUserName <span style="COLOR: blue">Lib</span>
+<span style="COLOR: maroon">&quot;advapi32.dll&quot;</span> <span style="COLOR: blue">Alias</span>
+<span style="COLOR: maroon">&quot;GetUserNameA&quot;</span>&nbsp; (<span style="COLOR: blue">ByVal</span>
+lpBuffer <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>,
+<span style="COLOR: blue">ByRef</span> nSize <span style="COLOR: blue">As</span>
+<span style="COLOR: blue">Integer</span>) <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+buffer <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>
+= <span style="COLOR: blue">New</span> <span style="COLOR: blue">String</span>(CChar(<span style="COLOR: maroon">&quot;
+&quot;</span>), 25)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">&nbsp;<span style="COLOR: blue">Dim</span>
+retVal <span style="COLOR: blue">As</span> <span style="COLOR: blue">Integer</span>
+= getUserName(buffer, 25)&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+userName <span style="COLOR: blue">As</span> <span style="COLOR: blue">String</span>
+= Strings.Left(buffer, InStr(buffer, Chr(0)) - 1)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" face="Courier New">Le
+terme Alias permet de donner un nom a la fonction (getusername) dans le module
+alors que le vrai nom dans la dll est différent (GetUserNameA).&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Les Api Windows</span></font></span></p>
+<p><font face="Courier New" size="2">L'avantage de l'utilisation d'API Windows 
+dans votre code réside dans le gain de temps de développement, car elles 
+contiennent des centaines de fonctions 
+utiles déjà écrites et prêtes à être utilisées. L'inconvénient des API Windows 
+est qu'elles peuvent être complexes à utiliser et implacables lorsqu'une 
+opération se déroule mal.</font></p>
+<p><font face="Courier New" size="2">Pour plus d'informations sur les API 
+    Windows, consultez la documentation du kit de développement Win32 SDK dans 
+    les
+    <MSHelp:link tabIndex="0" keywords="_win32_Windows_API_Start_Page ">API 
+    Windows</MSHelp:link> du kit de développement Platform SDK. Pour plus 
+    d'informations sur les constantes utilisées par les API Windows, examinez 
+    les fichiers d'en-tête, tels que Windows.h, fournis avec le kit de 
+    développement Platform SDK.
+<a href="mailto:http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winprog/winprog/overview_of_the_windows_api.asp">
+MSDN donne aussi une description des Api</a></font></p>
+<h2 class="dtH2"><font face="Courier New" size="2">Appels API avec Declare</font></h2>
+<p><font face="Courier New" size="2">La façon la plus courante d'appeler les API Windows consiste à utiliser 
+l'instruction <b>Declare</b>.</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Exemple</b> ( repris 
+de chez Microsoft): appel de la fonction Windows 'MessageBox' qui est dans 
+user32.dll et qui affiche une MessageBox.</font></p>
+<ul>
+  <li>
+<p class="labelproc"><font face="Courier New" size="2">Rechercher de la 
+documentation de la fonction:</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="labelproc"><font face="Courier New" size="2">
+<a href="mailto:http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winprog/winprog/overview_of_the_windows_api.asp">
+MSDN et les Api</a> donne la définition de la fonction MesssageBox:</font></p>
+    <pre class="clsSyntax"><font color="#0000FF">int&nbsp;MessageBox(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;HWND&nbsp;<i>hWnd</i>,
+&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR&nbsp;<i>lpText</i>,
+&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR&nbsp;<i>lpCaption</i>,
+&nbsp;&nbsp;&nbsp;&nbsp;UINT&nbsp;<i>uType</i>
+);</font></pre>
+    <p class="clsRef"><font face="Courier New" size="2">Parameters</font></p>
+    <blockquote>
+      <dl>
+        <dt><font color="#0000FF" face="Courier New" size="2"><i>hWnd</i> </font>
+        </dt>
+        <dd><font face="Courier New" size="2">[in]&nbsp;Handle to the owner window of 
+        the message box to be created. If this parameter is NULL, the message 
+        box has no owner window. </font></dd>
+        <dt><font face="Courier New" size="2"><i>l<font color="#0000FF">pText</font></i><font color="#0000FF">
+        </font></font></dt>
+        <dd><font face="Courier New" size="2">[in]&nbsp;Pointer to a null-terminated 
+        string that contains the message to be displayed. </font></dd>
+        <dt><font color="#0000FF" face="Courier New" size="2"><i>lpCaption</i>
+        </font></dt>
+        <dd><font face="Courier New" size="2">[in]&nbsp;Pointer to a null-terminated 
+        string that contains the dialog box title. If this parameter is NULL, 
+        the default title <b>Error</b> is used. </font></dd>
+        <dt><font color="#0000FF" face="Courier New" size="2"><i>uType</i>
+        </font></dt>
+        <dd><font face="Courier New" size="2">[in]&nbsp;Specifies the contents and 
+        behavior of the dialog box. This parameter can be a combination of flags 
+        from the following groups of flags. </font>
+        <p>&nbsp;<dl>
+          <dt><font face="Courier New" size="2">Constantes API Windows :<span style="font-weight: 400"> Vous pouvez déterminer la valeur numérique de 
+          des 
+constantes utiliser dans les Api par l'examen des instructions #<b>define</b> dans le fichier 
+WinUser.h. Les valeurs numériques sont généralement affichées au format 
+hexadécimal. Par conséquent, vous pouvez les convertir au format décimal. Par exemple, si vous voulez combiner 
+les constantes pour le style exclamation <b>MB_ICONEXCLAMATION</b>&nbsp;0x00000030 et 
+le style Oui/Non <b>MB_YESNO</b>&nbsp;0x00000004, vous pouvez ajouter les nombres et 
+obtenir un résultat de&nbsp;0x00000034, ou 52&nbsp;décimales. </span></font>
+          </dt>
+        </dl>
+        </dd>
+      </dl>
+    </blockquote>
+    <p class="clsRef"><font face="Courier New" size="2">Return Value</font></p>
+    <blockquote>
+      <table class="clsStd">
+        <tr>
+          <td><font face="Courier New" size="2">IDABORT</font></td>
+          <td><font face="Courier New" size="2">Abort button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDCANCEL</font></td>
+          <td><font face="Courier New" size="2">Cancel button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDCONTINUE</font></td>
+          <td><font face="Courier New" size="2">Continue button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDIGNORE</font></td>
+          <td><font face="Courier New" size="2">Ignore button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDNO</font></td>
+          <td><font face="Courier New" size="2">No button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDOK</font></td>
+          <td><font face="Courier New" size="2">OK button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDRETRY</font></td>
+          <td><font face="Courier New" size="2">Retry button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDTRYAGAIN</font></td>
+          <td><font face="Courier New" size="2">Try Again button was selected.</font></td>
+        </tr>
+        <tr>
+          <td><font face="Courier New" size="2">IDYES</font></td>
+          <td><font face="Courier New" size="2">Yes button was selected.</font></td>
+        </tr>
+      </table>
+      <p><font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<ul>
+  <li>
+<p class="labelproc"><b><font face="Courier New" size="2">Il faut</font></b><font face="Courier New" size="2"><b> 
+déclarer la procédure DLL</b> </font> </p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <font face="Courier New" size="2">Ajoutez la fonction <b>Declare</b> suivante 
+    <b>à la section de déclaration</b> du 
+  formulaire de départ de votre projet ou à celle de la classe ou du module où 
+  vous voulez utiliser la DLL&nbsp;: </font>
+  <pre class="code"><font color="#0000FF" face="Courier New">Declare Auto Function MBox Lib &quot;user32.dll&quot; _
+Alias &quot;MessageBox&quot; (ByVal hWnd As Integer, _
+   ByVal txt As String, ByVal caption As String, _
+   ByVal Typ As Integer) As Integer</font></pre>
+<h3 class="dtH3"><font face="Courier New" size="2"> <b>Declare</b> comprend les éléments suivants.</font></h3>
+<p><font face="Courier New" size="2">Le modificateur <b>Auto</b> indique de 
+suivre les règles du Common Language Runtime.</font></p>
+<p><font face="Courier New" size="2">Le nom&nbsp; qui suit <b>Function</b> est celui que votre programme 
+utilise pour accéder à la fonction importée.</font></p>
+<p><font face="Courier New" size="2">Le mot clé <b>Alias</b> indique le nom réel de cette fonction.</font></p>
+<p><font face="Courier New" size="2"> <b>Lib</b> suivi du nom et de l'emplacement de la DLL 
+qui contient la fonction que vous appelez. Vous n'avez pas besoin d'indiquer le 
+chemin d'accès des fichiers situés dans les répertoires système Windows.</font></p>
+<p><font face="Courier New" size="2">Utilisez le mot clé <b>Alias</b> si le nom de la fonction que vous appelez 
+n'est pas un nom de procédure Visual Basic valide ou est en conflit avec le nom 
+d'autres éléments de votre application. <b>Alias</b> indique le nom réel de la 
+fonction appelée.</font></p>
+<p><font face="Courier New" size="2">Les types de données que Windows utilise ne correspondent pas à 
+ceux de Visual Studio. Visual Basic effectue la plupart des tâches à votre place 
+en convertissant les arguments en types de données compatibles, processus appelé
+<i>marshaling</i>. Vous pouvez contrôler de manière explicite la façon dont les 
+arguments sont marshalés en utilisant l'attribut <b>MarshalAs</b> défini dans 
+l'espace de noms <b>System.Runtime.InteropServices</b>.</font></p>
+<blockquote class="dtBlock">
+  <p><font face="Courier New" size="2"><b class="le">Remarque</b>&nbsp;&nbsp;&nbsp;Les versions antérieures de Visual Basic vous 
+  autorisaient à déclarer des paramètres <b>As Any</b> (tout type). Visual 
+  Basic&nbsp;.NET ne le permet pas.</font></p>
+</blockquote>
+<h4 class="dtH4">&nbsp;</h4>
+  </blockquote>
+</blockquote>
+<font face="Courier New" size="2"><b>Ajoutez des instructions</b> <b>Const</b> à 
+la section des déclarations de votre classe ou module pour rendre ces constantes 
+disponibles pour l'application. Par exemple&nbsp;: </font>
+  <pre class="code"><font face="Courier New" color="#0000FF">Const MB_ICONQUESTION = &amp;H20L
+Const MB_YESNO = &amp;H4
+Const IDYES = 6
+Const IDNO = 7</font></pre>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour appeler la 
+procédure DLL</b> </font> </p>
+  <pre class="code"><font face="Courier New">
+ <font color="#0000FF">  Dim RetVal As Integer </font><font color="#008000">' Valeur de retour.</font><font color="#0000FF">
+   </font></font></pre>
+  <pre class="code"><font face="Courier New" color="#0000FF">   RetVal = MBox(0, &quot;Test DLL&quot;, &quot;Windows API MessageBox&quot;, _
+                 MB_ICONQUESTION Or MB_YESNO)
+   If RetVal = IDYES Then
+      MsgBox(&quot;Vous avez cliqué sur OUI&quot;)
+   Else
+      MsgBox(&quot;Vous avez cliqué sur NON&quot;)
+   End If</font></pre>
+<h4 class="dtH4">&nbsp;</h4>
+<p><font face="Courier New" size="2">Visual Basic&nbsp;.NET convertit automatiquement les types de données des 
+paramètres et valeurs de retour pour les appels API Windows, mais vous pouvez 
+utiliser l'attribut <b>MarshalAs</b> pour indiquer de façon explicite les types 
+de données non managés attendus par une API.</font></p>
+<p class="labelproc"><b><font face="Courier New" size="2">On peut</font></b><font face="Courier New" size="2"><b> 
+aussi appeler une API Windows à l'aide de l'attribut DllImport mais c'est 
+compliqué.</b> </font> </p>
+<p class="labelproc">&nbsp;</p>
+<p class="labelproc"><font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Autre e</span></b><span style="font-weight: 700; background-color: #C0C0C0">xemple 
+classique.</span></font></p>
+<pre class="code"><font face="Courier New">Utilisation de la routine BitBlt qui déplace des octets.</font></pre>
+<pre class="code"><font face="Courier New">La documentation donne les renseignements suivants:</font></pre>
+<pre class="code"><code><font face="Arial" color="#008000"> </font><font face="Arial" color="#0000af">&nbsp;</font><font face="Courier New" color="#0000af">
+     Declare Function</font><font face="Courier New"> BitBlt </font><font face="Courier New" color="#0000af">Lib</font><font face="Courier New"> &quot;gdi32&quot; ( _</font><font face="Courier New" color="#0000af">
+        ByVal </font><font face="Courier New">hDestDC </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+    </font><font face="Courier New" color="#0000af">    ByVal</font><font face="Courier New"> x </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+    </font><font face="Courier New" color="#0000af">    ByVal</font><font face="Courier New"> y </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+    </font><font face="Courier New" color="#0000af">    ByVal</font><font face="Courier New"> nWidth </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+    </font><font face="Courier New" color="#0000af">    ByVal</font><font face="Courier New"> nHeight </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+        </font><font face="Courier New" color="#0000af">ByVal</font><font face="Courier New"> hSrcDC </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+        </font><font face="Courier New" color="#0000af">ByVal</font><font face="Courier New"> xSrc </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+        </font><font face="Courier New" color="#0000af">ByVal</font><font face="Courier New"> ySrc </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">, _
+        </font><font face="Courier New" color="#0000af">ByVal</font><font face="Courier New"> dwRop </font><font face="Courier New" color="#0000af">As </font><font face="Courier New">RasterOps _
+        ) </font><font face="Courier New" color="#0000af">As Long</font><font face="Courier New">
+&nbsp;</font></code></pre>
+<table border="0">
+  <tr>
+    <td><b><font face="Courier New" size="2">Parameter Information</font></b></td>
+  </tr>
+</table>
+<div align="center">
+  <center>
+  <table width="90%" border="0">
+    <tr>
+      <td><font face="Courier New" size="2">· hdcDest<br>
+      Identifies the destination device context.<br>
+      <br>
+      · nXDest<br>
+      Specifies the logical x-coordinate of the upper-left corner of the 
+      destination rectangle.<br>
+      <br>
+      · nYDest<br>
+      Specifies the logical y-coordinate of the upper-left corner of the 
+      destination rectangle.<br>
+      <br>
+      · nWidth<br>
+      Specifies the logical width of the source and destination rectangles.<br>
+      <br>
+      · nHeight<br>
+      Specifies the logical height of the source and the destination rectangles.<br>
+      <br>
+      · hdcSrc<br>
+      Identifies the source device context.<br>
+      <br>
+      · nXSrc<br>
+      Specifies the logical x-coordinate of the upper-left corner of the source 
+      rectangle.<br>
+      <br>
+      · nYSrc<br>
+      Specifies the logical y-coordinate of the upper-left corner of the source 
+      rectangle.<br>
+      <br>
+      · dwRop<br>
+      Specifies a raster-operation code. </font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<p><code><font face="Arial">Les Constantes dwRop</font></code></p>
+<p><code><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Copies the source bitmap to 
+destination bitmap</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SRCCOPY = &amp;HCC0020</font><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Combines pixels of the destination 
+with source bitmap using the Boolean AND operator.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SRCAND = &amp;H8800C6</font><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Combines pixels of the destination 
+with source bitmap using the Boolean XOR operator.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SRCINVERT = &amp;H660046&nbsp;&nbsp;
+</font><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Combines pixels of the destination 
+with source bitmap using the Boolean OR operator.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SRCPAINT = &amp;HEE0086&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Arial" color="#008000">'<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Inverts the destination bitmap and 
+then combines the results with the source bitmap <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' using the Boolean AND operator.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SRCERASE = &amp;H4400328&nbsp;&nbsp;
+</font><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Turns all output white.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WHITENESS = &amp;HFF0062</font><font face="Arial" color="#008000"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' Turn output black.</font><font face="Arial"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BLACKNESS = &amp;H42 </font></code>
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<table border="0">
+  <tr>
+    <td><b><font face="Courier New" size="2">Return Values</font></b></td>
+  </tr>
+</table>
+<div align="center">
+  <center>
+  <table width="90%" border="0">
+    <tr>
+      <td><font face="Courier New" size="2">If the function succeeds, the return 
+      value is nonzero.<br>
+&nbsp;</font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<pre class="code"><font face="Courier New">Ici on va utiliser cette routine pour copier l'image de l'écran dans un graphics.</font></pre>
+<pre class="code"><font color="#0000ff" face="Courier New">Private Declare Function BitBlt Lib &quot;gdi32.dll&quot; Alias &quot;BitBlt&quot; (ByVal _
+   hdcDest As IntPtr, ByVal nXDest As Integer, ByVal nYDest As _
+   Integer, ByVal nWidth As Integer, ByVal nHeight As Integer, ByVal _
+   hdcSrc As IntPtr, ByVal nXSrc As Integer, ByVal nYSrc As Integer, _
+   ByVal dwRop As System.Int32) As Long
+Dim memoryImage As Bitmap
+</font></pre>
+<pre class="code"><font color="#0000ff" face="Courier New">Private Sub CaptureScreen()
+   Dim mygraphics As Graphics = Me.CreateGraphics()
+   Dim s As Size = Me.Size
+   memoryImage = New Bitmap(s.Width, s.Height, mygraphics)
+   Dim memoryGraphics As Graphics = Graphics.FromImage(memoryImage)
+   Dim dc1 As IntPtr = mygraphics.GetHdc
+   Dim dc2 As IntPtr = memoryGraphics.GetHdc
+   </font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF">   </font><font color="#0000ff" face="Courier New"><b>BitBlt(dc2, 0, 0, Me.ClientRectangle.Width, Me.ClientRectangle.Height, dc1, 0, 0, 13369376)</b>
+   </font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF">   </font><font color="#0000ff" face="Courier New">mygraphics.ReleaseHdc(dc1)
+   memoryGraphics.ReleaseHdc(dc2)
+End Sub
+</font></pre>
+<p class="labelproc"><code><font face="Arial"><br>
+</font><font size="2" face="Courier New">Le dernier paramètre a pour valeur=
+</font></code><font face="Courier New" size="2">13369376=</font><code><font face="Courier New" size="2">&nbsp; 
+SRCCOPY = &amp;HCC0020 et correspond à 'Copies the source bitmap to destination 
+bitmap'.</font></code></p>
+<p class="labelproc">&nbsp;</p>
+<p class="labelproc">&nbsp;</p>
+<font face="Courier New" size="2"><b>Annexe: Conversions de type</b><br>
+Au cours du regroupement, l'une des principales étapes consiste à convertir
+les types non gérés en types gérés, et inversement. Le service de
+regroupement du CLR sait comment effectuer nombre de ces conversions, mais vous
+devez quand même connaître les correspondances entre les différents types
+lors de la conversion de la signature non gérée vers la fonction gérée. Vous
+pouvez utiliser le tableau de conversion suivant pour mettre en correspondance
+les différents types.<b>&nbsp;</b></font>
+<p><font face="Courier New" size="2"><b>&nbsp;&nbsp;</b></font></p>
+<table class="dataTable" id="ERPAC" cellSpacing="0" cellPadding="0" width="50%">
+  <thead>
+    <tr class="stdHeader" vAlign="top">
+      <td id="colEUPAC" width="50%" bgcolor="#FF0000"><b><font color="#000000">Type
+        de données Windows</font></b></td>
+      <td id="colEYPAC" style="BORDER-RIGHT: #cccccc 1px solid" width="50%" bgcolor="#FF0000"><b>Type
+        de données .NET</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">BOOL, BOOLEAN</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Boolean ou Int32</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">BSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">BYTE</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Byte</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">CHAR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Char</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">DOUBLE</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Double</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">DWORD/LPDWORD</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32 or UInt32</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">FLOAT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Single</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">HANDLE (et tous les autres
+        types de pointeur, tels que HFONT et HMENU)</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">IntPtr, UintPtr ou HandleRef</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">HRESULT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32 or UInt32</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">INT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LANGID</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int16 ou UInt16</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LCID</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32 or UInt32</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LONG</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPARAM</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">IntPtr, UintPtr ou Object</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPCSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPCTSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPCWSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String ou StringBuilder*</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPTSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String ou StringBuilder</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPWSTR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">String ou StringBuilder</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LPVOID</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">IntPtr, UintPtr ou Object</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">LRESULT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">IntPtr</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">SAFEARRAY</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">type de tableau .NET</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">SHORT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int16</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">TCHAR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Char</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">UCHAR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">SByte</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">UINT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32 or UInt32</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">ULONG</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int32 or UInt32</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">VARIANT</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Object</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">VARIANT_BOOL</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Boolean</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">WCHAR</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Char</p>
+      </td>
+    </tr>
+    <tr class="evenRecord" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">WORD</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">Int16 ou UInt16</p>
+      </td>
+    </tr>
+    <tr class="record" vAlign="top">
+      <td bgcolor="#C0C0C0">
+        <p class="lastInCell"><font color="#000000">WPARAM</font></p>
+      </td>
+      <td style="BORDER-RIGHT: #cccccc 1px solid" bgcolor="#808080">
+        <p class="lastInCell">IntPtr, UintPtr ou Object</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="labelproc">&nbsp;</p>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-13.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:50 GMT -->
+</html>

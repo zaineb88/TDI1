@@ -1,0 +1,10 @@
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\ContrôlePersonneProduit\ContrôlePersonneProduit\bin\Debug\ContrôlePersonneProduit.exe
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\ContrôlePersonneProduit\ContrôlePersonneProduit\bin\Debug\ContrôlePersonneProduit.pdb
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ContrôlePersonneProduit.exe
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ContrôlePersonneProduit.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ContrôlePersonneProduit.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ContrôlePersonneProduit.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ContrôlePersonneProduit\ContrôlePersonneProduit\bin\Debug\ContrôlePersonneProduit.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\ContrôlePersonneProduit\ContrôlePersonneProduit\bin\Debug\ContrôlePersonneProduit.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ContrôlePersonneProduit\ContrôlePersonneProduit\obj\x86\Debug\ResolveAssemblyReference.cache

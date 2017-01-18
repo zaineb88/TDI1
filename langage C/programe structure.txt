@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+#include <conio.h>
+struct Moyenne_stag
+{
+int mat ;
+char nom[30];
+char pernom[30];
+float moyenne;
+};
+
+
+void sisairmoy(Moyenne_stag tab_moy[],int n)
+{
+for(int i=0;i<n;i++){
+printf("donnez la matricule ");
+scanf("%d",&tab_moy[i].mat);
+printf("donnez le nom");
+scanf("%s",&tab_moy[i].nom);
+printf("donnez le prenom");
+scanf("%s",&tab_moy[i].prenom);
+printf("donnez la moyenne ");
+scanf("%f",&tab_moy[i].moyenne);}}
+
+
+void trimoy(Moyenne_stag tab_moy[30],int n)
+{
+for(int i=0;i<n-1;i++){
+for(int j=i+1;j<n;j++){
+if(tab_moy[i].moy<tab_moy[j].moy){
+Moyenne_stag e;
+e=tab_moy[i].moy;
+tab_moy[i].moy=tab_moy[j].moy;
+tab_moy[j].moy)=e;}}}}
+void affichermoy(Moyenne_stag tab_moy[30],int n){
+for(int i=0;i<n;i++){
+printf("la matricule est : %d \t le nom est : %s ,\t le prenom est : %s ,\t la moyenne est : %.2f",tab_moy[i].mat,tab_moy[i].nom,tab_moy[i].prenom,tab_moy[i].moy);
+int main(int argc, char *argv[])
+{
+Moyenne_stag tab_moy[10];
+sisairmoy(tab_moy[],4);
+trimoy(tab_moy[],4);
+affichermoy(tab_moy[],4);
+getchar();
+getchar();
+}

@@ -1,0 +1,342 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:15 GMT -->
+<head>
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title> Cours Visual Basic .Net : evenement </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Courier New" size="7" color="#0000FF">Cours</font><font face="Arial" size="7" color="#0000FF"> </font><font size="7" color="#0000FF" face="Courier New">VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="101%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v0-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">&nbsp;1.1</font></b></td>
+    <td width="47%" height="76" align="center"><p>
+    <b><font face="Courier New" size="6" color="#800080">Premier programme: 
+    évènements</font></b></td>
+    <td width="9%" height="76"><a href="v1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="16%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080">
+<font size="2"><span style="font-family: Courier New">Nous allons comprendre <b>
+la p</b></span></font><span style="font-size: 10.0pt; font-family: Courier New"><b>rogrammation 
+évènementielle: </b>Comment fonctionne Visual Basic:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">- Ce que voit l'utilisateur.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">- Ce qu'a fait le développeur pour 
+arriver à ce résultat.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="v1bonjour.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="v1bonjour.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Principes de la programmation VB</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le programmeur va 
+dessiner <b>l’interface utilisateur (fenêtre, bouton, liste..), il va ensuite 
+uniquement écrire les actions à effectuer quand certains événements se 
+produisent sur cette interface.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b><span style="font-size: 10.0pt; font-family: Courier New">C’est<b> 
+Visual Basic </b>qui va entièrement s’occuper de la gestion des événements.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Exemple&nbsp;:le premier 
+programme:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4"><b>
+<span style="font-family: Courier New">Il affiche 'Bonjour' quand on clique sur 
+un bouton.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">C'est pas original: le premier programme, 
+dans tous les cours d'informatique, permet d'afficher&nbsp; 'Bonjour' (ou 'Hello Word'). </span></b></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" color="#0000FF">Que voit l'utilisateur du programme?</font></b></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>L’utilisateur final, 
+celui qui utilise le logiciel,
+</b>voit une<b> fenêtre </b>avec un<b> bouton, </b>Si il appuie sur ce bouton il 
+voit s’afficher <b>«&nbsp;Bonjour&nbsp;».</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vc1-2_1.gif" width="124" height="105"></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF"><b>Que se passe t-il dans le 
+programme?</b></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Quand l'</span></font><span style="font-size: 10.0pt; font-family: Courier New">utilisateur  clique sur 
+le bouton cela déclenche automatiquement <b>un événement</b>.<b> (Button1_Click),</b> 
+cet évènement contient du code qui affiche «&nbsp;Bonjour&nbsp;».</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="font-family: Courier New; font-weight: 700">
+Que doit faire le programmeur pour arriver à ce résultat?</span></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour atteindre ce 
+résultat, <b>le programmeur va dessiner la fenêtre</b>,<b> le bouton, la zone 
+d'affichage du texte (un label)</b> puis il va 
+simplement indiquer dans l'évènement Button_Click&nbsp;d' <b>afficher «&nbsp;Bonjour&nbsp;»</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<img border="0" src="vicochev.GIF" width="32" height="34"> <b>Le fait de déterminer 
+la procédure à appeler ou de réaliser l’appel est entièrement pris en charge par VB.</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">En 
+pratique, que fait le programmeur: </font></span>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="v1bonjour.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="v1bonjour.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le programmeur est en
+<b>mode 'conception'</b> (ou mode <b>Design</b>):Il écrit le programme&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="4">
+<span style="font-family: Courier New">&nbsp;<font color="#808000"><u>A- Il 
+dessine l’interface utilisateur</u></font></span></font><font color="#808000"><u><span style="font-size: 10.0pt; font-family: Courier New">
+</span></u></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>(Ce que verra 
+l’utilisateur final, c'est l'interface utilisateur&nbsp;</b>: une fenêtre avec des boutons, des listes, du texte..<b>)</b>&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<img border="0" src="vc1-2_2.gif" width="347" height="159"></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Il ouvre 
+un projet</span></font><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">&nbsp;:</span><span style="font-size: 10.0pt; font-family: Courier New"> une fenêtre ‘Form1’ apparaît.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Il a</span></font><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">joute 
+un bouton&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Pour 
+cela il utilise la Boite à outils:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<img border="0" src="vboitout.gif" width="117" height="260"></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Il c</span></font><span style="font-size: 10.0pt; font-family: Courier New">lique sur ‘Boite à 
+Outils’ à gauche , bouton Windows Forms, puis bouton <b>‘Button’</b>, il clique dans 
+Form1, déplace le curseur sans lâcher le bouton, puis lâche le bouton de la 
+souris&nbsp;: le dessin d'un 
+bouton apparaît.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour l’exemple,Il <b>
+ajoute un label</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Un label est un 
+contrôle qui permet d’afficher un texte.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Comme pour le bouton 
+il clique sur ‘Boite à Outils’ à gauche, bouton Windows Forms, bouton ‘Label’ et 
+met un contrôle label sur la fenêtre. </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#808000" size="4">
+<span style="font-family: Courier New; font-weight: 700; text-decoration: underline">
+B- Il va écrire le code&nbsp; correspondant aux événements&nbsp;:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il double-clique sur 
+le bouton qu'il a dessiné&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Une fenêtre de 
+conception de code s’ouvre et il apparaît&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span> Button1_Click(<span style="color: blue">ByVal</span> 
+sender <span style="color: blue">As</span> System.Object,
+<span style="color: blue">ByVal</span> e <span style="color: blue">As</span> 
+System.EventArgs) <span style="color: blue">Handles</span> Button1.Click</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cela correspond à la <b>
+procédure évènement</b> en rapport avec l'évènement 'On a cliqué sur le 
+bouton1'.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Q</span></font><span style="font-size: 10.0pt; font-family: Courier New">uand 
+le programme fonctionne, quand l’utilisateur du logiciel clique sur le bouton1, 
+le code situé entre Private Sub Button1Click et End Sub&nbsp; est effectué.</span></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Une procédure</b> est 
+un ensemble de lignes de code qui commence par Sub et se termine par End Sub (ou 
+Function..End Function).</span></font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Comment indiquer dans 
+cette procédure d'afficher &quot;Bonjour&quot;?&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Le label possède une 
+propriété nommé '.text' qui contient le texte à afficher.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Il faut t</span></font><span style="font-size: 10.0pt; font-family: Courier New">aper le code&nbsp; 
+qui modifie cette propriété '.text' , qui y met la chaîne de caractère 
+&quot;Bonjour&quot;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;</span><span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span> Button1_Click(<span style="color: blue">ByVal</span> 
+sender <span style="color: blue">As</span> System.Object,
+<span style="color: blue">ByVal</span> e <span style="color: blue">As</span> 
+System.EventArgs) <span style="color: blue">Handles</span> Button1.Click</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">Label1.Text = 
+&quot;Bonjour&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C</span></font><span style="font-size: 10.0pt; font-family: Courier New">ela 
+donne:&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New"><img border="0" src="vc1-2_3.gif" width="386" height="182"></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+Voila votre premier programme est écrit.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Comment exécuter ce programme?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Il est possible de tester immédiatement le 
+programme en mode déboguage, sans quitter l'environnement de développement:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New">
+Utiliser le menu ‘Déboguer’ puis ‘Démarrer’ qui lance 
+l’exécution du programme.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">On peut aussi taper sur </span></font><span style="font-size: 10.0pt; font-family: Courier New"> <b>F5 </b>
+pour lancer le programme<b>.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Ou plus simplement cliquer sur la flèche:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vBtrun.gif" width="70" height="22"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">C'est plus rapide, <b>lancer l'exécution 
+avec le premier bouton,</b> le second servant à arrêter temporairement l'exécution, 
+le troisième à terminer l'exécution.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">En 
+mode exécution&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">L’utilisateur voit 
+bien une fenêtre avec un bouton, s’il clique dessus, «&nbsp;Bonjour&nbsp;» s’affiche.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Quand le programme est 
+totalement écrit, terminé, testé, il est possible de le <b>compiler</b> et ainsi 
+de créer un <b>fichier exécutable</b> (possédant une extension '.exe') qui 
+fonctionne de manière autonome en dehors de l'environnement de développement.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est ce fichier 
+exécutable qui est fourni à l'utilisateur.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Par opposition le code 
+écrit par le programmeur, composé d'instructions Visual Basic, se nomme <b>le 
+code source</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="4" color="#0000FF">En 
+résumé&nbsp;:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le programmeur utilise 
+des outils de dessin pour construire une <b>interface utilisateur</b>&nbsp;: des 
+fenêtres avec des &nbsp;contrôles dessus: menus, boutons, case à cocher..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">VB, pour chaque 
+fenêtre ou pour chaque contrôle, génère une liste d’<b>événements</b>, 
+(Evènement lié au chargement d'une fenêtre, évènement lié au fait de cliquer sur un bouton, 
+évènement survenant quand on modifie un texte...)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il suffit, dans la <b>
+procédure événement qui nous intéresse</b>, d’<b>écrire le code</b> qui doit être effectué lorsque 
+cet événement survient.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+Comme nous l’avons vu le code sert à agir sur l’interface (Afficher un texte, 
+ouvrir une fenêtre, remplir une liste, un tableau), mais il peut aussi effectuer 
+des calculs, évaluer des conditions et prendre des décisions, travailler en 
+boucle de manière répétitive et ainsi effectuer les taches nécessaires .</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Button = Bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">End =Fin.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Form= formulaire</span></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v0-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:19 GMT -->
+</html>

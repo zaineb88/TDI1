@@ -1,0 +1,2590 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net binaire hexadécimal booléen</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v7-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les bases binaires, 
+    hexadécimales, algèbre de Boole.</font></b></td>
+    <td width="14%" height="76"><a href="v8-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vboole.jpg" width="90" height="109"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">Mr Georges Boole 
+1805-1864</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" size="2" face="Courier New">Introduction.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Notion théorique: l'algèbre de Boole.</span></b></font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" size="2">Les bases.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Le Bit, poids d'un bit.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Conversion décimal binaire.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">L'octet, Kilo, Méga, Téra-Octet</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Opération: L'addition, la multiplication binaire, 
+les nombres négatifs.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Table de vérité.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Fonction logique. Or And, Not, Xor...</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Notation.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Ordre des évaluations.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Loi de composition.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Déplacement de bit.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">Hexadécimale.</font></b></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Intérêts&nbsp; en Visual 
+Basic.</span></b></font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">A notre disposition Boolean, Integer 
+Byte..</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Conversion binaire, décimale, 
+hexadécimale.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Cas particulier: If A then</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Les masques de bit</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Cryptage par Xor</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Travail sur les couleurs, graphiques..</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Viewer hexadécimal.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font size="4" color="#0000FF" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Introduction:</span></font></p>
+<p align="justify"><font face="Courier New" size="2">L'<b>algèbre de Boole</b> 
+est la partie des mathématiques, de la logique de l' électronique et de 
+l'informatique qui s'intéresse aux opérations et aux fonctions sur les variables 
+logiques. En logique propositionnelle, une expression est soit 
+vraie soit fausse. (le vrai (1) et le faux (0)).</font></p>
+<p><font face="Courier New" size="2"><b>Georges Boole</b> (1815-1864), physicien 
+Anglais définit en 1847 un algèbre qui est applicable au raisonnement logique, 
+qui traite des fonctions à variables binaires (deux valeurs). Mais il ne 
+s'applique pas aux systèmes à plus de deux états d'équilibre.&nbsp; </font> </p>
+<p><font face="Courier New" size="2"><b>Une variable booléenne</b>, ou logique, ou binaire ne prend que deux valeurs 
+(elle est généralement stockée sous la forme d'un bit). </font> </p>
+<p align="justify"><font face="Courier New" size="2">Vers la fin des années 30, 
+<b>Claude Shannon</b> démontra qu'à 
+l'aide d'interrupteurs&nbsp; fermés pour «&nbsp;vrai&nbsp;» et ouverts pour 
+«&nbsp;faux&nbsp;» il était possible d'effectuer des opérations logiques en associant le 
+nombre 1 pour «&nbsp;vrai&nbsp;» et 0 pour «&nbsp;faux&nbsp;». </font> </p>
+<p align="justify"><font face="Courier New" size="2">Ce codage de l'information est nommé <b>base binaire</b>. 
+C'est avec ce codage que fonctionnent les ordinateurs. Il consiste à utiliser 
+deux états (représentés par les chiffres 0 et 1) pour coder les informations.
+</font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">
+Il permet d'étudier les circuits logiques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="6" color="#0000FF">Notions théoriques</font></b></span><font face="Courier New" size="6" color="#0000FF"><b><span style="background-color: #C0C0C0">:</span></b></font></p>
+<p align="justify"><b><i><span style="background-color: #C0C0C0">Notion de base:</span></i></b></p>
+<p align="justify"><font face="Courier New" size="2">On utilise diverses bases dans 
+la vie courante:</font></p>
+<p align="justify"><font face="Courier New" size="2">Pour les heures, minutes, 
+secondes on utilise sans le savoir <b>une base 'soixante'</b>:</font></p>
+<p align="justify"><font face="Courier New" size="2">60 secondes= 1 minute</font></p>
+<p align="justify"><font face="Courier New" size="2">60 minutes = 1 heure</font></p>
+<p align="justify"><font face="Courier New" size="2">Si je compte : 1 s, 2s, 
+3s,...59s, 1mn, 1mn+1 s.....1mn+59s, 2 minutes....59 mn+ 59s, 1h...</font></p>
+<p align="justify"><font face="Courier New" size="2"><b>En base décimale</b>, 
+on a à notre disposition les caractères&nbsp; 1 2 3 4 5 6 7 8 9.</font></p>
+<p align="justify"><font face="Courier New" size="2">Si on veut représenter le 
+nombre au dessus de 9, comme on n'a plus de caractère, on recommence avec 1 
+mais en le décalant vers la gauche pour signifier qu'il s'agit d'une dizaine. On 
+obtient '10'. Le nombre suivant est '11' puis &quot;12'.. Idem pour 100, 1000..</font></p>
+<p align="justify"><font face="Courier New" size="2"><b>En base binaire</b>, 
+on n'a que le caractère 1 (et le zéro), 1 binaire= 1 décimal.</font></p>
+<p align="justify"><font face="Courier New" size="2">Si on veut écrire en 
+binaire le nombre au dessus de 1, comme on n'a plus de caractère, on procède de 
+même en décalant vers la gauche le 1:</font></p>
+<p align="justify"><font face="Courier New" size="2">10 binaire= 2 décimal.
+</font></p>
+<p align="justify"><font face="Courier New" size="2">Le nombre suivant est 11 
+binaire (3 en décimal).</font></p>
+<p align="justify"><font face="Courier New" size="2">Puis 100 (4 en décimal) car 
+il faut de nouveau décaler.</font></p>
+<p align="justify"><font face="Courier New" size="2"><b>En base hexadécimale</b>, 
+on a à notre disposition les caractères&nbsp; 1 2 3 4 5 6 7 8 9 A B C D E F.</font></p>
+<p align="justify"><font face="Courier New" size="2">Aussi 10 décimal = A en 
+hexadécimal</font></p>
+<p align="justify"><font face="Courier New" size="2">...</font></p>
+<p align="justify"><font face="Courier New" size="2">15 décimal = F en 
+hexadécimal</font></p>
+<p align="justify"><font face="Courier New" size="2">16 décimal = 10 en 
+hexadécimal</font></p>
+<p align="justify"><font face="Courier New" size="2">Si on veut représenter le 
+nombre au dessus de 15, comme on n'a plus de caractères, on recommence avec 1 
+mais en le décalant vers la gauche pour signifier qu'il s'agit d'une 'seizaine'. On 
+obtient '10' hexadécimal qui correspond à 16 décimal . Le nombre suivant est '11' puis &quot;12' 
+jusqu'a 1F puis 100... 1000..</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><b><i><font face="Courier New">Utilisons l'analogie des 
+allumettes et des paquets d'allumettes:</font></i></b></p>
+<p align="justify"><font face="Courier New" size="2"><b>En décimal</b> on a des paquets 
+de 10 allumettes.</font></p>
+<p align="justify"><font face="Courier New" size="2">On compte 1 ,2 ,3..9, 1 
+paquet de 10, puis 1 paquet + 1 allumette...</font></p>
+<p align="justify"><font face="Courier New" size="2">On a des gros paquets de 
+100, des énormes paques de 1000 allumettes..</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2"><b>En binaire</b> on a des paquets 
+de 2 allumettes et des gros paquets de 4 allumettes.</font></p>
+<p align="justify"><font face="Courier New" size="2">On compte 1 , 1 paquet de 
+2, puis 1 paquet + 1 allumette, puis 1 gros paquet de 4...</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><img border="0" src="vbinair.GIF" width="524" height="144"></p>
+<p align="justify"><font face="Courier New" size="2">Donc pour compter en 
+binaire:&nbsp;&nbsp;&nbsp; Binaire&nbsp;&nbsp;&nbsp; Décimal</font></p>
+<p align="justify"><font face="Courier New" size="2">1 allumette.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</font></p>
+<p align="justify"><font face="Courier New" size="2">1 paquet de 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</font></p>
+<p align="justify"><font face="Courier New" size="2">1 paquet de 2 + 1 allumette&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3</font></p>
+<p align="justify"><font face="Courier New" size="2">1 gros paquet de 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</font></p>
+<p align="justify"><font face="Courier New" size="2">1 gros paquet de 4 +1 
+allumette&nbsp;&nbsp; 101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5</font></p>
+<p align="justify"><font face="Courier New" size="2">1 gros paquet de 4 +1 
+paquet de 2 110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6</font></p>
+<p align="justify"><font face="Courier New" size="2">....</font></p>
+<p align="justify"><font face="Courier New" size="2">Le nombre d'allumette qu'il 
+y a dans un paquet se nomme le <b>poids</b>.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2"><b>En hexadécimal</b>, les 
+paquets sont de 16 allumettes:</font></p>
+<p align="justify"><font face="Courier New" size="2">On compte 1, 2, 3 ..jusqu'a 
+15 allumettes puis 1 paquet de 16 puis 1 paquet plus une allumette..</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><span style="background-color: #C0C0C0"><b><i>Base binaire:</i></b></span></p>
+<p align="justify"><b><i>Soyons maintenant un peu plus scientifique:</i></b></p>
+<p align="justify"><font face="Courier New" size="2">
+<span style="background-color: #C0C0C0">Le bit:</span></font></p>
+<p align="justify"><font face="Courier New" size="2">Le terme <b>bit</b> (<i>b</i> avec une minuscule) signifie «&nbsp;<b>binary digit</b>&nbsp;», c'est-à-dire 0 ou 1 en numérotation 
+binaire. Il s'agit de la plus petite unité d'information manipulable par un 
+ordinateur. </font> </p>
+<p align="justify"><font face="Courier New" size="2">Physiquement cette information 
+binaire correspond à: </font> </p>
+<ul>
+  <li><font face="Courier New" size="2">un signal électrique ou magnétique. (pas de signal=0, au-delà d'un certain seuil 
+  de +5V, valeur 1). </font> </li>
+  <li><font face="Courier New" size="2">des trous ou pas de trous sur un CD.
+  </font> </li>
+  <li><font face="Courier New" size="2">l'état de bistables, c'est-à-dire des composants électroniques contenus 
+  dans les circuits intégrés qui ont 
+  deux états d'équilibre (état 1, état 0). </font> </li>
+</ul>
+<p align="justify"><font face="Courier New" size="2">Avec un bit il est donc possible d'avoir deux états :</font></p>
+<p align="justify"><font face="Courier New" size="2">&nbsp;soit 1,</font></p>
+<p align="justify"><font face="Courier New" size="2">&nbsp;soit 0.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2">Grâce à 2 bits, il est possible d'obtenir quatre états 
+différents (2*2) : </font> </p>
+<p align="justify"><font face="Courier New" size="2">On peut avec 2 bits , avoir 
+les valeurs: 0, 1, 10, 11 soit 0,1, 2, 3 en décimal.</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" width="90" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <td bgColor="#AFBBEF" width="10" align="center">&nbsp;</td>
+    <td bgColor="#AFBBEF" width="10" align="center">&nbsp;</td>
+    <td bgColor="#AFBBEF" width="133" align="center">&nbsp;</td>
+    <td bgColor="#AFBBEF" width="216" align="center">&nbsp;Décimal</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" width="10" align="center">0</td>
+    <td bgColor="#FFFFFF" width="10" align="center">0</td>
+    <td bgColor="#FFFFFF" width="133" align="center">&nbsp;</td>
+    <td bgColor="#FFFFFF" width="216" align="center">0</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" width="10" align="center">0</td>
+    <td bgColor="#FFFFFF" width="10" align="center">1</td>
+    <td bgColor="#FFFFFF" width="133" align="center">&nbsp;</td>
+    <td bgColor="#FFFFFF" width="216" align="center">1</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" width="10" align="center">1</td>
+    <td bgColor="#FFFFFF" width="10" align="center">0</td>
+    <td bgColor="#FFFFFF" width="133" align="center">&nbsp;</td>
+    <td bgColor="#FFFFFF" width="216" align="center">2</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" width="10" align="center">1</td>
+    <td bgColor="#FFFFFF" width="10" align="center">1</td>
+    <td bgColor="#FFFFFF" width="133" align="center">&nbsp;</td>
+    <td bgColor="#FFFFFF" width="216" align="center">3</td>
+  </tr>
+</table>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">Avec 3 bits, il est possible d'obtenir huit états différents 
+(2*2*2) de 0 à 7 en décimal: </font> </p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>En binaire 3 bits</th>
+    <th>En décimal</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">000</td>
+    <td bgColor="#FFFFFF">0</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">001</td>
+    <td bgColor="#FFFFFF">1</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">010</td>
+    <td bgColor="#FFFFFF">2</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">011</td>
+    <td bgColor="#FFFFFF">3</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">100</td>
+    <td bgColor="#FFFFFF">4</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">101</td>
+    <td bgColor="#FFFFFF">5</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">110</td>
+    <td bgColor="#FFFFFF">6</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">111</td>
+    <td bgColor="#FFFFFF">7</td>
+  </tr>
+</table>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">Avec 4 bits, il est possible d'obtenir huit états différents 
+(2*2*2*2) de 0 à 15 en décimal: </font> </p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>En binaire 4 bits</th>
+    <th>En décimal</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0000</td>
+    <td bgColor="#FFFFFF">0</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0001</td>
+    <td bgColor="#FFFFFF">1</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0010</td>
+    <td bgColor="#FFFFFF">2</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0011</td>
+    <td bgColor="#FFFFFF">3</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0100</td>
+    <td bgColor="#FFFFFF">4</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0101</td>
+    <td bgColor="#FFFFFF">5</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0110</td>
+    <td bgColor="#FFFFFF">6</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0111</td>
+    <td bgColor="#FFFFFF">7</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1000</td>
+    <td bgColor="#FFFFFF">8</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1001</td>
+    <td bgColor="#FFFFFF">9</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1010</td>
+    <td bgColor="#FFFFFF">10</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1011</td>
+    <td bgColor="#FFFFFF">11</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1100</td>
+    <td bgColor="#FFFFFF">12</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1101</td>
+    <td bgColor="#FFFFFF">13</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1110</td>
+    <td bgColor="#FFFFFF">14</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1111</td>
+    <td bgColor="#FFFFFF">15</td>
+  </tr>
+</table>
+<p align="justify">&nbsp;</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New" color="#FF0000">Pour un groupe de n bits, il est possible de représenter 2<sup>n</sup> 
+valeurs&nbsp; ( de 0 à 2<sup>n</sup>-1 ). </font> </p>
+<p align="justify"><font size="2" face="Courier New">Avec 8 bits =256 valeurs.</font></p>
+<p align="justify"><font size="2" face="Courier New">Avec 16 bits=65536 valeurs.</font></p>
+<p align="justify"><font size="2" face="Courier New">Avec 32 bits=4294967296 valeurs.</font></p>
+<p align="justify"><font size="2" face="Courier New">Avec 64 bits=18446744073709551616 valeurs.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">Avec 8 bits (un octet) on peut représenter un nombre qui peut avoir 256 
+valeurs différentes:</font></p>
+<p align="justify"><font size="2" face="Courier New">&nbsp;de 0 à 255</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>binaire 8 bits</th>
+    <th>décimal</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">00000000</td>
+    <td bgColor="#FFFFFF">0</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">00000001</td>
+    <td bgColor="#FFFFFF">1</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">00000010</td>
+    <td bgColor="#FFFFFF">2</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">00000011</td>
+    <td bgColor="#FFFFFF">3</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">........</td>
+    <td bgColor="#FFFFFF">..</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">........</td>
+    <td bgColor="#FFFFFF">..</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">11111110</td>
+    <td bgColor="#FFFFFF">254</td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">11111111</td>
+    <td bgColor="#FFFFFF">255</td>
+  </tr>
+</table>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">
+<span style="background-color: #C0C0C0">Poids des bits:</span></font></p>
+<p align="justify"><font size="2" face="Courier New">Chaque bits a un <b>poids</b>, qui 
+dépend de la position du bit en partant de la droite. Comme les dizaines, 
+les centaines et les milliers pour un nombre décimal, le poids d'un bit croît 
+d'une puissance de deux en allant de la droite vers la gauche: </font> </p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="1" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th><font face="Courier New" size="2">Poids</font></th>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>7</sup> = 128</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>6</sup> = 64</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>5</sup> = 32</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>4</sup> = 16</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>3</sup> = 8</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>2</sup> = 4</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>1</sup> = 2</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">2<sup>0</sup> = 1</font></td>
+  </tr>
+</table>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">Remarque : cela est valable pour toutes les 
+bases:</font></p>
+<p align="justify"><font size="2" face="Courier New">Soit un nombre 'mno' en base b</font></p>
+<p align="justify"><font face="Courier New"><font size="2">Le premier chiffre à droite a la valeur:&nbsp; 
+o x b</font><sup><font size="2">1 </font></sup></font></p>
+<p align="justify"><font face="Courier New"><font size="2">Le deuxième chiffre à droite a la valeur:&nbsp; 
+n x b</font><sup><font size="2">2</font></sup></font></p>
+<p align="justify"><font face="Courier New"><font size="2">Le troisième chiffre à droite a la 
+valeur:&nbsp; m x b</font><sup><font size="2">3</font></sup></font></p>
+<p align="justify"><font size="2" face="Courier New">En allant de la droite vers 
+la gauche le poids croît d'un puissance de b.</font></p>
+<p align="justify"><font size="2" face="Courier New">Le nombre total est la
+somme de toutes les valeurs:&nbsp;</font></p>
+<p align="justify"><font face="Courier New"><font size="2"> 
+o x b</font><font size="2"><sup>1</sup></font></font> + <font face="Courier New"><font size="2">n x b</font><font size="2"><sup>2</sup></font></font>
++<font face="Courier New"><font size="2"> m x b</font><sup><font size="2">3</font></sup></font></p>
+<p align="justify"><font size="2" face="Courier New">&nbsp;</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p align="justify"><font size="2" face="Courier New">
+<span style="background-color: #C0C0C0">Conversion:</span></font></p>
+<p align="justify"><font face="Courier New" size="2"><b>Pour convertir un nombre binaire en nombre décimal:</b></font></p>
+<p align="justify"><font face="Courier New" size="2">Il faut multiplier la 
+valeur de chaque bit par son poids, puis d'additionner les 
+résultats.&nbsp; </font> </p>
+<p align="justify"><font face="Courier New" size="2"> Ainsi, le mot binaire 10101 vaut en décimal : </font> </p>
+<pre class="Code"><font face="Courier New">2<sup>4</sup>x1 + 2<sup>3</sup>x0 + 2<sup>2</sup>x1 + 2<sup>1</sup>x0 + 2<sup>0</sup>x1
+= 16x1 + 8x0 + 4x1 + 2x0 + 1x1
+= 21</font></pre>
+<p align="justify"><font face="Courier New" size="2"><b>Pour convertir un nombre 
+décimal en nombre binaire:</b></font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0"><i><font size="2" face="Courier New">
+-Méthode des poids:</font></i></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Soit 21 en décimal.</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Il
+faut connaître les poids (puissance de 2): 2, 4, 8, 16 ,32..</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Trouver le premier poids (la première 
+puissance de 2) inférieur au nombre 
+décimal 21 :c'est 16&nbsp;&nbsp; </font> </p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">16 donne en binaire <i>10000</i></font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Faire 21-16 =5</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Trouver le premier poids inférieur au nombre 
+5, c'est 4.</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">4 donne en binaire <i>100</i></font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Faire 5-4= <i>1</i></font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Quand on atteint 1 (ou 0) on s'arrête.</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On additionne&nbsp; 10000</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
++&nbsp; 100</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
++&nbsp;&nbsp;&nbsp; 1</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+_____</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+10101</font></p>
+<p align="justify"><i><font face="Courier New" size="2">-Méthode des divisions 
+par 2:</font></i></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">21 /2&nbsp; = 10&nbsp; reste 1</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">10 /2&nbsp; =&nbsp; 5&nbsp; reste 0</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">5&nbsp; /2&nbsp;&nbsp;=&nbsp; 2&nbsp; reste 1</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">2&nbsp; /2&nbsp;&nbsp;=&nbsp; 1&nbsp; reste 0</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">1&nbsp; /2&nbsp;&nbsp;=&nbsp; 0&nbsp; reste 1</font></p>
+<p align="justify"><font face="Courier New" size="2">On prend les restes en 
+commençant par la fin: 10101</font></p>
+<p align="justify"><font face="Courier New" size="2">Y a t-il une solution plus 
+élégante?</font></p>
+<p align="justify"><font face="Courier New"><b><font size="2">La calculette Windows</font></b><font size="2"> 
+permet les conversions.</font></font></p>
+<ol>
+  <li><font size="2" face="Courier New">Dans le menu <b>Affichagede la
+    calculette</b>, cliquez sur <b>Scientifique</b>.
+  </font></li>
+  <li><font size="2" face="Courier New">Tapez le nombre décimal que vous souhaitez convertir.
+  </font></li>
+  <li><font size="2" face="Courier New">Cliquez sur le RadioButton 'Bin' .</font></li>
+</ol>
+<p align="center"><font face="Courier New" size="2">
+<img border="0" src="vcalcu.JPG" width="482" height="318"></font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New">
+<span style="background-color: #C0C0C0"><font size="2">Octet, Kilo méga </font>
+</span><font size="2"><span style="background-color: #C0C0C0">Téra</span></font><span style="background-color: #C0C0C0"><font size="2"> 
+Octet.</font></span></font></p>
+<p align="justify"><font size="2" face="Courier New">L'<b>octet</b> (en anglais <i>Byte</i> ou <i>B</i>) 
+est une unité d'information composée de 8 bits ( 256 valeurs possibles). Il&nbsp; 
+permettait par exemple de stocker le code d'un caractère (une lettre ou un 
+chiffre: 65 indiquant 'A' dans le code ASCII). Il y a quelques années les 
+ordinateurs fonctionnaient avec des octets puis ils ont utilisé 16 bits , 32 bits et maintenant 64 bits. On voit que plus l'unité 
+d'information contient de bits, plus elle pourra contenir des grands nombres.&nbsp;
+</font> </p>
+<p align="justify"><font size="2" face="Courier New"><b>En informatique</b>, si 8 bits correspond à 
+un <b>octet </b><i>(Byte)</i>, 16 bits est généralement 
+appelée <b>mot</b> (en anglais <i>word</i>), 32 bits correspond à un <b>
+mot double</b> (en anglais <i>double word</i>, d'où l'appellation <i>dword</i>).
+</font> </p>
+<p align="justify"><font size="2"><font face="Courier New"><b>En Visual Basic.Net</b>, les entiers (<font color="#0000FF">Integer</font>) 
+sont codés sur 32 bits, les <font color="#0000FF">Long</font> sur 64 bits. Les 
+valeurs sont signées (positive ou négative), un bit est donc utilisé pour le 
+signe. Par contre </font> <span style="FONT-FAMILY: Courier New"><font color="#0000FF">
+UInteger</font>&nbsp;est un&nbsp;entier non signé codé sur 32 bits pouvant donc prendre 
+les valeurs </span></font><font face="Courier New" size="2">0 à 4 294 967 295.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Ko, Mo, Go, To ( </b><i>kB</i>, <i>MB</i>, <i>GB</i>, <i>TB en anglais)</i></font></p>
+<p><font face="Courier New" size="2">Pour indiquer la capacité d'une mémoire, on 
+utilisait: </font></p>
+    <ul>
+      <li><font face="Courier New" size="2">Un kilooctet (Ko) = 2<sup>10</sup> octets = 1024 octets
+      </font> </li>
+      <li><font face="Courier New" size="2">Un Mégaoctet (Mo) = 2<sup>20</sup> octets = 1024 ko = 1 048 576 octets
+      </font>
+      </li>
+      <li><font face="Courier New" size="2">Un Gigaoctet (Go) = 2<sup>30</sup> octets = 1024 Mo = 1 073 741 824 
+      octets </font> </li>
+      <li><font face="Courier New" size="2">Un Téraoctet (To) = 2<sup>40</sup> octets = 1024 Go = 1 099 511 627 
+      776 octets</font></li>
+    </ul>
+    <p><font face="Courier New" size="2">Cela correspondait bien à des 
+    puissances de 2, de plus c'était en accord avec les circuits intégrés de 
+    mémoire qui avaient bien 1024 octets dans un Ko.</font></p>
+<p><font face="Courier New" size="2">Il parait que depuis 1998&nbsp; l'IEC a 
+décidé: </font></p>
+<ul>
+  <li><font face="Courier New" size="2">Un kilooctet (Ko ou KB) = 1000 octets
+  </font> </li>
+  <li><font face="Courier New" size="2">Un Mégaoctet (Mo ou MB) = 1000 Ko = 1 000 000 octets
+  </font> </li>
+  <li><font face="Courier New" size="2">Un Gigaoctet (Go ou GB) = 1000 Mo = 1 000 000 000 octets
+  </font> </li>
+  <li><font face="Courier New" size="2">Un Téraoctet (To) = 1000 Go = 1 000 000 
+  000 000 octets </font> </li>
+</ul>
+<p>&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2">Hors de France, on utilise le nom de «&nbsp;<b>byte</b>&nbsp;» 
+plutôt que le terme «&nbsp;octet&nbsp;». Cela donne les&nbsp; kilobyte, mégabyte, gigabyte et terabyte : 
+(<i>kB</i>, <i>MB</i>, <i>GB</i>, <i>TB avec un B majuscule)</i></font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><img border="0" src="vicoexcl.gif" width="29" height="43"><i>
+<font color="#FF0000">Ne pas confondre <b>Byte</b>&nbsp; <b>B</b> (octet)</font></i><font color="#FF0000"> 
+    et <i><b>bit</b> (bit ou binary digit)</i>.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">
+<span style="background-color: #C0C0C0">Opérations:</span></font></p>
+<p align="justify"><b><font size="2" face="Courier New">Addition binaire:</font></b></p>
+<p align="justify"><font size="2" face="Courier New">L'addition en binaire se fait comme en 
+décimale :</font></p>
+<p align="justify"><font size="2" face="Courier New">0+1 = 1</font></p>
+<p align="justify"><font size="2" face="Courier New">1+0 = 1</font></p>
+<p align="justify"><font size="2" face="Courier New">0+0 = 0</font></p>
+<p align="justify"><font size="2" face="Courier New">1+1 =10</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font size="2" face="Courier New">&nbsp;<br>
+Pour plusieurs digits, on additionne en commençant par les bits de droite. On 
+a des retenues lorsque la somme de deux bits de même poids dépasse la valeur de 
+l'unité la plus grande (dans le cas du binaire : 1), cette retenue est reportée 
+sur le bit de poids plus à gauche...</font></p>
+<p align="justify"><font size="2" face="Courier New">C'est ce qui se passe avec 1+1= 10 </font> </p>
+<p align="justify"><font size="2" face="Courier New">Autre exemple: </font> </p>
+<p align="justify">&nbsp;</p>
+<table border="0">
+  <tr>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">+</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+</table>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New"><font size="2"><b>Soustraction binaire</b></font><b><font size="2">:</font></b></font></p>
+<p align="justify"><font size="2" face="Courier New">La soustraction en binaire se fait comme cela :</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">&nbsp; 
+100</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">- 010</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">_____</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">&nbsp; 
+010</font></p>
+<p align="justify"><font size="2" face="Courier New">&nbsp;<br>
+Mais pour les processeurs il est plus facile d'additionner le complément à 2.</font></p>
+<blockquote>
+<p align="justify"><font size="2" face="Courier New">Le complément à 1 c'est le 
+fait d'inverser tous les bits du nombre sur toute sa longueur.</font></p>
+<p align="justify"><font face="Courier New" size="2">010&nbsp; donne le 
+complément à 1 suivant: 11111101&nbsp; </font> </p>
+<p align="justify"><font face="Courier New" size="2">(si on travaille sur des 
+octets, on inverse les huit bits)</font></p>
+<p align="justify"><font size="2" face="Courier New">Le complément à 2, c'est le complément à 1 +1:&nbsp; 
+11111101+1=11111110</font></p>
+</blockquote>
+<p align="justify"><font size="2" face="Courier New">Ajoutons 00000100 à 11111110 cela donne bien&nbsp; 
+00000010</font></p>
+<p align="justify"><font size="2" face="Courier New">(la dernière retenue tombe dans le vide)</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2"><b>La table de multiplication</b> en binaire est très simple :
+</font> </p>
+<ul>
+  <li><font face="Courier New" size="2">0x0=0 </font> </li>
+  <li><font face="Courier New" size="2">0x1=0 </font> </li>
+  <li><font face="Courier New" size="2">1x0=0 </font> </li>
+  <li><font face="Courier New" size="2">1x1=1 </font> </li>
+</ul>
+<p align="justify"><font face="Courier New" size="2">La multiplication se fait en formant un produit partiel pour 
+chaque digit du multiplicateur (seuls les bits non nuls donneront un résultat 
+non nul). Lorsque le bit du multiplicateur est nul, le produit partiel est nul, 
+lorsqu'il vaut un, le produit partiel est constitué du multiplicande décalé du 
+nombre de positions égal au poids du bit du multiplicateur. </font> </p>
+<p align="justify"><font face="Courier New" size="2">Par exemple : </font> </p>
+<p align="justify">&nbsp;</p>
+<table border="0">
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1 multiplicande</font></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">x</font></td>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0 multiplicateur</font></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+    <td><font size="2" face="Courier New">-</font></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2">On constate que pour multiplier un nombre 
+par 2, il faut le décaler d'un bit à gauche.</font></p>
+<p><font face="Courier New" size="2">10 binaire multiplié par 2 est égal à 100&nbsp;&nbsp; 
+(2 x 2=4 en décimal)</font></p>
+<p><b><font size="2" face="Courier New">Nombres négatifs</font></b></p>
+<p><font face="Courier New" size="2">On peut utiliser des <b>nombres non signés</b> 
+(contenant une valeur absolue), dans un octet il peut y avoir 256 valeurs (0 à 
+255)</font></p>
+<p><font face="Courier New" size="2">On peut utiliser des <b>nombres signés</b> 
+(positif ou négatif), on 'code' les nombres négatifs en complément à 2:</font></p>
+<blockquote>
+<p align="justify"><font size="2" face="Courier New">Le complément à 1 c'est le 
+fait d'inverser tous les bits du nombre sur toute sa longueur.</font></p>
+<p align="justify"><font face="Courier New" size="2">010&nbsp; donne le 
+complément à 1 suivant: 11111101&nbsp; sur un octet</font></p>
+<p align="justify"><font face="Courier New" size="2">(si on travaille sur des 
+octets, on inverse les huit bits)</font></p>
+<p align="justify"><font size="2" face="Courier New">Le complément à 2, c'est le complément à 1 +1:&nbsp; 
+11111101+1=11111110</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">On se rend compte que le premier bit à 
+gauche est à 1 pour les nombres négatifs. Dans ce cas on ne peut plus coder que 
+128 valeurs (sur 7 bits) pour un octet signé.</font></p>
+<p><font size="2" face="Courier New"><span style="background-color: #C0C0C0">
+Table de vérité:</span></font></p>
+<p align="justify"><font size="2" face="Courier New">Une <b>table de vérité</b> 
+est un tableau permettant de décrire toutes les possibilités de sorties en 
+fonction des entrées. On place donc les variables d'entrées dans les colonnes de 
+gauche en les faisant varier. La colonne (ou les colonnes si la fonction a 
+plusieurs sorties) de droite décrit le résultat. </font> </p>
+<p align="justify"><font size="2" face="Courier New">Exemple de table de 
+vérités <b>de la multiplication.</b></font> </p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>&nbsp;</th>
+    <th colSpan="2">Entrée</th>
+    <th>Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4">&nbsp;</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+</table>
+<p align="justify"><font face="Courier New" size="2">L'expression logique
+correspondante est <font color="#0000FF">S= A X B</font></font> </p>
+<p align="justify"><font size="2" face="Courier New">On retrouve bien par
+exemple: </font><font face="Courier New" size="2">si les 2 entrées sont 1 et 1
+la sortie est 1: en d'autres termes&nbsp; <font color="#0000FF">1 X&nbsp; 1 =1</font></font> </p>
+<p align="justify"><font size="2" face="Courier New">Exemple des tables de 
+vérités <b>des fonctions logiques:</b> </font>
+</p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>&nbsp;</th>
+    <th colSpan="2">Entrée</th>
+    <th>Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>OR</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>AND</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>XOR</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>NOT</p>
+    </center></td>
+    <td bgColor="#FFFFFF" colSpan="2"><center>
+    <p>0</p>
+    </center></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" colSpan="2"><center>
+    <p>1</p>
+    </center></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+</table>
+<p align="justify"><font face="Courier New" size="2">Pour la fonction And par
+exemple, l'expression logique correspondante est <font color="#0000FF">S= A AND&nbsp;
+B</font> si les 2 entrées sont 1 et 1 la sortie est 1: en d'autres termes&nbsp;
+<font color="#0000FF">1 And&nbsp; 1 =1</font></font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><b><font face="Courier New" size="2">Comment écrire une 
+fonction logique à partir d'une table de vérité:</font></b></p>
+<p align="justify"><font face="Courier New" size="2">Il est possible à partir de la table de vérité d'une fonction 
+d'écrire l'expression algébrique de celle-ci. <br>
+&nbsp;</font></p>
+<p align="justify"><font face="Courier New" size="2">Exemple 1:Soit la table de vérité suivante:
+</font> </p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th colSpan="2">Entrée</th>
+    <th>Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>&nbsp;S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+</table>
+<p align="justify"><font size="2" face="Courier New">La sortie vaut 1 lorsque A vaut 1 et B vaut 0, 
+l'expression logique de cette fonction est donc: </font> </p>
+<p align="justify"><font color="#0000FF" size="2" face="Courier New">S=A AND NOT B</font> </p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2">Exemple 2: Soit la table de vérité suivante:
+</font> </p>
+<p align="justify">&nbsp;</p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th colSpan="2"><font face="Courier New" size="2">Entrée</font></th>
+    <th><font face="Courier New" size="2">Sortie</font></th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">A</font></td>
+    <td width="20" bgColor="#FFFFFF"><font face="Courier New" size="2">B</font></td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p><font face="Courier New" size="2">&nbsp;S</font></p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF"><center>
+    <p><font face="Courier New" size="2">1</font></p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p><font face="Courier New" size="2">0</font></p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p><font face="Courier New" size="2">1</font></p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p><font face="Courier New" size="2">0</font></p>
+    </center></td>
+  </tr>
+</table>
+<p align="justify"><font size="2" face="Courier New">La sortie vaut 1 lorsque A vaut 1 et B vaut 0 
+ou lorsque A et B sont à 0, 
+l'expression logique de cette fonction est donc: </font> </p>
+<p align="justify"><font face="Courier New"><font color="#0000FF" size="2">S=(A And Not B) Or (Not A And 
+Not B)</font><font size="2"><font color="#0000FF"> </font>&nbsp;</font></font></p>
+<p align="justify"><font face="Courier New" size="2">En conclusion:</font></p>
+<p align="justify"><font size="2" face="Courier New">On écrit donc les expressions&nbsp;
+pour chaque sortie à 1 
+(avec des And), on les combine avec des Or&nbsp;</font></p>
+<p align="justify">&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font face="Courier New" size="2">
+Fonction logique</font></span><font size="2" face="Courier New"><span style="background-color: #C0C0C0">:</span></font></p>
+<h3><font face="Courier New" size="2">La loi AND, dite conjonction</font></h3>
+<p><font face="Courier New" size="2">Elle est définie de la manière suivante&nbsp;: <i>a</i> And <i>b</i> 
+est égal à 1 si et 
+seulement si <i>a</i> est égal à 1 <b>et</b> <i>b</i> est égal à 1.</font></p>
+<p><font face="Courier New" size="2">On peut construire la table. </font> </p>
+<table cellSpacing="0" border="2" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr>
+    <th bgcolor="#AFBBEF">&nbsp;</th>
+    <th colSpan="2" bgcolor="#AFBBEF">Entrée</th>
+    <th bgcolor="#AFBBEF">Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>AND</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+</table>
+<h3><span style="font-weight: 400"><font size="2" face="Courier New">«&nbsp;l'un
+et l'autre&nbsp;»</font></span></h3>
+<h3><font face="Courier New" size="2">La loi OR, dite disjonction ou disjonction inclusive</font></h3>
+<p><font face="Courier New" size="2">Elle est définie de la manière suivante&nbsp;: <i>a</i> Or <i>b</i> 
+est égal à 1 si et 
+seulement si <i>a</i> est égal à 1 <b>ou</b> <i>b</i> est égal à 1. (notons que si <i>a</i> 
+est égal à 1 et que <i>b</i> est égal à 1 aussi, alors <i>a</i> OU <i>b</i> est 
+égal à 1.)</font></p>
+<p><font face="Courier New" size="2">On peut construire la table:</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>&nbsp;</th>
+    <th colSpan="2">Entrée</th>
+    <th>Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>OR</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+</table>
+<h3><span style="font-weight: 400"><font size="2" face="Courier New">«&nbsp;l'un ou l'autre ou les 
+deux&nbsp;»</font></span></h3>
+<p>&nbsp;</p>
+<h3><font face="Courier New" size="2">Le contraire, dite négation</font></h3>
+<p><font face="Courier New" size="2">Le contraire de &quot;a&quot; égal à 1 si et seulement si <i>a</i> est 
+égal à 0. Le 
+contraire de a est noté Not a</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th>&nbsp;</th>
+    <th>Entrée</th>
+    <th>Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>NOT</p>
+    </center></td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><center>
+    <p>1</p>
+    </center></td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+</table>
+<h3>&nbsp;</h3>
+<h3><font face="Courier New" size="2">La loi XOR, dite disjonction exclusive</font></h3>
+<p><font face="Courier New" size="2">Elle est définie de la manière suivante&nbsp;: <i>a</i> 
+Xor <i>b</i> est égal à 1 si et 
+seulement si <i>a</i> est égal à 1 <b>ou</b> <i>b</i> est égal à 1 mais pas les 
+deux. (notons que si <i>a</i> est égal à 1 et que <i>b</i> est égal à 1 aussi, alors <i>a</i> 
+Xor <i>b</i> est égal à 0.)</font></p>
+<p><font face="Courier New" size="2">On peut construire la table:</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="2" style="border-collapse: collapse" bordercolor="#111111">
+  <tr>
+    <th bgcolor="#AFBBEF">&nbsp;</th>
+    <th colSpan="2" bgcolor="#AFBBEF">Entrée</th>
+    <th bgcolor="#AFBBEF">Sortie</th>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">A</td>
+    <td width="20" bgColor="#FFFFFF">B</td>
+    <td width="20" bgColor="#FFFFFF"><center>
+    <p>S</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF" rowSpan="4"><center>
+    <p>XOR</p>
+    </center></td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">0</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>1</p>
+    </center></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF">1</td>
+    <td bgColor="#FFFFFF" border="1"><center>
+    <p>0</p>
+    </center></td>
+  </tr>
+</table>
+<p><font size="2" face="Courier New">«&nbsp;l'un ou l'autre mais pas les deux&nbsp;».</font></p>
+<h3><span style="font-weight: 400"><font size="2" face="Courier New">
+<font color="#0000FF">a Xor b</font> équivalent à&nbsp; <font color="#0000FF">(a Or b) And Not( a And b)</font></font></span></h3>
+<p><span style="font-weight: 400">
+<font color="#0000FF" size="2" face="Courier New">a Xor b Xor b</font><font face="Courier New" size="2"><font color="#0000FF"> 
+= a</font> : si on applique sur a 2 fois&nbsp; <font color="#0000FF">Xor b</font>, 
+on retrouve a. C'est une propriété très utilisée.</font></span></p>
+<p>&nbsp;</p>
+<h4><font size="2" face="Courier New">L'opérateur Équivalence</font></h4>
+<p><font size="2" face="Courier New">L'équivalence (notée =) est vraie si les deux entrées ont la 
+même valeur et faux sinon. Elle se compose comme suit&nbsp;:</font></p>
+<dl>
+  <dd>
+  <font face="Courier New">
+  <font size="2" color="#0000FF">a=b</font><font size="2"> est égal à
+  <font color="#0000FF">Not( a Or b) Or ( a And b) </font></font>
+  </font>
+  </dd>
+</dl>
+<p><font size="2" face="Courier New">On peut aussi dire que&nbsp;:</font></p>
+<dl>
+  <dt><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; <font color="#0000FF">a=b</font> est 
+  égal à <font color="#0000FF">Not (a Xor b)</font></font></dt>
+</dl>
+<table cellSpacing="0" width="150" border="2" bgcolor="#FFFFFF" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr style="TEXT-ALIGN: center">
+    <td width="40" bgcolor="#AFBBEF"><b>a</b></td>
+    <td width="40" bgcolor="#AFBBEF"><b>b</b></td>
+    <td width="70" bgcolor="#AFBBEF"><b>a = b</b></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td bgcolor="#FFFFFF">0</td>
+    <td bgcolor="#FFFFFF">0</td>
+    <td bgcolor="#FFFFFF">1</td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td bgcolor="#FFFFFF">0</td>
+    <td bgcolor="#FFFFFF">1</td>
+    <td bgcolor="#FFFFFF">0</td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td bgcolor="#FFFFFF">1</td>
+    <td bgcolor="#FFFFFF">0</td>
+    <td bgcolor="#FFFFFF">0</td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td bgcolor="#FFFFFF">1</td>
+    <td bgcolor="#FFFFFF">1</td>
+    <td bgcolor="#FFFFFF">1</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3><font face="Courier New" size="2">
+<span style="font-weight: 400; background-color: #C0C0C0">Notons la notation utilisée dans les 
+traités d'algèbre de Boole:</span></font></h3>
+<p><font face="Courier New" size="2">+&nbsp; (addition)&nbsp;équivalent à 
+<font color="#0000FF">Or</font></font></p>
+<p><font face="Courier New" size="2">.&nbsp;&nbsp;(produit)&nbsp; équivalent à
+<font color="#0000FF">And</font></font></p>
+<p><font face="Courier New" size="2">-&nbsp;&nbsp;au dessus (négation) équivalent à 
+<font color="#0000FF">Not</font></font></p>
+<h4>&nbsp;</h4>
+<h4><span style="font-weight: 400; background-color: #C0C0C0"><font face="Courier New" size="2">Ordre des évaluations:</font></span></h4>
+<h4><font face="Courier New" size="2"><span style="font-weight: 400">Les 
+opérations seront soumises aux mêmes règles que les opérations «&nbsp;de tous les 
+jours&nbsp;», </span>la fonction <font color="#0000FF">Not&nbsp; </font>est 
+prioritaire par rapport à<font color="#0000FF"> And</font> qui est prioritaire par rapport à la 
+fonction <font color="#0000FF">Or</font>, enfin on trouve<font color="#0000FF"> 
+Xor</font><span style="font-weight: 400">&nbsp;; on peut, pour s'aider, placer des parenthèses dans 
+les opérations pour forcer l'ordre des opérations.</span></font></h4>
+<dl>
+  <dd><font face="Courier New" size="2">Exemple&nbsp;: </font> </dd>
+  <dd><font face="Courier New" size="2" color="#0000FF">Dim a As Boolean = 0&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2" color="#0000FF">Dim b As Boolean = 1&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2"><font color="#0000FF">Dim c As Boolean&nbsp; 
+  1 </font><br>
+&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2">On cherche <font color="#0000FF">a And b 
+  Or c</font></font></dd>
+  <dd><font face="Courier New" size="2"><br>
+  <font color="#0000FF">a And b </font>= 0&nbsp;<br>
+    (0 And 1 = 0)<br>
+&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2">0 Or c = 1<br>
+    (O Or 1 = 1)<br>
+&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2">Le résultat est donc:<br>
+&nbsp;</font></dd>
+  <dd><font face="Courier New" size="2" color="#0000FF">a And b Or c = 1 </font> </dd>
+</dl>
+<p>&nbsp;&nbsp;&nbsp; <font size="2" face="Courier New">Les parenthèses 
+modifient l'ordre des opérations: elles sont prioritaires sur tous:</font></p>
+<p>&nbsp;&nbsp;&nbsp; <font face="Courier New" size="2" color="#0000FF">a And (b Or c) 
+= 0 </font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2" color="#FF0000">En VB, compte tenu que les 
+opérateurs logiques et de bits ont une priorité inférieure à celle des 
+opérateurs arithmétiques et relationnels, toutes les opérations au niveau du bit 
+doivent être mises entre parenthèses afin de garantir une exécution précise.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><b><font face="Courier New" size="2">Sur un groupe de bit les 
+opérations s'effectuent bit à bit:</font></b></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0"><font size="2">
+Exemples:</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">15 décimal&nbsp; 00001111</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">4 décimal&nbsp;&nbsp; 00000100</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">15 <font color="#0000FF">And</font> 4&nbsp; = 
+00000100&nbsp;&nbsp;&nbsp; ---&gt;4 décimal</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">4 décimal&nbsp;&nbsp; 00000100</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">2 décimal&nbsp;&nbsp; 00000010</font></p>
+<p align="justify" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">4 <font color="#0000FF">Or</font> 2&nbsp;&nbsp;&nbsp; 
+= 00000110&nbsp;&nbsp;&nbsp; ---&gt;6 décimal</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2">
+<span style="background-color: #C0C0C0">Les lois de composition:</span></font></p>
+<p align="justify"><font face="Courier New" size="2">Ce sont des règles logiques qui 
+permettent de simplifier l'écriture des expressions algébriques. </font> </p>
+<p><i><font face="Courier New" size="2">Associativité:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">(A And B)And C</font> est équivalent à 
+  <font color="#0000FF">A And (B And C)&nbsp;&nbsp; </font>et<font color="#0000FF"> A And 
+  B And C </font>
+</font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">(A Or B) Or C</font> est équivalent à 
+  <font color="#0000FF">A Or (B Or C)&nbsp;&nbsp; </font>et<font color="#0000FF"> 
+  A Or B Or C&nbsp; </font>
+  </font> </li>
+</ul>
+<p><i><font face="Courier New" size="2">Absoption:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A And (A Or B)</font> est équivalent à 
+  <font color="#0000FF">A </font> </font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A Or A And B</font> est équivalent à 
+  <font color="#0000FF">A</font></font></li>
+</ul>
+<p><i><font face="Courier New" size="2">Commutativité: </font> </i> </p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A And B</font> est équivalent à 
+  <font color="#0000FF">B&nbsp; And A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+  L'ordre est sans importance</font></li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A Or B</font> est équivalent à 
+  <font color="#0000FF">B Or A </font> </font> </li>
+</ul>
+<p align="justify"><i><font face="Courier New" size="2">Distributivité:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A Or(B And C)</font> est équivalent à 
+  <font color="#0000FF">(A Or B) And (A Or C)</font>
+  </font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A And (B Or C)</font> est équivalent à 
+  <font color="#0000FF">A And B Or A And C </font>
+  </font> </li>
+</ul>
+<p align="justify"><i><font face="Courier New" size="2">Mais aussi:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A Or A</font> est équivalent à 
+  <font color="#0000FF">A </font> </font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A And&nbsp; A</font> est équivalent à A </font> </li>
+</ul>
+<p align="justify"><i><font face="Courier New" size="2">Identité:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">1 And A</font> est équivalent à 
+  <font color="#0000FF">A </font></font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">0 Or A </font>est équivalent à 
+  <font color="#0000FF">A </font></font> </li>
+</ul>
+<i>
+<font face="Courier New" size="2">Inversion:</font></i><ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A And Not A</font> est équivalent à 0&nbsp;&nbsp; 
+  'A ne peut pas être vrai et faux</font></li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">A Or Not A</font> est équivalent à 1 </font> </li>
+</ul>
+<p><i><font face="Courier New" size="2">Nullité:</font></i></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#0000FF">0 And A</font> est équivalent à 0 </font> </li>
+  <li><font face="Courier New" size="2"><font color="#0000FF">1 Or A </font>est équivalent à 1 </font> </li>
+</ul>
+<h4><span style="font-weight: 400"><i><font face="Courier New" size="2">Théorème de De Morgan</font></i></span></h4>
+<dl>
+  <dd><font face="Courier New" size="2"><font color="#0000FF">Not (a Or b)</font> 
+  est équivalent à&nbsp; <font color="#0000FF">Not a&nbsp;And Not b</font></font></dd>
+  <dd><font face="Courier New" size="2">Dans les deux cas, l'expression ne sera 
+  égale à 1 que si a et b sont = 0.<br>
+&nbsp;</font></dd>
+</dl>
+<p>
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Not( a And b)</font>équivalent 
+à<font color="#0000FF"> Not a Or Not n</font></font></p>
+<dl>
+  <dd><font face="Courier New" size="2">Dans les deux cas, l'expression ne sera 
+  =1 que si a ou b sont =0. </font>
+  </dd>
+</dl>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">L</font></b><font face="Courier New" size="2"><b>es 
+expressions complexes </b>peuvent donc être simplifiées en utilisant <b>des 
+transformations</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<table borderColor="#000000" cellSpacing="1" cellPadding="2" width="100%" bgColor="#c9dcdc" border="0">
+  <tr>
+    <td width="48%" bgColor="#0000FF">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="1">
+      <b>Originale</b></font></div>
+    </td>
+    <td width="52%" bgColor="#0000FF">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="1">
+      <b>Transformation</b></font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A And Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A Or B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A And B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A Or Not 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A And Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A Or 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A And B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A Or 
+      Not B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A Or Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A And B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A Or B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A And Not 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A Or Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A And 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A Or B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A And 
+      Not B)</font></div>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h4><font size="2" face="Courier New">Il existe aussi plusieurs autres 
+opérateurs qui n'ont pas d'équivalent en Visual Basic Net:</font></h4>
+<p><font size="2" face="Courier New">Ils existaient en VB6!!</font></p>
+<h4><font size="2" face="Courier New">Implication</font></h4>
+<p><font size="2" face="Courier New">L'implication&nbsp; (notée IMP) qui n'existe pas en VB.Net&nbsp; s'écrit de la manière suivante&nbsp;:</font></p>
+<p>
+<font size="2" face="Courier New"><font color="#0000FF">a IMP b</font>&nbsp; 
+peut s'écrire en VB:&nbsp; <font color="#0000FF">Not(a) Or b</font></font></p>
+<p><font size="2" face="Courier New">Cette opération n'est pas commutative a est une condition <b>suffisante</b> pour b, qui, elle, est 
+une condition <b>nécessaire</b> pour a.</font></p>
+<table cellSpacing="0" width="150" border="2" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr style="text-align: center; background: #b3e2d1">
+    <td colSpan="3" style="background-color: #AFBBEF">
+    <font size="2" face="Courier New">&nbsp;IMP</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td width="40"><b><font size="2" face="Courier New">a</font></b></td>
+    <td width="40"><b><font size="2" face="Courier New">b</font></b></td>
+    <td width="70"><b><font size="2" face="Courier New">a IMP 
+    b</font></b></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+  </tr>
+</table>
+<h4>&nbsp;</h4>
+<h4><font size="2" face="Courier New">Inhibition</font></h4>
+<p><font size="2" face="Courier New">L'inhibition (notée INH) n'existe pas en VB.Net, elle se compose comme suit&nbsp;:</font></p>
+<dl>
+  <dd>
+  &nbsp;</dd>
+  <dt><font size="2" face="Courier New"><font color="#0000FF">a INH b</font> 
+  peut s'écrire en VB: <font color="#0000FF">a And Not(b)</font></font></dt>
+</dl>
+<p><font size="2" face="Courier New">Cette opération n'est pas commutative.</font></p>
+<table cellSpacing="0" width="150" border="2" style="border-collapse: collapse" bordercolor="#111111" cellpadding="0">
+  <tr style="text-align: center; background: #b3e2d1">
+    <td colSpan="3" style="background-color: #AFBBEF">
+    <font size="2" face="Courier New">INH</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td width="40"><b><font size="2" face="Courier New">a</font></b></td>
+    <td width="40"><b><font size="2" face="Courier New">b</font></b></td>
+    <td width="70"><b><font face="Courier New" size="2">a And Not b</font></b></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+  </tr>
+  <tr style="TEXT-ALIGN: center">
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">1</font></td>
+    <td><font size="2" face="Courier New">0</font></td>
+  </tr>
+</table>
+<div class="editsection" style="FLOAT: right; MARGIN-LEFT: 5px">
+  &nbsp;</div>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New"><span style="background-color: #C0C0C0">Déplacement de bit:</span></font></p>
+<p><font face="Courier New" size="2">Les opérateurs binaires <b>&lt;&lt;</b> et <b>&gt;&gt;</b> 
+effectuent des opérations de déplacement de bits. </font>
+</p>
+<p><font face="Courier New" size="2"><b>L'opérateur &lt;&lt; décale à gauche les bits</b> 
+du premier opérande du nombre de positions spécifié. Les bits de poids fort 
+situés en dehors de la plage du type de résultat sont éliminés, et les positions 
+libérées par les bits de poids faible sont remplies par des zéros.</font></p>
+<p><font face="Courier New" size="2"><b>L'opérateur &gt;&gt; décale à droite les bits</b> 
+du premier opérande du nombre de positions spécifié. Les bits de poids faible 
+sont éliminés et, si l'opérande de gauche est positif, les positions libérées 
+par les bits de poids fort sont mises à zéro&nbsp;; s'il est négatif, elles sont 
+mises à un. Si l'opérande de gauche est de type <b>Byte</b>, les bits de poids 
+fort disponibles sont remplis par des zéros.</font></p>
+  <p><font face="Courier New" size="2">A quoi cela sert? </font> </p>
+  <p><font face="Courier New" size="2">Exemple décaler à gauche un Byte revient 
+  à faire une multiplication par 2. </font> </p>
+  <p><font face="Courier New" size="2">3 en décimal= 11 </font> </p>
+  <p><font face="Courier New" size="2">Je décale à gauche, j'obtient 110 , c'est 
+  3*2=6 en décimal.</font></p>
+<p align="justify">&nbsp;</p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><b><span style="background-color: #C0C0C0">Revenons sur la base hexadécimale:</span></b></p>
+<p align="justify"><font face="Courier New" size="2"><b>En hexadécimal</b>:</font></p>
+<p align="justify"><font face="Courier New" size="2">On a 16 caractères: 0, 1, 
+2, 3 ,4 ...8, 9, A, B, C, D, E, F.</font></p>
+<p align="justify"><font face="Courier New" size="2">Quand on compte et qu'on 
+arrive à F (15 décimal), on passe à 10 (16 décimal) puis 11...&nbsp; </font></p>
+<p align="justify"><font face="Courier New" size="2">Voyons la correspondant 
+décimale, hexadécimale, binaire:</font></p>
+<table cellSpacing="0" cellPadding="0" bgColor="#aebfe2" border="1" style="border-collapse: collapse" bordercolor="#111111" width="687">
+  <tr>
+    <td bgColor="#AFBBEF" width="157"><font face="Courier New" size="2">Base décimale</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">2</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">3</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">4</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">5</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">6</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">7</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">8</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">9</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">10</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">11</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">12</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">13</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">14</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">15</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#AFBBEF" width="157"><font face="Courier New" size="2">Base hexadécimale</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">2</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">3</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">4</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">5</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">6</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">7 </font> </td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">8</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">9</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">A</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">B</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">C</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">D</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">E</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">F</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#AFBBEF" width="157"><font face="Courier New" size="2">Base binaire</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0000</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0001</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0010</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0011</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0100</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0101</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0110</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">0111</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1000</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1001</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1010</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1011</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1100</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1101</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1110</font></td>
+    <td bgColor="#FFFFFF" width="32"><font face="Courier New" size="2">1111</font></td>
+  </tr>
+</table>
+<p align="justify"><font face="Courier New" size="2">Pour un nombre hexadécimal 
+à plusieurs chiffres le poids de chaque chiffre est: </font> </p>
+<table cellSpacing="1" cellPadding="0" bgColor="#aebfe2" border="0">
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">Poids en décimal :</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">16<sup>3</sup></font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">16<sup>2</sup></font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">16<sup>1</sup></font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">16<sup>0</sup></font></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">Nombre hexadécimal:</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">1000</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0100</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0010</font></td>
+    <td bgColor="#FFFFFF"><font face="Courier New" size="2">0001</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+    <td bgColor="#FFFFFF">&nbsp;</td>
+  </tr>
+</table>
+<p align="justify"><font face="Courier New" size="2">1C en base 16 c'est donc 
+10+C en hexadécimal = en décimal c'est&nbsp; 16<sup>1&nbsp; + </sup>12x 16<sup>0</sup> 
+= 16 + 12 = 28</font></p>
+<p align="justify"><font face="Courier New" size="2">Le nombre 28 (en base 10) vaut en base 16 : 1*16<sup>1</sup> 
++ 12*16<sup>0</sup> = 1*16<sup>1</sup> + C*16<sup>0</sup> <br>
+c'est-à-dire 1C en base 16. </font> </p>
+<p align="justify"><font face="Courier New" size="2">Le nombre FB4 (en base 16) vaut en base 10 : F*16<sup>2</sup> 
++ B*16<sup>1</sup> + 4*16<sup>0</sup> = 3840 + 176 + 4 = 4020 </font> </p>
+<p align="justify"><font face="Courier New" size="2">A quoi sert la base 
+hexadécimale?</font></p>
+<p align="justify"><font face="Courier New" size="2">C'est une représentation 
+plus imagée&nbsp;de la représentation binaire:</font></p>
+<p align="justify"><font face="Courier New" size="2" color="#FF0000">Pour convertir un octet en hexadécimale, on le partage en 2 
+groupes de 4 bits, qui correspondent chacun à un chiffre hexadécimal. </font> </p>
+<p align="justify"><font face="Courier New" size="2">00101010 c'est un octet en 
+binaire; impossible à retenir en binaire (en décimal on ne voit pas du tout ce 
+qu'il représente en bits). Cet octet, on le coupe en 2 , chaque demi-octet 
+représente 4 bits dont la valeur est comprise entre 0 (0000 en binaire) et F 
+(1111 en binaire, 15 en décimal)</font></p>
+<p align="justify"><font face="Courier New" size="2">00101010 en binaire= 2A en 
+hexadécimal.</font></p>
+<table bgColor="#afbbef" border="0">
+  <tr>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">2</font></td>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">A</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">0010</font></td>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">1010</font></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il suffit de se souvenir des nombres de 1 à 15 
+en binaire pour se représenter&nbsp; rapidement 2A.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Autre exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table bgColor="#afbbef" border="0">
+  <tr>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">D</font></td>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">5</font></td>
+  </tr>
+  <tr>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">1101</font></td>
+    <td bgColor="#eff2fb"><font face="Courier New" size="2">0101</font></td>
+  </tr>
+</table>
+<p align="justify"><font face="Courier New" size="2">HFF = 255 décimal</font></p>
+<p align="justify"><font face="Courier New" size="2">HFFFF=65535 décimal</font></p>
+<p align="justify"><font size="2" face="Courier New">Notons que pour signifier 
+qu'on a affaire à un nombre hexadécimal, on ajoute H devant.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2" color="#FF0000">L'hexadécimal est donc une manière rapide 
+et mnémotechnique de se représenter&nbsp; des nombres binaires.</font></b></p>
+<p><b><font face="Courier New" size="2">Les viewers et éditeurs permettant de 
+voir et modifier les octets contenues dans un fichier affichent les octets en 
+hexadécimal. (voir plus bas)</font></b></p>
+<p align="justify">&nbsp;</p>
+<p align="justify"><span style="background-color: #C0C0C0">
+<font size="5" color="#0000FF"><span style="font-weight: 700">Pratique</span></font></span><font color="#0000FF" size="5"><span style="font-weight: 700; background-color: #C0C0C0"> en&nbsp; Visual Basic.</span></font></p>
+<p align="justify"><font size="2" face="Courier New"><b><span style="background-color: #C0C0C0">En Visual Basic.Net</span></b><span style="background-color: #C0C0C0">, on 
+a à notre disposition</span></font></p>
+<p align="justify"><font face="Courier New" size="2">Les
+<font color="#0000FF">Boolean&nbsp; </font>qui peuvent prendre les valeurs<font color="#0000FF"> 
+True </font>ou<font color="#0000FF"> False.</font>.</font></p>
+<p align="justify"><font size="2" face="Courier New">Les entiers: <font color="#0000FF">Byte&nbsp; </font>
+contient 8 bits (non signé) pouvant prendre les valeurs 0 à 255: il existe aussi 
+en VB 2005<font color="#0000FF">, SByte</font> contenant un octet signé dont les valeurs 
+varient de moins&nbsp;128 à plus&nbsp;127.</font></p>
+<p align="justify"><font size="2" face="Courier New">Les<font color="#0000FF"> Short 1</font>6 bits, les<font color="#0000FF"> Integer</font> 
+sont codés sur 32 bits, les <font color="#0000FF">Long</font> sur 64 bits. Ces 
+valeurs sont signées (positives ou négatives), un bit est donc utilisé pour le 
+signe. </font></p>
+<p align="justify"><font size="2"><font face="Courier New">Par contre en VB 2005,&nbsp;
+</font> <span style="FONT-FAMILY: Courier New"><font color="#0000FF">
+UInteger</font>&nbsp;est un&nbsp;entier non signé codé sur 32 bits pouvant donc prendre 
+les valeurs </span></font><font face="Courier New" size="2">0 à 4 294 967 295.
+<font color="#0000FF">Ushort</font> et <font color="#0000FF">ULong</font> 
+existent aussi. (U comme Unsigned)</font></p>
+<p align="justify"><font face="Courier New" size="2">Il existe aussi les nombres 
+en virgule flottante ou fixe ( <font color="#0000FF">Single, Double, Decimal</font>), 
+ceux là, on ne les utilisera pas pour travailler sur les bits.</font></p>
+<p><span style="background-color: #C0C0C0"><font size="2" face="Courier New"><b>Littéral</b></font></span></p>
+<p><font size="2" face="Courier New">Un littéral est sensé être en base décimal .</font></p>
+<p><font size="2" face="Courier New"><font color="#0000FF">Dim A As Integer = 12</font> (12 est en base décimale)</font></p>
+<p><font face="Courier New" size="2">On peut forcer un littéral a être un 
+hexadécimal ou un octal: Un nombre hexadécimal est noté avec le préfixe &amp;H , 
+exemple : </font></p>
+<p> 
+<font color="#0000FF" face="Courier New" size="2">A=&amp;HFF&nbsp;&nbsp; </font><font face="Courier New" size="2">'A
+contiendra 255 </font></p>
+<p> 
+<font face="Courier New" size="2">(&amp;O pour octal)</font></p>
+<p><font face="Courier New" size="2">Il n'est pas possible de saisir un littéral 
+en 
+binaire.</font></p>
+<p><font face="Courier New" size="2" color="#FF0000">Bien comprendre que, en 
+interne,&nbsp; les entiers&nbsp; sont codés en binaire: c'est normal, la mémoire 
+de l'ordinateur et les registres des processeurs sont composés d'octets&nbsp; de 
+8 bits&nbsp; de Dword de 16 bits et maintenant de 32 et 64 bits contenant des bits positionnés à 0 ou 1.</font></p>
+<p><font size="2" face="Courier New"><font color="#0000FF">Dim A As Integer = 12</font> </font></p>
+<blockquote>
+<p><font size="2" face="Courier New">c'est <b>12</b> est en base décimale, c'est notre manière de 
+l'utiliser.</font></p>
+<p><font size="2" face="Courier New">mais c'est <b>0000000000001100</b> en mémoire physique, 
+représentation binaire.</font></p>
+<p><font size="2" face="Courier New">c'est <b>000C</b> en hexadécimal, mais dans une autre base 
+plus pratique, &quot;plus imagée&quot;.</font></p>
+</blockquote>
+<p><font size="2" face="Courier New">C'est toujours le même nombre!! </font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font size="2" face="Courier New"><b>And Or Xor AndAlso, OrElse</b></font></span></p>
+<p><font face="Courier New" size="2">En VB, en plus de <font color="#0000FF">And</font>, 
+<font color="#0000FF">Or</font>, <font color="#0000FF">Xor</font>, existent
+<font color="#0000FF">AndAlso</font> et <font color="#0000FF">OrElse</font>&nbsp; 
+qui testent la première valeur puis, si nécessaire, la seconde. Si la seconde 
+valeur n'a pas à être évaluée, est ne le sera pas, c'est un gain de temps.</font></p>
+<p><font face="Courier New" size="2">Pourquoi Xor n'a pas d'équivalent?</font></p>
+<p><font face="Courier New" size="2">Car&nbsp; pour évaluer Xor, il faut 
+d'emblée utiliser les 2 valeurs.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font size="2" face="Courier New"><b>Comment réagit VB 
+avec les Booléens, les entiers?</b></font></span></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+  <span style="FONT-FAMILY: Courier New"><b>
+  Si A et B sont des expressions 
+  Booléens </b>(valeur True ou False uniquement):</span></font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> <font color="#0000ff">IF A&gt;=2 And A&lt;=5 
+    Then..&nbsp;</font></span></p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Les expressions booléennes sont évaluées</b> et on a comme résultat True ou 
+False.</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>Si A et B sont des nombres&nbsp;entiers </b>(Integer= 
+  32 bits, 
+  Long=64 bits, Short=16 bits, Byte=8 bits par exemple): </font> </li>
+</ul>
+<font face="Courier New" size="2">
+<blockquote>
+  <blockquote>
+    <p align="left"><b>L'opération est effectuée sur chaque bit de l'équivalent 
+    binaire, le résultat binaire est affiché en décimal. </b></p>
+    <p align="left"><font color="#0000ff">A = 7</font> 'en décimal ( 0111 en 
+    binaire)</p>
+    <p align="left"><font color="#0000ff">B = 12</font> 'en décimal( 1100 en 
+    binaire)</p>
+    <p align="left"> <font color="#0000ff">A And B </font>= 4&nbsp; 'en décimal( 0100 
+    en binaire)</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+  <p align="left"><b>Si A et B sont des nombres en virgule flottante</b> (Single, 
+  Double 
+  par exemple), ils sont codés sous la forme de mantisse plus exposant, une 
+  opération logique devrait produire un résultat aberrant. Ils sont convertis en 
+  Long avant évaluation si Option Strict= Off: </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <font SIZE="2" COLOR="#0000ff">
+    <p>Dim</font><font SIZE="2"> a </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+    </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> = 7</p>
+    <p></font><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> b </font>
+    <font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+    <font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> = 12</p>
+    <p></font><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> c </font>
+    <font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+    <font SIZE="2" COLOR="#0000ff">Boolean</font><font SIZE="2"> = </font>
+    <font SIZE="2" COLOR="#0000ff">True</p>
+    </font><font SIZE="2">
+    <p>MsgBox(a </font><font SIZE="2" COLOR="#0000ff">And</font><font SIZE="2"> 
+    b)&nbsp;&nbsp; 'affiche '4' car 7 et 12 sont transformés en&nbsp; Long&nbsp; 
+    (si
+    </font>
+    Option Strict=Off)</p>
+    <p><font SIZE="2">si
+    </font>
+    Option Strict=On&nbsp; Levée d'une exception.</p>
+  </blockquote>
+    <p align="left"> <font color="#FF0000">
+    <img border="0" src="vicoexcl.gif" width="29" height="43"> </font>
+  </font>
+    <font color="#FF0000">
+<font face="Courier New">
+    <b>Un conseil: utiliser des Booléens 
+    quand vous voulez effectuer des opérations logiques, des entiers quand vous 
+    travaillez sur les bits.</b></font></font></p>
+    <p align="left"> &nbsp;</p>
+</blockquote>
+  <p><span style="background-color: #C0C0C0"><b><font face="Courier New">
+  Conversion Binaire, hexadécimale, décimal:</font></b></span></p>
+  <p><font size="2" face="Courier New">L'affichage d'un entier se fait en décimal par défaut si on 
+  utilise la méthode <font color="#0000FF">ToString</font>:</font></p>
+<p><font face="Courier New"><font size="2" color="#0000FF">Dim a As Integer =&amp;HFF&nbsp;&nbsp; </font>
+<font size="2">Littéral en hexadécimal</font></font></p>
+<p><font face="Courier New"><font size="2" color="#0000FF">MsgBox (a.ToString)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="2">Affiche&nbsp; '255' décimal</font></font></p>
+<font SIZE="2" face="Courier New">
+<p>On peut surcharger la méthode et afficher en hexadécimal:</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> a </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+= 255</font></p>
+<p><font color="#0000FF" face="Courier New">MsgBox(a.ToString(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000FF">&quot;X&quot;))&nbsp;
+</font><font size="2">Affiche 'FF'</font></font></p>
+<font SIZE="2" face="Courier New">
+<p>On peut afficher en hexadécimal et décider le nombre de digit affiché:</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> a </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+= 255</font></p>
+<p><font color="#0000FF" face="Courier New">MsgBox(a.ToString(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000FF">&quot;X4&quot;))
+</font><font size="2">Affiche '00FF'</font></font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">En utilisant la classe <font color="#0000FF">Convert</font>, on peut même afficher en base 
+binaire, octale, décimal, hexadécimal.</font></p>
+<p><font face="Courier New" size="2"><span id="nsrTitle"><font color="#0000FF">
+Convert.ToString(Int64, base)</font> </span>Convertit la valeur d'un entier 
+signé 64&nbsp;bits en sa représentation String équivalente dans une base '<font color="#0000FF">base</font>' spécifiée 
+(base 2, 8, 10, 16). </font></p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+d </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+Long</font></font><font face="Courier New" SIZE="2" color="#0000FF"> 
+= 3</font></p>
+<p><font face="Courier New" SIZE="2" COLOR="#0000ff">Dim</font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+r </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2" color="#0000FF"></p>
+<p><font face="Courier New">r= Convert.ToString(</font></font><font face="Courier New"><font SIZE="2"><font color="#0000FF">d, 
+2))</font> </font><font SIZE="2" COLOR="#008000">'convertit la valeur Long de &quot;d&quot; 
+en base 2</font></font></p>
+<p><font size="2" face="Courier New">&nbsp;d= 3  &nbsp; donne r=&quot;11&quot;&nbsp;&nbsp; binaire</font></p>
+<p><font face="Courier New" size="2">Si on avait eu une String &quot;3&quot; on l'aurait 
+convertie en Long grâce à </font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">CLng</font><font color="#0000FF" SIZE="2">(d)</font></font> </p>
+<p><font face="Courier New" size="2"> </p>
+</blockquote>
+</font>
+<p><font face="Courier New"><font size="2" color="#0000FF">Convert.ToInt64(s, 
+base)</font><font size="2"> </font></font> <samp>
+<font size="2" face="Courier New">'convertit en type 
+    int64(long en base 10) la valeur de la String '<font color="#0000FF">s</font>' à partir 
+d'une base '<font color="#0000FF">base</font>'.</font></samp></p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+d </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font face="Courier New" SIZE="2" color="#0000FF"> 
+= &quot;111&quot;</font></p>
+<p><font SIZE="2" color="#0000FF"><font face="Courier New">Dim r As Long</font></p>
+<p><font face="Courier New">r= Convert.ToInt64(</font></font><font face="Courier New"><font SIZE="2"><font color="#0000FF">d, 
+2))</font> </font><font SIZE="2" COLOR="#008000">'convertit d&nbsp; (string 
+représentant un binaire) en&nbsp; Long  </font></font></p>
+<p><font size="2" face="Courier New">cela donne r=7</font></p>
+<p>&nbsp;</p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <p><font face="Courier New" size="1">Enfin&nbsp; dans l'espace Visual
+        Basic l'instruction Hex&nbsp; donne la représentation hexadécimale
+        d'un nombre , ( Oct existe aussi)</font></p>
+        <p><font face="Courier New" size="1"><font color="#0000FF">str=Hex(456)</font>&nbsp;&nbsp;&nbsp;
+        retourne 1CB</font></p>
+        <p>&nbsp;</p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+</blockquote>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New">
+  Conversion String en Byte:</font></b></span></p>
+<blockquote>
+<p><font face="Courier New" size="2">Conversion String en Bytes:</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim str As String= &quot;..&quot;<br>
+Dim encoding As New System.Text.ASCIIEncoding()<br>
+Dim Bytes() As Byte()= encoding.GetBytes(str)</font><font size="2"><font face="Courier New" color="#000000"><br>
+<br>
+<br>
+</font><font face="Courier New">Conversion Bytes en String:</font></font></p>
+<p><font size="2"><font face="Courier New" color="#000000"><br>
+</font><font face="Courier New" color="#0000FF">Dim Bytes As Byte() = ...<br>
+Dim str As String<br>
+Dim enc As New System.Text.ASCIIEncoding()</font></font><font face="Courier New" color="#0000FF" size="2"><br>
+str = enc.GetString(Bytes)</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New">
+Enregistrement d'un tableau de Bytes:</font></b></span></p>
+<p align="left"><font face="Courier New" size="2"><i>1 - En mémoire: (dans un mémoryStream)</i></font></p>
+<p align="left"><span codeLanguage="VisualBasic">
+<font color="#0000FF" size="2" face="Courier New">Imports System.IO<br>
+</font><font face="Courier New" size="2"><br>
+...&nbsp;&nbsp;&nbsp; </font> <font color="#0000FF" face="Courier New" size="2"><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2" color="#008000">' Creation d'un tableau de 
+Byte.</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim dataArray(1000) As Byte</font></span></p>
+<p align="left"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#008000">' On le remplit avec 
+des nombres aléatoires.</font><span codeLanguage="VisualBasic"><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim randomGenerator As New Random<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; randomGenerator.NextBytes(dataArray)</font></span></p>
+<p align="left"><span codeLanguage="VisualBasic">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Ecriture</font><font color="#0000FF" face="Courier New" size="2"><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim binWriter As New BinaryWriter(New 
+MemoryStream())<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2" color="#008000">' Ecrire les données dans la 
+mémoire.</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; binWriter.Write(dataArray)<br>
+<br>
+</font><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Lecture&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></p>
+<p align="left"><font face="Courier New" size="2" color="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><span codeLanguage="VisualBasic">
+<font face="Courier New" size="2" color="#008000">' Créer un reader en utilisant 
+le stream du Writer</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim binReader As New BinaryReader(binWriter.BaseStream)<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2" color="#008000">' mettre la position au début 
+du stream.</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; binReader.BaseStream.Position = 0<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2" color="#008000">' Relecture dans verifyArray.</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim verifyArray() As Byte = 
+binReader.ReadBytes(dataArray.Length)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp; </font></span><font size="2" face="Courier New" color="#0000FF"><br>
+</font><i><font face="Courier New" size="2">2 - Dans un fichier:</font></i></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">...</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span codeLanguage="VisualBasic">Dim fs As New FileStream(FILE_NAME, 
+FileMode.CreateNew)</span></font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim w As New BinaryWriter(fs)<span codeLanguage="VisualBasic"><br>
+w.Write(datArray)</span></font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span codeLanguage="VisualBasic">w.Close()<br>
+</span>fs.close</font><font size="2" face="Courier New" color="#000000"><br>
+&nbsp;</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Le Framework 2 permet une écriture encore plus 
+simple pour lire écrire les octets d'un fichier:</font></p>
+<font SIZE="2" face="Courier New">
+<p>Lire et mettre dans un tableau les octets d'un fichier? (Framework 2)</p>
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p><span style="background-color: #FFFFFF">Dim myBytes() As Byte =File.ReadAllBytes(&quot;<a href="file:///c:/monText.txt">c:\monText.txt</a>&quot;)</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>
+</font>
+<span style="background-color: #FFFFFF">
+<font SIZE="2" face="Courier New">
+Il existe aussi
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+WriteAllByte.</font></span><font SIZE="2" face="Courier New" color="#0000FF"></p>
+<p>&nbsp;</p>
+</font>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+  <p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+  Précision sur 'If a Then'</span></font></b></p>
+  <p><font face="Courier New" size="2"><b>Avec des valeurs numériques </b>si 
+   
+  </font></p>
+  <ul>
+    <li><font face="Courier New" size="2">a=0,&nbsp; a est évalué comme 
+    <font color="#0000FF">False</font> le programme se poursuit après Then;  </font>
+    </li>
+    <li><font face="Courier New" size="2">si a est différent de 0&nbsp; (1, -1, 
+    45,...) a est considéré comme <font color="#0000FF">True</font> et le 
+  programme se poursuit après Then.</font></li>
+</ul>
+  <p><font face="Courier New" size="2">Donc</font></p>
+  <p><font color="#0000FF" size="2" face="Courier New">Dim a As Integer =15</font></p>
+  <p> <font color="#0000FF" face="Courier New" size="2">If a&nbsp; Then..</font></p>
+  <p><font face="Courier New" size="2">C'est une mauvaise méthode!! Il vaut 
+  mieux écrire&nbsp; </font></p>
+  <p><font color="#0000FF" size="2" face="Courier New">Dim a As Integer =15</font></p>
+  <p> <font color="#0000FF" face="Courier New" size="2">If a &lt;&gt;0 Then..</font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1"><b>Avec une expression Booléenne
+  par contre</b>, on 
+  peut écrire:</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="1" face="Courier New">Dim a As Boolean= True</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"> <font color="#0000FF" face="Courier New" size="1">If a = True
+  Then..</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">ou</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1" color="#0000FF">If a
+  Then..</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">Exemple:</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1" color="#0000FF">If
+  (x=15)=True&nbsp; Then..</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">ou <font color="#0000FF">If x=15
+  Then...</font></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="1">Avec
+  une expression booléenne, et uniquement avec une expression booléenne, il
+  est possible de se passer du <font color="#0000FF">= True </font>après un If
+  car de toutes façons , l'expression est évaluée.</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+  <p>&nbsp;</p>
+  <p><font face="Courier New" size="2"><span style="font-weight: 700; background-color: #C0C0C0">Masque de bit:</span></font></p>
+  <p><b><font face="Courier New" size="2"><font color="#0000FF">Or</font> permet 
+  d'écrire un bit à 1:</font></b></p>
+  <p><font face="Courier New" size="2">Soit un entier, on veut forcer un des 
+  bits à 1 , la solution est de faire un Or avec un entier ayant ce seul bit à 
+  1.</font></p>
+  <p><font face="Courier New" size="2">Exemple : Mettre le deuxième bit de 
+  00000100 (4 en décimal) à 1</font></p>
+  <p><font face="Courier New" size="2">Il faut faire un Or avec 00000010.</font></p>
+  <p><font face="Courier New" size="2">Le poids du deuxième bit est 2, c'est le 
+  'mask bit'. </font></p>
+  <p><font face="Courier New" size="2">4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  <font color="#0000FF">Or</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 =&nbsp;&nbsp;&nbsp; 6</font></p>
+  <p><font face="Courier New" size="2">00000100 <font color="#0000FF">Or</font> 00000010 = 00000110</font></p>
+  <p><font face="Courier New" size="2">En faisant <font color="#0000FF">Or</font> 2, on a bien mis le 
+  deuxième bit à 1.</font></p>
+    <p><font face="Courier New" size="2">Le masque est toujours une puissance de 
+    2.</font></p>
+    <p><font face="Courier New" size="2"><font color="#0000FF">Or 8</font>&nbsp; 
+    met le quatrième bit à 1</font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Courier New" size="2"><font color="#0000FF">And</font> 
+    permet de tester un bit</font></b></p>
+    <p><font face="Courier New" size="2"><font color="#0000ff">A And 1</font> 
+    indique si le bit le moins significatif (le plus à droite) est a 1</font></p>
+    <p><font face="Courier New" size="2">Exemple: si<font color="#0000ff"> A = 7</font> 
+    'en décimal ( 0111 en binaire) <font color="#0000ff">A And 1 </font>
+    &nbsp;retourne 1 </font></p>
+    <p><font face="Courier New" size="2"><font color="#0000ff">A And 8</font> 
+    indique si le quatrième bit est a 1 (8 est le poids du quatrième bit).</font></p>
+    <p><font face="Courier New" size="2">Exemple: si<font color="#0000ff"> A = 7</font> 
+    'en décimal ( 0111 en binaire) <font color="#0000ff">A And 8 </font>
+    &nbsp;retourne 0 </font></p>
+    <p><font face="Courier New" size="2">8 c'est le 'mask bit' (00001000) du 
+    quatrième bit.</font></p>
+    <p><font face="Courier New" size="2"><font color="#0000FF">A And 8</font> 
+    peut ensuite être évalué comme une expression booléenne:</font></p>
+    <p><font face="Courier New" size="2"><font color="#0000FF">If A and 8 Then</font>&nbsp; 
+    ' Si le quatrième bit de A est à 1 alors,</font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Courier New" size="2">And&nbsp; permet aussi de forcer à 0 
+    une partie des bits et de ne conserver que la valeur de certains bits:</font></b></p>
+    <p><font face="Courier New" size="2">Soit une couleur codée sur 24 bits; les 
+    8 bits à droite code la composante bleu, Je veux conserver uniquement ces 8 
+    bits de droite (l'octet de droite):</font></p>
+    <p><font face="Courier New" size="2" color="#0000FF"><code>
+    <font face="Courier New">myColor And &amp;HFF </font>
+</code>
+    </font>
+    <code>
+    <font face="Courier New" size="2">conserve le premier octet mais met les 2 
+    autres à<font face="Courier New" size="2" color="#0000FF"> 0</font></font><font face="Courier New" size="2" color="#0000FF">: </font>
+</code></p>
+    <p><font face="Courier New" size="2"><code><font face="Courier New">MyColor=0010 
+    0100 1000 0010 </font>
+</code><font color="#0000FF">0010 0000</font></font></p>
+    <p><font face="Courier New" size="2" color="#0000FF">And&nbsp;&nbsp;&nbsp;&nbsp;
+    </font><font face="Courier New" size="2">0000 0000 0000 0000 0000 1111</font></p>
+    <p><font face="Courier New" size="2"><code><font face="Courier New">=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0000 
+    0000 0000 0000 </font>
+</code><font color="#0000FF">0010 0000</font></font></p>
+    <p><font face="Courier New" size="2">Le masque correspond au bits à 
+    conserver.</font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Courier New" size="2" color="#0000FF">Xor</font><font face="Courier New" size="2"> 
+    permet de forcer un bit à 0</font></b></p>
+  <p><font size="2" face="Courier New">Pour mettre le 4eme bit à 0:</font></p>
+  <p><font face="Courier New" size="2">Il faut faire un Xor avec 00001000.</font></p>
+  <p><font face="Courier New" size="2">Le poids du deuxième bit est 2, c'est le 
+  'mask bit'. </font></p>
+  <p><font face="Courier New" size="2">12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  Xor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 =&nbsp;&nbsp;&nbsp; 4</font></p>
+  <p><font face="Courier New" size="2">00001100 Or 00001000 = 00000100</font></p>
+  <p>&nbsp;<p><b><font face="Courier New" size="2">Exemple pratique:</font></b><p>
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Comment stocker plusieurs valeurs dans une variable en utilisant un masque.</span></font></b><p>
+<font face="Courier New" size="2">Souvent, plutôt que de coder une information 
+par octet, on peut coder une information par bit et ainsi coder 8 informations 
+par octet. </font></p>
+  <p><font face="Courier New" size="2">Le paramètre d'une fonction est, par 
+  exemple, composé d'un entier ou chaque bit à une signification.</font></p>
+  <p><font face="Courier New" size="2">Exemple fictif :</font></p>
+  <p><font face="Courier New" size="2">00000001&nbsp; le premier bit à 1 
+  signifie gras&nbsp;&nbsp; (1 en décimal)</font></p>
+  <p><font face="Courier New" size="2">00000010&nbsp; le deuxième bit à 1 
+  signifie l'italique (2 en décimal)</font></p>
+  <p><font face="Courier New" size="2">00000100&nbsp; le troisième bit à 1 
+  signifie le soulignage. (4 en décimal)</font></p>
+  <p><font face="Courier New" size="2">Si je veux envoyer les paramètres gras&nbsp; 
+  et souligné, j'enverrais le paramètre <font color="#0000FF">1 Or 4 </font>qui 
+  correspond a 00000101. Les bits 1 et 3 sont bien à 1.</font></p>
+  <p><font face="Courier New" size="2">On note bien que chaque paramètre doit 
+  être une puissance de 2.</font></p>
+  <p><font face="Courier New" size="2">C'est plus clair de créer une 
+  énumération:</font></p>
+  <p><font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">&lt;Flags()&gt; </span></font><font face="Courier New" size="2" color="#0000FF">Enum Car</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  Normal=0</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Gras= 
+  2</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  Italique= 4</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  Souligne= 8</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">End Enum</font></p>
+  <p><font face="Courier New" size="2">Si je veux envoyer les paramètres gras&nbsp; 
+  et souligné, j'enverrais le paramètre <font color="#0000FF">Car.Gras Or 
+  Car.Souligne</font></font></p>
+  <p><span style="BACKGROUND-COLOR: #ffffff">
+  <font face="Courier New" color="#0000ff" size="2">&lt;Flags()&gt;&nbsp; </font>
+  <font face="Courier New" size="2">indique qu'on travaille bien sur des bits.</font></span></p>
+  <p>&nbsp;</p>
+  <p><font face="Courier New" size="2">&nbsp;Souvent les valeurs sont proposées 
+  par VB, comme par exemple quand on utilise MsgBox; le deuxième paramètre qui 
+  indique le style peut comporter plusieurs indications séparées par des Or:
+  </font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font color="#0000ff">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">
+reponse= MsgBox(msg, MsgBoxStyle.DefaultButton2 Or</span></font><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">&nbsp; 
+MsgBoxStyle.Critical Or MsgBoxStyle.YesNo, Title) </font></span></p>
+    <p>&nbsp;</p>
+    <p><font face="Courier New" size="2">Pour lire un bit en retour d'une 
+    fonction, on utilisera And:</font></p>
+    <p><font face="Courier New" size="2">&nbsp;Si <font color="#0000FF">reponse 
+    And Car.Italique</font> =1&nbsp;&nbsp;&nbsp; c'est que le second bit de 
+    reponse est à 1.&nbsp;&nbsp;&nbsp; </font></p>
+  <p><font face="Courier New" size="2">&nbsp;Bien que ce soit une opération sur 
+  les bits on écrit souvent:</font><p>
+<font face="Courier New" size="2" color="#0000FF">If reponse And Car.Italique 
+Then...</font><p>&nbsp;<p><font face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">Cryptage simple par 
+Xor</span></font><p><font face="Courier New" size="2">La technique la plus 
+simple est d'appliquer un « OU exclusif » (XOR) entre le texte à chiffrer et la 
+clé.</font><p><font size="2" face="Courier New">Pour obtenir le message crypté 
+on effectue <font color="#0000FF">Message Xor Cle</font>&nbsp; (si la clé fait x 
+octets on effectue le Xor entre le premier octet du message et le premier de la 
+clé, puis le deuxième.. quand on arrive à x+1 caractère du message, on 
+recommence au premier caractère de la clé).</font><p>
+<font face="Courier New" size="2">Comme <font color="#0000FF">Message Xor Cle 
+Xor Cle =Message</font>, pour déchiffrer le message codé, il suffit de faire de 
+nouveau un Xor avec la clé.</font><p><font size="2" face="Courier New">La clé est donc la même 
+pour coder et décoder, on appelle cela une clé symétrique.</font><p>
+<font face="Courier New" size="2">Bien sur, si on utilise un texte comme clé et 
+comme message, c'est le code du caractère qui est utilisé.</font><p>&nbsp;<p>
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="2">Travail sur les couleurs:</font></span><p>
+<font face="Courier New" size="2">Les valeurs RVB (couleurs) sont stockées dans 
+trois octets de 8 bits, conduisant à une couleur à 24 bits, chaque octet correspondant respectivement au rouge, au vert et au bleu.</font><p>
+<font face="Courier New" size="2"><font color="#FF0000">rrrr rrrr</font>
+<font color="#008000">vvvv vvvv</font> <font color="#0000FF">bbbb bbbb</font></font><p>
+<b><font size="2" face="Courier New">Comment récupérer la composante rouge verte 
+ou bleue?</font></b><p style="margin-top: 3; margin-bottom: 3">
+&nbsp;<p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code>
+<font face="Courier New" color="#0000FF">Dim myColor As Integer = 15963245</font><font face="Courier New"><br>
+'Un Integer a 32 bits , les 24 premiers sont utilisés.</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code>
+<font face="Courier New" color="#0000FF">Dim R, V, B As Byte</font><font face="Courier New"><br>
+&nbsp;</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<font size="2" face="Courier New">Pour le rouge:</font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2" color="#0000FF"><code>
+<font face="Courier New">R = myColor &gt;&gt; 16</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code><font face="Courier New">On décale de 16 
+bits vers la droite:&nbsp; 0000 0000 0000 0000 </font>
+</code><font color="#FF0000">rrrr rrrr</font><code><font face="Courier New"><br>
+&nbsp;</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<font size="2" face="Courier New">Pour le vert:</font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code>
+<font face="Courier New" color="#0000FF">V = (myColor And &amp;HFF00) &gt;&gt; 8</font><font face="Courier New"><br>
+&nbsp;</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<code><font face="Courier New" size="2">On fait un And &amp;HFF00 ce qui met le 
+premier et le troisième octet à 0 </font></code>
+<font face="Courier New" size="2"><code><font face="Courier New">0000 0000
+</font>
+</code><font color="#008000">vvvv vvvv</font><code><font face="Courier New"> 
+0000 0000</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code><font face="Courier New">On décale de 8 
+bits vers la droite:&nbsp; 0000 0000 0000 0000 </font>
+</code>&nbsp;<font color="#008000">vvvv vvvv</font><code><font face="Courier New">
+</font>
+</code></font><p style="margin-top: 3; margin-bottom: 3">
+&nbsp;<p style="margin-top: 3; margin-bottom: 3">
+<font size="2" face="Courier New">Pour le bleue:</font><p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2" color="#0000FF"><code>
+<font face="Courier New">B = (myColor And &amp;HFF)</font></code></font><p style="margin-top: 3; margin-bottom: 3">
+<code><font face="Courier New" size="2">On fait un And &amp;HFF ce qui met le 
+premier et le second octet à 0 </font></code>
+<p style="margin-top: 3; margin-bottom: 3">
+<font face="Courier New" size="2"><code><font face="Courier New">0000 0000 0000 
+0000 </font>
+</code>&nbsp;<font color="#0000FF">bbbb bbbb</font></font><p style="margin-top: 3; margin-bottom: 3">
+&nbsp;<p style="margin-top: 3; margin-bottom: 3">
+<code><font face="Courier New" size="2">(En Vb on peut&nbsp; faire plus simple)</font></code><font face="Courier New" size="2"><code><br>
+</code></font><p>
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="2">Travail sur les graphiques:</font></span><p>
+<font face="Courier New" size="2">&nbsp;Un mode souvent utilisé pour la 
+réalisation d'interfaces est <b>le mode XOR</b>. Ce mode permet d'effacer 
+facilement un cadre de sélection&nbsp; en le redessinant une seconde fois à la même position.</font><p><font face="Courier New" size="2">Si l'on a un écran noir et blanc pour lequel 1 = noir et 0 = blanc 
+et que l'on affiche une forme en noir, chaque pixel appartenant à la forme est 
+inversé à l'écran puisque 1 xor p = not p. Donc si l'on dessine la forme deux 
+fois, chaque pixel est inversé deux fois et revient donc dans son état initial.
+</font>
+</p>
+<p><font face="Courier New" size="2">Par contre, sur un écran couleur, les résultats sont 
+imprévisibles. 
+Si le noir est représenté par la valeur de pixel 1111 et que l'on dessine 
+en xor sur un pixel de valeur 1001, le résultat est un pixel de valeur 1111 xor 
+1001 = 0110. La couleur résultante est alors imprévisible : on obtient un effet 
+&quot;technicolor&quot;.</font></p>
+<p><font face="Courier New" size="2">&nbsp;En VB on a d'autres fonctions sur les 
+graphiques.</font></p>
+<p align="justify"><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Viewer hexadecimal:</span></font></p>
+<p align="justify"><font face="Courier New" size="2">Comment voir le contenu 
+d'un fichier en hexadécimal?</font></p>
+<p align="justify"><font face="Courier New" size="2">C'est très simple et VB 
+2005:</font></p>
+<p align="justify"><font face="Courier New"><font size="2">On utilise un composant </font>
+<font size="2" color="#0000FF">ByteViewer</font></font></p>
+<p align="justify"><font face="Courier New" size="2">Charger la référence&nbsp; System.design.Dll
+</font> </p>
+<p align="justify"><font size="2" face="Courier New">Puis entrer le code dans 
+Form_Load:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> </font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Form1_Load() </font><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> viewer </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font color="#0000FF" face="Courier New" SIZE="2"> 
+System.ComponentModel.Design.ByteViewer()</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> viewer </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.ComponentModel.Design.ByteViewer</font></p>
+</font>
+<p><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font color="#0000FF" face="Courier New">.Controls.Add(viewer)</font></p>
+<p><font color="#0000FF" face="Courier New">viewer.Dock = DockStyle.Fill</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> ofd </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> OpenFileDialog </font>
+<font face="Courier New">'Choix 
+d'un fichier</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> ofd.ShowDialog() 
+= Windows.Forms.DialogResult.OK </font><font SIZE="2" COLOR="#0000ff">Then</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+viewer.SetFile(ofd.FileName)</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font></font></p>
+<p><font face="Courier New" size="2"><img border="0" src="vhexaview.JPG" width="648" height="219"></font></p>
+<p align="justify"><font SIZE="2" COLOR="#111111" face="Courier New">Si vous avez déjà un tableau 
+de bytes, utilisez sa méthode SetBytes .</font></p>
+<p align="justify"><font face="Courier New" size="2">Vous pouvez même choisir son mode d'affichage (Ansi, Unicode, 
+Hexadump ou automatique) avec sa méthode SetDisplayMode.</font></p>
+<p align="justify"><b><font face="Courier New" size="2">Second exemple:</font></b></p>
+<p align="justify"><font face="Courier New" size="2">Ouvrir un fichier image .jpg 
+le charger dans un tableau de Bytes et l'afficher:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+viewer </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+System.ComponentModel.Design.ByteViewer</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font color="#0000FF" face="Courier New">.Controls.Add(viewer)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">viewer.Dock = 
+DockStyle.Fill</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> ofd
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OpenFileDialog</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">ofd.ShowDialog()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> img
+</font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Image = Image.FromFile(ofd.FileName)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+mstImage </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+IO.MemoryStream = </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+IO.MemoryStream</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">img.Save(mstImage, 
+System.Drawing.Imaging.ImageFormat.Jpeg)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+bytImage </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Byte</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">() 
+= mstImage.GetBuffer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">viewer.SetBytes(bytImage)</font></p>
+</font>
+<p align="justify">&nbsp;</p>
+<p align="justify"><font face="Courier New" size="2">Fait à partir d'un
+<a href="http://www.c2i.fr/code.aspx?IDCode=640">article de c2i</a> en C#</font></p>
+<p align="justify"><font face="Courier New" size="4"><span style="background-color: #C0C0C0">
+<font color="#0000FF"><span style="font-weight: 700">Editeur</span></font></span><font color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0"> hexadecimal:</span></font></font></p>
+<p align="justify"><font face="Courier New" size="2">On peut écrire en VB.Net un 
+éditeur hexadécimal de fichier (lecture du fichier, visualisation en hexa et 
+ascii, modification d'un octet:</font></p>
+<p align="justify"><font size="2" face="Courier New">Voir le lien suivant:</font></p>
+<p align="justify"><font face="Courier New" size="2">
+<a href="http://www.vbfrance.com/codes/ULTRA-HEXA-EDITEUR-HEXADECIMAL-NET-V2-OUVERTURE-SUPER_37077.aspx">
+Editeur hexadécimal ULTRA EDIT de fichier par VBsorcier</a></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Pour que le source marche , ne pas oublier de 
+générer puis mettre les fichiers vb dans MyProjet et les fichiers ressources 
+dans le répertoire de ressources. </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v7-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:40 GMT -->
+</html>

@@ -1,0 +1,7 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Fichiers1\Fichiers1\bin\Debug\Fichiers1.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Fichiers1\Fichiers1\bin\Debug\Fichiers1.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Fichiers1\Fichiers1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Fichiers1\Fichiers1\obj\x86\Debug\Fichiers1.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Fichiers1\Fichiers1\obj\x86\Debug\Fichiers1.pdb
+C:\Users\ZIZI\Desktop\TDI\Fichiers1\Fichiers1\obj\x86\Debug\Fichiers1.exe
+C:\Users\ZIZI\Desktop\TDI\Fichiers1\Fichiers1\obj\x86\Debug\Fichiers1.pdb

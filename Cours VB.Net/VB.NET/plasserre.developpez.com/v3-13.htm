@@ -1,0 +1,365 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:04 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET Barre de menu : toolbar statusbar toolstrip statusstrip </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="27%" height="76" align="center"><a href="v3-12.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.13</font></b></td>
+    <td width="49%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">ToolBar StatusBar </font>
+    </b></td>
+    <td width="14%" height="76"><a href="v3-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment mettre une 
+barre de bouton en haut et une barre d'état en bas?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">La barre de bouton: 
+ToolBar en VB 2003</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voici un exemple classique, sous 
+le menu il y a une barre de bouton: <b>Nouveau, Ouvrir, Enregistrer, Chercher, 
+Imprimer... </b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vtoolbar.gif" width="151" height="102"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Allez chercher dans la boite à outils un 
+contrôle <b>ToolBar</b>, il se place en haut, sous le menu. Mettre aussi un <b>
+ImageList</b>.(Un contrôle ImageList est un contrôle qui 
+stocke des images, chaque image étant chargée en mode conception et repérée par 
+un numéro&nbsp; (0,1,2,3..)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans le ToolBar mettre dans la 
+propriété <b>ImageList
+</b>le nom du contrôle ImageList<b> </b>qui contient les images des boutons.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ouvrir la <b>collection Buttons</b> dans la 
+fenêtre des propriétés&nbsp; de le ToolBar pour pouvoir ajouter ou modifier les 
+boutons:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vtoolb2.gif" width="482" height="239"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Vous pouvez ajouter ou enlever des boutons.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Chaque bouton a <b>ses propriétés </b>
+affichées à droite:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Name</b>&nbsp;&nbsp;&nbsp; Nom du Bouton&nbsp; 
+Exemple NewButton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>ImageIndex</b>&nbsp; donne le numéro de 
+l'image (contenue dans l'Imagelist) qui doit s'afficher dans le bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>ToolTipText</b> donne le texte du ToolTip 
+(Carré d'aide qui apparaît quand on est sur le bouton) Il faut aussi que la 
+propriété ShowToolTip de la ToolBar soit à True </font></p>
+</blockquote>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;</p>
+</font><font SIZE="2">
+<p><font face="Courier New">L'<b>évènement déclenché par le click</b> de 
+l'utilisateur sur un bouton est: <span style="background-color: #FFFFFF"> <font color="#0000FF">ToolBar1_ButtonClick</font></span></font></p>
+<p><font face="Courier New">L'argument</font><font face="Courier New" color="#0000FF"> 
+e </font><font face="Courier New">contient les arguments de l'évènement click de 
+la ToolBar. <font color="#0000FF">e.Button</font> contient le nom du bouton qui 
+a déclenché l'évènement. Pour chaque nom de bouton on appellera la procédure 
+correspondante: NewDoc(), Open()...</font></p>
+<p><font face="Courier New">Comme d'habitude il suffit de double-cliquer sur la 
+ToolBar pour faire apparaître <span style="background-color: #FFFFFF"> <font color="#0000FF">ToolBar1_ButtonClick</font></span></font></p>
+<p><font face="Courier New">Voici le code complet:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span>
+</font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ToolBar1_ButtonClick(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+Sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.ToolBarButtonClickEventArgs) </font>
+</span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Handles</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+toolBar1.ButtonClick</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">If</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+e.Button </font><font SIZE="2" COLOR="#0000ff">Is</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+NewButton </span> </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Then</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NewDoc()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">ElseIf</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+e.Button </font><font SIZE="2" COLOR="#0000ff">Is</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OpenButton </span> </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New"><span style="background-color: #FFFFFF">Then</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Open()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">ElseIf</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+e.Button </font><font SIZE="2" COLOR="#0000ff">Is</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+SaveButton </span> </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New"><span style="background-color: #FFFFFF">Then</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">ElseIf</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+e.Button </font><font SIZE="2" COLOR="#0000ff">Is</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+PreviewButton </span> </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New"><span style="background-color: #FFFFFF">Then</span></font></p>
+</font><font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PrintPreview()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+<span style="background-color: #FFFFFF">...</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End If</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End Sub</font></span></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#FF0000" face="Courier New" size="2">Le
+ToolBar a donc une collection de Buttons, de plus il n'y a qu'une procédure évènement
+'Click' unique propre à la ToolBar et pour tous les boutons.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">C</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">ontrôle
+StatusBar en VB 2003.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La barre d'état se trouve en bas de la fenêtre et <b>affiche des informations 
+relatives aux opérations en cours</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vstatusb.gif" width="290" height="29"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ajouter&nbsp; un StatusBar au formulaire. Dans la fenêtre des propriétés du StatusBar, <b>la collection Panels</b> 
+contient les zones d'affichage du StatusBar.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;Dans 
+le code, pour modifier le texte d'une zone faire:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">StatusBar1.Panels(0).Text=&quot;1715.2F&quot;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">On
+remarque (c'est du Net) que le premier panel est</font><font color="#0000FF" face="Courier New" size="2">
+panels(<b>0</b>).</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><font color="#0000FF"><span style="background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0">
+ToolStrip en VB 2005:</span></font></span></font></p>
+<p><font size="2" face="Courier New">On peut créer une barre n'importe ou dans le 
+formulaire.</font></p>
+<p><font face="Courier New" size="2">Exemple de barre de menu comprenant:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Un bouton.</font></p>
+<p><font face="Courier New" size="2">Un label</font></p>
+<p><font face="Courier New" size="2">Un bouton déroulant un menu.</font></p>
+<p><font face="Courier New" size="2">Un comboBox</font></p>
+<p><font face="Courier New" size="2">Une zone texte</font></p>
+<p><font face="Courier New" size="2">Une barre de progression.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p align="center">
+<img border="0" src="vmenustrip.JPG" width="672" height="56"></p>
+<p><font face="Courier New" size="2">Images possible dans les menus, il peut y 
+avoir des séparateurs.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Pour créer la barre <font color="#0000FF">ToolStrip</font>, allez la chercher
+dans la boite à outils.</font></p>
+<p><font face="Courier New" size="2">A la droite de la barre, <b>en mode design</b>,
+se trouve un menu déroulant qui permet de choisir l'élément à ajouter à la
+barre:</font></p>
+<p align="center"><img border="0" src="vtoolstrip.JPG" width="376" height="313"></p>
+<p><font face="Courier New" size="2">Cela ajoute des <font color="#0000FF">ToolStripLabel</font>,
+<font color="#0000FF">ToolStripButton</font>.... (noter que ce sont des objets
+spécifiques aux ToolStrip). Chaque élément ajouté est un objet</font></p>
+<p><font face="Courier New" size="2">Ensuite, en cliquant sur chaque élément
+de la barre, on peut changer ses propriétés (qui apparaissent en bas à
+droite)</font></p>
+<p><font face="Courier New" size="2">Ici le premier élément à gauche est un
+label; j'en ai modifié la propriétés (text='Groupe') et j'ai mis une image
+(il a accepté une icône) dans la propriété 'Image'. Le second élément est
+un bouton avec une image de stop.&nbsp;</font></p>
+<p><font face="Courier New" size="2">Dans le code, on a accès aux propriétés
+de l'élément directement à partir de son nom:</font></p>
+<p>&nbsp;&nbsp;&nbsp;<font face="Courier New" size="2"> <font color="#0000FF">ToolStripButton1.Text=&quot;Ok&quot;</font></font></p>
+<p><font face="Courier New" size="2">Ou par l'intermédiaire de la barre
+ToolStrip qui a une collection d'items contenant tous les objets de la barre:</font></p>
+<p>&nbsp;&nbsp;&nbsp;<font face="Courier New" size="2"> <font color="#0000FF">ToolStrip1.Items.Item
+(2).Text</font></font></p>
+<p><font face="Courier New" size="2">A la place de l'index de l'élément dans
+la barre (ici 2), on peut mettre le nom d'élément.</font></p>
+<p><font face="Courier New"><b>Evènement déclenché par un click:</b></font></p>
+<p><font face="Courier New" size="2">1- Comme d'habitude, en double-cliquant sur un
+élément (le second par exemple qui correspond à un bouton), on se retrouve
+dans la procédure exécutée quand l'utilisateur clique sur le bouton.</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font>  <font color="#0000FF"> ToolStripButton1_Click(</font><font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.EventArgs) <font COLOR="#0000ff">Handles</font>
+ToolStripButton1.Click</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub</font></font></font></p>
+<p><font face="Courier New" size="2">Attention: chaque élément à sa propre
+procédure évènement.</font></p>
+<p><font face="Courier New" size="2">Ainsi s'il y a un second bouton, il y aura
+une autre procédure Click:</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font>  <font color="#0000FF">ToolStripButton2_Click</font>(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.EventArgs) <font COLOR="#0000ff">Handles</font>
+ToolStripButton2.Click</font></font></p>
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">2- On a aussi une procédure unique pour le click sur
+la barre.&nbsp;</font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">Private</font><font face="Courier New">
+Sub ToolStrip1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+Handles ToolStrip1.Click</font></font></p>
+<p><font size="2"><font face="Courier New" color="#0000FF">End Sub</font></font></p>
+<p><font face="Courier New" size="2">Mais le sender est le ToolStrip; pour
+savoir dans la routine quel bouton a été cliqué, il faut modifier la sub en
+indiquant comme Handles le nom de tous les boutons de la barre, ainsi par
+exemple, on peut savoir quel bouton à été cliqué.&nbsp;</font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">Private</font><font face="Courier New">
+Sub ToolStrip1_Click(ByVal sender As Object, ByVal e As System.EventArgs)
+Handles <b>ToolStripButton1.Click, ToolStripButton2.Click,
+ToolStripButton3.Click</b></font></font></p>
+<p><font face="Courier New" color="#0000FF" size="2">&nbsp; Dim Button As
+System.Windows.Forms.ToolStripItem = CType(sender,
+System.Windows.Forms.ToolStripItem)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp; MsgBox(Button.Name)
+'</font></p>
+<font SIZE="2">
+<p><font face="Courier New" color="#0000FF">End Sub</font></font></p>
+<p>&nbsp;</p>
+<table border="0" width="87%">
+  <tr>
+    <td width="19%"><img border="0" src="vtoolstrip2.JPG" width="143" height="430"></td>
+    <td width="81%"><p><font face="Courier New" size="2">La barre de bouton peut être mise horizontalement (grâce
+      à la propriété <font color="#0000FF">LayoutStyle</font> ).</font></p>
+      <p><font face="Courier New" size="2">Avec l'aide du petit bouton permettant les taches courantes sur le
+      ToolStrip, on peut comme ici, <b>incorporer instantanément tous les
+      boutons standards</b> ( nouveau, ouvrir, enregistrer, imprimer, couper,
+      copier, coller. magique!!)</font></p>
+      <p><font face="Courier New" size="2">Avec l'aide du petit bouton permettant les taches courantes sur le
+      ToolStrip, on peut&nbsp; aussi&nbsp; <b>mettre le ToolStrip dans un
+      conteneur</b> (<b>ToolStripContaineur</b>), en mode design , on voit apparaître
+      dessous des outils permettant de modifier&nbsp; le conteneur; si on clique
+      sur un des coté (dessous) on a accès aux propriétés du bord. (mais la
+      mise en oeuvre n'est pas facile!!)</font></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il n'y a plus de 'groupe de bouton' avec un
+seul bouton enfoncé, ou du moins j'ai pas trouvé.(On ne peut pas tout
+avoir!!) par contre, on peut 'enfoncer' ou non un bouton:</font></p>
+<p><font SIZE="2">.</font><font color="#0000FF"><font face="Courier New">ToolStripButton2</font></font><font face="Courier New"><font color="#0000FF" size="2">.</font><font SIZE="2" color="#0000FF">Checked
+= True</font></font></p>
+<p><font size="2" face="Courier New">On n'a pas accès à cette propriété (et
+d'autres) en utilisant les Items&nbsp; du ToolSTrip.</font></p>
+<p><font size="2" face="Courier New"><b>Comment créer un bouton à bascule:</b></font></p>
+<p><font face="Courier New" size="2">Lorsqu'un utilisateur clique sur un bouton
+bascule, ce bouton apparaît enfoncé et conserve cet aspect jusqu'à ce que
+l'utilisateur clique une nouvelle fois sur le bouton.</font></p>
+<pre><font face="Courier New" size="2" color="#0000FF">toolStripButton.CheckOnClick = True
+toolStripButton.CheckedChanged AddressOf EventHandler(toolStripButton_CheckedChanged)</font></pre>
+<pre><font face="Courier New" size="2">Merci Microsoft (Non testé)
+</font></pre>
+<p><font color="#FF0000" face="Courier New" size="2">Le ToolStrip contient des
+objets (button, label..) qui ont chacun leur procédure évènement.</font></p>
+<p>&nbsp;</p>
+<p><font color="#0000FF" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">
+StatuStrip en VB 2005:
+</span> </font></p>
+<p><font face="Courier New" color="#111111" size="2">Pour créer une barre d'état 
+en bas d'un formulaire; remplace les StatusBar.</font></p>
+<p><font face="Courier New" size="2">Peut contenir des <font color="#0000FF">ToolStripStatus</font><font color="#0000FF">Label</font>
+(Texte ou icone), des <font color="#0000FF">ToolStripProgressBar</font>, <font color="#0000FF">ToolStrip</font><font color="#0000FF">DropDownButton</font> et <font color="#0000FF">
+ToolsStripSplitButton </font>(combinaison d'un bouton standard et d'un bouton
+déroulant). Il n'y a plus de Panel.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-12.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:08 GMT -->
+</html>

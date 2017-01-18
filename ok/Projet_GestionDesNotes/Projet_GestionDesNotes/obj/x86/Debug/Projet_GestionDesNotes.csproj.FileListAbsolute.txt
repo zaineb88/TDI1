@@ -1,0 +1,14 @@
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.exe
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.pdb
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\bin\Debug\Projet_Maha_Et_Aouatif_TARIAF.exe
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\bin\Debug\Projet_Maha_Et_Aouatif_TARIAF.pdb
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.APropos.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.ConsultationDesNotes.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.GestionDesNoteDuEléves.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.GestionEléve.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.Recherche.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Couche_Interface.TournoiDesEléves.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\Projet_Maha_Et_Aouatif_TARIAF.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\Projet_GestionDesNotes\Projet_GestionDesNotes\obj\x86\Debug\GenerateResource.write.1.tlog

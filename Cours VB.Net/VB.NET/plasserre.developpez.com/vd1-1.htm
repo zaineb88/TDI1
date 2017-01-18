@@ -1,0 +1,405 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:14 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net Framework langage IL code machine</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-210.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">D 1.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Comprendre le FrameWork; 
+    compilation, code IL, binaire.</font></b></td>
+    <td width="14%" height="76"><a href="vd1-1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Comment fonctionne un programme VB.NET ?</span></b></font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Le Framework.NET</font></b></span></p>
+<font SIZE="2" face="Courier New">
+<p>Jusqu'à VB6, un programme VB avait besoin d'un RunTime (Fichier Dll: 
+VBRUN300.DLL par exemple pour VB3)</p>
+<p>En VB.net, pour qu'un programme fonctionne, il faut installer le <b>Framework.NET</b>:</p>
+<p>C'est <b>une plate-forme informatique, une couche entre Windows et l'application VB</b>.</p>
+<p>'<span class="citation">Framework' veut dire: bibliothèque de classes.</span></p>
+<p><span class="citation">Le Framework.Net est donc la bibliothèque de classes .NET et 
+contient ADO.NET, ASP.NET et Windows Forms.</span></p>
+<p><b><font color="#008000">Cette infrastructure offre un vaste accès à :</font></b></p>
+<ol>
+  <li><b><font color="#008000">l'ensemble du système d'exploitation.</font></b></li>
+  <li><b><font color="#008000">une collection de Classes pour fournir des objets utilisables pour créer des programmes.</font></b></li>
+  <li><b><font color="#008000">des routines d'exécution de programme.</font></b></li>
+</ol>
+<p><b><font color="#008000">ceci de manière homogène et très fiable. </font></b> </p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="71%" id="AutoNumber4" height="34">
+  <tr>
+    <td width="100%" bgcolor="#008080" height="34">
+    <p align="center"><b>Système d'exploitation:Windows</b></td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="71%" id="AutoNumber5" height="33">
+  <tr>
+    <td width="100%" bgcolor="#FF0000" height="33">
+    <p align="center"><b>Framework:CLR et Classes</b></td>
+  </tr>
+</table>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="71%" id="AutoNumber6" height="29">
+  <tr>
+    <td width="100%" bgcolor="#FFFF00" height="29">
+    <p align="center"><b>Visual Basic</b></td>
+  </tr>
+</table>
+<p>L'exécutable en Visual Basic </p>
+<ol>
+  <li><b>utilise les objets</b> (WindowsForms, Contrôles, type de variable,..)du Framework.</li>
+  <li><b>appelle les fonctions</b> (exécution, affichage, gestion de la mémoire, lecture dans une 
+  base de donnée..)du Framework.&nbsp; </li>
+</ol>
+<p>A la limite on peut considéré le Framework comme une machine virtuelle (comme 
+celle de Java). Il suffirait de porter le FrameWork sous Linux pour que les 
+programmes VB fonctionnent. (Info? Intox?, il existe bien le projet 'Mono' sous 
+Linux, mais il ne contient pas les Windows Forms) </p>
+<p><span style="background-color: #C0C0C0"><b>Inconvénients?</b></span></p>
+<p><b>La couche supplémentaire ralentit le programme?</b></p>
+<p>A peine dit Microsoft, cela serait insignifiant!&nbsp; En fait cela ralentit beaucoup. 
+Le Framework, quand il ouvre un formulaire appelle les routines&nbsp; de 
+Windows, c'est bien une couche supplémentaire.</p>
+<p><b>Et s'il y a une nouvelle version du Framework?</b></p>
+<p>Les versions successives devront être compatible ascendante et descendante!!</p>
+<p>En fait, on peut installer le Framework 1 et le Framework 2</p>
+<p><span style="background-color: #C0C0C0"><b>Intérêts?</b></span></p>
+<p><b>On installe une seule fois le Framework.</b></p>
+<p>Une fois le Framework installé, il suffit pour installer un nouveau programme 
+de 
+n'installer que l'exécutable.</p>
+<p><b>On peut utiliser plusieurs langages.</b></p>
+<p>Nous appelons les fonctions du FrameWork avec Visual Basic mais on peut aussi 
+le faire avec C# et 30 autres langages. La vitesse d'exécution sera la même, les 
+types de variables, les objets seront les mêmes. Plus de problèmes de transfert 
+de paramètres.</p>
+<p>Il est même possible de faire cohabiter plusieurs langages dans une même 
+application.</p>
+<p><b>Le code est homogène.</b></p>
+<p>Plus de bidouille, de ficelle de programmation pour contourner les lacunes 
+du langage et l'accès limité au système d'exploitation: Les milliers de Classes 
+du FrameWork donne accès à une multitude de fonctions et aux services du système 
+d'exploitation, cela nativement.</p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>Revoyons en détails le contenu du 
+Framework:</b></span></p>
+<p>Le<b> CLS&nbsp; (Common Language Spécification) </b>représente la partie 
+visible , interface entre les langages VB, C++, C#, J# et le Framework.</p>
+<p>&nbsp;</p>
+<p align="center"><img border="0" src="vframw.JPG" width="409" height="382"></p>
+<p>Il contient deux composants principaux&nbsp;:</p>
+<ul>
+  <li><b>Le Common Language Runtime (CLR).</b> </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p>Il permet:</p>
+    <p>Exécution du code managé.</p>
+    <p>Gestion de la mémoire (Garbage collector)</p>
+    <p>Utilisation des objets du FrameWork</p>
+    <p>Le runtime peut être considéré comme un 
+  agent qui manage le code au moment de l'exécution, qui l'exécute, fournit des 
+  services essentiels comme la gestion de la mémoire, la gestion des threads, et 
+  l'accès distant.</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><b>La bibliothèque de classes du .NET FrameWork</b>. (FrameWork Class 
+  Library)<p>&nbsp;C'est une collection complète orientée objet, que vous pouvez utiliser pour 
+  développer des applications allant des traditionnelles applications à ligne de 
+  commande ou à interface graphique utilisateur (GUI, <i>Graphical User 
+  Interface</i>) jusqu'à des applications qui exploitent les dernières 
+  innovations fournies par ASP.NET, comme les services Web XML et Web Forms. </p>
+  <p>Par exemple, les classes Windows Forms sont un ensemble complet de types 
+  réutilisables qui simplifient grandement le développement Windows. Si vous 
+  écrivez une application Web Form ASP.NET, vous pouvez utiliser les classes Web 
+  Forms.</p>
+  <p>Il existe un éventail de tâches courantes de programmation y compris des 
+  tâches comme la gestion de chaînes, la collection de données, la connectivité 
+  de bases de données, et l'accès aux fichiers.<p>Il y a 3300 Classes dans le 
+  Framework 1!!<p>
+<img border="0" src="vclasfram.jpg" width="601" height="424"><p>Plus 
+  d'appel aux Api Windows, on fait tout directement en utilisant les classes du 
+  Framework.<p>&nbsp;</li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><span style="font-family: Courier New; background-color: #C0C0C0">Framework
+1, 2, 3.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Un
+Framework est donc un ensemble de Classes.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>Le
+Framework 1.0</b> est utilisé par VB 2003, c'est le premier.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>Le
+Framework 2.0</b> est&nbsp; utilisé par VB 2005</p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt">Il
+  contient des classes supplémentaires.</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>Le
+Framework 3.0</b> peut être utilisé par VB 2005</p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt">Le
+  framework 3.0 est composé du framework 2.0 auquel s'ajoute WCF (Windows
+  Communication Foundation), WF (Windows Workflow Foundation), WPF (Windows
+  Presentation Foundation) et infocard pour l'authentification des utilisateurs.<br>
+  Windows Presentation foundation permet de gérer l' affichage des fenêtres.
+  Celui-ci est basé sur direct x (version 10).<br>
+  </p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>Le
+Framework 3.5 </b>utilisé par VB2008.</p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">C'est
+le Framework 3 auquel s'ajoute AJAX, LINQ et REST.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vframw35.JPG"></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">Sous
+Windows 98, XP, il faut installer le Framework (avant d'utiliser l'environnement
+VisualBasic ou un exécutable VB)</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Sous
+Windows Vista le Framework 3 fait partie de Vista et est installé nativement.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"> VB 2003
+utilise <b>le Framework 1.0</b>.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"> VB
+2005 utilise <b>le Framework 2.0</b>.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"> VB
+2008 permet de choisir et d'utiliser <b>le Framework 1.0, 2.0, 3.0, 3.5</b>.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Voici
+le Framework 3.5 , pour le voir en détails Microsoft le fournit en <a href="dotnet_poster_fr_large.pdf">PDF</a>.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vframw35tt.JPG" width="871" height="674"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</font>
+<p><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="3">Code managé:</font></span></p>
+<font SIZE="2" face="Courier New">
+<p>Le code écrit pour le FrameWork est dit managé (ou géré): il bénéficie des 
+avantages du Framework: gestion de la mémoire, optimisation de cette mémoire, 
+règles communes, utilisation de plusieurs langages..</p>
+<p>Les anciens composants COM sont utilisables mais non managés.</p>
+<p>L'interopérabilité entre les codes 
+managés et non managés permet aux développeurs de continuer à utiliser des 
+composants COM et des DLL nécessaires.</p>
+<p>&nbsp;</p>
+</font>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Garbage Collector:</font></b></span></p>
+<font SIZE="2" face="Courier New">
+<p>La destruction effective des objets et variables est effectuée par le 'garbage 
+collector' (ou ramasse-miettes).</p>
+<p><b>Avant .NET</b> quand on détruisait une variable, en lui affectant Nothing, 
+la destruction était immédiate (déterministe); si on oubliait (une application) 
+de détruire une variable de multiple fois il y avait problème!! </p>
+<p><b>Maintenant</b>, quand on détruit une variable, elle reste présente en 
+mémoire; c'est le garbage collector qui, quand il a le temps ou quand il n'y a 
+plus de place, détruit la variable et fait le ménage. On ne sait pas quand il va 
+le faire ( non déterministe).</p>
+</font>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Compilation:</font></b></span></p>
+<font SIZE="2" face="Courier New">
+<p>Le code que vous écrivez en Visual Basic est le <b>code source</b>.</p>
+<p>Lors de la <b>génération (compilation)</b> du projet, <b>un code intermédiaire est produit</b> (IL: 
+Intermédiaire Langage), ce code est commun à tous les langages.</p>
+<p><b>Lors de la 
+première exécution d'exécutable (.exe), le code IL est compilé en binaire par </b>le compilateur 'Just in Time'<b> 
+puis exécuté.</b> Les exécutions suivantes 
+seront plus rapides.</p>
+<p>En résumé:</p>
+<p><b>Code Source (VB, C#..) =&gt;&nbsp; Intermediate Language (IL)</b>. par le 
+compilateur syntaxique.</p>
+<p><b>IL =&gt; Binaire exécutable</b>&nbsp; par le compilateur 'Just in Time'</p>
+<p>&nbsp;</p>
+</font>
+<p><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="3">Comment voir le 
+code source ,le code IL, le code exécutable?</font></span></p>
+<font SIZE="2" face="Courier New">
+<p>Prenons un exemple: il y a dans une form1 une procédure&nbsp; Button1_Click:</p>
+<p><b>a-Voici le code source:</b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">Private</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2"><font color="#0000FF"> 
+Button1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">TextBox1.Text = &quot;hello&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">on génère ce code source cela donne 
+un fichier .exe (dans le répertoite /bin)</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b>b-Voir le code Intermédiaire (IL):</b></p>
+<p>Avec <b>Ildasm.exe</b>&nbsp; (désassembleur code IL) qui est dans le SDK:</p>
+<p>(C:\Program Files\Microsoft Visual Studio .NET 2003\SDK\v1.1\Bin)</p>
+<p>On peut ouvrir un fichier exe&nbsp; (menu 'Fichier'):</p>
+<p><img border="0" src="vilisam.JPG" width="402" height="259"></p>
+<p>Outre le MANIFEST qui contient les méta données de l'assembly, il y a le code 
+IL de l'application.</p>
+<p>Si on clique sur la ligne _Button1 , <b>on voit le code IL</b> correspondant 
+à la routine: (un menu de ildasm.exe permet de voir le code source en même 
+temps)</p>
+<p><img border="0" src="vil.JPG" width="1081" height="350"></p>
+<p>&nbsp;</p>
+<p><b>c- Voir le code binaire ( en 
+assembleur)?</b></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">Dans l'IDE (Pas dans la version
+Express!!), si je stoppe le 
+fonctionnement de la routine (par un point d'arrêt), le menu 'fenêtre', 'Code 
+machine' permet de voir <b>l exécutable mais sous forme d'assembleur</b>.</p>
+<blockquote>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0">Le véritable code binaire est 
+    composé d'instructions&nbsp; ayant chacune un code:</p>
+    <p style="margin-top: 0; margin-bottom: 0">Voici du code exécutable 
+    représenté en hexadécimal: 55 8b ec</p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <p style="margin-top: 0; margin-bottom: 0">Comme c'est totalement illisible, 
+    on affiche le code binaire sous une autre forme, en langage d'assemblage ou les instructions sont 
+    représentées par des mots mnémoniques: push (pour utiliser la pile), mov 
+    (pour déplacer un octet en mémoire..), le code est plus lisible.</p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  </blockquote>
+</blockquote>
+    <p style="margin-top: 0; margin-bottom: 0">Voici le code en assembleur de 
+    notre routine:</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">Private Sub Button1_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click</p>
+</font><font SIZE="2" COLOR="#808080">
+<p style="margin-top: 0; margin-bottom: 0">00000000 push ebp </p>
+<p style="margin-top: 0; margin-bottom: 0">00000001 mov ebp,esp </p>
+<p style="margin-top: 0; margin-bottom: 0">00000003 sub esp,8 </p>
+<p style="margin-top: 0; margin-bottom: 0">00000006 push edi </p>
+<p style="margin-top: 0; margin-bottom: 0">00000007 push esi </p>
+<p style="margin-top: 0; margin-bottom: 0">00000008 mov dword ptr [ebp-8],edx
+</p>
+<p style="margin-top: 0; margin-bottom: 0">0000000b mov esi,ecx </p>
+<p style="margin-top: 0; margin-bottom: 0">0000000d nop </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">TextBox1.Text = &quot;hello&quot;</p>
+</font><font SIZE="2" COLOR="#808080">
+<p style="margin-top: 0; margin-bottom: 0">0000000e mov ecx,esi </p>
+<p style="margin-top: 0; margin-bottom: 0">00000010 mov eax,dword ptr [ecx] </p>
+<p style="margin-top: 0; margin-bottom: 0">00000012 call dword ptr [eax+000005B8h]
+</p>
+<p style="margin-top: 0; margin-bottom: 0">00000018 mov edi,eax </p>
+<p style="margin-top: 0; margin-bottom: 0">0000001a mov edx,dword ptr ds:[020B1648h]
+</p>
+<p style="margin-top: 0; margin-bottom: 0">00000020 mov ecx,edi </p>
+<p style="margin-top: 0; margin-bottom: 0">00000022 mov eax,dword ptr [ecx] </p>
+<p style="margin-top: 0; margin-bottom: 0">00000024 call dword ptr [eax+000000E8h]
+</p>
+<p style="margin-top: 0; margin-bottom: 0">0000002a nop </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">End Sub</p>
+</font><font SIZE="2" COLOR="#808080">
+<p style="margin-top: 0; margin-bottom: 0">0000002b nop </p>
+<p style="margin-top: 0; margin-bottom: 0">0000002c pop esi </p>
+<p style="margin-top: 0; margin-bottom: 0">0000002d pop edi </p>
+<p style="margin-top: 0; margin-bottom: 0">0000002e mov esp,ebp </p>
+<p style="margin-top: 0; margin-bottom: 0">00000030 pop ebp </p>
+<p style="margin-top: 0; margin-bottom: 0">00000031 ret 4 </p>
+</font>
+<p>On note que pour information et amélioration de la lisibilité, le code source 
+est ajouté.</p>
+<p>&nbsp;</p>
+<p><b>d-Voir le véritable code binaire:</b></p>
+<p><font SIZE="2">(Pas dans la version Express!!)
+</font></p>
+<p>Si je fais  menu 'Déboguer', 'Fenêtre', 'Mémoire', j'ai un dump de la 
+mémoire en hexadécimal qui montre<b> le véritable code binaire.</b></p>
+<p><img border="0" src="vdump.JPG" width="1025" height="179"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</font>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Installation du Framework:</font></b></span></p>
+<font SIZE="2" face="Courier New">
+<p>Les applications et contrôles écrits pour le .NET Framework imposent que 
+celui-ci soit installé sur l'ordinateur où ils s'exécutent. Microsoft fournit un 
+programme d'installation redistribuable, <b>Dotnetfx.exe </b>, qui contient les 
+composants Common Language Runtime et .NET Framework nécessaire à l'exécution 
+des applications .NET Framework.</p>
+<p>Pour installer le FrameWork, il faut au moins:</p>
+<ul type="disc">
+  <li>Microsoft® Windows®&nbsp;98 </li>
+  <li>Microsoft® Windows®&nbsp;98 Deuxième Édition </li>
+  <li>Microsoft® Windows® Millennium Edition (Windows Me) </li>
+  <li>Microsoft® Windows NT&nbsp;4 (Workstation ou Server) avec le Service Pack&nbsp;6a
+  </li>
+  <li>Microsoft® Windows®&nbsp;2000 (Professionnel) avec MAJ. </li>
+  <li>Microsoft® Windows®&nbsp;XP (Édition familiale ou Professionnel) </li>
+  <li>Famille Microsoft® Windows®&nbsp;Server&nbsp;2003</li>
+  <li><font SIZE="2" face="Courier New">Microsoft® Windows® Vista
+</font>
+  </li>
+</ul>
+<p><b>Ou le trouver:</b></p>
+<p>Dans le <b>MSDN Download Center</b> sur Internet:  </p>
+<p>(Bien choisir la version française car on ne peut pas installer plusieurs 
+versions de langue différente)</p>
+<p>Pour développer il faut ensuite installer Visual Studio.Net.</p>
+<p>L'utilisateur final de l'exécutable installera le FrameWork&nbsp; (une seule 
+fois pour tous les programmes) et l'exécutable (grâce à l'installateur).</p>
+<p><b>Ou est le Framework?</b></p>
+<p>dans:</p>
+<p>c:\Windows\Microsoft.NET\Framework\v1.1 4322\</p>
+<p>On voit les DLL qui composent le Framework: System.dll, System.Drawing.dll..</p>
+<p>La version 1.1 fait 73 Mo sur le disque</p>
+<p>On peut installer à coté la version 1.0; Pourquoi installer les 2 si il y a 
+compatibilité ascendante? c'est une question!!</p>
+</font>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Nouvelles versions:</font></b></span></p>
+<font SIZE="2" face="Courier New">
+<p>VisualStudio 2005 utilise le Framework 2.0, bien sur il y a un SDK 2.0</p>
+<p>VisualStudio 2008 utilise le Framework 2.0, 3.0, 3.5. </p>
+</font>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-210.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vd1-1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:34 GMT -->
+</html>

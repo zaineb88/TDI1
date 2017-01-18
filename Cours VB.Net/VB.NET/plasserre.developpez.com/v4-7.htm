@@ -1,0 +1,811 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:42 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les répertoires : directory</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.7</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Travailler sur les 
+    répertoires.</font></b></td>
+    <td width="9%" height="76"><a href="v4-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vrepert.JPG" width="58" height="49"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment créer, copier 
+effacer des répertoires (ou dossiers)?</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Avec les classes&nbsp; <b>DirectoryInfo</b> 
+et <b>Directory</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Avec la classe <b>Path</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Avec la classe <b>Environment</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Avec <b>My.Computer.FileSystem</b> en VS 
+2005.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Avec les Classes de <b>VisualBasic</b>.</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">Comment créer une boite de 
+dialogue 'choix de répertoire' en VB2005?</font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Classe&nbsp; DirectoryInfo et la Classe 
+Directory du Framework:</span></font></b></p>
+<p><font face="Courier New" size="2">Pour travailler sur les dossiers (ou 
+répertoires), il faut au préalable taper:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.IO</font></p>
+</font>
+<p><font face="Courier New" size="2">La classe</font><font face="Courier New" size="4"> <b>Directory</b></font><font face="Courier New" size="2"> est utilisée pour travailler sur un ensemble de 
+dossier, 
+la Classe <b>directoryInfo</b> donne des renseignements sur un dossier particulier 
+(Après instanciation ).</font></p>
+<p><font face="Courier New" size="2">La Classe </font>
+<font face="Courier New" size="4"><b>Directory</b></font><font face="Courier New" size="2"> possède les méthodes suivantes.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Exists</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Teste si le dossier existe.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">CreateDirectory</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crée le dossier</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Delete </font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Efface le dossier</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Move</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Déplacement de dossier</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">
+GetCurrentDirectory </font></b>&nbsp; Retourne le dossier de travail de 
+l'application en cours</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">
+SetCurrentDirectory</font></b>&nbsp;&nbsp; Définit le dossier de travail de 
+l'application.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">GetDirectoryRoot
+</font></b>&nbsp;&nbsp;&nbsp;&nbsp; Retourne le dossier racine du chemin spécifié.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">GetDirectories</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retourne le tableau des sous dossiers du dossier spécifié.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>GetFiles</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retourne les fichiers du dossier spécifié.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">
+GetFilesSystemEntries</font></b> Retourne fichier et sous dossier avec 
+possibilité d'un filtre.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">GetLogicalDrives</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Retourne les disques</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">GetParent</font></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Retourne le dossier parent du dossier spécifié.</font></p>
+<p><font face="Courier New" size="2">La Classe Directory est <b>statique</b> : 
+on l'utilise directement.</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><b>Afficher dans une ListeBox&nbsp; les sous 
+dossiers </b>&nbsp;(répertoires) du répertoire de l'application:</font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Dim SousDos() As String= Directory.GetDirectories(Directory.GetCurrentDirectory)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Dim Dossier As String</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">For Each Dossier In SousDos</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; List1.Items.Add(Dossier)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Next</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+<b>Afficher dans une ListeBox&nbsp; les sous 
+dossiers et fichiers.</b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+On utilise ici la récursivité. Pour chaque sous-répertoire, on appelle la 
+routine elle même.</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Imports</font><font face="Courier New" color="#0000FF" SIZE="2"> 
+System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF">Sub&nbsp; AfficheTree ( ByVal myDir As String, ByVal 
+Optional 
+Niveau As Integer =0)</font></p>
+<font SIZE="2" face="Courier New" color="#008080">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+'Affiche le répertoire myDir</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New" color="#0000FF">
+<span style="background-color: #FFFFFF">List1.Items.Add(New String (&quot; &quot;, niveau 
+*2) &amp; myDir)</span></font></p>
+</font>
+<font SIZE="2" face="Courier New" color="#008080">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+'Affiche les fichiers</p>
+</font>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">For Each fichier As String&nbsp; In 
+Directory.GetFiles( myDir)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; List1.Items.Add(New 
+String (&quot; &quot;, niveau *2+2) &amp; fichier)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Next</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New" color="#008080">
+'Parcourt les sous-répertoires</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">For each sousRepertoire As String In 
+Directory.GetDirectories( myDir)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; </span>
+<font SIZE="2" face="Courier New" color="#008080">
+'Appel de manière récursive 'AfficheTree pour afficher le contenu des sous 
+répertoires.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; AfficheTree (sousRepertoire, 
+niveau+1)</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Next</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">End Sub</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+</font>
+<span style="background-color: #FFFFFF">
+<font SIZE="2" face="Courier New">
+La variable niveau&nbsp; permet de pratiquer une indentation</font><font SIZE="2" face="Courier New" color="#0000FF">
+:New String (&quot; &quot;, niveau*2)
+</font>
+<font SIZE="2" face="Courier New">
+produit une chaîne d'espace de longueur <font color="#0000FF">niveau *2</font></font></span><font SIZE="2" face="Courier New" color="#0000FF">.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On appelle cette routine avec</font><font face="Courier New" size="2" color="#0000FF">&nbsp; 
+AfficheTree (c:\myprogramme&quot;, 0) </font><font face="Courier New" size="2">
+'éviter &quot;c:\&quot; car c'est très très long!!! on le fait tous pour tester!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Directory.GetFiles</font><font SIZE="2" face="Courier New"> et</font><font SIZE="2" face="Courier New" color="#0000FF">
+Directory.GetDirectories
+</font>
+<font SIZE="2" face="Courier New">
+acceptent un argument supplémentaire qui fait office de filtre.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Directory.GetFiles( myDir, &quot;*.txt&quot;)
+</font>
+<font SIZE="2" face="Courier New">
+'pour ne voir que les fichiers .txt.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+<b>Afficher dans une ListeBox&nbsp; les exécutables d'un répertoire et de ses 
+sous-répertoires.</b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+Ici on utilise un argument supplémentaire qui permet de rechercher dans les sous 
+répertoires.</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Imports</font><font face="Courier New" color="#0000FF" SIZE="2"> 
+System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">For Each file As 
+String In Directory.GetFiles(&quot;c:\windows&quot;, &quot;*.exe&quot;,
+System.IO.SearchOption.AllDirectories ))</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+List1.Items.Add (file)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Next</font></span></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">&nbsp;Génial 
+, non?&nbsp; quelle économie de code!!</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+<b>Afficher dans une ListeBox&nbsp; les disques.</b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Imports</font><font face="Courier New" color="#0000FF" SIZE="2"> 
+System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">For Each disque As 
+String In Directory.GetLogicalDrives()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+List1.Items.Add (Disque)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Next&nbsp; </font>
+</span></p>
+</font>
+<font SIZE="2" face="Courier New" color="#008080">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>Afficher dans une ListeBox&nbsp; les fichiers .jpg d'un répertoire.</b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2">
+<font color="#0000FF">Dim dirInfo As New
+System.IO.DirectoryInfo (&quot;C:\Nos
+Images\sicile&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Dim
+file As
+System.IO.FileInfo</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Dim
+files() As
+System.IO.FileInfo = dirInfo.GetFiles(&quot;*.jpg&quot;)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" color="#0000ff">If
+(files IsNot Nothing) Then</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">For Each file In
+files</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp;
+ListBox1.Items.Add(file.FullName)&nbsp;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font SIZE="2" color="#0000ff">Next
+</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">End If</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>Changer de répertoire courant, effacer un sous-répertoire.</b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF">Directory.SetCurrentDirectry (c:\mydirectory&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF">Directory.Delete (c:\otherdirectory&quot;) </font>'efface ce 
+répertoire s'il est vide</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF">Directory.Delete (c:\otherdirectory&quot;, True) </font>'efface 
+ce répertoire ses fichiers et sous-répertoires.</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;Ah!! nostalgique du DEL *.*</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p><font face="Courier New" size="2">La Classe </font>
+<font face="Courier New" size="4"> <b>DirectoryInfo</b></font><font face="Courier New" size="2"> possède les propriétés suivantes.</font></p>
+<p><font face="Courier New" size="2"><font color="#808000"><b>Name</b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nom du dossier (sans extension)</font></p>
+<p><font face="Courier New" size="2"><b><font color="#808000">Full Name </font>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chemin et nom du dossier</font></p>
+<p><font color="#808000" face="Courier New" size="2"><b>Exists</b></font></p>
+<p><font face="Courier New" size="2" color="#808000"><b>Parent&nbsp;&nbsp;&nbsp;
+</b></font><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; Dossier parent</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">Root&nbsp;&nbsp;&nbsp;
+</font></b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Racine du dossier</font></p>
+<p><font face="Courier New" size="2">La Classe DirectoryInfo n'est <b>pas 
+statique</b> : il faut instancier un dossier avant de l'utiliser.</font></p>
+<p><font face="Courier New" size="2">Il y a aussi les méthodes suivantes:</font></p>
+<p><b><font color="#808000" face="Courier New" size="2">Create, Delete, MoveTo</font></b></p>
+<p><b><font face="Courier New" size="2" color="#808000">CreateSubdirectory</font></b></p>
+<p><font face="Courier New" size="2" color="#808000"><b>GetDirectories&nbsp;&nbsp;&nbsp;
+</b></font><font face="Courier New" size="2">Retourne les sous-dossiers</font></p>
+<p><font face="Courier New" size="2" color="#808000"><b>GetFiles&nbsp;&nbsp;&nbsp;
+</b></font><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Retourne des fichiers</font></p>
+<p><b><font face="Courier New" size="2" color="#808000">GetFileSystemInfos</font></b></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><b><font face="Courier New" size="2">Afficher le répertoire parent d'un 
+dossier:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim D As DirectoryInfo</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">D= New DirectoryInfo( 
+MonDossier)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">MsgBox(D.Parent.ToString)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" size="2">Créer un répertoire:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim D As DirectoryInfo</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">D= New DirectoryInfo( 
+MonDossier)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">D.CreateSubdirectory(&quot;monsousdossier&quot;)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" size="2">Effacer un répertoire et ses 
+sous-répertoires:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim D As DirectoryInfo</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">D= New DirectoryInfo( 
+MonDossier)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">D.Delete(True)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Classe&nbsp; Path</span></font></b></p>
+<p><font face="Courier New" size="2">La Classe statique <b>Path</b> a des 
+méthodes simplifiant la manipulation des répertoires:</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2">Si&nbsp; <font color="#0000FF">C= &quot;C:\Windows\MonFichier.txt&quot;</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.GetDirectoryName(C)</span></font><span style="background-color: #FFFFFF">&nbsp;</span> 
+retourne &quot;C:\Windows</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.GetFileName(C)</span></font> 
+retourne &quot;Monfichier.txt&quot;</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.GetExtension(C)</span></font> 
+retourne &quot;.txt&quot;</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.GetFileNameWithoutExtension(C)</span></font> retourne &quot;MonFichier&quot;</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.PathRoot(C)</span></font> 
+retourne &quot;c:\&quot;</font></p>
+<p><font face="Courier New" size="2">Il y a aussi les méthodes&nbsp; <b>
+GetFulPath
+ChangeExtension, Combine, HasExtension</b>...</font></p>
+<p> <b>
+<font face="Courier New" size="2">GetFulPath: </font></b>
+<font face="Courier New" size="2">Transforme un chemin relatif en chemin absolu 
+à l'aide du répertoire courant.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.GetFullPath(&quot;monAppli.exe&quot;))</span></font> 
+retourne <font color="#0000FF">
+<span style="background-color: #FFFFFF">&quot;C:\MonRep\monAppli.exe&quot; </font>si le 
+répertoire courant est<font color="#0000FF">
+&quot;C:\MonRep&quot;</font></span></font></p>
+<p><font face="Courier New" size="2"> <b>
+Combine: </b>combine bout à bout un chemin et un nom de fichier</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Path.Combine(&quot;C:\MonRep&quot;, &quot;monAppli.exe&quot;))</span></font> 
+retourne <font color="#0000FF">
+<span style="background-color: #FFFFFF">&quot;<a href="file:///C:/MonRep/monAppli.exe">C:\MonRep\monAppli.exe</a>&quot;</span></font></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Classe&nbsp; DriveInfo</span></font></b></p>
+<p><font face="Courier New" size="2">Nouveauté en VB 2005, la Classe DriveInfo :</font></p>
+<p><font face="Courier New" size="2">Pour un disque particulier, il faut 
+instancier un DriveInfo avec la lettre du drive, ensuite, on a accès à toutes 
+les propriétés du lecteur.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim di As New DriveInfo 
+(&quot;c:&quot;)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">di.Name</font> 
+retourne le nom&nbsp; du lecteur ( &quot;c:&quot; ici)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">VolumeLabel</font>&nbsp; 
+Nom (label) du lecteur (en lecture écriture)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">DriveType</font> ( 
+Fixed, Removal, CDRom, Ram, Networl, Unknown)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">DriveFormat</font> (NTFS, 
+Fat32)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">TotalSize</font>,
+<font color="#0000FF">TotalFreeSpace</font>, <font color="#0000FF">
+AvailableFreeSpace</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><font color="#0000FF">DriveInfo.GetDrives</font> 
+retourne tous les disques installées</font></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">For Each di As DriveInfo in 
+DriveInfo.GetDrives()</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;If di.IsReady Then
+</font><font face="Courier New" size="2">'il parait qu'il faut bien tester s'il 
+est ready!!</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; MsgBox (di.VolumeLabel)</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;End if</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Next</font></span></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Classe Environment</span></font></b></p>
+<p><font face="Courier New" size="2">Donne des informations concernant 
+l'environnement et la plate-forme en cours ainsi que des moyens pour les 
+manipuler. Par exemple: les arguments de la ligne de commande, le code de 
+sortie, les paramètres des variables d'environnement, le contenu de la pile des 
+appels, le temps écoulé depuis le dernier démarrage du système ou le numéro de 
+version du Common Language Runtime <b>mais aussi certains&nbsp; répertoires</b> .</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Environment.CurrentDirectory</span> </font>&nbsp;'donne le répertoire courant : ou le 
+processus en cours démarre.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Environment.</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MachineName</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Obtient le nom NetBIOS 
+de l'ordinateur local.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Environment.</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">OsVersion</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Obtient un objet contenant l'identificateur et le numéro de version de la 
+plate-forme en cours.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Environment.</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">SystemDirectory</span></font>&nbsp;&nbsp; 
+'Obtient le chemin qualifié complet du répertoire du système</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Environment.</span></font><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">UserName</span><span style="background-color: #FFFFFF">
+</span>
+</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Obtient le nom d'utilisateur de la 
+personne qui a lancé le thread en cours.</font></p>
+<p><font face="Courier New" size="2">La fonction<font color="#0000FF"> 
+GetFolderPath </font>&nbsp;avec un argument faisant partie de l'énumération 
+SpecialFolder retourne le répertoire d'un tas de choses:</font></p>
+<p><font face="Courier New" size="2">Exemple: Quel est le répertoire Système?</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Environment.GetFolderPath(Environment.SpecialFolder.System)</span></font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Comment récupérer le nom des disques?</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim drives As String() = 
+Environment.GetLogicalDrives()</span></font><br>
+&nbsp;</p>
+<p><font face="Courier New" size="2">Comment récupérer la ligne de commande?</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim arguments As String() = 
+Environment.GetCommandLineArgs()</span></font></p>
+<p><br>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<img border="0" src="../localhost/C_/WINLDF/Site%20developpez.com/v2005.JPG" width="52" height="21"><b> Classe 
+My.Computer.FileSystem</b> en VS 2005.</span></font></p>
+<p><font face="Courier New" size="2">En VS 2005 la classe <font color="#0000FF">
+My.Computer.FileSystem</font> simplifie énormément les choses:</font></p>
+<p><font face="Courier New" size="2">les méthodes <font color="#0000FF">
+CopyDirectory</font>, <font color="#0000FF">CreateDirectory</font>,
+<font color="#0000FF">DeleteDirectory</font>, <font color="#0000FF">
+DirectoryExits </font>permettent de copier, créer, effacer un répertoire ou de 
+voir s'il existe. Il existe aussi <font color="#0000FF">RenameDirectory</font> 
+et <font color="#0000FF">MoveDirectory</font>.</font></p>
+<p><font face="Courier New" size="2">Exemple :</font></p>
+<p><font face="Courier New" size="2">Afficher dans une MsgBox True si le 
+répertoire 'c:\MyApplication\' 
+existe.</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">MsgBox(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">My</font><font SIZE="2" color="#0000FF"><font face="Courier New">.Computer.FileSystem.FileExists(&quot;c:\MyApllication\&quot;).ToString)</font></p>
+</font>
+<p><font face="Courier New" size="2">Copier un répertoire dans un autre:</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.CopyDirectory(&quot;c:\a\&quot;, 
+&quot;c:\b\&quot;)</font></font></p>
+<p><font face="Courier New" size="2">Exemple :</font></p>
+<p><font face="Courier New" size="2">Afficher la liste des répertoires qui sont 
+sous c:\; ici on utilise <font color="#0000FF">GetDirectories</font> qui 
+retourne une collection des répertoires.(count contient le nombre des 
+répertoires, item () les noms.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2" color="#0000FF"> 
+i = 0 </font><font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.GetDirectories(&quot;c:\&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">).Count 
+- 1</font></p>
+<p><font color="#0000FF" face="Courier New">ListBox1.Items.Add(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.GetDirectories(&quot;c:\&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">).Item(i))</font></p>
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Next</font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+i</font></font></p>
+<p><font face="Courier New"><font SIZE="2" color="#0000FF">SpecialDirectories
+</font><font SIZE="2">permet de connaître certains répertoires spéciaux comme</font><font SIZE="2" color="#0000FF"> 
+Programs, My Documents, My Music.. </font></font></p>
+<p><font SIZE="2"><font face="Courier New">Exemple:</font></p>
+</font><font SIZE="2" color="#0000FF">
+<p><font face="Courier New">MsgBox(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">My</font><font SIZE="2" color="#0000FF"><font face="Courier New">.Computer.FileSystem.SpecialDirectories.CurrentUserApplicationData)</font></p>
+</font>
+<p>&nbsp;</p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">My</font><font SIZE="2" color="#0000FF">.Computer.FileSystem.Drives
+</font><font SIZE="2">est une collection contenant les disques présents.</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">On peut rechercher les fichiers qui
+contiennent un certain texte et afficher leurs noms dans une listBox.</font></p>
+<p><font face="Courier New" size="2">Grâce à </font><font face="Courier New" color="#0000FF" size="2">My.Computer.FileSystem.FindInFiles
+(Répertoire, texteàchercher, respectdelacasse, tyderecherche)</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">Dim value As
+System.Collections.ObjectModel.ReadOnlyCollection(Of String) =
+My.Computer.FileSystem.FindInFiles(&quot;c:\&quot;, &quot;Open&quot;, False,
+FileIO.SearchOption.SearchTopLevelOnly)</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">For Each name As String In
+value</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2" color="#0000FF">ListBox1.Items.Add(name)</font></p>
+</font>
+<p><font face="Courier New" size="2" color="#0000FF">Next</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">On peut aussi utiliser les 
+anciennes méthodes de l'espace Visual Basic:</font></b></span></p>
+<p><font face="Courier New" size="2"><b>CurDir()</b> retourne le chemin d'accès 
+en cours.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MyPath = CurDir() <br>
+MyPath = CurDir(&quot;C&quot;c) </span> </font><br>
+&nbsp;</font></p>
+<p><b><font face="Courier New" size="2">Dir()</font></b></p>
+<p><font face="Courier New" size="2">Retourne une chaîne représentant le nom 
+d'un fichier, d'un répertoire ou d'un dossier qui correspond à un modèle ou un 
+attribut de fichier spécifié ou à l'étiquette de volume d'un lecteur.</font></p>
+<p><font face="Courier New" size="2">'vérifier si un fichier existe:</font></p>
+<p><font face="Courier New" size="2">' Retourne &quot;WIN.INI&quot; si il existe.<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">MyFile = Dir(&quot;C:\WINDOWS\WIN.INI&quot;)</font></span><br>
+<br>
+' Retourne le fichier spécifié par l'extension .<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">MyFile = Dir(&quot;C:\WINDOWS\*.INI&quot;)</font><br>
+</span>
+<br>
+'Un nouveau Dir retourne le fichier suivant<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">MyFile = Dir()</font><br>
+</span>
+<br>
+' On peut surcharger avec un attribut qui sert de filtre .<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">MyFile = Dir(&quot;*.TXT&quot;, vbHidden)</font></span> ' affiche les 
+fichiers cachés<br>
+<br>
+' Recherche les sous répertoires.<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">MyPath = &quot;c:\&quot; ' Set the path.<br>
+MyName = Dir(MyPath, vbDirectory)</font> <br>
+&nbsp;</span></font></p>
+<p><font face="Courier New" size="2"><b>ChDrive</b>&nbsp; change le lecteur 
+actif. La fonction lève une exception si le lecteur n'existe pas.</font></p>
+<pre class="code"><font color="#0000FF"><code><font face="Courier New"><span style="background-color: #FFFFFF">ChDrive(</span></font></code><font face="Courier New"><span style="background-color: #FFFFFF">&quot;D&quot;) </span></font></font><font face="Courier New"><span style="background-color: #FFFFFF">  </span></font></pre>
+<p><font face="Courier New" size="2"><b>MkDir</b>&nbsp; crée un répertoire ou un 
+dossier. Si aucun lecteur n'est spécifié, le nouveau répertoire ou dossier est 
+créé sur le lecteur actif.</font></p>
+<pre class="code"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF">MkDir(&quot;C:\MYDIR&quot;) </span></font></pre>
+<pre class="code"><font face="Courier New"><b>RmDir</b>  enlève un répertoire ou un dossier existant.
+' Vérifier que le répertoire est vide sinon effacer les fichier avec <b>Kill</b>.
+<font color="#0000FF"><span style="background-color: #FFFFFF">RmDir (&quot;MYDIR&quot;) </span></font></font></pre>
+<pre class="code"><font face="Courier New"><b>ChDir</b> change le répertoire par défaut mais pas le lecteur par défaut. </font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF">ChDir(&quot;D:\TMP&quot;)</span></font></pre>
+<pre class="code"><font face="Courier New">L'exécution de changements relatifs de répertoire s'effectue à l'aide de &quot;..&quot;, comme suit :
+<span style="background-color: #FFFFFF"><font color="#0000FF">ChDir(&quot;..&quot;)</font></span> ' Remonte au répertoire parent.
+
+<b>FileCopy</b></font></pre>
+<pre class="code"><font face="Courier New">Copier un fichier. </font></pre>
+<pre class="code"><font face="Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">FileCopy(SourceFile, DestinationFile)</span></font>
+</font></pre>
+<pre class="code"><font face="Courier New"><b>Rename</b></font></pre>
+<pre class="code"><font face="Courier New">Renommer un fichier, un répertoire ou un dossier.</font></pre>
+<pre class="code"><font face="Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">Rename (OldName, NewName)</span></font>
+</font></pre>
+<pre class="code"><font face="Courier New"><b>FileLen</b> donne la longueur du fichier, <b>SetAttr</b> et <b>GetAttr</b> modifie ou lit les attributs du fichier</font></pre>
+<p><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Result = GetAttr(FName)</span></font></p>
+<p><font face="Courier New" size="2">Result est une combinaison des attributs. 
+Pour déterminer les attributs définis, utilisez l'opérateur And pour effectuer 
+une comparaison d'opérations de bits entre la valeur retournée par la fonction 
+GetAttr et la valeur de l'attribut. Si le résultat est différent de zéro, cet 
+attribut est défini pour le fichier désigné. Par exemple, la valeur de retour de 
+l'expression And suivante est zéro si l'attribut Archive n'est pas défini :<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">Result = GetAttr(FName) And vbArchive</font><br>
+&nbsp;</span></font></p>
+<font COLOR="#0000ff" size="4">
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">
+<span style="background-color: #C0C0C0">Comment créer une boite de dialogue 
+'Choix de répertoire' en VB2005</span></font></b></font><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF">?</font></b></span><font SIZE="2" COLOR="#0000ff"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut instancier un</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<font color="#0000FF" SIZE="2">FolderBrowserDialog</font></font><font SIZE="2">, 
+indiquer le répertoire de départ</font><font color="#0000FF" SIZE="2"> 
+(RootFolder)</font><font SIZE="2">, le texte de la barre (</font><font color="#0000FF" SIZE="2">Description</font><font SIZE="2">) 
+et l'ouvrir avec</font><font color="#0000FF" SIZE="2"> 
+ShowDialog.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2">Le répertoire 
+sélectionné par l'utilisateur se trouve dans</font><font SIZE="2" COLOR="#0000ff">
+</font><font SIZE="2" color="#0000FF">SelectedPath</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New"> 
+.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+fB </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+FolderBrowserDialog</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">fB.RootFolder = 
+Environment.SpecialFolder.Desktop</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">fB.Description 
+= </font></font><font SIZE="2" COLOR="#0000FF"><font face="Courier New">&quot;Sélectionnez un répertoire&quot;</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">fB.ShowDialog()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+fB.SelectedPath = </font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF">.Empty
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp; MsgBox(&quot;Pas de sélection&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">&nbsp; MsgBox(fB.SelectedPath)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2" color="#0000FF" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">fB.Dispose()</p>
+</font>
+<p align="center"><img border="0" src="vchoixfolder.JPG"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" color="#0000ff" size="4"><span style="BACKGROUND-COLOR: #c0c0c0">Parcours
+de répertoires et sous répertoires:</span></font></b></p>
+<p><b><font face="Courier New" size="2">On veut afficher dans une ListBox les
+noms des répertoires, sous-répertoires et fichiers en utilisant la
+récursivité:</font></b></p>
+<p><font face="Courier New" size="2">On crée une routine <font color="#0000ff">AfficheTree</font>
+qui affiche</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Le nom du répertoire courant.</font></p>
+  <p><font face="Courier New" size="2">Le nom des fichiers du répertoire
+  courant.</font></p>
+  <p><font face="Courier New" size="2">Qui parcourt les sous-répertoires et
+  pour chacun d'eux appelle <font color="#0000ff">AfficheTree</font></font></p>
+</blockquote>
+<pre>&nbsp;</pre>
+<font face="Courier New" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">Imports
+System.IO</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font color="#0000ff">Sub&nbsp;
+AfficheTree ( ByVal myDir As String, ByVal Optional Niveau As Integer =0)</font></p>
+<font face="Courier New" color="#008080" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">'Affiche le répertoire myDir</p>
+</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">List1.Items.Add(New
+String (&quot; &quot;, niveau *2) &amp; myDir)</span></font></p>
+</font><font face="Courier New" color="#008080" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">'Affiche les fichiers</p>
+</font><font face="Courier New" color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">For
+Each fichier As String&nbsp; In Directory.GetFiles( myDir)</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+List1.Items.Add(New String (&quot; &quot;, niveau *2+2) &amp; fichier)</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">Next</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008080" size="2">'Parcourt
+les sous-répertoires</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">For
+each sousRepertoire As String In Directory.GetDirectories( myDir)</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+</span><font face="Courier New" color="#008080" size="2">'Appel de manière récursive
+'AfficheTree pour afficher le contenu des sous répertoires.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;
+AfficheTree (sousRepertoire, niveau+1)</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">Next</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff">End
+Sub</span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+</font>
+<p><b><font face="Courier New" color="#0000ff" size="4"><span style="background-color: #c0c0c0">Lire
+le nom des fichiers du répertoire courant&nbsp; avec Link.(VB 2008)</span></font></b></p>
+<p xmlid="PARA006"><font color="#0000FF" face="Courier New" size="2">Dim myFiles= FRom Files in
+My.Computer.fyleSystem.GetFile(CurDir)</font></p>
+<p xmlid="PARA006"><font color="#0000FF" face="Courier New" size="2">Select Files</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:42 GMT -->
+</html>

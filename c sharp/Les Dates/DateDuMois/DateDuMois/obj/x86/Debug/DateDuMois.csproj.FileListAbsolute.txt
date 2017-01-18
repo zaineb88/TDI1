@@ -1,0 +1,10 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateDuMois\DateDuMois\bin\Debug\DateDuMois.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateDuMois\DateDuMois\bin\Debug\DateDuMois.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateDuMois\DateDuMois\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateDuMois\DateDuMois\obj\x86\Debug\DateDuMois.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\DateDuMois\DateDuMois\obj\x86\Debug\DateDuMois.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\DateDuMois\DateDuMois\obj\x86\Debug\DateDuMois.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\DateDuMois\DateDuMois\obj\x86\Debug\DateDuMois.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\DateDuMois\DateDuMois\bin\Debug\DateDuMois.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\DateDuMois\DateDuMois\bin\Debug\DateDuMois.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\DateDuMois\DateDuMois\obj\x86\Debug\ResolveAssemblyReference.cache

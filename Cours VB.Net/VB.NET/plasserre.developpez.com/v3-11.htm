@@ -1,0 +1,232 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:03 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET menu: mainmenu contextmenu mainmenustrip contextmenustrip </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.11</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">MainMenu, ContextMenu.</font></b></td>
+    <td width="14%" height="76"><a href="v3-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" face="Courier New" size="2">Comment créer un menu 
+principal en haut d'un formulaire ou un ContextMenu?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" face="Courier New" size="2">Avec MainMenu et ContextMenu 
+en VB 2003.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" face="Courier New" size="2">Avec MenuTrip et 
+ContextMenuStrip en VB 2005.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">MainMenu en Vb 2003</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On peut ajouter un menu 
+dans une fenêtre.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Beaucoup 
+d’applications contiennent un menu.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple de menu&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vmenu.JPG" width="76" height="133"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On remarque que le 
+contenu des menus est <b>standardisé</b> afin que l’utilisateur s’y retrouve 
+sans aide (L’utilisateur lit, à mon avis, rarement les aides&nbsp;!!)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+Comment créer un menu&nbsp;?</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En allant dans la 
+boite à outils, chercher un <b>main menu</b> et en le déposant sur la fenêtre&nbsp;: 
+il apparaît en dessous de la fenêtre.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour dessiner le 
+menu, il suffit de mettre le curseur sur le menu en haut de la fenêtre, ou est 
+écrit ‘Taper ici’&nbsp;: tapez le texte du menu, (&quot;Fichier&quot; par exemple).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vmenu1.gif" width="128" height="110"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il apparaît 
+automatiquement un ‘Tapez Ici‘ pour les lignes dessous ou le menu suivant.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Les lignes du menu 
+sont nommées automatiquement MenuItem1, MenuItem2..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Quand le curseur est 
+sur une ligne du menu, la fenêtre de propriété donne les propriétés de la ligne&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La propriété <b>
+ShortKey</b> permet de créer un raccourci.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La propriété <b>
+Checked&nbsp;</b> permet de cochez la ligne</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La propriété <b>Visible</b> 
+&nbsp;permet de faire apparaître ou non une ligne.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si vous double-cliquez 
+sur la ligne du menu vous voyez apparaître&nbsp;:</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Private</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span> MenuItem1_Click(<span style="color: blue">ByVal</span> 
+sender <span style="color: blue">As</span> System.Object,
+<span style="color: blue">ByVal</span> e <span style="color: blue">As</span> 
+System.EventArgs) <span style="color: blue">Handles</span> MenuItem1.Click</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New"><span style="background-color: #FFFFFF">
+<span style="color: blue">Sub</span>&nbsp;&nbsp;&nbsp;</span>&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+C’est la procédure événement liée à la ligne du menu.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Quand l’utilisateur 
+clique sur une ligne du menu c’est le code contenu dans cette procédure qui est 
+effectué.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Menu Contextuel Vb 
+2003</span></font><span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">C'est un menu qui s'ouvre 
+quand, le curseur de l'utilisateur est sur un objet, et qu'on clique sur le bouton droit de la souris.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En allant dans la 
+boite à outils, chercher un <b>Context menu</b>, on le dépose sur la fenêtre&nbsp;: 
+il apparaît en dessous de la fenêtre.</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Si on le sélectionne avec 
+la souris, il apparaît en haut et comme pour le menu principal, on peut ajouter 
+des lignes.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Il faut ensuite affecter 
+ce Context Menu à un contrôle; pour cela donner à la propriété
+<font color="#0000FF">ContextMenu</font> du contrôle le nom du ContextMenu.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">
+TextBox1.ContextMenu= ContextMenu1</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si vous double-cliquez 
+sur une ligne du menu vous voyez apparaître&nbsp;les procédures évènement 
+correspondantes.</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Menu</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">Strip 
+de Vb 2005: </span> </font></p>
+<p><font face="Courier New" size="2">Remplace le MainMenu en VB 2005.</font></p>
+<p><img border="0" src="vmenu2005.JPG" width="160" height="151"></p>
+<p>
+<span style="font-size: 10.0pt; font-family: Courier New">En allant dans la 
+boite à outils, chercher un <b>MenuStrip</b> et en le déposant sur la fenêtre&nbsp;: 
+il apparaît en dessous de la fenêtre et la barre apparaît en haut du formulaire.</span></p>
+<p>
+<font size="2"><span style="font-family: Courier New">On peur ajouter des menus, 
+combobox et zone texte.</span></font></p>
+<p>
+<font face="Courier New" size="2">Pour remplir rapidement les menus, c'est 
+comme en vb2003.</font></p>
+<p>
+<font size="2"><span style="font-family: Courier New">On peut mettre des images 
+dans les menus.</span></font></p>
+<p><font face="Courier New" size="2">Dans les propriétés <font color="#0000FF">
+Items</font> permet d'avoir accès aux menus ou lignes et à toutes les propriétés 
+des éléments (image..).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque élément </font>
+<font face="Courier New" size="2">de la barre a sa procédure évènement: Pour le 
+premier bouton par exemple:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> 
+MenuStrip1_ItemClick(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New"> 
+ToolStripButton1.Click</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p><font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">ContextMenuStrip de Vb 
+2005: </span> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Remplace le ContextMenu de Vb2003</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-12.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:03 GMT -->
+</html>

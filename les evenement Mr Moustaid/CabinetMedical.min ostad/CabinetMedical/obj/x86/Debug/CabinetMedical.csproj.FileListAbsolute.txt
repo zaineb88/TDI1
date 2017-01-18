@@ -1,0 +1,25 @@
+I:\Projects\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.exe
+I:\Projects\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.pdb
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.Properties.Resources.resources
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.exe
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.pdb
+I:\Projects\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.CabMedical.resources
+C:\Users\ready\Desktop\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.exe
+C:\Users\ready\Desktop\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.pdb
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.exe
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.pdb
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.CabMedical.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.Properties.Resources.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.csproj.GenerateResource.Cache
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.AjouterPatient.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.exe
+E:\moustaid\C#\CabinetMedical\CabinetMedical\bin\Debug\CabinetMedical.pdb
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.Les_interfaces.ConsulterPatient.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.Les_interfaces.ajouterRendezVous.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.Les_interfaces.AjouterVisite.resources
+E:\moustaid\C#\CabinetMedical\CabinetMedical\obj\x86\Debug\CabinetMedical.PatientVisite.resources
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet(CB)\CabinetMedical.min ostad\CabinetMedical\obj\x86\Debug\CabinetMedical.exe
+C:\Users\ZIZI\Desktop\TDI\Oriente Objet(CB)\CabinetMedical.min ostad\CabinetMedical\obj\x86\Debug\CabinetMedical.pdb

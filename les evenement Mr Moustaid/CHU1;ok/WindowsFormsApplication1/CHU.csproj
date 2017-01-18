@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE2F0180-C1E2-44F6-B38E-520A07E5E499}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CabinetMedical.cs" />
+    <Compile Include="Classe Patient.cs" />
+    <Compile Include="ExceptionMedecinOccupe.cs" />
+    <Compile Include="les interfaces\AjouterRendezVous.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\AjouterRendezVous.Designer.cs">
+      <DependentUpon>AjouterRendezVous.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\CabinetMedical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\CabinetMedical.Designer.cs">
+      <DependentUpon>CabinetMedical.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\ConsulterPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\ConsulterPatient.Designer.cs">
+      <DependentUpon>ConsulterPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\ConsulterVisite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\ConsulterVisite.Designer.cs">
+      <DependentUpon>ConsulterVisite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\Patient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\Patient.Designer.cs">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\AjouterVisites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\AjouterVisites.Designer.cs">
+      <DependentUpon>AjouterVisites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="les interfaces\PatientAyantDesVisites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="les interfaces\PatientAyantDesVisites.Designer.cs">
+      <DependentUpon>PatientAyantDesVisites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RendezVous.cs" />
+    <Compile Include="Visites.cs" />
+    <EmbeddedResource Include="les interfaces\AjouterRendezVous.resx">
+      <DependentUpon>AjouterRendezVous.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\CabinetMedical.resx">
+      <DependentUpon>CabinetMedical.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\ConsulterPatient.resx">
+      <DependentUpon>ConsulterPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\ConsulterVisite.resx">
+      <DependentUpon>ConsulterVisite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\Patient.resx">
+      <DependentUpon>Patient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\AjouterVisites.resx">
+      <DependentUpon>AjouterVisites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="les interfaces\PatientAyantDesVisites.resx">
+      <DependentUpon>PatientAyantDesVisites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,919 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:40 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  SQL</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.3</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">SQL.</font></b></td>
+    <td width="9%" height="76"><a href="v6-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New">Comment
+interroger une base de données?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="font-weight: 700">On
+met les instructions SQL dans une chaîne de caractères et on crée
+un objet Command ADO avec cette chaîne pour interroger la base.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>(Avec
+VB 2008 </b>et le Framework 3.5, on utilise plutot LINK</font><font face="Courier New" size="2">
+un <b>langage de requêtes</b> (permettant d'interroger
+une source de données)&nbsp; directement <b> dans le code Visual Basic</b>&nbsp; et à
+l'aide de mots clés familiers issues du SQL, le&nbsp; langage d'interrogation
+des bases de données&nbsp;&nbsp; voir 6.8).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;
+</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#FF0000" face="Courier New" size="5"><span style="background-color: #C0C0C0"><b>SQL</b></span></font>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; font-weight: 700"><font size="2">Comment adresser une 
+requête vers une Base de données de ADO.NET? Avec SQL.</font></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Généralités: </font></span>
+</p>
+<p align="left"><font face="Courier New" size="2">SQL veut dire <b>Structured Query Language</b>&nbsp; : <b>
+Langage d'interrogation structurée</b> </font> </p>
+<p align="left"><font face="Courier New" size="2">SQL grâce au couplage avec un 
+SGBD relationnelle permet un <b>
+traitement interactif des requêtes</b>. <br>
+&nbsp;</font></p>
+<p align="left"><font face="Courier New" size="2">SQL est le langage unique qui permet de décrire, manipuler, 
+contrôler l'accès et interroger les bases de données relationnelles. <br>
+C'est un langage déclaratif, qui est régi par une norme (ANSI/ISO) qui assure la 
+portabilité du langage sur différentes plates-formes aussi bien matérielles que 
+logicielles. Une commande SQL écrite dans un environnement Windows sous ACCESS 
+peut, souvent sans modification, être utilisée directement dans un environnement 
+ORACLE sous Unix...</font></p>
+<p align="left"><font face="Courier New" size="2">SQL est utilisé dans ADO.NET 
+pour manipuler <b>toutes</b> les bases de données.</font></p>
+<p align="left"><font color="#0000FF" size="4" face="Courier New"><b>
+<span style="background-color: #C0C0C0">Les commandes SQL</span></b><span style="font-weight: 700; background-color: #C0C0C0">&nbsp;</span></font></p>
+<table width="80%" border="1">
+  <tr>
+    <th width="22%">Catégorie</th>
+    <th colSpan="2">Commandes SQL</th>
+  </tr>
+  <tr>
+    <td width="22%" rowSpan="3">
+    <div align="center">
+      <font color="#0000FF"><i>Manipulation des tables</i></font></div>
+    </td>
+    <td width="24%"><b>CREATE</b></td>
+    <td width="54%">Création de tables</td>
+  </tr>
+  <tr>
+    <td width="24%"><b>ALTER</b></td>
+    <td width="54%">Modification de tables</td>
+  </tr>
+  <tr>
+    <td width="24%" height="12"><b>DROP</b></td>
+    <td width="54%" height="12">Suppression de tables</td>
+  </tr>
+  <tr>
+    <td width="22%">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="22%" rowSpan="3">
+    <div align="center">
+      <font color="#0000FF"><i>Manipulation des données </i></font>
+    </div>
+    </td>
+    <td><b>INSERT</b></td>
+    <td>Insertion de lignes dans une table</td>
+  </tr>
+  <tr>
+    <td><b>UPDATE</b></td>
+    <td>Mise à jour de lignes dans une table</td>
+  </tr>
+  <tr>
+    <td><b>DELETE</b></td>
+    <td>Suppression de lignes dans une table</td>
+  </tr>
+  <tr>
+    <td width="22%">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="22%" rowSpan="4">
+    <div align="center">
+      <font color="#0000FF"><i>Contrôle des données </i></font>
+    </div>
+    </td>
+    <td><b>GRANT</b></td>
+    <td>Attribution de droits d'accès</td>
+  </tr>
+  <tr>
+    <td><b>REVOKE</b></td>
+    <td>Suppression de droits d'accès</td>
+  </tr>
+  <tr>
+    <td><b>COMMIT</b></td>
+    <td>Prise en compte des mises à jour</td>
+  </tr>
+  <tr>
+    <td><b>ROLLBACK</b></td>
+    <td>Suppression des mises à jour</td>
+  </tr>
+  <tr>
+    <td width="22%">&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="22%">
+    <div align="center">
+      <i><font color="#0000FF">Interrogation des données</font></i></div>
+    </td>
+    <td><b>SELECT</b></td>
+    <td>Interrogations diverses</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">A - SELECT: 
+interrogation. </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2">Permet d'extraire ,de sélectionner des données.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Syntaxe simplifiée:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<b>SELECT champ FROM table WHERE condition</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Dans la table 'table' sélectionner les enregistrements vérifiant la condition 
+'condition' et en afficher les champs 'champs'</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table width="75%" border="1" height="308">
+  <tr>
+    <td width="23%" height="19"><b>SELECT</b></td>
+    <td width="77%" height="19">Précise les colonnes qui vont apparaître dans la réponse</td>
+  </tr>
+  <tr>
+    <td width="23%" height="19"><b>FROM</b></td>
+    <td width="77%" height="19">Précise la (ou les) table intervenant dans l'interrogation
+    </td>
+  </tr>
+  <tr>
+    <td width="23%" height="114"><b>WHERE</b></td>
+    <td width="77%" height="114">Précise les conditions à appliquer sur les enregistrements. 
+    On peut utiliser :<br>
+    - Des comparateurs : =, &gt;, &lt;, &gt;=, &lt;=,&lt;&gt;<br>
+    - Des opérateurs logiques : AND, OR, NOT<br>
+    - Les prédicats : IN, LIKE, NULL, ALL, SOME, ANY, EXISTS... </td>
+  </tr>
+  <tr>
+    <td width="23%" height="19"><b>GROUP BY</b></td>
+    <td width="77%" height="19">Précise la (ou les) colonne de regroupement</td>
+  </tr>
+  <tr>
+    <td width="23%" height="19"><b>HAVING</b></td>
+    <td width="77%" height="19">Précise la (ou les) conditions associées à un regroupement</td>
+  </tr>
+  <tr>
+    <td width="23%" height="82"><b>ORDER BY</b></td>
+    <td width="77%" height="82">Précise l'ordre dans lequel vont apparaître les lignes de la 
+    réponse :<br>
+    - ASC &nbsp;: En ordre ascendant (par défaut)<br>
+    - DESC: En ordre descendant</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Soit la table patient:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="99%" id="AutoNumber19">
+  <tr>
+    <td width="25%">Champs 'Civilité'</td>
+    <td width="20%">Champ 'Nom'</td>
+    <td width="19%">Champ 'Prénom'</td>
+    <td width="21%">Champ Num Int</td>
+    <td width="39%">Datenais</td>
+    <td width="32%">Sexe</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Durand</td>
+    <td width="19%">Luc</td>
+    <td width="13%">1</td>
+    <td width="25%">12/02/1952</td>
+    <td width="74%">M</td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="18%">Dupont</td>
+    <td width="19%">Josette</td>
+    <td width="13%">2</td>
+    <td width="25%">06/04/1936</td>
+    <td width="74%">F</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Thomas</td>
+    <td width="19%">Guy</td>
+    <td width="13%">3</td>
+    <td width="25%">08/02/1980</td>
+    <td width="74%">M</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom 
+FROM Patient</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie: dans la table Patient extraire les champs 'nom'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On obtient:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="15%" id="AutoNumber22">
+  <tr>
+    <td width="100%">Durand</td>
+  </tr>
+  <tr>
+    <td width="100%">Dupont</td>
+  </tr>
+  <tr>
+    <td width="100%">Thomas</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom 
+FROM Patient WHERE&nbsp; Prenom='Luc'</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">WHERE ajoute un critère de sélection.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie: dans la table Patient extraire le champ Nom de tous les 
+enregistrements dont le prénom est &quot;Luc&quot; . </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'exemple on obtient :</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="23%" id="AutoNumber21">
+  <tr>
+    <td width="100%">Durand</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom, 
+Prenom&nbsp; FROM Patient WHERE&nbsp; Sexe='F'</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie: dans la table Patient extraire le champ Nom et prénom de tous les 
+enregistrements dont le champ sexe est &quot;F&quot;( F comme féminin)&nbsp; .
+</font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'exemple on obtient :</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="27%" id="AutoNumber20">
+  <tr>
+    <td width="53%">Dupont</td>
+    <td width="47%">Josette</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; *&nbsp; 
+FROM Patient WHERE&nbsp; Datenais&gt;=#01/01/1950#</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie: dans la table Patient extraire tous les champs de tous les 
+enregistrements dont le champ date de naissance est supérieur ou égal à 
+01/01/1950&nbsp; . </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'exemple on obtient </font> </p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Durand</td>
+    <td width="19%">Luc</td>
+    <td width="13%">1</td>
+    <td width="25%">12/02/1952</td>
+    <td width="74%">M</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Thomas</td>
+    <td width="19%">Guy</td>
+    <td width="13%">3</td>
+    <td width="25%">08/02/1980</td>
+    <td width="74%">M</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;<font face="Courier New" size="2">On 
+remarque que </font> </p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>
+<font color="#0000FF">*</font> signifie : extraire tous les champs.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Pour utiliser les dates , il faut les entourer de &quot;<font color="#0000FF">#</font>&quot;.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Les dates sont au format mm/jj/aaaa</b></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; *&nbsp; 
+FROM Patient WHERE&nbsp; Datenais&gt;= #01/01/1950# AND&nbsp; Datenais&lt;= #01/01/1980#</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie: dans la table Patient extraire tous les champs de tous les 
+enregistrements dont le champ date de naissance est supérieur ou égal à 
+01/01/1950&nbsp;et inférieur ou égal à 01/01/1980 .</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque que on peut utiliser avec Where, les opérandes
+</font> </p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>AND&nbsp; OR NOT.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Il est bien sur possible de combiner des conditions sur des champs 
+différents:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>&nbsp;Sexe='M' AND Prenom='Luc&quot;</b></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">SELECT&nbsp; *&nbsp; 
+FROM Patient WHERE&nbsp; BETWEEN #01/01/1950# AND&nbsp; #01/01/1980#</span></font>
+</font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Même signification que le précèdent mais en utilisant BETWEN AND qui est plus 
+performant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom 
+FROM Patient WHERE&nbsp; Prenom IN ('Luc' , 'Pierre', 'Paul')</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie qu'il faut extraire les enregistrements dont le prénom est Luc, 
+Pierre ou Paul .</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom 
+FROM Patient WHERE&nbsp; Prenom LIKE&nbsp; 'D%'</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie qu'il faut extraire les enregistrements dont le prénom commence 
+par un 'D'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">LIKE recherche des chaînes de caractères avec l'aide de caractères génériques:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">% représente&nbsp; une chaîne de caractères même vide.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">_ représente&nbsp; un caractère.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut spécifier une série de caractères en les mettant entre &quot;&quot;</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple :</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">LIKE 'D%'&nbsp;&nbsp;&nbsp; commence par D
+</font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">LIKE '%D%'&nbsp;&nbsp;&nbsp; contient&nbsp; D</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">LIKE '[DF]%'&nbsp;&nbsp;&nbsp; commence par D ou F</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">LIKE '___'&nbsp;&nbsp;&nbsp; contient 3 caractères</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom 
+FROM Patient WHERE&nbsp; SEXE IS NULL</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cela signifie qu'il faut extraire les 
+enregistrements dont le sexe n'a pas été enregistré.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp;DISTINCT Nom FROM Patient WHERE&nbsp; 
+SEXE IS NULL</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">DISTINCT permet d'éviter les doublons</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si dans les Noms extraits il y a 2 fois le même (2 membres d'une même famille) , 
+il n'en est gardé qu'un.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">TRI des 
+enregistrements:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">ORDER BY</font> sert à trier les enregistrements.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il est placé à la fin.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">DESC sert à trier par ordre décroissant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom, 
+Prenom&nbsp;, Sexe, DateNais&nbsp; FROM Patient WHERE&nbsp; Sexe='F' ORDER BY 
+DateNais</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Trie les enregistrements de sexe 'F' par date de naissance</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; Nom, 
+Prenom, DatNais, NumInt&nbsp; FROM Patient WHERE&nbsp; Sexe='F' ORDER BY 
+DateNais DESC, NumInt</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Trie les enregistrements de sexe 'F' par date de naissance mais 
+décroissante et 
+pour une même date de naissance par numéro interne croissant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="4" color="#0000FF" face="Courier New"><span style="background-color: #C0C0C0">
+Statistiques:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; 
+COUNT(*) AS&nbsp; NombrePatient&nbsp; FROM Patient  </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Compte le nombre total d'enregistrement dans la table Patient et met le 
+résultat dans le champ NombrePatient</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi utiliser:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">MIN&nbsp; retourner la plus petite valeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">MAX&nbsp; retourner la plus grande valeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">SUM retourner la somme.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">AVG retourner la moyenne.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">VAR retourner la variance</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">STDEV retourner l'écart type.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; 
+Prenom ,COUNT(*) AS&nbsp; NombrePrenom&nbsp; FROM Patient GROUP BY Prenom</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Extrait la liste des prénom avec le nombre de fois que le prénom est utilisé.
+</font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">GROUP BY regroupe les enregistrements par valeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">SELECT&nbsp; 
+Prenom ,COUNT(*) AS&nbsp; NombrePrenom&nbsp; FROM Patient GROUP BY Prenom HAVING 
+CONT(*)&gt;3</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Extrait la liste des prénoms avec le nombre de fois que le prénom est utilisé. 
+S'il est utilisé plus de 3 fois.. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">HAVING rajoute un critère au regroupement.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Extraction de données 
+sur plusieurs tables:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Parfois on a besoin d'extraire des champs de 
+plusieurs tables différentes, mais ayant une relation (un champ commun); pour 
+cela on utilise&nbsp; <b>une jointure.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Pour chaque enregistrement de la première 
+table, on affiche en regard les enregistrements de la 2eme table qui ont la même 
+valeur de jointure.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Soit la table patient:</font></b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="99%" id="AutoNumber23">
+  <tr>
+    <td width="25%">Champs 'Civilité'</td>
+    <td width="20%">Champ 'Nom'</td>
+    <td width="19%">Champ 'Prénom'</td>
+    <td width="21%"><font color="#FF0000">Numéro Ville</font></td>
+    <td width="39%">Datenais</td>
+    <td width="32%">Sexe</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber24">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Durand</td>
+    <td width="19%">Luc</td>
+    <td width="13%"><font color="#FF0000">1</font></td>
+    <td width="25%">12/02/1952</td>
+    <td width="74%">M</td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="18%">Dupont</td>
+    <td width="19%">Josette</td>
+    <td width="13%"><font color="#FF0000">2</font></td>
+    <td width="25%">06/04/1936</td>
+    <td width="74%">F</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="18%">Thomas</td>
+    <td width="19%">Guy</td>
+    <td width="13%"><font color="#FF0000">3</font></td>
+    <td width="25%">08/02/1980</td>
+    <td width="74%">M</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Soit la table Ville:</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="45%" id="AutoNumber25">
+  <tr>
+    <td width="22%">Nom ville</td>
+    <td width="30%"><font color="#FF0000">Numéro ville</font></td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="31%" id="AutoNumber26">
+  <tr>
+    <td width="27%">Paris</td>
+    <td width="23%"><font color="#FF0000">1</font></td>
+  </tr>
+  <tr>
+    <td width="27%">Lyon</td>
+    <td width="23%"><font color="#FF0000">2</font></td>
+  </tr>
+  <tr>
+    <td width="27%">Marseille</td>
+    <td width="23%"><font color="#FF0000">3</font></td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Comment récupérer nom et ville (en clair, pas son numéro)</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF">SELECT Patient.Nom, 
+Ville.NomVille From Patient INNER JOIN Ville ON Patient.NuméroVille= 
+Ville.NuméroVille</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+On obtient:</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="31%" id="AutoNumber26">
+  <tr>
+    <td width="27%">Durand</td>
+    <td width="23%"><font color="#FF0000">Paris</font></td>
+  </tr>
+  <tr>
+    <td width="27%">Dupont</td>
+    <td width="23%"><font color="#FF0000">Lyon</font></td>
+  </tr>
+  <tr>
+    <td width="27%">Thomas</td>
+    <td width="23%"><font color="#FF0000">Paris</font></td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#FF0000" face="Courier New" size="2">En ADO.Net, on verra qu'on 
+passe la chaîne SQL à un objet </font>
+<font face="Courier New" size="2" color="#0000FF">Command</font><font color="#FF0000" face="Courier New" size="2">.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#FF0000">Ces données extraites à partir d'une base de 
+données grâce à l'instruction SQL vont se retrouver dans un </font>
+<font face="Courier New" size="2" color="#0000FF">DataSet</font><font face="Courier New" size="2" color="#FF0000"> 
+(sorte de Bd en local, en mémoire).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">B - Ajout, suppression, 
+modification d'enregistrement:</font></span></p>
+<p><font face="Courier New" size="2">Il est impossible d'insérer, de modifier ou 
+de supprimer dans plusieurs tables simultanément </font></p>
+<p><font face="Courier New" size="2">Une requête de mise à jour (INSERT, UPDATE 
+ou SELECT) est une transaction ,tout doit être réalisé, sinon rien ne se passe 
+(en particulier si une seule donnée viole une contrainte, toutes les opérations 
+sont annulées ) </font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Insertion d'enregistrement:</span></font></p>
+<table cellSpacing="5" width="100%">
+  <tr>
+    <td align="middle">
+    <table cellSpacing="0" cellPadding="0" width="100%">
+      <tr vAlign="top">
+        <td class="fondart" vAlign="top">
+        <table class="tbnoir" cellSpacing="1" width="100%">
+          <tr>
+            <td class="fondart"><font face="Courier New" size="2">Syntaxe:</font><table class="cadrearticle" cellSpacing="0" cellPadding="10" wifth="90%" width="542">
+              <tr>
+                <td width="522">
+                <pre class="code">&nbsp;</pre>
+                <div class="ora_code">
+                  <pre class="code"><font face="Courier New" color="#0000FF"><b><span class="ora_keyword">INSERT</span></b> [<span class="ora_keyword">INTO</span>] nomdelatable [(listedescolonnes)] 
+{<span class="ora_keyword">VALUES</span> (listedesvaleurs) | requêteselect | <span class="ora_keyword">DEFAULT</span> <span class="ora_keyword">VALUES</span> }</font></pre>
+                </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<table cellSpacing="5" width="100%">
+  <tr>
+    <td align="middle">
+    <table cellSpacing="0" cellPadding="0" width="100%">
+      <tr vAlign="top">
+        <td class="fondart" vAlign="top">
+        <table class="tbnoir" cellSpacing="1" width="100%">
+          <tr>
+            <td class="fondart">
+            <table class="cadrearticle" cellSpacing="0" cellPadding="10" wifth="90%">
+              <tr>
+                <td>
+                <pre class="code">Exemple:</pre>
+                <div class="ora_code">
+                  <pre class="code"><font color="#0000FF"><span class="ora_keyword">INSERT</span> <span class="ora_keyword">INTO</span> TablePatient (Civilité, Nom, Prenom, NumeroVille, Datenais, Sex)
+       <span class="ora_keyword">VALUES</span>               ('M', 'Dupont', 'Pierre', '2',' 02/12/51/, 'M')</font></pre>
+                </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<table cellSpacing="5" width="100%">
+  <tr>
+    <td align="middle">&nbsp;<table cellSpacing="0" cellPadding="0" width="100%">
+      <tr vAlign="top">
+        <td class="fondart" vAlign="top"><font face="Courier New" size="2">
+        <span style="background-color: #C0C0C0">Effacement d'enregistrement:</span></font><p><font face="Courier New" size="2">Syntaxe:</font></p>
+        <table class="tbnoir" cellSpacing="1" width="100%">
+          <tr>
+            <td class="fondart">&nbsp;<table class="cadrearticle" cellSpacing="0" cellPadding="10" wifth="90%">
+              <tr>
+                <td>
+                <div class="ora_code">
+                  <pre class="code"><font face="Courier New" color="#0000FF"><span class="ora_keyword">DELETE</span> [<span class="ora_keyword">FROM</span>] nomtable 
+[<span class="ora_keyword">WHERE</span> condition]</font></pre>
+                </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<table cellSpacing="5" width="100%">
+  <tr>
+    <td align="middle">
+    <table cellSpacing="0" cellPadding="0" width="100%">
+      <tr vAlign="top">
+        <td class="fondart" vAlign="top">
+        <table class="tbnoir" cellSpacing="1" width="100%">
+          <tr>
+            <td class="fondart">
+            <table class="cadrearticle" cellSpacing="0" cellPadding="10" wifth="90%">
+              <tr>
+                <td>
+                <pre class="code"><font face="Courier New">Exemple:</font></pre>
+                <div class="ora_code">
+                  <pre class="code"><font face="Courier New" color="#0000FF"><span class="ora_keyword">DELETE</span> <span class="ora_keyword">FROM</span> Patient
+<span class="ora_keyword">WHERE</span>  Nom LIK'%d'</font></pre>
+                </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<pre><span style="background-color: #C0C0C0">Mise à jour d'enregistrement:</span></pre>
+<table cellSpacing="5" width="100%">
+  <tr>
+    <td align="middle">
+    <table cellSpacing="0" cellPadding="0" width="100%">
+      <tr vAlign="top">
+        <td class="fondart" vAlign="top">
+        <table class="tbnoir" cellSpacing="1" width="100%">
+          <tr>
+            <td class="fondart">
+            <table class="cadrearticle" cellSpacing="0" cellPadding="10" wifth="90%">
+              <tr>
+                <td>
+                <pre class="code">Syntaxe:</pre>
+                <div class="ora_code">
+                  <pre class="code"><font color="#0000FF"><span class="ora_keyword">UPDATE</span> nomtable
+<span class="ora_keyword">SET</span> colonne1 = valeur1 , colonne2 = valeur2 ...
+<span class="ora_keyword">WHERE</span> condition</font></pre>
+                  <pre class="code"><font color="#0000FF">WHERE </font>condition est facultatif et permet de sélectionner  les enregistrements correspondant </pre>
+                  <pre class="code">à un critère et de modifier ceux là.</pre>
+                </div>
+                </td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<pre><font color="#FF0000">En Ado.Net on verra  qu'il y a 2 méthodes pour modifier ajouter, supprimer un enregistrement:</font></pre>
+<ul>
+  <li><font face="Courier New" size="2" color="#FF0000">On peut effectuer 
+  directement les commandes en SQL: on exécute ces commandes par la méthode
+  </font><font face="Courier New" size="2" color="#0000FF">ExecuteNoQuery</font><font face="Courier New" size="2" color="#FF0000"> 
+  d'un objet </font><font face="Courier New" size="2" color="#0000FF">Command</font><font face="Courier New" size="2" color="#FF0000">.</font></li>
+  <li><font face="Courier New" size="2" color="#FF0000">Il est plus simple de 
+  lier la base à un </font><font face="Courier New" size="2" color="#0000FF">
+  DataSet</font><font face="Courier New" size="2" color="#FF0000">, de modifier 
+  le DataSet et de mettre à jour la base par un </font>
+  <font face="Courier New" size="2" color="#0000FF">Update</font><font face="Courier New" size="2" color="#FF0000"> 
+  (du DataAdapter). Dans ce cas, on n'écrit pas de commande SQL.</font></li>
+</ul>
+<p>&nbsp;</p>
+<pre><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">C - Ajout de table: </font></span></pre>
+<p><font face="Courier New" size="2">On utilise <font color="#0000FF">CREATE TABLE</font> puis le nom de la table, on ajoute les différents champs (entre parenthèses et séparés par des virgules)avec pour chaque champ les conditions (NOT NULL..) et le 
+type.</font></p>
+<pre><font color="#0000FF" face="Courier New" size="2">CREATE TABLE PARENT (CLI_ID INTEGER NOT NULL PRIMARY KEY, CLI_NOM CHAR(32) NOT NULL, CLI_PRENOM VARCHAR(32))</font></pre>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#FF0000">En Ado.Net on verra qu'on 
+exécute ces commandes par la méthode ExecuteNoQuery d'un objet Command.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Pour aller plus loin:</b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Série d'articles sur SQL chez developpez.com:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<a href="http://sql.developpez.com/">http://sql.developpez.com/</a></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">D</span></font><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF">
+- En pratique:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2"><span style="font-weight: 700">En
+pratique, on met les instructions SQL dans une chaîne de caractères et on
+crée un objet Command avec cette chaîne.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">strConn
+= &quot;Provider=Microsoft.Jet.OLEDB.4.0;&quot; &amp; _</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">&quot;Data
+Source= c:\nom.mdb;&quot;</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Initialisation
+de la chaîne contenant l'instruction SQL</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff"><b>strSql
+= &quot;SELECT FICHEPATIENT.* FROM FICHEPATIENT&quot;</b></font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Instanciation
+d'un Objet Connexion</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">ObjetConnection
+= </span></font></font><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">New
+OleDbConnection()</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000" size="2">'Donner
+à la propriété ConnectionString les paramètres de connexion</font><font size="2"></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">ObjetConnection.ConnectionString
+= strConn</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Ouvrir
+la connexion</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">ObjetConnection.Open()</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Instancier
+un objet Commande</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">ObjetCommand
+= </span></font></b></font><b><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">New</span></font></b><font size="2"><b><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+OleDbCommand(strSql)</span></font></b></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Instancier
+un objet Adapter</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">ObjetDataAdapter
+= </span></font></font><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">New</span></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+OleDbDataAdapter(ObjetCommand)</span></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'initialiser
+l'objet Command</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">ObjetCommand.Connection()
+= ObjetConnection</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font><font face="Courier New" color="#008000" size="2">'Avec
+l'aide de la propriété Fill du DataAdapter charger le DataSet</p>
+</font><font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">ObjetDataAdapter.Fill(ObjetDataSet,
+&quot;FICHEPATIENT&quot;)</font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000">'Mettre
+dans un Objet DataTable une table du DataSet</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" color="#0000ff">ObjetDataTable
+= ObjetDataSet.Tables(&quot;FICHEPATIENT&quot;)</font></span></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:41 GMT -->
+</html>

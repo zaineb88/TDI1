@@ -1,0 +1,1340 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-21.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:32 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net classe du framework </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-20.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.21</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les différentes Classes.</font></b>
+      <p><b><font face="Courier New" size="6" color="#800080">Le Framework.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-22.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Il y a les Classes du Framework, et 
+les autres.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">Il
+y a les Framework 1, 2, 3, 3.5.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">Il
+y a le CLR.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Annexe1: Les Classes du 
+Framework 1</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Annexe2: Bibliothèque de 
+Visual Basic.Net</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Annexe3: Classe de 
+compatibilité.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<b><span style="font-family: Courier New; background-color: #C0C0C0">Les 
+différentes 'Classes'.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il existe <b>3 types 
+de Classes</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<span style="background-color: #C0C0C0"><b>1-</b> </span><b><span style="background-color: #C0C0C0">Les 
+Classes spécifiques créées par le programmeur</span>.</b></span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<b>&nbsp;Le programmeur peut les créer de toute pièce</b> dans les modules de 
+Classe.(On verra cela plus loin)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">En VB, on peut créer une 
+classe, ses propriétés, méthodes.. et l'utiliser dans le corps du programme.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Ces classes peuvent être 
+internes dans un module de Classe.</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+<span style="background-color: #C0C0C0">2- Les classes du Framework 
+fournies par Microsoft</span>.</b></span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Un 'Framework' est un ensemble
+de 'Classes'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il existe dans le
+Framework de Microsoft de 
+manière générale des 
+classes </span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">pour les formulaires 
+Windows (WindowsForms),
+</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">pour le Web (WebForms),</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">pour </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">l’accès aux données,</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">les réseaux,</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">la sécurité....</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple du Framework 1:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vclasfram.jpg" width="601" height="424"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Quand on crée un 
+nouveau projet,</b> les Classes le plus souvent utilisées sont automatiquement 
+chargées dans le projet:</span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+<span style="background-color: #C0C0C0">2-Les classes fournies par des tiers.</span></b></span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut ajouter des 
+références (DLL) permettant d'ajouter des classes nouvelles, cela permet 
+d'ajouter de nouvelles fonctionnalités à VB: Exemple: les pilotes de base de données..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Vous pouvez vous aussi créer une Classe, la 
+compiler, puis dans un autre projet référencer la Dll de la classe que vous avez 
+créée et l'utiliser dans le nouveau projet.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Dans</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0"> Visual Basic.Net.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans VB.Net il y a donc possibilité de travailler 
+avec:</font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2"><b>Les Classes du Framework</b>, leurs propriétés, leurs méthodes. 
+  Les Forms, Controls, les classes des variables (String, Int32..) sont 
+  disponibles par défaut. (voir annexe 1)</font></li>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2"><b>Les instructions VB.Net </b>de l'espace
+  de nom&nbsp; <font color="#0000FF">Microsoft.VisualBasic</font> disponible par défaut. Ce 
+  sont des instruction VB bien connues (left, int, IsNumeric.. ) (voir annexe 2)</font></li>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">Accessoirement, les instructions de <b>la bibliothèque de 
+  compatibilité VB6</b>. il faut dans ce cas importer <font color="#0000FF">Microsoft.VisualBasic. Compatibility</font> et
+<font color="#0000FF">Microsoft.VisualBasic. 
+Compatibility.Data, </font>ces instructions sont là pour aider à la conversion<font color="#0000FF">, </font>
+  elles permettent d'utiliser des fonctions qui n'existent plus en VB.Net (comme 
+  les chaînes fixes par exemple), il faut les éviter impérativement car ce n'est 
+  pas du VB.Net et elles disparaîtront probablement dans les futures versions. 
+  (voir annexe 3)&nbsp; </font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour la manipulation des nombres  </font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">'<font color="#0000FF">Int</font>' '<font color="#0000FF">Randomize</font>' et '<font color="#0000FF">Rnd</font>' 
+font partie de VB.Net,  </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">'<font color="#0000FF">Round</font>' fait partie de la classe Math 
+donc du Framework, </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">'<font color="#0000FF">Imp</font>'</font><b>&nbsp;
+</b>
+<font face="Courier New" size="2">fait partie de la bibliothèque de 
+compatibilité VB6. </font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois certaines fonctions&nbsp; font double 
+emploi et ont des équivalents dans les 2 ou 3 catégories.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Lesquelles utiliser?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les Classes sont souvent plus riches avec 
+multiples surcharges et, si j'ai bien compris, sont communes à tous les 
+langages utilisant le Framework .Net. Si vous voulez passer au C#, les classes 
+sont les mêmes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les instructions VB.Net sont propres à VB , 
+c'est du VB et du .Net. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#FF0000">Par contre, les instructions devant de la 
+compatibilité VB6 sont à éviter absolument.</font> Seront-elles conservées dans les futures 
+versions de VB.NET?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><font size="4">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Lor</span></font><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0"><font size="4">s de la création d'un nouveau projet:</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Sont 
+automatiquement chargé:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une partie du Framework (System.dll) et le CLR
+(Common Language Runtime), 
+la couche qui fait tourner le programme( elle est dans mscorlib.dll)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Sont 
+donc à disposition:</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Quelques
+espace de nom du Framework: </span></font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">System,</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">System.data</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">System.drawing</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">System.Windows.forms
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ce dernier contient 
+les <font color="#0000FF">Controls</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>et aussi:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">
+Microsoft.VisualBasic </font><font size="2">qui contient la bibliothèque&nbsp; 
+VB.Net qui permet d'utiliser les&nbsp; fonctions VB (MsgBox, IsNumeric, 
+Chr, Asc.....)&nbsp;&nbsp; </font></span></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="font-size: 10.0pt; font-family: Courier New">Comme ces Classes sont 
+chargées au départ cela permet d’emblée de créer des feuilles, des 
+contrôles..(qui sont dans les WindowsForms et les Controls).Cela permet aussi 
+d'utiliser les instructions VB.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on a besoin d'autres classes, il faut les 
+importer:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Imports System.Math</font> 
+par exemple pour utiliser les fonctions mathématiques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+Imports System.IO. </font>
+pour les fichiers.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; ..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font face="Courier New" size="2">Éviter d'importer
+<font color="#0000FF"> Microsoft.VisualBasic.Compatibility</font> qui apporte la compatibilité VB6</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">Framework
+version 1, 2, 3.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Un
+Framework est donc un ensemble de Classes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 1.0</b>&nbsp; (2002) et <b>1.1</b>&nbsp; (2003) est utilisé par <b> VB
+2003</b>, c'est le premier.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 2.0</b>&nbsp; (2005) est&nbsp; utilisé par <b> VB 2005</b></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Il
+  contient des classes supplémentaires.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 3.0</b>  (2006)</font>&nbsp; <font face="Courier New" size="2">peut être utilisé par
+<b> VB 2005</b></font></p>
+<blockquote>
+  <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Le
+  framework 3.0 est composé du framework 2.0 auquel s'ajoute WCF (Windows
+  Communication Foundation), WF (Windows Workflow Foundation), WPF (Windows
+  Presentation Foundation) et Infocard pour l'authentification des utilisateurs.<br>
+  Windows Presentation foundation permet de gérer l' affichage des fenêtres.
+  Celui-ci est basé sur direct x (version 10).<br>
+  </font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Le
+Framework 3.5 </b>(fin 2007)&nbsp; utilisé par <b> VB2008.</b></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">C'est
+le Framework 3 auquel s'ajoute AJAX, LINQ et REST.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><img border="0" src="vframw35.JPG" width="197" height="223"></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Sous
+Windows 98, XP, il faut installer le Framework (avant d'utiliser l'environnement
+VisualBasic ou un exécutable VB)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Sous
+Windows Vista le Framework 3 fait partie de Vista et est installé nativement.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"> VB 2003
+utilise <b>l</b><b>e Framework 1.0</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"> VB
+2005 utilise <b>l</b><b>e Framework 2.0</b>. ou <b>3.0</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"> VB
+2008 permet de choisir et d'utiliser <b>l</b><b>e Framework 1.0, 2.0, 3.0, 3.5</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Voici
+le Framework 3.5:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vframw35tt.JPG"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New; background-color: #C0C0C0">CLR</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+rappelle que ce qui fait tourner le Framework c'est le <b>CLR</b> (Commnon
+Language RunTime); depuis la version 2 du Framework, c'est toujours&nbsp; la <b>version
+2.0.50727</b>: toujours la même dans la version 3.0 et 3.5.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #FFFF00">ANNEXE 1: Les principales Classes du
+Framework 1.</span></font></b></p>
+<font face="Courier New">
+<p><font size="2">Voir les détails des classes sur MSDN
+<a href="http://msdn.microsoft.com/library/fre/default.asp?url=/library/FRE/cpref/html/frlrfsystemdiagnosticsprocessclasstopic.asp">
+Le Framework</a> (Cliquez&nbsp; sur .NetFramework dans la liste)</font></p>
+<p><font size="2">Comporte les classes de base et les classes fondamentales.</font></p>
+<p><b>Classes de base:</b> qui définissent des types de données valeur et 
+référence, des événements et des gestionnaires d'événements, des interfaces, des 
+attributs (non listés ici), ainsi que des exceptions (non listés ici) de 
+traitement couramment utilisés.</p>
+</font>
+<font SIZE="2">
+<p></p>
+<p><font face="Courier New">Classe, Description </font></p>
+<p><font face="Courier New"><font color="#800080">Activator</font> </font></p>
+<p><font face="Courier New">Contient des méthodes permettant de créer des types 
+d'objets localement ou à distance, ou d'obtenir des références à des objets 
+distants existants. </font></p>
+<p><font face="Courier New"><font color="#800080">AppDomain</font> </font></p>
+<p><font face="Courier New">Représente un domaine d'application qui est un 
+environnement isolé dans lequel s'exécutent les applications. Cette classe ne 
+peut pas être héritée. </font></p>
+<p><font color="#800080" face="Courier New">AppDomainSetup</font></p>
+<p><font face="Courier New">Représente des informations sur les liaisons d'assemblys 
+qui peuvent être ajoutées à une instance de AppDomain. </font></p>
+<p><font face="Courier New"><font color="#800080">AppDomainUnloadedException</font>
+</font></p>
+<p><font face="Courier New">Exception levée lors d'une tentative d'accès à un 
+domaine d'application non chargé. </font></p>
+<p><font face="Courier New"><font color="#800080">ApplicationException</font>
+</font></p>
+<p><font face="Courier New">Exception levée lorsqu'une erreur d'application non 
+fatale se produit. </font></p>
+<p><font face="Courier New"><font color="#800080">ArgumentException</font>
+</font></p>
+<p><font face="Courier New">Exception levée lorsqu'un argument non valide est 
+fourni à une méthode. </font></p>
+<p><font color="#800080" face="Courier New">Array </font></p>
+<p><font face="Courier New">Fournit des méthodes pour la création, la 
+manipulation, la recherche ainsi que le tri des tableaux et sert de classe de 
+base pour tous les tableaux du Common Language Runtime. </font></p>
+<p><font face="Courier New"><font color="#800080">Attribute</font> </font></p>
+<p><font face="Courier New">Classe de base pour les attributs personnalisés.
+</font></p>
+<p><font face="Courier New"><font color="#800080">AttributeUsageAttribute</font>
+</font></p>
+<p><font face="Courier New">Spécifie l'utilisation d'une autre classe 
+d'attribut. Cette classe ne peut pas être héritée.&nbsp; </font></p>
+<p><font face="Courier New"><font color="#800080">BitConverter</font> </font>
+</p>
+<p><font face="Courier New">Convertit les types de données de base en tableau 
+d'octets et un tableau d'octets en types de données de base. </font></p>
+<p><font face="Courier New"><font color="#800080">Buffer</font> </font></p>
+<p><font face="Courier New">Manipule les tableaux de types primitifs. </font>
+</p>
+<p><font color="#800080" face="Courier New">CharEnumerator </font></p>
+<p><font face="Courier New">Prend en charge l'itération sur String et la lecture 
+de ses caractères individuels.&nbsp; </font></p>
+<p><font face="Courier New"><font color="#800080">Console</font> </font></p>
+<p><font face="Courier New">Représente les flux d'entrée, de sortie et d'erreur 
+standard pour les applications console. Cette classe ne peut pas être héritée.
+</font></p>
+<p><font face="Courier New">&nbsp;</font></p>
+<p><font face="Courier New"><font color="#800080">Convert</font> </font></p>
+<p><font face="Courier New">Convertit un type de données de base en un autre 
+type de données de base. </font></p>
+<p><font face="Courier New"><font color="#800080">Delegate</font> </font></p>
+<p><font face="Courier New">Représente un délégué qui est une structure de 
+données référençant une méthode static ou une instance de classe et une méthode 
+d'instance de cette classe. </font></p>
+<p><font face="Courier New"><font color="#800080">Enum</font> </font></p>
+<p><font face="Courier New">Fournit la classe de base pour les énumérations.
+</font></p>
+<p><font color="#800080" face="Courier New">Environment </font></p>
+<p><font face="Courier New">Fournit des informations concernant l'environnement 
+et la plate-forme en cours ainsi que des moyens pour les manipuler. Cette classe 
+ne peut pas être héritée. </font></p>
+<p><font color="#800080" face="Courier New">Exception </font></p>
+<p><font face="Courier New">Représente les erreurs qui se produisent lors de 
+l'exécution de l'application. </font></p>
+<p><font color="#800080" face="Courier New">GC</font></p>
+<p><font face="Courier New">Contrôle le garbage collector (ramasse-miettes) du 
+système, un service qui récupère automatiquement la mémoire inutilisée. </font>
+</p>
+<p><font face="Courier New"><font color="#800080">Math</font> </font></p>
+<p><font face="Courier New">Fournit des constantes et des méthodes static pour 
+des fonctions trigonométriques, logarithmiques et d'autres fonctions 
+mathématiques courantes. </font></p>
+<p><font face="Courier New"><font color="#800080">MulticastDelegate</font>
+</font></p>
+<p><font face="Courier New">Représente un délégué multicast, c'est-à-dire un 
+délégué dont la liste d'appel peut comporter plusieurs éléments. </font></p>
+<p><font face="Courier New"><font color="#800080">Object</font> </font></p>
+<p><font face="Courier New">Prend en charge toutes les classes de la hiérarchie 
+des classes du .NET Framework et fournit des services de bas niveau à des 
+classes dérivées. Il s'agit de la classe de base fondamentale parmi toutes les 
+classes du .NET Framework. Elle constitue la racine de la hiérarchie des types.
+</font></p>
+<p><font color="#800080" face="Courier New">OperatingSystem </font></p>
+<p><font face="Courier New">Représente des informations relatives à un système 
+d'exploitation, telles que l'identificateur de version et de plate-forme. </font>
+</p>
+<p><font color="#800080" face="Courier New">Random </font></p>
+<p><font face="Courier New">Représente un générateur de nombres 
+pseudo-aléatoires. Il s'agit d'un périphérique qui produit une séquence de 
+nombres conformes à certains prérequis statistiques liés à l'aspect aléatoire.
+</font></p>
+<p><font face="Courier New"><font color="#800080">SerializableAttribute</font>
+</font></p>
+<p><font face="Courier New">indique qu'une classe peut être sérialisée. Cette 
+classe ne peut pas être héritée. </font></p>
+<p><font face="Courier New"><font color="#800080">String</font> </font></p>
+<p><font face="Courier New">Représente du texte ; autrement dit, une série de 
+caractères Unicode. </font></p>
+<p><font face="Courier New"><font color="#800080">TimeZone</font> </font></p>
+<p><font face="Courier New">Représente un fuseau horaire. </font></p>
+<p><font face="Courier New"><font color="#800080">Type</font> </font></p>
+<p><font face="Courier New">Représente les déclarations de types : types classe, 
+types interface, types tableau, types valeur et types énumération. </font></p>
+<p><font face="Courier New"><font color="#800080">Uri</font> </font></p>
+<p><font face="Courier New">fournit une représentation objet d'un identificateur 
+URI (uniform resource identifier) et un accès simplifié aux parties de 
+l'identificateur. </font></p>
+<p><font color="#800080" face="Courier New">ValueType </font></p>
+<p><font face="Courier New">Fournit la classe de base pour les types valeur.
+</font></p>
+<p><font face="Courier New"><font color="#800080">Version</font> </font></p>
+<p><font face="Courier New">Représente le numéro de version d'un assembly du 
+Common Language Runtime. Cette classe ne peut pas être héritée. </font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New">Les Classes fondamentales du Framework:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vclasfram.jpg" width="601" height="424"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4"><b><br>
+</b></font><font face="Courier New" size="2"><b><font color="#800080">
+Microsoft.Win32 </font></b><br>
+Fournit deux types de classes : celles qui gèrent les événements déclenchés par 
+le système d'exploitation et celles qui manipulent la base de registres. <br>
+<br>
+<br>
+<b><font color="#800080">System.Collections</font></b> <br>
+Contient des interfaces et des classes qui définissent différentes collections 
+d'objets, telles que des listes, des files d'attente, des tableaux de bits, des 
+tables de hachage et des dictionnaires. <br>
+<br>
+<b><font color="#800080">System.Configuration</font></b> <br>
+Fournit des classes et des interfaces qui vous permettent d'accéder par 
+programme aux paramètres de configuration de .NET Framework et de gérer les 
+erreurs dans les fichiers de configuration (fichiers .config). <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#800080"><b>System.Data </b>
+</font><br>
+Se compose principalement des classes qui constituent l'architecture ADO.NET. 
+L'architecture ADO.NET vous permet de construire des composants qui gèrent 
+efficacement les données provenant de plusieurs sources de données. </font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+System.Data.OleDb <br>
+Encapsule le fournisseur de données .NET Framework pour OLE DB. Le fournisseur 
+de données .NET Framework pour OLE DB décrit une collection de classes utilisées 
+pour accéder à une source de données OLE DB dans l'espace managé. <br>
+System.Data.OracleClient <br>
+Encapsule le fournisseur de données .NET Framework pour Oracle. Le fournisseur 
+de données .NET Framework pour Oracle décrit une collection de classes utilisées 
+pour accéder à une source de données Oracle dans l'espace managé. <br>
+Remarque : cet espace de noms n'est pris en charge que dans la version 1.1 du 
+.NET Framework. <br>
+System.Data.SqlClient <br>
+Encapsule le fournisseur de données .NET Framework pour SQL Server. Le 
+fournisseur de données .NET Framework pour SQL Server décrit une collection de 
+classes utilisées pour accéder à une base de données SQL Server dans l'espace 
+managé. <br>
+&nbsp;</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+<b><font color="#800080">System.Diagnostics </font></b><br>
+Fournit des classes qui vous permettent d'<b>interagir avec des processus 
+système, des journaux des événements et des compteurs de performance.</b> Cet 
+espace de noms fournit également des classes qui vous permettent de déboguer 
+votre application et d'effectuer le suivi de l'exécution de votre code. Pour 
+plus d'informations, consultez les classes Trace et Debug. <br>
+<br>
+<b><font color="#800080">System.DirectoryServices</font></b> <br>
+Permet d'accéder aisément à Active Directory à partir du code managé. L'espace 
+de noms contient deux classes de composants Component, DirectoryEntry et 
+DirectorySearcher, qui font appel à la technologie ADSI (Active Directory 
+Services Interfaces). ADSI, un ensemble d'interfaces fourni par Microsoft, 
+constitue un outil flexible permettant de travailler avec une vaste gamme de 
+fournisseurs réseau. ADSI permet à l'administrateur de rechercher et de gérer 
+des ressources présentes sur un réseau de manière relativement simple, quelle 
+que soit la taille du réseau. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Drawing </font>
+</b><br>
+Permet d'accéder aux fonctionnalités graphiques de base de GDI+. Des 
+fonctionnalités plus avancées sont offertes dans les espaces de noms 
+System.Drawing.Drawing2D, System.Drawing.Imaging et System.Drawing.Text. </font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+<br>
+System.Drawing.Drawing2D <br>
+Fournit des fonctionnalités avancées de graphismes à deux dimensions et 
+vectoriels. Cet espace de noms inclut notamment les brosses à dégradé, la classe 
+Matrix (utilisée pour définir des transformations géométriques) et la classe 
+GraphicsPath. <br>
+System.Drawing.Imaging <br>
+Fournit les fonctionnalités d'imagerie avancées de GDI+. Des fonctionnalités 
+graphiques de base sont fournies par l'espace de noms System.Drawing. <br>
+System.Drawing.Printing <br>
+Fournit des services d'impression. En règle générale, vous créez une nouvelle 
+instance de la classe PrintDocument, définissez les propriétés qui décrivent les 
+éléments à imprimer, puis imprimez le document en appelant la méthode Print. <br>
+System.Drawing.Text <br>
+Fournit les fonctionnalités typographiques avancées de GDI+. Des fonctionnalités 
+graphiques de base sont fournies par l'espace de noms System.Drawing. Les 
+classes de cet espace de noms permettent aux utilisateurs de créer et d'utiliser 
+des collections de polices. <br>
+&nbsp;</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">
+System.EnterpriseServices </font></b><br>
+Fournit une infrastructure importante pour les applications d'entreprise. COM+ 
+fournit une architecture de services destinée aux modèles de programmation de 
+composants déployés dans un environnement d'entreprise.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+<b><font color="#800080">System.Globalization </font></b><br>
+Contient des classes qui définissent des informations liées à la <b>culture</b>, 
+notamment la <b>langue</b>, le <b>pays</b> ou la <b>région</b>, les <b>
+calendriers</b> utilisés, les formats des <b>dates</b>, des <b>monnaies</b> et 
+des <b>nombres</b>, ainsi que l'ordre de tri à respecter pour les chaînes. Ces 
+classes sont utiles pour écrire des applications globalisées 
+(internationalisées). <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><b><font color="#800080">System.IO </font></b>
+<br>
+Contient des types qui permettent la lecture et l'écriture synchrone et 
+asynchrone de <b>flux de données</b> et de <b>fichiers</b>. <br>
+<br>
+<b><font color="#800080">System.Management</font></b> <br>
+Permet d'accéder à un ensemble riche d'informations de gestion et d'événements 
+de gestion sur le système, les périphériques et les applications instrumentés 
+pour l'infrastructure WMI (Windows Management Instrumentation). <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Messaging</font></b>
+<br>
+Fournit des classes qui vous permettent de vous connecter aux files d'attente de 
+messages, de les analyser et de les gérer sur le réseau, ainsi que d'envoyer, de 
+recevoir ou de lire des messages. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#800080"><b>System.Net</b></font>
+<br>
+Constitue une interface de programmation simple pour un grand nombre des <b>
+protocoles réseau</b> employés aujourd'hui. Les classes WebRequest et 
+WebResponse constituent la base des protocoles enfichables, qui sont une 
+implémentation de services réseau vous permettant de développer des applications 
+qui utilisent des ressources Internet sans vous soucier des spécificités de 
+chaque protocole. <br>
+System.Net.Sockets <br>
+Fournit une implémentation managée de l'interface Windows Sockets (Winsock) pour 
+les développeurs qui doivent contrôler étroitement l'accès au réseau. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Reflection</font></b>
+<br>
+Contient des classes et des interfaces qui fournissent une <b>vue managée des 
+types, des méthodes et des champs chargés</b>, avec la possibilité de créer 
+dynamiquement et d'appeler des types. <br>
+<br>
+<font color="#800080"><b>System.Resources </b></font><br>
+Contient des classes et des interfaces qui permettent aux développeurs de créer, 
+de stocker et de gérer différentes ressources spécifiques à la culture utilisées 
+dans une application. <br>
+<br>
+<b><font color="#800080">System.Runtime.Remoting </font></b><br>
+Fournit des classes et des interfaces qui permettent aux développeurs de créer 
+et configurer des applications distribuées. <br>
+<br>
+<b><font color="#800080">System.Runtime.Serialization</font></b> <br>
+Contient des classes qui peuvent être utilisées pour sérialiser et désérialiser 
+des objets. La sérialisation est le processus de conversion d'un objet ou d'un 
+graphique d'objets en séquence linéaire d'octets pour stockage ou transmission à 
+un autre emplacement. La désérialisation est le processus consistant à accepter 
+des informations stockées et à recréer des objets à partir de celles-ci. <br>
+<br>
+<b><font color="#800080">System.Security <br>
+</font></b>Fournit la structure sous-jacente du système de sécurité .NET 
+Framework, y compris les classes de base pour les autorisations. <br>
+System.Security.Cryptography <br>
+Fournit des services cryptographiques, comprenant le codage et le décodage 
+sécurisé des données, ainsi que beaucoup d'autres opérations, telles que le 
+hachage, la génération aléatoire de nombres et l'authentification de messages.
+<br>
+<br>
+<b><font color="#800080">System.ServiceProcess </font></b><br>
+Fournit des classes qui vous permettent d'implémenter, d'installer et de 
+contrôler les applications de service Windows. Les services sont des fichiers 
+exécutables de longue durée sans interface utilisateur. L'implémentation d'un 
+service implique l'héritage de la classe ServiceBase et la définition d'un 
+comportement spécifique à traiter lorsque des commandes Démarrer, Arrêter, 
+Suspendre et Continuer sont passées, ainsi qu'un comportement personnalisé et 
+des actions à entreprendre lorsque le système s'arrête. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Text <br>
+</font></b>Contient des classes représentant le codage de caractères ASCII, 
+Unicode, UTF-7 et UTF-8 ; des classes de base abstraites pour convertir des 
+blocs de caractères en direction et en provenance de blocs d'octets ; et une 
+classe d'assistance qui manipule et formate les objets String sans créer des 
+instances intermédiaires de String. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">System.Text.RegularExpressions <br>
+Contient des classes qui permettent d'accéder au moteur des expressions 
+régulières du .NET Framework. Cet espace de noms fournit des fonctions 
+d'expressions régulières qui peuvent être utilisées à partir de toute 
+plate-forme et tout langage s'exécutant dans Microsoft .NET Framework. <br>
+&nbsp;</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Threading
+</font></b><br>
+Fournit des classes et des interfaces qui permettent la programmation 
+multithread. En plus des classes permettant la synchronisation des activités des 
+threads et l'accès aux données (Mutex, Monitor, Interlocked, AutoResetEvent, 
+etc.), cet espace de noms comprend une classe ThreadPool qui vous permet 
+d'utiliser un pool de threads fournis par le système et une classe Timer qui 
+exécute les méthodes de rappel sur des threads du pool de threads. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Timers</font></b>
+<br>
+Fournit le composant Timer qui vous permet de déclencher un événement à un 
+intervalle spécifié. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Web </font>
+</b><br>
+Fournit des classes et des interfaces permettant la communication entre le 
+navigateur et le serveur. <br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">System.Windows.Forms
+</font></b><br>
+Contient des classes permettant de créer des applications Windows qui profitent 
+pleinement des fonctionnalités élaborées de l'interface utilisateur disponibles 
+dans le système d'exploitation Microsoft Windows. <br>
+<br>
+<b><font color="#800080">System.Xml <br>
+</font></b>Fournit une prise en charge des normes pour le traitement du code XML.
+<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #FFFF00">ANNEXE 2: Visual Basic .NET.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'espace de noms <font color="#0000FF">
+Microsoft.VisualBasic </font>(<b>présent par défaut</b> quand on crée un nouveau 
+projet) contient les classes et les modules qui constituent la bibliothèque 
+runtime de Visual Basic .NET. La bibliothèque fournit les fonctions, méthodes et 
+propriétés que vous pouvez utiliser dans votre code.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Voici toutes les classes et leurs 
+instructions:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<br>
+<b><font color="#800080">Classe Microsoft.VisualBasic.Collection</font></b><br>
+Add Count GetEnumerator Item <br>
+Remove <br>
+<br>
+<font color="#800080"><b>Classe Microsoft.VisualBasic.ComClassAttribute</b></font><br>
+ClassID EventID InterfaceID InterfaceShadows <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.Conversion</font></b><br>
+ErrorToString Fix Hex Int <br>
+Oct Str Val <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.DateAndTime</font></b><br>
+DateAdd DateDiff DatePart DateSerial <br>
+DateString DateValue Day Hour <br>
+Minute Month MonthName Now <br>
+Second TimeOfDay Timer TimeSerial <br>
+TimeString TimeValue Today WeekDay <br>
+WeekDayName Year <br>
+<br>
+<b><font color="#800080">Classe Microsoft.VisualBasic.ErrObject</font></b><br>
+Clear Description Erl GetException <br>
+HelpContext HelpFile LastDLLError Number <br>
+Raise Source <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.FileSystem</font></b><br>
+ChDir ChDrive CurDir Dir <br>
+EOF FileAttr FileClose FileCopy <br>
+FileDateTime FileGet FileGetObject FileLen <br>
+FileOpen FilePut FilePutObject FileWidth <br>
+FreeFile GetAttr Input InputString <br>
+Kill LineInput Loc Lock <br>
+LOF MkDir Print PrintLine <br>
+Rename Reset RmDir Seek <br>
+SetAttr SPC TAB Unlock <br>
+Write WriteLine <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.Financial</font></b><br>
+DDB Fv IPmt IRR <br>
+MIRR NPer NPV Pmt <br>
+PPmt Pv Rate SLN <br>
+SYD <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.Globals</font></b><br>
+ScriptEngine ScriptEngineBuildVersion ScriptEngineMajorVersion 
+ScriptEngineMinorVersion <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.Information</font></b><br>
+Err IsArray IsDate IsDBNull <br>
+IsError IsNothing IsNumeric IsReference <br>
+LBound QBColor RGB SystemTypeName <br>
+TypeName UBound VarType VbTypeName <br>
+<br>
+<b><font color="#800080">Module icrosoft.VisualBasic.Interaction</font></b><br>
+AppActivate Beep CallByName Choose <br>
+Command CreateObject DeleteSetting Environ <br>
+GetAllSettings GetObject GetSetting IIf <br>
+InputBox MsgBox Partition SaveSetting <br>
+Shell Switch <br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.Strings</font></b><br>
+Asc AscW Chr ChrW <br>
+Filter Format FormatCurrency FormatDateTime <br>
+FormatNumber FormatPercent GetChar InStr <br>
+InStrRev Join LCase Left <br>
+Len LSet LTrim Mid <br>
+Replace Right RSet RTrim <br>
+Space Split StrComp StrConv <br>
+StrDup StrReverse Trim UCase <br>
+<br>
+<b><font color="#800080">Classe Microsoft.VisualBasic.VBFixedArrayAttribute</font></b><br>
+Bounds Length <br>
+<br>
+<br>
+<b><font color="#800080">Module Microsoft.VisualBasic.VbMath</font></b><br>
+Randomize Rnd <br>
+<br>
+La bibliothèque runtime Visual Basic .NET fournit également les constantes et 
+les membres d'énumération que vous pouvez utiliser dans votre code. Chaque 
+énumération représente une catégorie particulière de fonctionnalité. Consultez 
+Constantes et énumérations pour plus d'informations.<br>
+<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #FFFF00">ANNEXE 3:</span></b><span style="background-color: #FFFF00">
+</span> <b><span style="background-color: #FFFF00">Fonctions&nbsp; VB6 de 
+VisualBasic.Compatibility</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Il faut d'abord importer l'espace de nom&nbsp; 
+Microsoft.VisualBasic.Compatibility&nbsp;&nbsp; <font color="#FF0000">A ÉVITER, 
+ce n'est pas du Net.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut importer aussi&nbsp; l'espace de noms
+<b>Microsoft.Compatibility.Data</b>: ils correspondent à la liaison de données
+<b>ADO</b> dans Visual Basic&nbsp;6.0.</font></p>
+<div class="tablediv">
+  <table class="dtTABLE" cellSpacing="0" height="1354">
+    <tr vAlign="top">
+      <th width="32%" height="19"><font face="Courier New" size="2">Fonction</font></th>
+      <th width="68%" height="19"><font face="Courier New" size="2">Description</font></th>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>CopyArray</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de Visual Basic&nbsp;6.0 permettant d'assigner un tableau à un 
+      Variant.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      CursorToIPicture</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>Eqv</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique 
+      l'opérateur <b>Eqv</b> (équivalence) de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeBold</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeGdiCharSet</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeItalic</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeName</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeSize</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeStrikeout</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontChangeUnderline</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de polices Visual Basic&nbsp;6.0 en objets <b>Font</b> Visual 
+      Basic&nbsp;.NET.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FontToIFont</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>Format</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonction <b>Format</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FromPixelsX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FromPixelsY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FromPixelsUserHeight</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FromPixelsUserWidth</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="18"><font face="Courier New" size="2"><b>
+      FromPixelsUserX</b></font></td>
+      <td width="68%" height="18"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      FromPixelsUserY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      GetActiveControl</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>Screen.ActiveControl</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>GetCancel</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>Cancel</b> d'un <b>CommandButton</b> de 
+      Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      GetDefault</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>Default</b> d'un <b>CommandButton</b> de 
+      Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      GetEXEName</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>App.EXEName</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      GetHInstance</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>App.HInstance</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="38"><font face="Courier New" size="2"><b>
+      GetItemData</b></font></td>
+      <td width="68%" height="38"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>ItemData</b> d'un <b>ListBox</b> ou d'un
+      <b>ComboBox</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="38"><font face="Courier New" size="2"><b>
+      GetItemString</b></font></td>
+      <td width="68%" height="38"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité permettant d'extraire une valeur d'une liste dans un <b>
+      ListBox</b> ou un <b>ComboBox</b> de Visual Basic&nbsp;6.0 .</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>GetPath</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>App.Path</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      IconToIpicture</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      IFontToFont</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ImageToIPicture</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ImageToIPictureDisp</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>Imp</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique 
+      l'opérateur <b>Imp</b> (implication) de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      IPictureDispToImage</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      IPictureToImage</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de format.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      LoadResData</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonction <b>LoadResData</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      LoadResPicture</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonction <b>LoadResPicture</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      LoadResString</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonction <b>LoadResString</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      PixelsToTwipsX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      PixelsToTwipsY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>SendKeys</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonction <b>SendKeys</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>SetCancel</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>Cancel</b> d'un <b>CommandButton</b> de 
+      Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      SetDefault</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>Default</b> d'un <b>CommandButton</b> de 
+      Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="38"><font face="Courier New" size="2"><b>
+      SetItemData</b></font></td>
+      <td width="68%" height="38"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la propriété <b>ItemData</b> d'un <b>ListBox</b> ou d'un
+      <b>ComboBox</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="38"><font face="Courier New" size="2"><b>
+      SetItemString</b></font></td>
+      <td width="68%" height="38"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité permettant de définir une valeur d'une liste dans un <b>
+      ListBox</b> ou un <b>ComboBox</b> de Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="38"><font face="Courier New" size="2"><b>
+      SetResourceBaseName</b></font></td>
+      <td width="68%" height="38"><font face="Courier New" size="2">Utilisé avec 
+      les fonctions <b>LoadRes</b> lorsqu'un fichier de ressources utilise une 
+      convention d'affectation de noms non standard.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>ShowForm</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la méthode <b>Show</b> d'un formulaire Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>TabLayout</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion d'instructions <b>Debug.Print</b> contenant les mots clés <b>
+      Tab</b> ou <b>Spc</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>ToPixelsX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>ToPixelsY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ToPixelsUserHeight</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ToPixelsUserWidth</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ToPixelsUserX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ToPixelsUserY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      TwipsPerPixelX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>Screen.TwipsPerPixelX</b> de Visual Basic.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      TwipsPerPixelY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      propriété <b>Screen.TwipsPerPixelY</b> de Visual Basic.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      TwipsToPixelsX</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      TwipsToPixelsY</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de coordonnées.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      ValidateControls</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la méthode <b>ValidateControls</b> d'un formulaire 
+      Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>
+      WhatsThisMode</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Duplique la 
+      fonctionnalité de la méthode <b>WhatsThisMode</b> d'un formulaire Visual 
+      Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%" height="19"><font face="Courier New" size="2"><b>Zorder</b></font></td>
+      <td width="68%" height="19"><font face="Courier New" size="2">Utilisé pour 
+      la conversion de l'ordre de plan des contrôles.</font></td>
+    </tr>
+  </table>
+</div>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="label"><font face="Courier New" size="2"><b>Objets 
+VisualBasic.Compatibility</b></font></p>
+<div class="tablediv">
+  <table class="dtTABLE" cellSpacing="0">
+    <tr vAlign="top">
+      <th width="32%"><font face="Courier New" size="2">Objet</font></th>
+      <th width="68%"><font face="Courier New" size="2">Description</font></th>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>BaseControlArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Classe parente pour 
+      l'émulation de tableau de contrôles Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>BaseOcxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Classe parente pour les 
+      tableaux émulés des contrôles ActiveX.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>ButtonArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>CommandButton</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>CheckBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>CheckBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>CheckedListBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>ListBox</b> avec la propriété
+      <b>Style</b> définie sur Checked.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>ComboBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>ComboBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>DirListBox</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un contrôle Visual 
+      Basic&nbsp;6.0 <b>DirListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>DirListBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>DirListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>DriveListBox</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un contrôle <b>
+      DriveListBox</b> Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>DriveListBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>DriveListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>FileListBox</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un contrôle <b>
+      FileListBox</b> Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>FileListBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>FileListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>FixedLengthString</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule des chaînes de 
+      longueur fixe Visual Basic&nbsp;6.0.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>GroupBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>Frame</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>HScrollBarArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>HScrollBar</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>LabelArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>Label</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>ListBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>ListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>ListBoxItem</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule la propriété <b>
+      ItemData</b> d'un contrôle <b>ListBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>MenuItemArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>Menu</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>PanelArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>PictureBox</b> contenant des 
+      contrôles enfants.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>PictureBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>PictureBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>RadioButtonArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>OptionButton</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>TabControlArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>TabStrip</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>TextBoxArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>TextBox</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>TimerArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>Timer</b>.</font></td>
+    </tr>
+    <tr vAlign="top">
+      <td width="32%"><font face="Courier New" size="2"><b>VscrollBarArray</b></font></td>
+      <td width="68%"><font face="Courier New" size="2">Émule un tableau de 
+      contrôles Visual Basic&nbsp;6.0 de contrôles <b>VScrollBar</b>.</font></td>
+    </tr>
+  </table>
+</div>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-20.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-22.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-21.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+</html>

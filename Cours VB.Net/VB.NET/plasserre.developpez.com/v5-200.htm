@@ -1,0 +1,270 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-200.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net règles de bonne programmation</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="49">
+  <tr>
+    <td width="27%" height="49"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="49" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="49">&nbsp;</td>
+    <td width="39%" height="49">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-130.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.200</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Règles de bonne 
+    programmation. </font></b></td>
+    <td width="14%" height="76"><a href="v5-210.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Pour faire un code solide,  éviter les 
+bugs, avoir une maintenance facile, il faut suivre quelques règles</span></b></font><font color="#800080"><span style="font-size: 10.0pt; font-family: Courier New">.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">Relire les chapitres :</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">5-11 pour faire de bonnes 
+procédures.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">5-12 pour faire de bonnes 
+Classes</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">5-13 pour faire du bon code: 
+bonnes variables</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">5-210 pour faire de bons 
+commentaires et rendre le code lisible</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">Voici un résumé des points 
+forts.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF"><b>Séparer l'interface utilisateur et 
+l'applicatif.</b></font></span></p>
+<p><font face="Courier New" size="2">Exemple: un formulaire affiche les 
+enregistrements d'une base de données:</font></p>
+<p><font face="Courier New" size="2">Créer:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Les fenêtres dont le code gère 
+  uniquement l'affichage. C'est l'interface utilisateur ou IHM (Interface Homme 
+  Machine)</font></li>
+  <li><font face="Courier New" size="2">une Classe gérant uniquement l'accès aux 
+  bases de données. </font></li>
+</ul>
+<p><font face="Courier New" size="2">Cela facilite la maintenance: si on désire 
+modifier l'interface, on touche au fenêtre et pas du tout à la Classe base de 
+données.</font></p>
+<p><font face="Courier New" size="2"><b>Architecture à 3 niveaux.</b></font></p>
+<p><font face="Courier New" size="2">Elle peut être nécessaire dans certains 
+programmes, les 3 niveaux sont:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Application ,interface.</font></li>
+  <li><font face="Courier New" size="2">Logique.</font></li>
+  <li><font face="Courier New" size="2">Données.</font></li>
+</ul>
+<p><font face="Courier New" size="2">Exemple: Un formulaire affiche certains 
+enregistrements d'une base de données.</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><b>L'interface</b> affiche les enregistrements.</font></li>
+  <li><font face="Courier New" size="2">Les classes ou modules '<b>logiques</b>' déterminent les 
+  bons enregistrements.</font></li>
+  <li><font face="Courier New" size="2">Les classes ou modules <b>données</b> 
+  vont chercher les 
+  données dans la base de données.</font></li>
+</ul>
+<p><font face="Courier New" size="2">Si au lieu de travailler sur une base 
+Access, je travaille sur une base SQLServer, il suffit de réécrire la troisième 
+couche.</font> </p>
+<p><font face="Courier New" size="2">Utiliser des design pattern: ce sont des 
+'patrons', des modèles en programmation objet.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF"><b><span style="background-color: #C0C0C0">Utiliser
+le typage fort</span></b></font><span style="background-color: #C0C0C0"><font face="Courier New" size="4" color="#0000FF"><b>.</b></font></span></p>
+<p><font face="Courier New" size="2">Cela consiste à spécifier le type de
+données pour toute variable, en plus il faut utiliser des variables le plus
+typées possible.</font></p>
+<p><font face="Courier New" size="2">Éviter le type 'Object'.</font></p>
+<p><font face="Courier New" size="2">Le code en sera plus rapide, le
+compilateur&nbsp; interceptera des erreurs (cela évitera des erreurs à la
+compilation).</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Forcer la déclaration des 
+variables et les conversions explicites:</font></span></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 10pt; font-family: Courier New">
+<span style="color: blue">Option Explicit </span>étant par défaut à<span style="COLOR: blue"> 
+On, </span><b>t</b></span><font face="Courier New" size="2"><b>oute variable 
+utilisée doit être déclarée</b>. Conserver cette option. Cela évite les erreurs 
+liées aux variables mal orthographiées.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">Si</span><span style="color: blue; font-size: 10pt; font-family: Courier New"> 
+Option Strict </span><span style="font-size: 10pt; font-family: Courier New">
+est sur</span><span style="color: blue; font-size: 10pt; font-family: Courier New"> 
+On, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">seules les 
+conversions de type effectuées explicitement sur les variables seront autorisées. Le mettre sur On.</span></p>
+<p><font face="Courier New">Voir <a href="v1-7.htm">Option Strict et Option Explicite</a></font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Utiliser des constantes ou des 
+énumérations:</font></b></span></p>
+<p><b><font face="Courier New" size="2">L'usage de constantes facilite les modifications.</font></b></p>
+<p><font face="Courier New" size="2">Exemple : un programme gère des utilisateurs;:</font></p>
+<p><font face="Courier New" size="2">Faire:</font></p>
+<p><font face="Courier New" size="2">Créer une constante contenant le nombre 
+maximum d'utilisateurs.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Const 
+NombreUtilisateur= 20</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim 
+VariableUtilisateur (NombreUtilisateur) </font>&nbsp;'on utilise 
+NombreUtilisateur et non 20</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">For i=&nbsp; 0 To 
+NombreUtilisateur-1</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Next i</font></span></p>
+<p><font face="Courier New" size="2">Plutôt que:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Dim 
+VariableUtilisateur (20)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">For i=&nbsp; 0 To 
+19</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Next i</font></span></p>
+<p><font face="Courier New" size="2">Si ultérieurement on veut augmenter le nombre d'utilisateurs possibles à 50, 
+il suffit de changer une seule ligne:</font></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Const 
+NombreUtilisateur= 50</font></span></p>
+<p><b><font face="Courier New" size="2">Utiliser les constantes VB, c'est plus 
+lisible:</font></b></p>
+<p><font face="Courier New" size="2">Form1.BorderStyle=2 est à éviter</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #FFFFFF">
+<font color="#0000FF">Form1.BorderStyle= vbSizable</font></span>&nbsp;&nbsp; 
+c'est mieux</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Vérifier la validité des 
+données que reçoit une Sub une Function ou une Classe</font></span></p>
+<p><font face="Courier New" size="2">Vous pouvez être optimiste et ne pas tester 
+les paramètres reçus par votre Sub. Les paramètres envoyés seront toujours 
+probablement bons!! Bof un jour vous ferez une erreur, ou un autre n'aura pas 
+compris le type de paramètre à envoyer et cela plantera!!</font></p>
+<p><b><font face="Courier New" size="2">Donc, il faut vérifier la validité des 
+paramètres.</font></b></p>
+<p><font face="Courier New" size="2">On peut le faire au fur et à mesure de leur 
+utilisation dans le code, <b>il est préférable de faire toutes les vérifications 
+en début de Sub.</b></font></p>
+<p><font face="Courier New" size="2">Vérifier aussi ce que retourne la 
+procédure.</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Se méfier du passage de 
+paramètres 'par valeur' ou par 'référence':</font></span></p>
+<p><font face="Courier New" size="2">Par défaut les paramètres sont envoyés 'par 
+valeur' vers une procédure. Aussi, si la variable contenant le paramètre est 
+modifiée, cela ne modifie pas la valeur de la variable de la procédure 
+appelante.</font></p>
+<p><font face="Courier New" size="2">Si on a peur de se tromper utilisons 'ByVal' 
+et 'ByRef' dans l'en-tête de la Sub ou de la Fonction.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF"><b>Les Booléens sont des Booléens:</b></font></span></p>
+<p><font face="Courier New" size="2">Utiliser une variable Integer pour stocker un Flag dont la valeur ne peut 
+être que 'vrai' ou 'faux' et donner la valeur 0 ou -1 est à proscrire.</font></p>
+<p><font face="Courier New" size="2">Faire:</font></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Dim Flag As 
+Boolean</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Flag=True</font></span></p>
+<p><font face="Courier New" size="2">(Utiliser uniquement <font color="#0000FF">True</font> et 
+<font color="#0000FF">False</font>)</font></p>
+<p><font face="Courier New" size="2">Eviter aussi d'abréger à la mode Booléens ce qui n'en est pas.</font></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim x,y As Integer</font></span></p>
+<p><font face="Courier New" size="2"><span style="background-color: #FFFFFF">
+<font color="#0000FF">If x And y then&nbsp; </font></span>(pour tester si x et y sont = 0)&nbsp; est à éviter.</font></p>
+<p><font face="Courier New" size="2">Faire plutôt:</font></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">If x&lt;&gt;0 And y 
+&lt;&gt;0</font></span></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF"><b>Utiliser les variables Date pour stocker les dates:</b></font></span></p>
+<p><font face="Courier New" size="2">Ne pas utiliser de type Double.</font></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">Dim LaDate As 
+Date</font></span></p>
+<p><span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">LaDate=Now</font></span></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Ne faire aucune confiance à 
+l'utilisateur du logiciel</font></b><font face="Courier New" size="4" color="#0000FF"><b>:</b></font></span></p>
+<p><font face="Courier New" size="2">Si vous demandez à l'utilisateur de saisir 
+un entier entre 1 et 7.</font></p>
+<p><b><font face="Courier New" size="2">Vérifier:</font></b></p>
+<p><font face="Courier New" size="2">qu'il a tapé quelque chose!!</font></p>
+<p><font face="Courier New" size="2">Qu'il a tapé une valeur numérique.</font></p>
+<p><font face="Courier New" size="2">Que c'est un entier.</font></p>
+<p><font face="Courier New" size="2">Que c'est supérieur à 0 et inférieur à 8.</font></p>
+<p><font face="Courier New" size="2"><b>Accorder les moindres privilèges:</b></font></p>
+<p><font face="Courier New" size="2">Ne permettre de saisir que ce qui est 
+valide.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</span>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-130.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-210.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-200.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

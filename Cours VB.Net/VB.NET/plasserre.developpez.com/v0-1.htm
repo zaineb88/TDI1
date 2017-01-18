@@ -1,0 +1,666 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v0-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:13 GMT -->
+<head>
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  Les objets </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="60%" height="62" align="center"><b>
+    <font face="Courier New" size="7" color="#0000FF">Cours VB.net</font></b></td>
+    <td width="9%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="31%" height="62">
+    &nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center">
+    <a href="v0-0.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a><b><font face="Courier New" size="6" color="#800080"> 0.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les objets</font></b></td>
+    <td width="14%" height="76">
+    <p align="center"><a href="v1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF"><img border="0" src="vcar1.gif" width="82" height="42"></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" color="#800080">VB utilise la notion d''OBJET'.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#800080">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Pour bien comprendre ce 
+qu’est un objet, nous allons prendre des exemples dans la vie courante puis nous 
+passerons à des exemples dans Visual Basic.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="ftp://ftp-developpez.com/plasserre/v1class.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="ftp://ftp-developpez.com/plasserre/v1class.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">La vidéo (identique à 
+celle du chapitre 1-20)contient:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">1)<b>Objets, Classes.</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">2)Références, espaces de 
+noms(a visionner plus tard).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><font size="5" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">A</span></font></span><font size="5" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">- 
+Dans la vie courante:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Mon gâteau</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> est un <b>objet, </b>cet objet existe.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vgateau.JPG" width="77" height="98"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Pour créer un gâteau, j'utilise un 'moule à 
+gâteau', ce moule à les caractéristiques du gâteau (forme, hauteur..), mais je 
+ne peux pas manger le moule!! Le moule se nomme la <b>Classe</b>.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Avec le moule, je crée un ou plusieurs gâteaux.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font face="Courier New" size="2">Autre exemple:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Ma</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> voiture est un <b>objet, </b>cet objet 
+existe, on peut l'utiliser.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF"><img border="0" src="vcar1.gif" width="82" height="42"></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Ma voiture</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> fait partie de &quot;Les voitures&quot;, du type, 
+du genre &quot;Les voitures&quot;. &quot;Les voitures&quot; c’est une classe (<b>Class</b>) qui a ses caractéristiques&nbsp;: 
+&quot;Les voitures&quot; ont une couleur, un moteur.., elles 
+roulent en transportant des passagers… </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">mais je ne peux pas utiliser &quot;Les 
+voitures&quot;, la Classe; pour me déplacer, il faut avoir un objet &quot;voiture&quot;.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Avec la Classe je vais 
+créer des Objets.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#FF0000">De manière générale, une <b><i>classe</i> est 
+une représentation abstraite</b> de quelque chose, tandis qu'un <b><i>objet</i> 
+est un exemple utilisable</b> de ce que représente la classe.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Pour </span><font size="2">
+<span style="font-family: Courier New">fabriquer</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> ma voiture, je prends les 
+caractéristiques de la <b>class</b> &quot;Les voitures&quot; (c’est comme un moule) et je 
+fabrique une voiture, je la nomme &quot;<font color="#0000FF">MaVoiture</font>&quot;.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim 
+MaVoiture As New Lesvoitures</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;<font color="#0000FF">MaVoiture</font> 
+est maintenant un nouvel objet de <b>type</b> 'Les voitures'.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vcar3.GIF" width="182" height="58"></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<font face="Courier New" size="2">Class&nbsp; --&gt;&nbsp; Objet</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<font face="Courier New" size="2">Type 'Les voitures'--&gt; Objet 'Mavoiture'</font></p>
+<font FACE="Garamond" SIZE="2">
+<p ALIGN="LEFT">&nbsp;</p>
+</font><font SIZE="2" face="Courier New" color="#008000">
+<p ALIGN="LEFT">Un <b>Objet</b> est créé selon un 'modèle' qu'on appelle une <b>
+Classe</b>.</p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt" align="left">
+<font face="Courier New" size="2">On dit aussi qu'il faut <b>instancier</b> un 
+objet à partir de la Classe.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="left">
+<font face="Courier New" size="2">'Mavoiture' est une <b>instance </b>de la 
+classe 'Les voitures'.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="left">
+<font face="Courier New" size="2">(On dit aussi une '<b>occurence</b>' de la classe)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="left">
+<font face="Courier New" size="2">Remarque:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="left">
+<font face="Courier New" size="2">Avec la même classe ont peu instancier 
+plusieurs Objets. </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Propriétés&nbsp;(Attributs):</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Prenons <font color="#0000FF">MaVoiture.<img border="0" src="vcar1.gif" width="82" height="42"></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Elle a des <b>propriétés&nbsp;</b>: une marque, 
+une couleur, une puissance…</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour indiquer la couleur de ma voiture on 
+utilise la notation&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+MaVoiture.couleur</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Syntaxe&nbsp;: <span style="COLOR: blue">
+Objet.Propriété </span>(Il y a <b>un point</b> entre les 2 mots)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour modifier la couleur et avoir une 
+voiture verte on écrit&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+MaVoiture.couleur=&nbsp;&quot;Vert&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Et la voiture devient verte&nbsp;!!<img border="0" src="vcar2.GIF" width="82" height="42"></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+MaVoiture.Phares.Avant</font> indique les phares avant de la voiture.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+MaVoiture.Phares.Avant.Allumé</font> indique l’état des phares (Allumé ou non)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Si je fais&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+MaVoiture.Phares.Avant.Allumé=True</font> (Vrai) cela allume les phares.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Méthodes&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">MaVoiture</font> fait des choses&nbsp;: elle roule par 
+exemple.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour faire rouler la voiture j’appelle la 
+<b>méthode</b> ‘Roule’</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MaVoiture.Roule</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Syntaxe&nbsp;: <span style="COLOR: blue">
+Objet.Méthode </span>(Il y a <b>un point</b> entre les 2 mots)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Si c’est possible pour cette méthode je 
+peux indiquer à quelle vitesse la voiture doit rouler&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MaVoiture.Roule(100)</font> 
+'j’ai ajouté <b>un paramètre</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le paramètre est un renseignement envoyé 
+avec la méthode.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Il est possible&nbsp; parfois d’indiquer en 
+plus si la voiture doit rouler en marche avant ou en marche arrière.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">MaVoiture.Roule(10, 
+Arriere)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;Il y a donc 2 manières d’appeler la 
+méthode Roule&nbsp;: avec 1 ou 2 paramètres, on dit que la méthode est <b>surchargée; </b>
+chaque manière d'appeler la méthode s'appelle<b> 'signature'</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Première signature: <font color="#0000FF">MaVoiture.Roule(100)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Seconde signature:<font color="#0000FF">&nbsp; MaVoiture.Roule(10, 
+Arriere)</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Evènement:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Des évènements peuvent 
+survenir sur un objet.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+MaVoiture_démarre</font> est un évènement, quand la voiture se met en route (si 
+par exemple j'ai fait </span></font>
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <font color="#0000FF">MaVoiture.Roule(10, 
+Arriere))</font></span><font size="2"><span style="font-family: Courier New">, cet 
+évènement <font color="#0000FF">démarre</font> se déclenche automatiquement. </span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Interface et implémentation:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Ce que je vois de l'objet, c'est son <b>interface</b>&nbsp; exemple: la méthode
+<font color="#0000FF">Roule</font> fait partie de l'interface 
+d'une voiture. Par contre ce qui fait rouler physiquement la voiture se nomme <b>implémentation</b>, 
+c'est le moteur, ce n'est 
+ni visible ni accessible.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">&nbsp;Si 
+je crée une voiture je vais faire l'implémentation, je vais fabriquer le moteur, 
+mais si je suis simplement utilisateur de l'objet voiture, je vais me contenter 
+d'utiliser l'interface.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b>Visibilité:</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Quand un objet est créé, il est <b>visible et utilisable</b>, uniquement dans la 
+zone où il a été défini.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Relation entre Objet</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New"><b>
+Héritage:</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une Classe (un moule) peut hériter d'une autre classe (d'un autre moule).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+La classe <font color="#0000FF">Voiture</font> hérite de la classe
+<font color="#0000FF">Véhicule</font>, cela veut dire qu'une voiture est un 
+véhicule; la classe voiture aurait les propriétés de la classe Véhicule.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New">
+Contenant-contenu</font></b><font face="Courier New"><b>:</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On peut créer une Classe qui contient des 
+Objets, une classe qui se <b>compose</b> d'objets. on parle de composition.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+L'objet <font color="#0000FF">Voiture</font> contient 4 objets
+<font color="#0000FF">Roue.</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">
+On dit que l'objet <b>encapsule</b> le contenu.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New">
+Collections:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Les collections sont des groupes d'objets semblables qui peuvent être énumérés.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Un parc automobile contient X Voitures; chaque voiture a un numéro d'item:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">ParcVoiture.item(1)</font> pour la première Voiture</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">ParcVoiture.item(2)</font> pour la seconde&nbsp; Voiture</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#008000">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Tous cela ce sont des images, mais&nbsp;voila, <b>
+vous avez compris ce qu’est un objet&nbsp;!</b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="5" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+B- Et dans Visual 
+Basic.net:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Une application Windows se compose de <b>fenêtres 
+(</b>nommées aussi<b> formulaires)</b> dans lesquelles se trouvent des 
+<b>contrôles</b> (bouton, liste, texte…)&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>Exemple de fenêtre</b> 
+avec 2 boutons, une zone de texte (un label) et une icône:</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vmsgbox.gif" width="192" height="126"></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Dans une application Windows, il y a aussi des lignes de code utilisant des 
+variables pour faire des calculs.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">En Visual 
+Basic.Net tout est objet&nbsp;:</span></b><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> </span></p>
+<p class="MsoNormal" style="margin-left: 30; margin-top: 6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">les fenêtres (on dit les formulaires),
+</span></p>
+<p class="MsoNormal" style="margin-left: 30; margin-top: 6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">les variables, </span></p>
+<p class="MsoNormal" style="margin-left: 30; margin-top: 6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">les contrôles (les boutons, liste, image, 
+case à cocher..)</span></p>
+<p class="MsoNormal" style="margin-left: 30; margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">...</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Il faut un <b>moule</b> pour faire un objet. Le 
+moule c’est une </span><span style="font-family: Courier New"><b><font size="2">classe</font></b></span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Le moule va servir à créer un objet, on dit <b>une 
+instance</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">On peut créer, <b>instancier</b> une multitude 
+d’objets avec le même moule.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Pour créer, démouler un objet, on utilise 
+les mots clé <font color="#0000FF">Dim</font> et <font color="#0000FF">As New</font>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">Dim</font> 
+objet <font color="#0000FF">As New</font> Classe</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">New</font> est un 
+<b>constructeur</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Exemple&nbsp;: créer une fenêtre (un 
+formulaire)&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Je dessine une fenêtre
+<font color="#0000FF">FormDémarrage </font>(c'est la Classe, le moule)</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">puis&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">Dim</font> F
+<font color="#0000FF">As New</font> FormDémarrage </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">C</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">rée une fenêtre qui se nomme 'F' à partir du&nbsp; moule, du 
+modèle (FormDémarrage) que j’ai dessiné.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Autre exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">Dim</font> B
+<font color="#0000FF">as New</font> Button</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Créer un bouton nommé 'B' avec les attributs 
+habituels des boutons (<b>Class</b>  Button).B est de <b>type</b> Button.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Troisième exemple:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">Comment créer une variable 
+nommée Mavariable pouvant contenir un entier (Integer)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim 
+MaVariable As New Integer</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">Dim 
+MaVariable As Integer </font><font size="2">'est correct aussi.</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New">MaVariable est de <b>type</b>
+Integer.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Ici, pour une variable, on remarque que New&nbsp;peut 
+être omis&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span><span style="font-family:&quot;Courier New&quot;"><font color="#0000FF" size="4"><b><span style="background-color: #C0C0C0">Tout objet a des propriétés.</span></b></font></span></p>
+<p class="MsoNormal" style="margin-left:35.4pt;text-align:justify">
+<font face="Courier New" size="2">On utilise la syntaxe&nbsp;:
+<span style="color:blue">Objet.Propriété </span>(Il y a <b>un point</b> entre 
+les 2 mots)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Si F est une 
+fenêtre,<font color="#0000FF"> F.BackColor</font>&nbsp; 
+indique la couleur de fond de la fenêtre.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">S’il y a un bouton, la couleur de fond du 
+bouton sera&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+Bouton.BackColor</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ou</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+F.Bouton.BackColor</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Noter la syntaxe&nbsp;: La couleur du bouton qui 
+est dans la fenêtre F</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">En fait une propriété c'est une sorte de 
+variable.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Comment 
+modifier cette propriété?</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">Bouton.BackColor=Color.Red </font>&nbsp;&nbsp;&nbsp; 'modifie la 
+couleur de fond du bouton</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vBoutonR.gif" width="82" height="33"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Autre exemple:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-family: Courier New"><font size="2">La propriété <b>Visible</b>: 
+si elle a la valeur <font color="#0000FF">True</font> (Vraie) l'objet est 
+visible; si elle est à <font color="#0000FF">False</font> l'objet n'est pas 
+visible.</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">Bouton.Visible=False
+</font>&nbsp;&nbsp;&nbsp; 'fait disparaître le bouton</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font size="2">&lt;==Ici il y a un bouton invisible!! oui, oui!!</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#0000FF">
+<font size="4"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">Les</span></b></font><span style="font-family: Courier New"><b><span style="background-color: #C0C0C0"><font size="4"> 
+objets ont des méthodes parfois.</font></span></b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une méthode agit sur l'objet ou fait agir l'objet.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Prenons 
+un exemple simplifié.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">
+Les&nbsp; <b>Listes </b>( liste déroulante) ont des lignes (Items) et une méthode <b>Clear</b> qui 
+permet de les vider.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">
+Si je veux vider toutes les lignes d'une liste nommé Liste1, je fais:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New">
+<font size="2" color="#0000FF">Liste1.Items.Clear()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font size="2">'</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<img border="0" src="vicochev.GIF" width="32" height="34"><font face="Courier New" size="2" color="#008000"> Les propriétés et méthodes se 
+nomment <b>les membres</b> d'un objet.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"> <span style="font-size: 10.0pt; font-family: Courier New"><b>
+Certains objets ont des évènements:</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Reprenons notre bouton. Quand 
+l'utilisateur click dessus, l'évènement <font color="#0000FF">Bouton_Click</font> survient.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Ce sont les objets <b>contrôles</b> 
+(bouton, case à cocher..)et les formulaires qui ont des évènements.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;&nbsp;&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Interface et implémentation:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Ce que je vois de l'objet, c'est son <b>interface</b> (le nom des propriétés, 
+méthodes..) exemple: la méthode <font color="#0000FF">Clear</font> fait partie de l'interface 
+d'une ListBox. Par contre le 
+code qui effectue la méthode (celui qui efface physiquement toutes les lignes de 
+la listeBox),ce code se nomme <b>implémentation</b>, lui n'est 
+ni visible ni accessible.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b>Visibilité:</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Quand un objet est créé, il est <b>visible et utilisable</b>, uniquement dans la 
+partie du programme où il a été défini.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Par exemple habituellement, je peux voir et modifier la couleur d'un bouton 
+uniquement dans le code de la fenêtre ou il est situé.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Pour les variables on parle de <b>portée</b>: la variable peut être locale (<b>Private</b>) 
+ou de portée générale ('<b>Public</b>') visible partout.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Relation </font></b></span><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New">
+Héritage:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une Classe (un moule) peut hériter d'une autre classe (d'un autre moule).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+La classe <font color="#0000FF">Button</font> hérite de la classe
+<font color="#0000FF">Control</font>, cela veut dire qu'un bouton est un 
+contrôle.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Si je crée un bouton, il aura les caractéristiques de la classe Button mais 
+aussi de la classe Control.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New">
+Contenant-contenu:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une Classe peut contenir d'autres classes.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Je peux décider d'un Objet <font color="#0000FF">Rectangle</font> va contenir 4 
+Objets <font color="#0000FF">Point</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New">
+Collections:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Les collections sont des groupes d'objets semblables qui peuvent être énumérés.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Une fenêtre Windows (on dit un 'formulaire' contient une collection nommée 'Controls' 
+composées de tous les objets (boutons, List, texte) contenus dans la fenêtre:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">maFenetre</font><font face="Courier New" size="2"><font color="#0000FF">.Controls.item(1)</font> 
+contient par exemple le premier bouton</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">maFenetre.Controls</font><font face="Courier New" size="2"><font color="#0000FF">.item(2)</font> 
+contient par exemple une list.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="5" color="#0000FF">En résumé&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Avec le Framework</span><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"> <b>tout est objet</b>.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">
+Les <b>Classes </b>sont des types d'objet.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New">
+Pour créer (instancier) un objet à partir d'une Classe, il faut utiliser les mots clé
+<font color="#0000FF">Dim ..As New</font>:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" size="2" face="Courier New">Dim Objet As New Class</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">Un objet a&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Des <b>propriétés.</b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Des <b>méthodes. </b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b>Des<b> évènements.&nbsp; </b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#FF0000" size="2" face="Courier New">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Attention, par abus 
+de langage, on emploie parfois indifféremment les mots 'Classe' et 'Objet', mais il 
+est préférable de ne pas confondre le modèle et l'objet lui même.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+New = Nouveau.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51">
+    <a href="v0-0.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="v1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v0-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:19:15 GMT -->
+</html>

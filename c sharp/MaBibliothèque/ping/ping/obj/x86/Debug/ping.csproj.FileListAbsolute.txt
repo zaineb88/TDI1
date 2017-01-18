@@ -1,0 +1,18 @@
+D:\projects\projects c#\ping\ping\bin\Debug\ping.exe
+D:\projects\projects c#\ping\ping\bin\Debug\ping.pdb
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.Form1.resources
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.Properties.Resources.resources
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.csproj.GenerateResource.Cache
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.exe
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.pdb
+D:\projects\projects c#\ping\ping\bin\Debug\linecons_e013(0)_48.png
+D:\projects\projects c#\ping\ping\obj\x86\Debug\ping.csprojResolveAssemblyReference.cache
+H:\ping\ping\obj\x86\Debug\ping.exe
+H:\ping\ping\obj\x86\Debug\ping.pdb
+H:\ping\ping\bin\Debug\linecons_e013(0)_48.png
+H:\ping\ping\bin\Debug\ping.exe
+H:\ping\ping\bin\Debug\ping.pdb
+H:\ping\ping\obj\x86\Debug\ping.csprojResolveAssemblyReference.cache
+H:\ping\ping\obj\x86\Debug\ping.Form1.resources
+H:\ping\ping\obj\x86\Debug\ping.Properties.Resources.resources
+H:\ping\ping\obj\x86\Debug\ping.csproj.GenerateResource.Cache

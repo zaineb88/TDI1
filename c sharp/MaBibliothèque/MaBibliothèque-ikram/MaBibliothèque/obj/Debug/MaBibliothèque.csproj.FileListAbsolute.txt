@@ -1,0 +1,9 @@
+C:\Users\lenovo\Desktop\MaBibliothèque\MaBibliothèque\bin\Debug\MaBibliothèque.dll
+C:\Users\lenovo\Desktop\MaBibliothèque\MaBibliothèque\bin\Debug\MaBibliothèque.pdb
+C:\Users\lenovo\Desktop\MaBibliothèque\MaBibliothèque\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\lenovo\Desktop\MaBibliothèque\MaBibliothèque\obj\Debug\MaBibliothèque.dll
+C:\Users\lenovo\Desktop\MaBibliothèque\MaBibliothèque\obj\Debug\MaBibliothèque.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\MaBibliothèque\MaBibliothèque-ikram\MaBibliothèque\bin\Debug\MaBibliothèque.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\MaBibliothèque\MaBibliothèque-ikram\MaBibliothèque\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\MaBibliothèque\MaBibliothèque-ikram\MaBibliothèque\obj\Debug\MaBibliothèque.dll
+C:\Users\ZIZI\Desktop\TDI\c sharp\MaBibliothèque\MaBibliothèque-ikram\MaBibliothèque\obj\Debug\MaBibliothèque.pdb

@@ -1,0 +1,495 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:58 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET taille et position d'un controle: Anchor dock pixel point size top left width height  </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-9.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.10</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Positionnons les 
+    contrôles et formulaires.</font></b></td>
+    <td width="14%" height="76"><a href="v3-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On peut dimensionner et 
+positionner les contrôles et formulaires:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; En 
+mode conception.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Mais 
+aussi avec du code.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New">Tous 
+les contrôles héritent donc tous de la classe<b> </b></span>
+<font face="Courier New" size="2">Windows Forms</font><span style="font-size: 10.0pt; font-family: Courier New"><b>.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Les contrôles et 
+formulaires ont tous</span></font><span style="font-size: 10.0pt; font-family: Courier New"> 
+des propriétés communes.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">Unité de mesure</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Pixel:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'unité de mesure est le 'Pixel'&nbsp; 
+(Picture Elément).(plus de twips comme en VB6)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les coordonnées d'un contrôle se définissent 
+<b>à 
+partir du coin supérieur gauche du conteneur</b> (coin situé <b>sous</b> la barre de 
+tache dans le cas du formulaire).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter qu'à partir du coin supérieur gauche, 
+l'axe des X va de gauche à droite, l'axe des Y de <b>haut en bas.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vcoor.GIF" width="210" height="147"></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<b>Le Point:</b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour définir une paire de coordonnées on utilise un objet <font color="#0000ff">
+Point </font>( ou<font color="#0000ff">
+</font></font><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">System.Drawing.Point)</span></font><font face="Courier New" size="2">contenant les coordonnées x et y du point:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<font color="#0000ff">Dim P As New Point(12,45)</font>&nbsp;&nbsp;&nbsp; 'Ici 12 et 45 sont les 
+coordonnées X et Y du point.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On peut utiliser <font color="#0000ff">P.x</font>&nbsp; et <font color="#0000ff">P.y
+</font>pour modifier une coordonnée.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><b>
+<font face="Courier New" size="2">La taille:</font></b></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour définir la taille d'un contrôle on utilise un objet <font color="#0000FF">
+Size</font><font color="#0000ff">
+</font>( ou<font color="#0000ff">
+</font></font><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+System.Drawing.Size)</span></font><font face="Courier New" size="2">contenant 2 
+integers indiquant habituellement largeur et hauteur:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<font color="#0000ff">Dim S As New Size(12,45)</font> .</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">
+Position initiale dans l'écran d'un formulaire:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut définir la 
+position initiale, sur l'écran, d'un formulaire grâce à la propriété '<font color="#0000FF">StartPosition</font>':</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Le formulaire peut 
+apparaître au centre de l'écran (CenterScreen)ou à des coordonnées précises.
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vstartpos.JPG" width="339" height="213"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">De plus la propriété WindowState permet de 
+définir la taille du formulaire: normal, plein écran (<font color="#0000FF">Maximized</font>) 
+ou réduit dans la barre de tache (<font color="#0000FF">Minimized</font>).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+<span style="font-family: Courier New">T</span></b></font></span><b><span style="font-family: Courier New; background-color: #C0C0C0"><font size="4" color="#0000FF">aille&nbsp;et 
+position d'un formulaire ou d'un contrôle:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut utiliser simplement:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Left, Top </span></b>
+<span style="font-size: 10.0pt; font-family: Courier New">coordonnées<b> </b>du 
+coin supérieur gauche et <b>Bottom, Right</b> inférieur droit.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Height, Width</span></b><span style="font-size: 10.0pt; font-family: Courier New"> 
+pour la hauteur et la largeur du contrôle en pixels.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut utiliser aussi:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Size</b>&nbsp;: hauteur, 
+largeur peuvent aussi être utilisées.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<span style="font-size: 10.0pt; font-family: Courier New">Location&nbsp;</span></b><span style="font-size: 10.0pt; font-family: Courier New">: 
+coordonnées X,Y du coin supérieur droit du contrôle en pixels.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><b><span style="font-family: Courier New">SetBounds</span></b></font><b><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b><span style="font-size: 10.0pt; font-family: Courier New">: 
+coordonnées X,Y , largeur, hauteur.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vcoor.GIF" width="210" height="147"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Button.left=188</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Button.Top =300</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Ou </span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Button.Location= New 
+System.Drawing.Point(188,300)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">Point()</font> 
+positionne un point dans l’espace.</span></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On remarque qu'il faut donner à la propriété Location un objet Point et non les 
+coordonnées brutes.(En effet, Form1.Location =100, 100 n'est pas accepté)</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">Form1.Location = New 
+Point(100, 100) </font><font face="Courier New" size="2">est équivalent à:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2">
+<span style="FONT-FAMILY: Courier New">Form1.</span></font></span><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">left=100: 
+Form1.Top=100</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour définir la taille:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Me.Size= New Size(150,150)</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On créer un objet Size que l'on affecte à la propriété size du contrôle.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On peut aussi donner la position et les dimensions du contrôle <b>en une fois</b>:&nbsp;
+</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Exemple pour le formulaire courant: </font></p>
+<font color="#0000ff" size="2">
+<p><font face="Courier New">Me</font></font><font size="2"><font face="Courier New"><font color="#0000ff">.SetBounds 
+(12, 15, 100, 100)</font>&nbsp;&nbsp;&nbsp; 'X,Y, Width, Height.</font></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+<font color="#0000ff">Form1.DesktopLocation = new Point(100,100)</font> 'Ici on 
+donne les coordonnées par rapport à la barre de tache.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#008000"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">
+<img border="0" src="vicochev.GIF" width="32" height="34"> En mode conception il 
+est bien plus simple de dimensionner les contrôles à la main dans la fenêtre 
+Design.&nbsp;</span></b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">En
+VB 2008, sont uniquement visibles dans la fenêtre des propriétés:&nbsp; <font color="#0000FF">Location</font>&nbsp;
+et <font color="#0000FF">Size</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF" size="4"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">Pour le 
+re-dimensionnement de fenêtre&nbsp;par l'utilisateur:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour que l’utilisateur 
+puisse redimensionner la fenêtre(en cliquant sur les 
+bords) il faut que la propriété<b> </b><font color="#0000FF">FormBorderStyle</font><b> </b>de la fenêtre<b> 
+ 
+</b>soit<b>&nbsp; 
+ 
+</b><font color="#0000FF">Sizable</font><b>. </b></span>
+<font face="Courier New" size="2">(<font color="#0000FF">FixedSingle</font> 
+interdit le re-dimensionnement)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">ControlBox</font> permet 
+d'afficher la boite de contrôles( bouton d'agrandissement, réduction, fermeture 
+du formulaire) en haut à droite de la barre de tache.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">MaximizedBox</font> et
+<font color="#0000FF">MinimizedBox</font> permettent d'utiliser les boutons 
+d'agrandissement ou de réduction du formulaire. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple d'un formulaire ayant
+<font color="#0000FF">ControlBox</font> =True, <font color="#0000FF">
+MinimizedBox</font> =True, <font color="#0000FF">MaximizedBox</font> =True et
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">FormBorderStyle</font><b>= </b><font color="#0000FF">Sizable </font>
+(les bords de la fenêtre on 2 traits, ce qui permet le redimentionnement).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vmdi2005.JPG" width="362" height="318"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Après que l'utilisateur ai modifié les 
+dimensions du formulaire, on peut intervenir sur les dimensions du formulaire, pour cela on utilise 
+l'évènement <font color="#0000FF">
+Form.Resize</font> qui est déclenché quand les dimensions du formulaire sont 
+modifiées par l'utilisateur: dans <font color="#0000FF">
+Form.Resize </font>on peut intervenir sur les dimensions du formulaire ou des 
+contrôles: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: permettre à l'utilisateur de modifier la hauteur mais 
+imposer une largeur&nbsp; de formulaire de 200 pixels. </font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> Form1_Resize(<font color="#0000FF">)</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.Width 
+= 200</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter que dans Form.Resize on peut récupérer 
+les dimensions du formulaire avec Me.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Les propriétés
+<font color="#0000FF">MaximmunSize</font> et <font color="#0000FF">MinimunSize</font> 
+imposent les dimensions maximales et minimales d'un formulaire, ce qui permet de 
+se passer du code qui précède.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Mais 
+si l’utilisateur modifie la taille du formulaire qui contient les contrôles, la taille des 
+contrôles ne suit pas.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Avant cette version 
+VB.net, il fallait dans l’événement Form_Resize, déclenché par la modification 
+des dimensions de la fenêtre, écrire du code modifiant les dimensions et 
+positions des contrôles afin qu’ils s’adaptent à la nouvelle fenêtre:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple: La largeur d'une 
+TextBox se modifie en fonction de la dimension du formulaire.</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font color="#0000FF" SIZE="2"> Form1_Resize()</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBox</font><font SIZE="2"><font face="Courier New" color="#0000FF">.Width 
+= Me.Width-50</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB.Net c'est plus facile avec
+<font color="#0000FF">Dock </font>et <font color="#0000FF">Anchor</font> (voir 
+plus bas).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<b><span style="background-color: #C0C0C0">Déplacement.</span></b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">Form1.Left += 200&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'déplace le formulaire de 200 pixels</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+'déplacement progressif d'un bouton de gauche à droite:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">For i As Integer =0 to 100</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp; Button1.Left= i</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">Next i</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2"><br>
+&nbsp;</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Coordonnées souris:</span></font></b></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Certains évènements relatif à la souris comme</font><font face="Courier New" color="#0000ff" size="2">&nbsp; 
+MouseDown </font><font face="Courier New" size="2">(appuyer sur le bouton)</font><font face="Courier New" color="#0000ff" size="2"> MouveUp </font>
+<font face="Courier New" size="2">(relâcher le bouton)</font><font face="Courier New" color="#0000ff" size="2">, MouseMove </font>
+<font face="Courier New" size="2">(déplacer le bouton)</font><font face="Courier New" color="#0000ff" size="2"> </font><font face="Courier New" size="2">ont 
+comme paramètre</font><font face="Courier New" color="#0000ff" size="2"> e
+</font><font face="Courier New" size="2">qui contient les coordonnées souris, 
+elles sont dans</font><font face="Courier New" color="#0000ff" size="2"> e.X
+</font><font face="Courier New" size="2">et</font><font face="Courier New" color="#0000ff" size="2"> 
+e.Y, </font><font face="Courier New" size="2">ce sont bien les coordonnées DANS 
+le contrôle (coordonnées 'client'). </font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">Private Sub 
+ListBox2_MouseDown(ByVal sender As Object, ByVal <b>e</b> As 
+System.Windows.Forms.DragEventArgs) Handles</font><font face="Courier New" color="#0000ff" size="2"> 
+ListBox2.MouseDown</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Mais attention, dans <b>les évènement relatifs au Drag and Drop</b> (<font color="#0000ff">DragOver</font> 
+par exemple) ce sont les <b>coordonnées écran</b>. Si je veux avoir des 
+coordonnées relatives à l'objet graphique en cours, il faut les transformer à 
+l'aide de <font color="#0000ff">PointToClient </font>qui transforme un point 
+écran en point client:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Exemple: La souris survole ListBox2 , on a e.X et e.Y, coordonnées de l'écran, 
+comment obtenir le Point par rapport à la listbox? </font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On transforme e.X et e.Y en coordonnées client (par rapport à la listBox)</font></p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New">Private</font></font><font face="Courier New" color="#0000ff" size="2"> 
+Sub ListBox2_DragOver(ByVal sender As Object, ByVal <b>e</b> As 
+System.Windows.Forms.DragEventArgs) Handles</font><font size="2"><font face="Courier New" color="#0000ff"> 
+ListBox2.DragOver</font></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">MonImage.Location=ListBox2.PointToClient(New 
+Point(e.X, e.Y)</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+&nbsp;En plus </font><font face="Courier New" color="#0000ff" size="2">
+ListBox2.IndexFromPoint(ListBox2.PointToClient(New Point(e.X, e.Y))</font><font face="Courier New" size="2"> 
+retourne l'index survolé.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">PointToScreen </font>
+<font face="Courier New" size="2">fait l'inverse (coordonnées listbox=&gt; 
+coordonnés écran).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<font size="4" color="#0000FF">Anchor&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cette propriété des
+objets permet d’<b>ancrer</b> 
+les bords. Un bord ancré reste à 
+<b>égale distance</b> du bord du conteneur quand le conteneur (la fenêtre) est 
+redimensionné.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En mode conception il 
+suffit de cliquer sur '. . .'&nbsp; en face de Anchor pour voir s’ouvrir une fenêtre, 
+cliquer sur les bords que vous voulez ancrer.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par défaut les bords 
+Top (haut) et left(gauche) sont ancrés.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Expliquons&nbsp;!!</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Left est ancré, si je 
+déplace le bord droit de la fenêtre, le contrôle n’est pas déplacé car la 
+distance bord gauche de la fenêtre et bord gauche du contrôle est fixe. Par 
+contre si je déplace le bord gauche de la fenêtre, le contrôle suit.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Prenons 2 contrôles 
+dans une fenêtre, celui de gauche&nbsp;a <font color="#0000FF">Anchor =left</font> et celui de droite à <font color="#0000FF">Anchor =left</font> et 
+<font color="#0000FF">right</font>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si je déplace le bord 
+droit (ou le gauche d’ailleurs)&nbsp;: le contrôle droit est redimensionné car 
+la distance 'bord gauche du conteneur-bord gauche du contrôle droit' est fixe., les 2 
+contrôles restent cote à cote.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vAnchor1.jpg" width="212" height="111"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vAnchor2.jpg" width="304" height="111"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0">
+<font size="4" color="#0000FF">Dock </font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cette propriété des
+objets amarre aux bords. La 
+bordure spécifiée est ancrée directement au conteneur.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple: le contrôle de 
+droite est <font color="#0000FF">Dock=Right&nbsp; (Anchor=None)</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vAnchor1.jpg" width="212" height="111"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vdock.JPG" width="304" height="111"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Le bord droit du 
+contrôle est accroché au bord droit du conteneur. Le contrôle droit est déplacé 
+sans être redimensionné..&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Il y 
+a même possibilité d’amarrer aux 4 bords (<font color="#0000FF">Dock=Fill</font>) pour remplir le conteneur, et de 
+modifier la propriété <b>DockPaddind</b> du formulaire afin se s’éloigner légèrement des bords 
+pour faire joli.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Spliter</span></font></b></p>
+<p><font face="Courier New" size="2">Le contrôle <b>Splitter</b>&nbsp; sert à 
+redimensionner des contrôles&nbsp; <b>au moment de l'exécution par l'utilisateur.</b></font></p>
+<p><font face="Courier New" size="2">Le contrôle <b>Splitter</b> est&nbsp; 
+utilisé dans les applications dont les contrôles présentent des données de 
+longueurs variables, comme l'Explorateur Windows.</font></p>
+<p><font face="Courier New" size="2">&nbsp;Pour permettre à un utilisateur de 
+redimensionner un contrôle ancré au moment de l'exécution, ancrer le contrôle à 
+redimensionner au bord d'un conteneur, puis ancrez un contrôle Splitter sur le 
+même côté de ce conteneur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">En VB.Net 2005 il existe aussi
+<font color="#0000FF">SplitContainer </font>qui est plus pratique que Spliter et <font color="#0000FF">LayoutPanel</font> 
+voir 3-9</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-9.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:02 GMT -->
+</html>

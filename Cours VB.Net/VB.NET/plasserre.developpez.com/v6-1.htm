@@ -1,0 +1,892 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les bases de données</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-210.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.1</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les bases de données.</font></b></td>
+    <td width="9%" height="76"><a href="v6-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment lire et écrire 
+des informations complexes et structurées?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Généralités: </font></span>
+</p>
+<p><font face="Courier New" size="2">Pour travailler avec du texte, des octets, 
+des données très simple (sans nécessité d'index, de classement..), on utilise 
+les fichiers séquentiels, aléatoires, binaires (chapitre 4-6).</font></p>
+<p><font face="Courier New" size="2">Mais dès que les informations sont plus 
+structurées, il faut utiliser les <b>bases de données (Data Base en anglais)</b>.</font></p>
+<p><font face="Courier New" size="2">Une base de données peut être:</font></p>
+<ul>
+  <li>
+  <p align="justify"><font face="Courier New" size="2">locale: utilisable sur un 
+  ordinateur par un utilisateur.</font></li>
+  <li>
+  <p align="justify"><font face="Courier New" size="2">répartie, c'est-à-dire 
+  que la base est stockée sur des machines distantes et accessibles par réseau.
+  </font></li>
+</ul>
+<p align="justify"><font face="Courier New" size="2">Plusieurs utilisateurs 
+peuvent accédés à la base simultanément.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Exemple de type de base de données:</font></p>
+<p><font face="Courier New" size="2"><b>Dbase</b> Format très utilisé, qui date 
+maintenant un peu, les fichiers contenant ses bases ont l'extension .dbf</font></p>
+<p><b><font face="Courier New" size="2">Paradox</font></b></p>
+<p><b><font face="Courier New" size="2">FileMaker</font></b></p>
+<p><b><font face="Courier New" size="2">FoxPro</font></b></p>
+<p><b><font face="Courier New" size="2">Interbase</font></b></p>
+<p><font face="Courier New" size="2"><b>Access</b> Format très répandu,&nbsp; 
+les fichiers contenant ses bases ont l'extension .mdb</font></p>
+<p><font face="Courier New" size="2"><b>SQLServeur</b>&nbsp; les fichiers 
+contenant ses bases ont l'extension .dbo</font></p>
+<p><b><font face="Courier New" size="2">SyBase</font></b></p>
+<p><b><font face="Courier New" size="2">MySql</font></b></p>
+<p><font face="Courier New" size="2"><b>Oracle</b>..</font></p>
+<p><font face="Courier New" size="2">Pour pouvoir contrôler les données, l'accès 
+à ces données et les utilisateurs utilisant une base de données, un <b>système 
+de gestion</b> est nécessaire. La gestion de la base de données se fait grâce à 
+un système appelé <b>SGBD</b> (<b>système de gestion de bases de données</b>), 
+si la base de données est relationnelle (Existence de relation entre les tables) 
+on parle de <b>SGBDR</b> (<b>système de gestion de bases de données 
+relationnelles</b>)</font></p>
+<p align="left"><b><font face="Courier New" size="2" color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Un SGBD est un 
+logiciel qui joue le rôle d'interface entre les utilisateurs et la base de 
+données.</font></b></p>
+<p align="left"><font face="Courier New" size="2">Un SGBD permet de décrire, 
+manipuler et interroger les données d'une 'Base de Données'. </font></p>
+<p>&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Tables:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans une base de données, il y a des <b>tables</b>:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une table sert à stocker physiquement des données sous forme d'un tableau 
+comportant <b>des lignes</b> (rows) et <b>des colonnes</b> (columns).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="2" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Exemple:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une base de données Access nommée Cabinet.mdb&nbsp; 
+contient <b>les patients d'un 
+cabinet, leurs consultations, les ordonnances, les médicaments.</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans cette base il y a plusieurs tables: une <b>table patient</b>, une <b>table 
+consultation</b>...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Examinons la table patient:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Sur <b>chaque ligne (row)</b>, il y a un patient,.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Chaque colonne (column)</b> représente un type de données (première colonne= civilité, 
+seconde=nom, troisième=prénom, quatrième= numéro interne propre à chaque patient. )</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'ancienne terminologie parlait d'<b>enregistrements</b> (lignes) et de 
+<b>champs</b> 
+(colonnes)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber19">
+  <tr>
+    <td width="25%">Champs Civilité</td>
+    <td width="25%">Champ Nom</td>
+    <td width="25%">Champ Prénom</td>
+    <td width="25%">Champ Numéro Interne</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Durand</td>
+    <td width="25%">Luc</td>
+    <td width="25%">1</td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="25%">Dupont</td>
+    <td width="25%">Josette</td>
+    <td width="25%">2</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Thomas</td>
+    <td width="25%">Guy</td>
+    <td width="25%">3</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici la seconde ligne (le 2eme enregistrement, 
+le second row) contient la civilité, le nom, le 
+prénom, le numéro du patient Dupont Josette.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Chaque colonne à un type bien définie: </b>dans notre cas la première colonne 
+contient du texte, ainsi que la seconde, la troisième; la quatrième colonne 
+contient un numérique long par exemple.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Examinons la table consultation:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Sur <b>chaque ligne</b>, il y a une consultation,.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Chaque colonne</b> représente un type de données (première colonne= numéro 
+correspondant au patient, 
+seconde=date, troisième=texte de la consultation, quatrième= Courrier. )</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber19">
+  <tr>
+    <td width="25%">Champs Numéro Interne</td>
+    <td width="25%">Champ Date</td>
+    <td width="25%">Champ Texte</td>
+    <td width="25%">Champ Courrier</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber5">
+  <tr>
+    <td width="25%">1</td>
+    <td width="25%">02/12/2003</td>
+    <td width="25%">Angine</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">2</td>
+    <td width="25%">02/02/2004</td>
+    <td width="25%">Hta</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">1</td>
+    <td width="25%">05/04/2004</td>
+    <td width="25%">Bronchite</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il n'est pas question pour chaque consultation d'enregistrer de nouveau le nom 
+et le prénom du patient, cela enregistrerait 2 fois la même information puisque 
+le nom et le prénom du patient sont déjà dans la table 'patient'. On va donc, 
+pour éviter les redondances, utiliser un numéro interne: chaque patient a un 
+numéro unique (4éme champ de la table&nbsp; 'nom'); il suffit de noter dans chaque consultation le 
+numéro du patient.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite, si je consulte le patient Durand Luc, sachant que son numéro interne 
+est '1', il suffit de rechercher dans la table consultation&nbsp; les 
+consultations dont le premier champ est 1:&nbsp; Durand Luc à 2 consultations.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le nom de la colonne est souvent 
+nommé en utilisant le terme Id (pas ici)&nbsp; , 'IdPatient' par exemple, 
+synonyme de 'numéro patient', cela permet de 
+repérer les champs 'numéro interne'. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp; </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Type de colonne:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe des types de colonne (de champs) <b>alphanumériques
+</b></font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">de longueur fixe (pour le champ 'nom' je 
+prévois 30 caractères par exemple).</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">de longueur variable (champ mémo dans la base Dbase par exemple)</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe aussi </font> </p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">des champs <b>numériques</b>, </font> </p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">des champs <b>dates</b> </font> </p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">et dans certains base de données des champs <b>
+booléens</b>, <b>image</b>...&nbsp; </font> </p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Identifiant, Clé primaire</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+est nécessaire d'avoir <b>une valeur obligatoire et unique</b> pour chaque
+enregistrement qui permette de repérer&nbsp; et de différencier chaque
+enregistrement dans la base&nbsp; c'est: <b>l'identifiant</b>.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Le
+numéro de la facture dans le cas d'un logiciel de facturation sera un bon
+identifiant pour les factures.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;Comme
+<font face="Courier New" size="2"> il est nécessaire de <b>différencier chaque enregistrement
+dans la base de données de manière 
+unique</b>, il faut définir le champ identifiant comme <b>clé primaire</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ce champ doit être unique pour chaque enregistrement (il ne doit pas y avoir de 
+doublons: 2 enregistrements ne peuvent pas avoir la même clé primaire), et la 
+valeur de la clé primaire ne peut pas être égale à null.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans notre exemple de la table patient, on ne 
+peut pas utiliser le champ 'nom' comme clé primaire car plusieurs patients 
+peuvent avoir le même nom, il est judicieux de choisir le champ 'numéro interne' 
+comme clé primaire car chaque patient (donc chaque enregistrement) à un numéro 
+interne unique.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Quand on enregistre une nouvelle fiche patient, il faut donc donner un nouveau 
+'numéro interne' qui n'a jamais été utilisé, en pratique:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On gère soi même les numéros: on prend le dernier numéro interne (on cherche la 
+dernière fiche dont on récupère le numéro ou bien on lit ce numéro qui a été 
+enregistré quelque part), on ajoute 1 pour avoir le nouveau numéro.</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On utilise un champ qui s'incrément automatiquement a chaque fois que l'on crée 
+une enregistrement (NumeroAuto dans Access) </font> </p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Index</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un index permet d'<b>optimiser les recherches</b> dans une table, de 
+<b>les rendre 
+beaucoup plus rapide</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Expliquons:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si j'ai une table contenant les noms des médecins utilisateurs et que je veux 
+chercher un nom, comme il y a au maximum 5 à 6 médecins dans un cabinet, pour 
+rechercher un nom, il suffit de lire successivement chaque enregistrement et de 
+voir si c'est celui recherché. C'est suffisamment rapide. </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par contre si je recherche dans la table patient un patient, comme il y a 4000 à 
+8000 enregistrements, je ne peux pas les lire un à un , c'est trop long, aussi 
+je crée un index: c'est comme l'index d'un livre, le nom me donne directement 
+l'endroit ou se trouve l'enregistrement correspondant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut combiner plusieurs champs pour en faire la base d'un index.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour ma table 'patient', je peux créer un index nommé IndexPatient&nbsp; qui 
+sera indexé sur Nom +Prenom.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il peut y a voir plusieurs index sur une même table.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<font color="#008000"><img border="0" src="vicochev.GIF" width="32" height="34"> 
+Les index accélèrent les recherches mais s'il y en a trop, cela alourdit le 
+fonctionnement; on ne peut pas tout indexer!!</font> </font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Relations entre les tables: différents types de relations.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On a déjà vu que 2 tables peuvent être liées 
+et avoir <b>un champ commun présent dans les 2 tables</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Sur ce champ commun, il peut exister plusieurs types de relation:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Relation 1 à N</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Relation 1 à 1</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Relation N à M</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voyons cela en détail:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u>
+<b><font face="Courier New" color="#0000FF">1 à N&nbsp; (relation un à plusieurs)</font></b></u></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans notre exemple la table 'patient' et la 
+table 'consultation' ont chacune un champ numéro interne. Ce qui permet de lier 
+à l'enregistrement du patient de numéro interne X toutes les consultations pour 
+ce patient (elles ont dans leurs champs 'numéro interne' la valeur X.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Comme pour UN patient il peut y avoir N 
+consultations, on parle de relation 1 à N.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Un enregistrement unique est lié à 
+plusieurs enregistrements de l'autre table par un champ présent dans les 2 
+tables.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque que le champ 'numéro interne' du coté patient est 
+une clé primaire, pas du coté consultation.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Table 'patients'</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber19">
+  <tr>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%"><b>Champ Numéro Interne</b></td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber6">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Durand</td>
+    <td width="25%">Luc</td>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="25%">Dupont</td>
+    <td width="25%">Josette</td>
+    <td width="25%">2</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Thomas</td>
+    <td width="25%">Guy</td>
+    <td width="25%">3</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Table 'consultations'</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber19">
+  <tr>
+    <td width="25%">Champ Numéro Interne</td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber7">
+  <tr>
+    <td width="25%"><font color="#FF0000"><b>1</b></font></td>
+    <td width="25%">02/12/2003</td>
+    <td width="25%">Angine</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">2</td>
+    <td width="25%">02/02/2004</td>
+    <td width="25%">Hta</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+    <td width="25%">05/04/2004</td>
+    <td width="25%">Bronchite</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le patient Durand Luc a 2 consultations : le 
+02/12/2003 et le 05/04/2004 (Le numéro interne de ce patient est 1, mais 
+l'utilisateur final n'a pas à le savoir ni à le gérer: la relation utilisant le 
+numéro interne est<b> transparente</b> pour l'utilisateur final)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe aussi les relations:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u><font face="Courier New" color="#0000FF">
+<b>1 à 1</b></font></u></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Un enregistrement unique est lié à un autre enregistrement unique 
+par un champ présent dans les 2 tables.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut imaginer dans notre exemple, créer une 
+table Antécédents contenant aussi un champ numéro interne; pour chaque 
+enregistrement de la table patient, il y a un enregistrement unique dans la 
+table Antécédents, de même numéro interne contenant les antécédents du patient.&nbsp;
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Table 'patient'</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber8">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Durand</td>
+    <td width="25%">Luc</td>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="25%">Dupont</td>
+    <td width="25%">Josette</td>
+    <td width="25%"><b><font color="#FF0000">2</font></b></td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%">Thomas</td>
+    <td width="25%">Guy</td>
+    <td width="25%"><b><font color="#FF0000">3</font></b></td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Table 'antécédents'</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Champ Numéro interne.</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber9">
+  <tr>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+    <td width="25%">02/01/2003</td>
+    <td width="25%">appendicite</td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#FF0000">2</font></b></td>
+    <td width="25%">02/02/2004</td>
+    <td width="25%">Hta</td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#FF0000">3</font></b></td>
+    <td width="25%">05/05/2004</td>
+    <td width="25%">Cancer du colon</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Enfin existe les relations:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u>
+<b><font face="Courier New" color="#0000FF">N à M</font></b></u></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Relation plusieurs à plusieurs. Plusieurs 
+enregistrements de la première table peuvent être liés à plusieurs de la seconde 
+table et vice versa.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">J'ai une table 'ordonnances' qui peut contenir 
+plusieurs médicaments, et une table 'médicaments' dont les médicaments peuvent 
+être utilisé dans plusieurs ordonnances différentes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut dans ce cas avoir la table 
+'ordonnances' avec une clé primaire sur un numéro d'ordonnance (numéro 
+d'ordonnance unique s'incrémentant à chaque nouvelle ordonnance), une table 
+'médicaments' avec une clé primaire sur le numéro unique du médicament, et <b>créer 
+une troisième table&nbsp;&nbsp; gérant la relation ordonnance-médicament. </b> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Table 'Ordonnances'</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber12">
+  <tr>
+    <td width="25%">'Numéro ordonnance'</td>
+    <td width="25%">&nbsp;'Numéro Interne patient'</td>
+    <td width="25%">&nbsp;Champ' date'</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber10">
+  <tr>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+    <td width="25%">2</td>
+    <td width="25%">02/05/2002</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">2</td>
+    <td width="25%">3</td>
+    <td width="25%">02/04/2003</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">3</td>
+    <td width="25%">2</td>
+    <td width="25%">06/05/2004</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Table 'Médicaments'</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber12">
+  <tr>
+    <td width="25%">'Numéro médicament'</td>
+    <td width="25%">&nbsp;'Libelle médicament'</td>
+    <td width="25%">&nbsp;Code CIP'</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber11">
+  <tr>
+    <td width="25%"><b><font color="#FF00FF">1</font></b></td>
+    <td width="25%">Amoxicilline</td>
+    <td width="25%">65897</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#008000">2</font></b></td>
+    <td width="25%">Omeprazone</td>
+    <td width="25%">66589</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">3</td>
+    <td width="25%">Allopurinol</td>
+    <td width="25%">78456</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Table supplémentaire&nbsp; 'Contenu ordonnance'</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber13">
+  <tr>
+    <td width="25%">'Numéro ordonnance'</td>
+    <td width="25%">&nbsp;'Numéro médicament'</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber14">
+  <tr>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+    <td width="25%"><b><font color="#FF00FF">1</font></b></td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#FF0000">1</font></b></td>
+    <td width="25%"><font color="#008000"><b>2</b></font></td>
+  </tr>
+  <tr>
+    <td width="25%">2</td>
+    <td width="25%">2</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici le patient de numéro interne 2 (Dupont Josette) a une ordonnance&nbsp; 
+visible dans la table 'Ordonnances'(numéro interne: 2; numéro de l'ordonnance: 1); si on cherche 
+dans la table 'Contenu ordonnance' (Index crée sur le numéro d'ordonnance) on retrouve 2 
+enregistrements (ayant un numéro d'ordonnance 1), on constate que l'ordonnance 
+contient les médicaments 1 et 2 qui correspondent&nbsp; (table 'médicaments') à de l'amoxicilline et de l'oméprazone.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque qu'une ordonnance peut avoir 
+autant de médicaments que l'on veut.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font color="#0000FF" face="Courier New">Relation N à M avec&nbsp; N fixe et 
+petit</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dernier cas non décrit dans les livres:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">J'explique: si chaque ordonnance à au maximum 
+3 médicaments ( que la sécu serait contente si c'était vrai!!), il est possible de créer une table 'ordonnances' contenant 3 
+champs médicaments. Dans ce cas on se passe de la 3eme table.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Table 'Ordonnances'</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber15">
+  <tr>
+    <td width="25%">'Numéro ordonnance'</td>
+    <td width="25%">&nbsp;'Numéro Interne patient'</td>
+    <td width="16%">&nbsp;Champ' date'</td>
+    <td width="34%">&nbsp;3 champs médicaments</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="98%" id="AutoNumber16">
+  <tr>
+    <td width="25%">1</td>
+    <td width="25%">2</td>
+    <td width="17%">02/05/2002</td>
+    <td width="12%"><b><font color="#FF00FF">1</font></b></td>
+    <td width="12%"><b><font color="#008000">2</font></b></td>
+    <td width="73%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">2</td>
+    <td width="25%">3</td>
+    <td width="17%">02/04/2003</td>
+    <td width="12%">&nbsp;</td>
+    <td width="12%">&nbsp;</td>
+    <td width="73%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">3</td>
+    <td width="25%">2</td>
+    <td width="17%">06/05/2004</td>
+    <td width="12%">&nbsp;</td>
+    <td width="12%">&nbsp;</td>
+    <td width="73%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Table 'Médicaments'</b></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber17">
+  <tr>
+    <td width="25%">'Numéro médicament'</td>
+    <td width="25%">&nbsp;'Libelle médicament'</td>
+    <td width="25%">&nbsp;Code CIP'</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber18">
+  <tr>
+    <td width="25%"><b><font color="#FF00FF">1</font></b></td>
+    <td width="25%">Amoxicilline</td>
+    <td width="25%">65897</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%"><b><font color="#008000">2</font></b></td>
+    <td width="25%">Omeprazone</td>
+    <td width="25%">66589</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="25%">3</td>
+    <td width="25%">Allopurinol</td>
+    <td width="25%">78456</td>
+    <td width="25%">&nbsp;</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Contraintes</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un champ peut avoir certaines contraintes:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut <b>interdire la valeur Null</b>: Cela 
+empêche d'enregistrer un champ vide. On peut aussi donner une valeur par défaut.</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut <b>empêcher les doublons</b>.</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut exiger l'<b>intégrité référentielle</b>: 
+La valeur d'un champ doit exister dans le champ d'une autre table.(On ne peut 
+pas enregistrer une consultation pour le patient de numéro interne 2000 s'il 
+n'existe pas de fiche patient ayant le numéro 2000)</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut exiger des règles de validation pour 
+un champ: interdire les valeurs négatives par exemple.</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Serveur de fichier,
+Client serveur.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si plusieurs utilisateurs sont connectés à 
+une base Access à travers un réseau, chaque utilisateur a sur son poste un 
+'moteur' Access, qui récupère l'ensemble des données à utiliser et qui les 
+traite en local. On parle de <b>serveur de fichier</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le moteur d'accès est présent sur chaque 
+poste.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si plusieurs utilisateurs sont connectés à 
+une base SQLServer: la base est sur le serveur avec le logiciel SQLServeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un logiciel utilisateur situé sur un autre 
+ordinateur(le client) envoie au 
+serveur une requête.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le logiciel SQLServer traite la requête sur le 
+serveur et retourne au logiciel client uniquement le résultat de la requête.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On parle d'<b>architecture Client-serveur</b>.
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le moteur d'accès est présent uniquement sur 
+le serveur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on cherche un enregistrement parmi 60 000 
+enregistrements, en serveur de fichiers, les 60 000 enregistrements sont 
+envoyées par le réseau vers le moteur Access de l'utilisateur ; le moteur les 
+traite pour en sortir un.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En client serveur, le logiciel utilisateur 
+envoie une requête au serveur, le logiciel serveur cherche sur le serveur dans 
+la base l'enregistrement, il le trouve et envoie à travers le réseau vers le 
+logiciel client uniquement un enregistrement.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Opérations sur les enregistrements</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">De manière générale, on peut:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Ouvrir</b> une base de données (Open)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Ajouter</b> un enregistrement&nbsp; (Add)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Effacer</b> un enregistrement&nbsp; (Delete)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Modifier</b> un enregistrement (Update)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Chercher</b> un ou des enregistrements.
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Fermer</b> la base.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+(Close)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>Avant:</b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a bien longtemps, on choisissait un 
+index, on cherchait un enregistrement (avec Seek), on le lisait, le modifiait, 
+on avançait (MoveNext) ou on reculait (MovePrevious) d'un enregistrement dans la base, mais c'est de 
+l'histoire ancienne!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque type de base de données avait ses 
+propres commandes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ensuite , il y a eu les RecordSet, sorte de 
+tableau avec un curseur pointant un élément.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34"> <font color="#008000">
+Avec <b>
+ADO.NET:</b></font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Maintenant quelle que soit la base de données,&nbsp; on utilise un langage unique: <b>
+le 'SQL' pour faire une requête </b>sur une base de donnée (extraction de 
+certains enregistrements ou de certains champs<b> en fonction de critères), </b>
+le résultat (un ensemble d'enregistrements ou de champs) se retrouve dans un<b> 
+DataSet</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-210.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

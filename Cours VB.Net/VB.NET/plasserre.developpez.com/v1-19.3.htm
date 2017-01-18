@@ -1,0 +1,180 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.3</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Variables
+      numériques.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">3-
+Variables numériques.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><font face="Courier New" size="3">3.1 </font><font face="Courier New" size="2">Créer une variable
+'i'&nbsp; de type Integer, initialiser la avec la valeur 2, Incrémenter i&nbsp;
+(ajouter 1).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">3.2
+</font><font face="Courier New" size="2">Créer une variable 's'&nbsp; de type
+virgule flottante simple précision, initialiser la avec la valeur 12,7561 ,
+créer une&nbsp; variable 's1' qui devra contenir la partie entière de
+'s'&nbsp; créer une&nbsp; variable s2 qui devra contenir 's' arrondi à 2 décimales
+après la virgule (Comme pour les valeurs monétaires). Que contiendra s1 et s2
+à la fin?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span id="ctl00_LibFrame_MainContent1"><b><font face="Courier New" size="2">3.3
+Créer un nombre virgule flottante double précision nommé 'x', l'initialiser
+avec 123456,45. Calculer le cube de x&nbsp; (x puissance 3),
+la racine 4ieme de x :</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">3-
+Variables numériques.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">3.1
+</font><font face="Courier New" size="2">Créer une variable 'i'&nbsp; de type
+Integer, initialiser la avec la valeur 2, Incrémentez i (ajouter 1).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" size="2" face="Courier New">
+        Dim i As Integer=2 </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">i=i+1</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">ou<font color="#0000FF" face="Courier New" size="2">
+ i += 1</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">3.2
+</font><font face="Courier New" size="2">Créer une variable 's'&nbsp; de type
+virgule flottante simple précision, initialiser la avec la valeur 12,7561 ,
+créer une&nbsp; variable 's1' qui devra contenir la partie entière de
+'s'&nbsp; créer une&nbsp; variable s2 qui devra contenir 's' arrondi à 2 décimales
+après la virgule (Comme pour les valeurs monétaires). Que contiendra s1 et s2
+à la fin?</font></b></p>
+<p style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">
+        Dim s As Single</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+s1 As Single</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+s2 As Single</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF">&nbsp;s </font><font color="#0000FF"><font face="Courier New" size="2">=</font></font><font face="Courier New" size="2"><font color="#0000FF">12.7561</font><b>&nbsp;</b></font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2"><font color="#0000FF">s1<b>
+=</b>Math.<span style="background-color: #FFFFFF">Truncate(s)</span></font><span style="background-color: #FFFFFF">
+&nbsp;
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2" color="#0000FF">s2<b>
+=</b></font><font color="#0000FF"><font face="Courier New" size="2">Math.</font><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">Round</span></font><span style="font-size: 10.0pt; font-family: Courier New"><span style="background-color: #FFFFFF"><font color="#0000FF">(s,
+2)</font>&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">s1
+sera égal à 12.&nbsp;&nbsp;&nbsp; (partie entière)</span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">s2
+sera égal à 12.76 (arrondi à l'entier le plus proche)</span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">On
+remarque qu'on a déclaré toutes les variables au début (c'est une bonne
+manière de faire), plutôt qu'au moment ou on en a besoin.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">On
+a bien écrit <font color="#0000FF">s =12.4561</font><b>&nbsp; </b>et pas<b> </b><font color="#0000FF">s
+=12,4561 </font>car le séparateur décimal est le point.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Au
+lieu d'écrire <font color="#0000FF">s1<b> =</b>Math.<span style="background-color: #FFFFFF">Truncate(s)</span></font><span style="background-color: #FFFFFF">,
+on écrit souvent </span><font color="#0000FF">s1<b> =</b><span style="background-color: #FFFFFF">Int</span></font><span style="background-color: #FFFFFF"><font color="#0000FF">(s)&nbsp;
+</font>en utilisant une instruction Visual Basic.&nbsp;</span></font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2"><span style="background-color: #FFFFFF">Question
+: pourquoi <font color="#0000FF">Math.</font> avant Truncate? C'est pour
+indiquer l'espace de nom System.Math qui contient Trunccate; on aurait pu aussi
+écrire en tête de module <font color="#0000FF">Imports System.Math</font> et
+ensuite </span><font color="#0000FF">s1<b> =</b></font><span style="background-color: #FFFFFF"><font color="#0000FF">Truncate(s)
+</font>aurait été accepté.
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span id="ctl00_LibFrame_MainContent"><b><font face="Courier New" size="3">3.3</font><font face="Courier New" size="2">
+Créer un nombre virgule flottante double précision nommé 'x', l'initialiser
+avec 123456,45. Calculer le cube de x&nbsp; (x puissance 3), la racine 4ieme de
+x :</font></b></span></p>
+<p style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">
+        Dim x As Double</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+x1 As Double</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+x2 As Double</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF">&nbsp;x </font><font color="#0000FF"><font face="Courier New" size="2">=</font></font><span id="ctl00_LibFrame_MainContent0"><b><font face="Courier New" size="2">123456.45</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">x1=</font> <font color="#0000FF">Math.Pow(x,
+3)</font></font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">x2=</font> <font color="#0000FF">Math.Pow(X,
+1/4)</font></font>
+</p>
+<div id="post_message_2706185">
+  <font face="Courier New" size="2">Prendre la racine Nieme d'un nombre revient
+  à le mettre à la puissance 1/N.<br>
+  <br>
+  donc racine 4eme de X&nbsp; : <font color="#0000FF">x2=</font> <font color="#0000FF">Math.Pow(X,
+  1/4)</font></font>
+</div>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

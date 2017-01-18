@@ -1,0 +1,594 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:40 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  le temps timer</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-4.htm">
+    <font color="#800080">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></font></a><font color="#800080">
+    </font> <b>
+    <font face="Courier New" size="6" color="#800080">4.5</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Travailler sur le temps: dates, 
+     
+    heure, Timers.</font></b></td>
+    <td width="9%" height="76"><a href="v4-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">
+<img border="0" src="vwindow.JPG" width="99" height="79">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vchrono.JPG" width="83" height="77"></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On a vu qu'il existe un 
+type de variable 'DateTime' pour gérer les dates et heures, comment l'utiliser ?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Nous verrons aussi 
+comment utiliser les Timers pour déclencher des évènements à intervalle régulier,</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Enfin comment perdre du 
+temps?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#808000">Une 
+variable <b>DateTime</b>&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contient 
+une date plus l’heure.</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Elle occupe 8 octets.(64 bits)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Elle peut contenir une 
+date </span></font><font face="Courier New" size="2">comprise entre le 1<sup>er</sup>&nbsp;janvier 
+de l'année&nbsp;1 et le 31&nbsp;décembre&nbsp;9999 et une heure comprise entre 0:00:00 
+(minuit) et 23:59:59.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En fait ce qui est codé dans la variable DateTime 
+est le nombre de graduations ( Une graduation= 100&nbsp;nanosecondes.) écoulées à compter de minuit, 
+le 1er janvier de l'année 1&nbsp; jusqu'a la date codée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Nb:</b> <font color="#0000FF">DateTime</font> fait partie d'une Classe 
+.Net , il existe aussi un type nommé <font color="#0000FF">Date</font> qui fait partie de Visual Basic, qui n'est pas une classe 
+donc, mais qui est équivalent à DateTime.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Donc DateTime est équivalent à Date.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Définir</font></span><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0"> une date, une 
+heure</span></font></p>
+<p><font size="2" face="Courier New"><b>A - Pour définir une&nbsp; valeur DateTime
+</b>en utilisant un littéral<b>: </b>elle doit être placée entre 
+des signes (<b>#</b>) et son format doit être de type d/m/yyyy, par exemple
+</font><font size="2">
+<code class="ce"><font face="Courier New">#31/5/1998#</font></code></font><font size="2" face="Courier New">.
+</font> </p>
+<p><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Dim&nbsp; 
+dateNaissance As DateTime</span></font></p>
+<p><span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">d</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">ateNaissance= #02/12/1951#</span></font></p>
+<p><b><font face="Courier New" size="2">B - Autre manière de saisir une date, une heure:</font></b></p>
+<p><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">Dim  </span></font>
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">d</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">ateNaissance As New System.DateTime(1996, 6, 3, 22, 15, 0)</span>&nbsp;&nbsp;&nbsp;  </font></p>
+<p><font color="#0000FF" face="Courier New" size="2">'</font><font size="2" face="Courier New">Année, mois, jour, heure, minute, seconde, 
+et éventuellement millisecondes)</font></p>
+<p><font face="Courier New" size="2">Ici on a utilisé le constructeur.</font></p>
+<p><b><font face="Courier New" size="2">C -Troisième méthode:</font></b></p>
+<p><font face="Courier New" size="2">On peut saisir une date dans une string 
+puis convertir:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">DateNaissance</span> 
+= CDate(&quot;02/12/1951&quot;)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">CDate</font> converti 
+donc une chaîne en dateTime.  On peut aussi utiliser Ctype:</font><font color="#0000FF" face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Dim  </span></font>
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">d</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">ateNaissance 
+As Date = Ctype(&quot;01/12/2005&quot;, Date)</span></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><font color="#0000FF">IsDate (objet)</font> 
+permet de vérifier si objet est convertible en date.</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">IsDate retourne True si l'expression est 
+  de type Date ou est une chaîne convertible en type Date<b>&nbsp;</b>; sinon, elle 
+  retourne False.</font></p>
+  <p><font face="Courier New" size="2">Cela permet de vérifier, après une saisie 
+  d'une string par exemple, si l'utilisateur a bien tapé des chiffres 
+  valides et même si la date est valide (&quot;31/02/1945&quot; n'est pas valide).</font></p>
+  <p><font face="Courier New" size="2">Bizarrerie= &quot;12/2005&quot; est considéré comme 
+  une date valide et équivalente à &quot;01/12/2005&quot;!! Pas de vérification des&nbsp; 
+  2 '/'.</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">If IsDate( MyString) Then..</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Exemple de Microsoft:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim MyDate, YourDate 
+As DateTime<br>
+Dim NoDate As String<br>
+Dim D As Boolean<br>
+MyDate = CDate(&quot;12 Février, 1969&quot;)<br>
+YourDate = #2/12/1969#<br>
+NoDate = &quot;Hello&quot;<br>
+D = IsDate(MyDate) </font>' Retourne True.<font color="#0000FF"><br>
+D = IsDate(YourDate) </font>' Retourne True.<font color="#0000FF"><br>
+D = IsDate(NoDate) </font>' Retourne False.<font color="#0000FF"><br>
+&nbsp;</font></font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Afficher une date, une heure.</span></font></b></p>
+<p><font face="Courier New" size="2">Pour afficher les dates et heures simplement, il suffit d'utiliser
+<font color="#0000FF">.ToString</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(DateNaissance.ToString)&nbsp;&nbsp;&nbsp;</span> </font>
+'Affichera&nbsp; 02/12/1951 11:00:00</font></p>
+<p><font face="Courier New" size="2">C'est le format utilisé par l'ordinateur (en fonction du pays)
+</font> </p>
+<p><font face="Courier New" size="2"><font color="#0000FF">ToString</font> peut comporter des arguments qui formatent&nbsp;l'affichage:</font></p>
+<p><font face="Courier New" size="2">Voici quelques codes de formatage:</font></p>
+<p><font face="Courier New" size="2">d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+affiche le jour&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+2</font></p>
+<p><font face="Courier New" size="2">dd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche le jour sur 2 chiffres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+02</font></p>
+<p><font face="Courier New" size="2">ddd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche le jour abrégé&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim.</font></p>
+<p><font face="Courier New" size="2">dddd&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche le jour complet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dimanche</font></p>
+<p><font face="Courier New" size="2">M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche 
+le mois&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</font></p>
+<p><font face="Courier New" size="2">MM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;affiche le mois sur 2 chiffres&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 12</font></p>
+<p><font face="Courier New" size="2">MMM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; affiche le mois abrégé&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; déc</font></p>
+<p><font face="Courier New" size="2">MMMM&nbsp;&nbsp;&nbsp;&nbsp; affiche le mois complet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; décembre</font></p>
+<p><font face="Courier New" size="2">y, yy, yyyy affiche 1 à 2 chiffres, deux chiffres ou quatre chiffre&nbsp;&nbsp;&nbsp;&nbsp; 
+51, 51, 1951</font></p>
+<p><font face="Courier New" size="2">H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; affiche l'heure&nbsp; sur un ou deux chiffres (format 24h)</font></p>
+<p><font face="Courier New" size="2">HH&nbsp;&nbsp;&nbsp;&nbsp; affiche l'heure sur 2 chiffres</font></p>
+<p><font face="Courier New" size="2">h et hh font de même mais avec un format 12 h.</font></p>
+<p><font face="Courier New" size="2">t, tt&nbsp; affiche l'heure en format 12h&nbsp; plus A ou P (pour matin, 
+après midi)</font></p>
+<p><font face="Courier New" size="2">m, mm, s, ss, f, ff font de même pour les minutes, secondes et millisecondes.</font></p>
+<p><font face="Courier New" size="2">: et / sont les séparateurs heure et date.</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(DateNaissance.ToString(&quot;dddd d MMMM yyyy&quot;))&nbsp;</span>&nbsp;&nbsp;
+</font>'Affichera&nbsp; Dimanche 2 décembre 1951</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(DateNaissance.ToString(&quot;hh:mm&quot;)&nbsp;</span>&nbsp;&nbsp;
+</font>'Affichera&nbsp; 11:00</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(DateNaissance.ToString(&quot;d/MM/yy&quot;)&nbsp;</span>&nbsp;&nbsp;
+</font>'Affichera&nbsp; 02/12/51 </font> </p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(DateNaissance.ToString(&quot;%h)&nbsp;</span>&nbsp;&nbsp;
+</font>'Affichera&nbsp; 11&nbsp;&nbsp; le caractère % est utilisé quand on 
+affiche une seule donnée.</font></p>
+<p><font face="Courier New" size="2">On peut enfin utiliser les méthodes de la 
+<b>classe DateTime</b>!!</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">DateNaissance.ToLongDateString&nbsp;&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'dimanche 02 décembre 1951</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">DateNaissance.ToShortDateString&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'02/12/1951</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">DateNaissance.ToLongTimeString</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'11:00:00</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">DateNaissance.ToShortTimeString&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'11:00</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Variable &quot;temps&quot;</span></font></b></p>
+<p><font face="Courier New" size="2">Un <b>TimeSpan</b> est une unité de temps 
+(un intervalle de temps) exprimée en <b>jours</b>,<b> heures, minutes, 
+secondes</b>;</font></p>
+<p><font face="Courier New" size="2">Un TimeSpan&nbsp; initialisé avec 
+1.0e+13&nbsp;graduations représente &quot;11.13:46:40&quot;, ce qui correspond à 11&nbsp;jours, 
+13&nbsp;heures, 46&nbsp;minutes et 40&nbsp;secondes.</font></p>
+<p><font face="Courier New" size="2">L'espace de nom <font color="#0000FF">System.DateTime. </font>contient une 
+multitude de membre:</font></p>
+<p><font color="#0000FF" size="4" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">Add, 
+Substrat</span></font></p>
+<p><font face="Courier New" size="2">On peut <b>ajouter ou soustraire</b> un TimeSpan à un DateTime, on obtient un 
+DateTime.</font></p>
+<p><font face="Courier New" size="2">En clair on peut ajouter à une date une durée, on obtient une date.</font></p>
+<p><font face="Courier New" size="2">' Quel sera la date&nbsp; dans 36 jours?.<br>
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim today As System.DateTime<br>
+Dim duration As System.TimeSpan<br>
+Dim answer As System.DateTime<br>
+<br>
+today = System.DateTime.Now<br>
+duration = New System.TimeSpan(36, 0, 0, 0)<br>
+answer = today.Add(duration)</span></font></font></p>
+<p><font face="Courier New" size="2">On peut ajouter ou soustraire 2 dates, on obtient une TimeSpan</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim diff1 As System.TimeSpan<br>
+diff1 = date2.Subtract(date1)</span></font><br>
+&nbsp;</font></p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">AddDay, 
+AddMouths, AddHours, AddSeconds, AddMiliseconds</span></font></p>
+<p><font face="Courier New" size="2">Permet d'ajouter des jours, des&nbsp;mois, des&nbsp; 
+heures, des secondes, 
+ou des&nbsp; millisecondes à une date, on obtient une date.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Answer=today.AddDay(36)</span></font><br>
+&nbsp;</font></p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">Year, 
+Mouth, Day, Hour, Minute, Seconde, Millisecond</span></font></p>
+<p><font face="Courier New" size="2">Permettent d'extraire l'année, le mois, le jour, l'heure, les minutes, les 
+secondes, les millisecondes d'une date:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">I=DateNaissance.Year&nbsp;&nbsp;</span>&nbsp; </font>' =&gt; 
+I=1951</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #FFFFFF">I=</span><font color="#0000FF"><span style="background-color: #FFFFFF">System.DateTime.Now.Day</span>&nbsp;&nbsp;&nbsp; </font>
+'donne le jour d'aujourd'hui (1 à 31)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2" color="#111111">(</font><font face="Courier New" size="2"><font color="#0000FF">DatePart</font> 
+permet aussi d'extraire plein d'infirmations d'une date: jour , mois, année, 
+jour de la semaine..)</font></p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">
+DayOfWeek</span></font></p>
+<p><font face="Courier New" size="2">Retourne le jour de la semaine (0 pour dimanche à 6 pour samedi)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">I=DateNaissance.DayOfWeek</span>&nbsp;&nbsp;&nbsp; </font>'I=0&nbsp; 
+car le 02/12/1951 est un dimanche.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">DayForYear</font> existe aussi. </font> </p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">Now, 
+ToDay, TimeOfDay</span></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Now </font>est la date et l'heure du 
+système.(Là, maintenant)</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">ToDay</font> est la date du 
+système avec l'heure à 0.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">TimeOfDay</font> est l'heure actuelle.</font></p>
+    <p align="justify"><font face="Courier New" size="2"><strong>En
+    <img border="0" src="v2005.JPG" width="52" height="21"> Clock </strong><b>permet de récupérer l’heure courante</b> ainsi que le nombre de millisecondes 
+    écoulées depuis le démarrage.</font></p>
+    <font SIZE="2" color="#0033FF">
+    <p><font face="Courier New">MsgBox(My.Computer.Clock.LocalTime.ToString)
+    </font> </font>
+    <font SIZE="2" color="#111111"><font face="Courier New">'Affiche date et heure</font></p>
+    </font>
+    <p align="justify">&nbsp;</p>
+<p>&nbsp;</p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">Ticks</span></font></p>
+<p><font face="Courier New" size="2">Donne le nombre de graduations d'un DateTime.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">AddTicks</font> peut être utilisé.</font></p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Année bissextile?</font></span></p>
+<font SIZE="2">
+<p><font face="Courier New">Pour cela utiliser <font color="#0000FF">IsLeapYear</font>:</font></p>
+<p><font face="Courier New"><font color="#0000FF">MsgBox(DateTime.IsLeapYear(2005))</font> 
+'Affiche False</font></p>
+</font>
+<p>&nbsp;</p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">
+Comparaison de DateTime</span></font></p>
+<p><font face="Courier New" size="2">On utilise <font color="#0000FF">Compare:</font> <font color="#0000FF">DateTime.Compare(t1, t2) </font>
+retourne 0 si t1=t2, une valeur positive si t1&gt;t2 négative si t1&lt;t2.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim t1 As New DateTime(100)<br>
+Dim t2 As New DateTime(20)<br>
+<br>
+If DateTime.Compare(t1, t2) &gt; 0 Then<br>
+&nbsp;&nbsp;&nbsp;
+Console.WriteLine(&quot;t1 &gt; t2&quot;)<br>
+End If<br>
+If DateTime.Compare(t1, t2) = 0 Then<br>
+&nbsp;&nbsp;&nbsp;
+Console.WriteLine(&quot;t1 = t2&quot;)<br>
+End If<br>
+If DateTime.Compare(t1, t2) &lt; 0 Then<br>
+&nbsp;&nbsp;&nbsp;
+Console.WriteLine(&quot;t1 &lt; t2&quot;)<br>
+End If</span></font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">On peut aussi utiliser la méthode op_Equality de l'espace de nom 
+pour voir si 2 dates sont égales:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">areEqual = System.DateTime.op_Equality(april19, 
+otherDate)</span></font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Il existe aussi op_GreaterThan et beaucoup d'autres.</font></p>
+<p><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0; font-weight:700">
+Calcul de la différence entre 2 dates</span></font></p>
+<p><font face="Courier New" size="2">On utilise </font> 
+<font color="#0000FF" face="Courier New" size="2">DateDiff</font><font face="Courier New" size="2">, 
+il faut fournir en paramètre:</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><i>L'intervalle de temps</i> à utiliser 
+  comme unité de la différence entre <i>Date1</i> et <i>Date2.</i></font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2"><font color="#0000FF">DateInterval.Day</font> 
+pour obtenir le nombre de jours entre les 2 dates.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">DateInterval.Year</font> 
+pour obtenir le nombre d'années entre les 2 dates.</font></p>
+<p><font face="Courier New" size="2">..</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><i>Date1</i> </font></li>
+  <li><font face="Courier New" size="2"><i>Date2</i></font></li>
+</ul>
+<p><font face="Courier New" size="2">Exemple: </font></p>
+<p><font face="Courier New" size="2">Afficher le nombre de jours entre une date 
+donnée et la date du jour.<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">Dim DateS, Msg As 
+String </font><font color="#008000">' Declare les&nbsp; variables.</font><font color="#0000FF"><br>
+Dim DateD As DateTime<br>
+DateS = InputBox(&quot;Entrer une date&quot;) </font><font color="#008000">'Saisir une 
+date : on récupère une string</font><font color="#0000FF"><br>
+DateD = CDate(DateS)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000">'Conversion de la string en DateTime</font><font color="#0000FF"><br>
+Msg = &quot;Nombre de jour:&quot;&amp; DateDiff(DateInterval.Day, Now, DateD) </font>
+<font color="#008000">'différence en jours</font><font color="#0000FF"><br>
+MsgBox (Msg)</font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0; font-weight:700">Comment saisir rapidement une date dans 
+un programme?</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En ajoutant à une fenêtre un contrôle <b>
+DateTimePicker</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En mode Run , il apparaît une zone 
+rectangulaire avec la date système dedans:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vdatepic2.GIF" width="196" height="21"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si l'utilisateur clique sur la flèche 
+déroulante, il apparaît une fenêtre calendrier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font face="Courier New" size="2">
+<img border="0" src="vdatepic.gif" width="198" height="175"></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il suffit pour l'utilisateur de cliquer sur la 
+bonne date.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le programmeur récupère la date dans&nbsp;&nbsp;
+<font color="#0000FF">DateTimePicker1.value</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe, bien sur, de multiples propriétés et 
+plusieurs évènements, le plus remarquable étant:</font><font face="Courier New" size="2" color="#0000FF"> 
+ValueChanged.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>MonthCalendar</b> est un contrôle similaire 
+mais qui reste toujours ouvert.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">De plus grâce à <b>CalendarDimension</b> on 
+peut afficher plusieurs mois.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0; font-weight:700">Les Timers.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour déclencher un évènement à intervalle régulier, il faut utiliser les <b>
+minuteries</b> ou <b>'Timer'</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Prendre le contrôle <b>Timer&nbsp;</b> dans la Boite à outils, l'ajouter à la&nbsp; 
+fenêtre. Il apparaît en bas sous la fenêtre dans la barre d'état des composants.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il n'apparaît pas à l'utilisateur dans la fenêtre en mode Run.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il est très simple à utiliser.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">La propriété <font color="#0000FF">Interval</font>&nbsp; contient la périodicité de l'événement
+<b>Ticks</b> , 
+évènement qui se déclenche régulièrement.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Interval</font> est en&nbsp; millisecondes. Pour 
+<font color="#0000FF">Interval=500</font>&nbsp; l'évènement Ticks se déclenche toutes les 1/2 secondes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Start</b> et <b>Stop</b> déclenche et arrête la minuterie. (De même 
+<font color="#0000FF">Enabled</font> active ou non )
+</font> </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>Faire clignoter un label toutes les 1/2 secondes.</b></font></p>
+<font SIZE="2">
+<p><font face="Courier New">Créer le label1</font></p>
+<p><font face="Courier New">Ajouter un Timer1 (qui se place en bas sous la 
+fenêtre)</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New"><span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span>
+</font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">Sub</font></span><font SIZE="2"><span style="background-color: #FFFFFF"> Form3_Load(...)</span></font></font><font SIZE="2"></p>
+<p style="margin-top: 2; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; Timer1.Interval = 
+500</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; Timer1.Start()</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 2; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Private</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></span><font SIZE="2"><span style="background-color: #FFFFFF"> Timer1_Tick(</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF">..)</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Label1.Visible =
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Not</span></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+(Label1.Visible)</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">Un 
+évènement Timer_Tick se produit toutes les 1/2 secondes&nbsp; et inverse la 
+valeur de la propriété visible du label. (Si elle était égale à&nbsp; True, elle 
+devient égale à False et vice versa.) </font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">
+Mais attention: Timer à des restrictions de taille:</font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">Si votre application ou une autre 
+  demande beaucoup au système (boucles longues, calculs complexes, accès 
+  intensifs à un périphérique, un réseau ou un port, par exemple), les 
+  événements de minuterie peuvent être moins fréquent que spécifié dans la 
+  propriété <b>Interval</b>. Il n'est pas garanti que l'intervalle s'écoule dans 
+  le temps exact!!&nbsp; </font></li>
+  <li><font face="Courier New" size="2">L'intervalle peut être compris entre 1 
+  et 64&nbsp;767 millisecondes: l'intervalle le plus long ne dépasse pas de beaucoup 
+  la minute (64,8 secondes). </font></li>
+  <li><font face="Courier New" size="2">Le système génère 18 graduations à la 
+  seconde (même si la valeur de la propriété <b>Interval</b> est mesurée en 
+  millisecondes, la véritable précision d'un intervalle ne dépassera pas un 
+  dix-huitième de seconde). </font></li>
+</ul>
+<h4 class="dtH4"><font face="Courier New" size="2">Donc pour faire clignoter un label :OUI</font></h4>
+<h4 class="dtH4"><font face="Courier New" size="2">Pour compter précisément un 
+intervalle de temps:NON</font></h4>
+<p class="dtH4"><font face="Courier New" size="2">Mais il y a d'<a href="v7-3.htm">autres 
+méthodes</a>.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="4"><b>
+<span style="background-color: #C0C0C0">Perdre du temps:</span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Parfois on a besoin de perdre du temps: </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple ne rien faire pendant 3 secondes puis 
+poursuivre..</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#FF0000">Il est exclu de faire des boucles vides:</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">For i=0 to 100000&nbsp;&nbsp;
+</font>&nbsp;' le temps écoulé est variable en fonction des machines..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Next i</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Autre méthode : on boucle tant que l'heure 
+courante est inférieure à l'heure du départ+3s</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim t As DateTime=DateTime.Now</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Do While DateTime.Now &lt;t.AddSeconds(3)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Loop</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mais cela accapare le processeur.</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut utiliser un Timer et vérifier dans la procédure Tick si le temps est
+écoulé (avec les restrictions que l'on connait).</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut utiliser Thread.Sleep (qui met le
+processus en cours en sommeil). </font></p>
+  <font SIZE="2" face="Courier New" color="#0000FF">
+<p>System.Threading.Thread.Sleep(3000)</li>
+</ul>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;&nbsp;&nbsp;
+</font>
+  <font SIZE="2" face="Courier New">Le temps de sommeil du thread est en
+  millisecondes: 3000 correspond à 3 secondes.
+</font>
+</p>
+  <font SIZE="2" face="Courier New" color="#0000FF">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+  <font SIZE="2" face="Courier New" color="#0000FF">
+<font color="#0000FF" face="Courier New" size="4"><b>
+<span style="background-color: #C0C0C0">Chronométrer:</span></b></font></p>
+</font>
+  <font SIZE="2" face="Courier New">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Parfois on a besoin de chronométrer un évènement: </p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+Voir la rubrique <a href="v7-4.htm">Chronométrer 7-4</a></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+L'exemple sur <a href="ve4-1.htm">l'horloge</a> est aussi didactique.</p>
+</font>
+  <font SIZE="2" face="Courier New" color="#0000FF">
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p>&nbsp;</font><p>&nbsp;<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:40 GMT -->
+</html>

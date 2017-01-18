@@ -1,0 +1,1140 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net archtecture des programmes : n-tier pattern MCV</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+.page
+{
+	background: #FFFFFF;
+	color: #000000;
+}
+.tborder
+{
+	background: #D1D1E1;
+	color: #000000;
+	border: 1px solid #0B198C;
+}
+td
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.alt1
+{
+	background: #F5F5FF;
+	color: #000000;
+}
+.alt2
+{
+	background: #E1E4F2;
+	color: #000000;
+}
+table.MsoTableGrid
+	{border:1.0pt solid windowtext;
+	font-size:10.0pt;
+	font-family:"Times New Roman"}
+	.RightPanel { margin-right:-15px;}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-9.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.10</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Architecture n-Tiers.</font></b></td>
+    <td width="14%" height="76"><a href="v5-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<span style="background-color: #C0C0C0"><b><i>
+<font face="Courier New" size="4" color="#0000FF">Introduction:</font></i></b></span></p>
+<p><font face="Courier New" size="2">Les programmes les plus fréquemment 
+développés sont ceux utilisant une <b>interface utilisateur</b> permettant de 
+travailler sur un ensemble de données, par exemple les clients d'une entreprise. 
+Il faut pouvoir ajouter, supprimer, modifier les clients, en afficher la liste. 
+Une <b>base de données</b> permet de stocker les données.</font></p>
+<p><font face="Courier New" size="2">Il y a quelques années, dans l'interface 
+utilisateur, du code lisait, modifiait la base de données. Très vite, sur un 
+projet important cette approche, non architecturée, montrait ses limites.</font></p>
+<p><font face="Courier New" size="2">Aussi très rapidement, en programmation 
+fonctionnelle, le besoin de travailler sur des couches est apparu: </font></p>
+<p><font face="Courier New" size="2">Pour afficher la liste des client de 
+l'entreprise:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2"><b>La couche présentation</b>: une 
+windowsForm&nbsp; affichait la liste ; elle faisait appel à:</font></p>
+<p><font face="Courier New" size="2"><b>La couche métier</b>: une routine 
+ChargeListe située dans un module standard sélectionnait les clients, elle 
+faisait appel à:</font></p>
+<p><font face="Courier New" size="2"><b>La couche données</b> qui lisait la base 
+de données. </font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Cela a été formalisé en programmation objet.</font></p>
+<p><font face="Courier New" size="2">A noté que si les divers couches sont sur 
+les ordinateurs différents, on parle d'<b>architecture distribuée</b>.</font></p>
+<p><br>
+<b><font face="Courier New" size="4" color="#0000FF">
+<i><span style="background-color: #C0C0C0">Architecture n-tiers</span></i></font></b><br>
+<br>
+<font face="Courier New" size="2">De l'anglais <b>
+<i>tier</i></b> signifiant <b>étage</b> ou <b>niveau</b>.</font></p>
+<p><font face="Courier New" size="2">Architecture logicielle impliquant plusieurs composants, chaque composant étant 
+le client d’un et le serveur d’un autre.</font></p>
+<p><font face="Courier New" size="2">Le cas le plus simple de ce type 
+d’architecture est le <b>modèle</b> <b>Client/Serveur</b> qui est en <b>2-tiers</b>.</font></p>
+<p align="center"><img border="0" src="v2tiers.JPG" width="172" height="148"></p>
+<blockquote>
+  <blockquote>
+<p align="left"><font face="Courier New" size="2"><b><i>Tier</i> 'Client'</b>&nbsp;– 
+Contient l’interface utilisateur, adresse des requêtes au serveur.</font></p>
+<p align="left"><font face="Courier New" size="2"><b><i>Tier</i> 'Serveur'</b> - 
+Contient la base de données. Reçoit les requêtes, renvoie des données.</font></p>
+  </blockquote>
+</blockquote>
+<p align="left"><font face="Courier New" size="2">
+<br>
+Dans les modèles <b>3-tiers</b> et plus, il existe des composants intermédiaires qu’on appelle 
+également middleware.<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Un exemple typique d’un système <b>3-tier</b> est le suivant&nbsp;:</font></p>
+<p align="center"><img border="0" src="v3tiers.JPG" width="359" height="211"><font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<dd>
+<table>
+  <tr vAlign="top">
+    <td><font face="Courier New" size="2">•&nbsp; </font> </td>
+    <td><font face="Courier New" size="2"><b><i>Tier</i> de présentation</b>&nbsp;– 
+    c’est principalement l’interface utilisateur. </font>contient les différents 
+    types de clients, léger (Web, ASP, JSP) ou lourd (Swing, WinForm)<font face="Courier New" size="2"><br>
+&nbsp;</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td><font face="Courier New" size="2">•&nbsp; </font> </td>
+    <td><font face="Courier New" size="2"><b><i>Tier</i> des règles de gestion</b>:&nbsp;couche 
+    métier: 
+    Business Logic.<br>
+&nbsp;</font></td>
+  </tr>
+  <tr vAlign="top">
+    <td><font face="Courier New" size="2">•&nbsp; </font> </td>
+    <td><font face="Courier New" size="2"><b><i>Tier</i> de base de données&nbsp;</b>– les programmes du deuxième <i>tier</i> 
+    font appel à ce dernier pour consulter ou mettre à jour les données 
+    relatives à l’entreprise.</font></td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2"><br>
+<br>
+Sur le même schéma, on peut ajouter des intermédiaires supplémentaires et 
+obtenir une architecture 4, 5, …, <b>n-tier</b>.</font><p>
+<font face="Courier New" size="2">Un exemple d'architecture à 5 couches 
+logicielles :</font><ul>
+  <li><font face="Courier New" size="2"><strong>Présentation</strong>: Contient 
+  tous les composants graphiques du module composant l’interface homme-machine 
+  (fenêtres, contrôles utilisateur…) avec le code propre à l’affichage de leur 
+  représentation et de leur contenu.<br>
+  Cette couche ne peut référencer que les couches «Référence» et «Application». 
+  Mettre le moins de code possible dans cette couche. </font></li>
+  <li><font face="Courier New" size="2"><strong>Application</strong>: Contient 
+  tous les contrôleurs de cas d’utilisation du module. cette couche assurent le 
+  liant entre les composants graphiques et les composants métier.<br>
+  Cette couche ne peut référencer que les couches «Métier», «Persistance» et 
+  «Référence» </font></li>
+  <li><font face="Courier New" size="2"><strong>Métier</strong>: Contient tous 
+  les composants métier dont le module a la responsabilité. Ces composants 
+  métier ont en charge la gestion du cycle de vie des objets métier gérés par le 
+  module. Cette couche ne peut référencer que les couches «Référence» et 
+  «Persistance» </font></li>
+  <li><font face="Courier New" size="2"><strong>Référence</strong>: Cette couche 
+  contient les objets de données pures qui transitent entre toutes les autres 
+  couches. Ces objets sont aussi parfois nommés DataValues ou DataObjects.
+  </font></li>
+  <li><font face="Courier New" size="2"><strong>Persistence</strong>: Contient 
+  les composants assurant le mapping entre les objets définis dans la couche 
+  Métier et les composants de stockage définis dans la base de Données.<br>
+  Cette couche ne peut référencer que les couches «Référence» et la base de 
+  données. Concrètement, il s’agit de la seule couche ayant un lien avec la base 
+  de données. </font></li>
+</ul>
+<p><font face="Courier New" size="2"><br>
+</font>
+<br>
+&nbsp;</dd>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">
+Architecture 3 tiers:</span></font></b></p>
+<p align="center"><img border="0" src="v3tiers.JPG" width="359" height="211"></p>
+<p><font face="Courier New" size="2">L'architecture 3-tier (de l'anglais
+<i>tier</i> signifiant étage ou niveau)&nbsp; vise à séparer très nettement trois couches logicielles 
+au sein d'une même
+application ou système, à modéliser et présenter cette application comme un 
+empilement de trois couches, étages, niveaux ou strates dont le rôle est 
+clairement défini&nbsp;:</font></p>
+<ul lastCheckbox="null">
+  <li><font face="Courier New" size="2">la <b>présentation</b> des données&nbsp;: correspondant à l'affichage, la 
+  restitution sur le poste de travail, le dialogue avec l'utilisateur, </font> </li>
+  <li><font face="Courier New" size="2">le <b>traitement</b> métier des données&nbsp;: correspondant à la mise en œuvre 
+  de l'ensemble des règles de gestion et de la logique applicative, c’est à ce 
+  niveau que se trouvent toutes les règles de gestion, et toute 
+  l’intelligence de la démarche.</font></li>
+  <li><font face="Courier New" size="2">et enfin l' <b>accès aux données</b>
+  persistantes (<i>persistancy</i> en anglais)&nbsp;: correspondant aux données qui 
+  sont destinées à être conservées sur la durée.
+  </font>
+  </li>
+</ul>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>Relation entre les couches:</b> Les services d'une couche sont mis à 
+disposition de la couche supérieure.</font></p>
+<p><font face="Courier New" size="2"><b><font color="#FF0000">On s'interdit par conséquent qu'une couche 
+invoque les services d'une couche plus basse que la couche immédiatement 
+inférieure ou plus haute que la couche immédiatement supérieure (chaque niveau 
+ne communique qu'avec ses voisins immédiats).</font></b> Voir les flèches sur le 
+schéma suivant:</font></p>
+<p align="center"><img border="0" src="vtroistier.JPG" width="523" height="130"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Exemple 1</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:Ma 
+bibliothèque (En écrivant du code)</span></font></b></p>
+<div align="left">
+  <dt>&nbsp;</dt>
+</div>
+<div align="left">
+  <font face="Courier New" size="2">Créons une application permettant de saisir 
+  , d'enregistrer, de voir des fiches 'Livre':</font></div>
+<div align="left">
+  &nbsp;</div>
+<div align="center">
+  <img border="0" src="vlivres.JPG" width="306" height="248"></div>
+<div align="left">
+  &nbsp;</div>
+<div align="left">
+  &nbsp;</div>
+<div align="left">
+  <font face="Courier New" size="2">Il faut créer des objets 'Livre' puis un 
+  objet 'Livres' contenant une collection de tous les livres (<b>Couche métier</b>). 
+  Cette collection doit pouvoir être enregistrée puis  lue sur disque (<b>Couche d'accès 
+  au données</b>). Enfin on doit pouvoir afficher le détail d'un livre (<b>Interface utilisateur)</b>.</font></div>
+<div align="left">
+&nbsp;</div>
+<p align="left"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>&nbsp;&nbsp;&nbsp; 
+Couche métier&nbsp;:</b></font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Classe&nbsp;
+</font></span></span><font face="Courier New" size="2">«&nbsp;ClasseLivre&nbsp;»&nbsp;: entité 
+métier, classe permettant d'instancier un livre avec comme propriété : Titre, 
+auteur..</font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Classe&nbsp;
+</font></span></span><font face="Courier New" size="2">«&nbsp;ClasseLivres&nbsp;»&nbsp;(avec un 's'): 
+classe comprenant une collection d’objet «&nbsp;Livre&nbsp;». Elle possède des 
+méthodes permettant d'ajouter un livre, de récupérer un livre dans la 
+collection, de passer au précédent, au suivant...</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Couche 
+d’accès aux données&nbsp;:</b></font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></span>
+<span style="font-style: normal; font-variant: normal; font-weight: normal; font-family: Courier New">
+<font size="2">&nbsp;</font></span><font face="Courier New" size="2">LoadData&nbsp; 
+pour lire la collection de livres à partir d'un fichier (xml dans notre exemple)</font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></span><font face="Courier New" size="2">&nbsp;SaveData&nbsp; pour 
+enregistrer la collection de livres dans un fichier (xml dans notre exemple)</font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Interfaces 
+graphiques&nbsp;:</b></font></p>
+<p class="MsoNormal" style="text-indent: -18.0pt; margin-left: 71.4pt">
+<span style="font-family: Courier New"><font size="2">o</font><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></span></span><font face="Courier New" size="2">1 Formulaire principal 
+permettant de saisir un nouveau livre et de faire défiler les livres.</font></p>
+<p class="MsoNormal"><span style="background-color: #FFFF00">A - Couche métier:</span></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Créons la <b>ClasseLivre&quot;</b>, elle doit contenir:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">2 
+property public : 'Titre' et 'Auteur'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">2 variables private : m_titre et m_Auteur </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Cela permettra d'instancier un objet livre et 
+d'utiliser ses propriétés:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Dim livre As New ClasseLivre : livre.Nom= 
+&quot;Cours VB&quot;&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">
+Voici la classe:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Public Class ClasseLivre</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_Titre As String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_Auteur As String</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propriété Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Property Titre() As 
+String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return m_Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Set(ByVal value As String)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_Titre = value</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Set</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Property</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propriété Auteur</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Property Auteur() As 
+String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return m_Auteur</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Set(ByVal value As String)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_Auteur = value</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Set</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Property</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">End Class</font></b></p>
+
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">Créons la <b>ClasseLivres&quot; 
+(avec un&nbsp; 's')</b>, elle doit contenir:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">1 collection nommé <font color="#0000FF">
+ListLivre</font> d'objet générics:&nbsp; 
+Collection.Generic.List (Of Classelivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">C'est une collection typée, elle ne peut 
+contenir que des 'Livre'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On instancie aussi un&nbsp; objet ad d'accès 
+aux données.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">La méthode <font color="#0000FF">public 
+LivrePointé</font> retourne le livre en cours, les méthodes
+<font color="#0000FF">FirstLivre</font>, <font color="#0000FF">LastLivre</font>,
+<font color="#0000FF">NextLivre</font>, <font color="#0000FF">PreviousLivre</font> 
+permettent de se déplacer dans les livres. On peut ajouter un livre avec&nbsp;
+<font color="#0000FF">AddLivre</font>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une variable nommée m_numéro sert dans la 
+classe de &quot;pointeur&quot; du livre courant.&nbsp;&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour enregistrer ou charger la collection de 
+livre sur disque , il y a les 2 méthodes <font color="#0000FF">SaveData</font> 
+et <font color="#0000FF">LoadData</font>. Elle appelle des méthodes de la couche 
+de données.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Quand cette classe est instanciée elle charge 
+les données (la procédure New appelle LoadData).</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports 
+System.Collections.Generic</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<font face="Courier New" size="2" color="#0000FF">Public Class ClasseLivres</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private ListLivre As New 
+List(Of ClasseLivre) </font>
+<font face="Courier New" size="2" color="#008000">'Collection de Livre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_numero As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private ad As New AccesAuxDonnees</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" face="Courier New" size="2">'Constructeur, charge la 
+collection</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub New()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Me.LoadData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub LoadData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ad.LoadData(ListLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_numero = 0</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub SaveData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ad.SaveData(ListLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Retourne le livre courant</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Function LivrePointé() 
+As ClasseLivre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If ListLivre.Count &lt;&gt; 0 Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If m_numero &lt; ListLivre.Count 
+Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return ListLivre.Item(m_numero)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Ajouter un livre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub AddLivre(ByVal l As 
+ClasseLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ListLivre.Add(l)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Effacer le livre courant</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub RemoveLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ListLivre.RemoveAt(m_numero)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Mettre à jour un livre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub UpdateLivre(ByVal l 
+As ClasseLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ListLivre.Item(m_numero) = l</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Livre suivant</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub NextLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If m_numero &lt; ListLivre.Count 
+Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_numero += 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Livre précédent</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub PreviousLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If m_numero &gt; 0 Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_numero -= 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Premier Livre </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub FirstLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_numero = 0</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Dernier livre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub LastLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_numero = ListLivre.Count - 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">End Class</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il 
+aurait été plus élégant d'intancier l'objet d'accès au données dès le début de 
+la classe comme cela:</font></p>
+<p>
+<font face="Courier New" size="2" color="#0000FF">Public Class ClasseLivres</font></b></p>
+<p></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private ListLivre As New 
+List(Of ClasseLivre) </font>
+<font face="Courier New" size="2" color="#008000">'Collection de Livre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_numero As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim ad As New AccesAuxDonnees</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal"><span style="background-color: #FFFF00">B - Couche d'accès 
+aux données:</span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ici nous enregistrons les données dans un 
+fichier XML nommé </font>
+<font face="Courier New" size="2" color="#0000FF">&quot;Meslivres.Xml&quot; </font>
+<font face="Courier New" size="2">(il sera dans le répertoire bin/Debug lors de 
+la conception, et dans le répertoire de l'exécutable si on installe le 
+logiciel). On utilise la sérialisation et les Stream. (Voir chapitre sur la 
+sérialization pour plus de détails) </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Les Sub ont un paramètre: la collection de 
+ClasseLivre.Ce paramètre est passé avec ByRef . </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports 
+System.Xml.Serialization</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Public Class AccesAuxDonnees</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public <b>Sub SaveData</b>(ByVal list 
+As Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Déclaration</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim serialXML As 
+Xml.Serialization.XmlSerializer = Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim streamIO As StreamWriter = 
+Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML = New 
+Xml.Serialization.XmlSerializer(GetType(Collections.Generic.List(Of ClasseLivre)))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Ouverture d'un flux en 
+écriture sur le fichier XML </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO = New StreamWriter(&quot;Meslivres.Xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Sérialisation de la liste 
+des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML.Serialize(streamIO, 
+list)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Catch ex As Exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propager l'exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Throw ex</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Finally</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' En cas d'erreur, n'oublier 
+pas de fermer le flux en écriture si ce dernier est toujours ouvert</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If streamIO IsNot Nothing Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public <b>Sub LoadData</b>(ByRef list 
+As Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Déclaration</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim streamIO As StreamReader = 
+Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim serialXML As 
+Xml.Serialization.XmlSerializer = Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Tester l'existance du 
+fichier</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If System.IO.File.Exists(&quot;Meslivres.Xml&quot;) 
+= True Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML = New 
+Xml.Serialization.XmlSerializer(GetType(Collections.Generic.List(Of ClasseLivre)))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Ouverture d'un flux en 
+lecture sur le fichier XML des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO = New StreamReader(&quot;Meslivres.Xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Désérialisation de la liste 
+ 
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">list = CType(serialXML.Deserialize(streamIO), 
+Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Catch ex As Exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propager l'exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Throw ex</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Finally</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' En cas d'erreur, n'oublier 
+pas de fermer le flux en lecture si ce dernier est toujours ouvert</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If streamIO IsNot Nothing Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">End Class</font></b></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="background-color: #FFFF00">C - Couche de 
+présentation: interface graphique </span></p>
+<p class="MsoNormal"><img border="0" src="vlivres.JPG" width="306" height="248"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On instancie un objet <font color="#0000FF">
+Livres</font>, cet objet contient la collection de livre.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il suffit ensuite d'utiliser </font>
+<font face="Courier New" size="2" color="#0000FF">Livres.LivrePointé </font>
+<font face="Courier New" size="2">qui est le livre en cours</font><font face="Courier New" size="2" color="#0000FF">, Livres.NextLivre() </font>
+<font face="Courier New" size="2">pour passer au livre suivant,</font><font face="Courier New" size="2" color="#0000FF"> 
+Livres.PreviousLivre </font>
+<font face="Courier New" size="2">pour passer au précédent.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Quand on clique sur 'Enregister livre' on 
+effectue <font color="#0000FF">Livres.AddLivre.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Quand on clique sur 'Enregister tous les 
+livres' on effectue <font color="#0000FF">Livres.SaveData </font>( qui fait 
+appel à la couche de données)<font color="#0000FF">.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Deux petites Sub LireLivre et AfficheLivre 
+permettent de remplir ou de lire les TextBox à partir d'un objet livre.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>
+<font face="Courier New" size="2" color="#0000FF">Public Class 
+InterfaceGraphique</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim Livres As New ClasseLivres</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim iFlagNewLivre As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub LireLivre(ByVal l As 
+ClasseLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">l.Titre = TextBoxTitre.Text</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">l.Auteur = TextBoxAuteur.Text</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Sub AfficheLivre(ByVal l As 
+ClasseLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If l IsNot Nothing Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBoxTitre.Text = l.Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBoxAuteur.Text = l.Auteur</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub ButtonNext_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNext.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Livres.NextLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">AfficheLivre(Livres.LivrePointé)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">iFlagNewLivre = False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub 
+ButtonPrevious_Click(ByVal sender As Object, ByVal e As System.EventArgs) 
+Handles ButtonPrevious.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Livres.PreviousLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">AfficheLivre(Livres.LivrePointé)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">iFlagNewLivre = False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub ButtonNew_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNew.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBoxTitre.Text = &quot;&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">TextBoxAuteur.Text = &quot;&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">iFlagNewLivre = True</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub 
+ButtonEnregister_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles ButtonEnregister.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim NouveauLivre As New 
+ClasseLivre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If iFlagNewLivre = True Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; LireLivre(NouveauLivre)
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; Livres.AddLivre(NouveauLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; Livres.LastLivre()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Else</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; LireLivre(NouveauLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; Livres.UpdateLivre(NouveauLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">iFlagNewLivre = False</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub 
+ButtonEnregistertous_Click(ByVal sender As System.Object, ByVal e As 
+System.EventArgs) Handles ButtonEnregistertous.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Livres.SaveData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b>
+<font face="Courier New" size="2" color="#0000FF">End Class</font></b></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Exemple 2</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">: 
+Ma bibliothèque (Avec un BindingSource et génération automatique de l'IU)(VB 
+2005)</span></font></b></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">C'est le même programme, mais on va laisser le 
+soin à VB de générer automatiquement l'interface utilisateur et les liens (Binding) 
+entre cette interface et les données.</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">La couche d'accès aux données est la même.</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On a une Form vide.</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFF00">A - Couche métier:</span></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<font color="#0000FF">ClasseLivre</font> est identique, par contre
+<font color="#0000FF">ClassesLivres</font> est plus simple: elle contient 
+uniquement la collection généric <font color="#0000FF">ListLivre</font> 
+contenant les livres</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;(Et 
+SaveData et Load Data)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports 
+System.Collections.Generic</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Class ClasseLivre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_Titre As String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private m_Auteur As String</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propriétés Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Property Titre() As 
+String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return m_Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Set(ByVal value As String)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_Titre = value</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Set</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Property</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">' Propriétés Auteur</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Property Auteur() As 
+String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return m_Auteur</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Get</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Set(ByVal value As String)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">m_Auteur = value</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Set</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Property</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Function GetTitre() As 
+String</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Return m_Titre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Function</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public <b>Class ClasseLivres</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Public ListLivre As New 
+Collections.Generic.List(Of ClasseLivre)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private ad As New 
+AccesAuxDonnees</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub LoadData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ad.LoadData(ListLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub SaveData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">ad.SaveData(ListLivre)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici 
+ListLivre est Public.</font></p>
+<p class="MsoNormal"><span style="background-color: #FFFF00">B - Création de la 
+source de données:</span></p>
+<p class="MsoNormal"><font size="2" face="Courier New">Il faut ensuite créer une 
+source de données:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Comme on affiche des 
+livres, la source c'est <font color="#0000FF">la ClasseLivre</font>.</font></p>
+<p class="MsoNormal"><img border="0" src="vbd3.JPG" width="332" height="147"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font size="2" face="Courier New">Menu 'Données'=&gt; 'Ajouter 
+une nouvelle source de données'</font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img border="0" src="vbd1.JPG" width="577" height="387"></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ici la source de données 
+n'est pas une base de données mais un Objet:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">On clique sur 'Objet' 
+puis bouton 'Suivant'.</font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><img border="0" src="vbd2.JPG" width="577" height="386"></p>
+<p align="left"><font size="2" face="Courier New">On déroule livre, qui est le 
+nom de la solution, puis on clique sur 'ClasseLivre' et sur le bouton suivant.</font></p>
+<p align="left"><font face="Courier New" size="2">Puis Ok; la source de données 
+est créée.</font></p>
+<p align="left">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFF00">C - Génération automatique de 
+l'interface utilisateur:</span></p>
+<p align="left"><font face="Courier New" size="2">Visual Studio dispose d'une 
+fenêtre 'Sources de données' depuis laquelle vous pouvez faire glisser des 
+éléments jusqu'à un formulaire pour créer automatiquement des contrôles liés aux 
+données qui affichent des données.</font></p>
+<p align="left"><font size="2" face="Courier New">Afficher les sources de 
+données:</font></p>
+<p align="left"><font size="2" face="Courier New">Menu 'Données' puis 'Afficher 
+les sources de données'</font></p>
+<p align="left"><img border="0" src="vbd3.JPG" width="332" height="147"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Il apparaît à droite la 
+fenêtre 'Sources de données'</font></p>
+<p align="left"><font face="Courier New" size="2">Dérouler 'livre' et cliquer 
+sur 'ClasseLivre'</font></p>
+<p align="left"><font face="Courier New" size="2">Pour générer, non par une grid 
+mais des zones de saisie, dérouler la liste de ClasseLivre et cliquer sur 
+'Détails'.</font></p>
+<p align="left"><font face="Courier New" size="2">Enfin faire un drag ans drop à 
+partir de ClasseLivre et déposer le sur la form de gauche (qui est vide au 
+départ)</font></p>
+<p align="left"><font face="Courier New" size="2">Miracle: il apparaît 
+automatiquement: </font></p>
+<blockquote>
+<p align="left"><font face="Courier New" size="2">-des zones textbox pour chaque 
+properties de la classe avec un label devant.</font></p>
+<p align="left"><font face="Courier New" size="2">-une barre de navigation (tout 
+est généré automatiquement: les bitmap des boutons dans les ressources&nbsp; Setting...)</font></p>
+<p align="left"><font face="Courier New" size="2">-Un composant BindingSource.(Il 
+fait le lien entre l'interface et la source de données)</font></p>
+<p align="left"><font face="Courier New" size="2">-Un composant BindingNavigator.(Il 
+gère la barre de navigation)</font></p>
+</blockquote>
+<p align="left"><img border="0" src="vbd4.JPG" width="819" height="408"></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On voit bien en dessous les 2 composants qui 
+ont été ajoutés.</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFF00">D - Création du Binding:</span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Maintenant ,il faut indiquer la source de données, le Datasource du 
+BindingSource: c'est la collection </font><font face="Courier New" size="2" color="#0000FF">
+MesLivres.ListLivre </font><font face="Courier New" size="2">(C'est pour cela 
+que la collection ListLivre est Public)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Class Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Dim MesLivres As New 
+ClasseLivres</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub Form1_Load(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;<b>ClasseLivreBindingSource.DataSource 
+= MesLivres.ListLivre</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" size="2" face="Courier New">'On peut ajouter dans la form 
+2 boutons permettant la sauvegarde ou la lecture sur disque.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub SauveLivres_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+MesLivres.SaveData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private Sub LoadLivre_Click(ByVal 
+sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+MesLivres.LoadData()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; 
+ClasseLivreBindingSource.DataSource = MesLivres.ListLivre</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p align="left"><font face="Courier New" size="2">P.... !!ça marche!!</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ici ,les différentes parties 
+du logiciel sont dans la même solution. Rien n'empêche de:</font></p>
+<body>
+
+<li>
+<p align="left"><font face="Courier New" size="2">Mettre les classes dans un 
+même&nbsp; fichier .vb</font></p>
+</li>
+<li>
+<p align="left"><font face="Courier New" size="2">Mettre les classes dans 
+différents fichiers .vb</font></p>
+</li>
+<li>
+<p align="left"><font face="Courier New" size="2">Créer les Classes dans une 
+solution, la générer, inclure dans les références du projet principal les dll.</font></p>
+</li>
+<li>
+<p align="left"><font face="Courier New" size="2">Enfin si divers parties sont 
+sur différentes machines, on parle d'architecture distribuée.</font></p>
+</li>
+
+</body>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-9.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:36 GMT -->
+</html>

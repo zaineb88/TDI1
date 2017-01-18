@@ -1,0 +1,983 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET formulaire ou forms </title>
+<style>
+<!--
+ li.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	margin-left:0cm; margin-right:0cm; margin-top:0cm}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="60%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="6%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Forms.</font></b></td>
+    <td width="14%" height="76"><a href="v3-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#800080">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; font-weight:700">Elle correspondent aux 
+fenêtres ou 'formulaires'. Ce sont les 'Windows Forms'.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vfenetre.JPG" width="98" height="111"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Créer une fenêtre&nbsp;en mode conception:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Quant on ouvre un nouveau projet il y a déjà 
+une Form1. On peut avoir besoin d'en ajouter une autre au projet. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-size: 10pt; font-family: Courier New">Menu <b>Projet</b>, <b>
+Ajouter un formulaire Windows</b>, cliquer sur <b>WindowsForm</b>, une fenêtre
+&quot;Form1&quot; apparaît. On a bien crée une fenêtre avec la classe WindowsForms.</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">Toute l’interface&nbsp; se 
+trouve sur des fenêtres.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">En VB.net on parle de 
+<b>formulaire</b>.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vc1-2_2.gif" width="347" height="159"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Propriétés:</span></font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Bien sur, la fenêtre possède des propriétés 
+qui peuvent être modifiées en mode design&nbsp; dans la fenêtre &quot;Propriétés&quot; à 
+droite :</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vpropris.JPG" width="352" height="402"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour modifier la propriété Text par exemple, 
+on clique sur 'Form1' en face de Text, on efface 'Form1' et on tape le nouveau 
+texte.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi modifier les propriétés par une 
+ligne de code:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Form1.Text = &quot;Nouveau texte&quot;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voyons les choses plus en détails:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><span style="font-family: Courier New"><font size="4" color="#0000FF">Name</font></span></b><span style="font-family: Courier New"><font size="2">&nbsp;:Nom 
+du formulaire. C'est le nom qui désignera l'objet dans le code.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">Donner un nom explicite. 
+<font color="#0000FF">FrmDemarrage</font> &nbsp;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New">Name
+est présent dans tous les contrôles; il est hérité de la Classe Control.</span></font><span style="font-family: Courier New"><font size="2">&nbsp;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><span style="font-family: Courier New"><font size="2">&nbsp;</font></span></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">Dès qu’une fenêtre est 
+créée on modifie immédiatement ses propriétés en mode conception, dans la
+fenêtre de propriétés, pour lui donner 
+l’aspect que l’on désire.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><span style="font-family: Courier New"><font size="2">&nbsp;</font></span></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><span style="font-family: Courier New"><font size="4" color="#0000FF">Text</font></span></b><span style="font-family: Courier New"><font size="2"><b>&nbsp;:</b> 
+C’est le texte qui apparaîtra dans la barre de titre en haut.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">Text peut être modifié par 
+le code&nbsp;: <font color="#0000FF">Form1.Text=&nbsp;&quot;Exemple&quot;</font></font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vc1-2_2.gif" width="347" height="159"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Il<b> </b>est présent
+dans tous les contrôles.</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF">
+<b><span style="font-family: Courier New"><font size="4">Icon</font></span></b></font><span style="font-family: Courier New"><font size="4" color="#0000FF">&nbsp;</font><font size="2">:&nbsp;propriété 
+qui permet d’associer à la Form un fichier icône. Cette icône s’affiche dans 
+la barre de titre, tout en haut à gauche. Si la Form est la Form par défaut du 
+projet, c’est également cette icône qui symbolisera votre application dans 
+Windows. </font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vbarreicon.JPG"></p>
+<blockquote>
+  <blockquote>
+    <p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">Comment
+    mettre l'icône 'euro.ico' dans la barre de titre, par code?</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font color="#0000FF" size="2" face="Courier New">Dim MyIcon As Drawing.Icon =
+New System.Drawing.Icon(&quot;C:\euro.ico&quot;)</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font color="#0000FF" size="2" face="Courier New">&nbsp;Me.Icon = MyIcon</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Comment créer une icône? </font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<b>- Dans l'IDE de VB </b> (pas en VB <b> Express</b> 2005 ou 2008 malheureusement!!).</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Menu 
+Fichier&gt;Nouveau&gt;Fichier&nbsp; cliquez sur Icon , Vb ouvre une fenêtre Icon1 
+(dans l'éditeur d'images de Visual Studio.Net) Cela permet de créer ou modifier une icône (Fichier&gt;Ouvrir&gt;Fichier pour modifier).</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Comment enregistrer? Click droit dans 
+l'onglet 'Icon1' ouvre un menu contextuel permettant d'enregistrer votre Icône.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>- Avec un programme tiers( PhotoFiltre par
+exemple qui est gratuit)</b>.</font></p>
+    <p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+    <p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">La
+    propriété <font color="#0000FF">ShowIcon</font> permet l'afficher ou non
+    l'icône dans la barre de titre.</font></p>
+    <p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New">Cursor</span></b></font><span style="font-family: Courier New"><font size="4" color="#0000FF">&nbsp;</font><font size="2">:&nbsp;propriété 
+qui permet d’associer à la Form un curseur. </font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vcursor.JPG"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Elle est présente dans
+tous les contrôles</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4"><b>
+<font color="#0000FF">WindowState&nbsp;</font></b><span style="color: windowtext">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Donne l’état de la fenêtre&nbsp;: Plein écran (</font></span><font face="Courier New" color="#0000FF" SIZE="2">FormWindowState.</font><font size="2"><font color="#0000FF"><span style="font-family: Courier New; font-weight: normal">Maximized</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">), normale 
+(</span><font face="Courier New" color="#0000FF">FormWindowState.</font><font color="#0000FF"><span style="font-family: Courier New; font-weight: normal">Normal</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">), dans la barre 
+de tache (</span><font face="Courier New" color="#0000FF">FormWindowState.</font><font color="#0000FF"><span style="font-family: Courier New; font-weight: normal">Minimized</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">).</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple: mettre une 
+fenêtre en plein écran avec du code.</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.WindowState 
+=FormWindowState.Maximized </font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">(Quand on tape 
+Me.WindowsState= , Vb donne la liste, l'énumération)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Remarque:<font color="#0000FF"> Me</font> 
+indique l'instance ou le code est en train de s'exécuter, dans ce cas
+<font color="#0000FF">Me</font> indique le formulaire en cours.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="4">ControlBox</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Si cette propriété à comme valeur False, les boutons de contrôle 
+situés à droite de la barre de la fenêtre n’apparaissent pas.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="4">MaximizeBox</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Si cette propriété à comme valeur False, le boutons de contrôle 
+‘Plein écran’ situés à droite de la barre de la fenêtre n’apparaît pas.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="4">MinimizeBox</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Si cette propriété à comme valeur False, le boutons de contrôle 
+‘Minimize’ situés à droite de la barre de la fenêtre n’apparaît pas.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">En
+résumé:</span></font></p>
+<table borderColor="#c0c0c0" width="478" border="1">
+  <tbody>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1"><b>ControlBox</b></font></td>
+      <td align="middle" width="80"><font face="Courier New" size="1"><b>MaximizeBox</b></font></td>
+      <td align="middle" width="85"><font face="Courier New" size="1"><b>MinimizeBox</b></font></td>
+      <td align="middle">&nbsp;</td>
+      <td align="middle" width="291"><font face="Courier New" size="1">Result</font></td>
+    </tr>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1">False</font></td>
+      <td align="middle" width="80">&nbsp;</td>
+      <td align="middle" width="85">&nbsp;</td>
+      <td align="middle"><font face="Courier New" size="1"><img border="0" src="vbar0.JPG" width="103" height="36"></font></td>
+      <td align="middle" width="291"><font face="Courier New" size="1">Pas de
+        bouton</font></td>
+    </tr>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="85"><font face="Courier New" size="1">True</font></td>
+      <td align="middle"><font face="Courier New" size="1"><img border="0" src="vbar1.JPG" width="103" height="36"></font></td>
+      <td align="middle" width="291"><font face="Courier New" size="1">La form
+        peut être minimized ou maximized</font></td>
+    </tr>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="85"><font face="Courier New" size="1">False</font></td>
+      <td align="middle"><font face="Courier New" size="1"><img border="0" src="vbar2.JPG" width="103" height="36"></font></td>
+      <td align="middle" width="291"><font face="Courier New" size="1">La form
+        peut être maximized mais pas minimized</font></td>
+    </tr>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="80"><font face="Courier New" size="1">False</font></td>
+      <td align="middle" width="85"><font face="Courier New" size="1">True</font></td>
+      <td align="middle"><font face="Courier New" size="1"><img border="0" src="vbar3.JPG" width="103" height="36"></font></td>
+      <td align="middle" width="291"><font face="Courier New" size="1">La form
+        peut être minimized mais pas maximized&nbsp;</font></td>
+    </tr>
+    <tr>
+      <td align="middle" width="80"><font face="Courier New" size="1">True</font></td>
+      <td align="middle" width="80"><font face="Courier New" size="1">False</font></td>
+      <td align="middle" width="85"><font face="Courier New" size="1">False</font></td>
+      <td align="middle"><font face="Courier New" size="1"><img border="0" src="vbar4.JPG" width="103" height="36"></font></td>
+      <td align="middle" width="291"><font face="Courier New" size="1">La form
+        peut être fermée uniquement.</font></td>
+    </tr>
+  </tbody>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="4">FormBorderStyle</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Permet de choisir  </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+le type des bords de la fenêtre</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">&nbsp;: sans bord
+(</span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">None</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">), bord simple
+(</span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">FixedSingle</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">)ne permettant pas à l’utilisateur de modifier 
+la taille de la fenêtre, bord permettant la modification de la taille de la 
+fenêtre (</span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">Sizable</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">)..</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on a 'None', la barre de titre n'apparaît
+pas.&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En
+VB 2005 il y a aussi <font color="#0000FF">Fixed3D </font><font color="#111111">qui
+ajoute un petit effet 3d de profondeur sur le tour </font>, <font color="#0000FF">FixedDialog</font>&nbsp;
+et aussi <font color="#0000FF">FixedToolWindows</font> et <font color="#0000FF">SizableToolWindows</font>
+(ces 2 dernières cachent les boutons Maximize et Minimize et l'icône).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple de code:</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.FormBorderStyle 
+=FormBorderStyle.Sizable </font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Cela
+donne:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><img border="0" src="vborder.JPG" width="801" height="134"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font face="Courier New" size="2">None&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FixedSingle&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Sizable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SizableToolWindows.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4"><span style="font-family: Courier New"><b>
+<font color="#0000FF">
+<span style="font-family: Courier New; ">StartPosition</span></font><span style="font-family: Courier New; "><font size="4" color="#0000FF">&nbsp;</font></span></b><span style="font-family: Courier New; color: windowtext">:</span></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Permet de choisir la position de la fenêtre lors de son 
+ouverture.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Fenêtre au centre de l’écran&nbsp;? à la position qui existait lors de 
+la conception&nbsp;...?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.StartPosition 
+=FormStartPosition.CenterScreen </font>
+</font>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4">
+<span style="font-family: Courier New; font-weight: 700">
+<font color="#0000FF">Size, MinSize</font></span><span style="font-family: Courier New; color: windowtext; font-weight: 700">
+et  </span><font color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">
+MaxSize</span></font><span style="font-family: Courier New; color: windowtext; font-weight: 700">
+
+</span> </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">D</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2">onne 
+les dimensions&nbsp; de la Form (largeur, hauteur) ou les dimensions minimum et
+maximum que l'on peut utiliser pour redimensionner 
+une fenêtre lorsqu'elle est redimensionnable.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Me.Size = New Size(100, 100) </font>
+<font face="Courier New" size="2">'Les dimensions sont contenues dans un objet 
+Size que l'on crée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Width </font>
+<font face="Courier New" size="2">et</font><font face="Courier New" size="2" color="#0000FF"> 
+Height: </font><font face="Courier New" size="2">donne la largeur et hauteur.</font></p>
+<blockquote>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">On
+  parle ici des dimensions extérieures du formulaire (Barre de titre et
+  bordures comprises)</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Pour
+  avoir les dimensions internes utilisables (Sans barre de titre et bordures) il
+  faut utiliser </font><font color="#0000FF" face="Courier New" size="2">ClientSize.</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" color="#111111" face="Courier New">On
+  remarque que si on modifie ClientSize, cela modifie Size car la hauteur de la
+  barre de titre n'est pas modifiable.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Ils sont&nbsp; présents
+dans tous les contrôles.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700">Opacity</span></font><span style="font-family: Courier New; color: windowtext; font-weight: 700"><font size="4"> </font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Allant de 0% (0) à 100% 
+(1), 
+permet de créer un formulaire plus ou moins transparent.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour 0 il est transparent, pour 1 il est 
+totalement opaque (normal)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="4" color="#0000FF"><b><span style="font-family: Courier New">Locked</span></b></font><span style="font-family: Courier New"><font size="2">:&nbsp;propriété
+qui si elle a la valeur False interdit le déplacement et le redimensionnement de la Form.</font></span></p>
+<p><font size="2"><span style="font-family: Courier New">Est présent dans tous
+les contrôles.</span></font></p>
+<p><b><font face="Courier New">Exemple complet</font><font face="Courier New" size="2">:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" SIZE="2" COLOR="#0000ff">Me</font><font face="Courier New" color="#0000FF" SIZE="2">.FormBorderStyle= 
+Sizable</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Me</font><font face="Courier New" color="#0000FF" SIZE="2">.ControlBox=False</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2" color="#0000FF">Me.Size = New Size(100, 100)</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2" color="#0000FF">Me.StartPosition = 
+FormStartPosition.CenterScreen</font></p>
+<p class="titre3" style="margin:0 0cm; ">
+<font face="Courier New" size="2" color="#0000FF">Me.Opacity= 0.75<br>
+Me.Text = &quot;Exemple&quot;&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;Donne au milieu de l'écran, la fenêtre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vc1-2_1.gif" width="124" height="105"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(Dans notre exemple, on ne s'occupe pas pour
+le moment du bouton et du label &quot;Bonjour&quot;)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Ouvrir un formulaire</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On vient de dessiner une Form1 et une Form2 
+c'est donc les Class 'Form1 et ''Form2' (les moules) que l'on a dessiné.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Si dans une routine de la Form1 on veut </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+ouvrir une seconde fenêtre de type Form2</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">, 
+il faut:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;Créer un Objet fenêtre (formulaire) avec le moule 
+Form2</font><font size="2"><span style="font-family: Courier New">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">Dim</span><span style="font-size: 10.0pt; font-family: Courier New"> 
+f <span style="color: blue">As</span> <span style="color: blue">New</span>
+<font color="#0000FF">Form2()</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La nouvelle instance f 
+de la Class 'form2' est un objet formulaire.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour la faire apparaître 
+j'utilise la méthode:<font color="#0000FF"> .ShowDialog</font>.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">f.ShowDialog()&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+L<font size="2"><span style="font-family: Courier New">a fenêtre f est</span></font><span style="font-size: 10.0pt; font-family: Courier New"> <b>modale 
+car on a utilisé ShowDialog</b>&nbsp;: 
+quand elle est ouverte, on ne peut pas aller dans une autre fenêtre de 
+l'application avant de 
+sortir de celle là. (A titre d'exemple les fenêtres MessageBox sont toujours modales).</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Utiliser
+<font color="#0000FF">.show</font> 
+pour ouvrir une feuille non modale.</span></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">f.Show()&nbsp;</font> </span></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Attention:
+<font color="#FF0000">une fenêtre est un objet et est 'visible' suivant les 
+règles habituelles des objets. </font></span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si on instancie une fenêtre 
+à partir d'une procédure, elle sera visible dans cette procédure. Si elle est 
+'Public' et instanciée dans un module standard, elle sera visible partout.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">f</font><font face="Courier New" size="2"><font color="#0000FF">.Activate</font> 
+donne le focus à un&nbsp; formulaire visible.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Fermer un formulaire</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On utilise Close.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Close</font> ferme le 
+formulaire courant: le formulaire n'existe plus, il disparaît.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par contre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Hide</font> fait 
+disparaître le formulaire, il n'est plus visible mais est toujours présent (<font color="#0000FF">Visible</font> 
+passe à False).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Propriétés:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">On a vu qu'un formulaire 
+possédait de nombreuses propriétés:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; "><font color="#0000FF">Name&nbsp;</font></span><span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;
+</span><span style="font-family: Courier New">contenant le nom du formulaire.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; "><font color="#0000FF">Text</font></span><span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp;
+</span><span style="font-family: Courier New">contenant ce qui est affiché dans 
+la barre de titre.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Mais aussi </font>&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Left </font>
+<font face="Courier New" size="2">et</font><font color="#0000FF" face="Courier New" size="2"> 
+Top </font><font face="Courier New" size="2">qui donne les coordonnées x et y du 
+coin supérieur gauche du formulaire.</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Me.Left=100</font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Width </font>
+<font face="Courier New" size="2">et</font><font face="Courier New" size="2" color="#0000FF"> 
+Height: </font><font face="Courier New" size="2">donne la largeur et hauteur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vcoorform.GIF" width="210" height="147"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Location</font><font face="Courier New" size="2">: 
+coordonnés du <font color="#0000FF">point</font> supérieur gauche par rapport au 
+conteneur.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">
+<font COLOR="#0000ff">
+Me</font><font SIZE="2" color="#0000FF">.Location = </font>
+<font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+Point(100, 100) </font>'c'est un objet 'point' (et non les 
+coordonnés)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"> 
+<font color="#0000FF">Size:</font> taille du contrôle ; accepte un objet Size 
+comportant: largeur, hauteur </font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">
+<font COLOR="#0000ff">
+Me</font><font SIZE="2" color="#0000FF">.Size = </font>
+  <font SIZE="2" COLOR="#0000ff">New</font><font color="#0000FF"> 
+  Size(100, 100)
+  </font>
+  </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">(MaxSize donne la taille maximum possible).</font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">SetBounds</font> permet 
+de modifier left, top, width, heigth </font></p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p><font face="Courier New">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.SetBounds(100, 
+  100, 45, 45)</font>
+</font>
+</p>
+  <p>&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">La collection <font color="#0000FF">Controls</font>&nbsp; 
+contient les contrôles qui sont dans le formulaire (boutons, listes..).<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut parcourir la collection, pour voir de 
+quel type est le contrôle:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Dim i As Integer<br>
+For i = 0 To Me.Controls.Count - 1<br>
+<br>
+...Me.Controls.Item(i).GetType... <br>
+<br>
+Next i</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour un bouton GetType retourne 
+System.Windows.Forms.Button</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le nom du bouton est :<br>
+<br>
+<font color="#0000FF">
+Me.Controls.Item(i).Name</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On verra plus loin que pour ajouter, par code, 
+un contrôle à une form, il faut l'ajouter à la collection Controls:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">Controls.Add(MyButton)</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Évènements:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">Au 
+cours de l'exécution:&nbsp;</span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">Quand 
+le formulaire est</font></span><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: 700"> 
+chargé </span><span style="font-family: Courier New; color: windowtext">la 
+procédure</span><span style="font-family: Courier New; color: windowtext; font-weight: 700"> </span>
+<font color="#0000FF"><span style="font-family: Courier New; font-weight: 700">Form1_Load()</span></font><span style="font-family: Courier New; color: windowtext; font-weight: 700"> </span><span style="font-family: Courier New; color: windowtext">
+est exécutée</span></font><span style="font-family: Courier New; color: windowtext; font-weight: 700"><font size="2">.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">On pourra donc y mettre le code initialisant la feuille.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New"><span style="color: windowtext; font-weight: normal">(Form_Load
+se produit AVANT l'affichage du formulaire.)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New"><b>Private 
+Sub Form1_Load (..)</b></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'
+Code initialisant les variables, chargeant les listbox..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">End Sub</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le formulaire est réellement affiché à la
+fin de Form_Load et seulement à la fin.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="2">Form1_Activated()</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+est exécuté ensuite car la feuille deviendra active.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b><font color="#0000FF">Form1.GotFocus()</font> </b>est enfin exécuté 
+puisque la fenêtre prend le focus (un contrôle qui a le focus est celui qui 
+reçoit les évènements clavier, souris.. Sa barre de titre n'est plus grisée).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF"><b>Form1.Enter ()</b></font> est exécuté lorsque 
+l'utilisateur entre dans la fenêtre. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dès qu'une propriété change de valeur un 
+évènement 'PropriétéChanged' se déclenche:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b><font color="#0000FF">Form1.BackColorChanged</font> </b>se déclenche par 
+exemple quand la couleur du fond change.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF"><b>Form1.Resized</b></font> se déclenche quand on 
+modifie la taille de la fenêtre.( c'est intéressant pour interdire certaines 
+dimensions) </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF"><b>Form1.Leave</b></font> 
+survient quand il y a perte 
+du focus.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Bien sur il existe aussi </span>
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+Form1_Desactivate</span><span style="font-family: Courier New"> quand la fenêtre 
+perd le focus et n'est plus active. </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si l'utilisateur ferme la fenêtre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF"><b>Form1.Closing</b></font> se produit
+avant la 
+fermeture de la fenêtre (on peut annuler cette fermeture en donnant à la 
+variable Cancel la valeur True)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF"><b>Form1.Closed</b></font> se produit lorsque la 
+fenêtre est fermée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y en a beaucoup d'autres comme par exemple 
+les évènements qui surviennent quand on utilise la souris (<font color="#0000FF">MouveUp</font>, 
+<font color="#0000FF">MouseDown</font>, 
+<font color="#0000FF">MouseMove</font>) ou le clavier (<font color="#0000FF">KeyUp</font>, 
+<font color="#0000FF">KeyDown</font>, <font color="#0000FF">KeyPress</font>) sur la fenêtre.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Exemple pratique:</b></font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">-Comment
+  voir 'bonjour' dans un textbox à l'ouverture du formulaire?</font><br>
+</p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" color="#0000FF" size="2">Private
+  Sub Form1_Load()</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">TextBox1.Text= &quot;bonjour&quot;</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">End
+  Sub</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">-Comment
+  afficher le formulaire Form1 PUIS une message box affichant &quot;Hello&quot;?</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Si
+  on tape:</font><br>
+  </p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" color="#0000FF" size="2">Private
+  Sub Form1_Load(</font></p>
+  <p><font face="Courier New" color="#0000FF" size="2">MsgBox(&quot;hello&quot;)</font></p>
+  <p><font color="#0000FF"><font face="Courier New" size="2" color="#0000FF">End
+  Sub</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">La
+  message box est affichée Avant la fenêtre!! car le formulaire s'affiche
+après Form-Load!!</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+  faut écrire:</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+  <div>
+    <font color="#0000FF" face="Courier New"><font size="2">Private</font><font size="2">
+    Sub Form1_Load</font></font>
+    <p><font color="#0000FF" face="Courier New"><font size="2">Me</font></font><font size="2"><font color="#0000FF" face="Courier New">.Show()
+    </font><font face="Courier New">'affiche la form1</font></p>
+    <p><font color="#0000FF" face="Courier New">MsgBox(</font></font><font size="2" color="#0000FF" face="Courier New">&quot;hello&quot;</font><font size="2"><font color="#0000FF" face="Courier New">)</font><font face="Courier New">'
+    affiche la messagebox</font></p>
+    <p></font><font color="#0000FF"><font size="2" color="#0000FF" face="Courier New">End
+    Sub</font></font></p>
+    <p><font face="Courier New" size="2">Form1 est bien affichée avant la
+    MessageBox.</font></p>
+    <p><font size="2" face="Courier New">Si on met le msgbox dans form_ gotfocus
+    ou form_activated, cela boucle car à la sortie de la msgbox le gotfocus et
+    le activated sont effectués de nouveau.</font>
+    <p>&nbsp;
+    <p><font size="2" face="Courier New">-Comment utiliser le paramètre sender.</font>
+  </div>
+<p><font face="Courier New" size="2">Dans Form_Load par exemple <font color="#0000FF">sender.ForeColor
+</font>n'est pas accepté car sender est un objet.</font></p>
+<p><font face="Courier New" size="2">Pour pouvoir utiliser <font color="#0000FF">ForeColor</font>,
+il faut caster l'objet en Form.</font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">Private Sub
+Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles
+MyBase.Load</font></font></p>
+<p><font face="Courier New" color="#0000FF" size="2">Dim Couleur As New Color
+=CType(sender, Form).ForeColor</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">End Sub</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Méthodes:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On a déjà vu que pour faire apparaître une 
+fenêtre il faut utiliser <font color="#0000FF">.ShowDialog</font> (pour qu'elle 
+soit modale) ou <font color="#0000FF">.Show</font> (pour non modale).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Sachant que <font color="#0000FF">Me</font> 
+indique l'instance ou le code est en train de s'exécuter:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Close()</font> ferme le 
+formulaire.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Activate()</font> 
+l'active s'il est visible</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">M</font><font color="#0000FF">e.Show()</font>&nbsp;
+affiche un formulaire invisible</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Hide()</font>&nbsp; 
+rend la fenêtre invisible.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">System.Windows.Forms.Form</span></b></font><span style="font-family: Courier New; color: #0000FF; background-color:#C0C0C0"><font size="4">&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On se rend compte que quand on dessine une 
+fenêtre Form1 par exemple, VB crée <b>une nouvelle classe 'Class Form1' </b>(Un 
+'moule' à formulaire!!)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Class Form1</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Elle hérite de<b> System.Windows.Forms.Form:
+</b>on voit bien dans le code:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Inherits 
+Systeme.Windows.Forms.Form </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Quand on tape </span>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">Dim</span><span style="font-size: 10.0pt; font-family: Courier New"> 
+f <span style="color: blue">As</span> <span style="color: blue">New</span> 
+Form1(), on crée une instance de la Class Form1. (Un véritable Objet 
+'formulaire')</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les surdoués:</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En VB 2003:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">
+<img border="0" src="vc1-2_3.gif" width="386" height="182">&nbsp;</span></b></p>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b><span style="font-family: Courier New">Quand
+    on regarde le code, il y a:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><b>-du code généré automatiquement par le 
+concepteur Windows Forms&nbsp;</b> et 
+qui crée la fenêtre et ses contrôles.</span></font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">(on peut le voir en cliquant sur le petit
+'+'; en ouvrant la région 'Code généré par le concepteur Windows Form')</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Comme pour toute classe, il y a un 
+constructeur (Sub New) un destructeur (Sub Dispose) et le code pour créer les 
+contrôles contenus dans le formulaire.</span></font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">-les procédures liées aux évènements.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+    <font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">En VB.Net 2005:</font><img border="0" src="v2005.JPG" width="52" height="21"></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">L'onglet Form1.vb contient:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Public</font></font><font face="Courier New"><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font face="Courier New"> Form1</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Public</font>
+<font SIZE="2" COLOR="#0000ff">Sub</font> <font SIZE="2" COLOR="#0000ff">New</font>()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' This 
+call is required by the Windows Form Designer.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">InitializeComponent()&nbsp;&nbsp;&nbsp;
+<font color="#FF0000">'&lt;=======Appel d'une routine qui 'initialise les 
+composants de la form</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' Add 
+any initialization after the InitializeComponent() call.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">La
+classe contient un constructeur (Sub New) qui apelle une&nbsp; routine
+Ititialise Component:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Pour
+voir cette routine</b><b>, </b>il faut passer 
+par le menu de droite<b>:</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vcode2005.JPG" width="663" height="126"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Si on clique sur InitializeComponent, 
+l'onglet <b>Form1.Designer.vb</b> apparaît.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">On a ainsi 
+accès à <font color="#0000FF">InitialiseComponent</font> et à
+<font color="#0000FF">Dispose </font>qui sont dans une <b>classe Partielle de 
+Form1</b>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">(En VB 2005, une Classe peut être 
+'découpée' en Classes partielles)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">C'est ici 
+qu'il est indiqué que la Class hérite de System.Windows.Forms.Form</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Formulaire d'avant 
+plan:</span></font></p>
+<p class="labelproc"><font face="Courier New" size="2">Un formulaire d'avant 
+plan est un formulaire qui reste en avant plan, devant les autres formulaires,&nbsp; 
+même si on ne l'utilise pas.</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour définir au moment 
+de la conception un formulaire en tant que formulaire d'avant-plan d'une 
+application.</b></font></p>
+<ul>
+  <li><font face="Courier New" size="2">Dans la fenêtre <b>Propriétés</b>, 
+  attribuez à la propriété <font color="#0000FF">TopMost</font> la valeur <b>
+  true</b>. </font></li>
+</ul>
+<p class="labelproc"><font face="Courier New" size="2"><b>Pour définir par code 
+un formulaire en tant que formulaire d'avant-plan d'une application.</b></font></p>
+<ul type="disc" style="margin-bottom: 0cm">
+  <li class="MsoNormal"><font face="Courier New" size="2">Dans une procédure, 
+  attribuez à la propriété <b>TopMost</b> la valeur <b>true</b>. </font></li>
+</ul>
+<pre style="text-indent: -18.0pt; font-size: 10.0pt; font-family: Courier New; margin-left: 36.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><span style="font-style: normal; font-variant: normal; font-weight: normal"><font size="2">&nbsp;&nbsp;</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">Me.TopMost = True</span></font></pre>
+<pre style="text-indent: -18.0pt; font-size: 10.0pt; font-family: Courier New; margin-left: 36.0pt; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span class="postbody">Par contre,
+<font color="#0000FF">BringToFront</font> ramène la fenêtre au premier plan 
+temporairement: si l'utilisateur clique sur une autre fenêtre, elle passera au 
+premier plan..</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext">&nbsp;</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:44 GMT -->
+</html>

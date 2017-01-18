@@ -1,0 +1,406 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-2.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net creation de classe Me My MyClass MyBase GUID Shared  singleton</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.2.2</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Création de Classe
+    (Suite).</font></b></td>
+    <td width="9%" height="76"><a href="v5-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#FF0000">
+<span style="font-family: Courier New; font-weight: 700">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Pour la suite de ce 
+chapitre, nous sommes toujours DANS la Classe de l'objet ( et non dans l'application 
+utilisatrice). </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vboit.JPG" width="170" height="114"><b>
+<font face="Courier New" size="2"> DANS la boite.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #CCCCCC">Me
+, My, MyClass, MyBase.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Résumons:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><font color="#0000FF">Me
+</font>c'est l'instance en cours.</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><font color="#0000FF">Me.text
+</font>dans une form, c'est le texte de la barre de titre de la form en cours.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><font color="#0000FF">My
+</font>c'est un moyen rapide d'avoir accès à des classes de l'application, de
+l'ordinateur, des ressources...</font></p>
+<blockquote>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span codeLanguage="VisualBasic"><font color="#0000ff" face="Courier New" size="2">Me.Icon
+  = My.Resources.MyIcon</font></span></p>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">&nbsp;</font></p>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Jouer
+  un son qui est dans les ressources.<span codeLanguage="VisualBasic"><font color="#0000ff"><br>
+  My.Computer.Audio.Play(My.Resources.Form1Greeting, AudioPlayMode.Background)</font></span></font></p>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+</blockquote>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span codeLanguage="VisualBasic"><font face="Courier New" size="2"><font color="#0000ff">MyClasse
+</font><font color="#111111">c'est l'instance en cours. Mais à la différence
+de Me, c'est le méthode de la classe de base (Parente) qui est appelée si
+cette méthode a été substituée.</font></font></span></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><span codeLanguage="VisualBasic"><font color="#0000ff">MyBase
+</font><font color="#111111">c'est la classe parente.</font></span><span codeLanguage="VisualBasic"><br>
+&nbsp;</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>MyBase</b>
+est couramment utilisé pour accéder aux membres de la classe de base qui sont
+substitués ou occultés dans une classe dérivée. <b>MyBase.New</b> permet
+d'appeler explicitement un constructeur de classe de base (parente) d'un
+constructeur de classe dérivé.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #CCCCCC">Propriété
+par défaut</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Default
+</font>sert à indiquer de la propriété est la propriété par défaut.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Créons
+une property par défaut:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Class
+MyClasse</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">Default
+Property MonItem (ByVal iMonParam As Integer) As String</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">..</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">End
+Property</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">End
+Class</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+doit y avoir nécessairement un paramètre.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Maintenant,
+il n'est plus nécessaire d'utiliser le nom de la propriété quand on y accède.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+MyCollection As New MyClasse</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+peut écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MyCollection.MonItem
+(index)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">ou</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">MyCollection(index)&nbsp;&nbsp;&nbsp;
+</font><font size="2" face="Courier New" color="#008000">'MonItem est omis</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Bien
+sur, il ne peut y avoir qu'une seule property par défaut.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-WEIGHT: 700; BACKGROUND-COLOR: #cccccc"><font face="Courier New" color="#0000ff" size="4">Méthode
+de Classe avec Shared:</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">Vous
+pouvez ajouter à votre membre : <b>Shared</b>. Cela signifie que la variable,
+la propriété ou la méthode déclarée comme Shared est <b>partagée par
+toutes les instances de la classe: c'est une méthode de classe.</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<blockquote>
+  <p><font face="Courier New" size="2">Une méthode déclarée dans une classe <b>sans</b>
+  modificateur <b>Shared</b> est appelée <i>méthode d'instance</i>. Une méthode
+  d'instance opère sur une instance donnée.</font></p>
+  <p><font face="Courier New" size="2">Pour une variable non Shared, dans chaque
+  instance la variable a sa valeur propre.&nbsp;</font></p>
+  <p><font face="Courier New" size="2">Une variable Shared est commune à toutes
+  les instances de la Class et même à la Classe elle-même sans avoir besoin
+  de l'instancier. C'est une variable de Classe.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">L'exemple suivant illustre les règles
+d'accès aux membres d'instance et <b>Shared&nbsp;</b>:</font></p>
+<blockquote>
+  <pre class="code"><font face="Courier New" color="#0000ff">Class Test
+   Private _x As Integer
+   <b>Private Shared _y As Integer</b>
+   
+   Sub F()
+      _x = 1 </font><font face="Courier New">' Ok, c'est équivalent à Me._x = 1.</font><font face="Courier New" color="#0000ff">
+      _y = 1 </font><font face="Courier New">' Ok, c'est équivalent à Test._y = 1.</font><font face="Courier New" color="#0000ff">
+   End Sub
+   
+   <b>Shared Sub G()</b>
+      _x = 1 </font><font face="Courier New">' Erreur, on ne peut accéder à Me._x.</font><font face="Courier New" color="#0000ff">
+      _y = 1 </font><font face="Courier New">' Ok, c'est équivalant à Test._y = 1.</font><font face="Courier New" color="#0000ff">
+   End Sub</font></pre>
+  <pre class="code"><font face="Courier New" color="#0000ff">End Class
+   
+   Shared Sub Main()
+      Dim t As New Test()
+      t._x = 1 </font><font face="Courier New">' Ok.</font><font face="Courier New" color="#0000ff">
+      t._y = 1 </font><font face="Courier New">' Ok.</font><font face="Courier New" color="#0000ff">
+      Test._x = 1 </font><font face="Courier New">' Erreur, on accède à x seulement par une instance.</font><font face="Courier New" color="#0000ff">
+      Test._y = 1 </font><font face="Courier New">' Ok  on peut accéder à y avec le nom de la classe car y est shared.</font><font face="Courier New" color="#0000ff">
+   End Sub</font></pre>
+  <p><font face="Courier New" size="2">La méthode&nbsp;</font><font size="2"><code class="ce"><font face="Courier New">F</font></code><font face="Courier New">
+  montre que, dans une fonction d'instance membre, un identificateur peut être
+  utilisé pour accéder à des membres d'instance et à des membres <b>Shared</b>.
+  La méthode&nbsp;</font><code class="ce"><font face="Courier New">G</font></code><font face="Courier New">
+  montre que, dans une fonction membre <b>Shared</b>, il est erroné d'accéder
+  à une instance membre via un identificateur. En d'autres termes dans une méthode
+  Shared on n'a accès qu'au variable Shared. Quant à la méthode </font><code class="ce"><font face="Courier New">Main</font></code></font><font face="Courier New" size="2">,
+  elle montre que, dans une expression d'accès au membre, l'accès aux membres
+  d'instance s'effectue par l'intermédiaire des instances, alors que l'accès
+  aux membres <b>Shared</b> est possible via des types ou des instances.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #CCCCCC">Création d'un compteur d'instance.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Je veux savoir 
+combien il a été crée d'instance de 'Médicament': </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Class MyClasse</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">'Créons une variable commune à toutes les 
+instances&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"> <font color="#0000FF">Private Shared Nb as Integer=0</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">'Le constructeur va l'incrémenter à chaque 
+instanciation:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Nb+=1</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">'Il suffit de lire sa valeur pour savoir le 
+nombre d'objet Medicament :</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Public ReadOnly Property NbInstance()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Get</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+NbInstance=Nb</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; End Get</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Property </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">End
+Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #CCCCCC">Création d'un
+identifiant unique d'instance.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+chaque instance, je veux avoir un identifiant unique, un&nbsp; <b>globally
+unique identifier</b> (GUID).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" size="2" face="Courier New">Private m_ID As System.Guid<br>
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" size="2" face="Courier New">    Sub New()<br>
+&nbsp;&nbsp;&nbsp; m_ID = System.Guid.NewGuid<br>
+    End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple d'identifiant unique:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="COLOR: green"><font face="Courier New" size="2">'0f8fad5b-d9cb-469f-a165-70867728950e</font></span><font face="Courier New" size="2">
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Chaque
+instance ayant un identifiant unique, je peux ainsi 'repérer' les instances (en
+créant une property ReadOnly afin de lire cet identifiant)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#111111" size="2" face="Courier New">Il existe une très faible
+probabilité pour que le nouveau GUID soit égal à zéro ou égal à un autre
+GUID</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<h3><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Singleton</span></font></h3>
+<p><font face="Courier New" size="2">Parfois , on a une classe&nbsp; avec
+laquelle on veut <b>créer une instance et une seule</b>.</font></p>
+<p><font face="Courier New" size="2">Private Sub New()<br>
+New doit-être toujours private pour empêcher d'instancier avec New<br>
+</font></p>
+<p><font face="Courier New" size="2">Un singleton est construit grâce à une méthodes
+de classe&nbsp; nommé 'GetInstance' (sans avoir à instancier).</font></p>
+<p><font face="Courier New" size="2">Shared Function getInstance() As sing<br>
+Cette fonction qui s'appelle toujours getInstance va servir à instancier une
+fois la variable Instance.</font></p>
+<p><font face="Courier New" size="2">Shared instance As sing<br>
+Cette variable est la base du Singleton. Elle s'appelle&nbsp; Instance (par
+convention) elle est du même type que la class et contient l'instance unique.<br>
+<br>
+<br>
+<font COLOR="#0000ff">Public</font> <font COLOR="#0000ff">Class</font> sing</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font COLOR="#008000" size="2" face="Courier New">'Déclaration
+de l'instance Singleton</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Shared</font>
+instance <font COLOR="#0000ff">As</font> sing</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font> <font COLOR="#0000ff">New</font>()</font><font COLOR="#008000" size="2" face="Courier New">'Pas
+oublier de mettre Private&nbsp;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&nbsp;&nbsp;&nbsp;
+MyBase</font>.New()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Shared</font>
+<font COLOR="#0000ff">Function</font> getInstance() <font COLOR="#0000ff">As</font>
+sing </font><font COLOR="#008000" size="2" face="Courier New">'Voici la méthode
+de classe</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">If</font>
+IsNothing(instance) <font COLOR="#0000ff">Then </font></font><font COLOR="#008000" size="2" face="Courier New">'Si
+le singleton n'est pas créé, alors faut le créé</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp;
+instance = <font COLOR="#0000ff">New</font> sing</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">If</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Return</font>
+instance</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Function</font></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">...</p>
+<p style="margin-top: 0; margin-bottom: 0">...</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Class</font></font></p>
+<p><font size="2" face="Courier New">Comment utiliser cette
+Classe?</font></p>
+<p><font face="Courier New" color="#0000FF"><font SIZE="2">Dim t As sing =&nbsp;
+sing.getInstance</font></font></p>
+<p><font size="2" face="Courier New">Remarque:</font></p>
+<p><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Si on fait ensuite <font SIZE="2">Dim t1 As sing =&nbsp;
+sing.getInstance </font>c'est la même instance qui est retournée. On ne peut
+en créer qu'une..</font></p>
+<p><font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">Si
+on écrit&nbsp;</font> <font size="2" face="Courier New"><font color="#0000FF">Dim t As
+New sing&nbsp; </font>:cela plante.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><br>
+</font>On peut ajouter une protection contre les multi thread trop rapide avec<font color="#0000FF"><br>
+SyncLock GetType(sing)</font></font></p>
+<p>&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;Shared
+<code>Function</code> getInstance() As sing</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>If</code>
+IsNothing(instance) <code>Then</code></font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SyncLock
+GetType(sing)</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>If</code>
+IsNothing(instance) <code>Then</code></font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance
+= New sing</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>end</code>
+<code>if</code></font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+SyncLock</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+<code>If</code></font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Return</code>
+instance</font>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+<code>Function</code></font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-2.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

@@ -1,0 +1,595 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basib .Net serialisation</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.8</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Conservation des valeurs; sérialisation.</font></b></td>
+    <td width="14%" height="76"><a href="v5-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">Quand un objet est détruit 
+(fin de programme), les valeurs de ses attributs (les variables) sont perdues!!</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">Si les valeurs de l'objet 
+changent et doivent être retrouvées lors d'une utilisation ultérieure du 
+programme, il faut les enregistrer.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">On pourrait enregistrer chaque 
+attribut dans un fichier séquentiel (FileOpen puis Print..).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">On peut aussi utiliser la 
+sérialisation. </font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">La Sérialisation</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p><font face="Courier New" size="2">La sérialisation est le processus de 
+conversion d'un objet ou d'un groupe d'objets en séquence linéaire d'octets 
+pour stockage ou transmission à un autre emplacement. La désérialisation est le 
+processus consistant à accepter des informations stockées et à recréer des 
+objets à partir de celles-ci.</font></p>
+<p><b><font face="Courier New" size="2">La sérialisation consiste donc à stocker les valeurs des attributs d'une instance 
+d'un objet dans un fichier qui peut être au format binaire, xml ou Soap.</font></b></p>
+<blockquote>
+<p><font face="Courier New" size="2">La <b>sérialisation binaire</b> concerne les <b>champs publics et privés</b> 
+de l'objet et <b>le nom de la classe, y compris l'assembly</b> contenant la 
+classe.</font></p>
+<p><font face="Courier New" size="2">La <b>sérialisation XML</b> ne sérialise <b>que les champs publics</b> <b>et 
+les valeurs des propriétés d'un objet (si elles ne sont pas en lecture seule)</b> 
+dans un flux XML. La sérialisation n'inclut pas d'informations de type. </font> </p>
+</blockquote>
+<p><font face="Courier New" size="2">Lors de la sérialisation, les champs et propriétés sont convertis en un flux 
+d'octets, qui est alors écrit dans un flux de données enregistré sur le disque 
+ou envoyé sur internet.</font></p>
+<p><font face="Courier New" size="2">Lorsque l'objet est ensuite désérialisé,le flux de données venant d'un 
+fichier donne un flux d'octets qui donne une valeur aux champs et propriétés de 
+l'objet, on obtient un objet identique à l'objet d'origine.&nbsp; </font> </p>
+<p><font face="Courier New" size="2">Vous pouvez aussi sérialiser un objet et le transporter sur Internet entre un 
+client et un serveur à l'aide du protocole HTTP. À l'autre extrémité, la désérialisation reconstruit l'objet à partir du flux.</font></p>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="5" color="#0000FF">Exemple 1: Sérialisation binaire.</font></b></span></pre>
+<pre class="code">Créons une mini Classe:</pre>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">&lt;Serializable()&gt; </font> </font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Compta</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF"> 
+Total </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Double</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">
+</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF"> 
+Taux </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Double</font></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">End</font></font><font SIZE="2" color="#0000FF" face="Courier New"> </font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Class</font></p>
+</font>
+<pre class="code"><font face="Courier New">Notons que pour que la classe soit sérialisable , il faut ajouter <font SIZE="2" color="#0000FF">&lt;Serializable()&gt;.</font></font></pre>
+<p><font face="Courier New" size="2">L'attribut <b>Serializable</b> indique donc 
+au compilateur que tout ce que contient la classe peut être conservé dans un 
+fichier. </font>
+</p>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2">L'attribut <b>NonSerialized</b> peut être 
+utilisé pour marquer les membres de la classe qui ne doivent pas être conservés.
+</font>
+</p>
+<p class="labelproc"><font face="Courier New" size="2">Pour empêcher la sérialisation d'un membre 
+Customer par exemple: </font> </p>
+    <p><font face="Courier New" size="2">&nbsp;<font color="#0000FF">&lt;NonSerialized()&gt; Public Customer As String</font></font></p>
+  </blockquote>
+</blockquote>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF">Sérialisation:</font></b></span></pre>
+<pre class="code"><font face="Courier New">Dans le corps du programme, il faut mettre:</font></pre>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> System.IO</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Runtime.Serialization.Formatters.binary</font></p>
+</font>
+<pre class="code"><font face="Courier New">Dans ce cas, vous utilisez un flux de sortie et un formateur binaire pour enregistrer l'objet dans un format binaire.</font></pre>
+<p class="labelproc"><font face="Courier New" size="2">Dans l'entête du module 
+créons une objet MyCompta:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> myCompta </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> Compta</font></p>
+</font><font SIZE="2">
+<p><font face="Courier New">Donnons des valeurs a ses membres.</font></p>
+<p><font color="#0000FF" face="Courier New">myCompta.Taux = 2</font></p>
+<p><font color="#0000FF" face="Courier New">myCompta.Total = 100</font></p>
+<p><font face="Courier New">Si on quitte le programme, les valeurs sont perdues!!! On va donc les 
+enregistrer dans un fichier &quot;compta.bin&quot;</font></p>
+<p><font color="#0000FF" face="Courier New">Dim myFileStream As Stream = File.Create(&quot;Compta.bin&quot;)</font></p>
+<p><font color="#0000FF" face="Courier New">Dim serializer As New BinaryFormatter</font></p>
+<p><font color="#0000FF" face="Courier New">serializer.Serialize(myFileStream, myCompta)</font></p>
+<p><font color="#0000FF" face="Courier New">myFileStream.Close()</font></p>
+<p><font face="Courier New">Et voilà un fichier compta.bin a été crée sur le disque, il contient:</font></p>
+<p><font face="Courier New"><span style="background-color: #CCCCCC">&quot;Bin=&nbsp; ÿÿÿÿ Kserialisation, Version=1.0.1994.38183, Culture=neutral, 
+PublicKeyToken=null serialisation.MaClasse Total Taux Y@ @ &quot;</span></font></p>
+</font>
+<p class="labelproc"><font face="Courier New" size="2">On a bien enregistré les 
+valeurs des variables d'une instance dans un fichier.</font></p>
+<p class="labelproc"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Déserialisation:</font></b></span></p>
+<p class="labelproc"><font face="Courier New" size="2">Lors de la prochaine 
+utilisation du logiciel,on crée de nouveau une instance de Compta:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+myCompta </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> Compta</font></p>
+</font>
+<p class="labelproc"><font face="Courier New" size="2">Il faut ensuite 
+'récupérer' les valeurs de l'instance:</font></p>
+<p class="labelproc"><font face="Courier New" size="2"><b>Dans </b>&nbsp;<b>Form1_Load</b> 
+par exemple: </font> </p>
+  <pre class="code"><font color="#0000FF" face="Courier New">Private Sub Form1_Load()
+    If File.Exists(&quot;Compta.bin&quot;) Then
+        Dim myFileStream As Stream = File.OpenRead(&quot;Compta.bin&quot;)
+        Dim deserializer As New BinaryFormatter()
+        myCompta = CType(deserializer.Deserialize(myFileStream), Compta)
+        myFileStream.Close()
+    End If
+End Sub</font></pre>
+  <p><font face="Courier New" size="2">A noter que vous devez d'abord vérifier que le fichier existe. S'il 
+  existe, créez une classe <b>Stream</b> pour lire le fichier binaire et une 
+  classe <b>BinaryFormatter</b> pour convertir le fichier. La méthode <b>CType</b> 
+  est utilisée pour la conversion du type d'objet Stream en type Compta. </font>
+<p><font face="Courier New" size="2">Ca marche, on retrouve bien
+<font color="#0000FF">MyCompta.Taux=2</font></font></p>
+<p><font face="Courier New" size="2">Bien sur , si on sérialise une nouvelle 
+fois, cela écrase le précédent fichier.</font></p>
+<p>&nbsp;</p>
+<h2 class="dtH2"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Exemple 2: Sérialisation Xml.</font></b></span></h2>
+<p><font face="Courier New" size="2">Pour les applications Web ou les 
+services Web XML, vous souhaiterez peut-être conserver l'objet dans un fichier 
+XML à l'aide d'un format SOAP, ce qui facilite le partage de l'objet.</font></p>
+  <pre class="code"><font face="Courier New">il faut charger dans les références la dll .Net <b>System.Runtime.Serialization.Formatters.Soap.dll</b></font></pre>
+  <pre class="code"><font face="Courier New">Ensuite <font color="#0000FF">Imports System.Runtime.Serialization.Formatters.Soap</font></font></pre>
+  <pre class="code"><code class="ce"><font face="Courier New" color="#0000FF">Dim deserializer As New SoapFormatter</font></code></pre>
+  <font size="2" face="Courier New">Remplacez&nbsp; </font><font size="2"> <code class="ce">
+<font face="Courier New">&quot;SavedCompta.bin&quot;</font></code><font face="Courier New"> 
+  par </font> <code class="ce"><font face="Courier New">&quot;SavedCompta.xml&quot;</font></code></font><font size="2" face="Courier New">.
+</font>
+<p><font face="Courier New" size="2">Cela donne:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.IO</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Runtime.Serialization.Formatters.Soap</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+MyCompta </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+MaClasse</font></p>
+</font>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Sérialisation:</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MyCompta.Taux = 3</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MyCompta.Total = 100</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+myFileStream </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Stream = File.Create(&quot;SaveCompta.xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+serializer </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+SoapFormatter</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">serializer.Serialize(myFileStream, 
+MyCompta)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">myFileStream.Close()</font></p>
+</font>
+<p><font face="Courier New" size="2">Déserialisation:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+myFileStream </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Stream = File.OpenRead(&quot;saveCompta.bin&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+deserializer </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+soapFormatter</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MyCompta = </font></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">CType</font><font SIZE="2"><font color="#0000FF" face="Courier New">(deserializer.Deserialize(myFileStream), 
+MaClasse)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MsgBox(MyCompta.Taux.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">myFileStream.Close()</font></p>
+</font>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si on regarde le fichier SavedCompta.xml (il est dans le répertoire bin) on voit 
+que c'est de l'Xml:</font></p>
+<p style="margin-top: 0; margin-bottom:0"><font face="Courier New" size="2">
+<span style="background-color: #CCCCCC">&lt;SOAP-ENV:Envelope 
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; 
+xmlns:SOAP-ENC=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot; xmlns:SOAP-ENV=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; 
+xmlns:clr=&quot;http://schemas.microsoft.com/soap/encoding/clr/1.0&quot; SOAP-ENV:encodingStyle=&quot;http://schemas.xmlsoap.org/soap/encoding/&quot;&gt;<br>
+&lt;SOAP-ENV:Body&gt;<br>
+&lt;a1:MaClasse id=&quot;ref-1&quot; xmlns:a1=&quot;http://schemas.microsoft.com/clr/nsassem/serialisation/serialisation%2C%20Version%3D1.0.1995.</span></font></p>
+<p style="margin-top: 0; margin-bottom:0"><font face="Courier New" size="2">
+<span style="background-color: #CCCCCC">30938%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull&quot;&gt;<br>
+&lt;Total&gt;100&lt;/Total&gt;<br>
+&lt;Taux&gt;3&lt;/Taux&gt;<br>
+&lt;/a1:MaClasse&gt;<br>
+&lt;/SOAP-ENV:Body&gt;<br>
+&lt;/SOAP-ENV:Envelope&gt;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On se rend compte que la sérialisation binaire produit un fichier plus petit.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Exemple 3: Sérialisation d'une 
+collection:</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On peut sérialiser un objet, on peut donc sérialiser toutes sortes objets (dit 
+serialisable) , une image, une collection, un tableau....</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Une collection est un objet, pour 
+enregistrer son contenu, on peut donc le sérialiser.</font></p>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><font color="#0000FF">Imports System.IO
+Imports System.Collections
+Imports System.Runtime.Serialization.Formatters.Binary
+Imports System.Runtime.Serialization
+
+</font>
+<font color="#0000FF">Module MonModule
+
+    
+</font><font color="#008000">' Creation d'une hashtable contenant des noms et adresses.</font><font color="#0000FF">
+        Public addresses As New Hashtable
+        addresses.Add(&quot;Phil&quot;, &quot;12 grand rue,69872&quot;)
+        addresses.Add(&quot;Bob&quot;, &quot;98 petite rue, 196&quot;)
+        addresses.Add(&quot;Marie&quot;, &quot;BP 89, Paris, 75200&quot;)
+</font></font></pre>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><font color="#0000FF">
+    Sub Serialisation()
+
+       </font><font color="#008000"> </font><font color="#0000FF">
+        </font><font color="#008000">' Pour serialiser la hashtable (et les clé/valeur),  </font><font color="#0000FF">
+        Dim fs As New FileStream(&quot;MesAdresses.dat&quot;, FileMode.Create)
+        Dim formatter As New BinaryFormatter
+        Try
+            formatter.Serialize(fs, addresses)
+        Catch e As SerializationException
+            Console.WriteLine(&quot;Echec serialisation. Cause: &quot; &amp; e.Message)
+            Throw
+        Finally
+            fs.Close()
+        End Try
+    End Sub
+
+
+
+    Sub Deserialisation()
+        </font><font color="#008000">' Declaration de la HashTable.</font><font color="#0000FF">
+        Dim addresses As Hashtable = Nothing
+        Dim fs As New FileStream(&quot;DataFile.dat&quot;, FileMode.Open)
+        Try
+            Dim formatter As New BinaryFormatter
+
+            addresses = DirectCast(formatter.Deserialize(fs), Hashtable)
+        Catch e As SerializationException
+            Console.WriteLine(&quot;Echec de deserialisation. Cause: &quot; &amp; e.Message)
+            Throw
+        Finally
+            fs.Close()
+        End Try
+
+    End Sub
+End Module</font></font></pre>
+<pre class="code" style="DISPLAY: block">&nbsp;</pre>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Exemple 4: Sérialisation d'un 
+tableau:</font></b></span></p>
+<p>&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+MyCompta(10) </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p><font face="Courier New" color="#0000FF">MyCompta(1) = &quot;3&quot;</font></p>
+<p><font face="Courier New" color="#0000FF">MyCompta(2) = &quot;100&quot;</font></p>
+<p><font face="Courier New">Sérialisation:</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+myFileStream </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Stream = File.Create(&quot;SaveCompta.xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+serializer </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+SoapFormatter</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">serializer.Serialize(myFileStream, 
+MyCompta)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">myFileStream.Close()</font></p>
+</font>
+<p><font face="Courier New" size="2">Déserialisation:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+myFileStream </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Stream = File.OpenRead(&quot;saveCompta.xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+deserializer </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+soapFormatter</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MyCompta = </font></font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">DirectCast</font><font SIZE="2" color="#0000FF">(deserializer.Deserialize(myFileStream),
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">())</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">MsgBox(MyCompta(1).ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">myFileStream.Close()</font></p>
+</font>
+<p><font face="Courier New" size="2">Vous avez compris. Seule difficulté: le 
+caste en String().</font></p>
+<p><font face="Courier New" size="2">Bien sur, cela marche avec un tableau à 
+plusieurs dimensions. Voyons les lignes à modifier</font></p>
+<p><font face="Courier New" SIZE="2" COLOR="#0000ff">Private</font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+MyCompta(10,10) </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font face="Courier New" SIZE="2" COLOR="#0000ff">String</font></p>
+<p><font face="Courier New" color="#0000FF" SIZE="2">MyCompta(1,1) = &quot;3&quot;</font></p>
+<p><font face="Courier New" size="2">Dans la déserialisation:</font></p>
+<p><font color="#0000FF" face="Courier New" SIZE="2">MyCompta = </font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">DirectCast</font><font SIZE="2" color="#0000FF">(deserializer.Deserialize(myFileStream),
+</font><b><font SIZE="2" COLOR="#0000ff">String</font></b></font><font color="#0000FF" face="Courier New" SIZE="2"><b>(,)</b>)</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Exemple 5: Sérialisation d'une 
+collection généric</font></b></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ici nous enregistrons les données dans un 
+fichier XML nommé </font>
+<font face="Courier New" size="2" color="#0000FF">&quot;Meslivres.Xml&quot; </font>
+<font face="Courier New" size="2">(il sera dans le répertoire bin/Debug lors de 
+la conception, et dans le répertoire de l'exécutable si on installe le 
+logiciel). </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Les Sub SaveData et LoadData ont en paramètre 
+un type de collection généric list( Of&nbsp; ClasseLivre) C'est une collection 
+d'objets typés&nbsp; ClasseLivre .Ce paramètre est passé avec ByRef . </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">(Pour l'exemple complet voir le chapitre 
+architecture)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports 
+System.Xml.Serialization</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Imports System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Public Class AccesAuxDonnees</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public <b>Sub SaveData</b>(ByVal list 
+As Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Déclaration</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim serialXML As 
+Xml.Serialization.XmlSerializer = Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim streamIO As StreamWriter = 
+Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML = New 
+Xml.Serialization.XmlSerializer(GetType(Collections.Generic.List(Of ClasseLivre)))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Ouverture d'un flux en 
+écriture sur le fichier XML des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO = New StreamWriter(&quot;Meslivres.Xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Sérialisation de la liste 
+des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML.Serialize(streamIO, 
+list)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Catch ex As Exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Propagrer l'exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Throw ex</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Finally</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' En cas d'erreur, n'oublier 
+pas de fermer le flux en écriture si ce dernier est toujours ouvert</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If streamIO IsNot Nothing Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public <b>Sub LoadData</b>(ByRef list 
+As Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Déclaration</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim streamIO As StreamReader = 
+Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim serialXML As 
+Xml.Serialization.XmlSerializer = Nothing</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Tester l'existance du 
+fichier</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If System.IO.File.Exists(&quot;Meslivres.Xml&quot;) 
+= True Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">serialXML = New 
+Xml.Serialization.XmlSerializer(GetType(Collections.Generic.List(Of ClasseLivre)))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Ouverture d'un flux en 
+lecture sur le fichier XML des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO = New StreamReader(&quot;Meslivres.Xml&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Désérialisation de la liste 
+des contacts</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">list = CType(serialXML.Deserialize(streamIO), 
+Collections.Generic.List(Of ClasseLivre))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Catch ex As Exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' Propagrer l'exception</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Throw ex</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Finally</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">' En cas d'erreur, n'oublier 
+pas de fermer le flux en lecture si ce dernier est toujours ouvert</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">If streamIO IsNot Nothing Then</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">streamIO.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Try</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">End Class</font></b></p>
+<p><font face="Courier New" size="2">Voila ce que donne le fichier XMl:</font></p>
+<p><font face="Courier New" size="2" color="#008000">&lt;?xml version=&quot;1.0&quot; 
+encoding=&quot;utf-8&quot;?&gt;<br>
+&lt;ArrayOfClasseLivre xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;<br>
+&lt;ClasseLivre&gt;<br>
+&lt;Titre&gt;Livre1&lt;/Titre&gt;<br>
+&lt;Auteur&gt;Auteur1&lt;/Auteur&gt;<br>
+&lt;/ClasseLivre&gt;<br>
+&lt;ClasseLivre&gt;<br>
+&lt;Titre&gt;Livre2&lt;/Titre&gt;<br>
+&lt;Auteur&gt;Auteur2&lt;/Auteur&gt;<br>
+&lt;/ClasseLivre&gt;<br>
+&lt;ClasseLivre&gt;<br>
+&lt;Titre&gt;Titre3&lt;/Titre&gt;<br>
+&lt;Auteur&gt;Auteur3&lt;/Auteur&gt;<br>
+&lt;/ClasseLivre&gt;<br>
+&lt;/ArrayOfClasseLivre&gt;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

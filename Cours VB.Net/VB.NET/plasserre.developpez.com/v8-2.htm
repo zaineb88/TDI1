@@ -1,0 +1,738 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net code généré par vb</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v8-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Comprendre le code crée 
+    par VB.</font></b></td>
+    <td width="14%" height="76"><a href="v8-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Comprendre le code généré 
+automatiquement par Vb quand on crée une formulaire ou un contrôle</span></b></font><font color="#800080"><span style="font-size: 10.0pt; font-family: Courier New">.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Code généré 
+automatiquement lors de la création d'un formulaire ou d'un contrôle</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">. </span></font></p>
+<p><font face="Courier New" size="2">Une application&nbsp; 'Windows Forms' est 
+principalement constituée de <b>formulaires</b> (ou fenêtre), de <b>contrôles</b> et de leurs 
+<b>événements</b>. 
+</font> </p>
+<p><font face="Courier New" size="2">Effectivement, pendant la création de 
+l'interface utilisateur de votre application, vous 
+créez généralement une fenêtre contenant des contrôles et des procédures 
+évènements.</font></p>
+<p><font face="Courier New" size="2">Quand vous créer un nouveau projet 'Windows 
+Forms' cela dessine un formulaire, une fenêtre vide&nbsp; et le code 
+correspondant. Ajoutons y un bouton cela donne l'interface utilisateur suivante:</font></p>
+<p align="center"><font face="Courier New" size="2">&nbsp;</font><img border="0" src="vc1-2_2.gif" width="347" height="159"></p>
+<p align="center">&nbsp;</p>
+<p><font face="Courier New" size="2">Comme on l'a&nbsp; vu, VB crée le code 
+correspondant et dans ce code une Classe correspondant à la fenêtre</font></p>
+<p><font face="Courier New" size="2">Décortiquons le code:</font></p>
+<p><font face="Courier New" size="2">Vb crée une Class nommé Form1, elle est 
+public (accessible partout)</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Public<font SIZE="2" color="#0000FF">
+</font>Class</font><font color="#0000FF" face="Courier New" SIZE="2"> Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><b>En VB.Net
+<span style="background-color: #0000FF"><font color="#FFFFFF">2003</font></span>:</b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">L'onglet Form1.vb contient la Class.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette Classe 
+hérite des propriétés de la Classe Form (celle ci est fournis par le Framework)</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Inherits</font><font color="#0000FF" face="Courier New" SIZE="2"> 
+System.Windows.Forms.Form</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center"><img border="0" src="vc1-2_3.gif" width="386" height="182"></p>
+</font>
+<p><font face="Courier New" size="2">(On rappelle que la véritable fenêtre, 
+l'objet&nbsp;sera instancié à partir de cette classe)</font></p>
+<font SIZE="2" COLOR="#0000ff">
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Ensuite il y 
+a une région (partie du code que l'on peut 'contracter' et ne pas voir ou 
+'dérouler'; Cette région contient :</font><b><font face="Courier New" SIZE="2">&quot; 
+Le Code généré (automatiquement) par le Concepteur Windows Form &quot;, si on le 
+déroule en cliquant sur le '+', on voit:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp;
+</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">-Le <b>
+  constructeur de la fenêtre</b>: la routine <font color="#0000FF">Sub New</font></font></p>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" color="#0000FF">MyBase </font>
+    <font face="Courier New">fait référence à la classe de base,</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+    <font color="#0000FF">MyBase.New</font> appelle le constructeur de la classe 
+    de base (Form dans notre cas)</font></p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+-Le <b>destructeur&nbsp; de la fenêtre</b>: la routine <font color="#0000FF">Sub 
+Dispose</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">-Le <b>
+  créateur des contrôles</b> de la fenêtre: la procédure</font><font face="Courier New" color="#0000FF"> 
+  Sub InitializeComponent</font></p>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Elle est 
+    nécessaire pour créer les contrôles et définir les propriétés de ces 
+    contrôles: </font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple 
+    : création d'un label </font><font face="Courier New" color="#0000FF">
+    Me.Label1= NewSystem.Windows.forms.Label</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+    Modification d'une propriété:</font><font face="Courier New" color="#0000FF">Me.Label.Text=&quot;Hello&quot;</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Elle 
+    définie aussi les propriétés du formulaire:</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">
+    <font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font color="#0000FF" face="Courier New" SIZE="2">.Name 
+    = &quot;Form1&quot;</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple d'un 
+formulaire vide nommé Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Public<font SIZE="2" color="#0000FF"> </font>Class</font><font color="#0000FF" face="Courier New" SIZE="2"> 
+Form1</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Inherits</font><font color="#0000FF" face="Courier New" SIZE="2"> 
+System.Windows.Forms.Form</font></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#FF00FF" face="Courier New">#</font></font><font SIZE="2" COLOR="#FF00FF" face="Courier New">Region</font><font SIZE="2"><font color="#FF00FF" face="Courier New"> 
+&quot; Code généré par le Concepteur Windows Form &quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><b>
+<font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></b></font><font SIZE="2"><font color="#0000FF" face="Courier New">()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">MyBase</font><font SIZE="2"><font color="#0000FF" face="Courier New">.New()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'Cet appel est requis par le 
+Concepteur Windows Form.</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">InitializeComponent()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'Ajoutez une initialisation 
+quelconque après l'appel InitializeComponent()</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font></b><font SIZE="2" COLOR="#0000ff"><b><font face="Courier New">Sub</font></b></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'La méthode substituée Dispose 
+du formulaire pour nettoyer la liste des composants.</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#008000" face="Courier New">Protected Overloads Overrides 
+Sub</font></b></font><font face="Courier New"><font SIZE="2" color="#008000"><b> 
+Dispose</b></font><font SIZE="2" COLOR="#0000ff"><font SIZE="2" color="#0000FF">(</font>ByVal<font SIZE="2" color="#0000FF"> 
+disposing </font>As<font SIZE="2" color="#0000FF"> </font>Boolean</font></font><font SIZE="2" COLOR="#0000ff"><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+disposing </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> 
+(components </font><font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Nothing</font><font SIZE="2" color="#0000FF">)
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">components.Dispose()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">MyBase</font><font SIZE="2"><font color="#0000FF" face="Courier New">.Dispose(disposing)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#008000" face="Courier New">End </font></b>
+<font SIZE="2" COLOR="#008000"><b><font face="Courier New">Sub</font></b></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'Requis par le Concepteur 
+Windows Form</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font></font>
+<font SIZE="2" face="Courier New" color="#0000FF">Private components As</font><font SIZE="2" COLOR="#0000ff"><font SIZE="2"><font face="Courier New"> 
+System.ComponentModel.IContainer</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"></font></font>
+<font SIZE="2" COLOR="#0000ff">
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'REMARQUE&nbsp;: la procédure 
+suivante est requise par le Concepteur Windows Form</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'Elle peut être modifiée en 
+utilisant le Concepteur Windows Form. </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF"><font face="Courier New">'Ne la modifiez pas en 
+utilisant l'éditeur de code.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&lt;System.Diagnostics.DebuggerStepThrough()&gt;
+</font></font><b><font SIZE="2" COLOR="#FF0000" face="Courier New">Private Sub</font></b><font SIZE="2"><b><font color="#FF0000" face="Courier New"> 
+InitializeComponent()</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'Form1</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000FF" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2" color="#0000FF">.AutoScaleBaseSize 
+= </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+System.Drawing.Size(5, 13)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2" color="#0000FF">.ClientSize 
+= </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+System.Drawing.Size(292, 266)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font color="#0000FF" face="Courier New">.Name 
+= &quot;Form1&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font color="#0000FF" face="Courier New">.Text 
+= &quot;Form1&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#FF0000" face="Courier New">End </font></b>
+<font SIZE="2" COLOR="#FF0000"><b><font face="Courier New">Sub</font></b></p>
+</font><font SIZE="2" color="#FF00FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">#</font></font><font SIZE="2" COLOR="#FF00FF" face="Courier New">End
+</font><font SIZE="2" COLOR="#FF00FF"><font face="Courier New">Region</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">End Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font></font><font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0">Si dans la fenêtre Design&nbsp; <b>on 
+ajoute un bouton Button1</b> cela ajoute </font><font SIZE="2">
+<font face="Courier New">le code:</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New" SIZE="2"><font SIZE="2">Cette ligne contenant
+<font color="#0000FF">WithEvents</font></font><font SIZE="2" COLOR="#0000ff">
+</font><font SIZE="2">indique qu'il y a une gestion d'évènement sur les boutons.</font></font><font SIZE="2" COLOR="#0000ff"><font SIZE="2"></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Friend<font SIZE="2">
+</font>WithEvents<font SIZE="2"> Button1 </font>As</font><font face="Courier New" SIZE="2"> 
+System.Windows.Forms.Button</font></p>
+</font></font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Puis dans</font> <font SIZE="2" COLOR="#0000ff">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Sub</font><font face="Courier New" SIZE="2"> 
+InitializeComponent()</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette ligne 
+créée le bouton.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Me<font SIZE="2">.Button1 = </font>New</font><font face="Courier New" SIZE="2"> 
+System.Windows.Forms.Button</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette ligne 
+le positionne:</font></p>
+<font SIZE="2" COLOR="#0000ff"><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1.Location =
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font face="Courier New" SIZE="2"> 
+System.Drawing.Point(56, 144)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette ligne 
+lui donne un nom.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font face="Courier New" SIZE="2">.Button1.Name 
+= &quot;Button1&quot;</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette ligne 
+détermine sa taille</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Me<font SIZE="2">.Button1.Size 
+= </font>New</font><font SIZE="2"><font face="Courier New"> System.Drawing.Size(104, 
+24)</font></p>
+</font></font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Cette ligne 
+indique ce qui est affiché sur le bouton</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.Button1.Text 
+= &quot;Button1&quot;</font></p>
+</font></font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Cela donne:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2"> 
+components </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New"> 
+System.ComponentModel.IContainer</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New">Friend<font SIZE="2">
+</font>WithEvents<font SIZE="2"> Button1 </font>As</font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Windows.Forms.Button</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&lt;System.Diagnostics.DebuggerStepThrough()&gt;
+</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font></font><font SIZE="2"><font face="Courier New"> 
+InitializeComponent()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1 = </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Windows.Forms.Button</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New">.SuspendLayout()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" face="Courier New">'Button1</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" face="Courier New">'</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1.Location =
+</font><font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Drawing.Point(56, 144)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.Name 
+= &quot;Button1&quot;</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1.Size = </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Drawing.Size(104, 24)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.TabIndex 
+= 0</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.Text 
+= &quot;Button1&quot;</font></b></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><b>En VB.Net 2005:<img border="0" src="v2005.JPG" width="52" height="21"></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">L'onglet Form1.vb contient:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Public</font></font><font face="Courier New"><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font face="Courier New"> Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> Form1_Load(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">MyBase</font></font><font SIZE="2"><font face="Courier New">.Load</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Public</font>
+<font SIZE="2" COLOR="#0000ff">Sub</font> <font SIZE="2" COLOR="#0000ff">New</font>()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' This 
+call is required by the Windows Form Designer.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">InitializeComponent()&nbsp;&nbsp;&nbsp;
+<font color="#FF0000">'&lt;=======Appel d'une routine qui 'initialise les 
+composants de la form</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' Add 
+any initialization after the InitializeComponent() call.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Protected</font> <font SIZE="2" COLOR="#0000ff">Overrides</font>
+<font SIZE="2" COLOR="#0000ff">Sub</font> Finalize()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">MyBase</font>.Finalize()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Private</font> <font SIZE="2" COLOR="#0000ff">Sub</font> Label1_Click(<font SIZE="2" COLOR="#0000ff">ByVal</font> 
+sender <font SIZE="2" COLOR="#0000ff">As</font> System.Object,
+<font SIZE="2" COLOR="#0000ff">ByVal</font> e <font SIZE="2" COLOR="#0000ff">As</font> 
+System.EventArgs) <font SIZE="2" COLOR="#0000ff">Handles</font> Label1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" SIZE="2"><b>
+Le Code généré par le 'Concepteur Windows Form' est par contre caché, </b>il 
+n'apparaît pas dans la Class Form1<b>, </b>il faut pour y avoir accès, passer 
+par le menu de droite<b>:</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vcode2005.JPG" width="663" height="126"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Si on clique sur InitializeComponent, 
+l'onglet <b>Form1.Designer.vb</b> apparaît.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">On a ainsi 
+accès à <font color="#0000FF">InitialiseComponent</font> et à
+<font color="#0000FF">Dispose </font>qui sont dans une <b>classe Partielle de 
+Form1</b>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">(En VB 2005, une Classe peut être 
+'découpée' en Classes partielles)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">C'est ici 
+qu'il est indiqué que la Class hérite de System.Windows.Forms.Form</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple du 
+contenu de Dispose et ItinialiseComponent:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Partial</font></font><font face="Courier New"><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Class</font></font><font SIZE="2"><font face="Courier New"> Form1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Inherits</font><font SIZE="2"><font face="Courier New"> 
+System.Windows.Forms.Form</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Form overrides dispose to clean up the component 
+list.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&lt;System.Diagnostics.DebuggerNonUserCode()&gt; 
+_</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Protected</font> <font SIZE="2" COLOR="#0000ff">Overloads</font>
+<font SIZE="2" COLOR="#0000ff">Overrides</font> <font SIZE="2" COLOR="#0000ff">
+Sub</font> <b>Dispose</b>(<font SIZE="2" COLOR="#0000ff">ByVal</font> disposing
+<font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Boolean</font>)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font> 
+disposing <font SIZE="2" COLOR="#0000ff">AndAlso</font> components
+<font SIZE="2" COLOR="#0000ff">IsNot</font> <font SIZE="2" COLOR="#0000ff">
+Nothing</font> </font> <font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">components.Dispose()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">MyBase</font>.Dispose(disposing)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'Required 
+by the Windows Form Designer</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Private</font> components <font SIZE="2" COLOR="#0000ff">As</font> 
+System.ComponentModel.IContainer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'NOTE: 
+The following procedure is required by the Windows Form Designer</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'It 
+can be modified using the Windows Form Designer. </p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'Do 
+not modify it using the code editor.</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&lt;System.Diagnostics.DebuggerStepThrough()&gt; 
+_</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+Private</font> <font SIZE="2" COLOR="#0000ff">Sub</font> <b>InitializeComponent</b>()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1 
+= <font SIZE="2" COLOR="#0000ff">New</font> System.Windows.Forms.Button</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Label1 
+= <font SIZE="2" COLOR="#0000ff">New</font> System.Windows.Forms.Label</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.SuspendLayout()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">
+'Button1</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.FlatStyle 
+= System.Windows.Forms.FlatStyle.System</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.Location 
+= <font SIZE="2" COLOR="#0000ff">New</font> System.Drawing.Point(47, 38)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.Name 
+= </font> <font SIZE="2" COLOR="#800000"><font face="Courier New">&quot;Button1&quot;</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.Size 
+= <font SIZE="2" COLOR="#0000ff">New</font> System.Drawing.Size(177, 42)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.TabIndex 
+= 0</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font>.Button1.Text 
+= <font SIZE="2" COLOR="#800000">&quot;Button1&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#800000" face="Courier New">...</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Pour VB.Net 2003 et 2005:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><b>Les 
+procédures évènements</b> correspondant au formulaire par exemple sont automatiquement créées:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private<font SIZE="2"> </font>Sub<font SIZE="2"> 
+Form1_Load(</font>ByVal<font SIZE="2"> sender </font>As<font SIZE="2"> 
+System.Object, </font>ByVal<font SIZE="2"> e </font>As<font SIZE="2"> 
+System.EventArgs) </font>Handles<font SIZE="2"> </font>MyBase</font><font SIZE="2"><font face="Courier New">.Load</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+</font><font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT"><b>Attention :</b> Form1_Load&nbsp; est un nom de Sub donné par 
+VB, mais cela pourrait être n'importe quoi, ce qui indique l'évènement 
+déclencheur est ce qui est après <font color="#0000FF">Handles</font> ( 
+MyBase.Load ici).</p>
+<p ALIGN="LEFT">Les 2 paramètres sont:</p>
+<p ALIGN="LEFT"><font color="#0000FF">sender</font> l'objet à la source de 
+l'événement (l'objet quia déclenché l'évènement: ici la form)</p>
+<p ALIGN="LEFT"><font color="#0000FF">e</font> un objet <i>EventArgs </i>qui 
+détaille l'événement qui s'est produit et fournissant des informations sur cet 
+évènement.</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#FF0000">On constate qu'il y a une liaison entre 
+la fenêtre Design et le code généré; on pourrait modifier dans le code 
+l'interface utilisateur. <b>C'est déconseillé d'aller trafiquer dans cette zone
+</b></font></font><font SIZE="2" COLOR="#0000ff">
+<font color="#FF0000" face="Courier New" SIZE="2"><b>de &quot;Code généré par le 
+Concepteur Windows Form </b>&quot;, il faut mieux faire des modifications dans la 
+partie design et dans la fenêtre de propriété.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Substitution de 
+procédures évènement:</span></font></span></p>
+<p><a name="Events">
+  <br>
+</a>
+<font face="Courier New" size="2">Il est possible de substituer une 
+méthode (utiliser sa propre méthode à la place de la méthode normale qui existe 
+normalement dans un contrôle)</font></p>
+<p><b><font face="Courier New" size="2">Exemple 1 créer un contrôle simple affichant 
+toujours 'Bonjour'</font></b></p>
+<p><font face="Courier New" size="2">Il faut créer une classe héritant des 
+'Control', détourner son évènement <font color="#0000FF">OnPaint</font>&nbsp;qui 
+dessine le contrôle ( avec <font color="#0000FF">
+Overides</font>) Dans la nouvelle procédure <font color="#0000FF">On Paint</font> simplement afficher 'Bonjour'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Public Class 
+ControleAffichantBonjour</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Inherits Control</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Overrides Protected Sub 
+OnPaint ( e As PaintEventArgs )</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+e.Graphics.DrawString (&quot;Bonjour&quot;, Font, new SolidBrush(ForeColor)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Cet exemple ne sert strictement à rien!! Pour une fois!!</font></p>
+<p><font face="Courier New" size="2">Il est aussi possible de détourner des 
+évènements.</font></p>
+<p><font face="Courier New" size="2">Dans le chapitre '<a href="v4-11.htm">Impression'</a> 
+il y a un bel exemple de création de &quot;lien&quot; entre un objet&nbsp; printdocument et la 
+routine évènement PrintPage (imprimer hello avec un printdocument)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="2">Exemple 
+2 créer un bouton personalisé.</font></b></p>
+<font size="2">
+<p><font face="Courier New">1</font><font face="Courier New" size="2">-Il faut 
+créer une classe qui hérite de Button:</font></p>
+</font><font color="#0000ff" size="2">
+<p><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">Public</span></font></font><font color="#0000ff" size="2" face="Courier New"><span style="BACKGROUND-COLOR: #ffffff">
+</span><span style="BACKGROUND-COLOR: #ffffff">Class</span></font><font size="2"><font face="Courier New" color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">
+<b>MonBouton</b></span></font></p>
+<p></font><font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Inherits</span></font><font color="#0000ff" size="2"><font face="Courier New"><span style="BACKGROUND-COLOR: #ffffff"> 
+System.Windows.Forms.<b>Button</b></span></font></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Class</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Le 'Design' devient:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">
+<img src="v5-3.h2.gif" border="0" width="83" height="35"></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+2-Il faut modifier l'aspect graphique du bouton:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour cela si vous voulez modifier l’apparence du contrôle, il faut remplacer la 
+méthode OnPaint de Button par la votre(celle-ci dessine le contrôle). Au sein de 
+cette méthode, vous devez appeler la méthode OnPaint de la base (de la classe 
+mère), puis&nbsp; ajouter vos propres fonctions de dessin.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Il faut donc ajouter dans la classe, la procédure: </font></p>
+<font color="#0000ff" size="2">
+<p><font face="Courier New">Protected</font></font><font color="#0000ff" size="2" face="Courier New"> 
+Overrides Sub OnPaint(ByVal e As</font><font size="2"><font face="Courier New" color="#0000ff"> 
+PaintEventArgs)</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">MyBase.OnPaint(e)
+</font><font size="2"><font face="Courier New">'Appel à la méthode de la classe 
+de base, ce qui dessine le bouton</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">Dim myPen As New</font><font size="2"><font face="Courier New" color="#0000ff"> 
+Pen(Color.Purple, 3)</font></p>
+<p><font face="Courier New" color="#0000ff">e.Graphics.DrawRectangle(myPen, 3, 
+3, </font></font><font color="#0000ff" size="2" face="Courier New">Me.Width - 6, 
+Me</font><font size="2"><font face="Courier New" color="#0000ff">.Height - 6)
+</font><font face="Courier New">'Ajoute un cadre sur le dessin du bouton</font></p>
+<p></font><font color="#0000ff" size="2" face="Courier New">End </font>
+<font color="#0000ff" size="2"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+On rappelle que l'argument e&nbsp; est le graphique du bouton.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Dans le chapitre 
+suivant on va utiliser ces connaissances pour, dans le code, créer soi-même des 
+contrôles et leurs évènements.</span></font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-3.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+</html>

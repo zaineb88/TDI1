@@ -1,0 +1,742 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-30.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">&nbsp;</font></b><a href="v3-29.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.30</font></b></td>
+    <td width="47%" height="76" align="center"><p><b>
+    <font face="Courier New" size="6" color="#800080">Programmation fonctionnelle: l'IMC.</font></b></td>
+    <td width="14%" height="76"><a href="v3-31.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vfonction.JPG" width="128" height="71"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" face="Courier New">Ce 
+chapitre permet de 'réviser' pas mal de notion. </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Qu'est ce que l'IMC?</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">L'index de masse corporelle est très 
+utilisé par les médecins. Il est calculé à partir du poids et de la taille:
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">IMC=Poids/(Taille*Taille)&nbsp; (avec Poids 
+en Kg, Taille en mètres)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Cela permet de savoir si le sujet est 
+ 
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">maigre (IMC&lt;18.5) </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">normal (IMC idéale=22)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">en surpoids (IMC&gt;25) </span>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">obèse (IMC&gt;30).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut calculer le poids 
+idéal par exemple PI= 22* T*T</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Nous allons détailler ce petit 
+programme:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Quel est le cahier des charges du 
+programme?</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">L'utilisateur doit pouvoir:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Saisir un poids, une taille, cliquer sur un 
+bouton 'Calculer'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Les routines doivent:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Vérifier que l'utilisateur ne fait pas 
+n'importe quoi.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Calculer et afficher les résultats: l'IMC mais 
+aussi, en fonction de la taille, le poids idéal, les poids limites de maigreur, 
+surpoids, obésité.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #C0C0C0">Création de l'interface</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut <b>2 zones de saisie</b> pour saisir 
+le poids et la taille:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On crée 2 'TextBox' que l'on nomme </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>TexBoxPoids&nbsp; </b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>TextBoxTaille.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On laisse la propriété<b> Multiline</b> à<b> 
+False </b>&nbsp;pour n'avoir qu'une ligne de saisie.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour afficher les résultats , on crée 5 
+'label' les uns sous les autres. (Pour aller plus vite et que les labels soient 
+de la même taille, on en crée un puis par un copier et des coller, 
+on crée les autres)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>labelImc </b>&nbsp;&nbsp; 'pour afficher l'Imc</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>labelPi</b>&nbsp;&nbsp;&nbsp;&nbsp; 'pour 
+afficher le poids idéal</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>labelM</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'pour afficher le poids limite de la maigreur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>labelS</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'pour afficher le poids limite du surpoids</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>labelO</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'pour afficher le poids limite de l'obésité.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ensuite&nbsp; on ajoute <b>des labels</b> 
+devant et derrière chaque TextBox&nbsp; pour indiquer devant, ce qu'ils 
+contiennent et derrière, l'unité.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On ajoute 2 boutons:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>
+ButtonCalcul </b>ayant pour propriété Text= &quot;&amp;Calculer&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">ButtonQuitter </font></b>
+<font face="Courier New" size="2">ayant pour propriété Text= &quot;&amp;Quitter&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela donne:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vimc1.GIF" width="391" height="301"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Pour faire beau:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La propriété Text de la fenêtre contient 
+&quot;Calcul IMC&quot;, pour afficher cela dans la barre de titre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La propriété ForeColor de labelImc est en 
+rouge.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La propriété BorderStyle des labels a la 
+valeur 'Fixed3d' ce qui rend les bords visibles.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #C0C0C0">Ajout du Code</span></font></b></p>
+<font SIZE="2" face="Courier New">
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">La procédure évènement
+<font color="#0000FF">Form1_Load</font> qui se déclenche lorsque la fenêtre se 
+charge <b>initialise</b> les zones d'affichage en les vidant:</p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">Private</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> Form1_Load(..)</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+  TextBoxTaille.Text = &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+  TextBoxPoids.Text = &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelImc.Text 
+  = &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelPi.Text 
+  = &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelM.Text = 
+  &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelS.Text = 
+  &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelO.Text = 
+  &quot;&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Sub</p>
+</blockquote>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">La procédure <font color="#0000FF">
+ButtonCalcul_Click</font> qui se déclenche lorsque l'utilisateur clique sur le 
+bouton 'Calculer' contient le code principal.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">Voici la totalité du code, on le 
+détaillera dessous.</p>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">Private</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2">
+  <font color="#0000FF">ButtonCalcul_Click(..)</font></font></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2">
+  <font color="#0000FF">sPoids</font> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#008000">&nbsp;'Variable Single contenant le poids</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> <font color="#0000FF">
+  sTaille </font></font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#008000">'Variable Single contenant la taille</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#008000">
+  '******Controle de validité des entrées************</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#008000">'Les valeurs saisies sont-elles numérique?</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+  <font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> (IsNumeric(TextBoxTaille.Text))
+  </font><font SIZE="2" COLOR="#0000ff">Then</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  MsgBox(&quot;Entrez une valeur numérique pour la taille&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Exit</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">If</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+  <font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> (IsNumeric(TextBoxPoids.Text))
+  </font><font SIZE="2" COLOR="#0000ff">Then</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  MsgBox(&quot;Entrez une valeur numérique pour le poids&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Exit</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">If</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#008000">
+  'Convertir les textes saisis en single </p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#008000">' et les mettre dans les variables</p>
+  </font><font SIZE="2" color="#0000FF">
+  <p style="margin-top: 0; margin-bottom: 0">sTaille = </font>
+  <font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(TextBoxTaille.Text,
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"><font color="#0000FF">) 
+  / 100</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">sPoids =
+  </font></font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(TextBoxPoids.Text,
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"><font color="#0000FF">)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#008000">'Les 
+  valeurs saisies sont-elles cohérentes?</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+  sTaille &lt; 0.50 </font><font SIZE="2" COLOR="#0000ff">Or</font><font SIZE="2" color="#0000FF"> 
+  sTaille &gt; 2.50 </font><font SIZE="2" COLOR="#0000ff">Then</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  MsgBox(&quot;Entrez une taille valide&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Exit</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">If</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; If</font><font SIZE="2" color="#0000FF"> 
+  sPoids &lt; 20 </font><font SIZE="2" COLOR="#0000ff">Or</font><font SIZE="2" color="#0000FF"> 
+  sPoids &gt; 200 </font><font SIZE="2" COLOR="#0000ff">Then</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+  MsgBox(&quot;Entrez un poids valide&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">Exit</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">Sub</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">If</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#008000">
+  'Effectuer les calculs et afficher les résultats.</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelImc.Text 
+  = (Math.Round(sPoids / (sTaille * sTaille), 2)).ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelPi.Text 
+  = (Math.Round(22 * (sTaille * sTaille), 2)).ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelM.Text = 
+  (Math.Round(18.5 * (sTaille * sTaille), 2)).ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelS.Text = 
+  (Math.Round(25 * (sTaille * sTaille), 2)).ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">LabelO.Text = 
+  (Math.Round(30 * (sTaille * sTaille), 2)).ToString</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">Sub</p>
+</blockquote>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF; font-weight:700">Détaillons:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Quelles sont les différentes étapes?</span></p>
+<blockquote>
+<p style="margin-top: 2; margin-bottom: 0">
+On déclare les variables.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On vérifie que ce qui a été tapé est 
+numérique.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On convertit le texte qui est dans la 
+TextBox en Single</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On teste si les valeurs de poids et 
+taille sont cohérentes.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On fait le calcul et on affiche. </span></p>
+</blockquote>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><b>Déclaration de variables.</b></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2">
+  <font color="#0000FF">sPoids</font> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> </font>
+  <font color="#008000">&nbsp;'</font><font SIZE="2" COLOR="#008000">Variable 
+  Single contenant le poids</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> <font color="#0000FF">
+  sTaille </font></font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+  </font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#008000">'Variable Single contenant la taille</p>
+  </font>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;Ce sont des variables 'privées' 
+propre à la procédure (utilisation de Dim ou Private).</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><b>Contrôle de validité:</b></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">L'utilisateur est sensé taper un 
+poids et une taille puis cliquer sur le bouton 'Calculer'. Mais <b>il ne faut 
+absolument pas lui faire confiance</b>: il a peut-être oublié de taper le poids 
+ou a donner une taille=0 (l'ordinateur n'aime pas diviser par 0!!), il a 
+peut-être fait une faute de frappe et tapé du texte!!..</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Donc il faut tester ce qui a été tapé, 
+s'il y a erreur, on prévient l'utilisateur avec une 'MessageBox' puis on sort de 
+la routine par (Exit Sub )sans effectuer de calcul.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Ici par exemple, on teste si le texte saisi dans 
+la zone taille n'est pas numérique:</span></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> (IsNumeric(TextBoxTaille.Text))
+</font><font SIZE="2" COLOR="#0000ff">Then</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+MsgBox(&quot;Entrez une valeur numérique pour la taille&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Exit</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">If</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><b>Amélioration:</b> On aurait pu 
+automatiquement effacer la valeur erronée et placer le curseur dans la zone à 
+ressaisir:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">&nbsp;</span></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Not</font><font SIZE="2" color="#0000FF"> (IsNumeric(TextBoxTaille.Text))
+</font><font SIZE="2" COLOR="#0000ff">Then</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+MsgBox(&quot;Entrez une valeur numérique pour la taille&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp;
+</font><b><font SIZE="2" color="#0000FF" face="Courier New">TextBoxTaille.Text=&quot;&quot;</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+TextBoxTaille.Select()</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Exit</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">If</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><br>
+<b>Conversion:</b></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Si le texte est bien 'Numéric', on fait 
+la conversion en réel simple précision (Single)</span></p>
+<p style="margin-top: 2; margin-bottom: 0"><font SIZE="2" color="#0000FF">
+sTaille = </font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(TextBoxTaille.Text,
+</font><font SIZE="2" COLOR="#0000ff">Single</font><font color="#0000FF" SIZE="2">) 
+/ 100</font></p>
+<p style="margin-top: 2; margin-bottom: 0">On utilise <font color="#0000FF">
+CType</font> pour convertir une String en Single.</p>
+<p style="margin-top: 2; margin-bottom: 0">On divise taille par 100 car 
+l'utilisateur à saisi la taille en centimètre et les formules nécessitent une 
+taille en mètre.</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><b>Problème du séparateur décimal 
+dans les saisies.</b></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Pourquoi saisir la taille en Cm? c'est 
+pour éviter d'avoir à gérer le problème du séparateur décimal.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Si la taille était 
+saisie en mètre, l'utilisateur aurait-il tapé &quot;1.75&quot; ou &quot;1,75&quot;?</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On rappelle que pour convertir un texte 
+en Single VB accepte le point et pas la virgule.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Pour ma part, si j'avais demandé de 
+saisir des mètres, voici ma solution: j'ajouterais en début de routine une instruction 
+transformant les ',' en '.':</span></p>
+<font SIZE="2" color="#0000FF">
+<p>TextBoxTaille.Text = Replace(TextBoxTaille.Text, &quot;,&quot;, &quot;.&quot;)</p>
+<p>&nbsp;</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="font-weight: 700; background-color: #FFFFFF">Faire les calculs et 
+afficher les résultats. </span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Je fais le calcul:</span></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF" SIZE="2">sPoids 
+/ (sTaille * sTaille)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">J'arrondis à 2 décimales après la 
+virgule grâce à <font color="#0000FF">Math.Round(&nbsp; ,2)</font>:</span></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF" SIZE="2"><b>
+Math.Round</b>(sPoids / (sTaille * sTaille), 2)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Je convertis en String:</span></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF" SIZE="2">(Math.Round(sPoids 
+/ (sTaille * sTaille), 2))<b>.ToString</b></font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">J'affiche dans le label 'labelImc':</span></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF" SIZE="2"><b>
+LabelImc.Text =</b> (Math.Round(sPoids / (sTaille * sTaille), 2)).ToString</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">(J'aurais pu aussi ne pas arrondir le 
+calcul mais formater l'affichage pour que 2 décimales soient affichées) </p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">La procédure <font color="#0000FF">
+ButtonQuitter_Click d</font>éclenchée quand l'utilisateur clique sur le bouton 
+'Quitter' ferme la seule fenêtre du projet (c'est<font color="#0000FF"> Me
+</font>, celle où on se trouve), ce qui arrête le programme. </span></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">Private</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ButtonQuitter_Click()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; 
+Me</font><font SIZE="2"><font color="#0000FF">.Close()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<font face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Structuration:</span></font></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Ici on a fait simple: une procédure 
+évènement calcule et affiche les résultats.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On pourrait, dans un but didactique <b>
+'structurer' le programme</b>.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+On pourrait découper le programme en procédure.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; Une procédure (une fonction) faisant le calcul.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; Une procédure (une fonction) affichant les résultats.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Si plusieurs procédures utilisent les mêmes variables il y a dans ce cas 2 possibilités:</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; Mettre les variables en 'Public' dans un module Standard.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; Utiliser des variables privées et les passer en paramètres.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0"><b>Première solution: Variables 'Public'</b></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">Créer dans un module standard des 
+variables 'Public' pour stocker les variables Poids et Taille, résultats (Public sIMC 
+A Single par exemple),créer dans ce même module standard une procédure Public 
+nommée 'Calculer' qui fait les calculs et met les résultats dans les variables 
+'Public'; enfin dans le module de formulaire créer une procédure 'AfficheResultat' 
+affichant les résultats.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="font-weight: 700; background-color: #FFFFFF">Module standard:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'Déclaration de variables Public </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Public sPoids As Single</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Public sTaille As Single</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">
+<span style="background-color: #FFFFFF">Public sIMC A Single</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">..</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'Procedure Public de calcul</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Public Sub 
+Calculer</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; sIMC=</font><font color="#0000FF" SIZE="2">Math.Round(sPoids / (sTaille * sTaille), 
+2)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; ...</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF"><span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="font-weight: 700; background-color: #FFFFFF">Module de formulaire 
+Form1:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#008000">'Procédure 
+évènement qui appelle les divers routines</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Private Sub 
+ButtonCalculer_Click</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; ...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; <font SIZE="2" color="#0000FF">
+sTaille = </font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(TextBoxTaille.Text,
+</font><font SIZE="2" COLOR="#0000ff">Single</font><font color="#0000FF" SIZE="2">) 
+/ 100</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; Calculer()&nbsp;&nbsp;&nbsp; </font>
+<font color="#008000">'Appelle la routine de calcul</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">AfficheResultat()</font>
+<font color="#008000">'Appelle la routine d'affichage</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End Sub</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'routine d'affichage toujours dans le formulaire</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Private Sub 
+AfficheResultat()</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; </p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF" SIZE="2"><b>
+&nbsp;&nbsp;&nbsp; </b>LabelImc.Text<b>
+=</b> sIMC.ToString</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;&nbsp;&nbsp; ...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End Sub</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#008000">On voit bien que 
+la routine de Calcul est générale et donc mise dans un module standard et 
+d'accès 'Public', alors que la routine d'affichage affichant sur Form1 est 
+privée et dans le module du formulaire.</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0"><b>Seconde solution: Variables 'Privées' 
+et passage de paramètres</b></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF">On peut ne pas créer de variables 
+'public' mais créer des fonctions (CalculIMC par exemple) à qui on passe en 
+paramètre le poids et la taille et qui retourne le résultat du calcul. Une 
+procédure AfficheResultatIMC récupère en paramètre la valeur de l'IMC à 
+afficher.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="font-weight: 700; background-color: #FFFFFF">Module standard:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'Pas de déclaration de variables Public </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">..</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'Function Public de calcul: reçoit en paramètre le poids 
+et la taille</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'retourne l'Imc</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Public Function 
+CalculerIMC (T as Single, P As Single) As Single</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; Return </font>
+<font color="#0000FF" SIZE="2">Math.Round(P / (T*T), 2)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF"><span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="font-weight: 700; background-color: #FFFFFF">Module de formulaire 
+Form1:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#008000">'Procédure 
+évènement qui appelle les divers routines</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Private Sub 
+ButtonCalculer_Click</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; ...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; <font SIZE="2" color="#0000FF">
+sTaille = </font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(TextBoxTaille.Text,
+</font><font SIZE="2" COLOR="#0000ff">Single</font><font color="#0000FF" SIZE="2">) 
+/ 100</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; </font><font color="#008000">'Appelle 
+de la routine calcul avec l'envoie de paramètres sPoids et sTaille</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">&nbsp;&nbsp;&nbsp; 'Au retour on a la valeur de L'imc que 
+l'on envoie à la routine d'affichage.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">AfficheResultatIMC(CalculerIMC(sTaille, 
+sPoids))</font> <font color="#008000">'Appelle la routine d'affichage</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End Sub</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#008000">'routine d'affichage </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Private Sub 
+AfficheResultatIMC(I As Single)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" SIZE="2"><b>
+&nbsp;&nbsp;&nbsp; </b>LabelImc.Text<b>
+=</b> i.ToString</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">End Sub</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">Remarque:</p>
+<p style="margin-top: 2; margin-bottom: 0">La ligne <font color="#0000FF">
+AfficheResultatIMC(CalculerIMC(sTaille, sPoids))</font></p>
+<p style="margin-top: 2; margin-bottom: 0">est équivalente à:</p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF">Dim s As single</font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF">s=(CalculerIMC(sTaille, 
+sPoids)</font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font color="#0000FF">
+AfficheResultatIMC(s))</font></p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">
+mais on se passe d'une variable temporaire.</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><b><font face="Courier New" size="2">
+Conclusion:</font></b></p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">
+Faut-il travailler avec des variables Public ou passer des paramètres?</font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">
+Réponses:</font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">Les 
+savants disent qu'il faut <b>éviter les variables Publics</b>. Toutes les 
+routines ayant accès à ces variables, il est toujours possible qu'une routine 
+modifie une valeur sans qu'on le sache!!</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2"><b>
+<font color="#FF0000"><img border="0" src="vicocheb.gif" width="32" height="34">&nbsp; 
+Utiliser donc des variables le plus privées possible.</font></b>&nbsp;
+</font></p>
+<p style="margin-top: 2; margin-bottom: 0"><font face="Courier New" size="2">(on 
+y reviendra)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-29.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-31.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-30.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:24 GMT -->
+</html>

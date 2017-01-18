@@ -1,0 +1,466 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6-num.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:52 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET variables numériques integer , long , single , double , decimal </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="52%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="14%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6string.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Variables numériques.</font></b></td>
+    <td width="14%" height="76"><a href="v1-6conv.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<font face="Arial" size="7" color="#FF0000">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4</font><font face="Arial" size="7" color="#FFFF00">8</font><font face="Arial" size="7" color="#00FF00">1</font><font face="Arial" size="7" color="#0000FF">5</font><font face="Arial" size="7" color="#FF00FF">1</font><font face="Arial" size="7" color="#FF0000">6</font><font face="Arial" size="7" color="#FFFF00">2</font><font face="Arial" size="7" color="#00FF00">3</font><font face="Arial" size="7" color="#0000FF">4</font><font face="Arial" size="7" color="#FF00FF">2</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font color="#800080">
+<span style="font-size: 10.0pt; font-family: Courier New">Une variable numérique 
+peut contenir  des données  numériques.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">On a vu qu'une variable numérique peut 
+être <b>entière</b>:</span></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Integer&nbsp; (entier signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Short (entier court signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Long (Entier long signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Byte (entier non signé de valeur 0 à 255)</span></font></p>
+  </li>
+</ul>
+<p><font size="2" face="Courier New" color="#800080">Mais aussi en VB2005</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">UInteger&nbsp; (entier non signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">UShort (entier court non signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">ULong (Entier long non signé)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">SByte (entier signé)</span></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">mais aussi, elle peut être <b>fractionnaire</b>.</span></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Single (virgule flottante simple 
+précision)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Double (virgule flottante double 
+précision)</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Decimal (virgule fixe haute précision)</span></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On déclare une 
+variable numérique avec <font color="#0000FF">Dim</font>, on peut l’initialiser en même temps&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim i 
+As Integer= 3</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la variable est 
+numérique, il faut la transformer en String avant de l’afficher&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim I As Integer=12</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Label.text = 
+I.ToString</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><b>.ToString</b> fait 
+partie des méthodes. Il y en a d'autres:</span></font></p>
+<font SIZE="2" face="Courier New">
+<p><b>.GetType retourne le type de la variable</b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New"><span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF"> 
+i </span> </font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span> </font></font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2" face="Courier New">
+<p><span style="background-color: #FFFFFF"><font color="#0000FF">Label1.Text = i.GetType.ToString </font>
+</span>&nbsp;'Affiche: 
+System.Int32</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt; line-height:150%">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">.MaxValue 
+.MinValue </span><span style="font-family: Courier New">donne le plus grand et 
+le plus petit nombre possible dans le type de la variable.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On verra qu’on peut 
+utiliser des opérateurs&nbsp; + - * /&nbsp;.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+Dim i As Integer=2&nbsp;&nbsp;&nbsp; </font>'Je déclare la variable i et je
+l'initialise à 2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim
+j As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">j</span></font><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">=i+3</span></font><span style="background-color: #FFFFFF">
+</span>‘ j est égal à 5 car on affecte à j la valeur i+3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On rappelle que <b>le 
+séparateur pour un littéral est le point&nbsp;:</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">j</span></font><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">=1.2</span></font>&nbsp;&nbsp; veut dire&nbsp;
+j=1,2 en bon français&nbsp;!!</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">de même pour Str et
+Val du VisualBasic.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par contre pour les
+instructions du Framework (CType, TryCaste, Cint...), le séparateur est celui
+de la culture (',' en culture française, '.' en culture us.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color: #C0C0C0; font-weight:700">La Classe MATH 
+du Framework est disponible:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour qu'elle soit 
+disponible il faut d’abord importer l’<b>espace de nom&nbsp; 'Math'du FrameWork</b>&nbsp;:</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Pour cela il faut taper 
+en haut de la fenêtre (au dessus de public Class)</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">Imports</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+<font color="#0000ff">System.Math</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on n'a pas importé&nbsp; il faut ajouter 
+Math. avant le nom de a fonction. Exemple: </font>
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Math.Abs(N)</span></font><span style="background-color: #FFFFFF">&nbsp;</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On verra plus loin ce 
+que cela signifie.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim</font> N 
+<font color="#0000FF">As Single</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim</font> R 
+<font color="#0000FF">As Single</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Abs(N)</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;
+retourne la valeur absolu</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Si 
+N=-1.2&nbsp; R=1.2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Sign(N)</span>&nbsp;</font>&nbsp; retourne le signe</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Si 
+N=-1.2&nbsp; R=-1 (négatif)&nbsp;; retourne 1 si nombre positif</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Round(N)</span></font><span style="background-color: #FFFFFF">
+</span>&nbsp;retourne le nombre entier le plus proche</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.7&nbsp;&nbsp;&nbsp;&nbsp; R=2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.2&nbsp;&nbsp;&nbsp;&nbsp; R=1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.5&nbsp;&nbsp;&nbsp;&nbsp; R=2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut donner en second paramètre le nombre 
+de digit:<font color="#0000FF"> Math.Round(Valeur, 2)</font>donne 2 décimales après la virgule.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<!-- / message -->
+<!-- sig -->
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span id="ctl00_LibFrame_MainContent0"><b><font face="Courier New" size="2">Comment
+arrondir les centimes d' Euros (comme dans les comptabilités et les feuilles d'impôt.)</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si nombre &lt;0.5 retourne 0
+;si&nbsp; &gt; ou = à 0.5&nbsp; retourne 1; c'est la manière d'arrondir les nombres&nbsp; 
+en Euros, comme sur la feuille d'impôts. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut donner en second paramètre le nombre 
+de digit:<font color="#0000FF">Valeur=</font><font color="#0000FF"> Math.Round(Valeur, 2)</font>donne 2 décimales après la virgule.</font></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Truncate(N)</span></font><span style="background-color: #FFFFFF">
+</span>&nbsp;retourne la partie entière entier (enlève les chiffres après
+la virgule, arrondi à l'entier le plus proche en allant vers zéro))</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.7&nbsp;&nbsp;&nbsp;&nbsp; R=1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Floor(N)</span></font>&nbsp; retourne le plus grand entier égal ou inférieur.(arrondi à l'entier inférieur le plus proche en allant vers l'infini
+négatif)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.7&nbsp;&nbsp;&nbsp;&nbsp; R=1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Ceiling(N)</span></font>&nbsp; retourne le plus petit entier égal ou supérieur.(arrondi à l'entier&nbsp; supérieur le plus propre en allant vers l'infini
+positif)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+N=1.2&nbsp;&nbsp;&nbsp;&nbsp; R=2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Max(2,3)</span></font>&nbsp; retourne le plus grand des 2 nombres.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+retourne 
+3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Min(2,3)</span></font>&nbsp; retourne le plus petit des 2 nombres.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+retourne 
+2</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Pow(2,3)</span></font>&nbsp; retourne&nbsp; 2 puissance 3.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+retourne 
+8</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">R=Sqrt(9)</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;
+retourne la racine carré.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+retourne 
+3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"></font><font size="2" face="Courier New">
+<font color="#0000FF">longResult = Math.BigMul(int1, int2)</font>  BigMul donne 
+le résultat de la multiplication de 2 entiers sous forme d'un long.</font><br>
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">intResult
+= Math.DivRem(int1, int2, Reste) </font><font face="Courier New" size="2">DivRem
+donne le résultat (intResult) de la division de int1 par int2 et retourne le
+reste (Reste), cela pour des entiers.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Il existe aussi
+<font color="#0000FF">Log</font>, <font color="#0000FF">Log10, Exp.</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Bien sur il y a aussi 
+<b>Sin Cos Tan, Sinh Cosh Tanh</b> (pour hyperbolique) <b>Asin Acos Atan Atan2</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Prenons un exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Imports System.Math<br>
+Dim MonAngle, MaSecant As Double<br>
+MonAngle = 1.3 '&nbsp; angle en&nbsp; radians.<br>
+MaSecant = 1 / Cos(MonAngle) </span> </font>
+<span style="background-color: #FFFFFF">' Calcul la sécante.<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On remarque que les angles sont en <b>radians</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Rappel:2&#960;=360° ; Angle en radians= 
+(2&#960;/360)*Angle en degrés </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0; font-weight:700">Il existe aussi les 
+instructions du langage Visual Basic comme:</span></font></p>
+<p><font face="Courier New" size="2"><b>Int</b> et <b>Fix</b> qui suppriment 
+toutes deux la partie fractionnelle et retournent l'entier .</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">Dim</font> R 
+<font color="#0000FF">As Single= 1.7</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Int</span></font></span><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">(R)</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;
+‘retourne 1</span></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Si <i>le nombre</i> 
+est négatif, <b>Int</b> retourne le premier entier négatif inférieur ou égal au 
+nombre<i>,</i> alors que <b>Fix</b> retourne le premier entier négatif supérieur 
+ou égal au nombre<i>.</i> Par exemple, Int convertit&nbsp;-8,4 en&nbsp;-9 et Fix 
+convertit&nbsp;-8,4 en&nbsp;-8.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Dépassement de 
+capacité, 'Non Nombre'.</span></font><font face="Courier New" size="2">
+<img border="0" src="an3.GIF" width="100" height="14"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Testé en VB2005</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On a vu que, codées sur un nombre de bits 
+défini, les variables numériques ne peuvent pas avoir des valeurs très très 
+grandes.</font><font size="2"><span style="font-family: Courier New; font-weight: 700"> </span>
+<span style="font-family: Courier New; "><font color="#0000FF">.MaxValue</font></span><span style="font-family: Courier New; font-weight: 700">&nbsp; </span><span style="font-family: Courier New">
+donne le plus grand nombre possible dans le type de la variable. (<font color="#0000FF">MinValue</font> 
+le plus petit nombre posible)</span></font><font face="Courier New" size="2"> Que se 
+passe t-il , si on dépasse la valeur maximum?</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si on affecte à une <b>
+variable entière</b> une valeur supérieure à .MaxValue</span><span style="font-family: Courier New; font-weight: 700"> </span>
+<span style="font-family: Courier New">cela déclenche une erreur (on dit une 
+exception de type OverFlow) et cela plante.</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si on affecte à une valeur 
+à virgule flottante(un Single par exemple), une valeur supérieure à .MaxValue, 
+la variable prend la valeur 'infinie' ( +ou - infinie: <font color="#0000FF">
+Single.NegativeInfinity</font> ou <font color="#0000FF">Single.PositiveInfinity</font>))&nbsp;
+</span></font></p>
+  </li>
+</ul>
+<font SIZE="2" face="Courier New">
+<p>&nbsp;</p>
+<p><font color="#0000FF">IsInfinity</font>, <font color="#0000FF">
+IsNegativeInfinity</font>, <font color="#0000FF">IsPositiveInfinity </font>
+<font color="#111111">permettent de tester si le résultat d'un calcul dépasse 
+les valeurs autorisées pour le Type virgule flottante.</font></p>
+</font>
+<p><font SIZE="2" face="Courier New">Exemple:
+</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> 
+s </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Single</font></font><font SIZE="2"><font face="Courier New"> 
+= 2147483647 ^ 33</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Single</font><font SIZE="2">.IsInfinity(s)
+</font><font SIZE="2" COLOR="#0000ff">Then</font><font SIZE="2"> MsgBox(</font><font SIZE="2" COLOR="#800000">&quot;infinie&quot;</font></font><font SIZE="2"><font face="Courier New">)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">s prend la valeur
+<font color="#0000FF">Single.PositiveInfinity</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<span id="ctl00_LibFrame_MainContent">
+<p><font face="Courier New" size="2">Les opérations en virgule flottante 
+retournent <font color="#0000FF">NaN</font> pour signaler que le résultat de 
+l'opération est non défini. Par exemple, le résultat de la division de 0,0 par 
+0,0 est <font color="#0000FF">NaN</font>.</font></p>
+<p><font face="Courier New" size="2">On peut tester une expression par
+<font color="#0000FF">IsNan</font></font></p>
+</span>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#111111">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span id="ctl00_LibFrame_MainContent"><font face="Courier New" size="2">
+<span style="COLOR: blue">If</span> <span style="COLOR: blue">Single</span>.IsNaN(0 
+/ 0) <span style="COLOR: blue">Then</span></font><br>
+&nbsp;</span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6string.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6conv.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6-num.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:52 GMT -->
+</html>

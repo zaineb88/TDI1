@@ -1,0 +1,493 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6bol.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net booleens Boole </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6objet.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.9</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les Booléens.</font></b></td>
+    <td width="14%" height="76"><a href="v1-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vboole.jpg" width="90" height="109"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mr Georges Boole 
+1805-1864</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" size="2" face="Courier New">Introduction.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">Le type 'Booliens 'ou 'Booléens'</span></b></font><font color="#800080"><b><span style="font-size: 10.0pt; font-family: Courier New">
+(Boolean) est un type de variable.</span></b></font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" color="#800080" size="2">Notion de Boolien.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Conditions</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Opérateurs logiques</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Conditions complexes</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font size="4" color="#0000FF" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Introduction:</span></font></p>
+<p align="justify"><font face="Courier New" size="2">L'<b>algèbre de Boole</b> 
+est la partie des mathématiques, de la logique de l' électronique et de 
+l'informatique qui s'intéresse aux opérations et aux fonctions sur les variables 
+logiques. En logique propositionnelle, une expression est soit 
+vraie soit fausse. (le vrai (1) et le faux (0)).</font></p>
+<p><font face="Courier New" size="2"><b>Georges Boole</b> (1815-1864), physicien 
+Anglais définit en 1847 un algèbre qui est applicable au raisonnement logique, 
+qui traite des fonctions à variables binaires (deux valeurs). Mais il ne 
+s'applique pas aux systèmes à plus de deux états d'équilibre.&nbsp; </font> </p>
+<p><font face="Courier New" size="2"><b>Une variable booléenne</b>, ou logique, ou binaire ne prend que deux valeurs 
+(elle est généralement stockée sous la forme d'un bit). </font> </p>
+<p align="justify"><font face="Courier New" size="2">Vers la fin des années 30, 
+<b>Claude Shannon</b> démontra qu'à 
+l'aide d'interrupteurs&nbsp; fermés pour «&nbsp;vrai&nbsp;» et ouverts pour 
+«&nbsp;faux&nbsp;» il était possible d'effectuer des opérations logiques en associant le 
+nombre 1 pour «&nbsp;vrai&nbsp;» et 0 pour «&nbsp;faux&nbsp;». </font> </p>
+<p align="justify"><font face="Courier New" size="2">Ce codage de l'information est nommé <b>base binaire</b>. 
+C'est avec ce codage que fonctionnent les ordinateurs. Il consiste à utiliser 
+deux états (représentés par les chiffres 0 et 1) pour coder les informations.
+</font>
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">
+Il permet d'étudier les circuits logiques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; font-family: Courier New; background-color: #c0c0c0">
+<font color="#0000ff" size="6">Les booléens:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">On a parfois besoin de savoir si une 
+assertion est vraie ou Fausse.(<font color="#0000ff">True</font> ou
+<font color="#0000ff">False</font>)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Pour stocker une information de ce type, 
+on utilise <b>une variable de type booléen</b>. Une variable de ce type ne peut 
+contenir que <font color="#0000ff">True</font> ou <font color="#0000ff">False</font>.
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le terme booléen vient de &quot;l'algèbre de Boole&quot;, cette algèbre ne travaille que 
+sur les valeurs 1 ou 0 (True ou False) </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">Soit myBoolean une variable booléenne:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Dim myBoolean As Boolean</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">On peut écrire
+</span></font><font size="2" color="#0000FF">
+<span style="font-family: Courier New">myBoolean</span></font><font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+</font> <font color="#0000ff">= True</font>
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New">On peut aussi tester cette variable:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000ff">If  </font></span></font><font size="2" color="#0000FF">
+<span style="font-family: Courier New">myBoolean</span></font><font size="2"><span style="font-family: Courier New"><font color="#0000ff"> = False Then</font>..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'expression après <font color="#0000FF">If</font> est évaluée, si elle est 
+vraie '<font color="#0000FF">Then</font>' se produit.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Autre exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">If maValeur=2 Then</font> ..</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">End If</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'expression 'maValeur=2' est évaluée, si maValeur est effectivement égale à 2, 
+l'expression 
+prend la valeur True; dans ce cas le programme se poursuit après Then. </font>
+</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+si maValeur est différent de 2, maValeur=2 est évaluée et prend la valeur False; dans ce cas le 
+programme&nbsp; se poursuit après End If. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font class="texteart" size="2" face="Courier New"><b>Un booléen peut donc 
+prendre deux états </b>(vrai/faux, oui/non, 1/0, etc.). Il s’agit donc d’une &quot;valeur binaire&quot;. 
+Techniquement, un booléen peut être représenté par un seul bit (<i><b>binary 
+digit</b></i> = chiffre binaire).</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New"><b>
+<font size="1">Dans les langages n'ayant pas de variables booliennes,</font></b><font class="texteart"><font size="1"> 
+on se servait souvent d’un entier, avec pour convention que la valeur 0 
+représente &quot;faux&quot;, tandis que toute valeur non nulle représente &quot;vrai&quot;. En VB6 
+vrai était égale à -1. En VB.Net vrai = 1. </font>
+</font>
+</font>
+<font class="texteart" size="1" face="Courier New">Mais on s'en fiche car:</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt" align="center">
+<font class="texteart" size="2" face="Courier New">&nbsp;<b><font color="#FF0000"><img border="0" src="vicoexcl.gif" width="29" height="43"> un 
+Booléen est un Booléen, en VB.Net on utilise donc True ou False comme seules 
+valeurs pour un Booléen.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New"><font size="2">Il n'empêche que si on utilise une 
+expression, un nombre et qu'on l'évalue comme si c'était un booléen (C'est pas 
+bien!!),</font><font class="texteart"><font size="2"> la valeur 0 représente &quot;False&quot;, 
+tandis que toute valeur non nulle représente &quot;True&quot;.</font></font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; font-family: Courier New; background-color: #c0c0c0">
+<font color="#0000ff" size="4">Les conditions:</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2" face="Courier New">Après
+<font color="#0000FF">If</font>, <font color="#0000FF">While</font>,
+<font color="#0000FF">Do Loop</font> il faut une condition qui est une 
+expression booléenne.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2" face="Courier New">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff">
+If </font>Condition <font color="#0000ff">Then&nbsp;&nbsp;&nbsp; </font>'Si 
+'condition'..</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp; ...</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">End if</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+<font color="#0000ff">
+Do Until </font>condition&nbsp;<font color="#0000ff">&nbsp;&nbsp; </font>
+'Boucler jusqu'à ce que 'condition'</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font color="#0000ff">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+Loop</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<span style="BACKGROUND-COLOR: #ffffff">
+<font face="Courier New" color="#0000ff" size="2">
+While </font>
+<font face="Courier New" size="2">
+Condition&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Tant que 'condition' 
+boucler</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">...</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End While</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2" face="Courier New">Pour écrire une 
+condition, on utilise les opérateurs:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">=</font> 
+égal</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">&gt;</font> 
+supérieur à</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;<font color="#0000ff">&lt;</font> 
+inférieur à</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">&gt;=
+</font>supérieur ou égal</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">&lt;=</font> 
+inférieur ou égal</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font color="#0000ff">&lt;&gt;</font> 
+Différent de</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><b>L'évaluation d'une 
+condition donne&nbsp; True (Vrai) ou False (Faux) car on l'a dit c'est une 
+expression booléenne. </b></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000ff">Dim 
+valeur1 As 
+Integer=2</font></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff" size="2">
+<span style="FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim 
+valeur2 As Integer=3&nbsp; </span></font>
+</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000ff">If valeur1=valeur2 Then</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+...</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if&nbsp; </span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">valeur1</span><span style="FONT-FAMILY: Courier New"> étant différent de 
+valeur2, la condition 'valeur1=valeur2' prend la 
+valeur False et le programme passe à la ligne  après <font color="#0000FF">End If</font>).</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Ici le signe = n’indique 
+pas une affectation mais 'égale' dans une expression à évaluer.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On peut combiner les opérateurs et mettre des parenthèses:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;If </font>
+<font face="Courier New" color="#0000ff" size="2">(valeurC &lt;&gt; valeurD )AND (valeurD =2)Then</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">..</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;<font size="2" color="#0000FF"><span style="font-family: Courier New">End if&nbsp; </span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="font-weight: 700; font-family: Courier New; background-color: #c0c0c0">
+<font color="#0000ff" size="4">Les opérateurs logiques:</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Si on a plusieurs expressions logiques, on peut les combiner avec des opérateurs 
+logiques.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2"><b>
+<span style="FONT-FAMILY: Courier New">Si A et B sont des expressions Booléens:</span></b></font></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+    <font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">A And B</span>
+    </font>&nbsp;&nbsp;&nbsp; retourne True si A et B sont vrais</span></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+    <font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">A Or B&nbsp;</span>&nbsp;&nbsp;</font>&nbsp;&nbsp; 
+    retourne True si une des 2 est vrai</span></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+    <font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">A Xor B&nbsp;</span></font>&nbsp;&nbsp;&nbsp; 
+    retourne True si une et une seule est vrai</span></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+    <font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Not A&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    retourne True si A est faux et vice versa</span></p>
+  </blockquote>
+</blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <font face="Courier New" size="2">On entend par expression Booléen le 
+    résultat de l'évaluation d'une condition:</font></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="background-color: #FFFFFF">
+    <font face="Courier New" size="2" color="#0000FF">c</font></span><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">=d</span>&nbsp; </font>retourne<font color="#0000ff"> 
+    True </font>si c égal d et<font color="#0000ff"> False </font>si c différent 
+    de d<font color="#0000ff">.</font></font></p>
+  </blockquote>
+</blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-WEIGHT: 700; FONT-SIZE: 10pt; FONT-FAMILY: Courier New">
+    Exemple</span></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Si A différent de 
+    B.. peut s’écrire <font color="#0000ff">If Not(A=B) Then..</font></span></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Si A compris entre 2 
+    et 5 peut s’écrire <font color="#0000ff">If A&gt;=2 And A&lt;=5 Then..&nbsp;</font></span></p>
+  </blockquote>
+</blockquote>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Comment faire une bascule:</font></p>
+    <p><font face="Courier New" size="2">Il faut écrire <font color="#0000ff">A= 
+    Not A</font></font></p>
+    <p><font face="Courier New" size="2">A chaque fois que l'on effectue cette 
+    instruction A bascule à True s'il était à False et vice versa.</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">Les opérateurs
+<font color="#0000FF">AndAlso</font> et <font color="#0000FF">OrElse</font> <b>&nbsp;sont plus 
+  rapide </b>car ils n'évaluent pas la seconde expression si ce n'est pas 
+  nécessaire.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>Parfois les expressions sont complexes </b>et on peut les simplifier en utilisant des 
+transformations:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<table borderColor="#000000" cellSpacing="1" cellPadding="2" width="100%" bgColor="#c9dcdc" border="0">
+  <tr>
+    <td width="48%" bgColor="#0000FF">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="1">
+      <b>Originale</b></font></div>
+    </td>
+    <td width="52%" bgColor="#0000FF">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" color="#FFFFFF" size="1">
+      <b>Transformation</b></font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A And Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A Or B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A And B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A Or Not 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A And Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A Or 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A And B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A Or 
+      Not B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A Or Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A And B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not A Or B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (A And Not 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffcc">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A Or Not B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A And 
+      B)</font></div>
+    </td>
+  </tr>
+  <tr bgColor="#ffffff">
+    <td width="48%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">A Or B</font></div>
+    </td>
+    <td width="52%" bgcolor="#C9DCDC">
+    <div align="center">
+      <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Not (Not A And 
+      Not B)</font></div>
+    </td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font size="2" face="Courier New">Exemple pratique:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">Si A compris entre 2 
+    et 5 peut s’écrire <font color="#0000ff">If A&gt;=2 And A&lt;=5 Then..&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-family: Courier New">
+<font size="2">ou </font>
+<font size="2" color="#0000FF">&nbsp;If </font>
+</span>
+    <span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> <font color="#0000ff">
+Not (A&lt;2 Or A&gt;5) Then...</font></span></p>
+  <p>&nbsp;</p>
+  <p><font face="Courier New" size="2">Une remarque:</font></p>
+  <p><font face="Courier New" size="2"><b>Avec une expression Booléenne</b>, on 
+  peut écrire:</font></p>
+  <p><font color="#0000FF" size="2" face="Courier New">Dim a As Boolean= True</font></p>
+  <p> <font color="#0000FF" face="Courier New" size="2"><b>If a = True</b> Then..</font></p>
+  <p><font face="Courier New" size="2">ou</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF"><b>If a</b> Then..</font></p>
+  <p><font face="Courier New" size="2">Exemple:</font></p>
+  <p><font face="Courier New" size="2" color="#0000FF">If (x=15)=True&nbsp; Then..</font></p>
+  <p><font face="Courier New" size="2">ou <font color="#0000FF">If x=15 Then...</font></font></p>
+<p><font face="Courier New" size="2">Donc, a</font><font face="Courier New" size="2">vec
+une expression booléenne, et uniquement avec une expression booléenne, il est
+possible de se passer du <font color="#0000FF">= True </font>après un If car de
+toutes façons , l'expression est évaluée.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Voir aussi le chapitre sur l'<a href="v8-1.htm">algèbre 
+de Boole</a>.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6objet.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6bol.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+</html>

@@ -1,0 +1,332 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net région attribut</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v8-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a><b><font face="Courier New" size="6" color="#800080"> 8.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les 'régions',la 
+    compilation conditionnelle, les 'Attributs'.</font></b></td>
+    <td width="14%" height="76"><a href="v8-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Dans le code on peut 
+ajouter des choses qui ne sont pas du code VB, mais plutôt des directives pour 
+l'affichage, le compilateur ou le Runtime:</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Les Régions.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Pour une meilleur 
+visibilité, il est possible de créer des 'régions' de code. Une région peut être 
+déroulée ou contractée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Une région peut être 
+déroulée: le code entre <font color="#0000FF">#Region</font> et
+<font color="#0000FF">#End Region</font> est visible (pour modifier le code par 
+exemple):</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber5" height="20">
+  <tr>
+    <td width="6%" height="20">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <font SIZE="2" face="Courier New">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="34%" id="AutoNumber4">
+      <tr>
+        <td width="100%">
+        <p align="center"><font size="2">-</font></td>
+      </tr>
+    </table>
+    </font></td>
+    <td width="94%" height="20">&nbsp;<p><font face="Courier New"><b><font SIZE="2">#</font><font SIZE="2" COLOR="#0000ff">Region</font><font SIZE="2"> 
+    &quot;Routine de Tri&quot;</font></b></font></td>
+  </tr>
+</table>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> QuickSort(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+debut </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> fin </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New">)</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> pivot, 
+gauche, droite, temp </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Do</p>
+</font>
+<p><font face="Courier New" size="2">...</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Loop</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Until</font></font><font SIZE="2"><font face="Courier New"> gauche = droite</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font><font SIZE="2">
+<p><font face="Courier New"><b>#</b></font></font><font face="Courier New"><b><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2">
+</font></b></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New"><b>Region</b></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Si on clique sur le 
+petit carré (avant #region), cela contracte la région et masque le code, on voit seulement un petit 
+carré avec un plus et le nom de la région.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber5" height="20">
+  <tr>
+    <font SIZE="2">
+    <td width="6%" height="20">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+    <font SIZE="2" face="Courier New">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="34%" id="AutoNumber4">
+      <tr>
+        <td width="100%">
+        <p align="center"><font size="2">+</font></td>
+      </tr>
+    </table>
+    </font></td>
+    <td width="94%" height="20">&nbsp;<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="16%" id="AutoNumber6">
+      <tr>
+        <td width="100%"><font face="Courier New" size="2">Routine de Tri</font></td>
+      </tr>
+    </table>
+    </td>
+    </font>
+  </tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Cela permet de masquer 
+une procédure en totalité. </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Attention, cela ne 
+permet pas de masquer seulement une partie du code mais la procédure entière.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&nbsp;Dans une Classe 
+de formulaire, il existe une région nommée 'Code généré par le Concepteur 
+Windows Form' qui contient le code créant les contrôles du formulaire. Ce code 
+est habituellement caché.&nbsp; </p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+La Compilation conditionnelle.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">La compilation 
+conditionnelle contrôle si les séquences de lignes sont traduites en code réel. 
+Certaines lignes peuvent être ignorées pendant le processus de compilation.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Les instructions de 
+compilation conditionnelle sont précédées de <font color="#0000FF">#</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">On utilise:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">#if .. then<br>
+<br>
+#else<br>
+<br>
+#end if</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">&nbsp;Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">#const Demo = True&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'créer une constante conditionnelle</font><font face="Courier New" size="2" color="#0000FF"><br>
+<br>
+Class MaClasse<br>
+#if Demo then<br>
+&nbsp; Sub F()<br>
+#else<br>
+&nbsp; Sub G()<br>
+#end if</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Class<br>
+<br>
+</font><font face="Courier New" size="2">La compilation produit le résultat 
+suivant :</font><font face="Courier New" size="2" color="#0000FF"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Class C<br>
+Sub F()<br>
+End Class<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il suffit de changer la valeur de la constante 
+pour compiler des parties différentes de code.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter que <font color="#0000FF">#const Demo</font> 
+crée une constante privée accessible uniquement dans le fichier.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB 2005 on peut définir une constante au 
+niveau projet avec /define</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">/define const Demo=True</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Les Attributs.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Les attributs peuvent 
+être utilisés pour <b>décrire votre code</b> au runtime (fournir des 
+informations supplémentaires) ou <b>modifier le comportement de l'application au 
+moment de l'exécution</b>. Le Framework fournis de nombreux attributs , mais 
+vous pouvez également créer vos propres attributs personnalisés.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Les attributs sont 
+entre <font color="#0000FF">&lt;</font> et <font color="#0000FF">&gt;</font>&nbsp; en VisualBasic.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Les attributs peuvent 
+modifier le comportement des propriétés, méthodes, classes, assemblys. Ils 
+couvrent différents aspects comme la compilation, la sécurité, les services 
+Web...</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">Exemple:
+<font color="#0000FF">&lt;Obsolete &gt; </font><font color="#111111">Avec une 
+procédure.</font></font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Déclarons une fonction 
+Add comme obsolete, en plus, le compilateur affiche le message: 'Sera enlevé à 
+la prochaine version'.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font size="2">On utilise donc
+<font color="#0000FF">&lt;Obsolete&nbsp; &gt;</font> ou le nom complet de l'attribut:
+</font><font size="2" color="#0000FF">&lt;System.ObsoleteAttribut&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">&lt;Obsolete(&quot;Sera 
+enlevé à la prochaine version &quot;)&gt; Function Add(a as Integer, b as Integer) as 
+Integer<br>
+Add = a + b - c<br>
+End Function<br>
+&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">Exemple:<font color="#0000FF">&lt;Browsable&gt;</font> 
+avec un composant.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Dans un composant, je 
+crée une Propertie nommée 'Valide', je ne veux pas qu'elle apparaisse dans la fenêtre 
+'propriétés' du composant; je veux qu'elle soit accessible uniquement par code:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF" size="2">
+Imports System.ComponentModel&nbsp;&nbsp;&nbsp; </font><font size="2">'Classe 
+chargées du comportement des composants.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">&lt;Browsable(False)&gt; 
+Property Valide() As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">Exemple:<font color="#0000FF">&lt;ToolBoxBitMap&gt;</font> 
+avec un composant.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Quand on crée un 
+composant, on désire parfois avoir une icône propre à ce composant dans la boite 
+à outils:&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">&lt;ToolBoxBitMap(&quot;C:MonIcone&quot;)&gt; 
+Public Class MaClasse</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">Exemple:<font color="#0000FF">&lt;Serializable&gt;</font> 
+avec une Classe.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Quand on crée une 
+classe, on a parfois besoin qu'elle soit sérializable:&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font size="2" color="#0000FF">&lt;Serializable()&gt; 
+Public Class TestSimpleObject<br>
+<br>
+Public member1 As Integer<br>
+Public member2 As String<br>
+Public member3 As String<br>
+Public member4 As Double<br>
+<br>
+</font><font size="2">'Un member qui ne doit pas être sérialisé.</font><font size="2" color="#0000FF"><br>
+&lt;NonSerialized()&gt; Public member5 As String<br>
+<br>
+</font><font size="2">Il est possible de faire un tas de choses avec les 
+attibuts, mais cela devient vite très complexe.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+</html>

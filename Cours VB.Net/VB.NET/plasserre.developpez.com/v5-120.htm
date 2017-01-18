@@ -1,0 +1,515 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-120.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+<head>
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net bonne classe </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-110.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.120</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Approche 'Objet'faire des 
+    bonnes 'Classes'</font><font face="Courier New" size="6" color="#800080">.</font></b></td>
+    <td width="9%" height="76"><a href="v5-130.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font color="#FF0000" face="Courier New" size="2">Ce chapitre tente de clarifier mes connaissances, ne pas 
+hésiter à critiquer et me donner des conseils.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#800080" face="Courier New">Quand on programme avec une approche Objet, on 
+crée des classes, on n'utilise par de modules standard ni de Sub et de Fonction.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Quelles règles suivre pour créer 
+des objets?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">&nbsp;Si on programme depuis 
+longtemps, on le sait de manière 'intuitive' (après de nombreuses erreurs); il 
+est tout de même&nbsp; intéressant de connaître les grandes règles à suivre. 
+Très peu de sites ou d'ouvrages en parlent!!&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Comment faire de bonnes 
+Classes?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#800080">Comment bien utiliser 
+l'héritage?</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Rappel:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On rappelle: Une Classe 
+sert à créer (instancier) des objets.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En programmation Objet, dans un module de 
+Classe, on crée la Classe:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Classe MyClasse</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">puis dans le corps du programme, on crée un objet:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim MonObjet As New MyClasse.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Pourquoi utiliser 
+'Classe' et 'Objet'?</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Ils permettent:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="2" face="Courier New">Modélisation des objets réels.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Le programme travaille avec des 
+objet réels: une facture, un client.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Créer une classe par objet puis:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Y mettre les 
+données liées à l'objet (le nom, l'adresse du client)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Y ajouter les 
+méthodes contenant le comportement de l'objet (Calcul de la facture)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="2" face="Courier New">Modélisation des objets 
+abstraits.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Dans un programme de 
+comptabilité, les classes 'technicien' , 'ouvrier', dirigeant' sont concrètes; 
+une classe&nbsp; 'Salarié' est plus abstraite. Les 3 premières pourront hériter 
+de cette dernière.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Autre exemple classique: Les classes Line, 
+Triangle sont concrètes, la classe Shape (forme en français) est abstraite, 
+ici aussi Line et Triangle hériterons de Shape</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il existe même des <b>Classes abstraites</b>: 
+Un Classe abstraite est une Classe qu'on ne peut pas instancer, elle sert 
+uniquement à définir des caractéristiques de base pour créer des classes qui 
+seront dérivées de la Classe abstraite. </font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Facilité pour réutiliser le code.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une fois crées, les Classes servent de briques 
+pour construire un nouveau projet.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'héritage permet la création de nouvelle 
+Classe héritant d'une autre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="2" face="Courier New">Réduction et isolement de la 
+complexité.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une tache complexe est découpée en plusieurs 
+Classes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="2" face="Courier New">Masquage de l'implémentation</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un fois la Classe créée, il faut oublier les 
+détails et l'utiliser sans connaître son fonctionnement interne.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">C'est l'encapsulation.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="2" face="Courier New">Masquage des données globales.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si vous devez absolument utiliser des données 
+globales vous les masquez derrière une interface de classe.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Identifier les objets:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT"><b>Identifier les Objets pour définir ensuite&nbsp; les classes:</b></p>
+<p ALIGN="LEFT"><b>1-On identifiera les objets nécessaire et leurs attributs 
+(méthodes, données)</b></p>
+<blockquote>
+<p ALIGN="LEFT">Exemple:</p>
+<p ALIGN="LEFT">Système de facturation:</p>
+  <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber4">
+    <tr>
+      <td width="33%" align="center">Objet:Client</td>
+      <td width="33%" align="center">Objet:Facture</td>
+      <td width="34%" align="center">Objet: FicheHoraire</td>
+    </tr>
+    <tr>
+      <td width="33%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">NomClient</p>
+      <p style="margin-top: 0; margin-bottom: 0">Adresse</td>
+      <td width="33%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">Date</p>
+      <p style="margin-top: 0; margin-bottom: 0">NomClient</p>
+      <p style="margin-top: 0; margin-bottom: 0">Montant</td>
+      <td width="34%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">Date</p>
+      <p style="margin-top: 0; margin-bottom: 0">
+<font FACE="Courier New" SIZE="2">
+      NonClient</font></p>
+      <p style="margin-top: 0; margin-bottom: 0">NombreDheure</p>
+      <p style="margin-top: 0; margin-bottom: 0">TauxHoraire</p>
+      <p style="margin-top: 0; margin-bottom: 0">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="33%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">&nbsp;</td>
+      <td width="33%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">CalculerFacture()</p>
+      <p style="margin-top: 0; margin-bottom: 0">ImprimerFacture()</td>
+      <td width="34%" align="center">
+      <p style="margin-top: 0; margin-bottom: 0">&nbsp;</td>
+    </tr>
+  </table>
+</blockquote>
+<p ALIGN="LEFT"><b>2-Déterminer ce que l'on peut faire avec chaque objet:</b></p>
+<blockquote>
+<p ALIGN="LEFT">Exemple:</p>
+<p ALIGN="LEFT">Modifier l'adresse du Client.</p>
+</blockquote>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>3-Déterminer ce que chaque objet peut faire aux autres objets</b></p>
+<blockquote>
+<p ALIGN="LEFT">Une facture peut <b>contenir</b> plusieurs fiches horaires.</p>
+<p ALIGN="LEFT">Un Objet peut en hériter d'un autre.</p>
+</blockquote>
+<p ALIGN="LEFT"><b>4-Déterminer les parties visible (l'interface publique)</b></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><b>En conclusion, pour chaque objet il faut définir:&nbsp;&nbsp;
+</b></p>
+<blockquote>
+<p ALIGN="LEFT">a. Définir l’interface utilisateur :</p>
+<blockquote>
+<p ALIGN="LEFT">– Identifier les requêtes (information demandée à la classe); Ce 
+sont les <font color="#0000FF">Property</font></p>
+<p ALIGN="LEFT">– Identifier les commandes (procédures): Ce sont les méthodes.
+<font color="#0000FF">Sub</font> ou <font color="#0000FF">Function</font></p>
+<p ALIGN="LEFT">– Identifier les contraintes (pré-, post-condition).</p>
+</blockquote>
+<p ALIGN="LEFT">b. Définir les constructeurs. <font color="#0000FF">Sub New()</font></p>
+<p ALIGN="LEFT">c. Choisir une représentation de l’information (attributs).</p>
+<p ALIGN="LEFT">d. Implanter les fonctions, procédures et opérateurs.</p>
+<p ALIGN="LEFT">e. Définir (si nécessaire) le constructeur de copie, le 
+destructeur </p>
+</blockquote>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Faire un 'couplage' 
+modéré:</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<font face="Courier New">
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">
+<font color="#008080">Le couplage traite des <b>connexions entre les différentes 
+Classes</b>, <b>il doit être modéré</b>, ce qui signifie qu'il doit y avoir peu 
+de connexions.</font><ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2"><b>
+  Une Classe doit ne communiquer qu’avec un nombre &quot; minimum &quot; d’autres Classes</b> 
+  du logiciel. L’objectif est de minimiser le <i><b>nombre </b>
+  </i>d'interconnexions entre les Classes. L'intérêt de cette règle est de 
+  garantir un meilleur respect de la protection des Classes.</font> </li>
+</ul>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;</p>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+  Lorsque deux Classes communiquent entre elles, <b>l’échange d’information doit 
+  être minimal</b>. Il s'agit de minimiser la </font></font>
+  <font face="TimesNewRoman"><font size="2"><font face="Courier New">taille</font><i><font face="Courier New" color="#0000ff">
+  </font></i></font><font face="Courier New" size="2">des interconnexions entre 
+  Classes.</font></font> </li>
+</ul>
+<font face="Courier New">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+&nbsp;&nbsp;&nbsp;&nbsp; Un classe qui possède 4 méthodes Public c'est mieux 
+qu'une Classe qui en possède 15.</font></p>
+<blockquote>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">Il 
+faut donc réduire l'accessibilité des classes et des membres.&nbsp;&nbsp; </font></p>
+</blockquote>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left"><font size="2">
+  Lorsque deux Classes communiquent, <b>l’échange d’information doit être 
+  explicite</b>: </font></font>&nbsp;</li>
+</ul>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px" align="left">&nbsp;</p>
+<ul>
+  <li>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  <font face="Courier New" size="2">Toute information dans une Classe doit être 
+  répartie en deux catégories : <b>l’information privée et l’information 
+  publique.</b> Ce principe permet de modifier la partie privée sans que les 
+  clients (</font><i><font face="Courier New" size="2">fonctions utilisant cette 
+  classe</font></i><font size="2" face="Courier New">) soient confrontés à un 
+  quelconque problème à cause de modifications ou de changements. Plus la partie 
+  publique est petite, mieux c'est...</font></li>
+</ul>
+  <p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+  &nbsp;</span><p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<span style="background-color: #C0C0C0; font-family:Courier New; font-weight:700"><font size="4" color="#0000FF">
+Conserver une bonne abstraction et une bonne cohérence:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Une classe qui:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">met en forme les données.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">qui initialise le programme.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">qui imprime un rapport.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">n'est pas cohérente.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Une classe qui:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Initialise une donnée</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Charge une donnée</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">&nbsp;&nbsp;&nbsp; Sauve une donnée</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">est cohérente.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">De plus l'abstraction est constante: 
+elle se situe au même niveau (celui d'une donnée); si on rajoutait dans la 
+classe une fonction effectuant une recherche dans une liste de données 
+cela ne serait plus le cas.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Créer</font></span><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0"> 
+des méthodes par paires:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une méthode doit entraîner l'écriture de la 
+méthode contraire.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Activation/désactivation.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ajout/Suppression...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si il existe la méthode 'AddLine' , on aura 
+forcement besoin de 'RemoveLine'. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">L'encapsulation doit 
+être bonne:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">L'encapsulation est une barrière qui empêche 
+l'utilisateur de voir l'implémentation..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Il ne faut pas exposer les données:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Eviter les variables Public, directement 
+accessible par l'utilisateur de la Classe.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Class MaClasse</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public X As Single</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">C</font><font face="Courier New" size="2">'est 
+pas génial!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Class MaClasse</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Private mX As Single</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Public Property X() as Single<br>
+Get<br>
+&nbsp;&nbsp;&nbsp; Return mX<br>
+End Get<br>
+Set(By Val Value)<br>
+&nbsp;&nbsp;&nbsp; mX=value<br>
+End Set</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Property</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est mieux , l'utilisateur n'a pas accès 
+directement à 'mX', l'utilisateur voit 'X', il peut modifier X ce qui entraîne 
+une modification de mX&nbsp; mais sous contrôle, on peut même rajouter des conditions qui seront testées avant 
+de modifier mX.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Initialisez les 
+données dans le constructeur d'une Classe.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il est important de ne pas oublier 
+d'initialiser les variables dans une classe, le moment idéal est quand on crée 
+une instance de cette Classe.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Class MaClasse</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Private mX As Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Sub New()</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp; mX=2</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End sub</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Class </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Problèmes liés à l'héritage</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Ne pas multiplier les classes dérivées:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on a une Classe '<font color="#0000FF">Animal</font>', 
+on peut créer les classes '<font color="#0000FF">Cheval</font>' et '<font color="#0000FF">Poisson</font>' 
+qui dérivent de la Classe 'Animal'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par contre il ne faut pas créer les classes '<font color="#0000FF">PoissonRouge</font>' 
+ou '<font color="#0000FF">ChevalNoir</font>' car la couleur est plus un attribut 
+d'une classe qu'un déterminant de Classe.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Eviter trop de classe intermédiaire:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si '<font color="#0000FF">Cheval</font>' 
+dérive de '<font color="#0000FF">Mammifèreà4Pattes</font>' qui dérive de '<font color="#0000FF">Mammifère</font>' 
+qui dérive d'<font color="#0000FF">Animal</font>', c'est lourd!! surtout si 
+'Mammifèreà4Pattes' et 'Mammifère' sont des classes abstraites qui ne seront pas 
+instanciées. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Eviter l'héritage de construction:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Eviter de dériver une Classe en ajoutant des 
+attributs qui modifie le concept de la classe mère.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une classe 'Triangle' peut dériver de 
+'Polygone', la classe 'Carré' peut difficilement dériver de 'Triangle' (En y 
+ajoutant les attributs d'un quatrième point!!)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un Carré <b>est un</b> Polygone,oui. On ne 
+peut pas dire qu'un Carré est un Triangle avec un sommet de plus!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="2" face="Courier New">Bien comprendre la différence entre 
+héritage et agrégation:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Comme on l'a vu dessus, quand une classe 
+dérive d'une autre, on peut dire que la classe dérivée <b>'est une'</b> classe 
+mère.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'Carré' est un 'Polygone'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par contre 'Carré' est composé de 4 'Point' 
+(possède 4 points): un objet 'Carré' contient 4 objets 'Point'. On parle 
+d'agrégation (ou de composition pour certains).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-110.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-130.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-120.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

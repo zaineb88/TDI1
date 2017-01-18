@@ -1,0 +1,20 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.AjouterElève.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.Form1.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.Properties.Resources.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\bin\Debug\ProjetZainebMazouz.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\bin\Debug\ProjetZainebMazouz.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\bin\Debug\ProjetZainebMazouz.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\bin\Debug\ProjetZainebMazouz.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.AjouterElève.resources
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\ProjetZainebMazouz.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\c sharp\ProjetZainebMazouz\ProjetZainebMazouz\obj\x86\Debug\GenerateResource.write.1.tlog

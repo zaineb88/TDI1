@@ -1,0 +1,660 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  composition groupe d'objet </title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.7</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Composition, groupe 
+    d'objets.</font></b></td>
+    <td width="14%" height="76"><a href="v5-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#800080" size="2" face="Courier New">Est-il possible mettre un objet dans un autre?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080"><b>
+<font face="Courier New" size="2">On a souvent besoin d'utiliser</font></b><font face="Courier New" size="2"><b> 
+un ensemble, un groupe d'objets. Comment faire?</b></font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Un Objet dans un autre: 
+Composition d'objets</font></b></span><b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">On parle de contenant-contenu.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">On peut créer une Classe qui contient des 
+Objets, une classe qui se <b>compose</b> d'objets.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Exemple classique:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Créons une Classe Point.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">Class Point</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">Private _x As Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">Private _y As Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font color="#0000ff" face="Courier New" size="2">Public Sub New(ByVal x As 
+Integer, y As Integer)<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->_x=x</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+_y=y</font><font color="#0000ff" face="Courier New" size="2"><br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->End Sub </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On a écrit uniquement le constructeur, il faudrait aussi écrire les property 
+permettant de lire et écrire les coordonnées du point.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Maintenant on a besoin de créer une Classe rectangle qui est définie par 2 
+points (le coin supérieur gauche et le coin inférieur droit):</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">Class Rectangle</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">Private _p1 As Point</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">Private _p2 As Point </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font color="#0000ff" face="Courier New" size="2">Public Sub New(ByVal x1 As 
+Integer, ByVal y1 As Integer,ByVal x2 As Integer, ByVal y2 As Integer)<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp; 
+_p1= New Point (x1,y1)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#0000ff" face="Courier New" size="2">_p2= New Point (x2,y2)<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->End Sub </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Et bien, on utilise la classe Point dans la Classe Rectangle. le constructeur de 
+la classe rectangle instancie 2 points, ce qui appelle le constructeur de la 
+Classe Point.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">Groupe d'objets:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Exemple: créons une Classe 'Salarié' avec une 
+Property Nom et un constructeur New nécessitant un nom.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">Public Class Salarié</font></p>
+<blockquote>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  <font face="Courier New" color="#0000ff" size="2">Private _sNom As String</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  <font face="Courier New" color="#0000ff" size="2">Public Property Nom() As 
+  String<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Nom 
+  = _sNom <br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+  Get<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Set
+  <br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->_sNom 
+  = Value<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+  Set<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+  Property</font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  <br>
+  <font face="Courier New" size="2"><font color="#0000ff">Public Sub New(ByVal 
+  sNom As String)<br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Nom 
+  = sNom <br>
+  <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->End Sub </font><br>
+  &nbsp;</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">End Class</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Ensuite pour travailler sur <b>un ensemble de 
+salariés</b> on peut:</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">A- Utiliser un tableau ou une collection de 
+Salariés (pas bien !!)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">B- Créer une Classe contenant des Salariés (good!)</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">A -Comment utiliser un tableau&nbsp; ou 
+une collection d'objets 'Salarié':</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt"><font size="2" face="Courier New">Voyons
+comment faire avec une approche non objet:</font></p>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  Tableau</li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">Dim LesSalaries(100)&nbsp; As&nbsp; Salarié</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Attention, cela crée un tableau de références 
+d'objet, mais pas les objets (Salariées(1) contient Nothing).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Il faut donc créer les objets:</font></p>
+<font color="#0000ff" size="2" face="Courier New">
+<p style="margin-top: 0px; margin-bottom: 0px">LesSalaries(0) = New Salarié(&quot;toto&quot;)</p>
+</font>
+<p class="titre3" style="margin: 0px 0cm">
+<font color="#0000ff" size="2" face="Courier New">
+LesSalaries(1) = New Salarié(&quot;lulu&quot;)</font></p>
+<p class="titre3" style="margin: 0px 0cm">
+<font color="#0000ff" size="2" face="Courier New">
+LesSalaries(2) = New Salarié(&quot;tata&quot;)</font></p>
+<p class="titre3" style="margin: 0px 0cm">
+<font color="#0000ff" size="2" face="Courier New">..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">On peut ensuite utiliser&nbsp;
+<font color="#0000ff">LesSalaries(1).Nom </font>pour connaître le nom du salarié 
+d'index 1. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<ul>
+  <li>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  Collection</li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2"><font color="#0000ff">Dim LesSalaries As New ArrayList </font>
+&nbsp;'On crée une collection d'objet ArrayList</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim s As New Salarié(&quot;toto&quot;)&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp;&nbsp; 'On crée un Salarié</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000ff" size="2">LesSalaries.Add (s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'On l'ajoute dans l'Arraylist</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2"><font color="#0000FF">LesSalariées.Count</font>&nbsp;&nbsp; 
+retourne 1</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Pour afficher dans une MsgBox&nbsp; le nom du 
+Salarié d'index 1:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">&nbsp;</p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">MsgBox(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(LesSalaries.Item(0), 
+Salarié).Nom)</font></font></p>
+<p><font size="2" face="Courier New">On remarque que LesSalaries.Item(0) est de 
+type Objet (Les éléments d'un ArrayList sont des objets; </font><font SIZE="2">
+<font face="Courier New">Salaries.Item(0).GetType.BaseType.ToString retourne 
+'Objet') il faut donc caster en 'Salarié' à l'aide de CType:</font></p>
+</font>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(LesSalaries.Item(0), 
+Salarié) </font><font SIZE="2">ensuite , on peut utiliser</font><font SIZE="2" color="#0000FF"> 
+.Nom</font></font></p>
+<p><font face="Courier New" size="2">En Vb2005 (Framework 2):<img border="0" src="v2005.JPG" width="52" height="21"></font></p>
+<p><font face="Courier New" size="2">On peut utiliser des collections '<b>génériques</b>'</font></p>
+<p><font color="#0000ff" face="Courier New" size="2">Dim LesSalaries As New 
+System.Collections.Generic.List(Of Salarié)</font></p>
+<font color="#111111" size="2" face="Courier New">
+<p>On peut ainsi créer une collection fortement typée de 'Salarié'.</p>
+</font>
+<p><font color="#FF0000">Mais utiliser un tableau ou une collection 
+d'objets directement accessibles n'est pas une bonne méthode.</font></p>
+<p><font color="#FF0000">La bonne méthode est de créer une classe qui encapsule 
+la collection (Une Classe qui contient la collection). Voyons donc la suite.</font></p>
+<p>&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#0000FF" size="4"><b>
+<span style="background-color: #C0C0C0">B -Utiliser Une Classe </span></b><span style="font-weight: 700; background-color: #C0C0C0">
+contenant des Salariés:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font size="2" face="Courier New">Voyons comment faire avec une approche objet:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Il faut créer une classe 'LesSalariés' contenant:</font></p>
+<blockquote>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  <font face="Courier New" size="2">-un tableau ou une collection 'Private' 
+  complètement encapsulé, donc non accessible à l'extérieur. </font></p>
+  <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+  <font face="Courier New" size="2">-les méthodes 'Public' permettant d'avoir accès au 
+  données et de les modifier.</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Il y a 4 manières de faire:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" color="#111111">
+<span style="background-color: #CCCCCC">1-Créer une Classe contenant une 
+ArrayList</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Voyons un exemple utilisant une ArrayList 
+(collection d'objets):  </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">L'arrayList est créée par le constructeur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Noter l'encapsulation:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;une méthode Add permet d'ajouter un 'Salarié' 
+aux 'Salariés' (vu du coté utilisateur).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;La méthode Remove permet d'enlever un 
+Salarié.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;Dans la classe une méthode Add permet 
+d'ajouter un 'Salarié' à l'ArrayList. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;La Property Item permet de retourner un 
+Salarié d'index lIndex.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">&nbsp;La Property Count retourne le nombre de 
+Salarié.</font></p>
+<blockquote>
+  <blockquote>
+    <p class="code">&nbsp;</p>
+    <p class="code"><font face="Courier New" size="2" color="#0000FF">Imports 
+    System.Collections</font></p>
+    <p class="code"><font face="Courier New" color="#0000ff" size="2">Public 
+    Class LesSalariésClasse<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Private 
+    maCol As ArrayList<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+    Sub New()<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol 
+    = New ArrayList()&nbsp;&nbsp;&nbsp; </font><font face="Courier New" size="2">'cela crée une 
+    ArrayList</font><font face="Courier New" color="#0000ff" size="2"><br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Sub<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+    Function GetEnumerator() As IEnumerator&nbsp;&nbsp;&nbsp; </font>
+    <font face="Courier New" size="2">'permet d'utiliser For Each</font><font face="Courier New" color="#0000ff" size="2"><br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->GetEnumerator 
+    = maCol.GetEnumerator<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Function <br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+    Function Add(ByVal LeNom As String) As Salarié<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Dim 
+    UnSalarié As New Salarié(LeNom)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol.Add(UnSalarié)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Add 
+    = UnSalarié <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Function<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> 
+    Public ReadOnly Property Item(ByVal lIndex As Integer) As Salarié<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Item 
+    = (CType(maCol.Item(lIndex),Salarié)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Get<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Property<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> 
+    Public ReadOnly Property Count() As Integer<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Count 
+    = maCol.Count <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Get<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Property<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> 
+    Public Sub Remove(ByVal Key As String)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol.Remove(Key)
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Sub<br>
+    End Class</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    &nbsp;</p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" size="2">Pour utiliser la Classe:</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" color="#0000ff" size="2">Dim LesSalariés As New 
+    LesSalariésClasse() </font><font face="Courier New" size="2" color="#111111">
+    'création </font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" color="#0000ff" size="2">LesSalariés.Add(&quot;Philippe&quot;)&nbsp;&nbsp;&nbsp;
+    </font><font face="Courier New" size="2" color="#111111">'Ajout d'un salarié</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" size="2"><font color="#0000ff">LesSalariés.Count</font> 
+    retourne 1&nbsp;&nbsp; 'connaître le nombre de salariés</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" size="2">Pour afficher le nom du premier salarié 
+    dans une MessageBox:</font></p>
+    <font SIZE="2" face="Courier New" color="#0000FF">
+    <p>MsgBox(LesSalariés.Item(0).Nom)</p>
+    </font>
+  </blockquote>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+<font face="Courier New" size="2">Bien sur on peut utiliser une boucle
+<font color="#0000ff">For Each</font> pour avoir accès à l'ensemble des 
+salariés.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #CCCCCC">
+<font face="Courier New" color="#111111">2</font></span><font face="Courier New" color="#111111"><span style="background-color: #CCCCCC">-Créer 
+une Classe héritant de la Classe ArrayList</span></font></p>
+    <p class="code"><font face="Courier New" size="2">On crée une classe 
+    héritant de ArrayList, ensuite on va créer une méthode Add pour ajouter un 
+    Salarié et une Property permettant de lire le nom du salarié d'index i; 
+    comme il existe déjà les membres <font color="#0000FF">Add</font> et
+    <font color="#0000FF">Index</font> avec la même signature dans la classe 
+    parente, il faut remplacer ces membres, on le fait grâce à '<font color="#0000FF">Shadows</font>'.</font></p>
+    <p class="code"><font face="Courier New" size="2">Dans les nouveaux membres, 
+    on appelle les membres de la classe mère (grâce à <font color="#0000FF">
+    MyBase</font>)</font></p>
+    <p class="code"><font face="Courier New" size="2" color="#0000FF">Imports 
+    System.Collections</font></p>
+    <p class="code"><font face="Courier New" color="#0000ff" size="2">Public 
+    Class Salariés<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Inherits ArrayList<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public&nbsp; 
+    Shadows Sub Add(ByVal S As Salarié) <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->MyBase.Add(S) <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Function<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> 
+    Public Shadows ReadOnly Property Index(ByVal i As Integer) As Salarié<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Return 
+    Ctype (MyBase.Item(i), Salarié)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Get<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Property<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --> <br>
+    End Class</font></p>
+    <p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6pt; margin-bottom: 0pt">
+    <font face="Courier New" size="2">Là aussi, les éléments d'un ArrayList sont 
+    des objets; il faut donc caster en 'Salarié' à l'aide de CType l'Item de l'ArrayList:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Dans l'exemple, on a utilisé une ArrayList, il est possible d'utiliser tout 
+autre type de collections.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" color="#111111"><span style="background-color: #CCCCCC">
+3-Créer 
+une Classe héritant de la Classe CollectionBase</span></font></p>
+    <p class="code"><font face="Courier New" size="2"><font color="#0000FF">
+    CollectionBase</font> est une <b>classe abstraite</b> (ne pouvant pas être utilisée 
+    telle quelle), on peut créer une classe qui en hérite.</font></p>
+    <p class="code"><font face="Courier New" size="2">Cela tombe bien:
+    <font color="#0000FF">CollectionBase</font> contient déjà quelques fonctions 
+    propres aux collections (<font color="#0000FF">Clear</font> et
+    <font color="#0000FF">Count</font>), les fonctions qui manquent, qui 
+    n'existent pas (<font color="#0000FF">Add, Remove, Item</font>) vont être 
+    implémentées par vous et à votre manière.</font></p>
+    <p><font face="Courier New" size="2">Une propriété<b> Protected</b> appelée
+    <font color="#0000FF">List</font> est fournit par CollectionBase et utilisée 
+    pour le stockage et l'organisation interne. Quand on crée Add, Remove, Item, 
+    on utilise 
+    cette propriété List.&nbsp;&nbsp; </font></p>
+    <p class="code">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" color="#0000FF" size="2">Public Class MaCollection<br>
+Inherits System.Collections.CollectionBase</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">Public Sub Add(ByVal a As 
+Salarié)<br>
+</font><font face="Courier New" size="2" color="#008000">' Appelle la méthode 
+Add de l'objet List pour ajouter un salarié.</font><font face="Courier New" size="2" color="#0000FF"><br>
+List.Add(a)<br>
+End Sub<br>
+<br>
+End Class</font><font face="Courier New" color="#FF0000" size="2"><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font size="2" face="Courier New">Remarquons que,</font><font size="2" face="Courier New" color="#FF0000">
+</font><font size="2" face="Courier New">bien que l'objet <b>List</b> soit non 
+typé, cette méthode interdit l'ajout de tous les objets 
+n'appartenant pas aux type Salarié. Alors que CollectionBase n'était pas typée, 
+MaCollection est <b>fortement typée</b> car n'acceptant que des 'Salarié'.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">On peut aussi ajouter une méthode éliminant un 
+objet de la collection:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2"><font color="#0000FF">Public Sub Remove(ByVal 
+index as Integer)<br>
+</font><font color="#008000">' Controle.</font><font color="#0000FF"><br>
+If index &gt; Count - 1 Or index &lt; 0 Then<br>
+&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;Index non&nbsp; 
+valide!&quot;)<br>
+Else<br>
+</font><font color="#008000">' Appelle la méthode RemoveAt de l'objet List.</font><font color="#0000FF"><br>
+List.RemoveAt(index)<br>
+End If<br>
+End Sub</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">On peut enfin ajouter Item:</font></p>
+<p class="MsoNormal" style="margin-top: 0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Public ReadOnly Property 
+Item(ByVal index as Integer) As Salarié</font></font></p>
+<p class="MsoNormal" style="margin-top: 0pt">
+<font color="#0000FF" face="Courier New" size="2">Get</font>
+<font face="Courier New" size="2"><font color="#0000FF"><br>
+&nbsp;Return CType(List.Item(index), Salarié)<br>
+End Get<br>
+</font></font></p>
+<p class="MsoNormal" style="margin-top: 0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+End Property</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">Avec le Framework 2, il est possible 
+d'utiliser, au leu de ListArray, une collection générique fortement typée:
+</font><font color="#0000ff" face="Courier New" size="2">
+System.Collections.Generic.List(Of Salarié)</font><font face="Courier New" size="2">&nbsp;
+</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #CCCCCC">
+<font face="Courier New" color="#111111">4</font></span><font face="Courier New" color="#111111"><span style="background-color: #CCCCCC">-Créer 
+une Classe contenant une Classe générique</span></font></p>
+    <p class="code"><font face="Courier New" size="2">C'est possible avec le 
+    Framework 2</font></p>
+    <font face="Courier New" size="2"><font size="2">
+<p>Au lieu de créer une ArrayList dans la Classe, on peut créer une collection 
+générique (</font><font face="Courier New" color="#0000ff" size="2">System.Collections.Generic</font><font face="Courier New" size="2">)</font><font size="2"> 
+et lui imposer un type.</font></p>
+<p>Ici on va créer une collection de salariés.</p>
+    <p class="code"><font face="Courier New" size="2" color="#0000FF">Imports 
+    System.Collections</font></p>
+    <p class="code"><font face="Courier New" color="#0000ff" size="2">Public 
+    Class LesSalariésClasse<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Private 
+    maCol As </font><font color="#0000ff" size="2">
+    System.Collections.Generic.List(Of Salarié)</font><font face="Courier New" color="#0000ff" size="2"><br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+    Sub New()<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol 
+    = New </font><font color="#0000ff" size="2">System.Collections.Generic.List(Of 
+    Salarié)</font><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp; </font>'cela crée une 
+    Collection de salarié<font face="Courier New" color="#0000ff" size="2"><br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Sub<br>
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Public 
+    Function Add(ByVal Sal As Salarié)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->maCol.Add(Sal)<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Add 
+    = Sal <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Function</font></p>
+    <p class="code"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp; 
+    Public ReadOnly Property Item(ByVal lIndex As Integer) As Salarié<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Get
+    <br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->Item 
+    =  maCol.Item(lIndex) </font>&nbsp;'On a directement un Objet Salarié: pas 
+    besoin de CType<font face="Courier New" color="#0000ff" size="2"><br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Get<br>
+    <!-- #BeginLibraryItem "/Library/Tabulation de 5.lbi" -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- #EndLibraryItem -->End 
+    Property<br>
+    ...</font></p>
+    <p class="code"><font color="#0000FF">End Class</font></p>
+    </font>
+    <p class="code">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2">On peut aussi créer des<font color="#0000ff"> 
+Stack(Of..) Queue(Of..), Dictionnary(Of..) SortedList(Of..)</font>..</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#FF0000" face="Courier New" size="2">Cette méthode utilisant une collection d'objets 
+complètement encapsulés est une bonne méthode.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #CCCCCC">
+<font face="Courier New" color="#111111" size="2">Conclusion:</font></span></p>
+<p><font face="Courier New" size="2">Si une classe doit contenir des objets:</font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">Si la classe à besoin d'utiliser et d'exposer <b>
+  un petit nombre d'objets</b>, implémentez chaque objet en tant que 
+  propriété. </font></li>
+  <li><font face="Courier New" size="2">Si <b>le nombre d'objets contenus est grand</b> 
+  (et que ce nombre n'est pas connu ou pas fixe) implémentez une propriété de <b>
+  collection</b>. </font></li>
+</ul>
+<p><font face="Courier New" size="2">Si vous ne voulez pas que des applications clientes 
+puissent utiliser les objets contenus, définissez ces objets comme <b>Friend</b> 
+ou <b>Private</b>.&nbsp; </font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

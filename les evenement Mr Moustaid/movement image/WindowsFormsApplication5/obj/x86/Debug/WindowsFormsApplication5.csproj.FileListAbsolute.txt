@@ -1,0 +1,17 @@
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Form1.resources
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.csproj.GenerateResource.Cache
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.exe
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.pdb
+C:\Users\freedom\Studies\Visual studio 2010\Projects\Vendredi23-5\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.csprojResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.exe
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.pdb
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\les evenement Mr Moustaid\movement image\WindowsFormsApplication5\obj\x86\Debug\GenerateResource.write.1.tlog

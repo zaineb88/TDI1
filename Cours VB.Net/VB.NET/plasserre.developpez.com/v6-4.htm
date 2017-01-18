@@ -1,0 +1,556 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:41 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic.Net  Datareader</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.4</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Travailler avec un 
+    DataReader.</font></b></td>
+    <td width="9%" height="76"><a href="v6-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment lire rapidement 
+des enregistrements? Avec un DataReader.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment compter les 
+enregistrements? Avec ExecuteScalar</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Etudions en détail les 
+objets Connexion, Command, DataReader.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Et s'il y a une erreur ?&nbsp;
+</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Généralités: </font></span>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Un objet <b>DataReader</b> fournit des données 
+en lecture seule en un temps record. La seule possibilité est de se déplacer en 
+avant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En contrepartie de sa rapidité il monopolise 
+la connexion.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">Il faut créer un objet <b>
+Connexion</b> puis un objet <b>Command</b>, ensuite on exécute la propriété <b>
+ExecuteReader</b> pour créer l'objet <b>DataReader;</b> enfin on parcourt les 
+enregistrements avec la méthode <b>Read.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vado1.GIF" width="103" height="136"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Exemple de DataReader avec une base access.</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe une base Access nommée 'consultation.mdb', 
+elle contient une table 'QUESTIONS', dans cette table existe un champ 'NOM', je 
+veux récupérer tous les noms et les afficher rapidement dans une ListBox.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut <b>importer les NameSpaces</b> 
+nécessaires.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Data</span></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Data.OleDb</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il 
+faut <b>créer un objet connexion</b>:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+MyConnexion </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+OleDbConnection = </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">New</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OleDbConnection(&quot;Provider=Microsoft.Jet.OLEDB.4.0;Data source=&quot; &amp; _</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+&quot;C:\consultation.mdb&quot;)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut 
+donner les paramètres Provider= et Data source=</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dans le cas 
+d'une base Access le provider (le moteur à utiliser est le moteur OLEDB Jet 4.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut <b>
+créer un objet Command</b>:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+Mycommand </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OleDbCommand = MyConnexion.CreateCommand()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut <b>
+donner dans la propriété CommandText la requête SQL</b> permettant d'extraire ce 
+que l'on désire.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+Mycommand.CommandText = &quot;SELECT NOM FROM QUESTIONS&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Ici dans la 
+table QUESTIONS, on extrait le champ NOM</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut <b>
+ouvrir la connexion</b>:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+MyConnexion.Open()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut <b>
+créer un objet DataReader</b>:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+myReader </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font face="Courier New" color="#0000FF" SIZE="2"><span style="background-color: #FFFFFF"> 
+OleDbDataReader = Mycommand.ExecuteReader()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+crée une boucle permettant de <b>lire les enregistrements les uns après les 
+autres</b>, on récupère le champ (0) qui est une String, on la met dans la 
+ListBox</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Do</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">While</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+myReader.Read()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+ListBox1.Items.Add(myReader.GetString(0))</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Loop</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Remarquons que le champ récupéré est récupéré typé (ici une string grâce à 
+GeString); il y a d'autres types: <b>GetDateTime</b>, <b>GetDouble</b>, <b>
+GetGuid</b>, <b>GetInt32</b>, <b>GetBoolean, GetChar, GetFloat, GetByte, 
+GetDecimal</b> etc..; il est possible de récupérer sans typage: on 
+aurait écrit myReader(0) ou utiliser <b>GetValue </b>(on récupère un objet).</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>
+Read</b> avance la lecture des données à l'enregistrement suivant , il retourne 
+True s'il y a encore des enregistrements et False quand il est en fin de 
+fichier; cela est utilisé pour sortir de la boucle Do Loop.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+ferme pour ne pas monopoliser.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">myReader.Close()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+MyConnexion.Close()</font></span></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+aurait pu libérer la connexion automatiquement dès la lecture terminée en 
+ajoutant un argument:</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+myReader </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font face="Courier New" color="#0000FF" SIZE="2"><span style="background-color: #FFFFFF"> 
+OleDbDataReader = Mycommand.ExecuteReader(CommandBehavior.CloseConnection)</span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Simple, non!!&nbsp; (Je rigole!!)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Cela donne:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System</span></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Data</span></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Data.OleDb</span></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Imports</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+Microsoft.VisualBasic</span></font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Class</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+Form1</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Inherits</span></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Windows.Forms.Form</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Private</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> Form1_Load(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font><font SIZE="2" color="#0000FF">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">MyBase</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">.Load</span></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+MyConnexion </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+OleDbConnection = </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">New</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OleDbConnection(&quot;Provider=Microsoft.Jet.OLEDB.4.0;Data source=&quot; &amp; _</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+&quot;C:\consultation.mdb&quot;)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+Mycommand </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OleDbCommand = MyConnexion.CreateCommand()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+Mycommand.CommandText = &quot;SELECT NOM FROM QUESTIONS&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+MyConnexion.Open()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+myReader </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+OleDbDataReader = Mycommand.ExecuteReader()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Do</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">While</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+myReader.Read()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+ListBox1.Items.Add(myReader.GetString(0))</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Loop</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">myReader.Close()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+MyConnexion.Close()</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">End</span></font></font><font SIZE="2" face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Class</span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans le cas d'une <b>base SQLSERVEUR</b>, on 
+aurait les changements suivant:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Imports</span></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+System.Data.SqlClient</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">Dim 
+MyConnexion As SqlConnection = New SqlConnection(&quot;Data Source=localhost;&quot; &amp; _<br>
+&quot;Integrated Security=SSPI;Initial Catalog=northwind&quot;)</span><br>
+</font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+Mycommand </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+SqlCommand = MyConnexion.CreateCommand()</span></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+myReader </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+SqlDataReader = Mycommand.ExecuteReader()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Comment compter?</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Avec <font color="#0000FF">ExecuteScalar</font> 
+de l'objet <font color="#0000FF">Command</font> on peut récupérer les résultats 
+d'une requête Sql qui contient une instruction&nbsp; <font color="#0000FF">COUNT</font>&nbsp; 
+(comptage)&nbsp; <font color="#0000FF">AVG</font> (moyenne)&nbsp;
+<font color="#0000FF">MIN</font> (valeur minimum)&nbsp; <font color="#0000FF">
+MAX</font>&nbsp; (valeur maximum)<font color="#0000FF"> SUM</font> (somme) </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Exemple: compter le nombre de questions:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+Mycommand.CommandText = &quot;SELECT COUNT(*) FROM QUESTIONS&quot;</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">
+MyConnexion.Open()</font></span></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+iResultat </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">As</span></font></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+Integer = Mycommand.ExecuteScalar()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Voyons en détails les objets utilisés:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">L'objet Connection:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il permet de définir une connexion.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut 
+donner les paramètres 'Provider='indiquant le moteur de BD et 'Data source=' 
+indiquant le chemin et le nom de la&nbsp; BD. Il peut être nécessaire de donner 
+aussi 'Password=' le mot de passe , 'User ID='&nbsp; Admin pour l'administrateur 
+par exemple.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut 
+mettre ces paramètres avec le constructeur, ou dans 
+la propriété <b>ConnectionString</b>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dans le cas 
+d'une base Access le provider (le moteur à utiliser) est le moteur OLEDB Jet 4.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a d'autres propriétés:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>State</b> état de la connexion (Open, 
+Close, Connecting, Executing, Fetching, Broken)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Open, Close</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">ConnectionTimeOut,</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>BeginTransaction</b>, </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">L'objet Command:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour chaque provider il y a un objet Command 
+spécifique:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>SqlCommand</b>, <b>OleDbCommand</b>, mais 
+tous les objets 'Command' on la même interface, les mêmes membres. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>CommandType</b> indique comment doit 
+être traité la commande CommandText:</font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Text&nbsp; ; par défaut (exécution direct des 
+instructions SQL contenues dans CommandText)</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">StoredProcedure:&nbsp; exécution de procédure 
+stockée dont le nom est dans CommandText.</font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Tabledirect?</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Command permet de définir la commande à exécuter: 
+SELECT UPDATE, INSERT, DELETE. en utilisant le membre <b>CommandText</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(Seul SELECT retourne des données)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>CommandTimeOut</b>&nbsp; indique la durée 
+en secondes avant&nbsp; qu'une requête&nbsp; qui plante soit abandonnée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>ExecuteReader</b>&nbsp; exécute le code SQL 
+de CommandText et retourne un DataReader.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>ExecuteScalar</b> fait de même mais 
+retourne les champs de la premier colonne pour une fonction Count ou Sum.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>ExecuteNoQuery</b>&nbsp; exécute le code 
+SQL de CommandText&nbsp; (généralement une mise à jour par UPDATE, INSERT, 
+DELETE ou un ajout de table) sans retourner de données.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">L'objet DataReader
+</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour chaque provider il y a un objet 'DataReader' 
+spécifique:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>SqlDatReader</b>, <b>OleDbDataReader</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On a vu le membre <b>Read</b> qui avance la 
+lecture des données à l'enregistrement suivant , il retourne True s'il y a 
+encore des enregistrements et False quand il est en fin de fichier.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On a vu <b>GetDateTime</b>, <b>GetDouble</b>, <b>
+GetGuid</b>, <b>GetInt32</b>, <b>GetBoolean, GetChar, GetFloat, GetByte, 
+GetDecimal</b> permettant de récupérer les valeurs typées des champs.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il a bien d'autres propriétés:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>GetName</b> retourne le nom du champ 
+(numéro du champ en paramètre)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>GetOrdinal</b> fait l'inverse: retourne le 
+numéro du champ (nom en paramètre)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>FieldCount</b> retourne le nombre de 
+colonne.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>GetDataTypeName</b> retourne le nom du type 
+de donnés.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>IsDBNull</b> retourne True si le champ est 
+vide</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">......</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Exceptions:</font></span><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">
+</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Chaque SGDB a des erreurs spécifiques. Pour 
+les détecter il faut utiliser les types d'erreur spécifiques: <b>SqlException</b> 
+et <b>OleDbException</b> par exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple d'interception d'erreur:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Try</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MyConnection.Open()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Catch ex&nbsp; As OleDbException</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; MsgBox(ex.Message)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Try</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:41 GMT -->
+</html>

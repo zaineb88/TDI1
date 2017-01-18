@@ -1,0 +1,253 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.0.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:54 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic 2008 .Net nouveautés VB.Net 2008 WPF </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a>  <b><font face="Courier New" size="6" color="#800080">3.23.0</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Applications
+      et formulaires WPF.</font></b>
+    </td>
+    <td width="14%" height="76"><a href="v3-23.1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Les contrôles WPF font partie de l'espace de nom <font color="#0000FF">System.Windows.Controls</font>
+(ne pas confondre avec <font color="#0000FF">System.Windows.Forms</font>&nbsp;des
+contrôles Winforms habituels)&nbsp;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Structure
+d'une application:</span></font></b>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Créons
+une application <b> WPF</b> nommée <b>MonApplicationWPF</b> dans VB. Un formulaire
+Window1 est crée. On y ajoute un module&nbsp; et une Classe.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">L'explorateur
+de solution en haut à droite permet de voir de quoi se compose le projet.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfsolution.JPG" width="168" height="181">
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" size="3"><u>MyProjet</u></font></b>
+<font face="Courier New" size="2">
+donne accès aux propriétés du projet.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><u><font face="Courier New" size="3">Application.xaml</font></u></b>
+<font face="Courier New" size="2">
+est le fichier d'application:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font COLOR="#a31515">Application</font><font COLOR="#ff0000">
+x</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">Class</font></font><font face="Courier New" COLOR="#0000ff">=&quot;Application&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#ff0000">xmlns</font></font><font face="Courier New" COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#ff0000">xmlns</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">x</font></font><font face="Courier New" COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#ff0000">StartupUri</font></font><font face="Courier New" COLOR="#0000ff">=&quot;Window1.xaml&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Application.Resources</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Application.Resources</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;/</font><font COLOR="#a31515" face="Courier New">Application</font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<blockquote>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">Si
+    l'application a été créée dans Blend, on peut voir dans vb que cela
+    diffère un peu:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+<b><font face="Courier New" size="2">App.xaml</font></b>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Application</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">xmlns</font><font COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">xmlns</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">x</font><font COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">x</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">Class</font><font COLOR="#0000ff">=&quot;App&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">StartupUri</font><font COLOR="#0000ff">=&quot;Window1.xaml&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Application.Resources</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">&lt;!--
+Les ressources r‚parties au niveau Application sont d‚finies ici. --&gt;</font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Application.Resources</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515" face="Courier New">Application</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+y a aussi:</font></p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+<b><font face="Courier New" size="2">AssemblyInfo.vb</font></b>
+</p>
+  </blockquote>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+<b><font face="Courier New" size="3"><u>Class1.vb</u></font></b> 
+<font face="Courier New" size="2"> et </font>
+ <b><font face="Courier New" size="3"><u>Module1.vb</u></font></b>
+<font face="Courier New" size="2">
+correspondent à la Classe et au module.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+<b><font face="Courier New" size="3"><u>Window1.xaml</u></font>
+<font face="Courier New" size="2">
+ </font>
+ </b>
+<font face="Courier New" size="2">
+contient le code xaml décrivant le formulaire Window1.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">xmlns</font><font COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">xmlns</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">x</font><font COLOR="#0000ff">=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">x</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">Class</font><font COLOR="#0000ff">=&quot;Window1&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">x</font><font COLOR="#0000ff">:</font><font COLOR="#ff0000">Name</font><font COLOR="#0000ff">=&quot;Window&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">Title</font><font COLOR="#0000ff">=&quot;Window1&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#ff0000">Width</font><font COLOR="#0000ff">=&quot;640&quot;</font><font COLOR="#ff0000">
+Height</font><font COLOR="#0000ff">=&quot;480&quot;&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#a31515"><font COLOR="#0000ff">&lt;</font>Grid<font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Grid</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515" face="Courier New">Window</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dans
+un formulaire, il y a toujours en conteneur parent, ici c'est &lt;Grid&gt;. </font><font face="Courier New" size="2">Si
+l'application avait été créée dans Blend cela serait &lt;FlowPanel&gt;.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+<b><u><font face="Courier New" size="3">Window1.xaml.vb</font></u>
+<font face="Courier New" size="2">
+ </font>
+ </b>
+<font face="Courier New" size="2">
+contient le code vb:</font>
+</p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Class</font><font face="Courier New">
+Window1</font></font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">End</font><font face="Courier New">
+</font><font face="Courier New" COLOR="#0000ff">Class</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">
+&nbsp;
+</p>
+<blockquote>
+  <blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si
+l'application a été créée dans Blend, on peut voir dans vb que cela diffère
+un peu:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.IO</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Net</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows.Controls</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows.Data</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows.Media</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows.Media.Animation</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Windows.Navigation</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Imports</font>
+System.Xml</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Public</font>
+<font COLOR="#0000ff">Class</font> Window1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Public</font>
+<font COLOR="#0000ff">Sub</font> <font COLOR="#0000ff">New</font>()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">MyBase</font>.New()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Me</font>.InitializeComponent()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">'
+Ins‚rez le code requis pour la cr‚ation d'objet sous ce point.</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Class</font></font></p>
+  </blockquote>
+</blockquote>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;</p>
+</font>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Ouvrir
+une fenêtre:</span></font></b></p>
+<p><font face="Courier New" size="2">Ajouter une fenêtre au projet:</font></p>
+<p><font face="Courier New" size="2">Menu 'Projet', puis 'Ajouter une fenêtre'.</font></p>
+<p><img border="0" src="vwpffen.JPG"></p>
+<p><font face="Courier New" size="2">Cliquer sur Fenêtre WPF puis sur le bouton
+'Ajouter'.</font></p>
+<p><font face="Courier New" size="2">On a crée une seconde fenêtre nommée
+Window2</font></p>
+<p><font face="Courier New" size="2">Dans le code vb de la première fenêtre,
+comment ouvrir Window2?&nbsp;</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim w As New Window2</font></p>
+<p><font SIZE="2"><font face="Courier New" size="2" color="#0000FF">w.Show()</font></p>
+</font>
+<p style="margin-top: 6.0pt" align="left">
+ou
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font SIZE="2"><font face="Courier New" size="2" color="#0000FF">w.ShowDialog() </font><font face="Courier New" size="2">pour
+ouvrir une fenêtre modale.</font>
+</font>
+</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-23.1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.0.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:23:56 GMT -->
+</html>

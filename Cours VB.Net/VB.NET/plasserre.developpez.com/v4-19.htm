@@ -1,0 +1,367 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-19.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  les ressources</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="2" color="#0000FF">Site</font></b><font size="2"><img border="0" src="ldf.GIF" width="121" height="51"></font><font color="#0000FF" size="2">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Courier New" size="6" color="#0000FF">&nbsp;</font><font face="Courier New" size="7" color="#0000FF">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="79">
+  <tr>
+    <td width="29%" height="79" align="center">
+    <font face="Courier New" size="2"><a href="v4-18.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> </font><b>
+    <font face="Courier New" size="6" color="#800080">4.19</font></b></td>
+    <td width="52%" height="79" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les 'Ressources'.</font></b></td>
+    <td width="9%" height="79"><font face="Courier New" size="2">
+    <a href="v4-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+    <td width="11%" height="79"><p><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></p>
+    </td>
+  </tr>
+</table>
+<p align="center"><img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#800080"><b><font face="Courier New" size="2">
+Ressources: Document informatique de toute nature (texte, image, son, 
+programme).</font></b><br>
+&nbsp;</font></p>
+<p align="left"><font face="Courier New" size="2">Une ressource est une donnée 
+non exécutable qui est déployée logiquement avec une application.</font></p>
+<p align="left"><font face="Courier New" SIZE="2">Les ressources sont un 
+ensemble d'éléments,: images, icônes, textes(chaînes), sons, fichiers ou autres 
+qui sont utilisées par le programme. Elles sont contenues dans un fichier
+<font color="#0000FF">.resx </font>et dans un répertoire de ressource.</font></p>
+<p align="left">&nbsp;</p>
+<p><font color="#0000FF" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Intérêt des 
+ressources?</span></font></p>
+<p><b><font face="Courier New" size="2">Si j'ai une image à utiliser dans un 
+contrôle, pourquoi ne pas la mettre directement dans la propriété de mon 
+contrôle?</font></b></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Vous créer cette image, si une semaine 
+  plus tard vous trouvez une image hyper meilleur, avec les ressources, vous 
+  n'avez plus qu'à la placer dans le répertoire Ressources à la place de votre 
+  précédente image. Vous recompilez et c'est fait.</font></p>
+  <p><font face="Courier New" size="2">Si vous avec une même image qui est 
+  utilisée à plusieurs endroit de votre application, avec les ressources, vous 
+  n'aurez qu'une seule ressource (donc diminution en taille de l'exe) et une 
+  facilité de maintenance: plus besoin d'effectuer la modification partout où 
+  l'image est utiliser.</font></p>
+  <p><font face="Courier New" size="2">Enfin si vous voulez écrire une version 
+  de votre exécutable en français et en Anglais, avec les ressources, il n'est 
+  pas nécessaire d' écrire 2 programmes, il suffit de faire 2 fichiers de 
+  ressources.</font></p>
+  <p>&nbsp;</p>
+</blockquote>
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-weight: 700">Les types</span></font></span><font color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0"> 
+de ressource?</span></font></p>
+<p><font face="Courier New" size="2">Les types de ressources sont <b>Chaînes</b>,
+<b>Images</b>, <b>Icônes</b>, <b>Audio</b>, <b>Fichiers</b> et <b>Autre</b>. <b>
+Chaînes</b> est l'affichage par défaut.</font></p>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Chaînes</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche des chaînes dans une grille de 
+  paramètres avec les colonnes <b>Nom</b>, <b>Valeur </b>et <b>Commentaire</b> . 
+  Vous pouvez accéder aux paramètres au moment de l'exécution via My.Resources 
+  en tant que
+  <MSHelp:link tabIndex="0" keywords="T:System.String">String</MSHelp:link>. 
+  Pour une description des colonnes dans cette grille, consultez la rubrique 
+  &quot;Grille des paramètres&quot; ci-après.</font></dd>
+</dl>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Images</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche tous les fichiers image, y 
+  compris les formats .bmp, .jpg .png et .gif. Ces fichiers sont exposés au 
+  moment de l'exécution en tant que
+  <MSHelp:link tabIndex="0" keywords="T:System.Drawing.Bitmap">Bitmap</MSHelp:link>.
+  </font></dd>
+</dl>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Icônes</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche les fichiers icône (* .ico) qui 
+  sont exposés en tant que
+  <MSHelp:link tabIndex="0" keywords="T:System.Drawing.Icon">Icon</MSHelp:link>.</font></dd>
+</dl>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Audio</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche les fichiers audio, y compris 
+  les fichiers .wav, .wma et .mp3. Ces fichiers sont exposés en tant que 
+  tableaux d'octets. Le double-clic sur un élément audio permet de l'ouvrir et 
+  de le jouer dans Lecteur Windows Media.</font></dd>
+</dl>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Fichiers</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche tous les fichiers qui n'entrent 
+  pas dans les catégories précitées. Les éléments dans cet affichage peuvent 
+  être des fichiers texte exposés en tant que <b>String</b> ou des fichiers 
+  binaires exposés en tant que tableaux d'octets.</font></dd>
+</dl>
+<dl>
+  <dt><font face="Courier New" size="2"><b>Autres</b> </font></dt>
+  <dd><font face="Courier New" size="2">Affiche une grille de paramètres pour 
+  ajouter d'autres types qui prennent en charge la sérialisation de chaînes (par 
+  exemple, <b>Font</b>, <b>Enum</b>, <b>Color </b>et <b>Point</b>). La grille 
+  contient les colonnes suivantes&nbsp;: <b>Nom</b>, <b>Type</b>, <b>Valeur</b> et <b>
+  Commentaire</b>.</font></dd>
+  <dt>&nbsp;</dt>
+</dl>
+<p align="left"><span style="background-color: #C0C0C0">
+<font size="4" color="#0000FF"><span style="font-weight: 700">Voir</span></font></span><font color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0"> 
+les ressources:</span></font></p>
+<p align="left"><font face="Courier New" SIZE="2">Pour voir les ressources, il 
+faut aller dans les propriétés du projet: double cliquez sur MyProjet 
+dans l'explorateur de solution ou menu 'Projet'=&gt;'Propriétés de..', Onglet 
+'Ressources')</font></p>
+<p align="left"><font face="Courier New" size="2">On voit immédiatement les 
+Chaînes; il est possible de voir les autres types de ressources en déroulant la 
+liste à gauche.</font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><img border="0" src="vressourc.JPG" width="525" height="205"></p>
+<p align="left"><font face="Courier New" size="2">Ici on voit une ressource 
+'chaîne' qui se nomme 'toto' (c'est nul!!) et qui contient &quot;2&quot;. </font></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0">
+Ajouter des ressources:</span></font></p>
+<p align="left"><font face="Courier New" size="2"><b>1-Mettre du texte dans une ressources</b></font></p>
+<p align="left"><font face="Courier New" size="2">Si nécessaire<b> </b></font><font face="Courier New" size="2">
+dérouler la liste à gauche et cliquez sur 'Chaînes'.</font></p>
+<p align="left"><font face="Courier New" size="2">2 manières d'ajouter une 
+chaîne:</font></p>
+<p align="left"><font face="Courier New" size="2">Cliquez sur le bouton 'Ajouter 
+une ressource' puis sur 'Ajouter une nouvelle chaîne'. le curseur se retrouve 
+dans la zone de saisie du nouveau nom: tapez le nom puis la valeur.</font></p>
+<p align="left"><font face="Courier New" size="2">Ou cliquez directement dans la 
+zone&nbsp; du nom sur la ligne '*', tapez le nom puis la valeur.</font></p>
+<p align="left"><img border="0" src="vressourc1.JPG" width="396" height="167"></p>
+<p align="left"><font face="Courier New" size="2">L'enregistrement est 
+automatique.</font></p>
+<font SIZE="2">
+<p align="left"><b><font face="Courier New">2-Mettre le dessin dans les 
+ressources:</font></b></p>
+<p align="left"><font face="Courier New">Aller dans les ressources </font></p>
+<p align="left"><font face="Courier New">Dérouler la liste à gauche pour y 
+mettre 'Images' puis cliquer sur 'ajouter une ressource'; on vous demande le nom 
+de la ressource (tapez par exemple 'button_blue'), vous vous trouver dans Paint, 
+dessinez (ou collez) l'image de votre bouton. Puis menu 
+'Fichier'=&gt;'Enregistrer': le dessin apparaît dans les ressources. Fermez Paint.</font></p>
+<p align="left">
+<img border="0" src="vbeaubuton1.JPG" width="317" height="202"></p>
+</font>
+<p align="left">&nbsp;</p>
+<p align="left"><span style="background-color: #C0C0C0">
+<font size="4" color="#0000FF"><span style="font-weight: 700">Ou se trouvent l</span></font></span><font color="#0000FF" size="4"><span style="font-weight: 700; background-color: #C0C0C0">es ressources:</span></font></p>
+<p><font face="Courier New" size="2">Dans l'explorateur de solutions, on voit 
+bien le répertoire de ressources et la ressource qui vient d'être créee (le 
+fichier Image1.bmp par exemple)</font></p>
+<blockquote>
+<p>&nbsp;</p>
+</blockquote>
+<p><img border="0" src="vressourc2.JPG" width="455" height="250"></p>
+<blockquote>
+<p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" size="2">On peut d'ailleurs aller dans ce répertoire 
+et modifier la ressource, remplacer le fichier par un autre, la modification est 
+immédiatement mise à jour dans VB.</font></p>
+<p><font face="Courier New" size="2">Vous créer une image, si une semaine 
+  plus tard vous trouvez une image hyper meilleur, vous n'avez plus qu'à la 
+placer dans le répertoire Ressources à la place de votre précédente image. </font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><b>
+Modifier</b></font></span><font color="#0000FF" size="4"><b><span style="background-color: #C0C0C0">
+une ressource </span></b></font></p>
+<p><font face="Courier New" size="2">Une image par exemple:</font></p>
+<p><font face="Courier New" size="2">Cliquez sur la ressource, puis cliquez avec 
+le bouton droit; dans le menu:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2"><b>Ouvrir</b>: ouvre l'éditeur par défaut (Paint 
+pour une image)</font></p>
+<p><font face="Courier New" size="2"><b>Ouvrir avec</b> : permet de modifier la 
+ressource avec un autre programme.</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><font color="#0000FF" size="4"><b><span style="background-color: #C0C0C0">
+Utiliser une ressource dans le programme:</span></b></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Les 
+ressources&nbsp; sont accessibles par leur nom dans la Classe
+<font color="#0000FF">My.Ressources</font>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Mettre le texte d'un ressource dans la barre de titre d'un formulaire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span codeLanguage="VisualBasic">Me.Text = My.Resources.Form1Title</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Mettre une ressource image dans le plan BackGround d'un formulaire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span codeLanguage="VisualBasic">Me.BackgroundImage = 
+My.Resources.Form1Background<br>
+&nbsp;</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Mettre une ressource image dans le plan BackGround d'un bouton:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF" SIZE="2">MyButton.BackGroundImage= 
+MonProgramme.My.Ressources.Ressources.button_Blue</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+(voir&nbsp; 3-3 pour un exemple complet)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Mettre une ressource icône comme icône d'un formulaire:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span codeLanguage="VisualBasic">
+<font color="#0000FF" face="Courier New" size="2">Me.Icon = My.Resources.MyIcon</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Jouer un son qui est dans les ressources.</font><span codeLanguage="VisualBasic"><font color="#0000FF" face="Courier New" size="2"><br>
+My.Computer.Audio.Play(My.Resources.Form1Greeting, AudioPlayMode.Background)</font><font face="Courier New" size="2"><br>
+&nbsp;</font></span></p>
+<p><font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Ressources localisées:</span></b></font></p>
+<p><font face="Courier New" size="2">On a parfois besoin d'avoir des ressources 
+pour différentes langues. (Texte des boutons en Français ou en Anglais par 
+exemple)</font></p>
+<p><font face="Courier New" size="2">Pour chaque culture faire un fichier .resx</font></p>
+<p><font face="Courier New" size="2">En fait, copier le fichier de ressources et 
+attribuer au fichier de ressources le nouveau nom Resources.<i>CultureSignature</i>.resx&nbsp;</font></p>
+<p><font face="Courier New" size="2">Il semble que les fichiers de ressources 
+de la langue par défaut soit dans le répertoire ressources avec l'extension .resx 
+et que pour chaque&nbsp; autre culture, un sous-répertoire soit nécessaire&nbsp; (sous-répertoire 
+nommé&nbsp; 'fr', 'en-us'..) Enfin dans ce sous répertoire, le fichier&nbsp; se nomme monprogramme.Fr-fr.resx 
+A vérifier!!&nbsp;
+</font></p>
+<p><font face="Courier New" size="2">Quand la culture de l'ordinateur change, le fichier de 
+ressources correspondant est utilisé.</font></p>
+<p><font face="Courier New" size="2">Exemple: ici on modifie la culture puis on 
+utilise la ressource correspondante.</font></p>
+<p><font face="Courier New" size="2"><span codeLanguage="VisualBasic">&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Dim Currentculture As String = 
+My.Application.UICulture.Name<br>
+&nbsp;&nbsp;&nbsp; My.Application.ChangeUICulture(&quot;fr-FR&quot;)<br>
+&nbsp;&nbsp;&nbsp; MsgBox(My.Resources.MyMessage)<br>
+&nbsp;&nbsp;&nbsp; My.Application.ChangeUICulture(Currentculture)</font><br>
+&nbsp;</span></font></p>
+<p><font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Ressources liées ou incorporées</span></b></font></p>
+<p><font face="Courier New" size="2">Les projets Visual Studio fournissent deux 
+options différentes pour gérer les ressources&nbsp;: celles-ci peuvent être liées 
+(par défaut) ou incorporées. S'il est possible d'avoir à la fois des ressources 
+liées et incorporées dans un même projet, il est plus pratique dans la plupart 
+des cas de choisir une option pour toutes les ressources du projet.</font></p>
+<p><font face="Courier New" size="2">Les ressources liées sont stockées comme 
+des fichiers dans le projet. Pendant la compilation, les données de ressources 
+sont extraites des fichiers et placées dans le manifeste de l'application. Le 
+fichier de ressources (.resx) de l'application stocke uniquement un chemin 
+d'accès relatif ou un lien au fichier sur le disque.</font></p>
+<p><font face="Courier New" size="2">Avec les ressources incorporées, les 
+données de ressources sont stockées directement dans le fichier .resx dans une 
+représentation textuelle des données binaires. </font></p>
+<p><b><font face="Courier New" size="2">Dans l'un et l'autre cas, les données de 
+ressources sont compilées dans le fichier exécutable.</font></b></p>
+<p><font face="Courier New" size="2">Les ressources peuvent passer de la valeur 
+«&nbsp;liées&nbsp;» à «&nbsp;incorporées&nbsp;» en modifiant la propriété <b>Persistence</b> 
+du fichier de ressources.</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">Dans la fenêtre <b>Propriétés</b>, 
+sélectionnez la propriété <b>Persistance</b> et affectez-lui la valeur <b>
+Incorporé dans .resx</b>.</font></p>
+<p><font face="Courier New" size="2">Dans la fenêtre <b>Propriétés</b>, 
+sélectionnez la propriété <b>Persistance</b> et affectez-lui la valeur <b>Lié au 
+moment de la compilation</b>.</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">Les ressources incorporées sont le meilleur 
+choix si vous devez partager des fichiers de ressources d'application (.resx) 
+entre plusieurs projets. Par exemple, si vous disposez d'un fichier de 
+ressources communes contenant des informations telles que les logos et les 
+informations relatives aux marques de votre société, l'utilisation de ressources 
+incorporées signifie que vous pouvez vous contenter de copier le fichier .resx 
+et non les fichiers de données de ressources associés.</font></p>
+<p><font face="Courier New" size="2">Vous ne pouvez pas modifier directement les 
+ressources incorporées. Si vous tentez de modifier une ressource incorporée, un 
+message vous invitant à convertir l'élément en ressource liée afin de la 
+modifier s'affichera&nbsp;; la conversion est recommandée mais facultative. Vous 
+devez les exporter, effectuer vos modifications dans un programme externe, puis 
+les réimporter dans votre projet.</font></p>
+<p><font face="Courier New" size="2">Les ressources de type chaîne sont toujours 
+incorporées et ne peuvent pas être modifiées. Les ressources de fichier sont 
+toujours liées et ne peuvent pas être modifiées.</font></p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Comment cela marche?</font></b></span></p>
+<p><font face="Courier New" size="2">Quand on ajoute par exemple une image aux 
+ressources, VB crée (si ce n'est déjà fait), un 
+répertoire Ressources dans votre projet. Puis il copie votre fichier image dans 
+ce répertoire. Ensuite, il crée (ou modifie) un fichier .resX avec une référence 
+vers le fichier image correspondant et une classe interne Ressources. Cette dernière possède des propriétés en lecture
+seule statiques qui retournent les ressources.</font></p>
+<p><b><font face="Courier New" size="2">A la compilation, ces images seront incluses dans votre exécutable.</font></b></p>
+<p><font face="Courier New" size="2">Vous créer cette image, si une semaine plus 
+tard vous trouvez une image hyper meilleure, vous n'avez plus qu'à la placer dans 
+le répertoire Ressources à la place de votre précédente image. Vous recompilez 
+et c'est fait.</font></p>
+<p>&nbsp;</p>
+<dl>
+<dd>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-18.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></font></td>
+    <td width="25%" height="51"><font face="Courier New" size="2">
+    <a href="v4-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></font></td>
+  </tr>
+</table>
+</dd>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-19.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:59 GMT -->
+</html>

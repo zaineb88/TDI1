@@ -1,0 +1,339 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-20.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net génériques</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v8-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.20</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les génériques VB 2005.</font></b></td>
+    <td width="14%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Super complexe? non!!</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Définition.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">A 
+partir de VB </font><img border="0" src="v2005.JPG" width="52" height="21"></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Un type générique (generic) permet de créer une Classe, ou une procédure,&nbsp; ayant des <b>Data Types non définis 
+au départ</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+En d'autres termes, les paramètres et variables n'ont pas de type: ce ne sont 
+pas des Strings, des Integers.. Ce sont des génériques. Quand on utilise la 
+Classe ou la procédure, on indique le type.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Les
+génériques nous permettent de définir un comportement ou un algorithme commun
+sur les types ou un sous ensemble de types .Net. Ils sont un moyen de mutualiser
+un comportement.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Créons une classe MyClasse; <font color="#0000ff">Of</font> permet d'indiquer le 
+generic:</font></p>
+<div class="code" xmlns>
+  <span codeLanguage="other">
+  <table cellSpacing="0" cellPadding="0" width="100%">
+    <tr>
+      <td colSpan="2">
+      <pre><font face="Courier New" color="#0000ff">Public Class MyClasse<b>(Of t)</b>
+        </font><font face="Courier New" color="#FF0000">' Insérer le code qui utilise le data type t.</font></pre>
+      <pre><font face="Courier New" color="#0000ff">	</font><span codeLanguage="other"><font face="Courier New" color="#0000ff">Dim tempItem <b>As t</b></font></span></pre>
+      <pre><font face="Courier New" color="#0000ff">
+End Class</font></pre>
+      <pre>Ici t est le 'generic'; t pourra être une entier, une string....</pre>
+      <pre><font face="Courier New">On peut ensuite utiliser cette classe avec des Integer ou des String:</font></pre>
+      </td>
+    </tr>
+  </table>
+  </span>
+</div>
+<div class="code" xmlns>
+  <span codeLanguage="other">
+  <table cellSpacing="0" cellPadding="0" width="100%">
+    <tr>
+      <td>
+      <pre><font face="Courier New" color="#0000ff">Public UneClass As New MyClasse<b>(Of Integer)</b>
+Friend stringClass As New MyClasse<b>(Of String)</b></font></pre>
+      </td>
+    </tr>
+  </table>
+  </span>
+</div>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<pre class="code"><span style="background-color: #C0C0C0"><font size="4" color="#0000FF">Exemple de <b>Fonction</b> utilisant un 'generic'<b>.</b></font></span></pre>
+<pre class="code"><b>P<font size="2">ermettant d'en comprendre l'intérêt:</font></b></pre>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Créons une sub Swap fonctionnant pour tous les types de données:</p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+Private Sub Swap(Of </font></font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">ItemType) (ByRef v1 As 
+ItemType, ByRef v2 As ItemType)</font></p>
+<blockquote>
+  <p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+  <font color="#0000FF" face="Courier New" size="2">Dim temp As </font>
+  <font FACE="Courier New"><font color="#0000FF" size="2">ItemType</font></p>
+  </font><font FACE="Courier New" size="2">
+  <p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+  temp = v1</font></p>
+  <p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+  v1 = v2</font></p>
+  <p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+  v2 = temp</font></p>
+</blockquote>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+End Sub</font></p>
+<p ALIGN="LEFT">Notons que en plus des 2 paramètres V1 et V2 à 'swapper' ,&quot;Of ItemType&quot;&nbsp; indique le type de donnée qui doit être utilisé.</p>
+<p ALIGN="LEFT">Si on a 2 entiers&nbsp; à swapper, il faut appeler la fonction 
+Swap comme cela:</p>
+<p ALIGN="LEFT"><font color="#0000FF">Swap(Of Integer)(v1, v2)</font></p>
+<p ALIGN="LEFT">Si c'est des Strings:</p>
+<p ALIGN="LEFT"><font color="#0000FF">Swap(Of String)(v1, v2)</font></p>
+<p ALIGN="LEFT">Le JIT compile la fonction Swap comme si elle avait été 
+écrite pour des Strings.</p>
+</font>
+<p ALIGN="LEFT"><font face="Courier New" size="2">Sans les génériques j'aurais
+du écrire plusieurs routines de code pour chaque Type. Or en utilisant les génériques
+cette redondance peut être évitée.</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><span style="background-color: #C0C0C0">
+<font color="#0000FF" face="Courier New" size="3">Exemple de <b>Classe</b>&nbsp; utilisant un
+'generic'.</font></span></p>
+<font FACE="Courier New" size="2">
+<p ALIGN="LEFT">De la même manière, on peut créer une Classe entièrement 
+générique:</p>
+<p ALIGN="LEFT"><font color="#0000FF">Public Class SomeClass(Of ItemType)</font></p>
+<blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">Private internalVar as ItemType&nbsp;&nbsp;&nbsp;
+</font><font color="#FF0000">' variable generic</font></p>
+  <blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">Public Function SomeMethod(ByVal value As 
+ItemType) As ItemType</font></p>
+<p ALIGN="LEFT"><font color="#FF0000">'Fonction acceptant un generic comme 
+paramètre</font></p>
+  </blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">End Function</font></p>
+</blockquote>
+<p ALIGN="LEFT"><font color="#0000FF">End Class</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p ALIGN="LEFT"><span style="background-color: #C0C0C0">
+<font size="4" color="#0000FF" face="Courier New">Exemple de <b>Collection</b>&nbsp; utilisant un 'generic'</font></span></p>
+<font FACE="Courier New" size="2">
+<font SIZE="2">
+<p>On peut créer une collection générique (</font><font SIZE="2" FACE="Courier New" COLOR="#0000ff">System.Collections.Generic</font><font SIZE="2" FACE="Courier New">)</font><font SIZE="2"> 
+et lui imposer un type.</p>
+<p>Exemple: créons une collection de String : <font FACE="Courier New" size="2"><font SIZE="2" color="#0000FF">List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2"><font color="#0000FF">)</font>.</font></font></p>
+<p><font SIZE="2" FACE="Courier New" color="#0000FF">D</font></font><font SIZE="2" COLOR="#0000ff">im</font><font SIZE="2" color="#0000FF"> 
+l </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+System.Collections.Generic.List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2"><font color="#0000FF">)</font></p>
+<p><font color="#0000FF">l.Add(</font></font><font SIZE="2" COLOR="#0000FF">&quot;toto&quot;</font><font SIZE="2"><font color="#0000FF">)&nbsp;&nbsp;&nbsp;
+</font>'On ajoute une string</p>
+<p></font><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+S </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2" color="#0000FF"> 
+= l.Item(0) </font><font SIZE="2">' l'item est bien typé : même avec 'Option 
+Strict=on' pas besoin de CType.</font> </p>
+  <p>Habituellement les collections contiennent des objets; ici c'est une
+  collection de String. </p>
+  <blockquote>
+    <p>Je ne peux y mettre que des String (sinon cela provoque une erreur) </p>
+    <p>Comme par définition c'est des string, il n'y a pas de conversion
+    String=&gt;Objet et Objet=&gt;String (pas de boxing/unboxing) </p>
+  </blockquote>
+  <p>&nbsp; </p>
+<p ALIGN="LEFT">On peut aussi créer des<font color="#0000FF"> Stack(Of..) 
+Queue(Of..), Dictionnary(Of..) SortedList(Of..)</font>..</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font><font FACE="Courier New" size="4" color="#0000FF">
+<p ALIGN="LEFT"><span style="background-color: #C0C0C0"><b>Intérêts des 
+génériques ?</b></span></p>
+</font><font FACE="Courier New" size="2">
+<p ALIGN="LEFT">Pourquoi ne pas utiliser des types 'Object', à la place des 
+génériques?</p>
+<p ALIGN="LEFT">Les génériques sont <b>fortement typés.</b></p>
+<p ALIGN="LEFT">Ils sont<b> plus rapides </b>que l'usage des objets.</p>
+<p ALIGN="LEFT">S'il y a erreur, elle se produit probablement à la compilation et pas au RunTime.</p>
+<p ALIGN="LEFT">Cela permet d'utiliser l'intellisense.</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<font FACE="Courier New" size="4" color="#0000FF">
+<p ALIGN="LEFT">
+<font FACE="Courier New" size="2">
+<font face="TT20CBo00" color="#0000ff" size="4"><b>
+<span style="BACKGROUND-COLOR: #c0c0c0">En VB<img src="v2005.JPG" border="0" width="52" height="21"></span></b></font><font face="TT20CBo00" color="#0000ff" size="4"><b><span style="BACKGROUND-COLOR: #c0c0c0">:</span></b></font></font><span style="background-color: #C0C0C0"><b> 
+il y a</b></span><b><span style="background-color: #C0C0C0"> des classes 
+permettant l'usage de génériques:</span></b></p>
+</font>
+<font FACE="Courier New" size="2">
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b>Exemple:</b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b>On peut utiliser des méthodes génériques pour travailler sur les tableaux.</b></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+Exemple recherche dans un tableau de short nommé monTab l'élément 2</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">index= Array.indexOf (Of 
+Short)(monTab, 2) </font><font face="Courier New" size="2" color="#111111">est
+<b>hyper plus rapide</b> que</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">index= Array.indexOf (monTab, 
+2) </font><font face="Courier New" size="2" color="#111111">car la première 
+version avec généric est directement optimisée pour les Short.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+Il est est de même pour Binarysearch et Sort.</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#111111">Cela est valable pour les 
+types 'valeur' (peu d'intérêts pour les strings par exemple).</font></p>
+<font face="TT20CBo00" color="#0000ff" size="4">
+<p align="left"><b><span style="BACKGROUND-COLOR: #c0c0c0">En VB<img src="v2005.JPG" border="0" width="52" height="21"></span></b></font><font face="Courier New" size="2"><span style="BACKGROUND-COLOR: #c0c0c0"><font face="TT20CBo00" color="#0000ff" size="4"><b>:il 
+y a les Collections 'generic' ou 'Specialized'</b></font></span><font size="2"><b><font color="#111111">
+</font></b></font></font></p>
+<p align="left"><font size="2"><b><font color="#111111">Collections génériques:</font></b></p>
+<p>On peut créer une collection générique (</font><font face="Courier New" color="#0000ff" size="2">System.Collections.Generic</font><font face="Courier New" size="2">)</font><font size="2"> 
+et lui imposer un type.</p>
+<p>Exemple: créons une collection de String (<font face="Courier New" size="2"><font color="#0000ff" size="2">List(Of 
+String</font><font size="2"><font color="#0000ff">)</font>): Elle est typée car 
+elle ne peut contenir que des 'String'.</font></font></p>
+<p><font face="Courier New" color="#0000ff" size="2">D</font></font><font color="#0000ff" size="2">im 
+l As New System.Collections.Generic.List(Of String</font><font size="2"><font color="#0000ff">)</font></p>
+<p>Il s'agit d'une List avec <b>Index</b>.</p>
+<p><font color="#0000ff">l.Add(</font></font><font color="#0000ff" size="2">&quot;toto&quot;</font><font size="2"><font color="#0000ff">)&nbsp;&nbsp;&nbsp;
+</font>'On ajoute une string</p>
+<p></font><font color="#0000ff" size="2">Dim S As String = l.Item(0) </font>
+<font size="2">' l'item est bien typé : même avec 'Option Strict=on' pas besoin 
+de CType.</font><font color="#0000ff" size="2"> </p>
+</font>
+<p align="left">&nbsp;</p>
+<p align="left">Il y a aussi de nouveaux types de collections génériques </p>
+<p align="left">Les <font color="#0000ff">&nbsp;Dictionnary(Of..) </font>avec Clé et 
+valeur</p>
+<p align="left">Les <font color="#0000ff">&nbsp;SortedDictionnary(Of..) </font>avec 
+Clé et valeur trié.</p>
+<p align="left"><font color="#111111">Les</font><font color="#0000ff"> 
+LinkedList(Of..) </font>Liste Chaînée, chaque élément comportant une propriété<font color="#0000ff"> 
+Value, Next et Previous.</font></p>
+<font color="#111111" size="2">
+<p>Les <font face="Courier New" size="2"><font color="#0000ff">SortedList(Of..)</font>..</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Les Stack(Of..)</font></p>
+</font><font size="2">
+<p>Les</font><font color="#111111" size="2"><font face="Courier New" color="#0000ff" size="2"> 
+Queue(Of..)</font></p>
+<p>&nbsp;</p>
+<p><b>Collections spécialisées:</b></p>
+<p>L'espace</font><font color="#0000ff" size="2">
+<font face="Courier New" size="2">System.Collections.Specialized </font></font>
+<font color="#111111" size="2" face="Courier New">fournit de nouveau type de 
+collection très spécifiques:</font></p>
+<p><font color="#111111">Exemple: ListDictionary avec Clé et Valeur:</font></p>
+<font color="#0000ff" size="2">
+<p>Dim l As New</font><font size="2"><font color="#0000ff"> 
+System.Collections.Specialized.ListDictionary</font></p>
+<p><font color="#0000ff">l.Add(2, </font></font><font color="#0000ff" size="2">
+&quot;toto&quot;)</p>
+</font>
+<p align="left">On peut aussi créer des collections 'composées'</p>
+<span codeLanguage="other">
+<pre><font face="Courier New" color="#0000ff">Dim genericColl As New System.Collections.Generic.Dictionary(Of String, String)</font></pre>
+</span>
+<p align="left"><font color="#0000ff">g</font><span codeLanguage="other"><font color="#0000ff">enericColl.Add(&quot;PremiereClé&quot;, 
+item1)</font></span></p>
+<p align="left"><font color="#0000ff">BitVector32 </font>est un type de 
+collection qui contient des Booléens ou des entiers.<span codeLanguage="other"><br>
+</span><font color="#0000ff">StringCollection </font>est un type de collection 
+String.</p>
+<p align="left">Intérêts de ses collections est qu'elle sont <b>fortement typées</b>: 
+Elle n'acceptent que des éléments d'un type: des String dans le dernier 
+exemple.&nbsp; </p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<p ALIGN="LEFT">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-20.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+</html>

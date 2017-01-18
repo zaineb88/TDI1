@@ -1,0 +1,300 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:36 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net Design pattern</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.11</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Patron ou Design Pattern.</font></b></td>
+    <td width="14%" height="76"><a href="v5-90.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p><font face="Courier New" size="2">Un <b>motif de conception</b> (<i>design
+pattern</i>) est un concept destiné à résoudre les problèmes récurrents en
+POO. En français on utilise aussi les termes <b>modèle de conception</b>, <b>patron
+de conception </b>ou de<b> Patron</b>.</font></p>
+<p><font face="Courier New" size="2">Pour ne pas avoir à réinventer la roue, les
+patrons décrivent des solutions standards pour répondre à des problèmes de
+conception ou d'architecture .C'est une formalisation de bonnes pratiques, ce
+qui signifie qu'on privilégie les solutions éprouvées.</font></p>
+<p><font face="Courier New" size="2">Il ne s'agit pas de fragments de code, mais
+d'une méthode de conception.</font></p>
+<p><font face="Courier New" size="2">Les auteurs des principaux design patterns
+(il y en a 23), plus connus sous le nom de Gang Of Four, sont Erich Gamma,
+Richard Helm, Ralph Johnson et John Vlissides. Les DP qu'ils ont conçus sont
+considérés comme la base de tout les autres .</font></p>
+<h3>&nbsp;</h3>
+<h3><font face="Courier New" color="#0000ff" size="4"><span style="BACKGROUND-COLOR: #c0c0c0">Singleton</span></font></h3>
+<p><font face="Courier New" size="2">Parfois , on a besoin d'une classe&nbsp; avec
+laquelle on veut <b>créer une instance et une seule</b>.</font></p>
+<p><font face="Courier" size="2">Il faut créer une classe:</font></p>
+<p><font face="Courier New" size="2">- Ou il ne soit pas possible de créer
+plusieurs instances:<br>
+New , le constructeur, doit-être toujours private : cela empêche&nbsp;
+d'écrire 'Dim myobjet As New MyClasse'&nbsp; et empêche donc d'instancier. On
+utilise donc:<br>
+Private Sub New()
+</font></p>
+<p><font face="Courier New" size="2">- Ou une méthode de classe permet de
+créer une instance et une seule.</font> <font face="Courier New" size="2">Une méthodes
+de classe&nbsp; nommée&nbsp; habituellement 'GetInstance' peut être appelée (sans avoir à
+instancier) directement sur le nom de la classe. </font><font face="Courier New" size="2">Shared Function getInstance() As sing<br>
+Cette fonction qui s'appelle toujours getInstance va servir à instancier une
+fois la variable Instance.</font></p>
+<p><font face="Courier New" size="2">Shared instance As sing<br>
+Cette variable est la base du Singleton. Elle s'appelle&nbsp; Instance (par
+convention) elle est du même type que la class et contient l'instance unique.<br>
+<br>
+<br>
+<font color="#0000ff">Public</font> <font color="#0000ff">Class</font> sing</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000" size="2">'Déclaration
+de l'instance Singleton</font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">Shared</font>
+instance <font color="#0000ff">As</font> sing</font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">Private</font>
+<font color="#0000ff">Sub</font> <font color="#0000ff">New</font>()</font><font face="Courier New" color="#008000" size="2">'Pas
+oublier de mettre Private&nbsp;</font></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">&nbsp;&nbsp;&nbsp;
+MyBase</font>.New()</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">End</font>
+<font color="#0000ff">Sub</font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">Shared</font>
+<font color="#0000ff">Function</font> getInstance() <font color="#0000ff">As</font>
+sing </font><font face="Courier New" color="#008000" size="2">'Voici la méthode
+de classe</font></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">If</font>
+IsNothing(instance) <font color="#0000ff">Then </font></font><font face="Courier New" color="#008000" size="2">'Si
+le singleton n'est pas créé, alors faut le créé un et un seul</font></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+instance = <font color="#0000ff">New</font> sing</font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">End</font>
+<font color="#0000ff">If</font></font></font></p>
+<font size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">Return</font>
+instance</font></font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">End</font>
+<font color="#0000ff">Function</font></font></p>
+<font color="#0000ff" size="2">
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">...</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">...<font face="Courier New" size="2" color="#0000ff">'Ici
+les autres membres de la classe</font>&nbsp;</p>
+</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#0000ff">End</font>
+<font color="#0000ff">Class</font></font></p>
+<p><font face="Courier New" size="2">Comment utiliser cette Classe?</font></p>
+<p><font size="2" face="Courier New" color="#0000ff">Dim t As sing =&nbsp;
+sing.getInstance</font></p>
+<p><font face="Courier New" size="2">Remarque:</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Si on fait ensuite <font size="2">Dim
+t1 As sing =&nbsp; sing.getInstance </font>c'est la même instance qui est
+retournée. On ne peut en créer qu'une..</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Si on écrit&nbsp;</font>
+<font face="Courier New" size="2"><font color="#0000ff">Dim t As New sing&nbsp; </font>:cela
+plante.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000ff"><br>
+</font>On peut ajouter une protection contre les multi thread trop rapide avec<font color="#0000ff"><br>
+SyncLock GetType(sing)</font></font></p>
+<p>&nbsp;</p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;Shared
+<code>Function</code> getInstance() As sing</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>If</code>
+IsNothing(instance) <code>Then</code></font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SyncLock
+GetType(sing)</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>If</code>
+IsNothing(instance) <code>Then</code></font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance
+= New sing</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>end</code>
+<code>if</code></font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+SyncLock</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+<code>If</code></font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Return</code>
+instance</font>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;&nbsp;&nbsp;&nbsp;<code>End</code>
+<code>Function</code></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Courier New" color="#0000ff" size="4"><span style="background-color: #c0c0c0"><b>Itérateur</b></span></font></p>
+<p><font face="Courier New" size="2">Un itérateur est un objet qui permet de
+parcourir tous les éléments contenus dans un conteneur.</font></p>
+<p><font face="Courier New" size="2">Dans la programmation fonctionnelle on
+utilise souvent une boucle (for next) avec un index , pour accéder séquentiellement
+à tous les éléments d'un tableau. Cette méthode se nomme <i>Indexation</i>.</font></p>
+<p><font face="Courier New" size="2">En programmation objet, le but d'un itérateur est de permettre à
+son utilisateur de <i>parcourir</i> le conteneur, c'est-à-dire d'accéder séquentiellement
+à tous ses éléments, de <i>consulter l'élément courant</i>. L'itérateur permet isoler l'utilisateur de la structure interne du conteneur, parfois
+complexe.</font></p>
+<p><font face="Courier New" size="2">Les itérateurs ont certains avantages:</font></p>
+<ul lastCheckbox="null">
+  <li><font face="Courier New" size="2">Une simple boucle n'est
+    pas adapté à toutes les structures de données, en particulier</font> <font face="Courier New" size="2">celles
+    qui n'ont de méthode d'accès à un élément quelconque&nbsp; ou </font><font face="Courier New" size="2">celles
+    à accès à un élément quelconque très lent.</font>
+  <li><font face="Courier New" size="2">Les vrai itérateurs peuvent être
+    écrit pour toutes sortes de structures de données: liste arbre , liste chaînée..,
+    s'il y a changement dans l'organisation de la structure de données, celui
+    qui utilise l'itérateur n'a pas à s'en soucier.</font>
+  <li><font face="Courier New" size="2">Un vrai itérateur peut implanter des
+    conditions additionnelles sur l'accès aux éléments, par exemple pour &quot;sauter
+    ou ne pas sauter&quot;.</font>
+  <li><font face="Courier New" size="2">Un vrai itérateur peut <i>dans certains cas</i>
+    permettre que le conteneur soit modifié, sans être invalidé pour autant.
+    Par exemple, après qu'un itérateur s'est positionné derrière le premier
+    élément, il est possible d'insérer d'autres éléments au début du
+    conteneur avec des résultats prévisibles. Avec un index on aurait plus de
+    problèmes, parce que la valeur de l'index devrait elle aussi être modifiée
+    en conséquence.<br>
+    </font></li>
+</ul>
+<p><font face="Courier New" size="2">En VB, il existe des itérateurs 'clé en
+main' pour les collections par exemple, mais ils n'ont pas tous les avantages décrit ci-dessus.&nbsp;</font></p>
+<p><font face="Courier New" size="2">La Classe <font color="#0000ff">System.Array</font>&nbsp;
+et celles qui&nbsp; implémentent l'interface <font color="#0000ff">IEnumerable </font>possèdent
+2 méthodes pour itérer:</font></p>
+<blockquote>
+  <blockquote>
+    <p>U<font face="Courier New" size="2">ne boucle <font color="#0000ff">For
+    Each</font> pour parcourir tous les éléments de l'Array.</font></p>
+    <p><font face="Courier New" size="2">L'utilisation d'un énumérateur.</font></p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">Voyons comment faire:</font></p>
+<p><font face="Courier New" size="2">On peut aussi utiliser dans ce cas&nbsp; <font color="#0000ff">Getenumerator</font>
+pour créer un <b>énumérateur</b>: Il permet de lire du premier élément au
+dernier:</font></p>
+<p><font face="Courier New" size="2">Dans l'énumérateur l'élément courant
+est <font color="#0000ff">Current</font>.</font></p>
+<p><font face="Courier New" size="2">Pour passer au suivant , on utilise <font color="#0000ff">MoveNext</font>.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000ff">Reset</font> réinitialise.</font></p>
+<p><font face="Courier New" size="2">Initialement le pointeur est avant le
+premier élément, aussi avant d'utiliser <font color="#0000ff">Current</font>
+il faut faire <font color="#0000ff">MoveNext</font>.</font></p>
+<p><font face="Courier New" size="2">Attention, on ne peut que lire les données
+dans l'ordre; si on modifie la collection, il faut redémarrer la lecture.</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">&nbsp;</font><font face="Courier New" color="#008000" size="2">'
+Créer un tableau</font><font face="Courier New" color="#0000ff" size="2"><br>
+Dim myArr(4) As String<br>
+myArr(0) = &quot;toto&quot;<br>
+myArr(1) = &quot;lulu&quot;<br>
+myArr(2) = &quot;bibi&quot;<br>
+myArr(3) = &quot;tata&quot;<br>
+&nbsp;</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">Dim
+i As Integer = 0<br>
+&nbsp;</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000" size="2">'Créer
+un énumérateur</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2">Dim
+myEnumerator As System.Collections.IEnumerator = myArr.GetEnumerator()<br>
+&nbsp;</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#008000" size="2">'Afficher
+sur la console successivement les élément du tableau</font></p>
+<p style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><font color="#008000">'en
+utilisant MoveNext et Current</font><font color="#0000ff"><br>
+While myEnumerator.MoveNext() And Not (myEnumerator.Current Is Nothing)<br>
+&nbsp; Console.WriteLine(&quot;[{0}] {1}&quot;, i, myEnumerator.Current)<br>
+&nbsp; i += 1<br>
+End While</font><br>
+<br>
+</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-90.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-11.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:36 GMT -->
+</html>

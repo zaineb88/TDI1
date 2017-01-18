@@ -1,0 +1,594 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:06 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net creation de composant</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-2.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.3</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Créer un composant.</font></b></td>
+    <td width="9%" height="76"><a href="v5-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On a vu qu'on pouvait 
+CREER SES PROPRES CLASSES dans un projet, mais on peut aussi:</span></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;créer une Classe 
+autonome </span>
+<span style="font-family: Courier New; ">qui sera utilisée par plusieurs autres 
+programmes, c'est une </span>
+<span style="font-family: Courier New; font-weight: 700">Bibliothèque de Classe.</span></font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;créer un contrôle 
+utilisateur </span><span style="font-family: Courier New">utilisé lui aussi par 
+d'autres programmes</span><span style="font-family: Courier New; font-weight: 700">.</span></font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Maintenant nous allons créer des classes 
+ou contrôles, ils seront utilisés par une application cliente.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+A-Créer une
+Bibliothèque de Classe:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour créer une bibliothèque de Classe, il faut 
+faire menu 'Fichier', 'Nouveau', 'Projet':</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vbibclas.GIF" width="465" height="137"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Cliquer sur l'icône 'Bibliothèque de Classes'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le nom par défaut est ClassLibrary1 , valider 
+sur <i>Ok.</i></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans la fenêtre principale, il y a:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Public Class Class1</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut écrire le code, la description d'une 
+classe avec ses propriétés, ses méthodes, ses constructeurs...(Voir page 
+précédente)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut <b>ajouter une autre Classe</b> (Menu 
+Projet, ajouter une Classe), ou <b>importer une Classe</b> (Menu Projet, Ajouter 
+un élément existant)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008000" face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Il n'y a <b>pas de</b><b> 
+procédure Sub Main</b>. (c'est évident, un composant n'est jamais autonome; 
+c'est l'application cliente qui a cette procédure).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#008000"><font size="2">Une bibliothèque de 
+classe ne possède pas les composants que possède une application Windows, </font>
+<b><font size="2">il n'y a pas d'interface utilisateur,</font></b><font size="2"> 
+pas de MessageBox, pas de gestion du curseur; c'est l'application cliente qui 
+s'occupe de gérer l'interface.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">NameSpace</span></font></span><font size="2" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Permet de <b>créer un espace de nom</b> dans 
+le composant:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">NameSpace Outils</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il peut y avoir plusieurs niveau:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">NameSpace Outils</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">NameSpace Marteau</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">....</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Equivalent à:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">NameSpace Outils</font></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Classe Marteau</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">....</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Class</font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'application il faudra après avoir 
+référencé le composant (la Dll) importer l'espace de nom pour utiliser le 
+composant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Imports Outils.Marteau</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Utilisation du 
+composant:</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut enfin enregistrer la bibliothèque, la 
+compiler.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Comment utiliser ce composant?</b></font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si la bibliothèque de Classe a été compilée, 
+on obtient une DLL:</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">-Il faut <b>la référencer: </b>Ajouter la Dll 
+au projet (Menu Projet, Ajouter une référence)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">-Importer l'espace de nom par <b>Imports 
+Espace de nom </b>au début du module.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">-On peut ensuite utiliser la Classe dans 
+l'application cliente.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut travailler en même temps sur 
+l'application cliente et le projet de la bibliothèque de Classe en les chargeant 
+tous les 2 dans <b>une solution.</b></font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">B- Créer un 'contrôle utilisateur' 
+à partir d'un contrôle existant</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0"> 
+en le modifiant:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Permet de <b>créer un contrôle spécifique</b> 
+qui enrichira la 'Boite à outils' :</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">(Pour les 'anciens' c'est comme un contrôle OCX, 
+sauf que c'est un contrôle .NET et que c'est un&nbsp; fichier .dll)
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple: Créer un bouton avec un aspect 
+spécifique à partir du bouton habituel (Ajout d'un cadre).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">1-Il faut créer une bibliothèque de 
+contrôle:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour créer une bibliothèque de Contrôle, il 
+faut faire menu Fichier, Nouveau, Projet, Icône '<b>Bibliothèque de contrôle 
+Windows'</b> : Nom du projet: WindowControle par exemple.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On obtient une fenêtre qui ressemble à un 
+formulaire mais sans bord,on peut y ajouter un contrôle (un bouton par exemple ) </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on regarde le code correspondant, Vb a crée 
+une Classe UserControl1 qui hérite de la classe&nbsp; Forms.UserControl</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New"><span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Class</span></font></font><font SIZE="2"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF"> 
+UserControl1</span></font></p>
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Inherits</span></font><font SIZE="2" color="#0000FF"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+System.Windows.Forms.UserControl</span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il suffit de substituer à UserControl le nom 
+du contrôle que vous voulez utiliser comme base pour hériter de tous ses 
+éléments. On remplace donc par:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New"><span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Class</span></font></font><font SIZE="2"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF">
+<b>MonBouton</b></span></font></p>
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Inherits</span></font><font SIZE="2" color="#0000FF"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+System.Windows.Forms.<b>Button</b></span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le 'Design' devient:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="v5-3.h2.gif" width="83" height="35"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">2-Il faut modifier l'aspect graphique du 
+bouton:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour cela si vous voulez modifier l’apparence 
+du contrôle, il faut remplacer la méthode OnPaint de Button par la 
+votre(celle-ci dessine le contrôle). Au sein de cette méthode, vous devez 
+appeler la méthode OnPaint de la base (de la classe mère), puis&nbsp; ajouter vos propres fonctions 
+de dessin.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut donc ajouter la procédure: </font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Protected</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Overrides</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+OnPaint(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+PaintEventArgs)</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">MyBase</font><font SIZE="2" color="#0000FF">.OnPaint(e)
+</font></font><font SIZE="2"><font face="Courier New">'Appel à la méthode de la 
+classe de base, ce qui dessine le bouton</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+myPen </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Pen(Color.Purple, 3)</font></p>
+<p><font face="Courier New" color="#0000FF">e.Graphics.DrawRectangle(myPen, 3, 
+3, </font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2" color="#0000FF">.Width 
+- 6, </font><font SIZE="2" COLOR="#0000ff">Me</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">.Height 
+- 6) </font><font face="Courier New">'Ajoute un cadre sur le dessin du bouton</font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On rappelle que l'argument e&nbsp; est le 
+graphique du bouton.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">3-Compilation:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Quand le composant est terminé il faut créer 
+la Dll:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Menu 'Générer' puis 'Générer WindowControle'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On obtient WindowControle.Dll dans le 
+répertoire /bin sous les sources.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">4-Utilisation du composant dans une autre 
+application VB.</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans un autre projet VB, si je veux utiliser 
+mon composant MonBouton, il faut l'<b>ajouter dans la boite à outils</b>:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour cela cliquer avec le bouton droit de la 
+souris dans la boite à outils. Un menu contextuel s'ouvre, cliquer sur <i>
+'Ajouter/Supprimer des éléments'</i> puis dans la fenêtre qui s'ouvre cliquez 
+sur '<i>parcourir</i>'.. cliquez sur WindowControle.Dll , le composant <b>
+MonBouton</b> apparaît dans la Boite à outils.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il suffit de le saisir et de le déplacer dans 
+un des formulaires comme un bouton normal.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="v5-3.h3.GIF" width="301" height="104"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Toutes les procédures évènements (Comme
+<font color="#0000FF">MonBouton1_Click</font>) sont disponibles; elles ont été 
+héritées de Button.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Ce qu'il faut comprendre:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est que votre nouveau bouton hérite de <b>
+Control</b>, une classe qui possède un grand nombre d’événements et de méthodes 
+qui n’apparaissent pas dans les listes déroulantes, car inutile dans 
+l’utilisation de l’objet mais très utile dans le comportement d'un objet. C’est 
+le cas de <font color="#0000FF">OnPaint</font> <font color="#0000FF">OnKeyDown</font> et <font color="#0000FF">
+OnMouseDown..</font>.qui déclenchent les évènement Paint, KeyDown, MouseDown. On 
+redéfini ces méthodes (avec Overrides), dans la méthode redéfini on appelle 
+quand même la méthode de la classe mère puis on ajoute les modifications de 
+fonctionnalités .</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Différencier une zone droite et une zone 
+gauche sur le bouton:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On utilise l'évènement <font color="#0000FF">
+OnMouseDown, </font>il a pour paramètre<font color="#0000FF"> e </font>qui 
+contient les coordonnées de la souris (<font color="#0000FF">e.x et e.y</font>)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Protected Overrides Sub 
+OnMouseDown(ByVal e As MouseEventArgs)<br>
+&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">MyBase.OnMouseDown(e)
+</font>'Appel à la méthode de la classe de base<font color="#0000FF"><br>
+If e.X &lt; Me.Width / 2 Then <br>
+&nbsp;&nbsp;&nbsp; MessageBox.Show(&quot;Click sur partie gauche&quot;) <br>
+Else<br>
+&nbsp;&nbsp;&nbsp; MessageBox.Show(&quot;Click sur partie droite&quot;) <br>
+End if<br>
+End Sub</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">MessageBox peut être remplacé par un raisevent 
+pour déclencher un évènement.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008000" face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34"> On vient de créer un 
+composant héritant d'un contrôle, puis on en a modifié les fonctionnalités.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">C- Créer un 'contrôle utilisateur' 
+contenant un ou plusieurs contrôles pilotés</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour créer une bibliothèque de Contrôle (un 
+contrôle utilisateur), il 
+faut faire menu Fichier, Nouveau, Projet, Icône '<b>Bibliothèque de contrôle 
+Windows'</b> : Nom du projet: WindowControle par exemple.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On obtient une fenêtre qui ressemble à un 
+formulaire mais sans bord,on peut y ajouter un contrôle (un textBox par exemple 
+comme ici) ou plusieurs contrôles. </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="v5-3.h1.gif" width="341" height="183"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#FF0000">Attention:</font> ici la 
+zone de fond grise est importante, le contrôle crée correspond à la totalité de 
+la zone grise du formulaire sans bord, ce qui n'est pas pratique quand on 
+utilise le contrôle (j'en ai dessiné un petit, et je ne voyais pas la textebox!!) 
+Il est donc conseillé de réduire la surface.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on regarde le code correspondant, Vb a crée 
+une Classe UserControl1 qui hérite de la classe&nbsp; Forms.UserControl</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New"><span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Class</span></font></font><font SIZE="2"><font color="#0000FF" face="Courier New"><span style="background-color: #FFFFFF"> 
+UserControl1</span></font></p>
+<p></font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Inherits</span></font><font SIZE="2" color="#0000FF"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+System.Windows.Forms.UserControl</span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Dans ce</font></b><font face="Courier New" size="2"><b> Usercontrol</b> 
+il y a les procédures <b>privées</b> des évènements des composants,</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2"><b>Private</b> Button1_Click</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Bien sur, elles ne seront pas visibles ni 
+accessibles par l'utilisateur du composant.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>L'interface du Usercontrol </b>(ce que 
+verra l'utilisateur du composant) est créer de toute pièce comme dans un module 
+de Class.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on double-clique sur le fond, on voit quand 
+même apparaître: </font></p>
+  <font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+UserControl1_Load(..</font></font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Mais il faut rajouter <b>des membres publiques</b> 
+qui seront accessibles à l'utilisateur du composant. On utilise pour 
+cela les 'Property', 'Sub' et 'variables' <b>publiques</b> pour créer une 
+interface. Le code contenu dans ces procédures de l'interface va 'piloter' le 
+ou les contrôles (comme le TextBox1). Ce code modifie (dans notre exemple) le 
+comportement du TextBox initial.&nbsp;&nbsp; </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici je vais créer une propriété LeTexte qui 
+est le texte qui sera affiché dans le TextBox1. Cette propriété LeTexte va 
+'piloter' TextBox1.text. Je modifie le comportement de TextBox1.text en 
+empêchant d'afficher Toto (c'est idiot!! ). </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Public Property LeTexte() As String</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Get</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+LeTexte=TextBox1.Text</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; End Get</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Set (ByVal 
+Value As String)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If Value &lt;&gt; &quot;toto&quot; Then</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+TextBox1.Text= Value</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; End Set</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Property</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Je génère la solution, ajouter 
+WindowControle.Dll à la boite à outils, je met le nouveau composant sur un 
+formulaire; il se nommera UserControl1.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour utiliser la propriété précédemment écrite 
+:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">UserControl1.LeTexte=&quot;lulu&quot;&nbsp;&nbsp;&nbsp; 
+'lulu apparaît dans le textbox</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">UserControl1.LeTexte=&quot;toto&quot;&nbsp;&nbsp;&nbsp; 
+'rien n' apparaît dans le textbox: : j'ai bien modifié le comportement du 
+textbox et c'est transparent pour l'utilisateur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#008000" face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34">On vient de créer un 
+composant avec la Classe UserControl (au lieu de Forms dans un formulaire ), on 
+a écrit son interface.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Remarque: si on veut avoir accès à une&nbsp; 
+sub événement&nbsp; du controle qui est dans un composant, il faut que dans le 
+composant la Sub évènement soit Public.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New">Autre exemple:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voir cet autre <b>remarquable exemple</b>&nbsp; de 
+création d'un composant (par CGi et neo51 sur developpez.com):
+<a href="http://chgi.developpez.com/dotnet/compo1/vb/">Composant horloge</a>: 
+code source, explication claire: un régal.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-2.2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:09 GMT -->
+</html>

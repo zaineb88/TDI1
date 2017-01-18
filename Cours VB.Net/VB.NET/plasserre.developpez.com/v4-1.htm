@@ -1,0 +1,650 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:24 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET demarrer arreter un executable </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve3-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.1</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Démarrer, arrêter un 
+    programme.</font></b></td>
+    <td width="9%" height="76"><a href="v4-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Quand vous démarrez 
+votre programme, quelle partie du code va être exécutée en premier?</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<u>
+<b><font face="Courier New">En Vb 2003</font></b></u></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Vous pouvez le déterminer en cliquant sur le 
+menu <b>Projet </b>puis <b>Propriétés de</b> NomduProjet, une fenêtre <b>Page de 
+propriétés</b> du projet s'ouvre.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Sous la rubrique <b>Objet du démarrage</b>, il 
+y a une zone de saisie avec liste déroulante permettant de choisir:</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">-Le nom d'<b>un formulaire du 
+projet</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">ou</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">-<b>Sub Main</b>()</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New"><u><b>En Vb 2005 ou 2008</b></u><b> </b>
+</font>
+<font size="2"><span style="font-family: Courier New">
+<img border="0" src="v2005.JPG" width="52" height="21"></span></font><b><font face="Courier New"> 
+ :</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Ouvrir le 'Projet 
+Designer', il est directement accessible dans l'explorateur de solution (Double 
+cliquer sur 'My 
+Projet')ou par le menu Projet-&gt; Propriétés de ..:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On définit: </font></p>
+<blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Le <b>Formulaire de démarrage</b> (startUp Form).</font></p>
+</blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<img border="0" src="v2005p16.JPG" width="626" height="592"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si 'Activer l'infrastructure de l'application' 
+est coché, l'élément de démarrage ne peut être qu'un formulaire; s'il est 
+décoché, on peut lancer le programme par la Sub Main(). </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><font face="Courier New" size="2"><b>Attention:</b>
+ne pas confondre Formulaire de démarrage en haut et Ecran de démarrage (écran
+splash) en bas.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF"><b>
+<span style="font-size: 14.0pt; font-family: Courier New; background-color:#C0C0C0">
+Démarrer par un formulaire.</span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Si vous tapez le nom d'un 
+formulaire du projet, c'est celui-ci qui démarre : cette fenêtre est chargée au 
+lancement du programme et 
+la procédure <font color="#0000FF">Form_Load</font>&nbsp;de cette fenêtre est effectuée.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En théorie</b>, si vous avez une 
+application avec un&nbsp; formulaire, le fait de dessiner ce formulaire crée une Classe Form1; il 
+faudrait donc théoriquement créer une instance de ce formulaire (par un Dim 
+MyForm As New Form1) pour lancer l'application.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En pratique, dessinez un formulaire, lancez 
+l'exécution, ça marche</b> car le runtime crée une instance du formulaire 
+automatiquement à l'aide de sa méthode <b>New</b> et l'affiche (sans que l'on ai 
+besoin de l'intancier soit même).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF"><b>
+<span style="font-size: 14.0pt; font-family: Courier New; background-color:#C0C0C0">Démarrer par Sub 
+Main()</span></b></font></p>
+<font SIZE="2">
+<p>&nbsp;</p>
+<p><font face="Courier New">On rappelle qu'<b>en VB2005 en 2008</b>, s</font><font face="Courier New" size="2">i 
+'Activer l'infrastructure de l'application' est coché dans les propriétés du 
+programme, le formulaire de 
+démarrage ne peut être qu'un formulaire; s'il est décoché, on peut choisir
+dans </font><font face="Courier New" size="2">
+ <b>Formulaire de démarrage</b>  'Sub Main' et lancer le 
+programme par la Sub Main().</font></p>
+<p>&nbsp;</p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est cette procédure
+<font color="#0000FF">Sub Main</font> qui s'exécute en premier lorsque le 
+programme est lancé.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Elle peut servir à ouvrir le formulaire de 
+démarrage:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple 1:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">En mode design Form1 a été 
+dessinée, C'est un modèle 'une Classe'.</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">Dans un module standard, 
+dans une <font color="#0000FF">Sub Main()</font>, on instancie initForm&nbsp; à 
+partir la Class Form1. Puis on affiche ce formulaire (cette fenêtre) avec .ShowDialog</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"> <span style="color: blue">Sub</span> 
+Main()</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: blue">Dim</span> initForm <span style="color: blue">As</span>
+<span style="color: blue">New</span> Form1</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><font SIZE="2" face="Courier New">
+<span style="background-color: #FFFFFF">initForm.<font color="#0000FF">ShowDialog()</font></span></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<span style="color: blue">Sub</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple 2:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Sub Main() <br>
+</font><font face="Courier New" size="2">' Démarre l' application et affiche une 
+instance de Form1</font><font face="Courier New" size="2" color="#0000FF"><br>
+Application.Run(New Form1())<br>
+End Sub<br>
+&nbsp;</font></span></p>
+<p><font face="Courier New" size="2">S'il y a plusieurs threads, Application.Run 
+commence à exécuter une boucle de messages d'application standard sur le thread 
+en cours&nbsp; et affiche le formulaire spécifié. Peut être utilisé aussi s'il y 
+a un seul thread.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p><b><font face="Courier New" size="2">Attention Sub Main() peut se trouver 
+dans une Classe (Y compris une classe de formulaire) ou dans un module: </font>
+</b></p>
+<p><font size="2" face="Courier New">Si vous déclarez la procédure </font>
+<font size="2"><code class="ce"><font face="Courier New">Main</font></code></font><font size="2" face="Courier New">
+<b>dans une classe de formulaire</b>, vous devez utiliser le mot clé <b>Shared</b>. </font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Class Form1</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+  </font>
+<span style="color: blue">Shared</span><font color="#0000FF"> </font> <span style="color: blue">Sub</span><font color="#0000FF"> 
+Main()</font></span></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; .....</p>
+  <p style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+  </font>
+<span style="color: blue">Sub</span></span></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">..</span></font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End Classe</span></font></span></p>
+<p><font face="Courier New"><b><font size="2">Dans un module</font></b><font size="2">, 
+la procédure </font></font><font size="2"><code class="ce">
+<font face="Courier New">Main</font></code></font><font size="2" face="Courier New"> 
+n'a pas besoin d'être partagée (<b>Shared</b>).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Module1</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"> <span style="color: blue">Sub</span><font color="#0000FF"> 
+Main()</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">...</span></font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">
+</font>
+<span style="color: blue">Sub</span></span></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End Module</span></font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<b><font size="2">F</font><font face="Courier New" size="2">onction Main():</font></b></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">On peut utiliser&nbsp; <b>'Function</b> </font><font size="2">
+<code class="ce"><font face="Courier New" size="2">Main'</font></code></font><font size="2" face="Courier New"> 
+(au lieu de&nbsp; 'Sub Main') qui&nbsp; retourne un <b>Integer</b>, que le système 
+d'exploitation utilise comme <b>code de sortie du programme</b>. D'autres 
+programmes peuvent tester ce code en examinant la valeur ERRORLEVEL Windows.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Function Main() As Integer<br>
+...<br>
+Return 0 </font><font face="Courier New" size="2">' Zéro signifie : tout est Ok.</font><font face="Courier New" size="2" color="#0000FF"><br>
+End Function<br>
+&nbsp;</font></span></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-weight: 700; background-color: #FFFFFF">
+<font face="Courier New" size="2">Récupération de la ligne de commande:</font></span></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<code class="ce"><font size="2" face="Courier New">Main</font></code><font size="2" face="Courier New"> 
+peut également avoir comme argument un tableau <b>de String</b>. Chaque élément 
+du tableau contient un des arguments de ligne de commande utilisée pour appeler 
+le programme. Vous pouvez réaliser diverses actions en fonction de leurs 
+valeurs.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Function Main(ByVal CmdArgs() As String) 
+As Integer<br>
+...</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Return 0 <br>
+End Function<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<font SIZE="2">
+<p>&nbsp;</p>
+</font>
+<p><font color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New">Autre méthode de récupération</font><font face="Courier New" size="2"> </font>
+<font face="Courier New">de la ligne de commande en VB 2005: </font></span></font>
+<font SIZE="2">
+</p>
+<font SIZE="2">
+<p><font face="Courier New">On trouve les arguments de la ligne de commande dans
+</font><font face="Courier New" size="2"><font color="#0000ff" size="2">My</font><font size="2" color="#0000FF">.Application.CommandLineArgs
+</font><font size="2">(VB 2005)</font></font></p>
+<p><font face="Courier New">Exemple:</font></p>
+<p><font face="Courier New">Cliquez sur un fichier de données, l'exécutable lié 
+s'exécute et ouvre le fichier de données.</font></p>
+<p><font face="Courier New">(Exemple: Quand on clique sur un fichier .bmp on 
+lance automatiquement Paint qui charge l'image .bmp)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il faut que l'extension du fichier soit 
+liée avec le programme exécutable, si vous cliquez sur&nbsp; le fichier de données, 
+cela lance l'exécutable.</font></p>
+<p><font face="Courier New">Modifier l'extension liée Explorer-&gt;Outils-&gt; Option 
+des dossiers-&gt; Type de fichiers</font></p>
+</font>
+</font>
+<div style="margin: 0px">
+  <font size="2" face="Courier New"><font size="2">Dans Form_Load mettre:</font><p>
+  <font color="#0000ff" size="2">If</font><font size="2" color="#0000FF"> </font>
+  <font color="#0000ff" size="2">My</font><font size="2" color="#0000FF">.Application.CommandLineArgs.ToString 
+  &lt;&gt; &quot;&quot; </font><font color="#0000ff" size="2">Then</p>
+  </font></font><font size="2" face="Arial">
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font color="#0000ff" size="2" face="Courier New">Dim</font><font size="2"><font size="2" face="Courier New"><font color="#0000FF"> 
+    i</font></p>
+    </font><font face="Arial" size="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font></font>
+    <font face="Arial" size="2"><font size="2" face="Courier New">
+    <font color="#0000ff" size="2">For</font><font size="2" color="#0000FF"> i = 
+    0 </font><font color="#0000ff" size="2">To</font><font size="2" color="#0000FF">
+    </font><font color="#0000ff" size="2">My</font></font><font size="2"><font size="2" face="Courier New"><font color="#0000FF">.Application.CommandLineArgs.Count 
+    - 1</font></p>
+    </font><font face="Arial" size="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font></font>
+    <font face="Arial" size="2"><font size="2" face="Courier New">
+    <font color="#0000ff" size="2">If</font><font size="2" color="#0000FF"> </font><font color="#0000ff" size="2">
+    mid(My</font><font size="2" color="#0000FF">.Application.CommandLineArgs(i).ToString,1,2)&nbsp; 
+    &quot;-o&quot; </font><font color="#0000ff" size="2">Then</font><font size="2"> 
+    ' dans le cas ou la ligne de commande contient le nom du fichier à lancer et 
+    '-o'</font></p>
+    <font size="2" color="#0000FF">
+    <blockquote>
+      <p style="margin-top: 0; margin-bottom: 0">FileName = Mid(</font><font color="#0000ff" size="2">My</font></font><font size="2"><font size="2" face="Courier New"><font color="#0000FF">.Application.CommandLineArgs(i).ToString, 
+      3)</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">OpenFile() 
+      ' charger les données</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Exit For</font></p>
+    </blockquote>
+    </font><font face="Arial" size="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font></font>
+    <font face="Arial" size="2"><font size="2" face="Courier New">
+    <font color="#0000ff" size="2">End</font><font size="2" color="#0000FF">
+    </font><font color="#0000ff" size="2">If</p>
+    </font></font><font size="2">
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font color="#0000ff" size="2" face="Courier New">Next</p>
+  </blockquote>
+  </font>
+  <p></font><font size="2" face="Courier New"><font color="#0000ff" size="2">End</font><font size="2" color="#0000FF">
+  </font><font color="#0000ff" size="2">If</font></font></font></font></font></div>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New; color: blue; font-weight:700; background-color:#C0C0C0">
+<font size="4">&nbsp;Fenêtre Splash</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">C'est une fenêtre qui 
+s'ouvre au démarrage d'un programme, qui montre simplement une belle image, 
+(pendant ce temps le programme peut éventuellement initialiser des données, 
+ouvrir des fichiers...) ensuite la fenêtre 'Splash' disparaît 
+et la fenêtre principale apparaît.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple de formulaire 
+splash de VisualStudio 2003:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+<img border="0" src="vsplatchs.JPG" width="266" height="191"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New">En Vb 2003 (Framework 1) il faut tout écrire:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans la Sub Main il est 
+possible de gérer une fenêtre <b>Splash</b>.  </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Je dessine <b>Form1</b> 
+qui est la fenêtre Spash.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans <b>Form2</b> qui est&nbsp; la fenêtre principale, j'ajoute:</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span>
+</font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">Shared</font><font SIZE="2" color="#0000FF"> </font>
+</span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Sub</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+Main()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+FrmSplash </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+</span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">New</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+Form1&nbsp;&nbsp;&nbsp; </span></font><span style="background-color: #FFFFFF"><font face="Courier New">
+'instance la fenêtre Splash </font></span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+FrmPrincipal </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">New</span></font></font><font SIZE="2"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF"> 
+Form2 </font><font face="Courier New">'instance la feuille principale</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">FrmSplash.ShowDialog()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New">
+'affiche la fenêtre Splash en Modale</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" color="#0000FF">FrmPrincipal.ShowDialog()&nbsp;&nbsp;&nbsp;&nbsp; </font><font face="Courier New">'a la fermeture de Splash,&nbsp; 
+affiche la fenêtre principale</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+</font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">End</span></font><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans <b>Form1 </b>(la 
+fenêtre Splash)</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span>
+</font><span style="background-color: #FFFFFF"><font SIZE="2" COLOR="#0000ff">Sub</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> Form1_Activated</span></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Me</span></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">.Refresh</span><span style="background-color: #FFFFFF">() 
+'pour afficher totalement la fenêtre.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<span style="background-color: #FFFFFF">'ici ou on fait plein de choses on ouvre 
+des fichiers ou on perd du temps.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">' s'il 
+n'y a rien a faire on met un Timer pour que l'utilisateur admire la belle image.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Me</span></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">.Close</span><span style="background-color: #FFFFFF">()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">End</span></font><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On affiche FrmSplash un 
+moment (Ho! la belle image) puis on l'efface et on affiche la fenêtre 
+principale. Word, Excel.. font comme cela.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Autre méthode:</font></b></p>
+<font size="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Public Sub main() </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">'création 
+des formulaires frmmain and frmsplash </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Dim frmsplash As New frmsplash </font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Dim frmmain As New frmmain </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">'on affiche 
+la Splash</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">frmsplash.Show() </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Application.DoEvents() </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">'On attend 
+(3000 milliseconds) </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">System.Threading.Thread.Sleep(3000)
+</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">'On efface 
+la Splash</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">frmsplash.Close() </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">'On affiche 
+le formulaire principal</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Application.Run(frmmain)&nbsp; </font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">End Sub </font></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New">En Vb 2005 ou 2008 </font></b><font size="2"><span style="font-family: Courier New">
+<img border="0" src="v2005.JPG" width="52" height="21"></span></font><b><font face="Courier New"> 
+ c'est très simple:</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Ouvrir le 'Projet 
+Designer', il est directement accessible dans l'explorateur de solution (My 
+Projet)ou par le menu Projet-&gt; Propriétés de..:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+&nbsp;Il faut que 'Activer l'infrastructure de l'application' soit coché:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On définit </font></p>
+<blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Le formulaire de démarrage (startUp Form),</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>L'écran de démarrage</b> (<b>Splash Screen</b>) en bas, il suffit d'indiquer son nom (En 
+mode Run, VB l'affiche 
+et le fait disparaître quand le formulaire de démarrage s'ouvre).&nbsp; </font></p>
+</blockquote>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<img border="0" src="v2005p16.JPG" width="626" height="592"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut aussi ajouter un écran splash tout 
+fait:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Menu Projet, Ajouter un formulaire Windows, 
+double cliquer sur 'formulaire de démarrage'.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On obtient:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+<img border="0" src="vsplach2005.JPG" width="250" height="154"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le nom de l'application, la version, le nom de 
+la société sont automatiquement mis à jour en utilisant les 'Informations de l'assembly' 
+accessible par un bouton situé dans le projet designer, en face du nom du 
+formulaire de démarrage.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'inconvénient de cet écran Splash automatique 
+est qu'il s'affiche et s'efface très rapidement, avant de charger le formulaire 
+de démarrage!! Pour le voir une seconde, j'ai ajouté à la fin de la procédure 
+Form_Load de cet écran:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Me</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">.Show()</font></p>
+<p><font color="#0000FF" face="Courier New">Application.DoEvents()</font></p>
+<p><font color="#0000FF" face="Courier New">System.Threading.Thread.Sleep(1000)</font></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">Comment 
+arrêter le programme?</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;;
+color:blue; background-color:#FFFFFF">Me</span><span style="font-size:10.0pt;font-family:&quot;Courier New&quot;"><font color="#0000FF"><span style="background-color: #FFFFFF">.Close()</span></font>&nbsp;&nbsp;&nbsp; 
+'Ferme la fenêtre en cours</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Noter bien Me désigne 
+le formulaire, la fenêtre en cours.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Application.Exit()</span></font>&nbsp;&nbsp;&nbsp; 
+'Ferme l'application</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2">
+<span style="font-family: Courier New">Vide la 'pompe à messages', ferme les 
+formulaires. Si des fichiers sont encore ouvert, cela 
+les ferme. (Il vaut mieux les fermer avant, intentionnellement.)</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Fin de programme 
+:Attention!</span></font></span></p>
+<p><font face="Courier New" size="2">Outre l'usage de </font>
+<span style="background-color: #FFFFFF; font-size:10.0pt; font-family:Courier New"><font color="#0000FF">
+Application.Exit()</font>, on peut terminer une application en fermant les 
+formulaires, mais:</span></p>
+<p><font face="Courier New" size="2"><b>Dans Visual Basic&nbsp;6.0</b>, une application ne 
+se terminait que lorsque tous les objets créés étaient détruits. </font> </p>
+<p><font face="Courier New" size="2"><b>Dans Visual&nbsp;Basic&nbsp;.NET 2003</b>, l'application se termine lorsque l'<b>objet de 
+démarrage</b> est 
+détruit. Si le formulaire que vous 
+    fermez est le formulaire de démarrage de votre application, votre 
+    application se termine. Si la procédure <b>Sub_Main</b> est définie comme objet de 
+démarrage 
+l'application se termine dès que le code de <b>Sub_Main</b> a fini de s'exécuter.</font></p>
+<p><font face="Courier New" size="2" color="#FF0000">Dans Visual&nbsp;Basic&nbsp;.NET 
+2003, l'application se termine 
+    automatiquement lorsque l'<b>objet de 
+    démarrage</b> est 
+détruit.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">
+<b>En VB 2005</b>
+<img border="0" src="v2005.JPG" width="52" height="21">  ou 2008 vous avez le
+<b>choix</b> entre les 2 solutions: terminer l'application quand le formulaire 
+de démarrage est fermé ou quand tous les formulaires sont fermés.(dans 
+l'application Designer voir 'Mode d'arrêt')</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve3-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:27 GMT -->
+</html>

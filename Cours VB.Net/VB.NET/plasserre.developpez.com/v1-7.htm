@@ -1,0 +1,455 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET option strict, option explicit </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">&nbsp;</font></b><a href="v1-6bol.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.7</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Soyons Strict et 
+    Explicite.</font></b></td>
+    <td width="14%" height="76"><a href="v1-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b>
+<font face="Courier New" size="2" color="#800080">VB peut être tolérant ou pas</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b>
+<font face="Courier New" size="2" color="#800080">.<img border="0" src="vbalanc.GIF" width="80" height="93"></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#0000FF">Option Strict=On</font><font face="Courier New" size="2" color="#800080"> 
+et </font><font face="Courier New" size="2" color="#0000FF">Option Explicit=On</font><font face="Courier New" size="2" color="#800080">&nbsp; 
+le rendent totalement intolérant, et c'est tant mieux!! Voyons cela.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<span style="font-family: Courier New; background-color: #C0C0C0"><font color="#0000FF" size="3">Notion de conversion Explicite et 
+Implicite:</font></span></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+La <b>conversion Explicite:</b> est permet de forcer la conversion d'un type de 
+données vers un autre type&nbsp; à l'aide de mots clés.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">Dim d As Double = 
+2.65</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Dim i As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<span style="background-color: #FFFFFF"><font color="#0000FF">i</font></span><span style="background-color: #FFFFFF"><font color="#0000FF">=CType(d,Integer)&nbsp;
+</font>'conversion d'une valeur double en Integer</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Il existe aussi la <b>conversion implicite</b> effectuée automatiquement sans 
+syntaxe particulière et de manière transparente.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+VB peut le permettre ( Si Option Explicit Off dans la configuration )</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">Dim d As Double = 
+2.65</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">Dim i As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">i</font><font color="#0000FF">=d&nbsp;
+</font>'Pour affecter à i le Double d, Vb a transformé le double d en Integer.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<b><font color="#0000FF" size="3"><span style="font-family: Courier New; background-color: #C0C0C0">Modifier
+les Options</span></font></b><span style="background-color: #C0C0C0"><b><span style="font-family: Courier New; background-color: #C0C0C0"><font color="#0000FF" size="3">:</font></span></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Menu <b> Projet</b> &gt;
+<b> 
+Propriétés de</b> Nom de projet.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp; Page de propriétés de 
+Langage VB. Propriétés communes, génération en VB 2003</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;
+Onglet 'Compiler' en VB 2005.</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">En
+VB 2005:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vOption.JPG" width="687" height="249"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">A- Option Strict</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">1-Avec Option Strict=On&nbsp; VB</span><b><span style="background-color: #C0C0C0"> 
+refuse les conversions implicites qui pourraient entraîner des pertes de 
+données.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">VB est naturellement 
+très arrangeant (trop sympa&nbsp;!!) quand il est configuré avec <b> Option Strict Off&nbsp;</b>:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Par défaut il 
+transforme, quand c’est possible, et si nécessaire un type de variable en un 
+autre type.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si je passe un nombre 
+qui est en double précision (Double) dans une variable en simple précision 
+(Single), VB accepte, au risque de perdre de la précision (s’il y a un très 
+grand nombre de chiffre significatif).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ainsi&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim D As 
+Double</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim S As 
+Single</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">
+D=0.123456789</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">S=D</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">
+<span style="background-color: #FFFFFF">MessageBox.Show(s)</span> </span>
+<font size="2"><span style="font-family: Courier New">'</span></font><span style="font-size: 10.0pt; font-family: Courier New"> 
+affiche 0,1234568&nbsp;&nbsp; le 9 est perdu car un single à 7 chiffres 
+significatifs.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cela peut être 
+ennuyeux si c’est des calculs d’astronomie&nbsp;!! et le programmeur ne s’en rend pas 
+forcément compte&nbsp;!!</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Pour éviter cela il 
+faut activer l’<span style="color: blue">OPTION STRICT </span>à<span style="color: blue"> 
+ON </span>(Elle est par défaut à Off)</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Menu Projet &gt; 
+Propriétés de Nom de projet.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">-Page de propriétés de 
+Langage VB.Propriétés communes,
+génération en VB 2003.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">-Onglet 'Compiler' en VB
+2005 ou 2008.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; En face de<span style="color: blue"> 
+Option Strict, </span>mettre<span style="color: blue"> On</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Maintenant <b>seules les 
+conversions effectuées explicitement seront autorisées</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">S=D </font>
+<font size="2">est souligné dans le code pour signaler une conversion interdite.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">(Par contre D=S est 
+accepté car on passe d'une variable à une variable plus précise)&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il faudra maintenant, 
+pour notre exemple, écrire&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">S=
+CType(D,Single)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Cela entraîne une conversion 
+de la 
+valeur Double en Single&nbsp;; <font color="#FF0000">s’il y a perte de précision, 
+elle se produit quand même, <b>MAIS</b> le programmeur <b>SAIT</b> qu’il y a 
+conversion, il prendra ou pas <b>EN CONNAISSANCE DE CAUSE</b> le risque.&nbsp; </font>
+</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Avec Option Strict le langage 
+VB.Net devient bien moins tolérant: </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Écrire un programme avec Option Strict à Off, 
+ça passe; mettre Option Strict à On un tas d'instruction coince!! même certains 
+exemples Microsoft!! Car sans s'en rendre compte on passe d'un type de variable 
+à l'autre sans arrêt!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">2-Avec Option Strict=On&nbsp; VB</span><b><span style="background-color: #C0C0C0"> 
+refuse les conversions String&lt;-&gt;numériques implicites.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Avec Option Strict=Off</font></b></p>
+<p><font SIZE="2" face="Courier New" color="#0000FF"><font color="#0000FF">Dim
+myObjet As New Object&nbsp; </font></font><font SIZE="2" face="Courier New">'on
+crée un objet</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">myObjet =
+&quot;Bonjour&quot;&nbsp; </font><font face="Courier New" size="2">'on y met une
+string</font></p>
+<font SIZE="2">
+<p><font color="#0000FF" face="Courier New" size="2">MsgBox(myObjet.GetType)</font><font face="Courier New" size="2">
+'on affiche le type de l'objet</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Affiche le type contenue dans l'objet: String :
+le type 'prompt' que retourne GetType a été 
+transformé automatiquement en String pour être affiché. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Avec Option Strict=On</font></b></p>
+<p><font SIZE="2" face="Courier New" color="#0000FF">Dim myObjet As New Object</font></p>
+<p><font face="Courier New" color="#0000FF" size="2">myObjet =
+&quot;Bonjour&quot;</font></p>
+<font SIZE="2">
+<p><font color="#0000FF" face="Courier New" size="2">MsgBox(myObjet.GetType)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Plante</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut transformer explicitement&nbsp;</font><font color="#0000FF" face="Courier New" size="2">myObjet.GetType
+</font><font face="Courier New" size="2">en 
+String et écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">MsgBox(myObjet.GetType.ToString</font><font color="#0000FF" face="Courier New" size="2">)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Par contre <b>Vb
+est plus tolérant</b> pour la conversion de numérique en String: même avec <b> Option Strict=On
+il accepte:</b></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim i As Integer = 12</font></p>
+<font SIZE="2">
+<p><font color="#0000FF" face="Courier New" size="2">MsgBox(i)&nbsp; </font><font face="Courier New" size="2">'affiche
+la valeur d'un entier</font></p>
+</font><p style="margin-top: 6.0pt"><font face="Courier New" size="2">On aurait
+pu penser qu'avec <b>Option Strict=On il aurait fallu écrire:</b></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim i As Integer = 12</font></p>
+<font SIZE="2">
+<p><font color="#0000FF" face="Courier New" size="2">MsgBox(i.ToString)</font><font face="Courier New" size="2">
+mais</font><font color="#0000FF" face="Courier New" size="2"> </font><font color="#0000FF" face="Courier New" size="2">MsgBox(i)
+</font><font face="Courier New" size="2">est accepté.</font></p>
+</font><p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0">3-Avec Option Strict=On&nbsp; VB 
+refuse les '</span></font><span style="font-weight: 700; background-color: #C0C0C0"><font face="Courier New" size="2">Liaisons tardives'</font></span><font face="Courier New" size="2"><span style="font-weight: 700; background-color: #C0C0C0">:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Avec Option Strict=On&nbsp; VB<b> refuse les 
+liaisons tardives:</b></font></p>
+<font size="2">
+<p><font face="Courier New" color="#0000ff" size="2">Dim V As Object</font></p>
+<p><font face="Courier New" color="#0000ff">V=&quot;VB&quot;</font></p>
+<p><font color="#0000ff" face="Courier New">MessageBox.Show(V.Length) </font>
+<font face="Courier New">est refusé car à la compilation on ne sait pas de
+quel type est V, il faudra 'tardivement', lors de l'exécution, traiter le fait
+que V est une String et qu'il a une propriété nommée Length, c'est une
+liaison tardive.&nbsp;</font></p>
+<p><font face="Courier New">Il faut écrire</font></p>
+<p><font face="Courier New"><font color="#0000ff">MessageBox.Show(</font><font color="#0000ff" size="2">CType</font><font color="#0000ff">(V,
+</font><font color="#0000ff" size="2">String</font><font color="#0000ff">).Length.ToString)</font></font></p>
+</font>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Là, à la
+compilation, on transforme l'objet en String et ainsi, on peut avoir accès à
+sa propriété Length, c'est une liaison précoce.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">'Option Strict Off' permet n'importe quoi.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">'Option Strict On' oblige à une grande
+rigueur.&nbsp; </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; ">&nbsp;</span><font face="Courier New" size="2"><span style="background-color: #C0C0C0">4-Avec Option Strict=On&nbsp; VB
+est plus rapide&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">La
+vérification est effectuée lors de la compilation, à l'exécution il y a
+moins de contrôle de type et cela va plus vite.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">B- Option explicit</font></span></b></p>
+<p><font face="Courier New" size="2" color="#008000">Pour la déclaration des 
+variables nous avions dit que toute variable utilisée devait être déclarée.</font></p>
+<p><font face="Courier New" size="2">Par défaut c’est vrai.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ouvrir Menu Projet &gt; 
+Propriétés de Nom de projet.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Page de propriétés de 
+Langage VB.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Propriétés communes, 
+génération.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; En face de<span style="color: blue"> 
+Option Explicit, </span>il y a<span style="color: blue"> On</span></span></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>On pourrait (c’est fortement déconseillé) 
+mettre cette option à Off.</b> </font></p>
+<p><font face="Courier New" size="2">Cela ne rend plus obligatoire la déclaration des 
+variables. </font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">MaVariable=10&nbsp;</font> 
+sans déclaration préalable est acceptée.</font></p>
+<p><font face="Courier New" size="2">Cela présente certains inconvénients: 
+Si on fait une faute de frappe en tapant le nom d’une variable, VB accepte le 
+nouveau nom&nbsp; et crée une nouvelle variable objet distinct.</font></p>
+<p>
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+Dim MaVariable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">
+MaVariable avec un b</font></span></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MaVariabble=10&nbsp;</span>&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Faute de frappe(bb)Je 
+crois avoir mis 10 dans Mavariable</font></p>
+<p><font face="Courier New" size="2">En fait j’ai mis 10 dans une nouvelle 
+variable nommée MaVariabble</font></p>
+<p><font face="Courier New" size="2">Mavariable à toujours une valeur=0</font></p>
+<p>Si Option Explicite= On , VB aurait indiqué que <span style="background-color: #FFFFFF"><font color="#0000FF">MaVariabble
+</font><font face="Courier New" size="2">avec une faute n'est pas déclarée.</font></span></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Donc, c’est clair et sans appel&nbsp;:<font color="#FF0000"> 
+Laisser Option Explicit à On, <b>ce qui oblige à déclarer toutes les variables 
+avant de les utiliser</b></font> Dans ce cas si vous tapez le nom d'une variable non 
+déclarée, elles est soulignée en bleue.</font></p>
+<p>&nbsp;</p>
+<p><b><font size="4" color="#0000FF"><span style="font-family: Courier New; background-color: #C0C0C0">C</span></font><span style="font-family: Courier New; background-color:#C0C0C0"><font size="4" color="#0000FF">-Option
+Compare</font></span></b></p>
+<p><span lang="EN-US"><font face="Courier New" size="2"><font color="#0000FF">Option
+Compare Binany </font><font color="#111111">permet de comparer des chaînes de
+caractères en fonction de leur code</font><font color="#0000FF"> Unicode.&nbsp;</font></font></span></p>
+<p><span lang="EN-US"><font face="Courier New" size="2"><font color="#0000FF">Option
+Compare Text </font><font color="#111111">permet de comparer des chaînes de
+caractères en fonction du CultureInfo</font><font color="#0000FF">.&nbsp;</font></font></span></p>
+<p><span lang="EN-US"><font color="#111111" size="2" face="Courier New">Exemple
+:</font></span></p>
+<p><font face="Courier New" size="2"><font color="#0000FF"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA">Console.WriteLine(&quot;a&quot;
+= &quot;A&quot;)</span></font><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA"><span style="mso-spacerun: yes">
+&nbsp;
+</span></span></font></p>
+<blockquote>
+<p><font face="Courier New" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA">' donne&nbsp; <font color="#0000FF">True</font>&nbsp; si <font color="#0000FF">Option
+Compare Text</font> car sémantiquement parlant c'est le même caractère.</span></font></p>
+<p><font face="Courier New" size="2"><span style="mso-fareast-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA">' donne&nbsp; <font color="#0000FF">False</font>&nbsp; si <font color="#0000FF">Option
+Compare Binary</font> car le code Unicode de &quot;a&quot; et &quot;A&quot;
+n'est pas le même .</span></font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><b><font face="Courier New">Par défaut (Option Compare Binary)</font></b></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Les caractères sont classés dans un
+  ordre croissant (l'ordre de leur code unicode)</font></p>
+  <p><font face="Courier New" size="2">Voyons l'ordre des certains caractères
+  particuliers:</font></p>
+  <p><font face="Courier New" size="2">&quot; &quot;&nbsp; +,-./ 0123456789 :;ABCDEF
+  abcdef èéê</font></p>
+  <p><font face="Courier New" size="2">On constate que l'ordre est espace puis
+  quelques caractères spéciaux, les chiffres, les majuscules puis les
+  minuscules, les accentués.(voir le tableau d'Unicode)</font></p>
+  <p><font face="Courier New" size="2">Ainsi <font color="#0000ff">B&lt;a</font></font></p>
+  <p><font face="Courier New" size="2">En utilisant <b>Option Compare Binary</b>,
+  la plage </font><font size="2"><code class="ce"><font face="Courier New">[A–E]</font></code><font face="Courier New">
+  correspond à <i>A</i>, <i>B</i>, <i>C</i>, <i>D</i> et <i>E</i>.</font></font></p>
+</blockquote>
+<p><b><font face="Courier New">Avec Option Compare Text</font></b></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Les caractères sont classées dans un
+  ordre qui reflète plus la réalité d'un texte:</font></p>
+  <p><font face="Courier New" size="2">Toutes les types de a: <i>&nbsp;A</i>, <i>a</i>,
+  À, à, puis tous les types de b: <i>B</i>, <i>b...</i></font></p>
+  <p><font size="2"><font face="Courier New">Avec <b>Option Compare Text</b>,</font><code class="ce"><font face="Courier New">
+  [A–E]</font></code></font><font face="Courier New" size="2"> correspond à<i>
+  A</i>, <i>a</i>, À, à, <i>B</i>, <i>b</i>, <i>C</i>, <i>c</i>, <i>D</i>, <i>d</i>,
+  <i>E</i> et <i>e</i>. La plage ne correspond pas à Ê ou ê parce que les
+  caractères accentués viennent après les caractères non accentués dans
+  l'ordre de tri.</font></p>
+  <p><font face="Courier New" size="2">Ainsi <font color="#0000ff">B&gt;a</font></font></p>
+</blockquote>
+<p><span style="font-size:12.0pt;font-family:&quot;Times New Roman&quot;;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-ansi-language:FR;mso-fareast-language:
+FR;mso-bidi-language:AR-SA"><br>
+<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><br style="mso-special-character:
+line-break">
+<br style="mso-special-character:line-break">
+</span></p>
+<p><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">D-Option Infer (en <u>VB 2008</u>)</font></span></b></p>
+<p><span lang="EN-US"><font face="Courier New" size="2"><font color="#0000FF">Option
+Infer On </font>permet de se passer de donner le type d'une variable quand on la
+déclare. Lors de l'utilisation de la variable, elle prendra le type nécessaire.
+Ainsi, si on met une string dans le variable cela devient une variable String.</font></span></p>
+<p><font face="Courier New" size="2"><span lang="EN-US">Par défaut on a <font color="#0000FF">Option
+Infer Off</font></span></font></p>
+<p><span lang="EN-US"><font face="Courier New" size="2"><font color="#0000FF">Option
+Infer On<br>
+<br>
+Module Test<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Sub Main()<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font><span style="mso-tab-count:1"><font color="#111111">
+</font></span><font color="#111111">' Le type de x est ' Integer'</font><font color="#0000FF"><br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dim x = 10<br>
+<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font><font color="#111111">' </font><font color="#111111">Le type de y
+est</font><font color="#111111"> 'String'</font><font color="#0000FF"><br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Dim y = &quot;abc&quot;<br>
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>End Sub<br>
+End Module</font></font></span></p>
+<p><span lang="EN-US"><font color="#111111" size="2" face="Courier New">Son
+utilité se retrouve dans l'usage de base de données et de Linq.</font></span></p>
+<p><font face="Courier New" size="2"><span lang="EN-US"><font color="#111111">Éviter</font><font color="#0000FF">
+</font><font color="#0000FF">Option Infer On </font><font color="#111111">pour
+du code habituel.</font></span></font></p>
+<p><span lang="EN-US"><o:p>
+</o:p>
+</span></p>
+<p><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Option strict et Explicit dans un module:</font></span></b></p>
+<p><font face="Courier New" size="2">On peut aussi indiquer <b>dans un module</b> 
+les options; ces instructions doivent être tapées avant toutes les autres.</font></p>
+<p><img border="0" src="vdeclar.gif" width="345" height="303"></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6bol.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+</html>

@@ -1,0 +1,393 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:58 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET nombre aléatoire random rnd </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.14</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" face="Courier New" color="#800080">Le Hasard, l'aléatoire</font></b></td>
+    <td width="14%" height="76"><a href="v1-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b><font size="7">
+<font color="#FF0000">&nbsp;
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?</font><font color="#00FF00">?</font><font color="#0000FF">?</font></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment obtenir un 
+nombre aléatoire?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">A- Avec les 
+instructions Rnd() et Randomize() de Visual Basic.Net</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Rnd()</font> fournit un 
+nombre pseudo-aléatoire entre 0 et 1 (sans jamais atteindre 1); valeur inférieure à&nbsp;1 
+mais supérieure ou égale à zéro; ce nombre pseudo-aléatoire est un <b>Single</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En fait, si on fait des Rnd() successifs, le 
+nombre pseudo-aléatoire précédemment généré est utilisé&nbsp; pour le calcul du nombre
+pseudo-aléatoire suivant (avec une formule mathématique complexe), ce qui fait que la suite de nombre
+pseudo-aléatoire est toujours la 
+même et qu'elle est périodique (au bout d'un grand nombre de tirage, on 
+recommence la même suite).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Randomize() </font>initialise 
+le générateur de nombres pseudo-aléatoires. Si on ne donne pas d'argument, Randomize utilise la valeur 
+de l'horloge interne pour initialiser; cette valeur est dû au hasard, aussi le 
+Rnd qui suit va être dû au hasard.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on n'utilisait pas Randomize() avant Rnd(), 
+la fonction Rnd() fournirait toujours les mêmes nombres pseudo-aléatoire dans le même 
+ordre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En résumé:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">Rnd</font> , si il n'y a pas d'argument, fournit une suite de nombre <b>pseudo 
+aléatoire</b> (le suivant étant calculé à partir du précédent), la suite est 
+toujours la même, seule le premier change et est initialisé par
+<font color="#0000FF">Randomize</font> qui est basé&nbsp; soit sur l'horloge 
+système (et qui à priori initialise à une valeur toujours différente) s'il n'y a 
+pas d'argument soit sur un argument.</font></p>
+<p><font face="Courier New" size="2">Pour obtenir plusieurs fois <b>les mêmes 
+séries de nombres</b> , utiliser <b>Randomize</b> avec un argument numérique 
+puis appelez Rnd() avec un argument négatif.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Simuler un jeu de lancé de dé.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comment obtenir un nombre entier entre un et 
+six au hasard?</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Dim MyValue As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Randomize&nbsp;&nbsp; </span></font>
+<span style="background-color: #FFFFFF">' Initialise le générateur de nombre 
+aléatoire.</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">MyValue = CInt(Int((6 * Rnd()) + 1))
+</span></font><span style="background-color: #FFFFFF">' Génère un nombre 
+aléatoire entre 1 et 6.</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">Rnd()</font> fournissant 
+un nombre aléatoire entre 0 et 1, je le multiplie par 6 et j'ajoute 1 pour qu'il 
+soit entre 1 et 7 sans atteindre 7 (il peut être entre 1 et 6,999), je prend sa 
+valeur entière: il est maintenant entre 1 et 6, enfin je le transforme en 
+Integer. </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" size="2">On
+transforme <font color="#0000FF">
+Int((6 * Rnd()) + 1)</font>
+ en Integer car Rnd(), ne l'oublions pas, retourne un Single.</font>
+ </span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">B</font></span><font color="#0000FF" face="Courier New" size="4"><span style="font-weight: 700; background-color: #C0C0C0">- Avec 
+la classe Random du Framework</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Il existe une classe(faisant partie de System ) nommée <font color="#0000FF">
+Random.</font></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+La méthode</font><font face="Courier New" size="2" color="#0000FF"> Next()
+</font><font face="Courier New" size="2">retourne un</font><font face="Courier New" size="2" color="#0000FF"> 
+Integer </font><font face="Courier New" size="2">positif entre 0 et 2 147 483 
+647</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+La méthode</font><font face="Courier New" size="2" color="#0000FF"> NextDouble()
+</font><font face="Courier New" size="2">retourne un</font><font face="Courier New" size="2" color="#0000FF"> 
+Double</font><font face="Courier New" size="2"> entre 0 et 1.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+La méthode</font><font face="Courier New" size="2" color="#0000FF"> NextBytes()
+</font><font face="Courier New" size="2">retourne un</font><font face="Courier New" size="2" color="#0000FF"> 
+Byte </font><font face="Courier New" size="2">(octet)</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On peut surcharger ces méthodes pour définir des bornes.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+J'instancie une objet à partir de la classe.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Al As New Random</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'objet</font><font face="Courier New" size="2" color="#0000FF"> Al </font>
+<font face="Courier New" size="2">est initialisé avec une valeur probablement 
+liée au temps, à l'horloge interne, aussi l'initialisation est 'aléatoire'.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>Pour obtenir un nombre(un double) entre 0 et 1</b> (toujours inférieur à 
+1)j'écris:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.NextDouble</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Ensuite chaque <font color="#0000FF">NextDouble</font> génère le nombre
+pseudo-aléatoire suivant (à partir d'une formule)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Noter bien que dans ce qui précède, si on fait plusieurs fois </font>
+<font face="Courier New" size="2" color="#0000FF">Dim Al As New Random , </font>
+<font face="Courier New" size="2">le nombre obtenu par</font><font face="Courier New" size="2" color="#0000FF"> 
+NextDouble </font><font face="Courier New" size="2">n'est jamais le même.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Par contre si on fait:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Al As New Random<b>(1)</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.NextDouble</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.NextDouble</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On obtient toujours:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+'0.248668584157093'</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+'0.110743977181029'</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On obtient donc la même série car on a imposé avec</font><font face="Courier New" size="2" color="#0000FF"> 
+Random(1) </font><font face="Courier New" size="2">une valeur de départ qui est 
+fonction de (1) et non du temps.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Pour obtenir un nombre </font></b><font face="Courier New" size="2">
+<b>pseudo-aléatoire entre 0 et 
+10, on utilise <font color="#0000FF">Next</font>:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Al As New Random<b>()</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.Next(10)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.Next(10)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On obtient la série: 2, 1, 4, 7, 6, 4, 3, 9</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On travaille sur des 'Integer'</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Pour obtenir un nombre </font></b><font face="Courier New" size="2">
+<b>pseudo-</b></font><b><font face="Courier New" size="2">aléatoire entre 5 et 10 
+(mais &lt; à 10), on utilise <font color="#0000FF">Next</font>:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">Dim Al As New Random<b>()</b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.Next(5,10)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" size="2" color="#0000FF">MonNombrealeatoire=Al.Next(5,10)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+La série comportera les nombres integers 5, 6, 7, 8, 9&nbsp; (pas 10)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Pour remplir un tableau d'octets avec des 
+octets </font></b><font face="Courier New" size="2">
+<b>pseudo-</b></font><b><font face="Courier New" size="2">aléatoires, on utilise <font color="#0000FF">NextBytes</font>:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">Dim rnd As New Random()<br>
+Dim b(10) As Byte<br>
+rnd.NextBytes(b)</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">C</font></span><font color="#0000FF" face="Courier New" size="4"><span style="font-weight: 700; background-color: #C0C0C0">- 
+En cryptographie avec le Framework</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Pour remplir un tableau d'octets avec des 
+octets aléatoires </font></b><u><font face="Courier New" size="2">forts d'un 
+point de vue cryptographique</font></u><b><font face="Courier New" size="2"> </b>
+(pour générer un mot de passe par exemple)<b>, on 
+utilise plutôt la classe </b>
+</font>
+<font face="Courier New" size="2" color="#0000FF">RNGCryptoServiceProvider()</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+L'exemple suivant crée une séquence aléatoire de 100 octets de long et la stocke 
+dans ra. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span id="ctl00_LibFrame_MainContent"><font face="Courier New">
+<span style="COLOR: blue"><font size="2">Imports</font></span><font size="2"> 
+System.Security.Cryptography</font></font><br>
+</span><font face="Courier New" size="2">
+<br>
+<font color="#0000FF">Dim ra() As Byte = New Byte(100) {}<br>
+Dim rng As New RNGCryptoServiceProvider()<br>
+rng.GetBytes(ra) </font>' les octets dans ra sont maintenant aléatoires.<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Il existe aussi <font color="#0000FF">GetNonZeroBytes </font>pour ne pas avoir 
+d'octet=0.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="4"><span style="font-weight: 700; background-color: #C0C0C0">
+D - Un peu de théorie (creusons).</span></font><font size="2" face="Courier New">
+<img border="0" src="vcreuson.gif" width="127" height="99"></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">
+Un nombre aléatoire est obtenu par tirage au sort à égalité des chances, il est 
+impossible de prévoir le tirage suivant.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Il existe des procédures physiques permettant de générer des nombres aléatoires:&nbsp; 
+comptage de désintégration par compteur Geiger, analyse de bruit..</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+En informatique, on utilise les <b>nombres pseudo aléatoires</b> générés par des 
+algorithmes.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">L'implémentation actuelle de la 
+classe <b>Random</b> est basée sur l'algorithme du générateur de nombres 
+aléatoires soustractif de <b>Donald E. Knuth</b>. Pour plus d'information, consultez 
+D. E. Knuth. «&nbsp;The Art of Computer Programming, volume 2: Seminumerical 
+Algorithms.&nbsp;» Addision-Wesley, Reading, MA, deuxième édition, 1981.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">Soit un nombre de 
+départ <font color="#0000FF">x</font> (nommé' graine' ou seed en anglais)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le nombre&nbsp; est utilisé&nbsp; pour le calcul du nombre pseudo-aléatoire suivant 
+(avec une formule mathématique complexe), ce qui fait que la suite de nombre
+pseudo-aléatoire est toujours la même pour une même graine et qu'elle est périodique.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">La formule, dite 
+<b>générateur à 
+congruence linéaire</b>, pour trouver le nombre suivant, est de la forme:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" color="#0000FF">X<sub>n+1</sub> 
+= (aX<sub>n</sub>+b) mod m</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">x<sub>n+1</sub> = (1 664 525 x<sub>n</sub> + 
+1 013 904 223) mod 2<sup>32 </sup></font>(générateur de Knuth &amp; Lewis) <br>
+&nbsp;</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Voir l'excellent article sur les 
+nombres pseudo aléatoires:<a href="http://www.alrj.org/docs/algo/random.php">Article 
+de P larbier</a></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">et l'excellent
+<a href="http://www.apprendre-en-ligne.net/random/index.html">site de D. Müller</a></font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">On a vu que le 
+générateur est <b>périodique</b>: au bout d'un certain nombre de tirage pseudo-aléatoire,
+dés qu'un nombre apparaît la seconde fois, on recommence la même série. 
+En théorie, la période maximale serait m (le m de mod m dans la formule) soit 2<sup>32.</sup></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">Quelle est la 
+période de la Classe Random en pratique?</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">Période:&nbsp;&nbsp; 
+81 672 063&nbsp; avec <font color="#0000FF">Next</font> (Integer)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New">Période:&nbsp; 562 
+183 903&nbsp; avec <font color="#0000FF">NextDouble</font> (Double)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+C'est un ordre de grandeur car en fonction de la graine (valeur de départ), la 
+série et la période sont différentes (j'ai essayé!).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Tout l'art est de choisir la graine(le premier nombre) aléatoirement!!Cela est 
+effectué par Randomize en VB ou l'instanciation d'un objet Random dans le
+Framework. Randomize 
+utilise par exemple la valeur de l'horloge interne pour initialiser; cette 
+valeur serait dû au hasard</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">
+Amélioration :</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Comment générer des nombres plus aléatoires 
+que les pseudo aléatoires?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">1- Solution créée par le programmeur:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le nombre aléatoire est la combinaison d'un nombre pseudo aléatoire et d'un 
+nombre probablement aléatoire par exemple:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Position de la souris</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Temps entre 2 pressions sur&nbsp; des touches</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Statistique d'activité du disque dur.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Temps écoulé depuis.. (Ce que fait randomize).</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Le nombre aléatoire est le produit d'un nombre pseudo aléatoire et du nombre de 
+seconde écoulé depuis une date:</font></p>
+<p><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Dim pAlea As Double&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#111111">'Nombre 
+pseudo aléatoire </font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim second&nbsp;As 
+Double&nbsp; &nbsp;</font><font color="#111111">'Nombre de secondes depuis le 30/12/96
+</font></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dim Alea&nbsp; 
+As Double&nbsp;&nbsp;&nbsp; </font><font color="#111111">'Nombre aléatoire
+</font></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Randomize </font>
+</p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pAlea = 
+Int((1000000 * Rnd) + 1) </font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;second =
+DateDiff(&quot;s&quot;, 
+&quot;12/30/96&quot;, Now) </font></p>
+<p><font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alea =&nbsp; second
+*pAlea</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Il y a des biais, en particulier, si on utilise régulièrement cette routine, le 
+nombre de seconde est régulièrement&nbsp;croissant. On pourrait améliorer en 
+utilisant <font color="#0000FF">second Mod quelque chose</font>.</font></p>
+<p><b><font face="Courier New" size="2">2- Solution proposée par le Framework:</font></b></p>
+<p><font face="Courier New" size="2"><span id="ctl00_LibFrame_MainContent0">
+Méthode utilisée dans la classe <font color="#0000FF">
+System.Security.Cryptography</font><br>
+Le générateur </span>&nbsp;doit 
+être capable de produire des nombres aléatoires résistant à des attaques ou à 
+des&nbsp; analyses 
+statistiques qui permettraient de prédire la suite.</font></p>
+<p><font size="2" face="Courier New">Les méthodes courantes pour générer des nombres aléatoires en 
+cryptographie consiste à utiliser diverses sources disponibles sur un 
+ordinateur: temps entre deux accès au disque, taille de la mémoire, mouvements 
+du pointeur de la souris... et à faire passer le résultat dans une fonction de 
+hachage cryptographique comme MD5 ou SHA-1 puis à utiliser cette valeur comme 
+graine puis...</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-15.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:58 GMT -->
+</html>

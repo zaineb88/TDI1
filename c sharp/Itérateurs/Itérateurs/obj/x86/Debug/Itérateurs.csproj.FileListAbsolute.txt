@@ -1,0 +1,10 @@
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Itérateurs\Itérateurs\bin\Debug\Itérateurs.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Itérateurs\Itérateurs\bin\Debug\Itérateurs.pdb
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.pdb
+G:\C#\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.exe
+G:\C#\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.pdb
+I:\TDI\c sharp\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.exe
+I:\TDI\c sharp\Itérateurs\Itérateurs\obj\x86\Debug\Itérateurs.pdb

@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+/* Question 1 */
+typedef struct{
+int num ;
+char nom[30];
+char prenom[30];
+float sold;
+}
+comptclient;
+
+/* Question 2 */
+void Saisircompt(comptclient t[10],int n)
+{
+int i;
+
+for(i=0;i<n;i++)
+{
+printf("donner les information de client %d " ,i+1);
+scanf("%d%S%S%f",&t[i].num,t[i].nom,t[i].prenom,&t[i].sold);
+}
+
+}
+
+/* Question 3 */
+void triecompt(comptclient t[10],int n)
+{
+comptclient c;
+int i,j;
+
+for(i=0;i<n-1;i++)
+{
+for(j=i+1;j<n;j++)
+{
+if(t[i].sold>t[j].sold)
+{
+c=t[i];
+t[i]=t[j];
+t[j]=c;
+}
+}
+}
+}
+
+/* Question 4 */
+void Affichercompt(comptclient t[10],int n)
+{
+
+int i,j;
+
+for(i=0;i<n;i++)
+{
+printf("les information de client %d est : \n", i+1);
+printf("%d %S %S %f\n",t[i].num,t[i].nom,t[i].prenom,t[i].sold);
+}
+
+}
+
+/* Question 5 */
+int main()
+{
+comptclient t[10];
+
+Saisircompt(t,4);
+triecompt(t,4);
+Affichercompt(t,4);
+
+system("pause");
+return 0;
+}

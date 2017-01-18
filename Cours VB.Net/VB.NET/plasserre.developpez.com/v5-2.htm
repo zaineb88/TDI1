@@ -1,0 +1,1150 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:18 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net creation de classe</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.2</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Création de Classe.</font></b></td>
+    <td width="9%" height="76"><a href="v5-2.2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-family: Courier New; font-weight: 700"><font size="2" color="#800080">
+On a vu qu'il existait 
+des classes prédéfinies (celle du Framework par exemple) mais on peut soi même </font>
+</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-family: Courier New; font-weight: 700">
+<font size="5" color="#800080">
+CREER SES PROPRES CLASSES:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vboit.JPG" width="170" height="114"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><b>
+<font face="Courier New" size="2">Maintenant on est DANS la boite.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #CCCCCC"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Revenons une nouvelle 
+fois sur la notion de Classe et d'Objet.</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700"><font size="2">On va 
+créer une classe 'Médicament'( c'est 
+l'objet de ce chapitre).</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un 'Médicament' possède les variables:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Nom</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Laboratoire</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Nombre de médicament.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut donc pouvoir 'regrouper' ces variables 
+pour un médicament précis. Pour regrouper ces variables, on utilise une 
+structure particulière: la Classe.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une Classe 'Medicament' aura:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Medicament.Nom</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Medicament.Laboratoire</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Medicament.NbdeMedicament</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Avec cette Classe (la structure, le moule), on 
+peut créer (instancier) un Objet MonMedicament.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim MonMedicament As New 
+Medicament</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il comporte les variables (données):</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">MonMedicament.Nom</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">MonMedicament.Laboratoire</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">MonMedicament.NbdeMedicament</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il comporte des méthodes (comportement):</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">MonMedicament.GetNom</font>&nbsp; 
+est une méthode</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">L'utilisateur de l'objet ne voit que le nom de 
+la méthode (<b>l'interface</b>), il ne voit pas le code de la procédure (<b>l'implémentation</b>). 
+Il y a bien <b>encapsulation</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Une fois cette classe 
+créée, du coté utilisateur, comment l'utiliser? </span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Pour instancier un objet
+Medicament: <font color="#0000FF">Dim MonMedicament As New Medicament()</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Donner une valeur à une 
+propriété: <font color="#0000FF">MonMedicament.Nom= &quot;Aspirine&quot;: MonMedicament.Laboratoire=&quot;RP&quot;</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; font-weight: 700">Récupérer la valeur 
+d'une propriété: <font color="#0000FF">LeNom=MonMedicament.Nom&nbsp; : Nb= MonMedicament.NombreMedicament</font></span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#FF0000"><span style="font-family: Courier New; font-weight: 700"><img border="0" src="vicocheb.gif" width="32" height="34"> 
+Pour la suite de ce 
+chapitre, nous sommes DANS la Classe de l'objet (et non dans l'application 
+utilisatrice). </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #CCCCCC">
+Créer une Classe</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Menu <b>Projet</b> puis <b>Ajouter une Classe.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vcreerclas.JPG" width="681" height="421"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Entrée 'Medicament' dans la zone nom puis OK</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une nouvelle fenêtre de module est ajoutée à 
+notre projet, contenant le code suivant:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Public Class Medicament<br>
+…<br>
+End Class</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le mot avant Class indique la portée de la 
+classe:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">Public</font> (Classe
+instanciable dans et hors du projet, utilisable par un autre programme)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">Private</font> (Classe
+instanciable que dans elle même!!) </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">Friend</font> (Classe
+instanciable dans le projet )</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">Protected</font> 
+(Classe instanciable uniquement dans les classes dérivées)</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut ajouter:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">MustInherit:</font> Cela 
+donne une classe non instanciable, on ne peut pas créer d'objet avec!! Alors à 
+quoi cela sert!! A fournir une base pour des classes qui en hériteront. on 
+appelle ces classes des <b>classes abstraites</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#008000">NotInheritable: </font>
+Cette classe ne peut-être héritée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #CCCCCC">Ajouter des variables dans une 
+classe:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On parle de variable ou 'Attribut' permettant 
+d'associer <b>des données</b> à une Classe.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La variable peut être '<font color="#0000FF">Privée</font>' et non visible à 
+l'extérieur:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">
+Private _mNom As String </font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Il est 
+conseillé de mettre un '_' au début du nom d'une variable privée puis une 
+majuscule au début de chaque mot sauf le premier.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Elle peut être '<font color="#0000FF">Public</font>' , visible à l'extérieur 
+et donc non encapsulée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Laboratoire As String</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Il est 
+conseillé de mettre une majuscule au début de chaque mot formant le nom de la 
+variable public.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">A 
+l'extérieur , si on instance M comme un médicament (<font color="#0000FF">Dim M 
+As New Médicament)</font> , <font color="#0000FF">M.Laboratoire</font> est 
+valide.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut définir un champ 'Public' en lecture 
+seule qui a une valeur constante:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public ReadOnly NombreMedicament=2000</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Vous pouvez ajouter à votre variable : <b>Shared</b>. 
+Cela signifie que la variable déclarée comme Shared est <b>
+partagée par toutes les instances de la classe </b>: C'est une variable de 
+classe et non une variable d'instance.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une variable Shared est même utilisable sur le 
+nom de la classe , sans instancier.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Public Class Medicament</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+&nbsp;&nbsp;&nbsp; Public Laboratoire As String&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">
+'variable d'instance</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+</span>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">
+Public <b>Shared</b> Societe as 
+String </font>
+<font face="Courier New" size="2">
+'variable de classe Shared</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Dim M1 As New Medicament</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">Dim M2 As New Medicament</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">M1.Laboratoire= &quot;MVV&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">M2.Laboratoire= &quot;VVT&quot;</font>
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Chaque instance à sa propre variable&nbsp; 
+Laboratoire (Non Shared)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">M1.Societe=&quot;ooo&quot;</font> 
+entraîne que <font color="#0000FF">M2.societe</font> est aussi égal à &quot;ooo&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">La propriété <font color="#0000FF">Societe</font> de toutes les instances 
+de Medicament a la même valeur </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">Medicament.Societe</font> 
+est aussi égal à &quot;ooo&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ici on a directement utilisé le nom de la 
+classe.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">(Ne pas confondre avec une variable Static qui 
+est une variable qui conserve sa valeur, mais qui a une valeur pour chaque 
+instance).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+U<font face="Courier New" size="2">ne variable, comme tous les membres d'une 
+classe peut être, <font color="#0000FF">Private</font>, <font color="#0000FF">Public</font>, mais aussi <font color="#0000FF">
+Protected</font> (accessible par les seules méthodes de la classe ou des objets 
+dérivés)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Il faut en général 
+déclarer les variables internes en 'Private': elles sont internes et non 
+accessibles à l'extérieur de la Classe.</font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #CCCCCC"><b>
+<font face="Courier New" size="4" color="#0000FF">A</font></b></span><b><font size="4" color="#0000FF" face="Courier New"><span style="background-color: #CCCCCC">jouter 
+des propriétés grâce à 'Property'</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les propriétés permettent d'associer <b>des 
+données</b> à une Classe.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On rappelle qu'une Property peut être utilisée 
+comme cela: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim MonMedicament As New 
+Medicament()</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">MonMedicament.Nom= &quot;Amoxicilline&quot; 
+: Nom
+</font>
+<font face="Courier New" size="2">est une Property.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Vu de l'extérieur cela pourrait ressembler à 
+une variable, en fait dans l'implémentation c'est complètement différent. Il y a 
+du code permettant d'écrire ou de lire la property.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour créer une Property:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Tapez 'Property Nom' puis validez, la 
+définition de la propriété est générée en faisant apparaître </font></p>
+<ul>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">un bloc <b>Get</b> qui correspond à la 
+  lecture de la propriété par l'utilisateur.</font></li>
+  <li>
+  <p class="MsoNormal" style="margin-top: 6.0pt">
+  <font face="Courier New" size="2">un bloc <b>Set</b> qui correspond à 
+  l'écriture de la propriété par l'utilisateur, on récupère la valeur dans le 
+  paramètre value.</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Property Nom() <br>
+Get&nbsp; <br>
+End Get</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Set (By Val Value)<br>
+End Set<br>
+End Property</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">J'ajoute <b>Public</b> pour que cette 
+propriété soit accessible hors de la classe, j'indique que c'est une <b>String</b>. 
+Lors de la lecture de la propriété (par l'utilisateur de l'instance) <b>Get</b> 
+retourne (grâce à Return) la valeur _mNom qui est une variable privée de la classe 
+et qui sert à stocker la valeur de la propriété. Lors de l'écriture de la 
+variable, <b>Set</b> récupère la valeur dans Value et la met dans _mNom: </font>
+</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Public Class Medicament</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#008000">'Variable privée (Attribut) 
+servant à stocké en interne le nom.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Private _mNom As String</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Propriété Nom</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Property Nom() as String<br>
+Get&nbsp; <br>
+&nbsp;&nbsp;&nbsp; Return _mNom<br>
+End Get<br>
+Set(By Val Value)<br>
+&nbsp;&nbsp;&nbsp; _mNom=value<br>
+End Set</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Property</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2">Encapsulation:</font></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">La 
+variable <b>'-mNom' est encapsulée</b>: l'utilisateur qui utilise une instance 
+de la classe, ne voit pas ce qui se passe (ici c'est très simple) quand il 
+utilise le nom, <b>il ne voit pas l'implémentation</b> (l'implémentation c'est 
+Get...Set...), <b>il ne voit que l'interface </b>c'est à dire .Nom ; Il n'a pas 
+accès à _mNom.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Si 
+l'utilisateur tape: <font color="#0000FF">MonMedicament.Nom=&quot; Aspirine&quot;</font> , 
+c'est le code <font color="#0000FF">Set..EndSet</font> qui est exécuté.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Si 
+l'utilisateur tape: <font color="#0000FF">DIm s As String= MonMedicament.Nom</font> 
+, c'est le code <font color="#0000FF">Get..EndGet</font> qui est exécuté.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une propriété peut être en <b>lecture seule</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Public ReadOnly Property InitialeNom() 
+As String<br>
+Get<br>
+&nbsp;Return Left(_mNom,1) <br>
+End Get<br>
+End Property</span></font><span style="background-color: #FFFFFF"><br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Mais aussi en <b>écriture seule</b> grâce à 
+WriteOnly.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><b>Les propriétés comme les méthodes peuvent 
+être Public, Private, Protected, Friend, ProtectedFrient:</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #CCCCCC">
+<font face="Courier New" size="4" color="#0000FF">Méthode</font></span><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #CCCCCC">:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Une Classe peut contenir un <b>comportement</b> 
+sous forme de procédures et fonctions contenant du code.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut ajouter une méthode à une Classe:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><b>Les méthodes d'une classe sont les 
+procédures Sub ou Function </b>déclarées dans la classe.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Elles sont habituellement 'Public'.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une méthode peut contenir du code effectuant 
+un traitement: </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF"><font face="Courier New" size="2">Public Sub 
+Dessine() As Double<br>
+' Code<br>
+End Sub</font><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une méthode peut aussi être utilisée pour lire 
+ou écrire des variables privées, on parle dans ce cas d'<b>accesseurs</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Class Medicament</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Variables ou Attributs</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Private _nom As String</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'Accesseurs</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Function GetNom() As String</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Return _nom</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#008000">'modificateurs</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Public Sub SetNom (ByVal N As 
+String)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Me._nom= N</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">EndSub</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">SetNom est une mutateur.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0">Récapitulatif&nbsp; Property, méthodes.</span></font></b></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#FF0000" face="Courier New" size="2">A- Un objet peut être vu comme un
+<b>regroupement de données</b> (variables et propriétés).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La différence entre une variable et une 
+Propriété (Property) est qu'alors que la variable est une simple variable , la 
+Property est contrôlée par du code interne qui peut modifier le comportement de 
+la lecture ou de l'écriture de la Property.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#FF0000">B- Mais un objet va plus 
+loin: il peut contenir un <b>comportement</b></font> sous forme de procédures et 
+fonctions contenant du code. (Ce sont les <b>méthodes</b> de l'objet). Elles 
+représentent le comportement commun de tous les objets appartenant à la classe.<br>
+&nbsp;</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Tous les éléments de la Classe peuvent 
+être <font color="#0000FF">Public </font>(visibles par l'utilisateur de la 
+classe) ou <font color="#0000FF">Private</font> (non accessibles à l'utilisateur 
+de la classe et utilisés en interne dans la classe)</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#FF0000"><img border="0" src="vicoexcl.gif" width="29" height="43">&nbsp; On voit
+aussi qu'il faut que 
+les variables soient 'Private' et les méthodes et Property&nbsp; 'Public'.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #CCCCCC">Constructeur:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Un constructeur est une procédure&nbsp; 
+exécutée lors de l'instanciation.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans le module de classe, elle est définie 
+par:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut ajouter des paramètres qui serviront à 
+instancier.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Par exemple pour instancier et donner le nom en 
+même temps:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New(ByVal LeNom As String)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; _mNom=LeNom</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela permet<font color="#0000FF">&nbsp; Dim M 
+As New Medicament(&quot;Aspirine&quot;)</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut définir plusieurs constructeurs avec 
+un nombre de paramètres différents (plusieurs signatures), dans ce cas il y a <b>
+surcharge</b>, le constructeur&nbsp; par défaut étant celui sans paramètres.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une autre manière de faire est d'utiliser&nbsp;une 
+méthode
+<font color="#0000FF">Initialise</font>:</font></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Créons une classe avec une méthode Initialise.</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Classe Homme</p>
+<p ALIGN="LEFT">Private _Nom As String</p>
+<p ALIGN="LEFT">Private _Prenom As String</p>
+<p ALIGN="LEFT">Public Sub </font><font FACE="Courier New" SIZE="2">initialise(</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">ByVal
+</font><font face="Courier New" size="2">N </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String</font><font FACE="Courier New" SIZE="2">,
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">ByVal </font>
+<font face="Courier New" size="2">P </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As String</font><font FACE="Courier New" SIZE="2">)</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">&nbsp;&nbsp;&nbsp; Me</font><font SIZE="2" face="Courier New">._nom</font><font SIZE="2" face="Courier New"> 
+= N</font></p>
+<p ALIGN="LEFT"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+Me</font><font SIZE="2" face="Courier New">._prenom 
+= P</font></p>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<p ALIGN="LEFT">End Sub</p>
+<p ALIGN="LEFT">End Class</p>
+</font>
+<p ALIGN="LEFT"><font FACE="Courier New" SIZE="2"><i>_nom</i>, <i>_prenom </i>&nbsp;étant des données privées de la classe Homme, les instructions 
+:</p>
+<p ALIGN="LEFT"><font color="#0000FF">dim p as New Homme()</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">p._prenom=&quot;Philippe&quot;</font> est refusée</p>
+</font>
+<p ALIGN="LEFT"><font FACE="Courier New" SIZE="2">On écrira donc :</p>
+<p ALIGN="LEFT"><font color="#0000FF">dim p as New Homme</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">p.initialise(&quot;Monnom&quot;, &quot;Philippe&quot;)</font></p>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #CCCCCC">Destructeur:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="2">U</font></b><font face="Courier New" size="2"><b>n 
+objet est détruit: </b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">- en lui affectant la valeur
+<font color="#0000FF">Nothing</font><b>.</b> </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">- si on sort de sa portée.</font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Une procédure <font color="#0000FF">Finalize</font>&nbsp; 
+(appartenant à la Classe Objet) est automatiquement appelée 
+quand l'objet est détruit.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut ajouter une 
+procédure <font color="#0000FF">Finalize</font> à notre classe, qui redéfini la 
+procédure Finalise de la Classe 'Objet'.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Protected Overrides Sub Finalize ()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut y mettre le code&nbsp; libérant les 
+ressources ou d'autres choses.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Noter que la procédure Finalize est ici la 
+redéfinition (d'ou 'Overrides') de la procédure Finalize (qui est Overridable) de 
+la Classe Objet.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Attention la méthode Finalize est exécutée 
+quand l'objet est réellement détruit (Objet=Nothing le rend inutilisable mais il 
+est toujours présent en mémoire). C'est parfois très tardivement que l'objet est détruit: 
+quand il y a besoin de mémoire (c'est le Garbage Collector qui entre en action) 
+ou à la sortie du programme.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><b>Pour forcer la destruction</b> on peut utiliser l'interface
+<font color="#0000FF">IDisposable</font>:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il faut mettre dans l'entête de la classe</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Implements IDisposable</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">et mettre dans le code de la classe</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Sub Dispose() Implements 
+System.IDisposable.Dispose</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">' Code libérant les ressources 
+(Base de données, connexion, Objets systèmes..)...</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">C'est une méthode Public, on peut l'appeler de 
+l'application cliente:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">M.Dispose()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">M=Nothing</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Là aussi attention, <b>Dispose doit être 
+appelé de manière explicite</b> (il faut le faire, ce n'est pas automatique); 
+quand on fait M.dispose, la procédure Dispose et le code qu'il contient sont 
+exécutés immédiatement, par contre c'est toujours le Garbage Collector qui 
+décide quand Finalise sera exécuté. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Dans la pratique <b>quelle est d'utilité de gérer la destruction</b> autrement que par 
+Objet=Nothing si le Garbage Collector nettoie la mémoire? C'est une question.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Réponse donnée par Microsoft:</font></p>
+<p><font face="Courier New" size="2">Votre composant a besoin d'une méthode <b>
+Dispose</b> s'il alloue des objets système, des connexions à la base de données 
+et d'autres ressources rares qui doivent être libérées dès qu'un utilisateur a 
+fini de se servir d'un composant.</font></p>
+<p><font face="Courier New" size="2">Vous devez également implémenter une 
+méthode <b>Dispose</b> si votre composant contient des références à d'autres 
+objets possédant des méthodes <b>Dispose</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #CCCCCC">Surcharge</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut <b>surcharger un constructeur</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour&nbsp; cela il suffit de rajouter autant 
+de procédure New que l'on veut avec <b>pour chacune un nombre de paramètre 
+différent</b> (signatures différentes).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: <b>On peut surcharger un constructeur</b>:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Figure</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Bla Bla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub New( ByVal X As Integer, ByVal Y As 
+Integer)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; Blabla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub. </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;On 
+peut donc instancier la classe correspondante de 2 manières:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim A As New Figure</span></font><span style="background-color: #FFFFFF">
+</span>&nbsp;&nbsp; 'Constructeur par défaut</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">ou</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color: #FFFFFF">Dim A As New 
+Figure(100,150)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut <b>surcharger une property</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Pour&nbsp; cela il suffit de rajouter  des procédure Property
+<b>ayant le même nom de méthode </b>avec pour chacune un nombre de paramètre différent (signature différente)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On peut ajouter <font color="#0000FF">
+Overloads</font> mais c'est facultatif.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple surchargeons un 
+membre:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Class Figure</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Overloads Property 
+Calcul</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Bla Bla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Public Overloads Property 
+Calcul</font></span><font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">( ByVal X As Integer, ByVal Y As 
+Integer)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp; Blabla</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Sub. </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #CCCCCC">Evènement:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut définir un évènement pour la classe.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Dans la classe:</b></font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut <b>déclarer l'évènement</b>, avec le 
+mot <font color="#0000FF">Event</font></font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut utilisez l'instruction
+<font color="#0000FF">RaiseEvent</font> pour le déclencher lorsqu'un état ou une 
+condition le nécessite.</font></p>
+  </li>
+</ul>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">je crée une classe nommé 'Class1' 
+qui contient un membre 'Texte'( Property Texte), si 'Texte' change, alors on déclenche l'évènement 
+TextChange:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Public</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Class</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+Class1</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Private</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+_mTexte </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">
+<span style="background-color: #FFFFFF">' Déclare un évènement</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Public</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Event</font><font SIZE="2"> TextChange(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+UserName </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+</span><font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+String</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF">)</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Public</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Property</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+Texte()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Get</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Return</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+_mTexte</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Get</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Set</span></font><span style="background-color: #FFFFFF"><font SIZE="2">(</font></span><font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">ByVal</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+Value)</span></font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">If</span></font><font SIZE="2"><span style="background-color: #FFFFFF"> 
+  Value &lt;&gt; _mTexte </span></font></font><font SIZE="2" COLOR="#0000ff">
+  <font face="Courier New"><span style="background-color: #FFFFFF">Then</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">
+  <span style="background-color: #FFFFFF">&nbsp; RaiseEvent</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+  TextChange(&quot;hello&quot;)'&lt;= déclenchement de l'évènement par RaiseEvent</span></font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+  </span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+  <span style="background-color: #FFFFFF">If</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">_mTexte = 
+  Value</font></span></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Set</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Property</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">End</span></font></font><font SIZE="2" face="Courier New"><span style="background-color: #FFFFFF">
+</span></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Class</span></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si l'application cliente modifie la propriété 
+.Texte d'un objet  Class1&nbsp; alors on compare l'ancien et le nouveau texte, 
+s'il est différent on déclenche un évènement TextChange.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Dans l'application cliente:</b></font></p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut définir <b>dans la partie déclaration</b> 
+l'objet M&nbsp; de classe Class1 en indiquant qu'il gère des évènements.</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Private WithEvents&nbsp; M As Class1</span></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans Form_Load par exemple il faut instancier 
+l'objet:</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">M= New Class1()</span></font></p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<ul>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut écrire la procédure évènement avec son 
+code:</font></p>
+  </li>
+</ul>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> M_TexteChange(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+v </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Handles</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+M.TextChange</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">&nbsp;&nbsp;&nbsp; 
+MsgBox(&quot;le texte a changé&quot;)</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Sub</span></font></p>
+</blockquote>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici on demande simplement quand le texte 
+change, d'ouvrir une MessageBox.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Lors de l'utilisation:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">M.Text=&quot;Nouveau text&quot;</span> </font>
+'déclenche&nbsp; la Sub M.TextChange qui dans notre exemple simple ouvre une 
+MessageBox indiquant que le texte à changer.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On remarque que la Classe définit l'évènement, 
+la procédure correspondant à l'évènement est dans l'application cliente.(De la 
+même manière que quand on clique sur un objet bouton cela déclenche la procédure Bouton-Click.)<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #CCCCCC"><b>
+<font face="Courier New" size="4" color="#0000FF">Exception</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #CCCCCC">:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il est parfois utile de déclencher une 
+exception: si l'utilisateur de la classe donne par exemple une valeur invalide à 
+une property, une exception se déclenche indiquant que la donnée est invalide.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans l'exemple suivant si l'utilisateur 
+affecte à la propriété Mavaleur une valeur négative, une exception est déclenché 
+(<font color="#0000FF">Maclasse.Mavaleur=-2</font>)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Public Property MaValeur() As 
+Integer</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Get</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; ..</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; End Get</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Set (ByVal 
+Value As Integer)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If Value&gt;=0 Then</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+_mValeur= Value</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Else</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>Throw New Exception (&quot;La valeur &quot; &amp; Value.ToString &amp; &quot; est invalide&quot;)</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End If</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; End Set</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Property<br>
+</font>
+<br>
+&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Classes partielles:<img border="0" src="v2005.JPG" width="52" height="21"></span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Les classes 'Partielles' sont possible en 
+VB2005 (Framework 2).</font></b></p>
+<p><font face="Courier New" size="2">Les types partiels permettent la définition 
+d'une classe unique dans plusieurs fichiers source. La définition a une 
+déclaration normale dans un fichier :</font></p>
+<pre class="codeSample"><font color="#0000FF" face="Courier New">Public Class MaClasse
+    'implementation...
+End Class
+</font></pre>
+<p><font face="Courier New" size="2">Dans d'autres fichiers source, utilisez le 
+mot-clé <b>Partial</b> pour indiquer au compilateur que ce code est la suite de 
+la définition de classe d'origine :</font></p>
+<pre class="codeSample"><font face="Courier New"><font color="#0000FF">Partial Public Class MaClasse
+    'implementation...
+End Class</font>
+    </font></pre>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-2.2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

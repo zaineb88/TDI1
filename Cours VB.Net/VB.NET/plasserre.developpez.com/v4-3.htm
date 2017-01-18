@@ -1,0 +1,651 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:30 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net: erreur try catch</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-2-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.3</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Traiter les erreurs.</font></b></td>
+    <td width="9%" height="76"><a href="v4-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Il y a plusieurs types 
+d'erreurs.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les erreurs de syntaxe.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les erreurs 
+d'exécution.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les erreurs de logique.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="ftp://ftp-developpez.com/plasserre/verreur.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="ftp://ftp-developpez.com/plasserre/verreur.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">Les erreurs de syntaxe:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Elle surviennent <b>en mode conception</b> 
+quand on tape le code:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemples:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">A+1=B </font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Erreur dans l'affectation</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">f.ShowDialogue</font>&nbsp;&nbsp; 
+'Faute de frappe, il fallait taper ShowDialog</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">2 <font color="#0000FF">For</font>... et un 
+seul <font color="#0000FF">Next</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Integer: Label.Text= 
+i&nbsp; </font><font face="Courier New" size="2">'Affectation d'un Integer à une 
+propriété text qui attend une String.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">....</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans ces cas VB souligne en
+<font color="#0000FF">ondulé bleue </font>le code. Il faut mettre le curseur sur 
+le mot souligné, l'explication de l'erreur apparaît.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: Propriété Text d'un label mal 
+orthographiée:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vaide3.gif" width="406" height="35"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut les corriger immédiatement en tapant le 
+bon code (ici 'Text').</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">En bas il y a aussi une fenêtre; &quot;liste des 
+erreurs&quot;:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vlisterror.JPG" width="903" height="141"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Elle affiche tous les problèmes; pour 
+atteindre le code correspondant à une de ces erreurs, double-cliquez sur une des 
+lignes de la liste.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB 2005 un panneau d'exclamation permet 
+d'ouvrir une fenêtre proposant le moyen de corriger l'erreur: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="v2005p15.JPG" width="436" height="205"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Ici on met dans la propriété text d'un label 
+un Integer, alors qu'il faut mettre une String (Option Strict est probablement 
+égal à On); Vb montre la correction : CStr(i) converti i en String.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+<font face="Courier New" size="2">Si vous exécuter le programme dans l'IDE alors 
+qu' il y a un problème , VB demande si on veut exécuter la dernière génération 
+réussie:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="left">
+<img border="0" src="verrorcomp.JPG" width="382" height="147"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="left">
+<font size="2" face="Courier New">Si vous tapez 'oui' VB exécute la dernière 
+version qui a été générée correctement, mais PAS de code source actuel qui 
+contient des erreurs!!</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">Les erreurs d'exécution:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+<font face="Courier New" size="2">Elle surviennent<b> en mode Run </b>ou lors de 
+l'<b>utilisation de l'exécutable:</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+<font face="Courier New" size="2"><b>&nbsp;une instruction ne peut pas être effectuée. </b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+<font face="Courier New" size="2">Quand on utilise l'exécutable:<b><font color="#FF0000">Le logiciel s'arrête brutalement</font>, c'est très 
+gênant!!  </b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+<font face="Courier New" size="2"><b>
+Pour l'utilisateur c'est un 'BUG'</b><img border="0" src="vibug.GIF" width="35" height="31"></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il y a levée d'<b>une exception</b>, voila ce 
+que cela donne dans l'IDE:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: je tente d'accéder à un élément d'un 
+tableau qui n'existe pas (l'indice est trop grand cela entraîne une exception 'OutOfRange').</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le logiciel s'arrête, l'instruction qui a 
+planté apparaît en jaune et VB donne une explication.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vexeption.JPG" width="703" height="280"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'erreur est:</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Soit <b>une erreur de conception</b>.</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Ouvrir un fichier qui n'existe pas 
+(On aurait du vérifier qu'il existe avant de l'ouvrir!).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Division par zéro.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Utiliser un index d'élément de tableau 
+supérieur au nombre d'élément:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Envoyer un mauvais paramètre à une fonction.</font></p>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Soit <b>une erreur de l'utilisateur</b>.</font></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: On lui demande de taper un chiffre, 
+il tape une lettre ou rien puis valide.</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#FF0000">Il faut toujours vérifier ce 
+que fait l'utilisateur et prévoir toutes les possibilités. </font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: si je demande à l'utilisateur de 
+tapez un nombre entre 1 et 10, il faut:</font></p>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Vérifier qu'il a tapé quelque chose.</font></p>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Que c'est bien un chiffre (pas des lettres).</font></p>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Que le chiffre est bien entre 1 et 10.</font></p>
+  <p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+  <font face="Courier New" size="2">Sinon il faudra reposer la question. </font>
+  </p>
+  </blockquote>
+</blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+A-Capter les erreurs avec Try Catch Finally:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Avant l'instruction supposée provoquer 
+une erreur indiquez: <b>Essayer</b> (<font color="#0000FF">Try</font>), si une 
+erreur se produit <b>Intercepter l'erreur</b> (<font color="#0000FF">Catch</font>) 
+puis poursuivre (après <font color="#0000FF">Finally</font>)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Try</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Instruction susceptible de 
+provoquer une erreur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Catch</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Traitement de l'erreur</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Finally</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Code toujours exécuté&nbsp;&nbsp;&nbsp;
+</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">End Try</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut pour que cela fonctionne avoir tapé au 
+préalable <font color="#0000FF">Imports System.IO</font> </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est possible d'utiliser Catch pour 
+<b>récupérer&nbsp; l'objet 'Exception'</b> qui est généré par l'erreur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Catch ex As Exception</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cet <b>objet Exception</b> à des propriétés:</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<b>Message</b> qui contient le 
+descriptif de l'erreur. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<b>Source</b> qui 
+contient l'objet qui a provoqué l'erreur....</font></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+ex.Message</font>&nbsp; contient donc le message de l'erreur. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cet <b>objet Exception</b>&nbsp; ( de l'espace 
+IO) à aussi des <b>classes dérivées</b>: <b>StackOverFlowException; 
+FileNotFoundExeption; EndOfStreamExeption; FileLoadExeption; PathTooLongExeption.
+</b>Enfin une exception peut provenir de l'espace System: <b>ArgumentExceptions; 
+ArithmeticException; DivideByZeroExeception..... </b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est possible d'écrire plusieurs 
+instructions Catch avec pour chacune le type de l'erreur à intercepter. (Faisant partie de la 
+classe Exceptions) </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On ouvre un fichier par StreamReader , comment 
+intercepter les exceptions suivantes?</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Répertoire non valide</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Fichier non valide</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Autre.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Try</span></font></p>
+    <p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+    <font color="#0000FF" face="Courier New" size="2">
+    <span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; sr= New 
+    StreamerReader (NomFichier)</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Catch ex As 
+DirectoryNotFoundException</span></font></p>
+      <p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+      <font face="Courier New" size="2"><font color="#0000FF">
+      <span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+      MsgBox(&quot;</span></font><span style="background-color: #FFFFFF">Répertoire invalide</span><font color="#0000FF"><span style="background-color: #FFFFFF">&quot;)</span></font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Catch ex As 
+FileNotFoundException</span></font></p>
+      <p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+      <font face="Courier New" size="2"><font color="#0000FF">
+      <span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+      MsgBox(&quot;</span></font><span style="background-color: #FFFFFF">Fichier invalide</span><font color="#0000FF"><span style="background-color: #FFFFFF">&quot;)</span></font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Catch ex As Exception</span></font></p>
+      <p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+      <font face="Courier New" size="2"><font color="#0000FF">
+      <span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+      MsgBox(</span></font><span style="background-color: #FFFFFF">ex.Message</span><font color="#0000FF"><span style="background-color: #FFFFFF">)</span></font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Try</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter que le dernier Catch intercepte toutes 
+les autres exceptions.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut encore affiner la gestion par le mot 
+clé <font color="#0000FF">When</font> qui permet une condition. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Catch ex As 
+FileNotFoundException</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">When ex.Message.IndexOf (&quot;Mon Fichier.txt&quot;) &gt;0</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+MsgBox (&quot;Impossible d'ouvrir Mon Fichier.txt&quot;)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si le texte &quot;Mon Fichier.txt&quot; est dans le 
+message, affichez que c'est lui qui ne peut pas être ouvert.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Exit Try</font> permet 
+de sortir prématurément.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+B-Capter les erreurs avec On error :</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;On peut aussi utiliser la méthode Visual 
+Basic:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">On Error Goto</font> 
+permet en cas d'erreur de sauter à une portion de code traitant l'erreur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut lire le numéro de l'erreur qui s'est 
+produite, ce numéro est dans <font color="#0000FF">Err.Number</font>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Err.Description</font> 
+contient le texte décrivant l'erreur. <font color="#0000FF">Err.Source</font> 
+donne le nom de l'objet ou de l'application qui a crée l'erreur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand l'erreur est corrigée, on peut revenir de 
+nouveau à la ligne qui a provoqué l'erreur grâce à <font color="#0000FF">
+Resume</font> ou poursuivre à la ligne suivante grâce à <font color="#0000FF">
+Resume Next</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+E<font face="Courier New" size="2">xemple: <br>
+<font color="#0000FF">On Error GoTo RoutinedErreur </font>'Si une erreur se 
+produit se rendre à 'RoutineErreur'<font color="#0000FF"><br>
+Dim x As Integer = 33<br>
+Dim y As Integer = 0<br>
+Dim z As Integer<br>
+z = x / y  </font>' Crée une division par 0 !!<font color="#0000FF"><br>
+<br>
+RoutinedErreur:  </font>' La Routine d'erreur est ici (remarquer&nbsp; ':').<font color="#0000FF"><br>
+Select Case Err.Number </font>' On regarde le numéro de l'erreur.<font color="#0000FF"><br>
+Case 6  </font>' Cas : Division par zéro interdite<font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp; y = 1 ' corrige l'erreur.<br>
+Case Else<br>
+&nbsp;&nbsp;&nbsp;  </font>' autres erreurs....<font color="#0000FF"><br>
+End Select<br>
+Resume </font>' Retour à la ligne qui a provoqué l'erreur.<font color="#0000FF"><br>
+&nbsp;</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour arrêter la gestion des erreurs il faut 
+utiliser:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">On Error Goto 0</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois on utilise une gestion hyper 
+simplifiée des erreurs:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si une instruction 'plante', la sauter et 
+passez à l'instruction suivante, pour cela on utilise:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">On Error Resume Next</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: On veut effacer un fichier</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">On Error Resume Next</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Kill (MonFichier)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">On Error goto 0</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Ainsi , si le fichier n'existe pas , cela ne 
+plante pas (on aurait pu aussi vérifier qu'il existe avant de l'effacer).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">On Error Gosub </font>
+<font face="Courier New" size="2">n'existe plus.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font size="2" face="Courier New">
+<img border="0" src="vicocheb.gif" width="32" height="34"> On Error&nbsp; est moins performant que Try 
+Catch et surtout il ralentit le code+++: si nécessaire utiliser Try Catch.</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" color="#0000FF"><u>En résumé:</u> pour éviter les erreurs 
+d'exécution il est donc possible:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" color="#0000FF" size="2">- D'écrire du code gérant le problème, 
+contrôlant les actions de l'utilisateur..</font></b></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: on demande à l'utilisateur de saisir 
+un nombre dans TextBox1 puis de cliquez sur Button3&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si l'utilisateur a tapé une lettre au lieu 
+d'un chiffre, le prévenir</font></p>
+  <font SIZE="2" COLOR="#0000FF">
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private Sub Button3_Click
+    </font> </p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">If String.IsNullOrEmpty(TextBox1.Text) 
+    Then </font> </font><font SIZE="2" color="#008000"><font face="Courier New">'on teste si l'utilisateur a tapé 
+    quelque chose</font></p>
+    </font><font SIZE="2" COLOR="#0000FF">
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;MsgBox(&quot;Tapez quelque 
+    chose&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF" face="Courier New">Else</p>
+    </font><font SIZE="2"><font SIZE="2" COLOR="#0000FF" face="Courier New">
+    <p style="margin-top: 0; margin-bottom: 0">&nbsp;If Not IsNumeric(TextBox1.Text) 
+    Then <font SIZE="2" color="#008000">'on teste si l'utilisateur a tapé du 
+    numérique</font></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+    MsgBox(</font><font SIZE="2" COLOR="#0000FF">&quot;Tapez un chiffre&quot;</font><font color="#0000FF">)</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font SIZE="2" COLOR="#0000FF">&nbsp;End</font><font color="#0000FF">
+    </font></font><font SIZE="2" COLOR="#0000FF"><font face="Courier New">If</font></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF" face="Courier New">End If</p>
+    </font><font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF" face="Courier New">End Sub</p>
+  </blockquote>
+</blockquote>
+</font>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF" size="2"><b>- Une autre alternative est de capter 
+l'erreur.</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp; Exemple: on demande à 
+l'utilisateur de saisir un nombre dans TextBox1 puis de cliquez sur Button3&nbsp;
+</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On converti le texte tapé en Integer, on sait 
+que si la conversion est impossible (pas de texte tapé ou texte non numérique) 
+une exception </font><font SIZE="2">invalidCastException sera levée et le 
+programme 'plantera'. On écrit donc avant l'instruction Ctype un Try pour capter 
+l'erreur: </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Tester s'il y a une erreur, s'il y a erreur, 
+la capter. </font></p>
+  <font SIZE="2" COLOR="#0000FF">
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private Sub Button3_Click(ByVal 
+    sender As System.Object, ByVal e As System.EventArgs) Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+    Button3.Click</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF" face="Courier New">Dim i As Integer</p>
+    </font><font SIZE="2">
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF"><font face="Courier New">Try</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; i = CType(TextBox1.Text, 
+    Integer</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    </font>
+    <font SIZE="2" COLOR="#0000FF"><font face="Courier New">Catch</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;&nbsp;&nbsp; MsgBox(&quot;saisir 
+    un nombre&quot;</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"></font>
+    <font SIZE="2" COLOR="#0000FF" face="Courier New">End Try</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font size="2" color="#0000FF" face="Courier New">
+    End Sub</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">Les erreurs de logique:</span> </font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt" align="center"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<img border="0" src="vibug.GIF" width="35" height="31"></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le 
+programme fonctionne, pas d'erreurs apparentes, mais <b>les résultats sont 
+erronés, faux.</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>
+Il faut faire des tests dans les conditions réelles avec des données courantes, 
+mais aussi avec des données remarquables (limites supérieures, inférieures, cas 
+particuliers..) pour voir si les résultats sont cohérents et exacts.</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Une fois 
+l'erreur trouvée, il faut en déterminer la cause et la corriger.</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Ou bien 
+elle est évidente à la lecture du code ou bien elle n'est pas évidente et c'est 
+l'horreur.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans ce 
+dernier cas il faut analyser le fonctionnement du programme pas à pas, 
+instruction par instruction en surveillant la valeur des variables.(voir la 
+rubrique </font><b>
+<font face="Courier New" size="5"> <a href="v4-20.htm">déboguage</a></font></b><font face="Courier New" size="2"> )</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Les erreurs 
+les plus communes sont:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+<b>Utilisation d'un mauvais nom de variable</b> (La déclaration obligatoire des 
+variables évite cela)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Erreur dans la <b>portée d'une variable</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Erreur dans le <b>passage de paramètres</b> (Attention au By Val et By Ref)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 
+Erreur dans la <b>conception de l'algorithme</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; ...</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Quelques règles permettent de les éviter: voir
+<a href="v5-20.htm">Règles de bonne programmation</a>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Tests:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>
+Il faut donc toujours tester le fonctionnement du programme de multiples fois:</b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">On fera des:</font></b></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Tests unitaires: </b>qui testerons les 
+procédures, les classes une à une sans tester la totalité du programme. </font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Tests de composants</b> et <b>d'intégration</b>: 
+qui testeront plusieurs procédures ou classes fonctionnant ensemble. </font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Tests de régression</b>: c'est la 
+répétition des test précédents afin de voir si une modification ou un ajout 
+n'entraîne pas de nouvelles erreurs qui n'existaient pas. </font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Tests système</b>: test sur le logiciel 
+dans sa version finale.</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Les tests détecterons les erreurs, le 
+déboguage permettra de trouver la cause et de corriger l'erreur. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#FF0000" face="Courier New" size="2"><b>
+<img border="0" src="vicocheb.gif" width="32" height="34"> Il faut avoir une armée de 
+Bêta-testeurs.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-2-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:36 GMT -->
+</html>

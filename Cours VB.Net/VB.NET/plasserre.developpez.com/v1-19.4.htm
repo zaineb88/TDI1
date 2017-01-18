@@ -1,0 +1,207 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.4</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Combinaisons de
+      variables numériques et de String.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">4-
+Combinaison de string et de variables numériques&nbsp; InputBox MsgBox.</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">4.1
+</font><font face="Courier New" size="2">Créer une variable 'x' de type Integer; pour toute valeur de x, afficher dans un label 'Label1' </font></b><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><b>&quot;Le cube
+de 12&nbsp; est 1728&quot;&nbsp;(exemple si x=12).</b></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><font face="Courier New" size="3">4.2 </font></b><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><b>Demander dans
+une InputBox à l'utilisateur de taper un nombre entier. Multiplier ce nombre
+par 2, afficher le résultat dans une MessageBox.(avec l'instruction VB MsgBox
+puis avec la Classe MesssageBox du Framework).</b></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><font face="Courier New" size="2">4.3 Même chose que l'exercice 4.2 mais
+afficher uniquement le résultat si l'utilisateur a bien tapé dans la InputBox
+une valeur numérique. Si la saisie n'est pas numérique une MessageBox doit
+indiquer 'Erreur de saisie'.&nbsp;</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">4.4
+Même chose que l'exercice 4.2 mais en demandant de taper un nombre avec 2
+chiffres après la virgule (Calcul sur des Single). Gérer le fait que
+l'utilisateur peut se tromper et ne pas employer le bon séparateur décimal (en
+France s'il tape un point au lieu de la virgule par exemple). Utiliser pour la
+conversion String vers Single une instruction de conversion spécifique (pas
+CType).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">4-
+Combinaison de string et de variables numériques InputBox MsgBox.</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">4.1
+</font><font face="Courier New" size="2">Créer une variable 'x' de type Integer; pour toute valeur de x afficher dans un label 'Label1' </font></b><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><b>&quot;Le cube
+de 12&nbsp; est 1728&quot;&nbsp;(exemple si x=12).</b></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" size="2" face="Courier New"> Dim
+X As Integer&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" size="2" face="Courier New">x=12</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #FFFFFF"><font size="2" color="#0000FF"><span style="font-family: Courier New">L</span></font></span><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">abel1.text=&nbsp;&quot;Le
+cube de &quot;&nbsp;&amp; X.ToString &amp; &quot;&nbsp; est &quot;&nbsp;&amp; (</span></font><font color="#0000FF">Math.Pow(</font><font color="#0000FF"><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF">X , 3).ToString</span></font><font color="#0000FF">
+        <br>
+ </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">4.2
+</font></b><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;; background-color:#FFFFFF"><b>Demander dans
+une InputBox à l'utilisateur de taper un nombre entier. Multiplier ce nombre
+par 2, afficher le résultat dans une MessageBox (avec l'instruction VB MsgBox
+puis avec la Classe MesssageBox du Framework).</b></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+s as String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+i as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">s</font><font face="Courier New" size="2"><font color="#0000ff">=
+InputBox (&quot;Test&quot;, &quot;Taper un nombre entier&quot;)&nbsp;</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">i</span></font></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">=
+CType(S, Integer)</font></span></p>
+<p style="margin-top: 6pt"><font face="Courier New" color="#0000FF" size="2">i=i*2</font></p>
+<p style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">MsgBox (i.ToString)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">ou&nbsp;</p>
+<p><font face="Courier New" size="2"><font color="#0000ff">MessageBox.Show(</font><font color="#0000FF">i.ToString</font><font color="#0000ff">)</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">L'InputBox
+retourne une String, il faut la transformer en Integer, effectuer le calcul puis
+la retransformer en String pour l'afficher.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">4.3
+Même chose que l'exercice 4.2 mais afficher uniquement le résultat si
+l'utilisateur a bien tapé dans la InputBox une valeur numérique. Si la saisie
+n'est pas numérique une MessageBox doit indiquer 'Erreur de saisie'.&nbsp;</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+s as String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+i as Integer</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">s=
+InputBox (&quot;Test&quot;, &quot;Taper un nombre entier&quot;)&nbsp;</font></p>
+<p style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000FF" size="2">if&nbsp;
+IsNumeric (s) Then</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">&nbsp;&nbsp;&nbsp;
+i</span></font></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">=
+CType(S, Integer)</font></span></p>
+<p style="margin-top: 6pt"><font face="Courier New" color="#0000FF" size="2">&nbsp;&nbsp;&nbsp;
+i=i*2</font></p>
+<p style="margin-top: 6pt"><font color="#0000FF">&nbsp;&nbsp;&nbsp; <font face="Courier New" size="2" color="#0000FF">MsgBox (i.ToString)</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">Else</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;&nbsp;&nbsp;<font color="#0000FF" face="Courier New" size="2">&nbsp;
+MsgBox </font><font color="#0000FF"><font face="Courier New" size="2">(&quot;</font><font face="Courier New" size="2">Erreur
+de saisie&quot;)</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">End
+If</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Noter
+que le code entre</font><font color="#0000FF" face="Courier New" size="2"> If </font><font face="Courier New" size="2">et</font><font color="#0000FF" face="Courier New" size="2">
+Else </font><font face="Courier New" size="2">et entre</font><font color="#0000FF" face="Courier New" size="2">
+Else </font><font face="Courier New" size="2">et</font><font color="#0000FF" face="Courier New" size="2">
+End If </font><font face="Courier New" size="2">est décalé à droite par
+l'ajout d'espace ou de Tab, ce qui permet une meilleur lecture du code.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">4.4
+Même chose que l'exercice 4.2 mais en demandant de taper un nombre avec 2
+chiffres après la virgule (Calcul sur des Single). Gérer le fait que
+l'utilisateur peut se tromper et ne pas employer le bon séparateur décimal (en
+France s'il tape un point au lieu de la virgule par exemple). Utiliser pour la
+conversion String vers Single une instruction de conversion spécifique (pas
+CType).</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+s as String</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Dim
+i as Single</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">s=
+InputBox (&quot;Test&quot;, &quot;Taper un nombre avec 2 chiffres après la
+virgule&quot;)&nbsp;</font></p>
+<p style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">s=s.Replace
+(&quot;.&quot;,&quot;,&quot;)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="BACKGROUND-COLOR: #ffffff"><font color="#0000ff" size="2"><span style="FONT-FAMILY: Courier New">i</span></font></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">=
+CSng(S)</font></span></p>
+<p style="margin-top: 6pt"><font face="Courier New" color="#0000FF" size="2">i=i*2</font></p>
+<p style="margin-top: 6pt"><font color="#0000FF" face="Courier New" size="2">MsgBox
+(i.ToString)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Comme
+le séparateur décimal, sur un ordinateur français (Culture Fr) est le ',', on
+remplace les points par des virgules avant de convertir en Single.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">On
+remarque que le résultat est affiché avec une virgule car <font color="#0000FF">ToString</font>
+utilise le séparateur de la culture en cours.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

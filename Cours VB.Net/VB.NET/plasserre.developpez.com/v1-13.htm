@@ -1,0 +1,387 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET variables : portée static </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-12.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.13</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Portée des variables</font></b></td>
+    <td width="14%" height="76"><a href="v1-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img border="0" src="vportee.GIF" width="118" height="103"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Quand on déclare 
+une variable, jusqu'où est-elle visible?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Quand une variable est visible, on peut 
+l'utiliser.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Dans les procédures</font></b></span><b><font size="4" face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">On
+déclare une variable avec <font color="#0000FF">Dim</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si on déclare une variable dans une procédure (une Sub ou une Function), elle est visible uniquement 
+dans cette procédure, c'est une variable <b>locale</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub MaProcedure (ByRef X As 
+Integer)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Dim Y As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; ...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">Y</font> est déclaré en début de procédure, on pourra 
+travailler avec <font color="#0000FF">Y</font> dans la procédure jusqu'à 
+<font color="#0000FF">End Sub</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Dans une autre procédure Y ne sera pas visible (l'utilisation de Y déclencherait 
+une erreur.)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Après <font color="#0000FF">End Sub</font>&nbsp; Y n'existe plus, son contenu est perdu.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Il en est de même pour <font color="#0000FF">X</font> qui est déclaré&nbsp; sur la ligne
+<font color="#0000FF">Sub (X </font>reçoit la valeur envoyée comme paramètre).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Une autre procédure pourra déclarer et&nbsp; utiliser une variable Y, mais, 
+même si elle a le même nom cela ne sera pas la même: chaque variable Y est 
+uniquement visible dans sa procédure. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b>
+<font face="Courier New" size="2">Variable statique:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si à la place de Dim on utilise <font color="#0000FF">Static</font>, la variable 
+est dite 'Statique': A la sortie de la procédure, la variable et sa valeur continue d'exister 
+et on garde sa valeur; lors des appels suivants de la procédure, on retrouve la 
+valeur de la variable.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Sub compteur</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Dim A as 
+integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Static B as 
+integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; A +=1</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; B +=1</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">A 
+chaque appel de cette procédure A prend la valeur, 0 puis 1 puis disparaît.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">B 
+prend les valeurs 0, puis 1, puis 2 puis 3... (incrémentation à chaque appel)</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Dans un bloc d'instruction</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Si vous déclarez une variable dans un bloc, elle ne sera visible que dans ce 
+bloc:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Do</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Compteur A integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;Compteur +=1</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">...</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Loop</span></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+La variable</font><font face="Courier New" size="2" color="#0000FF"> Compteur</font><font face="Courier New" size="2"> 
+existe uniquement entre</font><font face="Courier New" size="2" color="#0000FF"> 
+Do </font><font face="Courier New" size="2">et</font><font face="Courier New" size="2" color="#0000FF"> 
+Loop</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Cela est aussi valable pour les blocs If:</font></p>
+<font SIZE="2">
+<p><font face="Courier New">Exemple:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">If</font></font><font SIZE="2" face="Courier New" color="#0000FF"> 
+A=0 </font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Dim</font><font SIZE="2" color="#0000FF"> 
+risk </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+= &quot;Haut&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Else</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; Dim</font><font SIZE="2" color="#0000FF"> 
+risk </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+= &quot;Bas&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2" face="Courier New" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0">Console.WriteLine(&quot;Le risque est &quot; &amp;
+<b>Risk</b>)
+</font>
+<font SIZE="2" face="Courier New">
+=&gt; Erreur
+</font>
+</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Dans la dernière ligne Risk est souligné comme contenant une erreur car il est 
+considéré comme non déclaré. En effet les 2 déclarations <font color="#0000FF">
+Dim risk</font> sont dans les blocs 'If..Else' et 'Else..End If'. </font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b>Attention</b>
+<b>quand même à la position de la variable locale</b>, il peut y avoir des pièges:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" size="2" face="Courier New">Dim
+i, j,&nbsp; As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><font color="#0000FF">For
+i = 1 To 10<br>
+&nbsp;&nbsp;&nbsp; For J = 1 To 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dim k As Integer<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K+ =1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>'Imprimer k<font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp; Next<br>
+Next</font><br>
+<br>
+On souhaite que K=1 puis 2,3,1,2,3.. FAUX!!
+</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Cela donne :1,2,3,4,5,6,7 ....30&nbsp;&nbsp; !!!??? pas normal<br>
+<br>
+En remplaçant par <font color="#0000FF">Dim k As Integer = 0</font> cela donne
+des 1,1,1,1,1, 'normal<br>
+<br>
+Et en intercalant la déclaration de k entre les 2 For, cela marche comme on le
+souhaite.1,2,3,1,2,3:<br>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font color="#0000FF" size="2" face="Courier New">Dim
+i, j,&nbsp; As Integer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">For
+i = 1 To 10</font>
+</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp;
+Dim k As Integer</font><font face="Courier New" size="2"><font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp; For J = 1 To 3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K+ =1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font> 'Imprimer k<font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp; Next<br>
+Next</font>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Dans la section déclaration 
+d'un Module.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Dans la 
+<b>section déclaration </b>d'<b>un 
+module </b>(en haut du module juste après la ligne 'Module')<b>,</b> on utilise à la place de Dim:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><font color="#0000FF"><b>Private</b></font><b>;</b> dans ce cas la 
+variable est propre au module, elle est visible dans toutes les procédures du 
+module, pas dans les autres modules.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b><font color="#0000FF">Public</font>;</b> dans ce cas la 
+variable est accessible dans la totalité du programme.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Module Module1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; <b>Public A as 
+String</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; ....</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;Sub MaRoutine</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Module</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">A 
+est accessible partout dans la totalité du programme.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+(On parle dans ce cas de variable dite '<b>Globale</b>')</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Dans la section déclaration 
+d'une fenêtre, d'un formulaire.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Dans la 
+<b>section déclaration </b>d'<b>un formulaire </b>(en haut du formulaire juste 
+après la ligne 'Inherits')</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b><font color="#0000FF">Private</font>;</b> indique dans ce cas 
+que la variable est propre au formulaire , elle est visible dans toutes les 
+procédures du formulaire, pas dans les autres modules ou formulaires.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2"><b><font color="#0000FF">Public</font>;</b> indique de même une 
+variable UNIQUEMENT visible dans le formulaire.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Elle est visible hors du formulaire 
+a condition de la préfixer avec le nom du formulaire.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Class Class1</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp; Inherits 
+System.Windows.Forms</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; <b>Public A as 
+String</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; ....</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;Sub MaRoutine</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;End Sub</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></span></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+On peut atteindre la zone de déclaration en déroulant le menu de droite.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<img border="0" src="vdim.gif" width="428" height="148"></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Dans l'exemple ci dessus:</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">MaVariable</font> est visible dans le formulaire. et hors du formulaire à condition 
+d'utiliser <font color="#0000FF">NomFormulaire.MaVariable</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">MaVariable2</font> est visible dans le formulaire .</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF">MaVariable3</font> n'est visible que dans la procédure Button1_Click.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><b>
+<span style="background-color: #C0C0C0">
+<font size="4" color="#0000FF" face="Courier New">
+En pratique:</font></span><font size="4" face="Courier New">
+<img border="0" src="vicochev.GIF" width="32" height="34"></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Pour se repérer et se souvenir <b>quelle est la portée d'une variable</b>, on 
+utilise une lettre en début du nom de la variable (notation avec un préfixe
+dite 'hongroise'):</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">g_MaVariable</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp; sera public&nbsp; (g 
+comme global).</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">m_Variable2</span></font>&nbsp;&nbsp;&nbsp;&nbsp; sera accessible 
+au niveau du module.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Dans un <b>module standard</b>, on peut mettre '</font><font face="Courier New">Public</font><font face="Courier New" size="2">' toutes 
+les variables<b> </b>que l'on veut rendre 
+accessible à tout le programme. Ce sont les variables (et 
+constantes) générales utilisées dans la totalité de l'application: état du 
+programme, utilisateur en cours...</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">Pour des raisons que nous verrons plus loin, 
+il faut éviter ce&nbsp; type de variable publiques dites 'globale'.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>Dans chaque formulaire</b> on met dans la section déclarations, <b>les 
+variables du module</b>: état du formulaire. Variable permettant l'affichage...</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b>Dans chaque procédure les variables locales</b>, compteur de boucle...</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+Pour les variables locales on peut donc utiliser un <b>même nom</b> dans 
+différentes procédures, par exemple, on nomme souvent i les variables de boucle 
+dans toutes les procédures, par contre </font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+<b><font color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> il faut éviter 
+de donner un même nom à des variables dont la portée se recoupe.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="2">
+VB 
+l'accepte et utilise la variable la plus proche, celle du bloc ou du 
+module...mais c'est dangereux et générateur de bugs.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><font face="Courier New" size="4" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">En
+résumé:</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">-
+Celles qui sont <font color="#0000FF">Dim</font> sont accessibles dans une
+procédure.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">-
+Celles qui sont <span style="color: rgb(0, 0, 255);">Public</span> sont
+accessibles dans la totalité du programme.<br>
+- Celles qui sont <span style="color: rgb(0, 0, 255);">Private</span> ne sont
+accessibles qu'à l'intérieur même du module.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">il
+y a en plus:<br>
+- Celles qui sont <span style="color: rgb(0, 0, 255);">Protected</span> sont
+similaires aux <span style="color: rgb(0, 0, 255);">Private</span>, mais ils ont
+une particularité en cas d'héritage. <br>
+- Celles qui sont <span style="color: rgb(0, 0, 255);">Friend</span> ne sont
+accessibles qu'à l'intérieur du projet, et pas par des éléments extérieurs
+au projet en cours.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-12.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-14.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-13.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:58 GMT -->
+</html>

@@ -1,0 +1,529 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6struct.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET structure </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-6col.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.6</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Structures</font></b></td>
+    <td width="14%" height="76"><a href="v1-6val.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#800080">Permet de <b>regrouper des données&nbsp;de type 
+différent: </b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;(En Vb6 il y avait les types définis par 
+l'utilisateur, ils sont remplacés par les structures.)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34"> Les structures sont intéressantes quand vous 
+voulez utiliser des variables contenant plusieurs <b>informations de différent 
+type</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Vous voulez définir une 
+variable contenant une adresse composée d'un numéro, de la rue, de la ville.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il faut d’abord 
+<b>définir la structure</b> (au niveau Module ou Class, <b>pas</b> dans une procédure)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public 
+Structure </span><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Adresse</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; 
+Dim Numero&nbsp;&nbsp;&nbsp;&nbsp; As Integer</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">Rue</font><span style="color: blue"> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">Ville</font><span style="color: blue"> 
+&nbsp;&nbsp;&nbsp;&nbsp; As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Structure</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Puis dans une 
+procédure il faut <b>déclarer</b> la variable&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF"> 
+MonAdresse </font> <span style="color: blue">As</span><font color="#0000FF"> Adresse</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La variable
+<font color="#0000FF">MonAdresse</font> est déclaré comme une adresse, elle 
+contient donc:</span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">un numéro 'stocké' dans
+<font color="#0000FF">MonAdresse.Numero</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">une nom de rue 'stocké' 
+dans <font color="#0000FF">MonAdresse.Rue </font></span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">un nom de ville&nbsp; 
+'stocké' dans <font color="#0000FF">MonAdresse.Ville</font></span></font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On pourra enfin 
+l’utiliser&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">
+MonAdresse.Numero=2</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">MonAdresse.Rue=&nbsp;&quot;Grande 
+rue&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">MonAdresse.Ville=&nbsp;&quot;Lyon&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">On peut aussi utiliser le 
+mot clé </font><font size="2" color="#0000FF">With </font><font size="2">pour ne 
+pas avoir à répéter le nom de la variable (et cela va plus vite).</font></span><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">With MonAdresse</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; </span></font>
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">.Rue=&nbsp;&quot;Grande rue&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF"><font size="2">
+<span style="font-family: Courier New; background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">.Ville=&nbsp;&quot;Lyon&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">End With</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><b>With</b> est utilisable sur tous les objets.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Il est possible de travailler 
+sur un tableau de structures:</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Dim 
+Adresses(99) as Adresse </span> </font>&nbsp;&nbsp; 'Permet de travailler sur un tableau 
+de 100 adresses</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Adresses(33).Rue=&quot;Place de la 
+mairie&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut utiliser une variable déclarée par une structure 
+comme paramètre d'une fonction:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Sub 
+AfficheAdresse( ByVal&nbsp; UneAdresse As Adresse)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">...Imprimer 
+l'adresse</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour imprimer l'adresse 33 on 
+écrira<font color="#0000FF">&nbsp;&nbsp; AfficheAdresse ( Adresse(33)) </font>
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight:700; background-color:#C0C0C0">
+<font size="4">Attention 
+quand dans une structure il y a un tableau, il faut l’initialiser:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">on veut 
+définir une structure dans laquelle il y a 25 données DriveNumber.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On aurait tendance à écrire:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public 
+Type DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; 
+DriveNumber(25) As Integer </span>
+<font color="#FF0000"><b><span style="background-color: #FFFFFF">FAUX</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; 
+DriveType As String</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End Type</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">' En 
+Visual Basic .NET il y a 2 méthodes:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">
+1-Méthode par Initialize</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une structure 
+peut comporter une méthode.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2">Ici, on a crée une méthode</font><font size="2" color="#0000FF"> 
+ Initialize </font><font size="2"> 
+qui redimensionne le tableau interne à la structure.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public 
+Structure </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">DriveNumber<span style="color: blue">() 
+As Short</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp;</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"> 
+' Noter que le nombre d’élément a disparu.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">DriveType<span style="color: blue"> 
+As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">‘maintenant on 
+instance les 25 éléments.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF"><b>&nbsp;&nbsp; Public 
+Sub Initialize()</b></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ReDim </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+DriveNumber(25)</span></b></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF"><b>&nbsp;&nbsp; End 
+Sub</b></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Structure</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple de routine 
+utilisant la structure.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Function 
+AddDrive(ByRef Number As Short, ByRef DriveLabel As String) As Object</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue"> 
+As </span>DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue">.Initialize()</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue">.DriveNumber(0) 
+= </span>123</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue">.DriveType 
+= </span>&quot;Fixed&quot;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Function</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">
+2-Autre manière de faire:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Public 
+Structure </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">DriveNumber<span style="color: blue">() 
+As Short</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">DriveType<span style="color: blue"> 
+As String</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Structure</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Function 
+AddDrive(ByRef Number As Short, ByRef DriveLabel As String) As Object</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue"> 
+As </span>DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Redim Drives.<font color="#0000FF">DriveNumber</font>(25)</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">&nbsp;&nbsp; </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives</span><span style="font-size: 10.0pt; font-family: Courier New; color: blue"><span style="background-color: #FFFFFF">.DriveNumber</span><span style="background-color: #FFFFFF">(3)=12</span></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="color: blue">.DriveType 
+= </span>&quot;Fixed&quot;</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">End 
+Function</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font size="2"><span style="font-family: Courier New">Si on utilise 100 
+variables Drives, il faudrait 'Redim' le tableau pour chaque variable!!<br>
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Drives<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+(100)</span><span style="color: blue"> As </span>DriveInfo</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">For i as Integer =0 to 100</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">Drives
+(i).Initialize&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'Dur dur!!</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">Next
+i</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFFFF"><font face="Courier New" size="2">En
+plus si Dim Drives (100) est en tête d'un module, il faut mettre la boucle dans
+une procédure.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Allons plus loin:</span></font><font face="Courier New" size="2">&nbsp;
+<img border="0" src="an3.GIF" width="100" height="14"></font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour les
+surdoués!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Une structure hérite de <b>System.ValueType</b></font></p>
+<p><b><font face="Courier New" size="4">L</font></b><font face="Courier New" size="4"><b>es structures 
+sont des types 'valeur'.</b></font></p>
+<p><font face="Courier New" size="2">Une variable d'un type structure contient 
+directement les données de la structure, alors qu'une variable d'un type classe 
+contient une référence aux données, ces dernières étant connues sous le nom 
+d'objet.</font></p>
+<p><font face="Courier New" size="2">Cela a de l'importance: si je crée une 
+variable avec une structure, que je copie cette variable dans une seconde, le 
+ 
+fait de modifier la première variable ne modifie pas la seconde.</font></p>
+<p><font face="Courier New" size="2">Prenons l'exemple donné par Microsoft:</font></p>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Structure Point
+   Public x, y As Integer
+   Public Sub New(x As Integer, y As Integer)
+      Me.x = x
+      Me.y = y
+   End Sub
+End Structure </span></font></pre>
+<pre class="code"><font face="Courier New">On définie une structure Point et on définie une méthode <font color="#0000FF">New</font> permettant de saisir les valeurs:</font></pre>
+<pre class="code"><font face="Courier New">Public Sub New  est  un <b>constructeur</b>.</font></pre>
+<pre class="code"><font face="Courier New">Pour saisir les valeurs de x et y ont peut utiliser:</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Dim a As Point</span></font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">a.x=10</span></font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">a.y=10</span></font></pre>
+<pre class="code"><font face="Courier New">ou utiliser le constructeur:</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Dim a As New Point(10,10)  </span></font></pre>
+<p><font size="2" face="Courier New">En partant de la déclaration ci-dessus, le 
+fragment de code suivant affiche la valeur&nbsp;</font><font size="2"><code class="ce"><font face="Courier New">10&nbsp;</font></code></font><font size="2" face="Courier New">:</font></p>
+<pre class="code"><span style="background-color: #FFFFFF"><font face="Courier New" color="#0000FF">Dim a = new Point(10, 10)
+Dim b = a
+a.x = 100
+Console.WriteLine(b.x)	</font><font face="Courier New">'b est donc bien différent de a</font></span></pre>
+<p><font size="2" face="Courier New">L'assignation de a à b </font><font size="2"><font face="Courier New">crée une copie de la valeur, et 
+b n'est donc pas 
+affecté par l'assignation à </font><code class="ce"><font face="Courier New">a.x</font></code><font face="Courier New">. 
+Si, en revanche, Point 
+avait été déclaré comme une classe, la sortie aurait été </font>
+<code class="ce"><font face="Courier New">100</font></code><font face="Courier New"> 
+puisque a 
+et b </font></font><font size="2" face="Courier New"> 
+auraient référencé le même objet. </font></p>
+<p><font face="Courier New" size="2">Enfin, les structures n'étant pas des types 
+'référence', il est impossible que les valeurs d'un type structure soient nulles ( 
+elles sont égales à 0 après la création).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="4">Les structures peuvent contenir plein de 
+choses:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On a vu qu'elle peuvent contenir:</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Des <b>variables</b> de différent type.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Des <b>tableaux</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Des <b>méthodes</b> <b>: </b>on a vu l'exemple 
+de Initialize et de New.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mais aussi</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; Des <b>objets.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; D'<b>autres 
+Structures.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; Des procédures.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; Des propriétés.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple donné dans l'aide (et modifié par 
+moi) :</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Débutant: A relire peut-être ultérieurement 
+quand vous saurez utiliser les Classes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cet exemple définit une structure&nbsp;
+<font color="#0000FF">Employee</font>&nbsp; contenant une procédure
+<font color="#0000FF">CalculBonus</font> et une propriété <font color="#0000FF">
+Eligible</font>.</font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Public Structure Employee<br>
+Public FirstName As String<br>
+Public LastName As String<br>
+</font>' Friend members, accessible partout dans le programme.<font color="#0000FF"><br>
+Friend EmployeeNumber As Integer<br>
+Friend WorkPhone As Long<br>
+</font>' Private members, accessible seulement dans la structure.<font color="#0000FF"><br>
+Private HomePhone As Long<br>
+Private Level As Integer<br>
+Public Salary As Double<br>
+Public Bonus As Double<br>
+</font>
+</span>
+<span style="background-color: #FFFFFF">&nbsp; <font color="#008000">' Procedure .<br>
+&nbsp; Friend <b>Sub</b> CalculateBonus(ByVal Rate As Single)<br>
+&nbsp;&nbsp; Bonus = Salary * CDbl(Rate)<br>
+&nbsp; End Sub</font><br>
+' Property pour retourner l'éligibilité d'un employé.<br>
+&nbsp; <font color="#FF00FF">Friend ReadOnly Property Eligible() As Boolean<br>
+&nbsp;&nbsp;&nbsp; Get<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Return Level &gt;= 25<br>
+&nbsp;&nbsp;&nbsp; End Get<br>
+&nbsp; End Property</font><br>
+End Structure</span><b><br>
+&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b><font face="Courier New" size="2">Utilisons cette structure:</font></b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+ep </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+Employee&nbsp;&nbsp;&nbsp; </font><font face="Courier New">'Déclaration d'une 
+variable Employee</font></p>
+<p><font face="Courier New" color="#0000FF">ep.Salary = 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New">'On saisit le salaire </font></p>
+<p><font face="Courier New" color="#0000FF">ep.CalculateBonus(20) </font>
+<font face="Courier New">'On calcul le bonus</font></p>
+<p><font face="Courier New" color="#0000FF">TextBox1.Text = ep.Bonus.ToString&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New">'On affiche le bonus</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<b><font face="Courier New" size="2">Cela ressemble aux Classes !! Non?</font></b></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4"><b>Portée:</b></font><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></p>
+<p><font face="Courier New" size="2">Vous pouvez spécifier l'accessibilité de la 
+structure à l'aide des mots clé: <b>Public</b>, <b>Protected</b>, <b>Friend</b> 
+ou <b>Private</b> ou garder la valeur par défaut, <b>Public</b>. Vous pouvez 
+déclarer chaque membre en spécifiant une accessibilité. Si vous utilisez 
+l'instruction <b>Dim</b> sans mot clé, l'accessibilité prend la valeur par 
+défaut, <b>Public</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Private Mastructure</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Public i As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; ...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Structute</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#008000">En conclusion les structures 
+sont maintenant très puissantes et peuvent contenir autant de choses que les 
+modules de Classes , on verra cela plus loin. Mais les structures sont 
+référencées par valeur alors que les Classes le sont par référence </font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6col.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6val.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6struct.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:55 GMT -->
+</html>

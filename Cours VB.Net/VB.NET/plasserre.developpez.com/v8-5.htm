@@ -1,0 +1,387 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:26 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net IEnumerable</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">&nbsp;</font></b><a href="v8-4.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.5</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Multithread.</font></b></td>
+    <td width="14%" height="76"><a href="v8-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Un
+Thread c'est quoi?</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA"><font size="2" face="Courier New">Le
+<b>thread</b> représente l'exécution d'un processus en
+mémoire. Un système multithread tel que Windows offre la capacité d'exécuter
+en parallèle plusieurs threads et donc plusieurs traitements en simultané.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA"><font size="2" face="Courier New">On
+peut utiliser <b>la Classe Thread</b>, créer autant de thread que l'on veut,
+mais il faut gérer un tas de chose et c'est l'horreur.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="mso-fareast-font-family: Times New Roman; mso-bidi-font-family: Times New Roman; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA"><font size="2" face="Courier New">On
+peut aussi (Framework 2) utiliser un <b>Thread d'arrière plan</b> (et un seul)
+qui est très simple d'utilisation. Son intérêts est que lorsqu'on a une tache
+très longue (très long calcul par exemple), il est possible d'effectuer le
+calcul long en arrière plan, pendant ce temps, on peut continuer à travailler
+dans le formulaire (thread principal); quand le thread d'arrière plan est
+terminé, on affiche les résultats.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Comment
+ajouter un Thread d'arrière plan?</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+faut aller chercher un composant <font color="#0000FF">BackgroundWorker</font>
+dans la boite à outils et le déposer sur le formulaire, il apparaît en
+dessous et se nomme par défaut BackgroundWorker1.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><img border="0" src="vthread1.JPG" width="883" height="292"></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">La propriété <i><font color="#0000FF">WorkerReportsProgress</font></i>
+donne à notre BackgroundWorker la possibilité de nous informer ou non de son
+état d'avancement.<br>
+<br>
+La propriété <i><font color="#0000FF">WorkerSupportsCancellation</font></i> nous
+permet d'autoriser l'annulation de la tâche en cours du BackgroundWorker.
+<br>
+&nbsp;</font></p>
+<font face="Courier New" size="2">Dans le code:</font>
+<p><font face="Courier New" size="2"><font color="#0000FF">BackGroundWorker1.<b>RunWorkerAsync</b>(<span class="vbnet_type">Objet</span>)</font>
+permet de déclencher le thread d'arrière plan.</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">BackGroundWorker1.<b>DoWork</b></font> :
+est l' évènement qui se déclenche lorsque nous faisons
+appel au BackgroundWorker. <b> C'est cette routine qui tourne en arrière plan.</b></font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">ProgressChanged </font> : Cet évènement, si la propriété <i>WorkerReportsProgress</i>
+est activée, se déclenche lorsque nous voulons indiquer que l'état
+d'avancement du BackgroundWorker change.</font>
+<p><font face="Courier New" size="2"><font color="#0000FF">RunWorkerCompleted </font> : Une fois le traitement du BackgroundWorker terminé
+cet événement est déclenché.</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><br>
+&nbsp;</font></p>
+<pre><font face="Courier New" size="2"><b>Exemple:</b></font></pre>
+<pre><font face="Courier New" size="2"><b>Si on clique sur un bouton cela crée un thread d'arrière plan qui effectue un calcul long.</b></font></pre>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font> Button1_Click(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.EventArgs) <font COLOR="#0000ff">Handles</font>
+Button1.Click</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000" face="Courier New" size="2">&nbsp;'La
+méthode RunWorkerAsync() du BackgroundWorker déclenche le thread d'arrière
+plan.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;
+<b>BackgroundWorker1.RunWorkerAsync()</b></font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<pre style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000" face="Courier New" size="2">'La
+procédure DoWork contient le code effectué en arrière plan.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font>  <b>BackgroundWorker1_DoWork</b>(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.ComponentModel.DoWorkEventArgs) <font COLOR="#0000ff">Handles</font>
+BackgroundWorker1.DoWork</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;
+'mes calculs très long</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000" face="Courier New" size="2">'Quand
+le code d'arrière plan est terminé la procédure RunWorkerCompleted est
+exécutée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font>  <b>BackgroundWorker1_RunWorkerCompleted</b>(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Object</font>, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font>
+System.ComponentModel.RunWorkerCompletedEventArgs) <font COLOR="#0000ff">Handles</font>
+BackgroundWorker1.RunWorkerCompleted</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">'</font><font SIZE="2"><font color="#008000" face="Courier New" size="2">
+ici, elle affiche un message indiquant de le thread d'arrière plan est
+terminé.</font></font><font face="Courier New" size="2">&nbsp;&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New">Label1.Text
+= </font><font face="Courier New" COLOR="#800000">&quot;terminé&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<pre style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<pre style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">La méthode RunWorkerAsync peut avoir un paramètre qui sera transmis au thread d'arrière plan.</font></b></pre>
+<pre style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Mais un seul; ce paramètre étant de type objet, vous pouvez passer un tableau d'objets (string, int, etc...) ou même une structure</font></pre>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici
+dans l'exemple, on a un paramètre numérique, utilisé dans le thread d'arrière plan pour
+faire un calcul.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font color="#0000FF">P</font><font SIZE="2"><font COLOR="#0000ff">rivate</font>
+<font COLOR="#0000ff">Sub</font> Button1_Click(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.EventArgs) <font COLOR="#0000ff">Handles</font>
+Button1.Click</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;
+BackgroundWorker1.RunWorkerAsync(<b>180</b>)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+<pre style="margin-top: 0; margin-bottom: 0">&nbsp;</pre>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le
+paramètre , dans DoWork, se retrouve dans <font color="#0000FF">e.Argument</font>
+, comme c'est un Objet, il faut le convertir en Integer pour l'utiliser:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> BackgroundWorker1_DoWork(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.ComponentModel.DoWorkEventArgs) <font COLOR="#0000ff">Handles</font>
+BackgroundWorker1.DoWork</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#0000FF">a=a + Ctype (<b>e.Argument</b>, Integer)</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<pre>&nbsp;</pre>
+<pre><b>Le thread d'arrière plan peut appeler une Sub.</b></pre>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> BackgroundWorker1_DoWork(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.ComponentModel.DoWorkEventArgs) <font COLOR="#0000ff">Handles</font>
+BackgroundWorker1.DoWork</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#0000FF"><b>Calcul()</b></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<pre style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Sub Calcul ()</font></pre>
+<pre style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Mes calculs</font></pre>
+<pre style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">End Sub</font></pre>
+<pre><font face="Courier New" size="2">(Le thread principal peut lui aussi appeler la routine Calcul.)</font></pre>
+<pre>&nbsp;</pre>
+<pre><b>Les variables sont accessibles dans le thread d'arrière plan: </b></pre>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">'MyVar
+par exemple qui est Public et déclarée en tête de module.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">Public&nbsp;
+MyVar As Integer = 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> BackgroundWorker1_DoWork(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> System.Object, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.ComponentModel.DoWorkEventArgs) <font COLOR="#0000ff">Handles</font>
+BackgroundWorker1.DoWork</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#0000FF">MyVar=Myvar +1</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></p>
+</font>
+<pre>&nbsp;</pre>
+<pre><b>Par contre les objets de l'interface (du thread principal) ne sont pas accessibles dans le thread d'arrière plan:</b></pre>
+<pre>Cela déclenche une exception si on tente d'y accéder. </pre>
+<pre><img border="0" src="vthread2.JPG" width="779" height="142"></pre>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><b><font color="#0000FF" face="Courier New" size="4">État
+d'avancement:</font></b></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Si
+la tâche d'arrière plan est très longue, il peut être intéressant de
+montrer dans l'interface utilisateur, l'état d'avancement&nbsp; de cette
+tâche.&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Mais
+on rappelle que la tâche de fond ne peut pas intervenir sur l'interface.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+faut donc:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;Mettre
+la propriété <i><font color="#0000FF">WorkerReportsProgress</font></i>
+ de notre BackgroundWorker à True.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dans
+le thread d'arrière plan, il faut, a chaque que l'on veut indiquer la
+progression, appeler la méthode&nbsp; <font color="#0000FF">ReportProgress </font>en
+indiquant l'état d'avancement avec un paramètre.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font>  <font color="#0000FF">BackgroundWorker1_DoWork()</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="vbnet_keyword"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;Dim</font></font></span><font face="Courier New" size="2"><font color="#0000FF">
+MyThread <span class="vbnet_keyword">As</span> BackgroundWorker = <span class="vbnet_keyword">CType</span>(sender,
+BackgroundWorker)</font>'récupération du thread d'arrière plan</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;MyThread.ReportProgress(pourcent)</font><font color="#008000">'pourcent
+est un Integer indiquant l'état d'avancement.</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">End
+Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Noter
+que c'est au programmeur de créer la logique calculant d'état d'avancement (et
+donc la valeur de la variable pourcent)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Enfin
+dans le thread principal, la <span class="vbnet_code"><span class="vbnet_keyword">Sub</span> </span><font color="#0000FF" face="Courier New" size="2">BackgroundWorker1</font><span class="vbnet_code">_ProgressChanged()
+s'exécute à chaque fois que le thread d'arrière plan le demande et met à
+jour un index visuel sur l'interface.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="vbnet_code"><span class="vbnet_keyword"><font color="#0000FF" size="2" face="Courier New">Private</font></span> <font color="#0000FF" size="2" face="Courier New"> <span class="vbnet_keyword">Sub</span> 
+</font> </span><font color="#0000FF" size="2" face="Courier New">BackgroundWorker1<span class="vbnet_code">_ProgressChanged(
+_<br>
+	<span class="vbnet_keyword">ByVal</span>  sender <span class="vbnet_keyword">As</span> <span class="vbnet_type">Object</span>,
+_<br>
+	<span class="vbnet_keyword">ByVal</span>  e <span class="vbnet_keyword">As</span> 
+ProgressChangedEventArgs) _<br>
+	<span class="vbnet_keyword">Handles</span> </span>BackgroundWorker1<span class="vbnet_code">.ProgressChanged<br>
+<br>
+MyProgressBarr.Value = e.ProgressPercentage<br>
+<span class="vbnet_keyword">End</span> <span class="vbnet_keyword">Sub</span></span></font></p>
+<pre>&nbsp;</pre>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="4" face="Courier New"><span style="background-color: #C0C0C0"><b>Arrêter
+le thread en cours:</b></span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Il
+suffit de faire dans le thread principal:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">BackgroundWorker1.CancelAsync()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dans
+le thread d'arrière plan, il faut vérifier si l'arrêt à été demandé:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Dans&nbsp;
+DoWork on récupère le thread d'arrière plan qui est le sender, on regarde si
+sa propriété CancellationPending est à True, si oui on met e.cancel à True
+ce qui arrête le thread d'arrière plan.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="vbnet_keyword"><font color="#0000FF" face="Courier New" size="2">Dim</font></span><font color="#0000FF" face="Courier New" size="2">
+MyThread <span class="vbnet_keyword">As</span> BackgroundWorker = <span class="vbnet_keyword">CType</span>(sender,
+BackgroundWorker)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="vbnet_keyword"><font color="#0000FF" face="Courier New" size="2">If</font></span><font face="Courier New" size="2"><font color="#0000FF">
+MyThread.CancellationPending <span class="vbnet_keyword">Then</span> e.Cancel = <span class="vbnet_keyword">True&nbsp;
+</span></font><span class="vbnet_keyword"><font color="#008000">'ce qui arrête
+le thread d'arrière plan.</font></span></font></p>
+<pre>Si on veut tester la demande d'arrêt dans une Sub, il faut envoyer en paramètre à cette sub MyThread et e.</pre>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="4"><b>Résultat
+retourné par le thread d'arrière plan:</b></font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<div class="paragraph">
+  <font face="Courier New" size="2">
+  Il peut y avoir plusieurs types de résultat à la fin, on peut le voir dans
+  l'argument <font color="#0000FF">e</font> de type <font color="#0000FF"><i>RunWorkerCompletedEventArgs</i> </font>
+  retourné par la procédure <font color="#0000FF">BackgroundWorker1</font><span class="vbnet_code"><font color="#0000FF">.RunWorkerCompleted.</font><br>
+  </span>:</font>
+</div>
+<ul style="LIST-STYLE-TYPE: disc">
+  <li><font size="2" face="Courier New">Il y a eu une erreur pendant le traitement. Dans ce cas la propriété
+    <font color="#0000FF">e</font><font color="#0000FF">.</font><i><font color="#0000FF">Error</font></i>
+ est différente de null.</font>
+  <li><font size="2" face="Courier New">Le traitement a été annulé. Dans ce cas la propriété
+    <font color="#0000FF">e.<i>Canceled</i>
+    </font> est à <span style="COLOR: #0000ff">true</span>.</font>
+  <li><font size="2" face="Courier New">Le traitement s'est déroulé normalement.
+    Le résultat se trouve dans la propriété <font color="#0000FF">e.<i>Result</i> </font>
+    .(Bien sur ,dans DoWork il faut avoir mis le résultat des calculs dans
+    e.Result)</font></li>
+</ul>
+<pre><font face="Courier New" size="2">Exemple de traitement:</font></pre>
+<pre><font color="#0000FF" face="Courier New" size="2"><span class="vbnet_code"><span class="vbnet_keyword">Private</span> <span class="vbnet_keyword">Sub</span> </span>BackgroundWorker1<span class="vbnet_code">_RunWorkerCompleted( _
+	<span class="vbnet_keyword">ByVal</span> sender <span class="vbnet_keyword">As</span> <span class="vbnet_type">Object</span>, _
+	<span class="vbnet_keyword">ByVal</span> e <span class="vbnet_keyword">As</span> RunWorkerCompletedEventArgs) _
+	<span class="vbnet_keyword">Handles</span> </span>BackgroundWorker1<span class="vbnet_code">.RunWorkerCompleted
+
+	<span class="vbnet_keyword">If</span> <span class="vbnet_keyword">Not</span> (e.<span class="vbnet_keyword">Error</span> <span class="vbnet_keyword">Is</span> <span class="vbnet_keyword">Nothing</span>) <span class="vbnet_keyword">Then</span>
+		lblResult.Text = <span class="vbnet_ch">&quot;</span></span><span class="vbnet_ch">Il y a eu une</span><span class="vbnet_code"><span class="vbnet_ch"> erreur : &quot;</span> + e.<span class="vbnet_keyword">Error</span>.Message
+	<span class="vbnet_keyword">ElseIf</span> e.Cancelled <span class="vbnet_keyword">Then</span>
+		lblResult.Text = <span class="vbnet_ch">&quot;Opération annulée &quot;</span>
+	<span class="vbnet_keyword">Else</span>
+		lblResult.Text = <span class="vbnet_ch">&quot;Opération </span></span><span class="vbnet_ch">Ok</span><span class="vbnet_code"><span class="vbnet_ch">  Résultat : &quot;</span> + e.Result.ToString
+	<span class="vbnet_keyword">End</span> <span class="vbnet_keyword">If</span>
+
+<span class="vbnet_keyword">End</span> <span class="vbnet_keyword">Sub</span></span></font></pre>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:39 GMT -->
+</html>

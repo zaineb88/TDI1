@@ -1,0 +1,609 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-20.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic  NET : classe référence import espace de nom </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.20</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les Classes, les objets.</font></b></td>
+    <td width="14%" height="76"><a href="v1-21.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080">
+<font size="2"><span style="font-family: Courier New">Résumons un peu la 
+notion de <b>Class</b></span></font><span style="font-size: 10.0pt; font-family: Courier New"><b>e</b>, d'<b>objet</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Voyons aussi les <b>espaces de noms</b>, 
+les <b>références</b>, les <b>Dll</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; En VB 2003</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; En VB 2005</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Portée des espaces de noms.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Propriétés ambiguës.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Alias.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Héritage.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Membres d'instance ou partagés.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Classe statique.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<span style="font-size: 10.0pt; font-family: Courier New">Voir la vidéo au 
+format '<b>Flash</b>':<a href="ftp://ftp-developpez.com/plasserre/v1class.swf.html"><img border="0" src="video1.JPG" width="55" height="52"></a> 
+ou au format <b>AVI</b> <a href="ftp://ftp-developpez.com/plasserre/v1class.avi"><img border="0" src="video1.JPG" width="55" height="52"></a> en 
+Visual Basic 2005.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">La vidéo (identique à 
+celle du chapitre 0-1)contient:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">1)Objets, Classes.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font size="2"><span style="font-family: Courier New">2)<b>Références, espaces 
+de noms.</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<b><span style="font-family: Courier New; background-color: #C0C0C0">Classes.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Nous avons vu qu’on 
+utilise des <b>objets</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il existe des<b> 
+'types' </b>d’objet&nbsp;qui définissent les caractéristiques 
+communes des objets. Ces types se nomment les <b>Classes</b>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">La Classe 
+System.Windows.Forms contient les &quot;Forms&quot; et les &quot;Control&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On rappelle que se 
+sont 
+ces classes que l’on utilise comme &quot;moule&quot; pour <b>instancier</b> (créer) un 
+objet, <b>une instance</b>.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+Dim B As New Form</font>&nbsp;&nbsp; crée un formulaire( une instance de formulaire) à partir de la Classe Form 
+(Fenêtre).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">B hérite de toutes les 
+caractéristiques de la Classe Form.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">L</span></font><span style="font-size: 10.0pt; font-family: Courier New">es 
+classes sont regroupées&nbsp; en bibliothèques sous la dénomination &quot;<b>Espace 
+de noms</b>&quot;.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="4" color="#0000FF">
+<b><span style="font-family: Courier New; background-color: #C0C0C0">Essayons de 
+comprendre:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Pour utiliser un objet en VB (fourni par 
+le Framework par exemple), il faut:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><b>A- Que la DLL correspondante soit chargée 
+dans le projet.</b> (La DLL c'est un fichier exécutable '.dll' qui contient le 
+code nécessaire). En VB.NET on appelle cela la '<b>Référence'</b> (</span></font><span style="font-size: 10.0pt; font-family: Courier New">Dans ‘<b>Explorateur 
+de solutions</b>’)</span><font size="2"><span style="font-family: Courier New">Exemple de DLL:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">System.dll</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><b>B- Que l'espace de nom soit importé:</b> 
+une DLL contient des espaces de noms dans lesquelles se trouvent les Classes. Pour utiliser une Classe il faut  inclure 
+l'espace de noms correspondant dans le programme donc il faut l'importer à partir de la DLL 
+. On va par exemple importer l'espace de nom 'System.Windows.Forms'( il 
+est dans System.dll et contient les Classes 'Form' et 'Control'):</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Imports System.Windows.Forms&nbsp;&nbsp;&nbsp; </font>
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>C- On peut maintenant utiliser les Classes 
+contenues dans cet espace de nom et créer un objet.</b> par exemple on va créer 
+une fenêtre avec la Classe Form contenue dans System.Windows.Forms.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Dim Form1 As New Form</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Form1 est donc un objet formulaire qui hérite de 
+tous les membres (Propriétés, méthodes) de la Classe Form, on peut donc utiliser une méthode de cet 
+objet:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Form1.Show()&nbsp;&nbsp;&nbsp; </font>'pour faire 
+apparaître la fenêtre</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">ou une propriété:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;
+<font color="#0000FF">Form1.BackColor=Color.Red </font>'pour modifier la couleur de 
+fond</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#008000">Les Classes les plus courantes 
+sont déjà chargées et disponibles, ce qui simplifie un peu les choses.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">A - Détails&nbsp; en VB 2003:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">&nbsp;- Les Références:</span></font></b></p>
+<p><font face="Courier New" size="2">Pour qu'une classe soit utilisée, il faut 
+que le composant correspondant (la DLL) soit chargé; on a vu que par défaut 
+quelques composants du Framework (System.dll..) et le CLR ( mscorlib.dll) étaient 
+chargés. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans '<b>Explorateur 
+de solutions</b>':</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vsolut.gif" width="179" height="163"></p>
+<p><font size="2"><span style="font-family: Courier New">D</span></font><span style="font-size: 10.0pt; font-family: Courier New">ouble-cliquez la rubrique <b>références pour voir les DLL 
+(références déjà chargées)</b>.</span></p>
+<p><img border="0" src="vref2003.JPG" width="576" height="458"></p>
+<p><font face="Courier New" size="2">Si vous souhaitez utiliser un autre 
+composant dans votre application et qu'il n'est pas chargé, il faut ajouter la référence 
+de ce composant. Dans la fenêtre de l'explorateur de solutions, cliquez le 
+bouton droit de la souris puis cliquez sur 'Ajouter une référence'. La
+<MSHelp:link tabIndex="0" keywords="urfAddReferenceDialogBox">boîte de dialogue 
+'Ajouter une référence</MSHelp:link> de Visual Studio&nbsp;.NET' propose trois 
+options&nbsp;: </font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">.NET&nbsp;-&nbsp;Répertorie tous les composants 
+  .NET Framework pouvant être référencés. (Certains sont déjà chargé comme 
+  System..) et les composants extérieurs NET.</font></li>
+  <li><font face="Courier New" size="2">COM&nbsp;-&nbsp;Répertorie tous les composants COM 
+  pouvant être référencés (ceux qui fonctionnaient en VB6). </font></li>
+  <li><font face="Courier New" size="2">Projets<b>&nbsp;-&nbsp;</b>Répertorie tous les 
+  composants réutilisables créés dans des projets locaux. </font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">&nbsp;</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">- 
+Importation d'espace de noms:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Certains</span></font><span style="font-size: 10.0pt; font-family: Courier New"> 
+espaces de noms ne sont pas chargés, l’espace de noms&nbsp;
+<font color="#0000FF">Math</font> 
+n’est pas chargé par exemple. (Bien que la référence, la dll qui se nomme System 
+soit présente dans le projet.)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si je veux utiliser<b> </b>
+<font color="#0000FF">Round</font><b> </b>pour arrondir un nombre il faut d’abord importer l’espace de nom&nbsp;'Math':</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour cela il faut 
+taper en haut de la fenêtre (au dessus de public Class)</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">Imports</span><span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">System.Math</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ensuite<b>, </b>on 
+peut écrire<b>:</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></b>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+&nbsp;</b><font color="#0000FF">Label1.Text = (Round(1.2)).ToString </font>'qui 
+affiche 1.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si l’Imports n’a pas 
+été fait, <font color="#0000FF">System.Math.Round(1.2)</font> est accepté aussi. 
+(A condition que la Dll soit chargée)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter bien que dans notre exemple, comme Math fait partie de 
+System, la référence (la DLL correspondante) est déjà chargée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Autre exemple: si on veut utiliser les 
+fichiers, il faut importer <font color="#0000FF">System.IO.</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">B - Détails en VB 2005 ou en VB 2008:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">&nbsp;</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">- Les Références:</span></font></b></p>
+<p><font face="Courier New" size="2">Pour qu'une classe soit utilisée, il faut 
+que le composant correspondant(la DLL) soit chargé; on a vu que par défaut 
+quelques composants du Framework (System.dll..) et le CLR ( mscorlib.dll) étaient 
+chargés. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans '<b>Explorateur 
+de solutions</b>' double-cliquez sur 'My Projet', ou dans le menu 
+Projet, cliquez sur propriétés de..</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Puis choisir l'onglet 
+'Références'</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vref2005.JPG" width="481" height="547"></p>
+<p><font face="Courier New" size="2">On voit la liste des références chargées 
+dans le projet: ici System, System.Data..</font></p>
+<p><font face="Courier New" size="2">Si vous souhaitez utiliser un autre 
+composant dans votre application et qu'il n'est pas chargé, il faut ajouter la 
+référence de ce composant. Cliquez le 
+bouton  'Ajouter...'. La
+<MSHelp:link tabIndex="0" keywords="urfAddReferenceDialogBox">boîte de dialogue 
+'Ajouter une référence</MSHelp:link>' s'ouvre: </font></p>
+<p><img border="0" src="vref2005-2.JPG" width="547" height="380"></p>
+<p><font face="Courier New" size="2">Elle propose: </font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">.NET&nbsp;-&nbsp;Répertorie tous les composants 
+  .NET Framework pouvant être référencés.(Certains sont déjà chargé comme 
+  System..) et les composants extérieurs NET.</font></li>
+  <li><font face="Courier New" size="2">COM&nbsp;-&nbsp;Répertorie tous les composants COM 
+  pouvant être référencés (ceux qui fonctionnaient en VB6). </font></li>
+  <li><font face="Courier New" size="2">Projets<b>&nbsp;-&nbsp;</b>Répertorie tous les 
+  composants réutilisables créés dans des projets locaux. (D'autres programme 
+  VB) </font></li>
+  <li><font face="Courier New" size="2">Parcourir permet de rechercher ; Récent 
+  liste les DLL récemment chargées.</font></li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">En cliquant sur une référence puis sur 'Ok', 
+cela charge la référence.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">&nbsp;</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">- 
+Importation d'espace de noms:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Certains</span></font><span style="font-size: 10.0pt; font-family: Courier New"> 
+espaces de noms ne sont pas chargés, l’espace de noms&nbsp;
+<font color="#0000FF">Math</font> 
+n’est pas chargé par exemple. (Bien que la référence, la dll qui se nomme System 
+soit présente dans le projet.)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si je veux utiliser<b> </b>
+<font color="#0000FF">Round</font><b> </b>pour arrondir un nombre il faut d’abord importer l’espace de nom&nbsp;'Math':</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour cela il faut 
+taper en haut de la fenêtre(au dessus de public Class)</span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">Imports</span><span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">System.Math</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ensuite<b>, </b>on 
+peut écrire<b>:</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></b>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+&nbsp;</b><font color="#0000FF">Label1.Text = (Round(1.2)).ToString </font>'qui 
+affiche 1.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si l’Imports n’a pas 
+été fait, <font color="#0000FF">System.Math.Round(1.2)</font> est accepté aussi. 
+(A condition que la Dll soit chargée)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter bien que dans notre exemple, comme Math fait partie de 
+System, la référence (la DLL correspondante) est déjà chargée.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">On peut aussi importer les espaces de noms 
+directement depuis l'onglet références (Après avoir cliqué sur 'My Projet'):</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vref2005.JPG" width="481" height="547"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il suffit de choisir la dll en haut pour voir 
+l'afficher les espaces de noms contenus dans cette dll en bas et de cocher ceux 
+que l'on veut charger.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Portée de l'espace de noms:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Si un seul espace de noms est spécifié&nbsp; 
+(Import System par exemple), tous les membres à nom unique de cet espace de noms&nbsp;sont 
+présents. Si un 
+espace de noms et le nom d'un élément de l'espace de noms sont spécifiés (Import System.Math), seuls les membres de cet élément sont disponibles sans 
+qualification.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">Imports System</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Permet d'utiliser <font color="#0000FF">System.ArgumentException</font> 
+mais pas&nbsp; <font color="#0000FF">Systeme.Math.round</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour utiliser Round il faut Importer&nbsp; 
+<font color="#0000FF">System.Math</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="4" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Propriété ambiguë:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Certaines propriétés sont communes à plusieurs 
+classes, il peut y a avoir ambiguïté et il faut utiliser dans ce cas la syntaxe 
+complète.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela semble le cas pour <font color="#0000FF">left</font> qui est&nbsp; une 
+propriété de Microsoft.VisualBasic.Strings mais aussi une propriété des 
+contrôles.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">MonControle.left=250</font>&nbsp; 
+'est accepté</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Chaine= left(C,2)</font>&nbsp;&nbsp;&nbsp;&nbsp; 
+'pose des problèmes.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour lever l'ambiguïté il faut écrire&nbsp; <font color="#0000FF">
+Microsoft.VisualBasic.left(C,i)</font> par exemple quand on utilise left pour 
+manipuler des chaînes. (Car left fait partie de l'espace <font color="#0000FF">
+Microsoft.VisualBasic )</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Chaine= </font> <font color="#0000FF">
+<font face="Courier New" size="2">Microsoft.VisualBasic.</font></font><font color="#0000FF" face="Courier New" size="2">left(C,2)
+</font><font face="Courier New" size="2">est accepté.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Alias:</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois pour simplifier l'écriture ou pour 
+éviter des ambiguïtés&nbsp; on peut utiliser des <b>Alias</b>:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Imports STR= 
+Microsoft.VisualBasic.Strings</font> importe l'espace de nom String mais le 
+désigne sous le nom de STR (STR est un Alias); STR est utilisé ensuite:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">Chaine=STR.left(C,i)</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34"><font face="Arial"> En résumé:</font></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Arial" color="#FF0000">Les Classes sont dans des espaces de nom qui 
+sont dans des&nbsp; Dll (références).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#008000">ou</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Arial" color="#008000">Les 'Dll' contiennent des 'Espaces de noms' 
+contenant des 'Classes'.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#008000" face="Arial">Les références ( Dll) permettent de charger des composants, des 
+Classes du Framework ou d'autres classes.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#008000" face="Arial">
+L'instruction
+'Imports' permet d'importer des espaces de nom venant de ses références.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font color="#008000" face="Arial">Cela donne&nbsp; accès dans le 
+programme&nbsp; à des classes  . on pourra donc&nbsp; instancier 
+des objets grâce à ces Classes puis&nbsp; utiliser des méthodes.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Noter que dans les Classes, i</span></b></font><b><span style="font-size: 10.0pt; font-family: Courier New">l 
+existe une structure arborescente.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La premier Classe (en 
+haut) est <font color="#0000FF">System</font>.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dessous il y a entre 
+autres <font color="#0000FF">System.WindowsForms</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dessous
+<font color="#0000FF">System.Windows.Forms.Control</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Enfin
+<font color="#0000FF">System.Windows.Forms.Control.Name</font> par exemple.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Héritage</span></font></span><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0"><font size="4" color="#0000FF">:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Héritage:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les classes héritent des membres(propriétés, 
+méthodes) dont elles sont issues: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple :</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un contrôle <font color="#0000FF">Button</font> 
+hérite de 
+<font color="#0000FF">System.Windows.Forms.Control</font>&nbsp; car tous les 
+composants avec représentation visuelle héritent de 'Control'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Et bien les propriétés <font color="#0000FF">Name</font>, 
+<font color="#0000FF">Left</font>, 
+<font color="#0000FF">Right</font>, <font color="#0000FF">Visible</font>,
+<font color="#0000FF">Enabled</font> qui sont des membres de Control deviennent 
+aussi des membres de <font color="#0000FF">Button</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Membres d'instance et 
+membres partagés.</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Un </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">objet a <b>des 
+membres</b> (propriétés et méthodes)&nbsp;:</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">Un 
+membre peut être accessible directement sur un instance&nbsp;: </span><font size="2">
+<span style="font-family: Courier New">on appelle cela un <b>membre d'instance</b>.</span></font><span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+
+</span></p>
+  </li>
+</ul>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+  </blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000FF">Dim 
+A As String</font> crée une variable A , en fait une instance, un objet à 
+partir de la Classe String.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp; </span>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Ensuite on peut 
+utiliser </span></p>
+<p class="MsoNormal" style="text-indent: 35.4pt; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">B=A.Trim(&quot;&nbsp;&quot;) </font>'ici Trim enlève les 
+blancs en début et fin de chaîne.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; 
+Trim est bien une méthode qui s'applique à une instance (A).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;  </span></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Un </span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">autre membre peut être 
+accessible par <b>les méthodes de la classe (en non pas de l'instance)</b>&nbsp;:</span></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&nbsp; -La Classe de sa nature, de son type.</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dans la classe 'String' j’utilise la méthode <b>Compare </b>pour comparer 2 
+chaînes.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">&nbsp; c=String.Compare(a,b)</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>J'utilise 2 
+paramètres, mais j'appelle la méthode directement à partir de la Classe String.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></b>
+<font size="2"><span style="font-family: Courier New; font-weight: 700">&nbsp;
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">-La 
+Classe de l’opération à effectuer</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dans la Classe Math j’utilise la méthode Abs (Valeur absolue)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">&nbsp; c=Math.Abs(-12)</font></span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On appelle cela une <b>méthode partagée</b> (shared) 
+car on l'utilise directement à partir du nom de la classe sans avoir à instancier.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On remarque que la Classe String a des membres 
+d'instance et aussi des membres partagés.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La syntaxe est parfois bizarre mais obéit donc 
+à une certaine logique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="4" color="#0000FF" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Classes statiques ou 
+non</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici on parle des classes et non des membres.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Certaines Classes sont dites <b>Statiques</b> 
+car elles existent d'emblée et on peut travailler dessus sans que l'on aie besoin de les instancier:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>La Classe Directory </b>(répertoire):</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">Directory.GetCurrentDirectory</span>&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'est utilisable directement pour 
+obtenir le répertoire courant. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre avec <b>une Classe non statique</b> 
+il faut instancier l'objet que l'on va utiliser:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Pour la classe DirectoryInfo</b> 
+(information sur le répertoire), on&nbsp; doit instancier avant usage un 
+DirectoryInfo particulier:</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">Dim D As DirectoryInfo</span></font></p>
+<p><font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">D= New DirectoryInfo( 
+MonDossier)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">C'est un peu théorique, mais on verra au fur 
+et à mesure des exemples pratiques de cela.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.10.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-21.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-20.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:32 GMT -->
+</html>

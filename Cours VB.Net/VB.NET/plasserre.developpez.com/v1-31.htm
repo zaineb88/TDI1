@@ -1,0 +1,160 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-31.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET stream </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-30.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.31</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Les
+      'Stream'.</font></b></td>
+    <td width="14%" height="76"><a href="ve1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><span style="FONT-WEIGHT: 700; BACKGROUND-COLOR: #c0c0c0"><font face="Courier New" size="4">Utiliser
+les &quot;Stream&quot;.</font></span></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p><font face="Courier New" size="2">Le <b>Stream</b> (flux, torrent, courant)
+est une notion générale, c'est <b>un flux de données</b> provenant ou allant
+vers un fichier, un port, une connexion TCP/IP...</font></p>
+<p><font face="Courier New" size="2">Ici, par exemple, on va utiliser un <font color="#0000ff">Stream</font>
+pour lire ou écrire dans un fichier.</font></p>
+<p><font face="Courier New" size="2">L'accès est séquentiel: les données sont
+traitées&nbsp;du début à la fin du fichier.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="4"><b>Pour
+écrire</b></font><font face="Courier New" size="2"> dans un fichier texte:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Il&nbsp;
+faut instancier un objet de la classe <b>StreamWriter</b> . On écrit avec <b>Write
+</b>ou<b> WriteLine</b>.(ajoute un saut de ligne)&nbsp; Enfin on ferme avec <b>Close</b>.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">On
+peut instancier avec le constructeur de la classe StreamWriter et avec New, ou
+par la Classe File.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SW As New StreamWriter (&quot;MonFichier.txt&quot;)</span></font><span style="BACKGROUND-COLOR: #ffffff">
+</span>' crée ou si existe écrase</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Il
+existe une surcharge permettant de ne pas écraser mais d'ajouter à la fin du
+fichier:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SW As New StreamWriter (&quot;MonFichier.txt&quot;, True)</span></font> ' crée
+ou si existe ajoute</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Avec
+la classe File:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SW As&nbsp; StreamWriter=File.CreateText (&quot;MonFichier.txt&quot;)</span></font>
+' crée ou si existe écrase</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SW As StreamWriter = File.AppendText(&quot;MonFichier.txt&quot;) </span></font>'
+crée ou si existe ajoute</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Ensuite
+pour écrire 2 lignes:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">SW.WriteLine
+(&quot;Bonjour&quot;)</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">SW.WriteLine
+(&quot;Monsieur&quot;)</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Enfin
+on ferme:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">SW.Close()</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><b><font face="Courier New" size="4">Pour
+lire</font><font face="Courier New" size="2"> dans un fichier Texte:</font></b></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Il
+faut instancier un objet de la classe <b>StreamReader</b>. On lit avec <b>Read </b>(un
+nombre d'octet) <b>ReadLine</b> (une ligne) <b>ReadToEnd</b> (de la position
+courante jusqu'à la fin). Enfin on ferme avec <b>Close</b>.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Avec
+le constructeur de la Classe Stream Reader:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SR As New StreamReader (&quot;MonFichier.txt&quot;)</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Avec
+la Classe File:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+SR As&nbsp; StreamReader=File.OpenText (&quot;MonFichier.txt&quot;)</span></font><span style="BACKGROUND-COLOR: #ffffff">
+'</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><b>Comment
+lire chaque ligne du fichier et s'arrêter à la fin?</b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">En
+effet on ne sait pas habituellement combien le fichier contient de ligne, si le
+fichier contient 2 lignes il faut en lire 2 et s'arrêter sinon on tente de lire
+après la fin du fichier et cela déclenche une erreur.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">3
+solutions:</font></p>
+<blockquote>
+  <p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">1-Utiliser
+  <b>ReadToEnd </b>qui lit en bloc jusqu'à la fin.</font></p>
+  <p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">2-Avant
+  ReadLine mettre un <b>Try</b>: quand l'erreur 'fin de fichier' survient elle
+  est interceptée par Catch qui sort&nbsp; du cycle de lecture et ferme le
+  fichier.</font></p>
+  <p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">3-Utiliser
+  <b>Peek</b> qui lit dans le fichier un caractère mais sans modifier la
+  position courante de lecture.</font></p>
+  <p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">La
+  particularité de Peek est de retourner -1 s'il n'y a plus de caractère à
+  lire sans déclencher d'erreur, d'exception.</font></p>
+</blockquote>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">La
+troisième solution est la plus générale et la plus élégante:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Do
+Until SR.Peek=-1</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;&nbsp;&nbsp;
+Ligne=SR.ReadLine()</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Loop</span></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">Enfin
+on ferme:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">SR.Close()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="BACKGROUND-COLOR: #c0c0c0"><b><font face="Courier New" color="#0000ff" size="4">Lexique
+anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Stream</b> 
+= flux, torrent, courant.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-30.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-31.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:39 GMT -->
+</html>

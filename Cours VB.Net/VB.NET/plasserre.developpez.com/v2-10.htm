@@ -1,0 +1,773 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v2-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET ascii unicode ISO 8859  ISO 10646 page de code UTF-8 UTF-16 UTF-32 glyphe font police Open type true type UCS </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center">&nbsp;  <b><font size="6" color="#800080" face="Courier New">2.10</font></b></td>
+    <td width="47%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">Annexe</font></b>
+      <p><b><font face="Courier New" size="6" color="#800080">Les caractères:&nbsp;</font></b></p>
+      <p><b><font face="Courier New" size="6" color="#800080">Codage:Ascii Unicode
+      UTF, polices de caractère .</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v2-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Chaque
+caractère possède un <b> code caractère numérique</b>. Il peut être d'une longueur de 7, 8, ou 16 bits.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">A
+ce code correspond u</font><font face="Courier New" size="2">n <b>glyphe</b> qui
+est une représentation graphique du caractère, le glyphe fait partie d'une
+font et d'une police.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">En
+ASCII (codage ASCII ),le caractère 97&nbsp; correspondant au glyphe 'a' dans la
+font Courier New.&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Voyons:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New" color="#800080"><b>A-
+Codage des caractères.</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#800080">&nbsp;&nbsp;&nbsp;
+Codage sur 7 bits Ascii.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#800080">&nbsp;&nbsp;&nbsp;
+Codage sur 8 bits</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#800080">&nbsp;&nbsp;&nbsp;
+Codage sur 16 bits ou plus Unicode et UTF</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New" color="#800080"><b>B-
+Représentation graphique des caractères.</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2" color="#800080">&nbsp;&nbsp;&nbsp;
+Glyphe, Font, Police.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New" color="#800080">&nbsp;&nbsp;
+BitMap, True Type, Open Type.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;&nbsp;&nbsp;<font size="2" face="Courier New" color="#800080">
+Police proportionnelle.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" face="Courier New" color="#800080"><b>C-
+Et sur le Web et dans VB?&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5">A-
+Codage des caractères</font></span></b></p>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Codage
+sur 7 bits: Ascii:</span></font></b></p>
+<p><font face="Courier New" size="2">L'<b> American Standard Code for
+Information Interchange (ASCII) </b>est en vigueur depuis les années 1980.</font></p>
+<p><font face="Courier New" size="2">C'est un ancien codage des caractères sur <b> 7 bits</b>
+(Ascii pur) au départ correspondant au clavier américain <b> sans</b>
+accentués.</font></p>
+<p><font face="Courier New" size="2">Il comporte 128 caractères.&nbsp;&nbsp;</font></p>
+<p><font face="Courier New" size="2">Les codes 0 à 31 correspondent aux
+caractères de contrôle.(Non imprimable: 9 = tabulation, 13= retour chariot)</font></p>
+<p><font face="Courier New" size="2">Les codes 32 à 64 correspondent aux
+opérateurs et aux chiffres.( 32=' ', 43='+', 49='1')</font></p>
+<p><font face="Courier New" size="2">Les codes 65 à 90 représentent les
+majuscules.(65='A')</font></p>
+<p><font face="Courier New" size="2">Les codes 91 à 122 représentent les
+minuscules.(91='a')</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il a été normalisé sous le nom d'<b>ISO
+646.</b></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Codage
+sur 8 bits:</span></font></b></p>
+<p><font face="Courier New" size="2">On est ensuite passé sur <b> 8 bits</b> (un octet)
+pour l'<b>ascii
+étendu</b> contenant les accentués.
+On peut donc coder 256 (0 à 255) caractères.</font></p>
+<p><font face="Courier New" size="2">En
+codage 8 bits, pour que les caractères apparaissent correctement, il faut
+utiliser la bonne <b> page de code (CharSet), le bon jeu de caractères</b>.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Le
+codage 8 bits a été normalisé sous le nom d'<b>ISO 8859.</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">L'ISO
+8859 a plusieurs cartes de caractères, ou <i><b>jeu de caractères</b></i>, ou <b><i>page
+de codes</i></b>:</font></p>
+<blockquote>
+    <p><font face="Courier New" size="2">-La norme <b>ISO 8859-1</b>, dont le nom
+    complet est <b>ISO/CEI 8859-1</b> est appelée <b>Latin-1</b> ou <i>alphabet
+    latin numéro 1</i>. elle permet de représenter la plupart des langues de
+    l'Europe occidentale: l'albanais, l'allemand, <b>l'anglais</b>, le catalan,
+    le danois, l'espagnol, le féroïen, le finnois, <b>le français</b>, le
+    galicien, l'irlandais, l'islandais, l'italien, le néerlandais, le norvégien,
+    le portugais et le suédois.</font></p>
+  <table>
+    <tbody>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">&nbsp;</th>
+        <th bgcolor="#C0C0C0" align="center">0</th>
+        <th bgcolor="#C0C0C0" align="center">1</th>
+        <th bgcolor="#C0C0C0" align="center">2</th>
+        <th bgcolor="#C0C0C0" align="center">3</th>
+        <th bgcolor="#C0C0C0" align="center">4</th>
+        <th bgcolor="#C0C0C0" align="center">5</th>
+        <th bgcolor="#C0C0C0" align="center">6</th>
+        <th bgcolor="#C0C0C0" align="center">7</th>
+        <th bgcolor="#C0C0C0" align="center">8</th>
+        <th bgcolor="#C0C0C0" align="center">9</th>
+        <th bgcolor="#C0C0C0" align="center">A</th>
+        <th bgcolor="#C0C0C0" align="center">B</th>
+        <th bgcolor="#C0C0C0" align="center">C</th>
+        <th bgcolor="#C0C0C0" align="center">D</th>
+        <th bgcolor="#C0C0C0" align="center">E</th>
+        <th bgcolor="#C0C0C0" align="center">F</th>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">0</th>
+        <td colSpan="16" rowSpan="2" align="center"><i>caractères&nbsp; non
+          imprimables</i></td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">1</th>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">2</th>
+        <td align="center"></td>
+        <td align="center">&nbsp;!</td>
+        <td align="center">&quot;</td>
+        <td align="center">#</td>
+        <td align="center">$</td>
+        <td align="center">%</td>
+        <td align="center">&amp;</td>
+        <td align="center">'</td>
+        <td align="center">(</td>
+        <td align="center">)</td>
+        <td align="center">*</td>
+        <td align="center">+</td>
+        <td align="center">,</td>
+        <td align="center">-</td>
+        <td align="center">.</td>
+        <td align="center">/</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">3</th>
+        <td align="center">0</td>
+        <td align="center">1</td>
+        <td align="center">2</td>
+        <td align="center">3</td>
+        <td align="center">4</td>
+        <td align="center">5</td>
+        <td align="center">6</td>
+        <td align="center">7</td>
+        <td align="center">8</td>
+        <td align="center">9</td>
+        <td align="center">&nbsp;:</td>
+        <td align="center">&nbsp;;</td>
+        <td align="center">&lt;</td>
+        <td align="center">=</td>
+        <td align="center">&gt;</td>
+        <td align="center">&nbsp;?</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">4</th>
+        <td align="center">@</td>
+        <td align="center">A</td>
+        <td align="center">B</td>
+        <td align="center">C</td>
+        <td align="center">D</td>
+        <td align="center">E</td>
+        <td align="center">F</td>
+        <td align="center">G</td>
+        <td align="center">H</td>
+        <td align="center">I</td>
+        <td align="center">J</td>
+        <td align="center">K</td>
+        <td align="center">L</td>
+        <td align="center">M</td>
+        <td align="center">N</td>
+        <td align="center">O</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">5</th>
+        <td align="center">P</td>
+        <td align="center">Q</td>
+        <td align="center">R</td>
+        <td align="center">S</td>
+        <td align="center">T</td>
+        <td align="center">U</td>
+        <td align="center">V</td>
+        <td align="center">W</td>
+        <td align="center">X</td>
+        <td align="center">Y</td>
+        <td align="center">Z</td>
+        <td align="center">[</td>
+        <td align="center">\</td>
+        <td align="center">]</td>
+        <td align="center">^</td>
+        <td align="center">_</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">6</th>
+        <td align="center">`</td>
+        <td align="center">a</td>
+        <td align="center">b</td>
+        <td align="center">c</td>
+        <td align="center">d</td>
+        <td align="center">e</td>
+        <td align="center">f</td>
+        <td align="center">g</td>
+        <td align="center">h</td>
+        <td align="center">i</td>
+        <td align="center">j</td>
+        <td align="center">k</td>
+        <td align="center">l</td>
+        <td align="center">m</td>
+        <td align="center">n</td>
+        <td align="center">o</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">7</th>
+        <td align="center">p</td>
+        <td align="center">q</td>
+        <td align="center">r</td>
+        <td align="center">s</td>
+        <td align="center">t</td>
+        <td align="center">u</td>
+        <td align="center">v</td>
+        <td align="center">w</td>
+        <td align="center">x</td>
+        <td align="center">y</td>
+        <td align="center">z</td>
+        <td align="center">{</td>
+        <td align="center">|</td>
+        <td align="center">}</td>
+        <td align="center">~</td>
+        <td align="center"></td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">8</th>
+        <td colSpan="16" rowSpan="2" align="center"><i>caractères non
+          imprimables</i></td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">9</th>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">A</th>
+        <td align="center"></td>
+        <td align="center">¡</td>
+        <td align="center">¢</td>
+        <td align="center">£</td>
+        <td align="center">¤</td>
+        <td align="center">¥</td>
+        <td align="center">¦</td>
+        <td align="center">§</td>
+        <td align="center">¨</td>
+        <td align="center">©</td>
+        <td align="center">ª</td>
+        <td align="center">«&nbsp;</td>
+        <td align="center">¬</td>
+        <td align="center">­</td>
+        <td align="center">®</td>
+        <td align="center">¯</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">B</th>
+        <td align="center">°</td>
+        <td align="center">±</td>
+        <td align="center">²</td>
+        <td align="center">³</td>
+        <td align="center">´</td>
+        <td align="center">µ</td>
+        <td align="center">¶</td>
+        <td align="center">•</td>
+        <td align="center">¸</td>
+        <td align="center">¹</td>
+        <td align="center">º</td>
+        <td align="center">&nbsp;»</td>
+        <td align="center">¼</td>
+        <td align="center">½</td>
+        <td align="center">¾</td>
+        <td align="center">¿</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">C</th>
+        <td align="center">À</td>
+        <td align="center">Á</td>
+        <td align="center">Â</td>
+        <td align="center">Ã</td>
+        <td align="center">Ä</td>
+        <td align="center">Å</td>
+        <td align="center">Æ</td>
+        <td align="center">Ç</td>
+        <td align="center">È</td>
+        <td align="center">É</td>
+        <td align="center">Ê</td>
+        <td align="center">Ë</td>
+        <td align="center">Ì</td>
+        <td align="center">Í</td>
+        <td align="center">Î</td>
+        <td align="center">Ï</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">D</th>
+        <td align="center">Ð</td>
+        <td align="center">Ñ</td>
+        <td align="center">Ò</td>
+        <td align="center">Ó</td>
+        <td align="center">Ô</td>
+        <td align="center">Õ</td>
+        <td align="center">Ö</td>
+        <td align="center">×</td>
+        <td align="center">Ø</td>
+        <td align="center">Ù</td>
+        <td align="center">Ú</td>
+        <td align="center">Û</td>
+        <td align="center">Ü</td>
+        <td align="center">Ý</td>
+        <td align="center">Þ</td>
+        <td align="center">ß</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">E</th>
+        <td align="center">à</td>
+        <td align="center">á</td>
+        <td align="center">â</td>
+        <td align="center">ã</td>
+        <td align="center">ä</td>
+        <td align="center">å</td>
+        <td align="center">æ</td>
+        <td align="center">ç</td>
+        <td align="center">è</td>
+        <td align="center">é</td>
+        <td align="center">ê</td>
+        <td align="center">ë</td>
+        <td align="center">ì</td>
+        <td align="center">í</td>
+        <td align="center">î</td>
+        <td align="center">ï</td>
+      </tr>
+      <tr>
+        <th bgcolor="#C0C0C0" align="center">F</th>
+        <td align="center">ð</td>
+        <td align="center">ñ</td>
+        <td align="center">ò</td>
+        <td align="center">ó</td>
+        <td align="center">ô</td>
+        <td align="center">õ</td>
+        <td align="center">ö</td>
+        <td align="center">÷</td>
+        <td align="center">ø</td>
+        <td align="center">ù</td>
+        <td align="center">ú</td>
+        <td align="center">û</td>
+        <td align="center">ü</td>
+        <td align="center">ý</td>
+        <td align="center">þ</td>
+        <td align="center">ÿ</td>
+      </tr>
+    </tbody>
+  </table>
+    <p>&nbsp;</p>
+    <p><font face="Courier New" size="2">-Le jeu&nbsp; <b>ISO 8859-2</b> est
+    appelé&nbsp; Latin 2&nbsp; et permet de représenter les langues slaves et
+    d'Europe centrale qui utilisent l'alphabet latin. l'allemand, le croate, le
+    hongrois, le polonais, le roumain, le slovaque, le slovène et le tchèque.</font></p>
+  <p><font face="Courier New" size="2">-Le jeu de caractère&nbsp; <b>ISO 8859-3</b>
+  est utilisé pour l'espéranto, le galicien, le maltais et le turc.</font></p>
+  <p><font face="Courier New" size="2">...</font></p>
+  <p><font face="Courier New" size="2">-Le jeu <b>ISO-8859-15</b> ou Latin 9 est
+  une légère modification du Latin 1 qui ajoute le symbole monétaire de l'Euro,
+  ainsi que quelques lettres accentuées qui manquaient pour le français et le
+  finnois. Il est destiné aux mêmes langues que le Latin-1.</font></p>
+  <p><font face="Courier New" size="2">-Le jeu <b>ISO-8859-1</b> (remarquez le
+  tiret supplémentaire) a été validé par l'IANA (<i>Internet Assigned
+  Numbers Authority</i>), pour une utilisation sur <b>Internet</b>, c'est un
+  sur-ensemble de l'ISO/CEI 8859-1.Ce jeu&nbsp; attribue des caractères
+  de contrôle aux valeurs 00 à 1F, 7F, et 80 à 9F. Pour
+  compliquer un peu les choses, le nom du jeu a souvent de nombres synonymes et
+  équivalents (Exemple: <b>ISO-8859-1= ISO_8859-1:1987,</b> <b>ISO_8859-1,</b>
+  <b>ISO-8859-1,&nbsp;</b> <b>iso-ir-100,</b> <b>csISOLatin1,</b> <b>latin1,&nbsp;</b>
+  <b>IBM819,</b> <b>CP819)</b></font></p>
+  <p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" size="2"><b>Windows-1252</b>
+ou <b>CP1252</b> est un jeu de caractères disponible sur&nbsp; <b>Microsoft
+Windows</b> aux États-Unis, et dans certains pays de l'Union européenne.</font></p>
+<blockquote>
+<p><font size="2" face="Courier New">Windows-1252 est une
+extension de l' ISO&nbsp; 8859-1 : il en diffère par l'utilisation de caractères
+imprimables, plutôt que des caractères de contrôle, dans la plage 80-9F.
+Windows appelle ce jeux l' <b>ANSI</b>,&nbsp; mais il peut y avoir un autre
+nom, comme par exemple CP1252. </font><font face="Courier New" size="2">Pour
+mémoire, avant Windows, il existait le jeu <b>OEM </b>ou <b> Ascii étendu </b>utilisé
+par Microsoft pour le DOS.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><b>MacRoman</b>
+ou Mac OS ROMAN est un jeu utilisé sur les ordinateurs Mac qui diffère
+légèrement de jeu Latin. <a href="http://www.alanwood.net/demos/charsetdiffs.html">voir
+différences</a></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">En
+codage 8 bits, pour que les caractères apparaissent correctement, il faut
+utiliser la bonne <b> page de code (CharSet)</b>. Il n'y a qu'une page de code
+par texte.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Codage
+sur 16 bits ou plus: UCS, Unicode:</span></font></b></p>
+<p><font face="Courier New" size="2">On a ensuite crée des codes de <b>16 bits</b>
+ ou plus<b>.</b></font></p>
+<blockquote>
+<p><font face="Courier New" size="2">- <b>L'<span style="background-color: #C0C0C0">UCS</span>
+</b> «&nbsp;<b>jeu de caractères codés universel</b>&nbsp;» (<i>Universal
+Coded Character Set</i>, souvent abrégé en <b>UCS</b>)</font></p>
+<p><font face="Courier New" size="2">Existe depuis l981.Il a été normalisé sous le nom d'<b>ISO/CEI
+10646.</b></font></p>
+  <blockquote>
+    <blockquote>
+      <p><font face="Courier New" size="2">Il y a l'<b>UCS-2</b> qui ne contient
+      que 65535 codes :PMB ou '<b>P</b>lan <b>M</b>ultilingue de <b>B</b>ase' codé
+      sur 2 octets contenant les 'principaux' caractères.</font></p>
+      <p><font face="Courier New" size="2">et l'<b>UCS-4</b> codé sur 4 octets
+      contenant tous les caractères.</font></p>
+    </blockquote>
+  </blockquote>
+<p><font face="Courier New" size="2"><b>- L'<span style="background-color: #C0C0C0">Unicode</span>.
+ou 'Unicode Standard' </b>depuis 1991 crée par le Consortium Unicode qui
+collabore avec l'Iso.</font></p>
+<p><font face="Courier New" size="2">Il a été normalisé sous le nom d'<b>ISO/CEI
+10646-1:1993&nbsp; </b>puis <b>ISO/CEI
+10646-1:2000.</b></font></p>
+<p><font face="Courier New" size="2">Contient les mêmes caractères que l'UCS
+mais avec quelques règles en plus.</font></p>
+</blockquote>
+<p align="center"><font face="Courier New" size="2" color="#FF0000"><b>USC-4 =
+Unicode en simplifiant!!</b></font></p>
+<p><font face="Courier New" size="2">L’Unicode dans sa version la plus récente
+(4.1.0) contient 245 000 codes différents, représentant 245000 caractères,
+symboles, etc.</font></p>
+<p><font face="Courier New" size="2">Il contient tous les caractères d'usage courant dans les langues 
+principales du monde.</font><font face="Courier New" size="2"> Il permet de
+mettre plusieurs langues dans une seule page, ce que ne permet pas le codage 8
+bits.</font></p>
+<p><font face="Courier New" size="2"><b>Les premiers 128 codes </b>(0–127) 
+Unicode correspondent aux lettres et aux symboles du clavier américain standard. 
+Ce sont les mêmes que ceux définis par le jeu de caractères ASCII (ancien codage 
+sur un octet). <b>Les 128 
+codes suivants</b> (128–255) représentent les caractères spéciaux, tels que les 
+lettres de l'alphabet latin, les accents, les symboles monétaires et les 
+fractions. Les codes restants sont utilisés pour des symboles, y compris les 
+caractères textuels mondiaux, les signes diacritiques, ainsi que les symboles 
+mathématiques et techniques.</font></p>
+<p><font face="Courier New" size="2">Voici les 255 premiers</font></p>
+<p align="center"><font face="Courier New" size="2"><img border="0" src="vunicode.GIF" width="601" height="422"></font></p>
+<p><font face="Courier New" size="2">Le petit carré indique un caractère non 
+imprimable (non affichable), certains caractères sont des caractères de contrôle 
+comme le numéro 9 qui correspondant à tabulation, le numéro 13 qui correspond au retour à la 
+ligne..</font></p>
+<p><font face="Courier New" size="2">La valeur d’un caractère Unicode est
+appelée <b>point de code</b>. Ainsi le caractère 'f' a un point de code égal
+à 102.</font></p>
+<p><font face="Courier New" size="2">L'Unicode regroupe ainsi la quasi-totalité des
+alphabets existants (arabe, arménien, cyrillique, grec, hébreu, latin, ...) et
+est compatible avec le code ASCII.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="3">Encoding:</font></b></p>
+<p><font face="Courier New" size="2">Pour écrire de l'Unicode dans un fichier (web,
+html, xml..), cela serait trop simple de mettre 2 ou 4 octets pour chaque caractère.
+Aussi pour des problèmes de compatibilité entre plate formes les codes Unicode
+sont transformées en <b>UTF</b>.</font></p>
+<p><font face="Courier New" size="2"><b>UTF</b> = <b>U</b>CS <b>T</b>ransformation
+<b>F</b>ormat.Format de transformation de l'UCS (Unicode)&nbsp;&nbsp;</font></p>
+<p><font face="Courier New" size="2">Il existe plusieurs méthodes de
+transformation l'UTF-8, l' UTF-16, l' UTF-32&nbsp;qui sont des
+manières d'écrire de l'Unicode dans un fichier.</font></p>
+<p>&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p><b><font face="Courier New" size="2">UTF-8</font></b></p>
+<p><font face="Courier New" size="2">Taille variable: 1 à 4 octets, plus le nombre est grand, plus il y a
+d'octets.</font></p>
+<p><font face="Courier New" size="2">Le premier octet indique le nombre d'octet
+utilisé.</font></p>
+<p><font face="Courier New" size="2">Les caractères de numéro 0 à 127 sont codés sur un octet dont le bit de
+poids fort est toujours nul.</font></p>
+<table>
+  <tr>
+    <td><tt><font face="Courier New" size="2"><b>0</b>xxxxxxx</font></tt></td>
+    <td><font face="Courier New" size="2">1 octet codant 7 bits maximum</font></td>
+  </table>
+  <p><font face="Courier New" size="2">'A'= 65 en Unicode&nbsp;&nbsp;&nbsp; = 01000001 en UTF-8&nbsp; soit 1
+  octet.</font></p>
+  <p><font face="Courier New" size="2">On remarque que dans ce cas Ascii= UTF-8</font></p>
+  <p><font face="Courier New" size="2">Les caractères de numéro supérieur à 127 sont codés sur plusieurs
+  octets. Dans ce cas, les bits de poids fort du premier octet forment une suite
+  de 1 de longueur égale au nombre d'octets utilisés pour coder le caractère,
+  les octets suivants ayant <tt>10</tt> comme bits de poids fort.</font></p>
+  <table>
+    <tr align="left" bgColor="#f5f5f5">
+      <td><tt><font face="Courier New" size="2"><b>110</b>xxxxx <b>10</b>xxxxxx</font></tt></td>
+      <td><font face="Courier New" size="2">2 octets codant 8 à 11 bits</font></td>
+    </tr>
+    <tr align="left">
+      <td><tt><font face="Courier New" size="2"><b>1110</b>xxxx <b>10</b>xxxxxx <b>10</b>xxxxxx</font></tt></td>
+      <td><font face="Courier New" size="2">3 octets codant 12 à 16 bits</font></td>
+    </tr>
+    <tr align="left" bgColor="#f5f5f5">
+      <td><tt><font face="Courier New" size="2"><b>11110</b>xxx <b>10</b>xxxxxx <b>10</b>xxxxxx <b>10</b>xxxxxx</font></tt></td>
+      <td><font face="Courier New" size="2">4 octets codant 17 à 21 bits</font></td>
+    </tr>
+  </table>
+  <p><font face="Courier New" size="2">Les autres bits (notés 'x' ) codent le nombre.</font></p>
+  <p><font face="Courier New" size="2">Exemple</font></p>
+  <table>
+    <tr>
+      <td><font face="Courier New" size="2">€=</font></td>
+      <td><font face="Courier New" size="2">8364=</font></td>
+      <td><tt><font face="Courier New" size="2"><b>1110</b>0010 <b>10</b>000010 <b>10</b>101100</font></tt></td>
+    </table>
+    <p><font face="Courier New" size="2">Il est utilisé sur Unix et le WEB.</font></p>
+    <p><font face="Courier New" size="2">il est économique en terme&nbsp;
+    d'octet car il permet de stocker la majorité des caractères sur un seul
+    octet ( chez nous!!). Pour les caractères dont le <b>point de code</b> a une forte valeur
+    valeurs, l’<b>UTF-8</b> se chargera de déterminer s’il est nécessaire
+    d’utiliser 1, 2, 3 ou 4 octets pour représenter sa valeur.<br>
+    </font></p>
+    <p>&nbsp;</p>
+    <p><b><font face="Courier New" size="2">UTF-16</font></b></p>
+    <p><font face="Courier New" size="2">Taille fixe: 2 ou 4 octets</font></p>
+    <p><font face="Courier New" size="2">Il existe l'UTF-16LE et l'UTF-16BE</font></p>
+    <p><font face="Courier New" size="2">ils ont la même taille.(Accès rapide au caractère de position x)</font></p>
+    <p><font face="Courier New" size="2">L’<b>UTF-16</b> est utile lorsque la
+    place en mémoire n’est pas un facteur très important. Il facilite la
+    manipulation de textes car le processeur sait qu’il doit analyser les deux
+    premiers octets dans la plupart des cas (parfois 4).</font>
+</p>
+    <p><font face="Courier New" size="2">Il est utilisé en Java et dans les API Windows
+    pour la manipulation des chaînes.</font> </p>
+    <p>&nbsp;</p>
+    <p><b><font face="Courier New" size="2">UTF-32</font></b></p>
+    <p><font face="Courier New" size="2">Taille fixe: 4 octets?</font></p>
+    <p><font face="Courier New" size="2">Mais peu économique en mémoire, il gaspille des octets.</font></p>
+    <p><font face="Courier New" size="2">Tous les caractères de la terre y sont, ils ont la même taille.(Accès
+    rapide au caractère de position x)</font></p>
+    <p><font face="Courier New" size="2">Gourmant en mémoire, peu utilisé.</font></p>
+  </blockquote>
+</blockquote>
+    <p>&nbsp;</p>
+<p><b><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5">B-
+Représentation
+graphique des caractères: Glyphe, Font, Police:</font></span></b></p>
+<p><font face="Courier New" size="2">Un <b>glyphe</b> est une représentation
+graphique&nbsp;(un dessin) d'un signe typographique, autrement dit d'un caractère (glyphe
+de caractère) ou d'un accent (glyphe d'accent).</font></p>
+<p align="center"><img border="0" src="vglyphe.jpg" width="98" height="102"></p>
+<p><font face="Courier New" size="2">Une <b>fonte de caractères</b>, est un
+ensemble de glyphes, c'est-à-dire de représentations visuelles de caractères
+d'une même famille, de même style, corps et graisse.</font></p>
+<p><font face="Courier New" size="2">La place d'un glyphe dans une fonte est
+déterminée par le codage des caractères dans la fonte. Ainsi, dans une fonte
+encodée en ASCII&nbsp; le glyphe du caractère «&nbsp;<b>a</b>&nbsp;» se
+trouvera en 97<sup class="exposant">e</sup> position.</font></p>
+<p><font face="Courier New" size="2">&nbsp;Une <b>police</b>&nbsp; regroupe tous
+les corps et graisses d'une même famille.</font></p>
+<p><font face="Courier New" size="2">Le glyphe présente le dessin, alors que le
+caractère( son code en informatique) représente le sens.</font></p>
+<p><font face="Courier New" size="2">'A, </font><font face="Arial" size="2">A, </font><font face="Comic Sans MS" size="2">A'
+sont 3 glyphes&nbsp; </font><font face="Courier New" size="2">en fonte Courier
+New, Arial et Comic sans MS du même caractère A majuscule (le caractère) de
+code 97.</font></p>
+<p><font face="Courier New" size="2">En informatique on utilise les caractères
+(leur code) pour stocker du texte en mémoire, les glyphes contenus dans les
+polices pour imprimer ou
+afficher ces caractères.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font color="#0000FF" face="Courier New" size="4">Police
+BitMap, 'True Type', 'Open Type'.</font></b></p>
+<p><font face="Courier New" size="2">Avant les années 1990 il y avait des
+polices au <b>format BitMap</b> (image matricielle). Elle ne sont plus
+utilisées par VB.Net.</font></p>
+<p><font size="2" face="Courier New">Depuis 1980</font><font size="2" face="Courier New">
+existe <b>True Type</b><sup><b>®</b></sup>, un format de police multiplateforme
+vectorielle, développé&nbsp; par Apple et vendu ensuite à Microsoft.</font></p>
+<p><font face="Courier New" size="2">(concurrent du format Type1 de PostScript
+d'Adobe)</font></p>
+<p><font size="2" face="Courier New">On utilise depuis 2001 <b>OpenType<sup>®</sup></b>
+qui est un nouveau format de police multiplateforme vectorielle, développé
+conjointement par Adobe et Microsoft. Adobe propose plusieurs milliers de
+polices OpenType.</font></p>
+<p><font size="2" face="Courier New">Les deux principaux atouts du format
+OpenType résident dans sa compatibilité multiplateforme (un seul et même
+fichier de polices exploitable sur les postes de travail Macintosh et Windows)
+et sa prise en charge de jeux de caractères et de fonctions de présentation très
+étendus, qui offrent de meilleures capacités linguistiques et un contrôle
+typographique évolué.</font></p>
+<p><font size="2" face="Courier New">Une police Open&nbsp; Type est basée sur
+le numéro de caractères <b>Unicode</b> et peut contenir jusqu'à 65000
+glyphes.</font></p>
+<p><font size="2" face="Courier New">Le format OpenType est une extension du
+format TrueType SFNT qui gère également les données des polices Adobe<sup>®</sup>
+PostScript<sup>®</sup> et des fonctions typographiques inédites.&nbsp;</font></p>
+<p><font size="2" face="Courier New">Les noms de fichier des polices OpenType
+contenant des données PostScript possèdent l'extension .otf, tandis que les
+polices OpenType de type TrueType portent l'extension .ttf.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><b><font color="#0000FF" face="Courier New" size="4">Notion
+de police proportionnelle.</font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+existe des fonts proportionnelles, comme l'Arial, où les différents
+caractères n'ont pas la même largeur (le i est plus étroit que le P)c'est
+plus joli.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2"><img border="0" src="vfontprop.JPG" width="315" height="109"></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">&nbsp;Par
+contre dans les fonts non proportionnelles, comme le 'Courier New', tous les
+caractères ont même largeur. C'est parfois plus pratique quand on veut
+afficher des lignes qui concorder sur le plan alignement vertical (et qu'on ne
+veut pas utiliser les tabulations).</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">En
+Arial</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Arial">Philippe
+Pier:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Arial">Philippe
+Wolf:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">&nbsp;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">En
+Courier new</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Philippe
+Pier:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Philippe
+Wolf:</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" color="#0000FF" size="5"><span style="background-color: #C0C0C0">C</span></font><span style="background-color: #C0C0C0"><font face="Courier New" color="#0000FF" size="5">-
+Et sur le Web et dans VB?</font></span></b></p>
+<p><b><font color="#FF0000" face="Courier New" size="4"><span style="background-color: #C0C0C0">Sur
+le Web</span></font><span style="background-color: #C0C0C0"><font color="#FF0000" face="Courier New" size="4">:</font></span></b></p>
+<p><font face="Courier New" size="2">Un document contient le nom du type de
+caractères utilisés dans le document: le type d'UTF (codage en 16 bits) ou le
+nom de la table de caractère (une seule) associée à ce document (codage 8
+bits).&nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b> Pour un document HTML</b> une
+balise indique que le document utilise une table
+des caractères .(Caractères codé sur 1 octet, c'est de l'ascii étendu dans
+cet exemple)</font></p>
+<p> <code><font face="Courier New" size="2" color="#0000FF">&lt;meta http-equiv=&quot;content-Type&quot; content=&quot;text/html;
+<b>charset=iso-8859-1</b>&quot; /&gt;</font></code> <font face="Courier New" size="2">&nbsp;</font></p>
+<p><font face="Courier New" size="2">ou</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&lt;meta http-equiv=&quot;Content-Type&quot;
+content=&quot;text/html; <b>charset=windows-1252</b>&quot;&gt;</font></p>
+<p><font face="Courier New" size="2">S'il n'y a pas de charset spécifié, c'est la table
+de caractère du système d'exploitation qui est utilisée. Si elle ne
+correspond pas à celle du document l'affichage est incohérent.&nbsp;</font></p>
+<p><font face="Courier New" size="2"> Le problème
+est aussi (si on utilise un codage 8 bits) l'impossibilité de mélanger dans un même document des alphabets qui
+ne sont pas définis par la même table. Par exemple le français et l'hébreu.</font></p>
+<p><font face="Courier New" size="2">La solution est de passer à Unicode.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"> Pour un </font></b><b><font face="Courier New" size="2">mail:</font></b></p>
+<p><font face="Courier New" color="#0000c0" size="2">Content-Type: text/plain;
+charset=ISO-8859-1</font></p>
+    <p>ou</p>
+    <p><font color="#0000FF" face="Courier New" size="2">Content-Type: text/plain;
+    charset=&quot;UTF-8&quot;<br>
+    </font></p>
+<p><b><font face="Courier New" size="2"> Pour un fichier XML: </font></b></p>
+<p><tt><font color="#0000FF">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+</font>
+</tt></p>
+<p><tt><font color="#0000FF"><br>
+</font>
+</tt></p>
+<p><b><span style="background-color: #C0C0C0"><font color="#FF0000" face="Courier New" size="4">En VB:</font></span></b></p>
+<p><font face="Courier New" size="2">Les variables <b>string</b> sont stockées 
+sous la forme de séquences de&nbsp; 16&nbsp;bits (2&nbsp;octets) non signés dont les 
+valeurs sont comprises entre 0&nbsp;et&nbsp;65&nbsp;535. Chaque nombre de 16
+bis&nbsp; représente <b>le point de code</b> (son numéro et non l'UTF) du caractère
+<b>Unicode</b>.</font></p>
+<p><font face="Courier New" size="2">Les variables <b>Char</b> sont stockées 
+sous la forme d'un mot de&nbsp; 16&nbsp;bits (2&nbsp;octets).</font></p>
+<pre class="code"><font color="#0000ff">Dim monUnicode As Short = Convert.ToInt16 (&quot;B&quot;c)</font> ' le code Unicode de B est 66.</pre>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">En Net, il existe des fonctions
+d’encodage et de décodage à bas niveau sur les points de code (<b>byte</b>)
+et les caractères (<b>char</b>), on peut ainsi transformer une chaîne de <b>Latin-1</b>
+en <b>UTF-8</b>, par exemple.</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2">Fonctions d’encodage :</font></p>
+  <table>
+    <tbody>
+      <tr>
+        <td><b><font face="Courier New" size="2">GetBytes()</font></b></td>
+        <td><font face="Courier New" size="2">Convertit une chaîne ou un caractère
+          en un tableau de <b>byte</b> dans le <b>charset</b> choisi</font></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none">&nbsp;</p>
+  <p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Courier New" size="2">Comment
+  obtenir un tableau de Bytes contenant le code ascii d'un texte?</font></p>
+  <p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Courier New" size="2" color="#0000FF"><span style="mso-no-proof: yes">Dim&nbsp;
+  ascii As System.Text.Encoding = System.Text.Encoding.ASCII</span></font></p>
+  <p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Courier New" size="2" color="#0000FF"><span style="mso-no-proof: yes"><span style="mso-spacerun: yes">Dim
+  MyString As String= &quot;mon texte&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p>
+  </o:p>
+  </span></font></p>
+  <p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Courier New" size="2"><span style="mso-spacerun: yes; mso-no-proof: yes">Dim&nbsp;</span><span style="mso-no-proof: yes">
+  MesByte() As Byte = ascii.GetBytes( MyString )</span></font><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-no-proof: yes"><font color="#0000FF"><o:p>
+  </font>
+  </o:p>
+  </span></p>
+  <p><font face="Courier New" size="2">(les caractères non gérés en ascii
+  sont transformés en &quot; ? &quot;, portant la valeur numérique 63.)</font></p>
+  <p><font face="Courier New" size="2">Fonctions de décodage :</font></p>
+  <table>
+    <tbody>
+      <tr>
+        <td><b><font face="Courier New" size="2">GetChars()</font></b></td>
+        <td><font face="Courier New" size="2">Convertit un tableau de <b>byte</b>
+          en un tableau de <b>char</b></font></td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; mso-no-proof: yes"></o:p>
+</span></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><font face="Courier New" size="2">Pour afficher ces caractères, on utilise
+des fontes.</font></p>
+<p class="MsoNormal" style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none">&nbsp;</p>
+<p><font face="Courier New" size="2">L'Unicode est donc un codage de caractères 
+sur 16 bits qui contient tous les caractères d'usage courant dans les langues 
+principales du monde.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v2-20.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v2-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:10 GMT -->
+</html>

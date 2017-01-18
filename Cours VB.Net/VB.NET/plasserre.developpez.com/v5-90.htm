@@ -1,0 +1,645 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-90.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:36 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net programmation impérative structurée procédurale fonctionnelle évènementielle  objet défensive</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="62%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="4%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">&nbsp;5.90</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font color="#800080" size="6" face="Courier New">Diverses sortes de 
+    programmation.</font></b></td>
+    <td width="14%" height="76"><a href="v5-100.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation 
+impérative.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation 
+structurée.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation 
+fonctionnelle.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#800080">Programmation procédurale.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation 
+évènementielle.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation 
+défensive.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b><font color="#800080">Programmation Objet.</font></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4">Programmation impérative</font></span><font color="#0000FF" size="4"><span style="font-family: Courier New">&nbsp;</span></font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">On en fait sans le 
+savoir:</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Le programmeur spécifie 
+explicitement l'enchaînement des instructions devant être exécutées :</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Fais ceci, puis cela.</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Fais ceci, si cela est 
+vrai.</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">Fais ceci, tant de fois 
+.</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2"><font face="Courier New">Un programme <b>impératif</b> est composé de différentes 
+instructions indiquant de manière explicite comment résoudre un problème.</font><br>
+&nbsp;</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">On l'a déjà vu, les 
+instructions sont effectuées de manière séquentielle:</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">
+Instruction1</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">
+Instruction2</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">
+Instruction3</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">...</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vorganig1.GIF" width="87" height="140"></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il y a des choix:</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+If.. Then</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vorganig2.GIF" width="138" height="129"></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il y a des boucles:</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+For .. next</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vorganig3.GIF" width="67" height="101"></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">L'action de base dans la 
+programmation impérative est l'affectation, c'est-à-dire la modification de la 
+valeur associée à une variable du programme. </font> </p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" size="2" face="Courier New">
+A=3</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New">L'affectation va être 
+soit effectuée en séquences successives, soit avec des choix, soit itérée selon les compositions définies par 
+les algorithmes.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p><font size="2" face="Courier New">En
+programmation impérative, on travaille sur le modèle de la <b>machine de Turing</b>, 
+avec une mémoire centrale et des instructions qui modifient son état grâce à des 
+assignations successives.</font></p>
+<p><font size="2" face="Courier New">Le langage machine et l'assembleur sont des langages 
+impératifs. Le code en Visual Basic l'est aussi. </font>  </p>
+<p><font size="2" face="Courier New"><b>Exemple:</b> réinitialiser un tableau en donnant la valeur 0 à 
+tous ses éléments.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">10 Dim tableau (10) as 
+Integer</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">20 Dim compteur As Integer</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">30 compteur= 0</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">40 boucle:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">50 tableau(compteur)=0</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">60 compteur= compteur + 1</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">70 If Compteur &lt;11 Then 
+Goto boucle</font></p>
+<p><font face="Courier New" size="2">Ici on utilise un Basic très ancien avec un goto pour faire une 
+boucle et des numéros de ligne; c'est pas très 'lisible'.</font></p>
+<blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">Et c'est quoi la programmation non 
+impérative?</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">C'est par exemple la <b>programmation 
+déclarative</b>, elle consiste à énoncer les propriétés d'un système de résolution 
+(à les déclarer) plutôt qu'à décrire les opérations à effectuer comme dans le cas 
+de la programmation impérative. VB ne permet pas la programmation déclarative.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New">Un programme <b>
+déclaratif</b> définit (ou &quot;déclare&quot;) différentes entités et leurs relations, à 
+charge ensuite pour le programme d'utiliser ces relations pour résoudre le 
+problème.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4">Programmation structurée:</font></span></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour éviter les programmes 'spaghetti', on a structuré et utilisé les procédés 
+suivant:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2"><b>Découpage en fonction:</b></font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+L'approche structurée découpe le problème en fonctions:</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+L'analyse se fait de manière <b><font color="#111111">descendante</font></b>: on 
+découpe un problème complexe en problèmes plus simples qui sont eux mêmes 
+découpés en problèmes plus simples. On découpe jusqu'à ne plus avoir que des 
+problèmes simples.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Il existe aussi l'analyse <b>ascendante</b>: ayant à sa disposition des 
+procédures simples, on les assemble en les faisant appeler par des procédures 
+plus complexes pour atteindre la solution.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Si le projet est entièrement nouveau, on fait plutôt une analyse descendante; si 
+on travaille sur un projet possédant déjà toutes les procédures simples, on 
+raisonnera en analyse ascendante.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Rien d'empêche d'avoir une analyse mixte.</font></p>
+<p><font face="Courier New" size="2">Les programmeurs doivent donc décomposer leur code en petites fonctions, 
+assez petites pour être facilement comprises et claires. </font> </p>
+<p><font face="Courier New" size="2"><b>Utilisation de variables locales:</b></font></p>
+<p><font face="Courier New" size="2">En général les programmes doivent éviter d'utiliser des variables globales.</font></p>
+<p><font face="Courier New" size="2">Au lieu de cela, les sous-programmes 
+doivent utiliser des variables locales et agir sur des arguments ou paramètres 
+qui leurs sont envoyés.</font></p>
+<p><font face="Courier New" size="2"><b>Organisation hiérarchique simple du code:</b></font></p>
+<p><font face="Courier New" size="2">La programmation structurée 
+recommande une organisation hiérarchique simple du code. Pour cela on utilise des 
+structures de contrôles <i>while</i>, <i>Do Loop</i>, <i>for</i>, <i>if .. then 
+.. else</i>.</font></p>
+<p><font face="Courier New" size="2">Il est également recommandé de n'avoir qu'un point d'entrée pour chaque 
+boucle (et un point de sortie unique dans la programmation structurée 
+originelle).</font></p>
+<p><font face="Courier New" size="2"><b>Eviter les 'Goto'</b></font></p>
+<p><font size="2" face="Courier New">L'instruction </font>
+<font size="2" color="#0000FF"><code>
+<font face="Courier New">Goto</font></code></font><font size="2" face="Courier New"><font color="#0000FF">,</font> directement héritée des instructions de saut 
+des langages machines (Jmp), était nécessaire dans les langages primitifs (Fortran, 
+Assembleur) comme instruction de base permettant de réaliser des boucles et autres 
+structures de contrôles (voir exemple sur la programmation impérative).</font></p>
+<p><font face="Courier New" size="2">En programmation structurée (depuis les années 
+1970), l'instruction </font><font color="#0000FF"><code>
+<font face="Courier New" size="2">G</font></code><font size="2"><code><font face="Courier New">oto</font></code></font></font><font size="2" face="Courier New"> n'est guère appréciée des programmeurs, car elle 
+casse la structure séquentielle du programme et rend souvent les programmes plus difficiles à comprendre et à 
+maintenir (on parle dans ce cas de <i>
+programmation spaghetti</i>). On utilise plus généralement des structures 
+comme les sauts conditionnels (<b>si .. alors .. sinon ..</b>) ou les boucles (<b>pour</b>,
+<b>tant que</b>, etc.)</font></p>
+<p><font face="Courier New" size="2">En VB, des instructions effectuent des sauts 
+conditionnels ou inconditionnels (If.. Then) et remplacent  usage de l'instruction
+Goto, 
+d'autres ( For..Next, Do.. Loop) permettent d'élégantes boucles.</font></p>
+<p><b><font face="Courier New" size="2">Rupture de séquence:</font></b></p>
+<p><font size="2"><font face="Courier New">Il y a même des instructions qui 'cassent' élégamment les sorties de boucles; c 'est le cas des instructions comme </font> 
+<code><font face="Courier New">Continue</font></code><font face="Courier New"> ou
+<code><font face="Courier New">Exit For</font></code></font></font><font size="2" face="Courier New">. 
+L'erreur majeure de <span class="CodeScript">Goto</span>, se situe dans le fait 
+que cette instruction renvoie vers une position précédente du code (aboutissant 
+à ce que l'on appelle le &quot;code spaghetti&quot;), tandis que les deux autres renvoient 
+(le plus souvent) vers un point du code situé logiquement après la boucle 
+qu'elles interrompent.</font></p>
+<blockquote>
+  <p><font face="Courier New" size="2"><span style="BACKGROUND-COLOR: #ffffff">
+  <font color="#0000ff">While </font>condition</span></font></p>
+  <p>&nbsp;&nbsp; <font face="Courier New" color="#0000ff" size="2">&nbsp;..Continue While</font></p>
+  <p><font face="Courier New" color="#0000ff" size="2">
+  <span style="BACKGROUND-COLOR: #ffffff">End While</span></font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Exemple: réinitialiser un tableau en 
+donnant la valeur 0 à tous ses éléments.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">initialisetableau:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim tableau (10) as Integer</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">Dim compteur As Integer</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">For compteur= 0 To 10</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp; tableau(compteur)=0</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">Next compteur</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Return</font></p>
+<p><font face="Courier New" size="2">On crée un sous-programme nommé
+<font color="#0000FF">initialisetableau</font> qui a la fonction d'initialiser 
+le tableau. Il n'utilise plus de GoTo mais une boucle For Next.</font></p>
+<p><font face="Courier New" size="2">Ce <b>sous-programme</b> était appelé par un
+<font color="#0000FF">Gosub</font> (Gosub n'existe plus en VB.Net)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4">Programmation fonctionnelle</font></span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></font></p>
+<p><font face="Courier New" size="2">C'est une programmation généralisant 
+l'usage des fonctions. </font><font size="2">En &quot;programmation fonctionnelle&quot;, 
+les entités sont des fonctions au sens mathématique du terme. </font></p>
+<p><font face="Courier New" size="2">Une fonction est un sous programme 
+comportant une suite d'instruction Cette fonction peut ensuite être appelée par 
+le programme principal ou par une autre fonction. La longueur du code du 
+programme principal est, du coup, fortement diminuée.<br>
+Une fonction se rappelant elle-même est une récursive. (source dictionnaire 
+devellopez.com)<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Comme on l'a vu, la programmation structurée découpe les problèmes en 
+<b>fonctions</b>, ce découpage s'il est systématiquement employé aboutit à la programmation 
+fonctionnelle qui consiste en un 
+emboîtement de fonctions que l'on peut voir comme des «&nbsp;boîtes noires&nbsp;» que l'on 
+peut imbriquer les unes dans les autres. Chaque boîte possédant plusieurs 
+paramètres en entrée mais une seule sortie.</font></p>
+<p><font size="2" face="Courier New">Le programme principal est lui-même considéré comme une 
+fonction qui fait appel à d'autres fonctions qui elles-mêmes...</font></p>
+<blockquote>
+<p><font size="2" face="Courier New"><br>
+<b>Les langages de programmation fonctionnelle dits &quot;purs&quot; </b>(Vb n'en fait pas 
+partie)<b> </b>ne proposent ni affectation de variable, ni allocation de 
+mémoire, ni boucles. Ces deux derniers procédés sont respectivement remplacés 
+par les allocations automatiques et l'usage intensif de la récursivité.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4">Programmation procédurale</font></span></p>
+<p><font face="Courier New" size="2">La programmation procédurale utilise des fonctions nommées 
+<b><font color="#111111">'procédure'</font></b>. Une procédure, aussi appelée <i>routine</i>, <i>
+sous-routine</i>, <b> <i>méthode</i></b> ou <b> <i>fonction</i></b> (<font color="#0000FF">Sub</font> et 
+<font color="#0000FF">Function</font> en VB) contient simplement une portion de 
+code qui effectue une fonction précise. N'importe quelle procédure peut être appelée à n'importe quelle étape de 
+l'exécution du programme, incluant d'autres procédures ou même la procédure 
+elle-même (récursivité).</font></p>
+<p><font face="Courier New" size="2">On peut , en appelant la procédure , 
+envoyer des <b>paramètres</b>.</font></p>
+<p><font face="Courier New" size="2">Avantages:</font></p>
+<ul lastCheckbox="null">
+  <li><font face="Courier New" size="2">La possibilité de réutiliser le même code à différent emplacement dans le 
+  programme sans avoir à le retaper.</font></li>
+  <li><font face="Courier New" size="2">Une façon plus simple de suivre 
+  l'évolution du programme. </font> </li>
+  <li><font face="Courier New" size="2">La création d'un code plus modulaire et structuré.
+  </font> </li>
+</ul>
+<p><font size="2" face="Courier New">Exemple: réinitialiser un tableau en 
+donnant la valeur 0 à tous ses éléments.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Sub InitialiseTableau ( 
+tableau() As Integer)</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">Dim compteur As Integer</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">For compteur= 0 To Ubount 
+(tableau,1)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp; tableau(compteur)=0</font></p>
+<p><font size="2" color="#0000FF" face="Courier New">Next compteur</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p><font face="Courier New" size="2">Ici on utilise une procédure, une Sub qui a 
+pour seule fonction la réinitialisation du tableau.</font></p>
+<p>&nbsp;</p>
+<p>
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Programmation défensive</font></b></span></p>
+<p><font face="Courier New" size="2">Se dit d'une programmation où l'on considère que 
+<b>le programme peut&nbsp; contenir des erreurs&nbsp; et que l'utilisateur 
+est parfaitement malveillant</b> et fera tout pour faire planter le programme. 
+Ainsi donc, il faut s'en défendre.</font></p>
+<p><font face="Courier New" size="2">Elle consiste à ajouter du code vérifiant 
+systématiquement l'état du système ainsi que la valeur des paramètres des 
+fonctions et s'assurant que le changement d'état est consistant. Si une erreur 
+est détectée, elle sera traitée.</font></p>
+<p><font face="Courier New" size="2">En premier lieu donc on vérifiera que <b>toutes les 
+entrées ( saisie au clavier, lecture de fichier..) sont valides</b> pour le programme et ne contiennent pas, par exemple, une valeur 
+pouvant provoquer une exception non gérée ultérieurement.</font></p>
+<p><font face="Courier New" size="2">Pour se défendre des entrées invalides, on 
+utilise la 'tolérance de faute':</font></p>
+<p><font face="Courier New" size="2">Pour toutes entrées:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">On teste les valeurs, on accepte uniquement 
+les valeurs permises.</font></p>
+<p><font face="Courier New" size="2">On gère les exceptions avec Try.. Catch.</font></p>
+<p><font face="Courier New" size="2">On utilise les assertions.</font></p>
+<p>&nbsp;</p>
+</blockquote>
+<p><font face="Courier New" size="2">Une entrée invalide entraîne grâce à la 
+programmation défensive:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">soit l'arrêt du programme (programmation 
+défensive forte).</font></p>
+<p><font face="Courier New" size="2">soit l'utilisation de valeur par défaut ou 
+d'une ancienne valeur.</font></p>
+<p><font face="Courier New" size="2">soit l'envoie à l'appelant  l'indication 
+qu'il y a une mauvaise entrée: </font></p>
+<blockquote>
+<p><font face="Courier New" size="2">retour d'une valeur de diagnostic</font></p>
+<p><font face="Courier New" size="2">déclenchement d'une exception chez 
+l'appelant ( utilisation de <font color="#0000FF">Throw</font> en VB dans une 
+classe).</font></p>
+</blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">L'appelant, le client doit donc tester si 
+la valeur de retour est valide ou bien gérer les exceptions qui sont retournées 
+(solution qui semble préférable). Il devra donc traiter l'erreur.</font></p>
+<p><font face="Courier New" size="2">Exemple</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Try </font></p>
+<p><font face="Courier New" size="2" color="#0000FF">SaveFile (maFile)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Catch E As Exception</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; MsgBox (Exception.Message)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">End Try</font></p>
+<p>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Programmation sécurisée</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La <b>programmation sécurisée </b>va au delà 
+de la programmation défensive; Elle 
+consiste à prendre en compte la sécurité informatique à tous les moments de la conception, de la réalisation 
+et de l'utilisation d'un programme. Cela permet d'éviter au maximum les trous de 
+sécurité et autres bugs.</font></p>
+<h2><font face="Courier New" size="2">A- Conception</font></h2>
+<p><font face="Courier New" size="2">Lors de la conception, il s'agit de concevoir le programme de 
+façon modulaire et nécessitant <b>le moins de droits utilisateurs possible.</b> 
+Il est préférable d'avoir plusieurs programmes de taille réduite&nbsp; qui 
+collaborent entre eux, qu'un gros programme.</font></p>
+<h2><font face="Courier New" size="2">B- Réalisation</font></h2>
+<p><font face="Courier New" size="2">Ensuite, lors de la réalisation, il faut penser à bien valider les données 
+entrées par l'utilisateur. L'idée générale et la plus importante est de ne jamais faire 
+confiance à l'utilisateur. Ne jamais faire des hypothèses sur les entrées sans 
+les vérifier soi-même (par exemple taille de l'entrée, signe du nombre,...)C'est
+<b>la programmation défensive</b>.</font></p>
+<p><font face="Courier New" size="2">Mais on peut <b>généraliser</b> ce 
+processus:</font></p>
+<blockquote>
+<p><font face="Courier New" size="2">En testant les entrées de toutes les 
+procédures (<b>Préconditions</b>)</font></p>
+<p><font face="Courier New" size="2">En testant les sorties de toutes les 
+procédures afin qu'elles soient conformes à ce qu'attend l'appelant (<b>Postconditions</b>)</font></p>
+</blockquote>
+<p><font face="Courier New" size="2">On peut aussi faire de la <b>programmation 
+par contrat:</b> l'appelant vérifie&nbsp; que les préconditions sont remplis et 
+envoie à la procédure des 'paramètres valides'. La procédure effectue sont code 
+et vérifie que ce qu'elle retourne est valide. Il y a contrat entre l'appelant 
+et la procédure appelée: l'appelant vérifie les pré conditions seulement et sait 
+qu'on lui retournera des informations valides. La procédure sait que les 
+paramètres qu'elle recevra sont valides ; elle vérifiera la validité de ses 
+résultats avant de les retourner.</font></p>
+<p><font face="Courier New"><b><font size="2">Invariants :</font></b><font size="2"> 
+en plus des pré et post conditions, tous les objets inclus dans l'échange 
+doivent être laissés dans le même état entre le début et la fin de celui-ci. Il 
+faut&nbsp; s'assurer que le système entier conserve une certaine uniformité (et 
+que l'on évite donc les <b>effets de bords</b> disgracieux).</font></font></p>
+<h2><font face="Courier New" size="2">C- Exécution</font></h2>
+<p><font face="Courier New" size="2">Enfin lors de l'exécution, il faut penser par exemple à appliquer les 
+différentes mise à jour de sécurité lorsqu'elles sortent. Pour ce faire, il peut 
+être pratique de la part du concepteur de l'application de proposer un système 
+de mise à jour simplifié de l'application.</font></p>
+<p>&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Effet de bord:</font></b></p>
+<p><font size="2" face="Courier New">Il peut arriver qu'une variable&nbsp; 
+dispose d'une portée qui dépasse la procédure qui la contient, ceci afin d'être 
+accessible à partir d'autres procédures. Certaines procédures peuvent ainsi 
+modifier une variable dans le seul but de les maintenir dans 
+un état donné, fixé par le développeur.<br>
+Cette capacité d'une fonction de modifier l'état d'une valeur (variable globale 
+ou statique, argument d'une autre fonction, affichage ou écriture des données) 
+autre que celle qu'elle renvoie définit l'effet de bord.<br>
+<br>
+Ce mécanisme crée une sorte d'interdépendance entre les fonctions, rendant 
+souvent plus complexe la compréhension d'un programme... D'autant que la 
+modification d'une fonction peut dès lors avoir des conséquences inattendues sur 
+le résultat d'autres fonctions &quot;liées&quot;.<br>
+&nbsp;</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Programmation évènementielle
+</font></b></span></p>
+<font class="texteart">
+<p class="spip" align="justify"><font face="Courier New" size="2" class="texteart"><b>Avant VisualBasic 1</b> 
+:</font></p>
+<p class="spip" align="justify"><font size="2" face="Courier New" class="texteart">Programme Basic <b>SANS programmation évènementielle</b>&nbsp;: </font></p>
+<p class="spip" align="justify">&nbsp;</p>
+<blockquote>
+  <pre align="justify"><font color="#0000FF">10 PRINT &quot;Donne ton nom&quot;;
+20 INPUT N$
+30 PRINT &quot;Donne ton prénom&quot;;
+40 INPUT P$
+50 PRINT &quot;Bonjour &quot;; P$; &quot; &quot;; N$
+60 END</font></pre>
+</blockquote>
+<p>&nbsp;</p>
+<p class="spip" align="justify"><font face="Courier New" size="2">L’exécution de 
+ce programme conduit au résultat suivant&nbsp;:</font></p>
+<p class="spip" align="justify">&nbsp;</p>
+<blockquote>
+  <pre align="justify"><font color="#993366"><b>C:</b></font><b><font color="#993366"> &gt;</font><font color="#009933"> RUN</font>
+<font color="#993366">Donne ton nom ? </font><font color="#009933">LASSERRE</font>
+<font color="#993366">Donne ton prénom ? </font><font color="#009933">PHILIPPE</font>
+<font color="#993366">Bonjour PHILIPPE LASSERRE
+C: &gt;</font></b></pre>
+</blockquote>
+<p>&nbsp;</p>
+<p class="spip" align="justify"><font face="Courier New" size="2">Le programme 
+affiche des informations à l’écran avec PRINT et utilise la commande INPUT 
+lorsqu’il a besoin que l’utilisateur lui communique une information, au moyen du 
+clavier.</font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">Le programmeur 
+indique la succession des lignes , <b>leur ordre est imposé.</b> Le programme s'arrête 
+quand il attend une frappe au clavier puis redémarre quand l'utilisateur a 
+validé sa réponse (en appuyant sur la touche 'Return'). On constate que l’ordre 
+de saisie des informations est totalement déterminé par le programme. Il n’est 
+pas question ici que l’utilisateur indique son prénom avant son nom. </font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">Parfois pour 
+assouplir les choses, on créait une boucle qui lisait à la volée, le clavier et 
+qui en fonction de la touche appuyée permettait un choix.</font></p>
+<p class="spip" align="justify">&nbsp;</p>
+<p class="spip" align="justify"><b><font face="Courier New" size="4">Depuis 
+Visual Basic 1:</font></b></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">En 
+environnement graphique, <b>l’interaction avec l’utilisateur est beaucoup plus 
+élaborée</b>&nbsp;:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Il y a&nbsp; <b>un environnement graphique.</b></font></li>
+  <li><font face="Courier New" size="2">la saisie d’informations peut 
+  s’effectuer au moyen du clavier , mais aussi de champs de saisie, boutons, 
+  listes, sélecteurs, cases à cocher, menus.</font></li>
+  <li><font face="Courier New" size="2">et surtout, <b>l’ordre d’exécution des 
+  différentes opérations n’est pas strictement déterminé à l’avance</b>.</font></li>
+  <li><font face="Courier New" size="2"><b>Toute action de l'utilisateur sur 
+  l'interface graphique déclenche des évènements</b>. Si l'utilisateur clique 
+  sur un bouton l'évènement bouton.Click est déclenché.</font></li>
+  <li><font face="Courier New" size="2">Pour chaque évènement on exécute <b>une 
+  procédure</b> (une Sub).&nbsp;&nbsp; </font></li>
+</ul>
+<p class="spip" align="justify"><font face="Courier New" size="2">&nbsp;Du point 
+de vue du développeur, cela change complètement la donne&nbsp;: ce n’est plus lui qui 
+décide ce que va faire l’utilisateur&nbsp;! Au contraire, il doit s’attendre a priori 
+à n’importe quelle action de la part de ce dernier.</font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">C’est ici 
+qu’intervient la notion de <b>programmation événementielle</b>&nbsp;: le programme 
+est structuré non plus pour exécuter une séquence d’instructions dans un ordre 
+prédéfini, mais pour <b>réagir à des événements</b> qu’il consomme l’un après 
+l’autre.</font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2"><b>Exemple&nbsp;pratique:</b> 
+l'utilisateur saisie son nom et son prénom, il clique sur le bouton 'Ok'&nbsp; ; 
+une boite s'ouvre indiquant &quot;Bonjour..'</font></p>
+<p class="spip" align="justify">
+<img border="0" src="vbonjour.JPG" width="332" height="188"></p>
+<p class="spip" align="justify">&nbsp;</p>
+<font SIZE="2">
+<p><font face="Courier New" size="2" class="texteart">Pour faire ce programme, il faut <b>dessiner l'interface utilisateur</b>, Vb 
+fourni les évènements et leur procédure. Il faut ensuite écrire dans la procédure 
+correspondant à l'évènement 'Bouton1-Click' le code qui affiche 'Bonjour..'.</font> </p>
+</font>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New"><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font color="#0000FF"> 
+Button1.Click</font></font></p>
+<p><font size="2"><font color="#0000FF" face="Courier New">&nbsp;&nbsp;&nbsp;
+MsgBox(&quot;Bonjour 
+&quot; &amp; TextBox1.Text &amp; TextBox2.Text)</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font><font COLOR="#0000ff">Sub
+</font>
+</font></font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2" class="texteart">Il existe d'autres 
+évènements (Form.Load; Button1.MouseDown...) qui peuvent ne pas être utilisés.</font></p>
+<p class="spip" align="justify">&nbsp;</p>
+<p class="spip" align="justify"><font face="Courier New" size="2"><b>Décortiquons le code;</b> comment cela se 
+passe en VB?</font></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Le composant (le bouton) doit se lier à 
+un écouteur</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff"> </font>
+<font face="Courier New" size="2">d’événement à qui il va <b>déléguer</b> le traitement 
+de l’événement</p>
+</font>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Le traitement de l’événement est <b>délégué</b></font><font FACE="Courier New" SIZE="2" COLOR="#ff3300"> </font>
+<font face="Courier New" size="2">à l'écouteur et l'écouteur exécute une méthode 
+spécifique qui prend en paramètre l’événement qui s’est produit</font></p>
+<font face="Courier New" size="2">
+<p>Dans la Région &quot; Code généré par le Concepteur Windows Form &quot; il y a:</p>
+</font>
+<p><font face="Courier New" color="#0000ff" size="2">Friend WithEvents Button1 
+As System.Windows.Forms.Button<br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">On crée une variable Button1 pour le bouton de 
+commande; </font><font face="Courier New"><font color="#0000ff" size="2">
+WithEvents</font><font size="2"> indique que l'objet Button1&nbsp; a des évènements.</font></font></p>
+<p><font face="Courier New" size="2">On voit dans le code la procédure évènement 
+Button1_Click</font></p>
+<p><font face="Courier New" color="#0000ff" size="2">Protected Sub 
+Button1_Click(ByVal sender As System.Object, _ <br>
+ByVal e As System.EventArgs) Handles Button1.Click</font></p>
+<p><font face="Courier New" color="#0000ff" size="2"><br>
+End Sub</font></p>
+<p><font face="Courier New" size="2">Le terme<b> </b><font color="#0000ff">
+Handles</font>&nbsp; provoque l'association d'un événement (<font color="#0000ff">Button1.Click</font> 
+situé après Handles) à un gestionnaire d'événements ( la <font color="#0000ff">
+Sub Button1_Click</font>) il crée <b>une délégation. </b>Ainsi, à l'évènement 
+Button1.Click correspond la procédure<b> </b> <font color="#0000ff">
+Sub Button1_Click</font><b>.</b></font></p>
+<p><font face="Courier New" size="2">la Sub pourrait d'ailleurs se nommer 
+différemment, cela n'a pas d'importance.</font></p>
+<p><font face="Courier New" size="2">&nbsp;Plusieurs évènement peuvent 
+déclencher une seule Sub.</font></p>
+<p><font face="Courier New" size="2">L'association d'événements aux 
+gestionnaires d'événements se fait au moment de la compilation et ne peut pas 
+être modifiée.</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p class="spip" align="justify"><font face="Courier New" size="2"><b>En conclusion</b> 
+avant la programmation évènementielle on imposait:</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Faire ceci.</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Faire cela.&nbsp;
+</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Lire le 
+clavier</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Faire ceci.</font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">..</font></p>
+<p class="spip" align="justify"><font face="Courier New" size="2">Avec la 
+programmation évènementielle, c'est plutôt:</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Si 
+l'utilisateur tape du texte faire ceci.</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">Si 
+l'utilisateur clique sur le bouton faire cela.</font></p>
+<p class="spip" align="justify">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Programmation Objet </font>
+</b></span></p>
+<p ALIGN="LEFT"><font FACE="Courier New" size="2">Les objets sont&nbsp; les 
+choses physiques ou 
+abstraits qui nous entourent. Typiquement, dans un programme de fiches de 
+paie, le bulletin de salaire, l’employé, etc. sont des objets.</p>
+</font>
+<font FACE="Courier New">
+<p ALIGN="LEFT"><font size="2">Un <i>objet </i>est une 
+entité cohérente rassemblant des données et du code travaillant sur ses données. </font> 
+</p>
+<p ALIGN="LEFT"><font size="2">Un logiciel est alors vu comme des 
+d'objets communiquant par des méthodes</font><font size="2" color="#0000FF">.</font></p>
+<p ALIGN="LEFT"><font size="2">Une <i>classe </i>peut être 
+considérée comme un moule à partir duquel on peut créer des objets.</font></font></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">« <i>Ne commencez 
+pas par demander ce que fait le système, demandez À QUOI il le fait ! </i>»</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-100.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-90.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:38 GMT -->
+</html>

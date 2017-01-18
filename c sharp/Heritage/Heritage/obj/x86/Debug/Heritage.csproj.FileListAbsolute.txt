@@ -1,0 +1,17 @@
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Heritage\Heritage\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Heritage\Heritage\bin\Debug\Heritage.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Heritage\Heritage\bin\Debug\Heritage.pdb
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Heritage\Heritage\obj\x86\Debug\Heritage.exe
+C:\Users\Admin.Admin-PC.000\Documents\Visual Studio 2010\Projects\Heritage\Heritage\obj\x86\Debug\Heritage.pdb
+G:\Heritage\Heritage\obj\x86\Debug\Heritage.exe
+G:\Heritage\Heritage\bin\Debug\Heritage.exe
+G:\Heritage\Heritage\bin\Debug\Heritage.pdb
+G:\Heritage\Heritage\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Heritage\Heritage\obj\x86\Debug\Heritage.pdb
+G:\C#\Heritage\Heritage\obj\x86\Debug\Heritage.exe
+G:\C#\Heritage\Heritage\obj\x86\Debug\Heritage.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Heritage\Heritage\obj\x86\Debug\Heritage.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Heritage\Heritage\obj\x86\Debug\Heritage.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Heritage\Heritage\bin\Debug\Heritage.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Heritage\Heritage\bin\Debug\Heritage.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Heritage\Heritage\obj\x86\Debug\ResolveAssemblyReference.cache

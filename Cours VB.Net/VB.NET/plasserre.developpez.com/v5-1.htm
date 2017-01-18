@@ -1,0 +1,537 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:15 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les Objets : encapsulation heritage , polymorphisme </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve4-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.1</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Programmation Orientée 
+    Objet =POO.</font></b></td>
+    <td width="9%" height="76"><a href="v5-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">VB.NET permet 
+maintenant de faire de la POO (Programmation Orientée Objet)à part entière:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Il y a:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les Classes du FrameWork.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">On peut aussi CREER 
+soi même (dans des modules de Classe) de nouvelles Classes qui suivront elles 
+aussi les règles de la POO. Ces classes serviront à instancier des objets.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#FF0000">
+<span style="font-family: Courier New; font-weight: 700">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Pour ce chapitre, nous 
+sommes du coté de l'application utilisatrice des objets (et non dans les objets).
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vboit2.JPG" width="170" height="114"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font face="Courier New" size="2">L'objet est une boite (jaune ici!!), je l'utilise , 
+mais je ne sais pas ce qui se passe à l'intérieur. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Interface et implémentation:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Nous savons 
+déjà:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On utilise une Classe (le moule) pour instancier (créer) un objet.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Une classe est une combinaison de code et de 
+données.</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le code et 
+la définition des données constituent l'<b>implémentation (c'est à l'intérieur 
+de la boite)</b>.</font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L<b>'interface</b> de l'objet est l'ensemble 
+de ses membres visibles et utilisables (les membres 
+sont les propriétés, les méthodes, les évènements).</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Prenons un 
+objet d'une classe <font color="#0000FF">ListBox:</font></font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'<b>interface</b> 
+c'est <font color="#0000FF">ListBox.Visible&nbsp; ListBox.AddItem</font>...Je la vois , je peux l'utiliser.</font></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">L'<b>implémentation</b>, je ne la vois pas, c'est le code qui gère la ListBox, 
+la définition des éléments; c'est une 'boite noire', je ne sais pas ce qui s'y passe, 
+je n'y est pas accès, et c'est tant mieux!!!</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Encapsulation:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le fait de ne pas voir l'implémentation (le code), c'est <b>l'encapsulation</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Le code, 
+les définitions de données sont privés à l'objet et non accessibles, ils sont enfermés, 
+encapsulés dans une boite noire.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">
+<img border="0" src="vicochev.GIF" width="32" height="34"> <font color="#008000">L'encapsulation permet donc d'exposer aux applications clientes uniquement 
+l'interface.</font></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Les 
+applications clientes n'ont pas à se soucier&nbsp; du fonctionnement interne.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela a une 
+conséquence, si je modifie le code mais pas l'interface, l'application cliente 
+n'a pas à être modifiée.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Héritage:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On a vu 
+qu'un objet issu d'une Classe dérivée hérite des membres de la classe de base 
+(la classe parent), cela crée 
+une relation mère/fille (parent/enfant); la classe fille pouvant réutiliser les 
+membres de la classe mère.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">A noter 
+qu'une classe ne peut hériter que d'une classe en VB.NET.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">La Classe 
+fille peut utiliser <b>les membres de la classe mère</b>, mais aussi <b>ajouter ses 
+propres membres</b> ou <b>redéfinir certains membres</b> de la classe mère. </font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On a vu que quand on dessine une Form1, cela 
+crée une Classe 'Form1' qui hérite des Windows.Forms&nbsp; (<font color="#0000FF">Inherits 
+System.Windows.Forms.Form</font>)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Autre exemple:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">ListBox</font> hérite de
+<font color="#0000FF">Control</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Polymorphisme:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Le nom de <i>polymorphisme</i> 
+signifie <b> <i>&quot;qui peut prendre plusieurs formes&quot;</i>.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Tous
+les sites français donnent les mêmes définitions et entretiennent une
+certaine confusion. Il indiquent 3 types de polymorphisme et la différence
+entre polymorphisme 'paramétrique' de surcharge et ad ohc n'est pas évidente.
+Je vais donc expliquer les choses à ma manière!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il y a 4&nbsp;<b> sortes de 
+polymorphisme</b>:</font></p>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#008000"><b>Le polymorphisme
+    ad hoc</b></font>. </font> </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Le polymorphisme ad hoc permet d'avoir
+    des fonctions de même nom, avec des fonctionnalités similaires, dans des
+    classes sans aucun rapport entre elles . Par exemple, la classe Integer, la
+    classe Long et la classe Date peuvent avoir chacune une fonction <font color="#0000FF">ToString</font>.
+    Cela permettra de ne pas avoir à se soucier du type de l'objet que l'on a
+    si on souhaite le transformer en String.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#008000"><b>Le polymorphisme de <i>surcharge</i></b></font> 
+  ou en anglais <b><i>overloading</i></b>. </font> </li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Une méthode gère des paramètres de
+    type et de nom différents</font></p>
+<p align="justify"><font face="Courier New" size="2">Ce polymorphisme représente 
+la possibilité de définir plusieurs méthodes de même nom mais possédant des 
+paramètres différents (en nombre et/ou en type).</font> </p>
+    <p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2"><span style="FONT-FAMILY: Courier New">pour&nbsp;
+    ouvrir une fenêtre MessageBox, la méthode <font color="#0000FF">Show</font>
+    a 12 signatures, en voici 2:</span></font></p>
+    <pre style="FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Courier New"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Reponse= <b>MessageBox.show</b>(TexteAAfficher,Titre, TypeBouton etIcone, BoutonParDéfaut)</span></font></pre>
+    <pre style="FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Courier New"><span style="BACKGROUND-COLOR: #ffffff">Ici on donne 4 paramètres.</span></pre>
+    <pre style="FONT-SIZE: 10pt; MARGIN: 0cm 0cm 0pt; FONT-FAMILY: Courier New">&nbsp;</pre>
+    <p class="MsoNormal" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0px"><font face="Courier New" color="#0000ff" size="2"><span style="BACKGROUND-COLOR: #ffffff">Reponse=
+    <b>MessageBox.show</b>(TexteAAfficher)</span></font></p>
+    <p class="MsoNormal" style="MARGIN-TOP: 0pt; MARGIN-BOTTOM: 0px"><span style="BACKGROUND-COLOR: #ffffff"><font face="Courier New" size="2">Ici
+    1 seul paramètre.</font></span></p>
+<p align="justify"><font face="Courier New" size="2">On appelle <b><i>signature</i></b> 
+chaque combinaison d'arguments d'une fonction (combinaison en nombre et en 
+type). Une fonction a donc autant de signatures que de manière d'appeler cette 
+fonction C'est donc la signature d'une méthode qui détermine quel code sera appelé.</font></p>
+<p align="justify">&nbsp; </p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#008000"><b>Le polymorphisme d'héritage</b></font> (<i>redéfinition</i>,
+  <i>spécialisation</i> ou en anglais <i>overriding</i>) </font> </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2">Quand une classe hérite d'une autre
+classe, elle hérite des méthodes. On peut redéfinir substituer une méthode de la classe
+parent par une méthode de même nom dans la classe enfant.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><font color="#008000"><b>Le polymorphisme
+    générique </b></font>( en anglais <i>template</i>)</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">C'est la forme la plus naturelle du 
+polymorphisme: elle permet d'appeler la méthode d'un objet sans devoir connaître 
+son type. En VB 2005 cela correspond aux générics.</font></p>
+  </blockquote>
+</blockquote>
+<p align="justify"><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Constructeur, destructeur:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un <b>constructeur</b> est une fonction 
+effectuée <b>lors de l'instanciation</b> d'un objet de la Classe; il sert 
+généralement à 'initialiser' l'objet. Il est appelé quand on fait&nbsp;
+<font color="#0000FF">New</font>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Souvent il y a plusieurs signatures. Il y a 
+habituellement un constructeur par défaut qui n'a pas de paramètres.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple: pour créer un objet graphique&nbsp; 
+Point, j'utilise un constructeur permettant&nbsp; de définir les coordonnées du 
+point:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> 
+P </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New"> 
+Point(45, 78)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La <b>destruction</b> d'un objet est effectué 
+lorsqu'on lui affecte la valeur Nothing ou lorsqu'on quitte la portée où il a 
+été défini.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">P= Nothing</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Accesseur, mutateur</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Un accesseur (<i>accessor</i> en anglais) est 
+un membre renvoyant la valeur d'une propriété d'un objet. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">MyObjet<b>.GetName</b></font> 
+est un accesseur car elle renvoie la valeur de la propriété <b>Name</b>. </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Un mutateur (<i>mutator</i> en anglais) ou 
+encore modifieur (<i>modifier</i> en anglais) est un membre qui modifie la 
+valeur d'une propriété d'un objet.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">MyObjet.<b>SetName</b></font> 
+est un mutateur car elle modifie la valeur de la propriété <b>Name</b>.<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Déclaration, instanciation:</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;On 
+peut déclarer et instancier en même temps:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Dim</font><font face="Courier New"><font SIZE="2"> 
+P </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">New MaClasse</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut séparer les 2 actions:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Dim</font><font face="Courier New"><font SIZE="2"> 
+P </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font size="2" color="#0000FF">Maclasse&nbsp;&nbsp;&nbsp; </font><font size="2">
+'déclaration</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">P = New Maclasse&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'instanciation</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La déclaration et l'instanciation peuvent être 
+effectuées dans les endroits différents:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Module Mon module</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Public P As 
+As MaClasse</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Sub MaRoutine</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; P = New 
+MaClasse</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Module </font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici P est déclaré comme Public, il est 
+instancié dans une Sub.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">Propriétés</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF">,
+Méthodes:</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: windowtext">Un
+Objet peut avoir une ou des <b>Propriétés</b></span></font><span style="font-family: Courier New; color: windowtext"><font size="2">:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Dim</font><font face="Courier New"><font SIZE="2">
+B </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">New Button</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">B</font><font color="#0000FF" face="Courier New" size="2">.Name
+=&quot;toto&quot;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><i>Pour simplifier: une propriété d'un objet
+est une 'variable' associée à cet objet.</i></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext">Un
+Objet peut avoir une ou des <b> Méthodes</b></span></font><span style="font-family: Courier New; color: windowtext"><font size="2">:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">Dim</font><font face="Courier New"><font SIZE="2">
+B </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">New Button</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font color="#0000FF" face="Courier New" size="2">B</font><font color="#0000FF" face="Courier New" size="2">.Click
+</font><font face="Courier New" size="2" color="#111111">est une méthode.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><i>Pour simplifier: Une méthode est un
+ensemble d'instructions (de lignes de codes) associées à un objet et qui
+effectue quelquechose .</i></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Attention, on a accès aux propriétés du
+type en cours.</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Exemple:
+dans <font color="#0000FF">Form_Load</font> d'une form, le paramètre <font color="#0000FF">sender</font>
+est bien la fenêtre qui a déclenché le Load mais sont type est 'Objet'. Et <font color="#0000FF">sender..ForeColor</font><font COLOR="#008080">
+</font>n'est pas accepté car <font color="#0000FF">Forecolor</font>&nbsp; n'est
+pas une propriété d'un objet.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Private
+Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
+Handles MyBase.Load</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF"><font face="Courier New">Couleur=sender..ForeColor
+</font></font><font face="Courier New" color="#000000" size="2">&lt;=&nbsp;
+ERREUR</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">End
+Sub</font></p>
+<p><font face="Courier New" size="2">Pour pouvoir utiliser <font color="#0000FF">ForeColor</font>,
+il faut caster l'objet en Form.</font></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">Private</font><font face="Courier New">
+Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs)
+Handles MyBase.Load</font></font></p>
+<p><font face="Courier New" color="#0000FF" size="2">Couleur=CType(sender, Form).ForeColor</font></p>
+<p><font size="2"><font face="Courier New" color="#0000FF">End Sub</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">L</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" size="4" color="#0000FF">es Objets: ils sont 
+'By Ref':</font></b></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext">On rappelle que les 
+Objets sont '</span><font color="#0000FF"><span style="font-family: Courier New; ">By 
+Ref</span></font><span style="font-family: Courier New; color: windowtext">' 
+(Par référence)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<font color="#FF0000" face="Courier New">Il faut comprendre qu'une variable 
+Objet contient la référence, le pointeur de l'objet, mais pas l'objet lui même.
+</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Cela entraîne:</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u><b><font face="Courier New" size="2" color="#008000">1- Création de variable 
+objet</font></b></u></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Soit une classe Class1.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Dim I As Class1&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">On crée un pointeur vide,</font><font face="Courier New" color="#0000ff" size="2"> </font>
+<font face="Courier New" size="2">entraîne: I contient <font color="#0000FF">
+Nothing</font>: il ne pointe sur aucun objet.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font color="#0000FF" face="Courier New" size="2">I = New Class1&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">Maintenant I contient la référence, le 
+pointeur vers un objet de type</font><font color="#0000FF" face="Courier New" size="2"> 
+Class1</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">le constructeur New a bien crée une 
+instance de</font><font face="Courier New" size="2" color="#0000FF"> Class1</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Habituellement on utilise en une fois:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#0000ff" size="2">Dim I As New Class1&nbsp;&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On peut voir si la variable contient Nothing : <font color="#0000ff">If 
+IsNothing( I ) then.. </font>ou<font color="#0000ff"> If I Is Nothing..</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><u><b>
+<font face="Courier New" size="2" color="#008000">2- Affectation:</font></b></u></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Si on affecte <b>une variable par référence</b> à une autre, elle pointe toutes 
+les 2 sur le même endroit mémoire: si j'en modifie une, cela modifie l'autre.
+</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">'</font><font face="Courier New" size="2">Créons 
+une Classe contenant un entier.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><code class="ce">
+<font color="#0000ff">Class Class1<br>
+&nbsp;&nbsp; Public Value As Integer = 0<br>
+End Class<br>
+<br>
+Dim C1 As New Class1()<br>
+Dim C2 As Class1 =</font></code><code><font color="#0000ff">C1&nbsp;&nbsp;&nbsp; </font>'on 
+crée C2, on affecte C1 à C2</code><code class="ce"><font color="#0000ff"><br>
+C2.Value = 123&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>'on modifie C2<br>
+&nbsp;</code></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><code class="ce">=&gt; C1.Value=123&nbsp; 
+C2.Value=123&nbsp;&nbsp;&nbsp; </code></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><code class="ce">Modifier C2 a 
+modifié C1 car elles pointent sur le même endroit mémoire. </code></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><code>On le redit autrement: quand 
+on crée C1 et C2, il n'y a pas 2 objets C1 et C2 mais 2 pointeurs vers le même 
+objet. </code></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<u><b><font SIZE="2" face="Courier New" color="#008000">3- Comparaison: </font>
+</b></u></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Deux objets peuvent être comparés par &quot;<font color="#0000ff">Is</font>&quot;. </font>
+</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Dim O As Object</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">Dim Q As Object&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">If O Is Q then..</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">Equals</font> peut être utilisé pour la comparaison:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<font color="#0000ff">Obj1.Equals(Obj2))&nbsp; '</font>Retourne True si Obj1 et Obj2 
+ont le même pointeur.<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve4-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:18 GMT -->
+</html>

@@ -1,0 +1,685 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:07 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : WPF Brush </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.23.2</font></b></td>
+    <td width="47%" height="76" align="center">&nbsp;
+      <p><b>
+    <font face="Courier New" size="6" color="#800080">WPF: Aspect visuel des
+    contrôles.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v3-23.11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font color="#800080" face="Courier New" size="2">Bord, couleur, Font.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<font color="#800080" face="Courier New" size="2">Remplissage de surface.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left">
+<b><font face="Courier New" color="#0000FF" size="4"><span style="background-color: #C0C0C0">A-
+Bord,
+Couleur, Font</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">
+dans un contrôle:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">On prendra l'exemple d'un bouton: </font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+veut avoir ce beau bouton (bof!).&nbsp;&nbsp; </font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2">&nbsp; </font><img border="0" src="vwpfbeaubr.JPG" width="203" height="103">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Avec
+le designer, on prend un bouton dans la boite à outils, on le pose dans un
+conteneur (une grid par exemple).</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Pour définir les dimensions, la
+couleur, le texte dans le bouton, <b>on va modifier les propriétés dans la
+fenêtre de propriétés en bas à droite:&nbsp;</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwpfpropbut.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Height</font><font color="#0000ff">
+ </font>
+et<font color="#0000ff">
+ </font><font COLOR="#ff0000">Width</font><font color="#0000ff"> </font>permettent
+de modifier les dimensions.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Foreground</font><font color="#0000ff">
+ </font>
+et<font color="#0000ff">
+ </font><font COLOR="#ff0000">Background</font><font color="#0000ff"> </font>donnent
+la couleur du texte et du fond.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">BorderBrush</font><font color="#0000ff">
+ </font>
+et<font color="#0000ff">&nbsp;</font><font COLOR="#ff0000"> BorderThickness </font>indique la couleur
+et l'épaisseur des bords</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">FontFamily</font><font color="#0000ff">
+ </font>indique le nom de la font&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">FontSize</font><font color="#0000ff"> </font>indique
+la hauteur de la font&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">FontStyle</font><font color="#0000ff">
+</font>permet de choisir entre Normal, Italic, Oblique.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">FontWeight</font><font color="#0000ff"> 
+</font>permet de choisir entre Normal, Bold, Heavy, ...</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000ff"><font SIZE="2" COLOR="#ff0000">Name</font>
+</font>en haut donne le nom du bouton en haut de la fenêtre.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New" color="#FF0000">Content</font><font size="2" color="#0000ff" face="Courier New">
+</font><font size="2" face="Courier New">indique le texte à afficher.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New"><b>En
+bas de l'écran dans la fenêtre XAML</b>, apparaît le code xaml correspondant
+au bouton.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font>
+</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Height</font><font COLOR="#0000ff">=&quot;
+100&quot;</font><font COLOR="#ff0000"> Width</font><font COLOR="#0000ff">=&quot;200&quot;</font><font COLOR="#ff0000">
+</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Foreground</font><font COLOR="#0000ff">=&quot;White&quot;</font><font COLOR="#ff0000">
+Background</font><font COLOR="#0000ff">=&quot;Red&quot;</font> </font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">BorderBrush</font><font COLOR="#0000ff">=&quot;Green&quot;</font><font COLOR="#ff0000">
+BorderThickness</font><font COLOR="#0000ff">=&quot;100&quot;</font> </font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">FontFamily</font><font COLOR="#0000ff">=&quot;Algerian&quot;</font><font COLOR="#ff0000">
+FontSize</font><font COLOR="#0000ff">=&quot;24&quot;</font> <font COLOR="#ff0000">FontStyle</font><font COLOR="#0000ff">=&quot;Italic&quot;</font><font COLOR="#ff0000">
+FontWeight</font><font COLOR="#0000ff">=&quot;Bold&quot; <font SIZE="2" COLOR="#ff0000">Name</font><font SIZE="2" COLOR="#0000ff">=&quot;mybutton&quot;</font>&gt;</font><font COLOR="#a31515">Beau
+Bouton</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Dans
+une fenêtre vide, on aurait pu coller le code xaml entre &lt;grid&gt; et &lt;grid\&gt;
+et voir apparaître le bouton.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Avec
+une fenêtre vide contenant juste une grid, on aurait pu <b>créer le bouton
+avec du code Visual Basic:</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Dim</font>
+myButton <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">New</font> Button()
+<font color="#008000">'on crée le bouton nommé 'MyButton'</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.Height
+= <font COLOR="#a31515">&quot;100&quot;</font> <font COLOR="#008000">'modification
+des dimensions du bouton</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#111111">myButton.Width
+= </font><font face="Courier New" size="2" color="#A31515">&quot;200&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.Background
+= <font COLOR="#0000ff">New</font> SolidColorBrush(Colors.Red)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.Foreground
+= <font COLOR="#0000ff">New</font> SolidColorBrush(Colors.White)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.BorderBrush
+= <font COLOR="#0000ff">New</font> SolidColorBrush(Colors.Green)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.BorderThickness
+= <font COLOR="#0000ff">New</font> Thickness(100)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.FontFamily
+= <font COLOR="#0000ff">New</font> FontFamily(<font COLOR="#a31515">&quot;Algerian&quot;</font>)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.FontSize
+= <font COLOR="#a31515">&quot;24&quot;</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.FontStyle
+= FontStyles.Italic</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.FontWeight
+= FontWeights.Bold</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">myButton.Content
+= <font COLOR="#a31515">&quot;Beau Bouton&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Grid.Children.Add(myButton)
+<font color="#008000">'on met le bouton dans le
+conteneur grid</font></font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On a
+à notre disposition une énumération <font color="#0000FF">Colors</font> qui
+énumère les couleurs:</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.Background
+= New SolidColorBrush(Colors.Red)</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On a
+aussi une énumérations de SolidColorBrush que l'on peut utiliser comme cela:</font></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.Background
+= Brushes.Red</font></p>
+<p style="margin-top: 6.0pt" align="left"></p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+peut 'enrichir' une partie du texte:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+utilise dans ce cas des balises comme &lt;bold&gt; ou &lt;italic&gt; par exemple
+dans un TextBlock:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><span class="code-keyword"><font color="#0000FF" face="Courier New" size="2">&lt;</font></span><font color="#0000FF" face="Courier New" size="2"><span class="code-leadattribute">TextBlock</span>
+<span class="code-attribute">Width</span><span class="code-keyword">=&quot;150&quot;</span>
+<span class="code-attribute">Height</span><span class="code-keyword">=&quot;50&quot;</span>
+</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><span class="code-attribute"><font color="#0000FF" size="2" face="Courier New">TextAlignment</font></span><font color="#0000FF" size="2" face="Courier New"><span class="code-keyword">=&quot;Center&quot;</span>
+<span class="code-keyword">&gt;</span> <span class="code-keyword">&lt;</span><span class="code-leadattribute">Bold</span><span class="code-keyword">&gt;</span>Un<span class="code-keyword">&lt;/</span><span class="code-leadattribute">Bold</span><span class="code-keyword">&gt;</span>
+<span class="code-keyword">&lt;</span><span class="code-leadattribute">Italic</span><span class="code-keyword">&gt;</span>bouton<span class="code-keyword">&lt;/</span><span class="code-leadattribute">Italic</span><span class="code-keyword">&gt;
+</span></font><span class="code-keyword"><font color="#0000FF" face="Courier New" size="2">&lt;</font></span><font color="#0000FF" face="Courier New" size="2"><span class="code-keyword">/</span><span class="code-leadattribute">TextBlock&gt;</span>
+</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" color="#0000FF" size="4"><span style="background-color: #C0C0C0">B-
+Remplissage
+de surface</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">On
+peut 'remplir' le fond d'un bouton, un rectangle, le même du texte....</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Pour
+cela, on utilise des <b>Brush</b>.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">SolidColorBrush:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">C'est
+simple, c'est une <b>couleur unie</b>. comme pour notre bouton:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b><u>Exemple
+1.</u></b> On peut choisir la couleur du Background dans la fenêtre de
+propriétés.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>En
+XAML:</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">
+Background</font><font COLOR="#0000ff">=&quot;Red&quot;</font> </font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>En
+VB:</b></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">myButton.Background
+= New SolidColorBrush(Colors.Red)</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New"><b><u>Exemple
+2:</u></b> créer un rectangle rouge:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Dim
+Rect As new Rectangle()</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Rect.Width
+= 75</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Rect.Height
+= 75</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#008000" size="2" face="Courier New">'Creation
+d'une SolidColorBrush&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Dim&nbsp;
+myBrush As&nbsp; new SolidColorBrush(Colors.Red)</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Rect.Fill
+= myBrush</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">Grid.Content
+=Rect</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font color="#0000FF" size="2" face="Courier New">En
+XAML:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"><font color="#A31515">&lt;Rectangle</font>
+<font color="#FF0000">Width</font>=<span style="COLOR: maroon">&quot;75&quot;</span>
+<font color="#FF0000">Height</font>=<span style="COLOR: maroon">&quot;75&quot;</span>&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;Rectangle.Fill&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;SolidColorBrush
+Color=<span style="COLOR: maroon">&quot;Red&quot;</span> /&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;/Rectangle.Fill&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#A31515">&lt;/Rectangle&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" size="3"><span style="background-color: #C0C0C0">LinearGradient</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Brush:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">C'est
+une couleur (ou des couleurs )qui se transforme progressivement en une autre.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Les
+coordonnées vont du coin supérieur gauche (0,0) au coin inférieur droit
+(1,1).&nbsp; '1' correspond à 100%. '0.5' correspond donc à 50% (milieu).</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfgd.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000FF">StartPoint</font>
+indique les coordonnées du début du gradient, <font color="#0000FF">EndPoint</font>
+les coordonnées de la fin du gradient, <font color="#0000FF">GradientStop</font>
+indique la position relative de la couleur sur la ligne qui rejoint le point de
+début au point de la fin.&nbsp;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" size="3"><u>Exemple
+1</u></font></b><font face="Courier New" size="2">  :sur une grid, on positionne 3
+couleurs dans la diagonale.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">En
+VB, on ne peut pas le faire dans la fenêtre designer, le plus simple est de
+coller le code XAML dans la fenêtre XAML.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center">0,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpflineagr.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1,1
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+suivre la diagonale StartPoint=&quot;0,0&quot; EndPoint=&quot;1,1&quot;; le
+rouge sera à 0% de la diagonale, le blanc à 50% le bleu à 100% de la
+diagonale.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>En
+XAML:</b></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#A31515">&lt;Grid &gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2"> &lt;Grid.Background&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;LinearGradientBrush StartPoint=&quot;0,0&quot; EndPoint=&quot;1,1&quot;&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;GradientStop Color=&quot;Red&quot; Offset=&quot;0&quot; /&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;GradientStop
+Color=&quot;White&quot; Offset=&quot;0.5&quot; /&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;GradientStop Color=&quot;Blue&quot;
+Offset=&quot;1&quot; /&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;/LinearGradientBrush&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;&lt;/Grid.Background&gt;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&nbsp;<font color="#A31515">&lt;/Grid&gt;</font></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>En
+VB:</b></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#0000FF">Dim&nbsp;
+myBrush As new LinearGradientBrush</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(new
+GradientStop(Colors.Red, 0.0)))</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(new
+GradientStop(Colors.White, 0.5))</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(new
+GradientStop(Colors.Blue, 1.0))</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2" color="#0000FF">Grid.background=
+myBrush</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><b><font face="Courier New" size="3"><u>Exemple
+2</u></font></b><font face="Courier New" size="2"> sur un bouton, on positionne
+2 couleurs (blanc et gris) de haut en bas.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2">0,0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfbt.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2">0,1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+que le gradient s'applique de haut en bas&nbsp; StartPoint=&quot;0,0&quot;
+EndPoint=&quot;0,1&quot;; le blanc sera à 0% de la verticale, le gris à 100%
+de la verticale.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>En
+XAML:</b></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button</font><font COLOR="#ff0000">&nbsp;
+Content</font><font COLOR="#0000ff">=&quot;Ok&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Button.Background</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">LinearGradientBrush</font><font COLOR="#ff0000">
+StartPoint</font><font COLOR="#0000ff">=&quot;0,0&quot;</font><font COLOR="#ff0000">
+EndPoint</font><font COLOR="#0000ff">=&quot;0,1&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;White&quot;</font><font COLOR="#ff0000">
+Offset</font><font COLOR="#0000ff">=&quot;0&quot; /&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;LightGray&quot;</font> <font COLOR="#ff0000">Offset</font><font COLOR="#0000ff">=&quot;1&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">LinearGradientBrush</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button.Background</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Button</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>Remarque:</b>
+on aurait pu mettre un GradientStop en dehors de la zone ( à 2 par exemple pour
+le LightGray) ce qui permet s'estomper la couleur grise et de faire un bouton
+plus clair.</font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><b><font face="Courier New" size="3"><span style="background-color: #C0C0C0">RadialGradient</span></font></b><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Brush:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Ici
+on applique 2 couleurs ou plus dans un cercle qui occupe la totalité du
+conteneur.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfcercle.JPG">
+</p>
+<p style="margin-top: 6.0pt" align="center">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Le <font color="#0000FF">
+GradientOrigin</font> donne le centre du <b>gradient</b>. Ci dessous le centre
+du gradient est à 0.50&nbsp; 0.50 c'est à dire au centre du cercle. Les
+couleurs seront donc concentriques.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="center"><font face="Courier New" size="2"><img border="0" src="vwpfvisual3.JPG"></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Les <font color="#0000FF">
+GradientStop</font> indiquent la position&nbsp; des couleurs par rapport au
+centre: le blanc est à l'offset 0 : cercle de blanc au centre; le bleu est à
+l'offset 0.5, cela donne un cercle de bleu autour du blanc; le vert est à
+l'offset 1 (100%): le cercle vert est autour du cercle bleu.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font COLOR="#a31515">RadialGradientBrush</font><font COLOR="#ff0000">
+GradientOrigin</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.50,0.50&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;white&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;LightBlue&quot;</font> <font COLOR="#ff0000">Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.5&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;LightGreen&quot;</font> <font COLOR="#ff0000">Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">RadialGradientBrush</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Pour
+l'exemple suivant le centre du gradient est à 0.50&nbsp; 1 (symbolisé par le
+point noir) excentré en bas du cercle.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Le
+cercle qui&nbsp; occupe la totalité du conteneur est symbolisé par un cercle
+gris que l'on a ajouté.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfvisual1.JPG">
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">L'offset
+du blanc est 0.75: le blanc monte haut.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font SIZE="2" COLOR="#a31515">RadialGradientBrush</font><font SIZE="2" COLOR="#ff0000">
+GradientOrigin</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.50,1&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#a31515">GradientStop</font><font SIZE="2" COLOR="#ff0000">
+Color</font><font SIZE="2" COLOR="#0000ff">=&quot;white&quot;</font><font SIZE="2" COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.75&quot; /&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#a31515">GradientStop</font><font SIZE="2" COLOR="#ff0000">
+Color</font><font SIZE="2" COLOR="#0000ff">=&quot;LightBlue&quot;</font> <font SIZE="2" COLOR="#ff0000">Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1.0&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#a31515">RadialGradientBrush</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici
+l'offset du blanc est 0.50: le blanc monte moins haut.</font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfvisual2.JPG">
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font SIZE="2" COLOR="#a31515">RadialGradientBrush</font><font SIZE="2" COLOR="#ff0000">
+GradientOrigin</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.50,1&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#a31515">GradientStop</font><font SIZE="2" COLOR="#ff0000">
+Color</font><font SIZE="2" COLOR="#0000ff">=&quot;white&quot;</font><font SIZE="2" COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.50&quot; /&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font SIZE="2" COLOR="#a31515">GradientStop</font><font SIZE="2" COLOR="#ff0000">
+Color</font><font SIZE="2" COLOR="#0000ff">=&quot;LightBlue&quot;</font> <font SIZE="2" COLOR="#ff0000">Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1.0&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font SIZE="2" COLOR="#a31515">RadialGradientBrush</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Exemple
+sur une grid. Centre du gradient excentré en haut à droite (0.75 0.25) et il y
+a 3 couleurs.</font>
+</p>
+<p style="margin-top: 6.0pt" align="center"><img border="0" src="vwpfvisualgd.JPG">
+</p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>En XAML:</b></font></p>
+<p><font face="Courier New" size="2" color="#A31515">&lt;Grid &gt;&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font COLOR="#a31515" face="Courier New">Grid.Background</font><font face="Courier New" COLOR="#0000ff">
+&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">RadialGradientBrush</font><font COLOR="#ff0000">
+GradientOrigin</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.75,0.25&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;Yellow&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.0&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;Orange&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;0.5&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">GradientStop</font><font COLOR="#ff0000">
+Color</font><font COLOR="#0000ff">=&quot;Red&quot;</font><font COLOR="#ff0000">
+Offset</font></font><font face="Courier New" COLOR="#0000ff">=&quot;1.0&quot;
+/&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">RadialGradientBrush</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;/</font><font COLOR="#a31515" face="Courier New">Grid.Background</font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p><font face="Courier New" size="2" color="#A31515">&lt;/Grid &gt; </font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">En VB:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+myBrush As New RadialGradientBrush</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientOrigin
+= New Point(0.75, 0.25)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(New
+GradientStop(Colors.Yellow, 0.0))</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(New
+GradientStop(Colors.Orange, 0.5))</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">myBrush.GradientStops.Add(New
+GradientStop(Colors.Red, 1.0))</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">grid.Background
+= myBrush</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="3"><span style="background-color: #C0C0C0">Image</span></font></b><font SIZE="2"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">Brush:</font></b></span>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">On
+peut m</font><font face="Courier New" size="2">ettre une image dans un rectangle
+par exemple:</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><b><font face="Courier New" size="2">En
+XAML:</font></b>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;Rectangle
+Width=<span style="COLOR: maroon">&quot;75&quot;</span> Height=<span style="COLOR: maroon">&quot;75&quot;</span>&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;Rectangle.Fill&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;ImageBrush
+ImageSource=<span style="COLOR: maroon">&quot;c:\graphe.bmp&quot;</span>
+/&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;/Rectangle.Fill&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">&lt;/Rectangle&gt;</font>
+</p>
+<font SIZE="2" COLOR="#0000ff">
+<p>&nbsp;</p>
+</font>
+<p><b><font face="Courier New" size="2">En VB:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Dim
+Rect As New Rectangle()</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Rect.Width
+= 75</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Rect.Height
+= 75</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font color="#0000FF" size="2" face="Courier New">Dim
+myBrush = New ImageBrush</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font color="#0000FF" size="2" face="Courier New">myBrush.ImageSource
+= New BitmapImage(New Uri(&quot;c:\graphe.bmp&quot;, UriKind.Relative))</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">Rect.Fill
+= myBrush</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2" face="Courier New">grid.Children.Add(Rect)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="3"><span style="background-color: #C0C0C0">Autre</span></font></b><font SIZE="2"><span style="background-color: #C0C0C0"><b><font face="Courier New" size="3">:</font></b></span>
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">Il
+existe aussi les <font color="#0000FF">DrawingBrush </font>qui permettent de
+dessiner des motifs géométriques que l'on peut même répéter.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left"><font face="Courier New" size="2">Les
+<font color="#0000FF">VisualBrush</font>, elles, permettent certains effets
+comme l'effet 'miroir'.</font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0" align="left">&nbsp;
+</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-23.11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:12 GMT -->
+</html>

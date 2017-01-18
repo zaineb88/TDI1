@@ -1,0 +1,313 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-31.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 1.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Petites routines.</font></b>
+      <p><b><font face="Courier New" size="6" color="#800080">Les 'String'</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="ve1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><b><font color="#800080" face="Courier New" size="2">On prendra des exemples de
+routine très simple 
+ne contenant que du code.</font></b></p>
+<p>&nbsp;</p>
+<font SIZE="2" face="Courier New">
+<p><b><span style="background-color: #C0C0C0">Une string 'Nom' contient un nom , mettre si nécessaire la première lettre en 
+majuscule.</span></b></p>
+</font><font SIZE="2">
+<p><b><font face="Courier New">1-En utilisant les Classes String et Char:</font></b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> 
+Nom </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New"> 
+= &quot;philippe&quot;</font></p>
+<p></font><font SIZE="2" COLOR="#008000" face="Courier New">' Si le premier 
+caractère est minuscule</p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Char</font><font SIZE="2" color="#0000FF">.IsLower(Nom.Chars(0))
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<blockquote>
+  <p><font face="Courier New" color="#008000">' Le transformer en majuscule et 
+  afficher</font></p>
+  </font><font SIZE="2" COLOR="#0000FF">
+  <p><font face="Courier New">MessageBox.Show(</font></font><font SIZE="2" COLOR="#0000ff" face="Courier New">Char</font><font SIZE="2"><font color="#0000FF" face="Courier New">.ToUpper(Nom.Chars(0)) 
+  + Nom.Substring(1, Nom.Length - 1))</font></p>
+</blockquote>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">On regarde si le premier caractère de la 
+chaîne Nom.Chars(0) est minuscule (.IsLower).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Si oui on transforme ce premier caractère en 
+majuscule (.ToUpper) et on ajoute la sous chaîne allant du second au dernier 
+caractère. </font></p>
+<font SIZE="2">
+<p><b><font face="Courier New" SIZE="2">2-En utilisant les instructions VB:</font></b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> 
+Nom </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New"> 
+= &quot;philippe&quot;</font></p>
+</font><font SIZE="2" face="Courier New" color="#0000FF">
+<p>Nom = UCase(Microsoft.VisualBasic.Left(Nom, 1)) &amp; Mid(Nom, 2)</p>
+</font><font SIZE="2" face="Courier New">
+<p>On prend le premier caractère de gauche : Left(Nom,1), on le transforme en 
+majuscule (Ucase) , on ajoute la chaîne commençant par le second caractère et 
+allant jusqu'à la fin.</p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0"><b>Comment voir si&nbsp; un caractère est une 
+voyelle:</b></span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim Voy As String = &quot;aeiouy&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Dim C As String = &quot;p&quot; </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">If Instr( Voy, C)&lt;&gt;0 then</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">..</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font color="#0000FF" face="Courier New" size="2">End If</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Ici on regarde si la String C est contenue dans la 
+String Voy (qui contient toutes les voyelles), si cela retourne 0 c'est que la 
+String C n'y est pas.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2"><span style="background-color: #C0C0C0"><b>Comment éliminer une combinaison bien précise 
+de caractères en début de chaîne:</b></span> </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2">Exemple: éliminer une balise html de type &lt;/b 
+../b0&gt; et son contenu dans une chaîne nommée Ch:</font></p>
+<p><font face="Courier New" size="2">' Le premier caractère est-il '&lt;', 
+recherche avec StartsWith (en plus on élimine les espaces avec Trim())<br>
+<font color="#0000FF">If Ch.Trim().StartsWith(&quot;&lt;&quot;) Then</font><br>
+<br>
+' Rechercher le caractère '&gt;', le premier<br>
+<font color="#0000FF">Dim lastLocation As Integer = Ch.IndexOf(&quot;&gt;&quot;)<br>
+<br>
+If lastLocation &gt;= 0 Then</font><br>
+' éliminer la chaîne entre '&lt;' et '&gt;'<br>
+&nbsp;&nbsp;&nbsp; <font color="#0000FF">Ch = Ch.Substring((lastLocation + 1))<br>
+End If<br>
+End If<br>
+&nbsp;</font></font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Vous avez une chaîne de caractères, 
+comment afficher, le premier caractère puis les 2 premiers, puis 3..?</span></font></b></p>
+<p><font face="Courier New" size="2">Dans un formulaire (une fenêtre), il y a un TextBox1( 
+zone de texte avec sa propriété Multiline=True)</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 1; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF"> 
+C </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">String</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+= &quot;DUBONET&quot;</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+Tx </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">String</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 1; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+i </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 1; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+i = 1 </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> </span></font></font>
+<span style="font-family: Courier New"><font size="2">Microsoft.VisualBasic.</font></span><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF">Len(C)</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">&nbsp;&nbsp;&nbsp; 
+Tx += Microsoft.VisualBasic.Left(C, i) + ControlChars.CrLf</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+i</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">TextBox1.Text = 
+Tx</font></span></p>
+</font>
+<p><font face="Courier New" size="2">Mettre ce code dans Form_Load puis lancer 
+le programme.</font></p>
+<p><font face="Courier New" size="2">Affiche:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">D</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">DU</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">DUB</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+DUBO</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+DUBON</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+DUBONE</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+DUBONET</font></p>
+<p><font face="Courier New" size="2">On remarque: Tx est une string permettant 
+de stocker temporairement la string à afficher; a chaque boucle on ajoute la 
+nouvelle string (Tx += est équivalent à Tx=Tx+..) et un caractère de retour à la 
+ligne.</font></p>
+<p><font face="Courier New" size="2">Left fait partie de l'espace de nom 
+Microsoft.VisualBasic.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Vous avez deux chaînes de caractères, 
+comment savoir si la second est un anagramme de la première?</span></font></b></p>
+<p><font face="Courier New" size="2">Pour les nuls, un anagramme c'est les mêmes 
+lettres dans un ordre différent.</font></p>
+<p><font face="Courier New" size="2">Il faut mettre les 2 chaînes dans un 
+tableau de caractères, trier les 2 tableaux, les remettre dans des strings et 
+les comparer.</font></p>
+<p><font face="Courier New" size="2">'créons 2 string</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 1; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF"> 
+maString1 </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">String</span></font></font><font face="Courier New" SIZE="2"><span style="background-color: #FFFFFF"> 
+= &quot;stressed&quot;</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Dim</span></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF"> 
+maString2 </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">String</span></font></font><font face="Courier New" SIZE="2"><span style="background-color: #FFFFFF"> 
+= &quot;desserts&quot;</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 0"><font face="Courier New" size="2">'On 
+passe les strings dans des tableaux</font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim myChar1 As Char 
+=mastring1.ToCharArray</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim myChar2 As Char 
+=mastring2.ToCharArray</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 0"><font face="Courier New" size="2">'On 
+trie les tableaux</font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Array.Sort( myChar1)</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Array.Sort( myChar2)</font></span></p>
+<p><font face="Courier New" size="2">'On passe les caractères dans des strings</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim MyStringTrie1 As New 
+String (myChar1)</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim MyStringTrie2 As New 
+String (myChar2)</font></p>
+<p><font face="Courier New" size="2">'On compare les 2 Strings, si elle sont 
+égales cela retourne 0, l'expressin 0=0 est True, on la mettre dans un Boolean</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim anagramme As boolean 
+=(String.Compare (MyStringTrie1 ,MyStringTrie2 )=0)</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2"><span style="background-color: #C0C0C0">Compter&nbsp; combien de fois un mot 
+apparaît dans un texte?</span></font></b></p>
+<p><font size="2" face="Courier New">Calculer le nombre d'occurrences ( compteur )d'une
+sous-chaîne (monMot) dans une String (monTexte).</font></p>
+<p><font face="Courier New" size="2">'On rappelle que <font color="#0000FF"> .IndexOf</font> permet de 
+chercher une sous-chaîne dans une chaîne (il retourne 0 si la chaîne n'est
+pas présente ou la position de la chaîne).</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 1; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+monTexte </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">String</span></font></font><font face="Courier New" SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+=&quot;jfkjf....&quot;</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Dim</span></font><font SIZE="2" face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+monMot As String= &quot;lulu&quot;</span></font></p>
+<p style="margin-top: 1; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim compteur As Integer =-1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Dim index As Integer =-1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Do</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; compteur+= 1</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp; index= monTexte.IndexOf 
+(monMot, index +1)</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">Loop Until index &lt;0</font></span></p>
+<p style="margin-top: 1; margin-bottom: 0">&nbsp;</p>
+<p><font face="Courier New" size="2">On initialise le compteur à -1 car la
+boucle Do Loop est systématiquement effectuée une fois et incrémente le
+compteur une fois de trop.</font></p>
+<p><font face="Courier New" size="2">On initialise l'index à -1 car dans la
+boucle Do Loop on utilise Index+1; sinon, si la chaîne cherchée débute au 1er
+caractère elle n'est pas comptée.</font></p>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-31.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve1-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+</html>

@@ -1,0 +1,466 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:10 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic  Net créer des contrôles par code</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v8-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">8.3</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Créer des contrôles par 
+    code.</font></b></td>
+    <td width="14%" height="76"><a href="v8-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Dans le code, on peut 
+créer soi-même de toutes pièces, des contrôles et leurs évènements.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #C0C0C0"><font size="4" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700">Créer par code des 
+contrôles</span></font></span><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">.
+</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Dans le code d'une procédure, il est possible de créer de toute pièce un 
+contrôle, mais attention, il faut <b>tout faire!!</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">
+Créons le bouton.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff"><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">D<font SIZE="2">im 
+Button1 As </font><font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+Button</font></b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Modifions ses 
+propriétés</font></p>
+</font><font SIZE="2" COLOR="#0000ff"><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1.Location =
+</font><font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Drawing.Point(56, 144)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.Name 
+= &quot;Button1&quot;</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Me</font><font SIZE="2">.Button1.Size = </font>
+<font SIZE="2" COLOR="#0000ff">New</font></font></b><font SIZE="2"><b><font face="Courier New"> 
+System.Drawing.Size(104, 24)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.TabIndex 
+= 0</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><b>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font></b><font SIZE="2"><b><font face="Courier New">.Button1.Text 
+= &quot;Button1&quot;</font></b></p>
+</font></font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le 
+bouton existe mais il faut l'ajouter&nbsp; à la collection <font color="#0000FF">
+Controls</font> de la fenêtre (Cette collection contient tous les contrôles 
+contenus dans la fenêtre):</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" size="2" color="#0000FF">Me.Controls.Add(Button1)</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">Ajouter
+des évènements.</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le 
+bouton existe mais pour le moment, <b>il ne gère pas les évènements</b>.</font></p>
+<p><font face="Courier New" size="2">Il faut inscrire le bouton dans une méthode 
+de gestion d'évènements. En d'autres termes, Vb doit savoir quelle procédure 
+évènement doit être déclenchée quand un évènement survient. Pour cela, il y a 2 
+méthodes:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Déclarer la variable avec le mot clé
+  <font color="#0000FF">WithEvents</font> ce qui permet ensuite d'utiliser le
+  <font color="#0000FF">Handles</font> du contrôle dans la déclaration d'une Sub:</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Déclaration <b>dans la partie 
+    déclaration du module</b>(en haut) (WithEvents n'est pas accepté dans une 
+    procédure):</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Private <b>WithEvents</b> 
+    Button1 As&nbsp; New Button</font></p>
+    <blockquote>
+      <p><font face="Courier New" size="2">Remarque Button1 est accessible dans 
+      la totalité du module .</font></p>
+    </blockquote>
+    <p><font face="Courier New" size="2">Puis écrire la sub évènement.</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Sub OnClique ( sender 
+    As Object, EvArg As EventArgs) <b>Handles </b>Button1.Click</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">End Sub&nbsp; </font>
+    </p>
+    <p><font face="Courier New" size="2">Ainsi VB sait que pour l'évènement 
+    Button1.Click , il faut déclencher la Sub OnClique.</font></p>
+    <blockquote>
+    <p><font face="Courier New" size="1">Il semble que quand on fait:</font><font color="#0000FF" face="Courier New" size="1">Private <b>WithEvents</b> 
+    Button1 As&nbsp; Button </font><font face="Courier New" size="1">(sans New) 
+    dans la partie déclaration puis </font>
+    <font color="#0000FF" face="Courier New" size="1">DIM Button1 As New Button </font>
+    <font face="Courier New" size="1">dans une procédure, la</font><font color="#0000FF" face="Courier New" size="1"> 
+    Sub OnClique </font><font face="Courier New" size="1">ne fonctionne pas!!</font></p>
+    <p><font face="Courier New" size="1">C'est un problème de 'visibilité' donc 
+    bien faire </font><font color="#0000FF" face="Courier New" size="1">Private WithEvents 
+    Button1 As&nbsp; New Button</font></p>
+    </blockquote>
+    <p><font face="Courier New" size="2">Remarque: il pourrait y avoir plusieurs Handles sur une même sub, donc des évènements différents sur des objets 
+    différents déclenchant la même procédure.</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">Utiliser <font color="#0000FF">
+  AddHandler</font></font></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New" size="2">Déclaration (possible dans une 
+    procédure):</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Dim Button1 As New Button</font></p>
+    <p><font face="Courier New" size="2">Puis écrire la gestion de l'évènement.( 
+    L'évènement Button1.click doit déclencher la procédure dont l'adresse est 
+    BouttonClique)</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2"><b>AddHandler</b> 
+    Button1.Click, <b>AddressOf</b>&nbsp; BouttonClique</font></p>
+    <p><font face="Courier New" size="2">(ne pas oublier la virgule avant 
+    AddressOf)</font></p>
+    <p><font face="Courier New" size="2">Enfin on écrit la sub qui 'récupère ' 
+    l'évènement:</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">Private Sub 
+    BouttonClique (sender As Object, evArgs As EventArgs)</font></p>
+    <p><font color="#0000FF" face="Courier New" size="2">End Sub&nbsp; </font>
+    </p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">Ainsi VB sait que pour un évènement du 
+Button1 , il faut déclencher la Sub ButtonClique</font></p>
+<p><u><b><font face="Courier New">Exemple avec AddHandler:</font></b></u></p>
+<p><b><font face="Courier New" size="2">Créons un TextBox nommé TB et une 
+procédure déclenchée par KeyUp de ce TextBox: </font></b></p>
+<font size="2" face="Courier New">
+<p>Dans une procédure (Button1_Click par exemple): Je crée un TextBox nommé TB, 
+je le positionne, je met dedans le texte 'ici une textbox'. Je l'ajoute aux 
+Contrôles du formulaire.</p>
+<p>Grâce à 'AddHandler', je lie l'évènement&nbsp;Keyup de cet objet <strong>TB</strong> 
+à la sub que j'ai crée :TextboxKeyup.</p>
+<p>&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2">
+Private</font><font size="2" color="#0000FF"> </font>
+<font color="#0000ff" size="2">Sub</font><font size="2" color="#0000FF"> 
+Button1_Click(</font><font color="#0000ff" size="2">ByVal</font><font size="2" color="#0000FF"> 
+sender </font><font color="#0000ff" size="2">As</font><font size="2" color="#0000FF"> 
+System.Object, </font><font color="#0000ff" size="2">ByVal</font><font size="2" color="#0000FF"> 
+e </font><font color="#0000ff" size="2">As</font><font size="2" color="#0000FF"> 
+System.EventArgs) </font><font color="#0000ff" size="2">Handles</font></font><font size="2"><font size="2" face="Courier New"><font color="#0000FF"> 
+Button1.Click</font></p>
+</font><font face="Arial" size="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font></font>
+  <font size="2" face="Courier New"><font color="#0000ff" size="2">Dim</font><font size="2" color="#0000FF"> 
+  TB </font><font color="#0000ff" size="2">As</font><font size="2" color="#0000FF">
+  </font><font color="#0000ff" size="2">New</font><font size="2"><font color="#0000FF"> 
+  System.Windows.Forms.TextBox</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">TB.Location =
+  </font></font><font color="#0000ff" size="2">New</font></font><font size="2"><font size="2" face="Courier New"><font color="#0000FF"> 
+  System.Drawing.Point(2, 2)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">TB.Text = 
+  &quot;ici une textBox&quot;</font></p>
+  </font><font face="Arial" size="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font></font>
+  <font face="Arial" size="2"><font color="#0000ff" size="2" face="Courier New">
+  Me</font><font size="2"><font size="2" face="Courier New"><font color="#0000FF">.Controls.Add(TB)</font></p>
+  </font><font face="Arial" size="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font></font></font>
+  <font size="2" face="Courier New"><b><font color="#0000ff" size="2">AddHandler</font></b><font size="2" color="#0000FF"><b>
+  </b><strong>TB</strong><b>.Keyup, </b></font><b>
+  <font color="#0000ff" size="2">AddressOf</font><font size="2" color="#0000FF"> 
+  TextboxKeyup.</font></b></p>
+</blockquote>
+<font size="2">
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" color="#0000FF">End 
+sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">Sub 
+TextboxKeyup.(</font><font color="#0000ff" size="2">ByVal</font><font color="#0000FF"> 
+sender </font><font color="#0000ff" size="2">As</font><font color="#0000FF">
+</font><font color="#0000ff" size="2">Object</font><font color="#0000FF">,
+</font><font color="#0000ff" size="2">ByVal</font><font color="#0000FF"> e
+</font><font color="#0000ff" size="2">As</font><font color="#0000FF"> 
+KeyEventArgs)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" size="2">...</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff" size="2">End</font><font color="#0000FF">
+</font><font color="#0000ff" size="2">Sub</font></p>
+<p><font color="#0000ff" size="2">&nbsp;</p>
+</font>
+<p>Si je crée un autre bouton TB2, j'ajoute de la même manière
+<font color="#0000ff">AddHandler</font><font color="#0000FF"> TB<strong>2</strong>.Click,
+</font><font color="#0000ff" size="2">AddressOf</font><font color="#0000FF"> 
+TextboxKeyup2, </font>ainsi chaque évènement de chaque contrôle à ses propres 
+routines évènement et en cliquant sur le bouton TB2 on déclenche bien 
+TextboxKeyup2</p>
+<p>Attention, la procédure TextboxKeyup doit recevoir impérativement les bons 
+paramètres: un objet et un KeyEventArgs car ce sont les paramètres retournés par 
+un KeyUp.</p>
+</font></font>
+<p><u><b><font face="Courier New">Autre exemple avec AddHandler mais avec 2 
+boutons:</font></b></u></p>
+<p><font face="Courier New" size="2">Il est possible de créer <b>plusieurs 
+contrôles ayant la même procédure évènement</b>:</font></p>
+<p><font face="Courier New" size="2">Exemple: Créons 2 boutons (BT1 et BT2) 
+déclenchant une seule et même procédures (BoutonClique).</font></p>
+<p><font face="Courier New" size="2">Dans ce cas, <b>comment savoir sur quel 
+bouton l'utilisateur à cliqué</b> ?</font></p>
+<p><font face="Courier New" size="2">En tête du module déclarons les boutons 
+(Ils sont <b>public</b>):</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF"> BT1
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Windows.Forms.Button</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Public</font><font SIZE="2" color="#0000FF"> BT2
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+System.Windows.Forms.Button</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Indiquons 
+dans form_load par exemple la routine évènement&nbsp; commune (BoutonClique) 
+grâce a AddHandler.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">Form_Load</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">BT1.Location = </font></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  System.Drawing.Point(2, 2)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">BT1.Text = &quot;Bouton 1&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New" color="#0000FF">.Controls.Add(BT1)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">BT2.Location = </font></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  System.Drawing.Point(100, 100)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">BT2.Text = &quot;Bouton 2&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">Me</font><font SIZE="2"><font face="Courier New" color="#0000FF">.Controls.Add(BT2)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">AddHandler</font><font SIZE="2" color="#0000FF"> 
+  BT1.Click, </font><font SIZE="2" COLOR="#0000ff">AddressOf</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  BoutonClique</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">AddHandler</font><font SIZE="2" color="#0000FF"> 
+  BT2.Click, </font><font SIZE="2" COLOR="#0000ff">AddressOf</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  BoutonClique</font></p>
+</blockquote>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Si c'est le 
+bouton 1 qui a été cliqué, afficher &quot;button1&quot; dans une TextBox:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Sub</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+BoutonClique(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+EventArgs)</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> sender
+  </font><font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2" color="#0000FF"> 
+  BT1 </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">&nbsp; TextBox1.Text = &quot;button 1&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">ElseIf</font><font SIZE="2" color="#0000FF"> 
+  sender </font><font SIZE="2" COLOR="#0000ff">Is</font><font SIZE="2" color="#0000FF"> 
+  BT2 </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">&nbsp; TextBox1.Text = &quot;button 2&quot;</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</blockquote>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p><font face="Courier New" size="2">La ruse est que déterminer quel objet (quel 
+bouton) à déclenché l'évènement, pour cela on utilise le premier paramètre, le sender; </font></p>
+<p><font face="Courier New" size="2">&nbsp;<font color="#0000FF">If sender Is 
+BT1 Then&nbsp; </font>: Si le sender est le bouton1..</font></p>
+<p><b><font face="Courier New" size="2">Noter bien:</font></b></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">- le mot clé <b>handles </b>&nbsp;permet d'associer un événement 
+à une procédure <b>au moment de la conception</b>.</font></p>
+<p ALIGN="LEFT"><font SIZE="2" face="Courier New">&nbsp;Le concepteur sait 
+qu'une procédure&nbsp; doit gérer les événements (il peut y en avoir plusieurs).</p>
+<p ALIGN="LEFT">- le mot clé <b>addhandler </b>permet d'associer un événement à 
+une procédure <b>au moment de l'exécution</b>. </font></p>
+<p ALIGN="LEFT"><font FACE="Courier New" SIZE="2">Ceci est utile dans un cadre 
+producteur-consommateur d'événements. Un objet produit un événement qui doit 
+informer d'autres objets; au cours de l'exécution on crée l'association entre 
+l'évènement et une procédure.</p>
+</font>
+<p><b><font face="Courier New" size="2">Remarque importante:</font></b></p>
+<p ALIGN="LEFT"><font size="2" face="Courier New"><span style="font-size: 10pt">Les</span><span style="font-size: 10pt">
+Handler ne sont en fait libérés qu’au déchargement complet du programme
+(application.exit) et non à la fermeture de la fenêtre et des objets contenus
+dans celle-ci...<o:p>
+</o:p>
+ Aussi , si vous ouvrez plusieurs fois un même formulaire possédant&nbsp;
+AddHandler sur un bouton, cela créera à chaque fois un Handler qui s'ajoute
+aux précédents et l'évènement se déclenchera plusieurs fois lors de
+l'appuie du bouton!!</span></font></p>
+<p ALIGN="LEFT"><span style="font-size: 10pt"><font size="2" face="Courier New">Il
+faut donc utiliser <font color="#0000FF">RemoveHandler</font> pour libérer le
+Handler.</font></span><font face="Courier New" size="2"> L’instruction
+s’utilise de la même façon que le AddHandler&nbsp;! (reprendre les lignes
+d’ajout du handler et remplacer AddHandler par RemoveHandler)<o:p>
+</o:p>
+.</font></p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT"><a name="Getting Started"><span style="background-color: #C0C0C0"><font size="4" color="#0000FF"><span style="font-family: Courier New; font-weight: 700">Les délégués:</span></font></span></p>
+<p><font face="Courier New" size="2">Pour la petite histoire, nous créons un <b>
+délégué</b> à chaque fois que nous créons une procédure gestionnaire d'évènement 
+avec le mot <font color="#0000FF">Handles </font>ou avec<font color="#0000FF"> 
+AddHandler.</font></font></p>
+</a>
+<p><font face="Courier New" size="2">En C on utilise des <b>pointeurs de 
+fonction</b> , adresse en mémoire indiquant ou le logiciel doit sauter quand on 
+appelle une fonction ou un évènement. En VB on parle de <b>délégué</b>.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="4" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Création de menu 
+contextuel par code:</span></font></p>
+<p><font face="Courier New" size="2">Double-cliquez sur le composant <b>
+ContextMenu</b> dans la Boîte à outils pour l'ajouter sur le formulaire: Cela 
+crée un </font><font color="#0000FF" face="Courier New" size="2">ContextMenu1</font></p>
+<p><font face="Courier New" size="2">Par code , on va le vider, puis ajouter des 
+items (lignes) au menu,&nbsp; on indique le texte de l'item mais aussi quelque 
+routine déclencher lorsque l'utilisateur clique sur le menu contextuel:&nbsp;
+</font></p>
+<p><font face="Courier New" size="2">' Vide le&nbsp; context menu.<br>
+<font color="#0000FF">ContextMenu1.MenuItems.Clear()</font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">' Ajoute une ligne 'Checked'.<br>
+<font color="#0000FF">ContextMenu1.MenuItems.Add(&quot;Ouvrir&quot;, New 
+System.EventHandler(AddressOf Me.Ouvrir_Click))</font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">' Ajoute une ligne 'Checked</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+ContextMenu1.MenuItems.Add(&quot;Fermer&quot;, New System.EventHandler(AddressOf 
+Me.Fermer_Click))</font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">' Test si le contrôle en cours est CheckBox, 
+si oui ajout d'un item &quot;Contrôler&quot;.<br>
+<font color="#0000FF">If ContextMenu1.SourceControl Is CheckBox1 Then<br>
+ContextMenu1.MenuItems.Add(&quot;Contrôler&quot;, New System.EventHandler(AddressOf 
+Me.Controler_Click))<br>
+End If</font><br>
+&nbsp;</font></p>
+<p><font face="Courier New" size="2">Bien sur, il faut écrire les Sub
+<font color="#0000FF">Ouvrir_Click() Fermer_Click Controler_Click.</font></font></p>
+<p><font face="Courier New" size="2">En fonctionnement, l'utilisateur Clique 
+'droit' sur un controle, le menu contextuel s'ouvre, il clique sur 'Ouvrir' ce 
+qui exécute la routine Ouvrir_Click.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v8-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v8-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v8-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:10 GMT -->
+</html>

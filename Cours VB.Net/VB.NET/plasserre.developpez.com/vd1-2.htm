@@ -1,0 +1,538 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:35 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net déploiement installation clickonce</title>
+<style>
+<!--
+	.RightPanel { margin-right:-15px;}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="vd1-1-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">D 1.2</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Distribution d' une 
+    application.</font></b></td>
+    <td width="14%" height="76"><a href="ve4-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Comment distribuer un programme VB.NET 
+?</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Il faut la &quot;déployer&quot;.</span></b></font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Introduction.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">A - Avant de publier</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">B - Installation simple</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">C - Exemple Windows Installer 
+en VB 2003</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">D - Exemple ClickOnce en VB 
+2005</font></b></p>
+  </blockquote>
+</blockquote>
+<font SIZE="2" face="Courier New">
+<p>&nbsp;</p>
+</font>
+<font face="Courier New">
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font color="#0000FF" size="5">Introduction:</font></span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>Mise à part l'installation hyper simple, Visual Studio fournit <b>deux stratégies différentes pour le déploiement</b> 
+(installation du logiciel chez l'utilisateur.) d'applications Windows&nbsp;:</p>
+</font>
+<font face="Courier New">
+<ul>
+  <li><u><b><font size="4" color="#0000FF">le déploiement avec un programme d'installation traditionnel à l'aide de 
+  la technologie </font><font size="5" color="#000080">Windows Installer</font><font size="4" color="#0000FF">.</font></b></u></li>
+</ul>
+<blockquote>
+  <blockquote>
+    <p>
+</font>
+<font SIZE="2" face="Courier New">
+    &nbsp; Avec le déploiement Windows 
+  Installer, vous empaquetez l'application dans un fichier setup.exe et 
+  distribuez ce fichier aux utilisateurs&nbsp;; ceux-ci exécutent le fichier 
+  Setup.exe pour installer l'application.</p>
+<p>Les fichiers du programme d'installation peuvent être distribués sur des disquettes ou 
+des CD-ROM, 
+ou peuvent être placés sur un lecteur réseau pour une installation sur un 
+réseau.</p>
+<p>Pour déployer une application, vous créez d'abord <b>un projet d'installation</b> 
+et définissez les propriétés du projet.</p>
+<p>Ce mode de déploiement est disponible en <b>VB 2003 </b>(c'est le seul 
+d'ailleurs en VB 2003) et en <b>VB 2005</b> (sauf pour le version Express)</p>
+<p>Voir ci dessous un exemple en VB 2003.</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><u><font color="#0000FF"><b>&nbsp;</b></font></u></font><u><font SIZE="4" face="Courier New"><b><font color="#0000FF">La publication d'une application à l'aide de la technologie
+  </font></b>
+</font>
+  <b><font color="#000080" size="5" face="Courier New">ClickOnce</font></b></u><font face="Courier New"></li>
+</ul>
+</font>
+<font SIZE="2" face="Courier New">
+<blockquote>
+  <blockquote>
+<p>&nbsp;Avec le déploiement ClickOnce, c'est très simple vous publiez l'application à un 
+emplacement centralisé et l'utilisateur l'installe ou l'exécute à partir de cet 
+emplacement.</p>
+<p>Les applications déployées avec ClickOnce <b>se mettent à jour automatiquement</b> 
+et représentent le meilleur choix pour les applications exigeant des 
+modifications fréquentes.</p>
+<p>Vous utilisez <b>l'Assistant Publication</b> pour empaqueter votre 
+application et la publier sur un site Web ou un partage de fichiers réseau&nbsp;; 
+l'utilisateur installe et lance directement l'application à partir de cet 
+emplacement en une seule étape.</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Ce mode de déploiement est 
+disponible en <b>VB 2005</b> (c'est le seul dans la version Express).</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">Voir ci dessous un exemple en VB 
+2005.</p>
+  </blockquote>
+</blockquote>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<p><span style="font-weight: 700; background-color: #C0C0C0">A - Avant de 
+'Publier':</span></p>
+</font>
+<p>
+<font face="Courier New" size="2" color="#0000FF">A - ATTENTION:</font></p>
+<p>
+<font SIZE="2" face="Courier New">
+Avant de publier votre programme, assurez-vous que vous l'avez testé et qu'il 
+s'exécute sans erreur.</font></p>
+<font SIZE="2" face="Courier New">
+<font color="#0000FF">B - On peut choisir le mode<b> Release</b> ou le mode <b>Debug</b>.</font><blockquote>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0"><b>En VB 2003</b>, en haut de la 
+    fenêtre de l'IDE il y a une liste déroulante elle contient</p>
+    <blockquote>
+      <p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff">Release</font>. 
+      (à utiliser pour générer la version à distribuer)</p>
+      <p style="margin-top: 0; margin-bottom: 0"><font color="#0000ff">Debug</font>&nbsp;&nbsp;&nbsp; 
+      (à utiliser pour générer une version à tester)</p>
+    </blockquote>
+    <p><b>En VB 2005</b>, si vous choisissez les paramètres de développement 
+    Visual Basic, l'outil qui permet de choisir entre la configuration
+    <font color="#0000ff">Debug</font> et
+    <font style="BACKGROUND-COLOR: #ffffff" color="#0000ff">Release</font> 
+    n'apparaît pas dans la barre d'outils. Visual Studio choisit automatiquement 
+    la configuration Debug lorsque vous cliquez sur <b>Démarrer</b> dans le menu
+    <b>Débogueur</b> et la configuration Release lorsque vous utilisez le menu
+    <b>Générer</b></p>
+  </blockquote>
+  <blockquote>
+    <p>&nbsp;</p>
+    <p>On peut utiliser une constante nommé DEBUG qui aura la valeur True si on 
+    est en mode Debug.</p>
+    <p>Cela permet d'écrire: </p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">#If Debug 
+    Then</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+    Stop</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">#End If</font></p>
+    <p>Ici Stop se produira uniquement si on est en mode Debug; en mode Release, 
+    il n'y aura pas d'arrêt.</p>
+  </blockquote>
+</blockquote>
+<p><font color="#0000FF">C - Puis, il faut <b>générer</b> en utilisant le Menu Générer-&gt; Générer la Solution.</font></p>
+<p>Le programme exécutable ainsi crée se trouve dans le répertoire \bin.</p>
+<p>&nbsp;</p>
+</font>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<p><span style="background-color: #C0C0C0"><b>B - Comment installer simplement un programme chez l'utilisateur?</b></span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>S'il s'agit d'un programme exe simple isolé, sans dll ou avec des dll 
+locales non partagées par d'autres programmes: on peut l'installer 'à la main'.</p>
+<ul>
+  <li>Il faut installer le Framework.NET sur l'ordinateur de destination:</li>
+  <li>Copier le répertoire \bin contenant l'exécutable (et éventuellement les fichiers de données 
+  et les dll) 
+  dans un répertoire destination.(Avec XCopy ou avec l'exploreur); On peut aussi 
+  le mettre sur un CD puis à partir du CD copier dans un répertoire sur un autre 
+  ordinateur.</li>
+</ul>
+<p>Pour utiliser le programme, l'utilisateur lance l'exécutable.</p>
+<p>On peut créer un raccourci permettant de lancer le programme: dans 
+l'explorateur, cliquer sur le fichier.exe, puis click droit, cela ouvre un menu, 
+cliquer sur 'Créer un raccourci'. Ensuite ce raccourci peut être déplacé sur le 
+bureau par drag and drop. </p>
+<p>Cette méthode ne prend pas en compte les 
+composants, dll partagées avec d'autres applications. Il faut plutôt créer un programme d'installation qui est nécessaire dans 
+les autres cas. </p>
+</font>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>C - Créer un programme 
+d'installation classique en VB 2003 ( de type Windows Installer):</b></span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>Le déploiement avec un programme d'installation traditionnel peut être 
+effectué à l'aide de 
+  la technologie <b>Windows Installer</b>.&nbsp; Avec le déploiement Windows 
+  Installer, <b>vous empaquetez l'application dans un fichier</b>
+<font color="#0000FF">setup.exe</font> et 
+  distribuez ce fichier aux utilisateurs&nbsp;; ceux-ci exécutent le fichier 
+  Setup.exe pour installer l'application.</p>
+<p>Pour cela, vous devez&nbsp; <b>ajoutez un projet d'installation à votre 
+solution</b> et définir les propriétés du projet de déploiement afin de créer un fichier d'installation distribué aux utilisateurs&nbsp;. 
+Les fichiers du programme d'installation&nbsp; peuvent être 
+distribués sur des supports traditionnels, comme les disquettes ou les CD-ROM, 
+ou peuvent être placés sur un lecteur réseau pour une installation sur un 
+réseau.</p>
+<p>Pour un déploiement via des supports 
+traditionnels, vous copiez  les fichiers à partir de l'emplacement de 
+génération vers une disquette ou autre support.  </p>
+<p>L'utilisateur lance <font color="#0000FF">Setup.exe</font> qui est sur un cd d'installation et ce 
+programme installe le logiciel.</p>
+<p>Voyons cela <b>dans</b> VB 2003:</p>
+<p><b><font color="#008000">Pour cela il faut créer un projet de configuration 
+et déploiement, en modifier certaines propriétés puis le générer.</font></b></p>
+<p>Menu Fichiers-&gt;Ajouter un projet-&gt;Nouveau Projet-&gt; Cliquez dans la liste sur 
+'Projet de configuration et de déploiement.' puis sur l'icône 'Assistant de 
+configuration'. </p>
+<p>Il faut vérifier en bas de la fenêtre 'Ajouter un nouveau projet' le chemin.</p>
+<p><img border="0" src="vgenere1.gif" width="360" height="243"></p>
+<p>Suivez les divers écrans en vous rappelant que vous utilisez une application 
+Windows en sortie principale, n'oubliez pas de rajouter si nécessaire certains 
+fichiers (les fichiers de données nécessaires ).</p>
+<p>Après le bouton 'Terminez', il est ajouté dans la fenêtre de l'explorateur de 
+solution une ligne nommé par défaut 'Setup1' correspondant au projet de 
+l'installateur. Il est crée un onglet 'Système de fichiers' dans la fenêtre 
+principale.</p>
+<p><b><font color="#008000">Vous venez de créer votre projet de configuration et 
+déploiement, vous pouvez maintenant le modifier.</font></b></p>
+<p><img border="0" src="vgenere2.gif" width="482" height="294"></p>
+<p>Le fait de cliquer sur le 'dossier d'application' ou sur sur ligne dans 
+l'explorateur de solution affiche dans la fenêtre de propriétés, les propriétés 
+de l'installation.</p>
+<p>La propriété <b>DefaultLocation</b> donne par exemple l'emplacement, le 
+répertoire d'installation. Il y a bien d'autres propriétés permettant de 
+personnaliser votre installateur (Auteur, nom de l'entreprise, Version...)</p>
+<p>Enfin quand on clique sur Setup1 dans l'explorateur de solutions, il apparaît 
+des boutons donnant accès à des éditeurs de registre, de d'interface de 
+l'installateur, de condition de lancement..</p>
+<p>Si on clique sur le 3eme bouton on ouvre <b>l'éditeur d'interface</b> qui donne 
+accès au déroulement de l'installateur. En cliquant sur la première fenêtre 
+('Bienvenue') on a accès aux propriétés de cette fenêtre: texte, image..</p>
+<p><img border="0" src="vgenere3.gif" width="432" height="406">&nbsp; </p>
+<p><font color="#008000"><b>Pour créer effectivement l'installateur</b> il faudra 
+enregistrer puis utiliser le Menu 
+Générer-&gt; Générer Setup1.</font></p>
+<p>Un répertoire nommé dans notre exemple 'SeptUp1' est crée; il contient</p>
+<p><b>Setup.exe</b></p>
+<p><b>Setup1.msi</b></p>
+<p><b>Setup.ini</b></p>
+<p>il suffit de mettre ces fichiers sur un cd et de le donner à l'utilisateur 
+final qui installera votre logiciel en lançant Setup.exe.</p>
+<p>Le logiciel d'installation vérifie si le FrameWork est bien installé.</p>
+<p>&nbsp;</p>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<p><span style="background-color: #C0C0C0"><b>D - Créer un programme 
+d'installation 'ClickOnce' en en VB 2005:</b></span></p>
+</font>
+<p>Avec le déploiement 
+</font>
+<font SIZE="4" face="Courier New">
+ClickOnce</font><font SIZE="2" face="Courier New">, vous publiez l'application à un 
+emplacement centralisé et l'utilisateur l'installe ou l'exécute à partir de cet 
+emplacement. ClickOnce se base sur le protocole HTTP pour effectuer les 
+installations ou les mises à jour.</p>
+<p>L'emplacement centralisé peut-être une page WEB.<br>
+&nbsp;</p>
+<p>Les applications déployées avec ClickOnce se mettent à jour automatiquement 
+et représentent le meilleur choix pour les applications exigeant des 
+modifications fréquentes.</p>
+<p>Avec ClickOnce, vous utilisez <b>l'Assistant Publication</b> pour empaqueter votre 
+application et la publier sur un site Web ou un partage de fichiers réseau&nbsp;; 
+l'utilisateur installe et lance directement l'application à partir de cet 
+emplacement en une seule étape.</p>
+</font>
+<font face="Courier New" color="#008000" size="5">
+<p><u><b><i>Exemple d'installation à partir d'un CD-ROM sans mise à jour:</i></b></u></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p><b><font color="#0000FF">- Lancer l'assistant de publication:</font></b></p>
+<p>Une fois que vous êtes prêt à le publier( code vérifié, génération effectuée), vous pouvez 
+lancer l'<b>Assistant Publication</b> en sélectionnant la commande <b>Publier</b> 
+dans le menu <b>Générer</b>.</p>
+<p>L'<b>Assistant Publication</b> comprend trois étapes&nbsp;:  </p>
+<p><font color="#0000FF"><b>- La première étape 
+consiste à sélectionner l'emplacement où vous souhaitez placer le programme 
+d'installation</b></font> et tous les fichiers associés. Si vous publiez votre programme 
+sur un CD-ROM, sélectionnez un dossier sur votre disque local. (Vous graverez 
+ensuite ce dossier sur le CD-ROM). </p>
+<p align="center"><img border="0" src="vdeploy1.JPG" width="515" height="384"></p>
+<p align="left">&nbsp;(publish\ crée un répertoire sous les sources (au même 
+niveau que le répertoire bin )</p>
+<p><b><font color="#0000FF">- La deuxième étape consiste à spécifier la manière 
+dont les utilisateurs installeront votre programme&nbsp;</font></b>; dans le cas 
+présent, à partir d'un CD-ROM.</p>
+<p align="center"><img border="0" src="vdeploy2.JPG" width="516" height="385"></p>
+<p><b><font color="#0000FF">- L'étape finale implique le fait de spécifier si votre programme vérifie ou 
+non automatiquement à chaque démarrage la présence d'une version plus récente.</font></b></p>
+<p align="center"><img border="0" src="vdeploy3.JPG" width="516" height="386"></p>
+<p align="left"><font size="2" color="#0000FF"><span style="font-weight: 700">- 
+Puis cliquez sur le bouton '</span><b>Terminer</b><span style="font-weight: 700">'.</span></font></p>
+<p align="left">Quand tout est terminé, cela ouvre une fenêtre montrant le 
+contenu du répertoire \publish: </p>
+<p align="left"><img border="0" src="vdeploy4.JPG" width="666" height="147"></p>
+<p>Il y a</p>
+<p><font color="#0000FF">Setup.exe</font></p>
+<p><font color="#0000FF">listgénéric.application</font></p>
+<p><font color="#0000FF">listgénéric_1_0_0_0.application</font></p>
+<p>et un répertoire '<font color="#0000FF">listgénéric</font>_1_0_0_0'</p>
+<p>&nbsp;&nbsp;&nbsp; <font color="#0000FF">listgénéric.exe.deploy</font></p>
+<p><font color="#0000FF">&nbsp;&nbsp;&nbsp; listgénéric.exe.manifest</font></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New" color="#008000" size="5">
+<p align="left"><u><b><i>Exemple d'installation à partir d'un Site WEB avec mise à 
+jour automatique:</i></b></u></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p>L'<b>'Assistant Publication'</b> 
+      s'exécute.<p>Dans la page <b>Où souhaitez-vous publier l'application&nbsp;?</b> entrez l'URL du site Web où vous souhaitez publier votre 
+      programme. Par exemple, <tt>http://www.mysite.com/myprogram</tt>. </p>
+      <div class="alert">
+        <table cellSpacing="0" cellPadding="0" width="100%">
+          <tr>
+            <th align="left">
+            <font size="2">Attention</font></th>
+          </tr>
+          <tr>
+            <td><font size="2">Pour publier votre programme sur un serveur Web, ce dernier doit 
+            exécuter IIS (Internet Information Services), les extensions 
+            FrontPage doivent être installées, et vous devez disposer de 
+            privilèges d'administration dans IIS.</font></td>
+          </tr>
+        </table>
+      </div>
+      <p>Dans la page suivante de 
+      l'Assistant.<p>Sur la page <b>L'application sera-t-elle disponible hors connexion&nbsp;?</b>, 
+      sélectionnez <b>Oui, cette application est disponible en ligne ou hors 
+      connexion</b>, la valeur par défaut.</p>
+<blockquote>
+  <blockquote>
+    <p>L'application peut être accessible que de façon <b>online</b> (retélechargée 
+    à chaque fois) ou de façon <b>offline</b>, téléchargée, installée et 
+    accessible via le menu <i>Démarrer</i></p>
+  </blockquote>
+</blockquote>
+<p>Cliquez sur <b>Terminer</b> pour publier le programme.</p>
+<p>Le programme 
+      est publié sur le site Web spécifié, et une page HTML est créée.<p>Sur un autre ordinateur, ouvrez Internet Explorer, naviguez jusqu'à l'URL 
+      saisie auparavant, puis cliquez sur le lien <b>Installer</b> pour 
+      installer le programme.</p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New" color="#008000">
+<font SIZE="5" face="Courier New">
+<p align="left"><u><b><i>Configuration avancée du projet de déploiement.</i></b></u></p>
+</font>
+</font>
+<font SIZE="2" face="Courier New">
+<font face="Courier New">
+<p align="left">Nous allons modifier&nbsp; plein de choses avant de déployer:</p>
+<p align="left">Veuillez ouvrir le <b>panneau des propriétés de votre projet</b> 
+(menu Projet &gt; Propriétés de nomdeprogramme ou&nbsp; double-cliquer sur MyProjet 
+dans la fenêtre d'explorateur de solution) .</p>
+<p align="left"><u><b><i>Signer le projet:</i></b></u></p>
+<p align="left">Cliquez sur l'onglet signature puis sur la case 'Signer les 
+manifestes CliclOnce'.</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><img border="0" src="vdeploy5.JPG" width="641" height="369"></p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New">
+<p align="left"><u><b><i>Activer la Sécurité:</i></b></u></p>
+<p align="left">Onglet sécurité, activer les paramètres de sécurité.</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><img border="0" src="vdeploy6.JPG" width="637" height="453"></p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New">
+<p align="left"><u><b>Onglet publier:</b></u></p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><img border="0" src="vdeploy7.JPG" width="655" height="410"></p>
+</font>
+<font face="Courier New">
+<p align="left">Pour indiquer l'emplacement de la publication, si l'application 
+est disponible en ligne ou hors connexion (installée).</p>
+<p align="left">Si on coche la case incrémenter.. cela incrémente 
+automatiquement les versions.</p>
+<p align="left">&nbsp;</p>
+<p align="left">4 boutons donnent accès :</p>
+<p align="left">Au fichier d'application.</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left">&nbsp;</p>
+<p align="center">
+<img border="0" src="vdeploy8.JPG" align="left" width="600" height="269"></p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New">
+<p align="left">Au composant requis</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left">&nbsp;</p>
+<p align="left"><img border="0" src="vdeploy9.JPG" width="506" height="400"></p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New">
+<p align="left">Au 'mise à jour':</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><img border="0" src="vdeploy10.JPG" width="465" height="414"></p>
+</font>
+<font face="Courier New">
+<p align="left">Aux options de publication:</p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><img border="0" src="vdeploy11.JPG" width="426" height="483"></p>
+<p align="left">&nbsp;</p>
+</font>
+<font face="Courier New">
+<p align="left">On peut ensuite utiliser les boutons qui sont en bas:</p>
+<p align="left">Bouton 'Assistant de publication' et 'Publier maintenant'.</p>
+<p align="left">
+<font face="Courier New" color="#008000" SIZE="2">
+<img border="0" src="vdeploy7.JPG" width="655" height="410"></font></p>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left">&nbsp;</p>
+</font>
+</font>
+<font face="Courier New" color="#008000">
+<p align="left"><u><b><i>Ajouter enlever des fichiers.</i></b></u></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p align="left">- Comment ajouter les fichiers publiés via ClickOnce:</p>
+<p align="left"><b>Tous les fichiers du projet</b> qui ne contiennent pas de 
+code sont déployés avec l'application. </p>
+<p align="left">Il suffirait donc d'inclure dans le projet des fichiers de 
+données et il seraient inclus!! A voir, je ne sais pas comment faire.</p>
+<p align="left">Les fichiers d'une application ClickOnce sont ensuite gérés dans la boîte de 
+    dialogue <b>Fichiers d'application</b>, accessible à partir de la page <b>
+    Publier</b> du <b>Concepteur de projets</b>. Dans la fenêtre de 
+l'explorateur de solutions à droite, double-cliquer sur 'MyProjet' puis sur 
+l'onglet Publier enfin sur le bouton 'Fichiers d'application'.</p>
+<p align="center"><img border="0" src="vdeploy8.JPG" width="600" height="269"></p>
+<p>Exclure un fichier</p>
+<p>Dans la boîte de dialogue <b>Fichiers d'application</b>, 
+        sélectionnez le fichier que vous souhaitez exclure.</p>
+<p>Dans le champ <b>État de la publication</b>, sélectionnez <b>Exclure</b> 
+        dans la liste déroulante.</p>
+<p>Fichier de données:</p>
+<p>Dans le champ <b>État de la publication</b>, sélectionnez <b>Fichier 
+        de données</b> dans la liste déroulante.</p>
+<p align="left">Composant requis:</p>
+<p>Dans la boîte de dialogue <b>Fichiers d'application</b>, 
+        sélectionnez l'assembly d'application (fichier .dll) que vous souhaitez 
+        marquer comme composant requis. Notez que votre application doit 
+        posséder une référence à l'assembly d'application pour figurer dans la 
+        liste.</p>
+<p>Dans le champ <b>État de la publication</b>, sélectionnez <b>
+        Composant requis</b> dans la liste déroulante.</p>
+<p>&nbsp;</p>
+<p><b>Comment cela se passe chez celui qui installe?</b></p>
+<p>Par exemple il faut installer le programme chiffreromain, il a un CD avec les 
+fichiers </p>
+<p><font color="#0000FF">Setup.exe</font></p>
+<p><font color="#0000FF">chiffreromain.application</font></p>
+<p><font color="#0000FF">chiffreromain_1_0_0_0.application</font></p>
+<p>et un répertoire '<font color="#0000FF">chiffreromain</font>_1_0_0_0'</p>
+<p>&nbsp;&nbsp;&nbsp; <font color="#0000FF">chiffreromain.exe.deploy</font></p>
+<p><font color="#0000FF">&nbsp;&nbsp;&nbsp; chiffreromain..exe.manifest</font></p>
+<p align="left">Pour installer , on double clique sur Setup.exe.</p>
+<p align="left">Si le Framework n'est pas installé et s'il y a une connexion 
+Internet, la fenêtre suivante s'ouvre et permet de télécharger et d'installer le 
+Framework.</p>
+<p align="center"><img border="0" src="vinst1.JPG" width="378" height="456"></p>
+<p align="left">&nbsp;Puis une fenêtre permet d'installer le programme.</p>
+<p align="center"><img border="0" src="vinst2.JPG" width="517" height="225"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><b>Pour lancer le programme</b>, pas de problème , <b>
+l'installateur ajoute le nom du programme dans le menu 'Démarrer' </b>et aussi 
+dans le menu programme, menu 'nom de l'éditeur' puis chiffreromain.</p>
+<p align="left"><b>Pour désinstaller,</b> pas de problème, dans menu 'Démarrer', 
+&quot;Paramètres&quot;, &quot;Ajouter et supprimer programmes&quot;, le programme est répertorié et 
+un bouton permet de le désinstaller.</p>
+<p align="left">Mais, ou s'installe le programme?</p>
+</font>
+<p align="left"><font face="Courier New" size="2">C:\Documents and Settings\NomUtilisateur\LocalSettings\Apps\NomSociété\JHBVHR0G.E57\ZBOQP5EG.EYY\chif..tion_6625898959f0f00b_0001.0000_c9deafec99019f28</font></p>
+<p align="left"><font face="Courier New" size="2">On remarque que l'exécutable 
+n'est plus dans un répertoire de 'Programs Files' mais dans les documents , le 
+Local Setting, sous le nom de la société (celui qui est dans l'assembly), sous 
+le nom du programme mais aussi sous le numéro de version...</font></p>
+<p align="left"><font face="Courier New" size="2">&nbsp;</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="vd1-1-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve4-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/vd1-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:15 GMT -->
+</html>

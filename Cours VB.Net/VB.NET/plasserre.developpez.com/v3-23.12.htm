@@ -1,0 +1,654 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:13 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : textbox richtextbox textblock wpf Flowdocument </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.23.12</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">WPF: Les contrôles de
+    Texte.</font></b></td>
+    <td width="14%" height="76"><a href="v3-23.13.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les contrôles 
+permettant de voir du texte sont:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;
+Les Labels&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les
+TextBlock&nbsp;&nbsp;&nbsp;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+TextBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+RichTextBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">&nbsp;</span></font><font size="4"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">A-
+l</span><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">es
+labels.</span></font></p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2" color="#0000FF">&lt;</font><font face="Courier New" size="2" color="#A31515">Label</font><font face="Courier New" size="2" color="#0000FF">
+</font><font face="Courier New" size="2" color="#FF0000">Name</font><font face="Courier New" size="2" color="#0000FF">=&quot;Montexte&quot;
+</font><font face="Courier New" size="2" color="#FF0000">FontSize</font><font face="Courier New" size="2" color="#0000FF">=&quot;20&quot;&gt;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ceci est un cours de programmation<br>
+&lt;</font><font face="Courier New" size="2" color="#A31515">/label</font><font face="Courier New" size="2" color="#0000FF">&gt;&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">
+La fenêtre affiche le texte &quot;Ceci est un cours de programmation&quot;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">
+Le nom du label &quot;Montexte&quot;, n'est pas affiché, il
+sert à accéder à l'élément à partir d'un programme.
+</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Dans
+le code Content permet de modifier le texte&nbsp; affiché.&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">Montexte.Content=
+&quot;nouveau texte&quot;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;</span></font><font size="4"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">B-
+l</span><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">es&nbsp;TextBlock.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">Permettent
+d'<b>afficher du texte</b> sur un formulaire sans possibilité de le modifier.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><img border="0" src="vwpftextblock.JPG" width="585" height="315"></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Le cadre gris ne
+sera pas affiché.</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Cela donne en
+Xaml:</font></p>
+<p style="margin-top: 6.0pt"><span style="COLOR: blue"><font face="Courier New" size="2">&lt;</font></span><font face="Courier New" size="2"><font color="#800080">TextBlock</font><span style="COLOR: blue">&gt;</span>&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">Mon texte&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="COLOR: blue">&lt;/</span><font color="#800080">TextBlock</font><span style="COLOR: blue">&gt;</span></font></p>
+<p style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">On peut utiliser
+les balises &lt;<font color="#800080">Bold</font>&gt; (gras), <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Italic</span><span style="COLOR: blue">&gt;
+</span>(Italique) pour 'enrichir' le texte.</font></p>
+<p style="margin-top: 6.0pt"><span style="COLOR: blue"><font face="Courier New" size="2">&lt;</font></span><font face="Courier New" size="2"><font color="#800080">TextBlock</font>
+<font color="#FF0000">Name</font>=&quot;textBlock1&quot; <font color="#FF0000">TextWrapping</font>=&quot;Wrap&quot;<span style="COLOR: blue">&gt;</span>&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Bold</span><span style="COLOR: blue">&gt;</span>TextBlock<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Bold</span><span style="COLOR: blue">&gt;</span>
+est fait pour <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Italic</span><span style="COLOR: blue">&gt;</span>afficher<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Italic</span><span style="COLOR: blue">&gt;</span>
+du texte.&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="COLOR: blue">&lt;/</span><font color="#800080">TextBlock</font><span style="COLOR: blue">&gt;</span></font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">On peut rajouter
+plein d'attributs:</font><font face="Courier New" size="2" color="#0000FF">&nbsp;
+</font><font face="Courier New" size="2" color="#FF0000">Background</font><font face="Courier New" size="2" color="#800080">=</font><font face="Courier New" size="2" color="#0000FF">&quot;AntiqueWhite&quot;
+</font><font face="Courier New" size="2" color="#FF0000">TextAlignment</font><font face="Courier New" size="2" color="#0000FF">=&quot;Center&quot;&nbsp;</font></p>
+<p style="margin-top: 6.0pt">&nbsp;</p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2">En VB il faut
+utiliser la propriété Text pour modifier le texte affiché.</font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#0000FF">textBlock1.Text=
+&quot;Texte à afficher&quot;</font></p>
+<p style="margin-top: 6.0pt"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">C-
+l</span></font><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0"><font size="4">es&nbsp;TextBox.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">Permettent d'afficher&nbsp; du texte, il est
+modifiable par l'utilisateur.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">La police de caractère, sa taille, la
+couleur, l'enrichissement des caractères affectent la totalité du texte. Il
+n'est pas possible d'enrichir (gras, italique..) une partie du texte
+seulement.&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<img border="0" src="vwpftextbox.JPG" width="708" height="323">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000FF">TextBox1.Text</font>
+contient le texte affiché dans la textBox. <font color="#0000FF">AppendText</font>
+permet d'ajouter du texte.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000FF">TextBox1.IsReadOnly=True</font>
+interdit les modifications du texte.&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font color="#0000FF" face="Courier New" size="2">TextBox1.</font><font face="Courier New" size="2"><font color="#0000FF">MaxLines</font>
+et <font color="#0000FF">TextBox1.MinLines</font> permettent de définir si le
+TextBox est multilignes.( S'ils sont égales à 1, on a une seule ligne).&nbsp;</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#0000FF">AcceptEnter</font>
+et <font color="#0000FF">AcceptTab</font> autorise respectivement le passage à
+la ligne quand on tape 'Enter' et l'insertion de tabulation. Si <font color="#0000FF">AcceptEnter=False</font><font color="#111111">,
+on ne peut saisie qu'une seule ligne.</font> </font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2" color="#0000FF">VerticalScrollBarVisibility=True</font><font color="#111111" face="Courier New" size="2">
+affiche une scroll bar verticale.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font color="#0000FF" face="Courier New" size="2">TextBox1.</font><font face="Courier New" size="2"><font color="#0000FF">MaxLength</font>
+permettent de définir le nombre de caractères. 0 pour saisie illimitée.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font color="#0000FF" face="Courier New" size="2">TextBox1.Clear
+</font><font face="Courier New" size="2">efface le texte.</font>
+</p>
+<p>
+<font size="2" COLOR="#0000ff" face="Courier New">
+<font color="#0000FF">TextBox1.</font>LineCount </font>
+<font size="2" color="#111111" face="Courier New">
+donne le nombre de lignes</font><font size="2" COLOR="#0000ff" face="Courier New">&nbsp;
+<font color="#0000FF" face="Courier New" size="2">TextBox1.</font>GetLineText(2)
+</font><font size="2" color="#111111" face="Courier New">indique le contenu de
+la ligne numéro 2 (sans oublier que la première ligne est la ligne 0).</font></p>
+<p><font size="2" face="Courier New" color="#111111">Si l'utilisateur a sélectionné
+du texte, il est dans </font><font size="2" COLOR="#0000ff" face="Courier New"><font color="#0000FF">TextBox1.</font>SelectedText.</font></p>
+<p><font size="2" COLOR="#0000ff" face="Courier New"><font color="#0000FF" face="Courier New" size="2">TextBox1.</font>SelectionStart,
+<font color="#0000FF" face="Courier New" size="2">TextBox1.</font>SelectionLength
+</font><font size="2" color="#111111" face="Courier New">indique la position du
+premier caractère sélectionné (le premier caractère du texte étant le
+caractère 0) et le nombre de caractères sélectionnés. On peut utiliser ces propriétés
+pour sélectionner du texte avec du code ou utiliser&nbsp; </font><font SIZE="2" color="#0000FF" face="Courier New">TextBox1.Select(3,
+2), il </font><font SIZE="2" face="Courier New">existe enfin</font><font SIZE="2" color="#0000FF" face="Courier New">
+SelectAll </font><font size="2" color="#111111" face="Courier New">.</font></p>
+<p>
+<font size="2" color="#111111" face="Courier New">
+Si</font>
+<font size="2" COLOR="#0000ff" face="Courier New">
+ TextBox1.SpellCheck.IsEnabled = True </font>
+<font size="2" color="#111111" face="Courier New">
+le correcteur d'orthographe est opérationnel: il souligne les fautes et un
+click droit permet de voir une liste des corrections possibles:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><img border="0" src="vwpfsplechtx.JPG" width="301" height="261"></p>
+</font>
+<p><font face="Courier New" size="2" COLOR="#0000ff">LineDown, LineUp </font><font face="Courier New" size="2">permettent
+de faire défiler le texte en bas ou en haut . Il existe aussi</font><font face="Courier New" size="2" COLOR="#0000ff">
+LineLeft </font><font face="Courier New" size="2">et</font><font face="Courier New" size="2" COLOR="#0000ff">
+LineRight PageDown, PagUp, PageRight, PageLeft.&nbsp;</font></p>
+<p><font face="Courier New" size="2" COLOR="#0000ff">ScrollToHome ScrollToEnd,
+ScrollToLine </font><font face="Courier New" size="2">permettent de déplacer le
+texte visible.</font></p>
+<p><font face="Courier New" size="2">On peut aussi utiliser <font color="#0000FF">Undo</font>,
+<font color="#0000FF">Redo</font>,<font color="#0000FF"> Cut,</font> <font color="#0000FF">Copy,</font>
+<font color="#0000FF">Paste</font>.</font></p>
+<p><font face="Courier New" size="2">Si le texte est modifié cela déclenche;</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Sub</font> <font color="#0000FF">TextBox1_TextChanged</font>(<font SIZE="2" COLOR="#0000ff">ByVal</font>
+sender <font SIZE="2" COLOR="#0000ff">As</font>
+System.Object, <font SIZE="2" COLOR="#0000ff">ByVal</font>
+e <font SIZE="2" COLOR="#0000ff">As</font>
+System.Windows.Controls.TextChangedEventArgs) <font SIZE="2" COLOR="#0000ff">Handles</font>
+TextBox1.TextChanged</font></font></p>
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub</font></font></p>
+<p><font face="Courier New" size="2">Quand l'utilisateur frappe une touche cela
+déclenche <font color="#0000FF">KeyDown</font> puis <font color="#0000FF">KeyUp</font>&nbsp;
+(pas de keyPress!!)</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Sub</font> <font color="#0000FF">TextBox1_KeyUp</font>(<font SIZE="2" COLOR="#0000ff">ByVal</font>
+sender <font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Object</font>,
+<font SIZE="2" COLOR="#0000ff">ByVal</font> e <font SIZE="2" COLOR="#0000ff">As</font>
+System.Windows.Input.KeyEventArgs) <font SIZE="2" COLOR="#0000ff">Handles</font>
+TextBox1.KeyUp</font></font></p>
+<p><font size="2" color="#0000FF" face="Courier New">&nbsp;&nbsp;&nbsp; If e.Key = Key.OemComma Then ...</font></p>
+<font SIZE="2">
+<p><font face="Courier New"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub
+</font>
+</font></p>
+<p><font face="Courier New">On note que la Sub KeyUp a un paramètre<font color="#0000ff">
+e </font>de type <font color="#0000FF">
+System.Windows.Input.KeyEventArgs</font> qui a la propriété <font color="#0000FF">Key</font>
+qui contient la touche tapée. Malheureusement <font color="#0000FF">e.Key</font>
+est en lecture seule!! on ne peut donc pas modifier le caractère tapé!!</font></p>
+<p></font></p>
+<p style="margin-top: 6.0pt" align="left">
+<b><font face="Courier New" size="2">Créons
+un TextBox en Xaml:</font></b>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><font face="Verdana, Arial, Helvetica, sans-serif"><span style="COLOR: blue">&lt;</span><span style="COLOR: maroon"><font color="#000000">TextBox</font></span><span style="COLOR: blue">&gt;</span><span style="font-size: 10pt; font-family: Courier New">Ceci
+est le texte</span><span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon"><font color="#000000">TextBox</font></span><span style="COLOR: blue">&gt;</span></font></span><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New"><br>
+</span>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4"><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color: #C0C0C0">D-
+l</span></font><span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0"><font size="4">e
+RichTextBox&nbsp;:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Rich Text</font> veut dire 'Texte enrichi'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Le contrôle  </span><font color="#0000FF">
+<span style="font-family: Courier New; font-weight: normal">
+RichTextBox</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+permet d'afficher, d'entrer et de 
+manipuler du texte mis en forme. Il effectue les mêmes tâches que le contrôle </span>
+</font><font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+TextBox</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2">, 
+mais il peut également afficher des polices, des couleurs pour une partie du
+texte et des liens, charger 
+du texte et des images incorporées à partir d'un fichier, ainsi que rechercher 
+des caractères spécifiques.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">Toutes
+les propriétés correction d'orthographe des TextBox s'appliquent aux
+RichTextBox.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Les
+<b>RichTextBox</b> en WPF n'affichent <b>pas du RTF</b> comme dans les
+WindowsForms mais des '<b>FlowDocument'</b> qui sont en <b> Xml.</b>&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2"><b>En
+Xaml</b> c'est simple, un FlowDocument est de la forme :</font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font size="2">Dedans
+il y a des paragraphes<font COLOR="#0000ff"> &lt;</font><font COLOR="#a31515">Paragraph</font><font face="Courier New" COLOR="#0000ff">&gt;,
+</font>dans les paragraphes il y a le texte à afficher et l'enrichissement à
+l'aide de balise<font face="Courier New" COLOR="#0000ff"> (</font><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Bold</font><font COLOR="#0000ff">&gt;</font>
+par exemple).</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Paragraph</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ceci
+est un texte avec une partie</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Bold</font><font COLOR="#0000ff">&gt;</font>en
+gras<font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Bold</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Paragraph</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On le met dans une RichTextBox::</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515" face="Courier New">RichTextBox</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Paragraph</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#a31515" face="Courier New" size="2">Ceci
+est un texte avec une partie</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">Bold</font><font COLOR="#0000ff">&gt;</font><font COLOR="#a31515">en
+gras</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Bold</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">Paragraph</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">FlowDocument</font><font COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2" face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">RichTextBox</font><font COLOR="#0000ff">&gt;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Cela
+donne:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><img border="0" src="vwpfrichtextbox2.JPG" width="300" height="135"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Le
+texte est éditable, modifiable.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Dans
+le code, en VB, cela se complique:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+faut instancier un FlowDocument, un Paragraph, ajouter une ligne au paragraphe
+puis ajouter le paragraphe au Blocks du FlowDocument. Enfin il faut affecter à
+la propriété Document du RichTextBox le FlowDocument.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+doc As New FlowDocument</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+para As New Paragraph</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font color="#0000FF">para.Inlines.Add(</font><font COLOR="#a31515">&quot;</font></font><font color="#a31515" face="Courier New" size="2">Ceci
+est un texte</font><font size="2" face="Courier New"><font COLOR="#a31515">&quot;</font>)</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">doc.Blocks.Add(para)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">RichTextBox1.Document
+= doc</font></p>
+</font>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on veut ajouter l'enrichissement , il faut
+instancier un Bold, y ajouter le texte, ajouter au paragraphe puis au Block!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+doc As New FlowDocument</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+para As New Paragraph</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font color="#0000FF">para.Inlines.Add(</font><font COLOR="#a31515">&quot;</font></font><font color="#a31515" face="Courier New" size="2">Ceci
+est un texte avec une partie</font><font size="2" face="Courier New"><font COLOR="#a31515">&quot;</font>)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+b As New Bold</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><font color="#0000FF">b.Inlines.Add(</font><font COLOR="#a31515">&quot;en
+gras&quot;</font>)</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">para.Inlines.Add(b)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">doc.Blocks.Add(para)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New" color="#0000FF">RichTextBox1.Document
+= doc</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Sélectionner la totalité du texte:</b></font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim tr As New TextRange(RichTextBox1.Document.ContentStart,
+RichTextBox1.Document.ContentEnd)</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2" color="#0000FF">MessageBox.Show(tr.Text)</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est du texte non enrichi!!</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b>
+<font face="Courier New" size="2">
+load save print</font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Créons
+un RichTextBox et 3 boutons pour enregistrer lire dans un fichier le texte ou
+pour l'imprimer.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+&nbsp;
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">RichTextBox</span>
+Name=&quot;richTB&quot;<span style="COLOR: blue">&gt;</span> &nbsp;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+ <font face="Courier New" size="2">
+ <span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">FlowDocument</span><span style="COLOR: blue">&gt;</span>
+ </font>
+</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+&nbsp;
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Paragraph</span><span style="COLOR: blue">&gt;</span>
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Run</span><span style="COLOR: blue">&gt;</span>Paragraph
+1<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Run</span><span style="COLOR: blue">&gt;</span>
+<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Paragraph</span><span style="COLOR: blue">&gt;</span>
+&nbsp;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">FlowDocument</span><span style="COLOR: blue">&gt;</span>
+&nbsp;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">RichTextBox</span><span style="COLOR: blue">&gt;</span>
+</font>
+</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+&nbsp;
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Button</span>
+Click=&quot;SaveRTBContent&quot;<span style="COLOR: blue">&gt;</span>Enregistrer texte
+<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue">&gt;</span>
+</font>
+</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+&nbsp;
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Button</span>
+Click=&quot;LoadRTBContent&quot;<span style="COLOR: blue">&gt;</span>Charge
+texte<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue">&gt;</span>
+</font>
+</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+&nbsp;
+<span style="COLOR: blue">&lt;</span><span style="COLOR: maroon">Button</span>
+Click=&quot;PrintRTBContent&quot;<span style="COLOR: blue">&gt;</span>Imprime
+texte<span style="COLOR: blue">&lt;/</span><span style="COLOR: maroon">Button</span><span style="COLOR: blue">&gt;</span>
+&nbsp;</font></p>
+<p style="margin-top: 2">&nbsp;<p style="margin-top: 2"><font face="Courier New" size="2">Voici le code VB
+contenant les 3 routines permettant les 3 actions.</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><span class="keyword"><font color="#0000FF">Imports</font></span><font color="#0000FF">
+System</font>
+</font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Imports</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+System.IO</font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Imports</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+System.Windows</font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Imports</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+System.Windows.Controls</font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Imports</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+System.Windows.Documents</font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Imports</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+System.Windows.Media</font>
+<p style="margin-top: 2">&nbsp;</p>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">Namespace</font>
+</span>
+<font color="#0000FF" size="2" face="Courier New">
+<a href="http://labs.developerfusion.co.uk/SourceViewer/view/SSCLI/SDKSample/">SDKSample</a></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp; &nbsp;</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp; <span class="keyword">Public</span>
+<span class="keyword">Partial</span> <span class="keyword">Class</span> <a href="http://labs.developerfusion.co.uk/SourceViewer/search/SSCLI/SaveLoadPrintRTB/">SaveLoadPrintRTB</a></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Inherits</span> Page</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000"> <span class="comment">' Handle &quot;Save
+RichTextBox Content&quot; button click.</span></font>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+SaveRTBContent(<span class="keyword">ByVal</span> sender <span class="keyword">As</span>
+Object, <span class="keyword">ByVal</span> args <span class="keyword">As</span>
+ RoutedEventArgs)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="comment">' Send an arbitrary URL and file name string specifying</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="comment">' the location to save the XAML in.</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SaveXamlPackage(&quot;C:\test.xaml&quot;)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000"> <span class="comment">' Handle &quot;Load
+RichTextBox Content&quot; button click.</span></font>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+LoadRTBContent(<span class="keyword">ByVal</span> sender <span class="keyword">As</span>
+Object, <span class="keyword">ByVal</span> args <span class="keyword">As</span>
+ RoutedEventArgs)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="comment">' Send URL string specifying what file to retrieve XAML</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="comment">' from to load into the RichTextBox.</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LoadXamlPackage(&quot;C:\test.xaml&quot;)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="comment">' Handle &quot;Print RichTextBox Content&quot; button
+click.</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+PrintRTBContent(<span class="keyword">ByVal</span> sender <span class="keyword">As</span>
+Object, <span class="keyword">ByVal</span> args <span class="keyword">As</span>
+ RoutedEventArgs)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+PrintCommand()</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000"> <span class="comment">' Save XAML in RichTextBox
+to a file specified by _fileName</span></font>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+SaveXamlPackage(<span class="keyword">ByVal</span> _fileName <span class="keyword">As</span>
+String)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Dim</span> range <span class="keyword">As</span> TextRange</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Dim</span> fStream <span class="keyword">As</span>
+FileStream</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+range = <span class="keyword">New</span>  TextRange(richTB.Document.ContentStart,
+richTB.Document.ContentEnd)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fStream = <span class="keyword">New</span>  FileStream(_fileName,
+FileMode.Create)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+range.Save(fStream, DataFormats.XamlPackage)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fStream.Close()</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000"> <span class="comment">' Load XAML into RichTextBox
+from a file specified by _fileName</span></font>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+LoadXamlPackage(<span class="keyword">ByVal</span> _fileName <span class="keyword">As</span>
+String)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Dim</span> range <span class="keyword">As</span> TextRange</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Dim</span> fStream <span class="keyword">As</span>
+FileStream</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">If</span> File.Exists(_fileName) <span class="keyword">Then</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+range = <span class="keyword">New</span>  TextRange(richTB.Document.ContentStart,
+richTB.Document.ContentEnd)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fStream = <span class="keyword">New</span>  FileStream(_fileName,
+FileMode.OpenOrCreate)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+range.Load(fStream, DataFormats.XamlPackage)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fStream.Close()</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">If</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#008000"> <span class="comment">' Print RichTextBox </span></font>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Private</span> <span class="keyword">Sub</span>
+ PrintCommand()</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">Dim</span> pd <span class="keyword">As</span> <span class="keyword">New</span>
+ PrintDialog()</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">If</span> (pd.ShowDialog() = <span class="keyword">True</span>)
+<span class="keyword">Then</span></font>
+<p style="margin-top: 2"><font face="Courier New" size="2"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>
+<span class="comment"><font color="#008000">'use either one of the below</font></span>
+</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pd.PrintVisual(<span class="keyword">TryCast</span>(richTB, Visual),
+&quot;printing as visual&quot;)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pd.PrintDocument((<span class="keyword">DirectCast</span>(richTB.Document,
+IDocumentPaginatorSource).DocumentPaginator), &quot;printing as paginator&quot;)</font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">If</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="keyword">End</span> <span class="keyword">Sub</span></font>
+<p style="margin-top: 2"><font color="#0000FF" size="2" face="Courier New">&nbsp;&nbsp;&nbsp; <span class="keyword">End</span>
+<span class="keyword">Class</span></font>
+<p style="margin-top: 2"><span class="keyword"><font color="#0000FF" size="2" face="Courier New">End</font>
+</span> <font color="#0000FF" size="2" face="Courier New"> <span class="keyword">Namespace</span></font>
+<p style="margin-top: 2">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.11.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-23.13.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.12.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:17 GMT -->
+</html>

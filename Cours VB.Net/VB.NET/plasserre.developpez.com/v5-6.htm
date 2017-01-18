@@ -1,0 +1,218 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+<head>
+<style>
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+    td.tab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:eeeeee;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.backtab {
+      border-left:1px solid black; border-top:1px solid black; border-bottom:1px solid black; text-align:center;
+      width:15%;
+      padding:3;
+      border-right:0px none black;
+      background-color:cccccc;
+      cursor:hand; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+    td.space {
+      border-left:1px solid black; border-top:1px solid cccccc; width:70%;
+      padding:0;
+      border-bottom:1px none cccccc;
+      border-right:1px none cccccc;
+      background-color:white; font-style:normal; font-variant:normal; font-weight:normal; font-size:8pt; font-family:verdana
+    }
+  </style>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net les espaces de nom</title>
+<style>
+<!--
+
+    td.code {
+      border-left:1px solid cccccc; border-bottom:0px none cccccc; border-top:0px none cccccc; border-right:0px none cccccc; background-color:ffffee; padding-left:10; padding-right:10; padding-top:0; padding-bottom:0
+    }
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">&nbsp;</td>
+    <td width="39%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v5-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">5.6</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Espaces de nom, Portée.</font></b></td>
+    <td width="14%" height="76"><a href="v5-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vclasse.GIF" width="42" height="62"></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Intérêts des espaces de noms (NameSpace)</font></b></span><b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">On peut créer une Classe dans un espace de noms.</p>
+<p ALIGN="LEFT">Le but de ces espaces de noms est d'éviter les conflits et 
+ambiguïtés sur les objets.</p>
+<p ALIGN="LEFT"><b>Exemple</b>: deux programmeurs Prog1 et Prog2 distribuent des 
+classes qui sont empaquetées et distribuées respectivement dans les <i>dll</i>,
+<i>Prog1.dll </i>et <i>Prog2.dll</i>. </p>
+<p ALIGN="LEFT">Les deux programmeurs ont défini une classe nommée<i> PrintText</i>. 
+N'ayant aucune relation , ils l'ont appelée de la même manière!!</p>
+<p ALIGN="LEFT">Si dans un programme incluant les 2 dll, vous utilisez la classe
+<i>PrintText</i>, VB ne saura pas s'il doit prendre la classe <i>PrintText </i>
+de <i>Prog1.dll </i>ou celle de <i>Prog2.dll</i>.</p>
+<p ALIGN="LEFT">Si le premier programmeur crée ses classes dans un espace de 
+noms appelé Prog1 et le second programmeur dans un espace de noms appelé prog2, 
+les deux classes<i> </i>s'appelleront alors <i>Prog1.PrintText </i>et <i>
+Prog2.PrintText, </i>ce qui lève toute ambiguïté.</p>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font><font FACE="Courier New">
+<p ALIGN="LEFT"><span style="font-weight: 700; background-color: #C0C0C0">
+<font color="#0000FF" size="4">Pour créer une classe dans un espace de noms:</font></span></p>
+</font><font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">On crée une Classe, puis on ajoute le</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+NameSpace </font>
+<font FACE="Courier New" SIZE="2">
+sur la ligne dessus.</p>
+</font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Namespace </font>
+<font FACE="Courier New" SIZE="2" color="#0000FF">Prog1</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Public Class </font><font face="Courier New" size="2">
+<font color="#0000FF">PrintText</font></p>
+<p ALIGN="LEFT">' définition de la classe</p>
+<p ALIGN="LEFT">...</p>
+<p ALIGN="LEFT">...</p>
+<p ALIGN="LEFT"><font color="#0000FF">End Class</font></p>
+<p ALIGN="LEFT"><font color="#0000FF">End Namespace</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ensuite dans le programme on peut utiliser</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Prog1.PrintText</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">ou bien</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">Imports Prog1</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">puis <font color="#0000FF">PrintText</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un programme a son propre espace de nom (qui 
+est le nom du programme): Si dans <font color="#0000FF">MyProgramme</font>, il y 
+a le NameSpace <font color="#0000FF">MySpace</font> contenant la classe
+<font color="#0000FF">MyClasse</font>, on peut utiliser</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">MyProgramme.MySpace.MyClasse</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><font color="#0000FF">
+<span style="font-weight: 700"><font size="5">Portée des Classes, procédures, 
+membres</font></span></font></span><font color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0"><font size="5">.</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New; ">On savait que les 
+procédures pouvaient être <b>Public</b> ou <b>Privée</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">En fait pour indiquer une portée, en 
+particulier dans une classe, les membres peuvent être:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><strong>
+<span style="font-family: Courier New; color: black"><font size="2">Public</font></span></strong><font face="Courier New" size="2"><span style="color: black">
+<br>
+Les procédures déclarées avec le mot clé Public ont un accès public. Il n'existe 
+aucune restriction quant à l'accessibilité des procédures publiques.
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="color: black"> <br>
+</span></font><span style="font-family: Arial; color: black"><strong>
+<span style="font-family: Courier New"><font size="2">Protected </font></span>
+</strong></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><strong><font size="2">
+<span style="font-family: Courier New">Dans un module de classe:</span></font></strong><font face="Courier New" size="2"><span style="color: black"><br>
+Les procédures déclarées avec le mot clé Protected ont un accès protégé. Elles 
+sont accessibles seulement <b>à partir de leur propre classe ou d'une classe 
+dérivée</b>.
+</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><span style="color: black">
+&nbsp;<br>
+</span></font><span style="font-family: Arial; color: black"><strong>
+<span style="font-family: Courier New"><font size="2">Friend </font></span>
+</strong><font face="Courier New" size="2"><span style="color: black"><br>
+Les procédures déclarées avec le mot clé Friend ont un accès ami. Elles sont 
+accessibles à partir du programme contenant leur déclaration et à partir de 
+n'importe quel autre endroit du même assembly.</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-family: Arial; color: black"><font face="Courier New" size="2"><span style="color: black">&nbsp;<br>
+</span></font></span>
+<span style="font-family: Arial; color: black; font-size: 9.0pt"><strong>
+<span style="font-family: Courier New"><font size="2">Protected Friend</font></span></strong><font face="Courier New" size="2"><span style="color: black">
+<br>
+Les procédures déclarées avec les mots clés Protected Friend ont l'union des 
+accès ami et protégé. Elles peuvent être utilisées par du code dans le même 
+assembly, de même que dans les classes dérivées. L'accès Protected Friend peut 
+être spécifié uniquement pour les membres des classes. <br>
+&nbsp;</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Arial; color: black; font-size: 9.0pt"><strong><span style="font-family: Courier New"><font size="2">
+Private</font></span></strong></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Arial; color: black; font-size: 9.0pt"><font face="Courier New" size="2"><span style="color: black">Les procédures déclarées avec le mot clé Private ont un accès privé. Elles ne 
+sont accessibles qu'à partir de leur contexte de déclaration, y compris à partir 
+des membres de types imbriqués, tels que des procédures.</span></font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v5-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v5-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v5-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:20 GMT -->
+</html>

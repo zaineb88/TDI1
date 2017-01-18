@@ -1,0 +1,633 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET  + - * mod and or xor </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="52%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="14%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.10</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">Les Opérateurs</font></b></td>
+    <td width="14%" height="76"><a href="v1-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font face="Arial" size="7" color="#FF0000">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +</font><font face="Arial" size="7" color="#FFFF00">-</font><font face="Arial" size="7" color="#00FF00">*</font><font face="Arial" size="7" color="#0000FF">/</font><font face="Arial" size="7" color="#FF00FF">And
+</font><font face="Arial" size="7" color="#FF0000">Or</font><font face="Arial" size="7" color="#FFFF00">Mod</font><font face="Arial" size="7" color="#00FF00">&amp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">Pour travailler sur les 
+variables on utilise des opérateurs (addition, soustraction...).</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">Addition</font></span></b><font size="4"><span style="font-family: Courier New">&nbsp;</span></font><span style="font-size: 10.0pt; font-family: Courier New">:+</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans le cas de variables numériques.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<span style="background-color: #FFFFFF"><font color="#0000FF">A=B+C</font>&nbsp;</span> </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+si <font color="#0000FF">B=2</font> et <font color="#0000FF">C=3</font>&nbsp; =&gt;
+<font color="#0000FF">A=5</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut écrire:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A=A+1</span></font>&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans ce cas, on 
+affecte à la variable A son ancienne valeur +1, si A=2 au départ il aura ensuite 
+pour valeur 3.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A+=1</span> </font>est équivalent à A=A+1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Cela incrémente la 
+variable A.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">On peut utiliser '+' pour 
+ajouter une String à une autre, il est préférable d'utiliser '&amp;'.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Soustraction</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b><span style="font-size: 10.0pt; font-family: Courier New"> 
+-</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">B=C-D</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A-=1</span> </font>est équivalent à A=A-1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Multiplication</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b><span style="font-size: 10.0pt; font-family: Courier New">*</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;C'est une 
+étoile: *</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">B= C*D</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Division</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b><span style="font-size: 10.0pt; font-family: Courier New"> 
+/</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On remarque que&nbsp; 
+«&nbsp;:&nbsp;» n'est pas l'opérateur de division.(Ce signe sert de séparateur quand plusieurs instructions sont 
+sur la même ligne.)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">B=C/D</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#FF0000">
+Voir en bas de page, des informations complémentaires car &quot;/&quot; retourne un 
+Double.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Division entière</span></font><span style="font-size: 10.0pt; font-family: Courier New">:</span></b><span style="font-size: 10.0pt; font-family: Courier New">\</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">A=10\3</font>&nbsp; =&gt; </span> <font color="#0000FF">
+<span style="background-color: #FFFFFF">A=3</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#FF0000">
+Voir en bas de page, des informations complémentaires car &quot;\&quot; retourne un 
+Integer.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Puissance</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b><span style="font-size: 10.0pt; font-family: Courier New"> 
+^</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">A=B^3&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'A=B*B*B</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Modulo</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">C’est le reste de la 
+division par un nombre&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">10 Mod 3&nbsp;</span></font> donne 1</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp; A est-il 
+multiple de 3&nbsp;?</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Si 
+<font color="#0000FF">A Mod 3 =0</font> , A est 
+un multiple de 3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">If A Mod 3 = 0 then...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Concaténation</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:</span></b><span style="font-size: 10.0pt; font-family: Courier New"> 
+&amp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">C’est une mise bout à 
+bout des chaînes de caractères.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; A=&nbsp;&quot;VISUAL&quot;</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; B=&nbsp;&quot; 
+&quot;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&nbsp;&nbsp;&nbsp; C=&nbsp;&quot;BASIC&quot;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+D=A &amp; B &amp; C&nbsp;&nbsp;</font> donne D=&quot;VISUAL BASIC&quot;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le signe + peut aussi 
+être utilisé mais il est plutôt réservé aux additions de variables numériques.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&amp;= 
+</font>permet aussi la 
+concaténation&nbsp;&nbsp; <font color="#0000FF">A&amp;=B&nbsp;</font> est équivalent à A= A&amp;B</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Priorités</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;:
+</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#FF0000">
+<b><span style="font-family: Courier New">
+<img border="0" src="vicocheb.gif" width="32" height="34"> L'ordre des calculs 
+se fait en fonction de la priorité des opérateurs.</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#FF0000">S’il y a plusieurs 
+opérateurs,</font> <b><font color="#FF0000">'</b>^<b>' a la priorité la plus 
+forte puis * et / puis + et –</b></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour être complet, voyons les priorités par 
+ordre décroissant:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">^ élévation à la puissance</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">&nbsp;- négation unaire </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">&nbsp;/ et * multiplication et 
+division</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">&nbsp;\ division entière</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">&nbsp;mod&nbsp; modulo</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">&nbsp;+ et-&nbsp; addition et soustraction.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple &nbsp;<font color="#0000FF">2+3^3</font> 
+donne 29 car VB effectue (3^3)+2 et non pas 125 (2+3)^3</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#FF0000">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">S'il 
+y a plusieurs opérateurs de même priorité, l'ordre des calculs se fait de gauche 
+à droite.&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">
+<img border="0" src="vicocheb.gif" width="32" height="34"> </span></font>
+<font color="#FF0000">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour éviter toute 
+faute d’interprétation <b>utiliser des parenthèses</b>&nbsp;:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+2+(3^3)</font>&nbsp; lève toute ambiguïté.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New"><font size="4"><font color="#0000FF">
+<span style="background-color: #C0C0C0">Comparaison</span></font>&nbsp;:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<font color="#0000FF">=</font> égal</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<font color="#0000FF">&gt;</font> supérieur à</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<font color="#0000FF">&lt;</font> inférieur à</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&gt;= 
+</font>supérieur ou égal</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&lt;=</font> inférieur ou égal</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&lt;&gt;</font> Différent de</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le résultat d’une 
+comparaison est <b>True</b> (Vrai) ou <b>False</b> (Faux)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">Dim A As Integer=2</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Dim B As Integer=3&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">If A=B then</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">..</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End If&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">A étant différent de B, 
+A=B prend la valeur False et le programme passe à la ligne en dessous de End If (pas après then).</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Ici le signe = 
+n’indique 
+pas une affectation mais une expression à évaluer.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici aussi on peut combiner les opérateurs et mettre des parenthèses:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">R= (C&lt;&gt;D)AND (D=2)&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">'Si C différent de D&nbsp; et si D égal 2</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Comparaison de chaînes de caractères:</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Avec
+<font color="#0000FF">Option Compare Binary </font>(par défaut)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Les chaînes de 
+caractères sont comparées en fonction du tri alphabétique.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+&nbsp;A&lt;B&lt;C……&lt;Y&lt;Z&lt;a&lt;b&lt;c……y&lt;z&lt;à&lt;é.. </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; Dim A As String=&quot;A&quot;</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Dim B As String=&quot;Z&quot;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">If A&lt;B then..</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">A est bien inférieur à B, 
+donc A&lt;B prend la valeur True et le programme saute après Then.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">La casse (majuscules 
+ou minuscule) est différenciée.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si on veut comparer 
+sans tenir compte&nbsp; du fait que c’est en majuscule ou minuscule, il faut d’abord 
+transformer les 2 chaînes en minuscule par exemple.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On veut comparer A=&nbsp;&quot;aaa&quot; 
+et B=&nbsp;&quot;AAA&quot;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Normalement A est 
+différent de B&nbsp;:&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A=B</span></font> retourne False</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par contre
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">A.ToLower=B.ToLower</font></span> retourne True (Vraie)&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">En utilisant
+<font color="#0000FF">Option Compare Text</font> en début de module, on ne 
+différencie plus la casse: &quot;A&quot; devient égal à &quot;a&quot;.&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font size="4" color="#0000FF">
+<span style="font-family: Courier New; background-color:#C0C0C0">Logique&nbsp;</span></font><span style="font-size: 10.0pt; font-family: Courier New">: 
+Not And Or 
+ElseOr Xor</span></b></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Si A et B sont des expressions Booléens:</span></b></font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A And B</span> </font>&nbsp;&nbsp;&nbsp; retourne True si A et B sont vrais</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A Or B&nbsp;</span>&nbsp;&nbsp;</font>&nbsp;&nbsp; retourne True si une des 2 est vrai</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A Xor B&nbsp;</span></font>&nbsp;&nbsp;&nbsp; retourne True si une et une seule est 
+vrai</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Not A&nbsp;</span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retourne True si A était faux et vice versa</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On entend par expression Booléen le résultat 
+de l'évaluation d'une condition:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A=B</span>&nbsp; </font>
+retourne<font color="#0000FF"> True </font>si A=B et<font color="#0000FF"> False
+</font>si A différent de B<font color="#0000FF">.</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Exemple</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si A différent de B.. 
+peut s’écrire <font color="#0000FF">IF Not(A=B)..</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si A compris entre 2 
+et 5 peut s’écrire <font color="#0000FF">IF A&gt;=2 And A&lt;=5..&nbsp;</font></span></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<blockquote>
+  <blockquote>
+<p><font face="Courier New" size="2">Comment faire une bascule:</font></p>
+<p><font face="Courier New" size="2">Il faut écrire
+<font color="#0000FF">A= Not A</font></font></p>
+<p><font face="Courier New" size="2">A chaque fois que l'on effectue cette 
+instruction A bascule à True s'il était à False et vice versa.</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<ul>
+  <li><b><font face="Courier New" size="2">Si A et B sont des nombres (Integer 
+  par exemple):</font></b></li>
+</ul>
+<font SIZE="2" face="Courier New">
+<blockquote>
+  <blockquote>
+    <p ALIGN="LEFT">L'opération est effectuée sur chaque bit.</p>
+    <p ALIGN="LEFT"><font color="#0000FF">A = 7</font> 'en décimal ( 0111 en 
+    binaire)</p>
+    <p ALIGN="LEFT"><font color="#0000FF">B = 12</font> 'en décimal( 1100 en 
+    binaire)</p>
+    <p ALIGN="LEFT">Que donne <font color="#0000FF">A And B</font>?</p>
+    <p ALIGN="LEFT">On effectue l'opération bit à bit:</p>
+    <p ALIGN="LEFT">Pour le premier bit de chaque nombre 0 And 1 = 0 </p>
+    <p ALIGN="LEFT">Pour le second bit de chaque nombre 1 And 1 = 1...</p>
+    <p ALIGN="LEFT">Cela donne 0100.</p>
+    <p ALIGN="LEFT"><font color="#0000FF">A And B</font> = 4&nbsp; 'en décimal( 
+    0100 en binaire)</font></p>
+<p><font face="Courier New" size="2">Autre exemple:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">A And 1</font> 
+indique si le bit le moins significatif (le plus à droite) est a 1</font></p>
+<p><font SIZE="2" face="Courier New">Exemple: si<font color="#0000FF"> A = 7</font> 'en 
+décimal ( 0111 en binaire) <font color="#0000FF">A And 1 </font>&nbsp;retourne 1
+</font></p>
+  </blockquote>
+</blockquote>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Rentrons dans les détails:</font></b></p>
+<p><font face="Courier New" size="2">Les opérateurs <b>And</b>, <b>Or</b> et <b>
+Xor</b> sont évalués en fonction du type d'opérandes&nbsp;: </font></p>
+<ul type="disc">
+  <li><font face="Courier New" size="2">Pour le type <b>Boolean&nbsp;</b>: </font>
+  <ul type="disc">
+    <li><font face="Courier New" size="2">Une opération <b>And</b> logique est 
+    effectuée sur les deux opérandes. </font></li>
+    <li><font face="Courier New" size="2">Une opération <b>Or</b> logique est 
+    effectuée sur les deux opérandes. </font></li>
+    <li><font face="Courier New" size="2">Une opération <b>Or</b> exclusif 
+    logique est effectuée sur les deux opérandes. </font></li>
+  </ul>
+  </li>
+  <li><font face="Courier New" size="2">Pour les types <b>Byte</b>, <b>Short</b>,
+  <b>Integer</b>, <b>Long</b> et tous les types énumérés, l'opération spécifiée 
+  est réalisée sur chaque bit de la représentation binaire des deux opérandes&nbsp;:
+  </font>
+  <ul type="disc">
+    <li><font face="Courier New" size="2"><b>And&nbsp;</b>: Le bit de résultat est&nbsp;1 
+    si les deux bits sont&nbsp;1. Sinon, le résultat est&nbsp;0. </font></li>
+    <li><font face="Courier New" size="2"><b>Or&nbsp;</b>: Le bit de résultat est&nbsp;1 
+    si l'un des deux bits est&nbsp;1. Sinon, le résultat est&nbsp;0. </font></li>
+    <li><font face="Courier New" size="2"><b>Xor&nbsp;</b>: Le bit de résultat est&nbsp;1 
+    si l'un des deux bits est&nbsp;1 mais pas les deux. Sinon, le bit de résultat 
+    est&nbsp;0 (c'est-à-dire 1&nbsp;<b>Xor</b>&nbsp;0&nbsp;=&nbsp;1, 1&nbsp;<b>Xor</b>&nbsp;1&nbsp;=&nbsp;0). </font></li>
+  </ul>
+  <p><font face="Courier New" size="2">Les opérateurs <b>AndAlso</b> et <b>
+  OrElse</b> sont uniquement définis sur le type <b>Booléen, ils sont plus 
+  rapides </b>car ils n'évaluent pas la seconde expression si ce n'est pas 
+  nécessaire.</font></p>
+  <p>&nbsp;</p>
+  </li>
+</ul>
+  <p><b><font face="Courier New" size="4" color="#0000FF">
+  <span style="background-color: #C0C0C0">Déplacement de bits: &lt;&lt; et &gt;&gt;</span></font></b></p>
+  <p><font face="Courier New" size="2">Les opérateurs binaires <b>&lt;&lt;</b> et <b>
+  &gt;&gt;</b> effectuent des opérations de déplacement de bits. Ces opérateurs sont 
+  définis pour les types <b>Byte</b>, <b>Short</b>, <b>Integer</b> et <b>Long</b>.
+  </font></p>
+  <p><font face="Courier New" size="2"><b>L'opérateur &lt;&lt; décale à gauche les 
+  bits</b> du premier opérande du nombre de positions spécifié. Les bits de 
+  poids fort situés en dehors de la plage du type de résultat sont éliminés, et 
+  les positions libérées par les bits de poids faible sont remplies par des 
+  zéros.</font></p>
+  <p><font face="Courier New" size="2"><b>L'opérateur &gt;&gt; décale à droite les 
+  bits</b> du premier opérande du nombre de positions spécifié. Les bits de 
+  poids faible sont éliminés et, si l'opérande de gauche est positif, les 
+  positions libérées par les bits de poids fort sont mises à zéro&nbsp;; s'il est 
+  négatif, elles sont mises à un. Si l'opérande de gauche est de type <b>Byte</b>, 
+  les bits de poids fort disponibles sont remplis par des zéros.</font></p>
+  <blockquote>
+  <p><font face="Courier New" size="1">A quoi cela sert?</font><p>
+    <font face="Courier New" size="1">Exemple décaler à gauche un Byte revient à 
+    faire une multiplication par 2.</font><p><font face="Courier New" size="1">3 
+    en décimal= 11</font><p><font face="Courier New" size="1">Je décale à 
+    gauche, j'obtient 110 , c'est 6 en décimal.</font><p>&nbsp;</blockquote>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Remarque 1: Allons plus loin 
+avec / \ :</font></b></span></p>
+<p><font face="Courier New" size="2">&quot;/&quot;, la division&nbsp; retourne <b>un 
+double</b>:</font></p>
+<p><font face="Courier New" size="2">Avec Option Strict=Off</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New"> i
+<font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Integer</font> =
+<font color="#0000FF">4</font></font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font> j
+<font SIZE="2" COLOR="#0000ff">As</font>
+<font SIZE="2" COLOR="#0000ff">Integer</font> =
+<font color="#0000FF">2</font></font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font> k
+<font SIZE="2" COLOR="#0000ff">As</font>
+<font SIZE="2" COLOR="#0000ff">Integer</font> =
+<font color="#0000FF">i / j</font> 'est accepté</font></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Avec Option Strict=On, il faut écrire:</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New"> i
+<font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Integer</font> = 4</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font> j
+<font SIZE="2" COLOR="#0000ff">As</font>
+<font SIZE="2" COLOR="#0000ff">Integer</font> = 2</font></font></p>
+<p><font size="2"><font face="Courier New"><font COLOR="#0000ff">Dim</font> k
+<font SIZE="2" COLOR="#0000ff">As</font>
+<font SIZE="2" COLOR="#0000ff">Integer</font> =
+<font SIZE="2" COLOR="#0000ff">CType</font>(i / j,
+<font SIZE="2" COLOR="#0000ff">Integer</font>) 'on est obligé de 
+caster le double en Integer.</font></font> </p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">De même &quot;\&quot; retourne un Integer.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b>
+<span style="background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Remarque 2: Division par zéro:</font></span><font face="Courier New" size="4" color="#0000FF">
+<img border="0" src="an3.GIF" width="100" height="14"></font></b></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">La division par zéro est impossible mathématiquement.</font></font></p>
+<ul>
+  <li><font face="Courier New" size="2">S<font SIZE="2">i on divise un double 
+  (ou un nombre en virgule flottante) par un double égal à zéro, on obtient</font><font SIZE="2" COLOR="#0000ff">
+NaN </font>
+  :<font SIZE="2">nombre non défini ou </font>
+<font SIZE="2" COLOR="#0000ff">
+PositiveInfinity </font>
+<font SIZE="2">
+ou</font><font SIZE="2" COLOR="#0000ff">
+NegativeInfitiny </font>
+<font SIZE="2">
+selon le dividende</font><font SIZE="2" COLOR="#0000ff">.</font></font></li>
+<font SIZE="2">
+  <li></font><font face="Courier New" size="2">
+<font SIZE="2">
+  Pour les entiers</font><font SIZE="2" COLOR="#0000ff">, Integer , Byte</font><font SIZE="2">.. une division par zéro 
+déclenche une erreur ( on dit une exception)</font><font SIZE="2" COLOR="#0000ff"><font color="#0000FF"> 
+DivideByZeroException</font>.</font></font></li>
+</ul>
+<font SIZE="2">
+<p><font face="Courier New">En pratique les choses ne sont pas si évidentes; voyons des exemples:</font></p>
+</font>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New">
+<font color="#0000FF">= 4</font></font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> 
+j </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+= 0</font></p>
+<p><font face="Courier New"><font color="#0000FF">TextBox1.Text = (i/j).ToString</font> 'Affiche &quot;
+<font color="#0000FF">+Infini</font>&quot;</font></p>
+<p><font face="Courier New">L</font><font face="Courier New" size="2">e résultat 
+de l'opération </font><font color="#0000FF" face="Courier New">(i/j)</font><font face="Courier New" size="2"> 
+qui est un long&nbsp; est directement affiché.</font></p>
+</font>
+<p><font face="Courier New" size="2">Par contre:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2"> i </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New">
+<font color="#0000FF">= 4</font></font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> j </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New">
+<font color="#0000FF">= 0</font></font></p>
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> k </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font><font SIZE="2"> = </font>
+<font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2">(i / j, </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font></font><font SIZE="2"><font face="Courier New">) 'retourne une 
+exception (une erreur) <font color="#0000FF">Overflow.Exception</font></font></p>
+</font>
+<p><font face="Courier New" size="2">Car le résultat de l'opération est l'infini 
+donc plus grand que <font color="#0000FF">MaxValue </font>des Integers.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="2">Il faut donc, si <font color="#0000FF">
+on</font> 
+risque d'avoir la valeur zéro, faire un contrôle avant la division:</font></b></p>
+<p><font face="Courier New" size="2" color="#0000FF">If j&lt;&gt;0 Then</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; k=i/j</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">End If</font></p>
+  <p>&nbsp;<p>&nbsp;<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-11.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-10.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+</html>

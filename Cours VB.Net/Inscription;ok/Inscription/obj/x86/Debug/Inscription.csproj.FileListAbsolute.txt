@@ -1,0 +1,65 @@
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\bin\Debug\Inscription.exe
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\bin\Debug\Inscription.pdb
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+c:\users\tdi1\documents\visual studio 2010\Projects\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+F:\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+F:\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+F:\Inscription\Inscription\bin\Debug\Inscription.exe
+F:\Inscription\Inscription\bin\Debug\Inscription.pdb
+F:\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+F:\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+F:\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+F:\C#Ex\Inscription\Inscription\bin\Debug\Inscription.exe
+F:\C#Ex\Inscription\Inscription\bin\Debug\Inscription.pdb
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\C#Ex\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+G:\C#Ex\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\bin\Debug\Inscription.exe
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\bin\Debug\Inscription.pdb
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\ÖùmaIma\ISTA\TDI\Moustaid\Programmation evenemontielle\Project\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+I:\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+I:\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+I:\Inscription\Inscription\bin\Debug\Inscription.exe
+I:\Inscription\Inscription\bin\Debug\Inscription.pdb
+I:\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+I:\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+I:\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+I:\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+I:\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\Inscription.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\Inscription.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\bin\Debug\Inscription.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\bin\Debug\Inscription.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\Inscription.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\Inscription.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\Inscription.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\bin\Debug\Inscription.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\bin\Debug\Inscription.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\Inscription.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\Inscription.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Inscription;ok\Inscription\obj\x86\Debug\GenerateResource.write.1.tlog

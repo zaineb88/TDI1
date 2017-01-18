@@ -1,0 +1,11 @@
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.Form1.resources
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.Properties.Resources.resources
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\bin\Debug\TariafMaha.exe
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\bin\Debug\TariafMaha.pdb
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.exe
+C:\Users\TDI1A\Desktop\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.pdb
+C:\Users\ZIZI\Desktop\Nouveau dossier\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.exe
+C:\Users\ZIZI\Desktop\Nouveau dossier\TariafMaha\TariafMaha\obj\x86\Debug\TariafMaha.pdb

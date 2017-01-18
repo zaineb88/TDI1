@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bloc_Note", "Bloc_Note\Bloc_Note.csproj", "{ECFA0051-3DEC-4EA4-893F-B69CE5693EDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECFA0051-3DEC-4EA4-893F-B69CE5693EDF}.Debug|x86.ActiveCfg = Debug|x86
+		{ECFA0051-3DEC-4EA4-893F-B69CE5693EDF}.Debug|x86.Build.0 = Debug|x86
+		{ECFA0051-3DEC-4EA4-893F-B69CE5693EDF}.Release|x86.ActiveCfg = Release|x86
+		{ECFA0051-3DEC-4EA4-893F-B69CE5693EDF}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,609 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET différence VB6 VB.Net</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="7%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="39%" height="62">
+    &nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">7.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Différence entre VB6 et 
+    VB.NET 2003</font></b></td>
+    <td width="14%" height="76"><a href="v7-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vvb.JPG" width="125" height="152"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#800080">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>Cela concerne 
+surtout ceux 
+qui passent de VB6 à VB.NET, pour les autres c'est une révision</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New">Les petits nouveaux qui ne connaissaient 
+pas VB6 (précédente version de VB) ne doivent pas lire ce qui est en </font>
+<font size="2" color="#008000">vert</font><font size="2" color="#800080">.</font></span></p>
+<h3 class="dtH3"><font color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0">Les Objets</span></font></h3>
+<p><font face="Courier New" size="2">En VB.NET&nbsp; <b>tout est objet</b>: les fenêtres, les contrôles, 
+les variables....</font></p>
+<p><font face="Courier New" size="2"><font color="#008000"><b>Set</b> et <b>Let</b> ne sont plus pris en charge.</font>
+</font> </p>
+<p><font face="Courier New" size="2">Les objets peuvent être 
+assignés par une simple opération d'assignation&nbsp;: </font> </p>
+<pre class="code"><font face="Courier New" color="#0000FF">Object1 = Object2</font></pre>
+<p><font face="Courier New" size="2">Pour définir une propriété par défaut d'un objet, vous devez désormais 
+référencer explicitement la propriété. Exemple&nbsp;: </font> </p>
+<pre class="code"><font face="Courier New" color="#0000FF">Object1.Text = Object2.Text</font></pre>
+<pre class="code"><font face="Courier New">Vous pouvez définir vous même un nouveau type d'objet, une <b>Classe.</b></font></pre>
+<pre class="code"><font face="Courier New">Puis instancer des objets à partir de cette Classe.</font></pre>
+<pre class="code"><font face="Courier New">VB.NETpermet une <b>vraie programmation objet</b>: héritage, polymorphisme, surcharge, Interface ...</font></pre>
+<h3 class="dtH3">&nbsp;</h3>
+<h3 class="dtH3"><font color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0">Les Classe du Framework</span></font></h3>
+<p><font face="Courier New" size="2">Il existe toujours <b>les mots clefs de 
+Visual Basic</b> (Len, Trim, Rnd..) mais en plus le Framework met à disposition
+<b>une multitude de Classes qui possèdent des méthodes</b> permettant de faire 
+une multitude de choses sans programmer:</font></p>
+<p><font face="Courier New" size="2">Exemple:</font></p>
+<p><font face="Courier New" size="2">La Classe <font color="#0000FF">Array</font> 
+(les tableaux) possède une méthode <font color="#0000FF">Sort</font> qui trie 
+les tableaux.</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Dim T() As Integer</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">T(0)=78</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Array.Sort(T)&nbsp;&nbsp;
+</font> </p>
+<pre class="code">&nbsp;</pre>
+<p><b><font size="4" color="#0000FF" face="Courier New">
+<span style="background-color: #C0C0C0">Les formulaires ou&nbsp; fenêtres:</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On se rend compte que quand on dessine une fenêtre Form2 par exemple, VB crée 
+une nouvelle classe<b> 'Class Form2'</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">Public Class Form2</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">Inherits Systeme.Windows.Forms.Form
+</span></font><b><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="BACKGROUND-COLOR: #ffffff">End Class</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Elle hérite de<b> System.Windows.Forms.Form: </b>on le voit bien dans le code.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font face="Courier New" size="2">
+Pour utiliser cette fenêtre, il faut créer une instance de cette fenêtre&nbsp; à 
+l'aide de la Classe :</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font size="2">
+<span style="font-family: Courier New">O</span><span style="FONT-FAMILY: Courier New">n 
+tape </span></font>
+<span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New">Dim</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"> 
+f <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span> 
+Form2(), on crée une instance de la Class Form2.</span></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt"><font size="2">
+<span style="font-family: Courier New">Enfin la fenêtre sera ouverte grâce à la 
+méthode ShowDialog ou Show.</span></font><span style="COLOR: windowtext; FONT-FAMILY: Courier New"><font size="2">&nbsp;</font></span></p>
+<p><font face="Courier New" size="2">Comme pour un Objet en général, la fenêtre 
+créée sera visible dans sa portée. Si une fenêtre est instanciée dans une 
+procédure, l'objet fenêtre f ne sera visible que dans cette procédure.</font></p>
+<p><b><font face="Courier New" size="2">Comment passer de VB6 à VB.net?</font></b></p>
+<ul>
+  <li><font face="Courier New" size="2">Avant <b>en VB6</b>, on avait:</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font color="#0000FF" face="Courier New" size="2">Form2.Load</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Form2.Show</font></p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2"><b>Avec le programme de conversion</b> 
+  VB6=&gt;VB.Net on a:</font></li>
+</ul>
+<font SIZE="2" color="#0000FF" face="Courier New">
+<blockquote>
+  <blockquote>
+    <p>Form2.DefInstance.Show()</p>
+    </font>
+<p><font face="Courier New" size="2">car il ajoute une routine qui créée 
+automatiquement une instance de form2:</font></p>
+    <font SIZE="1">
+    <blockquote>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">#</font></font><font SIZE="1" COLOR="#0000ff" face="Courier New">Region</font><font face="Courier New" size="1"> 
+      &quot;Prise en charge de la mise à niveau &quot;</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      <font SIZE="1" COLOR="#0000ff">Private</font><font SIZE="1"> </font>
+      <font SIZE="1" COLOR="#0000ff">Shared</font><font SIZE="1"> 
+      m_vb6FormDefInstance </font><font SIZE="1" COLOR="#0000ff">As</font></font><font face="Courier New" size="1"> 
+      form2</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      <font SIZE="1" COLOR="#0000ff">Private</font><font SIZE="1"> </font>
+      <font SIZE="1" COLOR="#0000ff">Shared</font><font SIZE="1"> 
+      m_InitializingDefInstance </font><font SIZE="1" COLOR="#0000ff">As</font><font SIZE="1">
+      </font></font><font SIZE="1" COLOR="#0000ff"><font face="Courier New">
+      Boolean</font></p>
+      </font><font SIZE="2">
+      <p style="margin-top: 0; margin-bottom: 0"></font>
+      <font face="Courier New"><font SIZE="1" COLOR="#0000ff">Public</font><font SIZE="1">
+      </font><font SIZE="1" COLOR="#0000ff">Shared</font><font SIZE="1"> </font>
+      <font SIZE="1" COLOR="#0000ff">Property</font><font SIZE="1"> DefInstance()
+      </font><font SIZE="1" COLOR="#0000ff">As</font></font><font face="Courier New" size="1"> 
+      form2</font></p>
+      <p style="margin-top: 0; margin-bottom: 0">
+      <font SIZE="1" COLOR="#0000ff" face="Courier New">Get</p>
+      </font><font SIZE="2">
+      <p style="margin-top: 0; margin-bottom: 0"></font>
+      <font face="Courier New"><font SIZE="1" COLOR="#0000ff">If</font><font SIZE="1"> 
+      m_vb6FormDefInstance </font><font SIZE="1" COLOR="#0000ff">Is</font><font SIZE="1">
+      </font><font SIZE="1" COLOR="#0000ff">Nothing</font><font SIZE="1"> </font>
+      <font SIZE="1" COLOR="#0000ff">OrElse</font><font SIZE="1"> 
+      m_vb6FormDefInstance.IsDisposed </font></font>
+      <font SIZE="1" COLOR="#0000ff"><font face="Courier New">Then</font></p>
+      </font><font SIZE="1">
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      m_InitializingDefInstance = </font></font><font SIZE="1" COLOR="#0000ff">
+      <font face="Courier New">True</font></p>
+      </font><font SIZE="1">
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      m_vb6FormDefInstance = </font></font>
+      <font SIZE="1" COLOR="#0000ff" face="Courier New">New</font><font face="Courier New" size="1"> 
+      form2()</font></p>
+      <p style="margin-top: 0; margin-bottom: 0">
+      <font face="Courier New" size="1">m_InitializingDefInstance = </font>
+      <font SIZE="1" COLOR="#0000ff"><font face="Courier New">False</font></p>
+      </font><font SIZE="2">
+      <p style="margin-top: 0; margin-bottom: 0"></font>
+      <font face="Courier New"><font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1">
+      </font></font><font SIZE="1" COLOR="#0000ff"><font face="Courier New">If</font></p>
+      </font>
+      <p style="margin-top: 0; margin-bottom: 0">
+      <font face="Courier New" size="1">DefInstance = m_vb6FormDefInstance</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      <font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1"> </font></font>
+      <font SIZE="1" COLOR="#0000ff"><font face="Courier New">Get</font></p>
+      </font><font SIZE="2">
+      <p style="margin-top: 0; margin-bottom: 0"></font>
+      <font SIZE="1" COLOR="#0000ff" face="Courier New">Set</p>
+      </font>
+      <p style="margin-top: 0; margin-bottom: 0">
+      <font face="Courier New" size="1">m_vb6FormDefInstance = Value</font></p>
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+      <font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1"> </font></font>
+      <font SIZE="1" COLOR="#0000ff"><font face="Courier New">Set</font></p>
+      </font><font SIZE="2">
+      <p style="margin-top: 0; margin-bottom: 0"></font>
+      <font face="Courier New"><font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1">
+      </font></font><font SIZE="1" COLOR="#0000ff"><font face="Courier New">
+      Property</font></p>
+      </font><font SIZE="1">
+      <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">#</font></font><font face="Courier New"><font SIZE="1" COLOR="#0000ff">End</font><font SIZE="1">
+      </font><font SIZE="1" COLOR="#0000ff">Region</font></font><font SIZE="1"><font face="Courier New">
+      </font></p>
+    </blockquote>
+  </blockquote>
+  </font>
+</blockquote>
+<ul>
+  <li><font face="Courier New" size="2">En fait il faut mieux avec <b>VB.net</b> 
+  écrire:</font></li>
+</ul>
+<blockquote>
+  <blockquote>
+<p><font color="#0000FF" face="Courier New" size="2">Dim F As New Form2</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">F.Show</font></p>
+  </blockquote>
+</blockquote>
+<p><font face="Courier New" size="2">On remarque que Load n'existe plus, par 
+contre, le Dim crée le formulaire sans l'afficher, c'est à peu prêt équivalent..</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Les Forms ont <b>2 contrôles menu</b>:</font></p>
+<p><font face="Courier New" size="2">Les MainMenu</font></p>
+<p><font face="Courier New" size="2">Les ContextMenu.</font></p>
+<p><font face="Courier New" size="2" color="#008000">Visual&nbsp;Basic&nbsp;.NET ne prend pas en charge la méthode <b>Form.PrintForm</b>.</font></p>
+<p><font face="Courier New" size="2" color="#008000">&nbsp;</font></p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Les Contrôles</span></font></p>
+<p><font face="Courier New" size="2">La plupart des objets ne possèdent <b>plus de propriétés par défaut.</b>&nbsp; </font> </p>
+<pre class="code"><font color="#008000">En VB6:</font></pre>
+<pre class="code"><font face="Courier New" color="#008000">Dim str As String = TextBox1</font></pre>
+<pre class="code"><font face="Courier New">Maintenant il faut écrire:</font></pre>
+<pre class="code"><font face="Courier New" color="#0000FF">Dim str As String = TextBox1.Text</font></pre>
+<p><font face="Courier New" size="2" color="#008000">Visual&nbsp;Basic&nbsp;.NET ne <b>prend pas en charge le contrôle conteneur OLE&nbsp;</b>.</font></p>
+<p><font face="Courier New" size="2" color="#008000">Il n'existe <b>pas de 
+contrôle </b>&nbsp;<b>carré rectangulaire ligne</b> . On peut les remplacer sous la forme 
+d'étiquettes (Label), tandis que <b>les ovales et les cercles qui n'existent pas</b> 
+non plus, ne peuvent pas être 
+mis à niveau. </font> </p>
+<p><font face="Courier New" size="2">Visual&nbsp;Basic&nbsp;.NET est doté d'un nouvel ensemble de commandes graphiques 
+faisant partie de <b>GDI+</b>. <font color="#008000">Circle, CLS, PSet,
+Line et Point n'existent plus.</font> Étant donné que le nouveau modèle objet est assez 
+différent de celui de Visual Basic&nbsp;6.0,il faut tout réécrire.&nbsp; </font> </p>
+<p><font face="Courier New" size="2" color="#008000">Visual&nbsp;Basic&nbsp;.NET <b>ne prend pas en charge l'échange dynamique de données (DDE</b>,
+<i>Dynamic Data Exchange</i>). </font> </p>
+<p><font face="Courier New" size="2">Bien que Visual&nbsp;Basic&nbsp;.NET prenne en charge la fonctionnalité de 
+glisser-déplacer, le modèle objet est différent de celui de Visual&nbsp;Basic&nbsp;6.0. 
+Il faut tout réécrire. </font> </p>
+<p><font face="Courier New" size="2">Le .NET Framework est doté d'un objet <b>Clipboard</b> amélioré (<b>System.Windows.Forms.Clipboard</b>) 
+qui offre plus de fonctionnalités et prend en charge un plus grand nombre de 
+formats de Presse-papiers que l'objet <b>Clipboard</b> de Visual&nbsp;Basic&nbsp;6.0. Il 
+faut tout réécrire. </font> </p>
+<p><font face="Courier New" size="2">Les groupes de contrôle n'existent plus. Il 
+y a des moyens de les remplacer.</font></p>
+<p>&nbsp;</p>
+<p><font color="#0000FF" face="Courier New" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">Les Variables.</span></font></p>
+<p><font face="Courier New" size="2"><b>Option Explicit</b> étant activé par défaut, toutes les variables doivent 
+être déclarées avant d'être utilisées. </font> </p>
+<p><font face="Courier New" size="2"><font color="#008000">Le type de données <b>Variant</b> n'existe plus.</font> Celui-ci a été remplacé par 
+le type <b>Object</b>. </font> </p>
+<p><font face="Courier New" size="2">Le type de données <b>Integer</b> est désormais de 32 bits&nbsp;; le type de 
+données <b>Long</b> est de 64 bits.</font></p>
+<p><font face="Courier New" size="2">On peut utiliser les <b>type Booléens </b>
+qui ne peuvent prendre que 2 valeurs<b> :True et False </b>(pas 0 et -1) </font> </p>
+<p><font face="Courier New" size="2">En VB.NET&nbsp; Option Strict&nbsp; étant activé, il faut convertir explicitement une donnée d'un type vers un autre si c'est nécessaire.</font></p>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Response.Write(&quot;Le total est &quot; &amp; CStr(total)) </span></font></pre>
+<pre class="code"><font face="Courier New">on attend des String, la variable total qui est numérique est donc transformée en String par CStr.</font></pre>
+<p><font size="2" face="Courier New">Les variables créées dans la même instruction <b>Dim</b> seront du même type. 
+Par exemple, dans VB.NET, l'instruction Dim</font><font size="2"><code class="ce"><font face="Courier New"> i, j, k As 
+Integer</font></code><font face="Courier New"> crée chacun des trois objets (</font><code class="ce"><font face="Courier New">i</font></code><font face="Courier New">,
+</font>
+<code class="ce"><font face="Courier New">j</font></code><font face="Courier New">, et
+</font> <code class="ce"><font face="Courier New">k)</font></code><font face="Courier New"> comme <b>Integer</b>. 
+<font color="#008000">Les versions précédentes de VB créaient </font> </font> 
+<font color="#008000"> <code class="ce">
+<font face="Courier New">i</font></code><font face="Courier New"> et </font>
+<code class="ce"><font face="Courier New">j</font></code><font face="Courier New"> comme <b>Variants</b> et
+</font> <code class="ce"><font face="Courier New">k</font></code></font></font><font size="2" face="Courier New" color="#008000"> 
+comme <b>Integer (c'était nul!!)</b>. </font> </p>
+<p><font face="Courier New" size="2">Il existe un <b>type Char</b> qui contient 
+un seul caractère.</font></p>
+<p><font face="Courier New" size="2"><font color="#008000">Le type Currency
+</font>est remplacé par le type
+<b>Decimal.</b></font></p>
+<p><font face="Courier New" size="2" color="#008000"><b>Les String de longueur fixe n'existent 
+plus. </b>Il y a quelques ficelles pour contourner cela mais bonjour la 
+simplicité!!</font></p>
+<p><font face="Courier New" size="2">Les String et Char sont en <b>Unicode (chaque 
+caractère est codé 
+sur 2 octets)</b>.</font></p>
+<p><font face="Courier New" size="2">Une variable peut avoir une portée locale, 
+publique ou, et c'est nouveau,<b> une portée au niveau d'un bloc:</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">For i=0 to 100</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim Str As String </span></font>
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">'Str 
+est visible uniquement entre For et Next</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">...</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">next i</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Tableaux</span></font></b></p>
+<p><font face="Courier New" size="2"><b>Le premier élément d'un tableau a 
+l'indice 0 </b>obligatoirement; <font color="#008000">plus d'Option Base.</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On peut initialiser un tableau en même temps qu'on le déclare:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000ff">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; BACKGROUND-COLOR: #ffffff">
+Dim Tableau(3) As Integer ={7,2,3,5}</span></font></p>
+<p><font face="Courier New" size="2">A noter que ce tableau contient 4 élément 
+d'index 0, 1, 2, 3.</font></p>
+<p><font face="Courier New" size="2" color="#008000">Dim S(4 to 15) n'est plus 
+accepté.</font></p>
+<p><font face="Courier New" size="2">Dim est utilisé pour la déclaration 
+initiale, <b>Redim pour le redimensionnement</b> uniquement.</font></p>
+<p><font face="Courier New" size="2">Les tableaux font partie de <b>la Classe 
+Array</b>, ce qui autorise l'utilisation de méthodes bien pratiques: <b>Sort</b> 
+par exemple trie automatiquement le tableau.</font></p>
+<p><font face="Courier New" size="2">&nbsp;</font></p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Collections:</span></font></b></p>
+<p><font face="Courier New" size="2">Elles sont omniprésentes. C'est fondamental de bien comprendre leur 
+fonctionnement: Ce sont des listes ayant un nombre d'élément non défini, on peut 
+y ajouter des éléments, en retirer, il y a des méthodes pour trier, rechercher..</font></p>
+<p><font face="Courier New" size="2">Cela peut être :</font></p>
+<p><font face="Courier New" size="2">Des listes d'objet: ArrayList</font></p>
+<p><font face="Courier New" size="2">Des listes de booléens: BitArray</font></p>
+<p><font face="Courier New" size="2">Des listes Clé-Valeur :HashTable</font></p>
+<p><font face="Courier New" size="2">Des Queue</font></p>
+<p><font face="Courier New" size="2">Des Piles :Stack</font></p>
+<p><font face="Courier New" size="2">La notion de collection est généralisée et utilisée dans beaucoup d'objets: 
+Une ListeBox possède une collection d'Item (les éléments de la listBox)</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Structures:</span></font></b></p>
+<p><font color="#008000" face="Courier New" size="2">Elles remplacent&nbsp; les&nbsp; &quot;Types définis par 
+l'utilisateur&quot;.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Structure MaStructure</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Public i As Integer</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Public c As String</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End Structure</span></font></p>
+<p>&nbsp;</p>
+<p><font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Les Fonctions et Sub</span></font></p>
+<p><font face="Courier New" size="2">Les parenthèses sont désormais requises autour de la liste de paramètres dans 
+tous les appels de méthodes y compris pour les méthodes qui ne prennent pas de 
+paramètres. Exemple&nbsp;: </font> </p>
+<pre class="code"><font color="#0000FF"><code class="ce"><font face="Courier New"><span style="background-color: #FFFFFF">If Flag = False Then</span></font><span style="background-color: #FFFFFF"></span></code><span style="background-color: #FFFFFF"><font face="Courier New">
+</font><code class="ce"><font face="Courier New">   AfficheMessage()</font></code><font face="Courier New">
+</font></span><code class="ce"><span style="background-color: #FFFFFF"></span><font face="Courier New"><span style="background-color: #FFFFFF">End If</span></font></code></font></pre>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Par défaut, les arguments sont passés <b>par valeur</b>, et non pas référence  . Si 
+vous voulez passer des arguments par référence, vous devez utiliser le mot clé
+<b>ByRef</b> devant l'argument comme dans l'exemple suivant&nbsp;: </font> </p>
+<pre class="code"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF">Call MaFunction(argbyvalue, ByRef argbyref)</span></font></pre>
+<pre class="code">&nbsp;</pre>
+<pre class="code"><font face="Courier New">Il peut y avoir des <b>paramètres optionnels.</b></font></pre>
+<pre class="code">&nbsp;</pre>
+<p><font face="Courier New" size="2"><b>Return</b> est un nouveau mot clé qui 
+permet à une fonction de retourner une valeur.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Private Function MaFonction (Byval 
+Chaine As String)</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Return Chaine.ToLower()</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Function</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;</span></font></p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Dans le Code:</font></span></p>
+<p><font face="Courier New" size="2">Simplification d'écriture:</font></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">A +=2</span></font> est équivalent à&nbsp; 
+A=A+2</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Nouveau type de boucle</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #FFFFFF">
+<font color="#0000FF">While </font>condition</span></font></p>
+<p><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">End While</span></font></p>
+<p><font face="Courier New" size="2">Boucle tant que condition est vraie.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2" color="#008000">Wend n'existe plus.</font></p>
+<p><font face="Courier New" size="2">Le <b>Multithreading</b> est possible.</font></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">Gestion des erreurs:</font></span></p>
+<p><font face="Courier New" size="2">La gestion des erreurs est structurée:</font></p>
+<p><font face="Courier New" size="2">Elle utilise</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Try</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">Code a tester</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Catch</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">interception de l'erreur</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Finally</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">suite</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Try</span></font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b>On error goto</b> reste utilisable.</font></p>
+<p>&nbsp;</p>
+<h3 class="dtH3"><span style="background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Les graphiques</font></span><font face="Courier New" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></h3>
+<p><font face="Courier New" size="2">En GDI (VB6) on utilisait les handles(HDC) 
+pour spécifier un image.</font></p>
+<p><font face="Courier New" size="2">En GDI+ (VB.Net) on travaille sur les
+<font color="#0000FF">Graphics</font> et leurs méthodes. Graphics.DrawLine..</font></p>
+<p><font face="Courier New" size="2">L'unité de mesure est le pixels. (<font color="#008000">Plus 
+de Twips</font>)</font></p>
+<p>&nbsp;</p>
+<h3 class="dtH3"><span style="background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Les bases de </font></span><font face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">données:</span></font></h3>
+<p><font face="Courier New" size="2">Visual&nbsp;Basic&nbsp;.NET contient une version améliorée des objets de données actifs 
+(ADO, <i>Active Data Objects</i>) appelée <b>ADO.NET</b>. </font> </p>
+<p><font face="Courier New" size="2">DAO, RDO et ADO peuvent toujours être utilisés dans du code Visual&nbsp;Basic&nbsp;.NET, 
+avec toutefois quelques petites modifications . Toutefois, Visual&nbsp;Basic&nbsp;.NET ne 
+prend pas en charge la liaison de données DAO et RDO aux contrôles ou contrôles 
+de données ni la connexion utilisateur RDO. </font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Classes:</span></font></b></p>
+<p><font face="Courier New" size="2">La syntaxe des propriétés de classe a changé et ne contient plus <b>Property 
+Let</b>, <b>Property Get</b>, et <b>Property Set</b>. La nouvelle syntaxe des 
+propriétés est analogue à celle de C#. </font> </p>
+<pre class="code" style="DISPLAY: block"><font face="Courier New"><span class="lang" style="DISPLAY: none">
+</span>  <span style="background-color: #FFFFFF"> <font color="#0000FF">Public Property ThisProperty As String
+      Get
+         ThisProperty = InternalValue
+      End Get
+      Set
+         InternalValue = value
+      End Set
+   End Property</font></span></font></pre>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les classes sont totalement objet et acceptent 
+le polymorphisme, la surcharge , l'héritage..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">GOSUB et ON GOSUB n'existent 
+plus</font></span></p>
+<p><font face="Verdana" size="1">&nbsp;</font><font face="Courier New" size="2">Il 
+faut remplacer une une routine qui était appelée par gosub par une sub ou une <b>
+fonction.</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Remplacer</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Sub Mon Programme</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="font-weight: 700; background-color: #FFFFFF">
+Gosub Routine</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">End SuB</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">&nbsp; </font>
+</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">
+<span style="background-color: #FFFFFF"><font color="#0000FF">R</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">outine:</span></font></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+Code de la routine</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Return</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Sub Mon Programme</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="font-weight: 700; background-color: #FFFFFF">
+Call Routine()</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font color="#0000FF" face="Courier New" size="2">&nbsp; </font>
+</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">Sub Routine()</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; 
+code de la routine</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2"><span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faudra simplement faire 
+attention aux variables, les variables locales à Mon Programme ne seront pas 
+accessible dans la routine.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour <b>On Gosub</b>, il faut 
+remplacer par un <b>SelectCase</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les Timers</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">S'agissant du contrôle Timer, le fait d'affecter à la propriété <b>Interval</b> 
+la valeur&nbsp;0 ne désactive pas la minuterie&nbsp;; l'intervalle est réinitialisé à&nbsp;1. 
+Dans vos projets Visual Basic&nbsp;6.0, vous devez affecter à la propriété <b>Enabled</b> 
+la valeur <b>False</b> plutôt que d'affecter à <b>Interval</b> la valeur&nbsp;0.
+</font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<span id="_ctl0_ShowOneTip1_dgridTipDetails__ctl2_Label2">
+<p><span style="font-weight: 700; background-color: #C0C0C0">
+<font color="#0000FF" size="4" face="Courier New">Conversion VB6 vers VB.NET</font></span></p>
+<p><font face="Courier New" size="2">Il existe <b>un outil de conversion</b> (Menu Fichier, Ouvrir, Convertir, 
+Assistant de mise à niveau de VB.NET) pour convertir un source VB6 en VB.NET.</font></p>
+<p><font face="Courier New" size="2">Le problème est qu'il donne un code, à mon 
+avis, inutilisable avec:</font></p>
+<ul>
+  <li><font face="Courier New" size="2">Conversion des instructions VB6=&gt;VB.NET quand il le peut.</font></li>
+  <li><font face="Courier New" size="2">Conversion en utilisant une <b>classe de compatibilité</b> contenant des 
+  instructions spécifiques à VB6&nbsp; (qui ne sont PAS du VB.NET) produisant un 
+  code hybride. Cette classe de compatibilité disparaîtra probablement dans les 
+  prochaines versions.</font></li>
+  <li><font face="Courier New" size="2">Conversion en utilisant des ficelles 
+  avec ajout de plein de code: voir l'exemple des Forms au dessus ou l'outil de 
+  conversion crée une complexe fonction nommée 'DefInstance' permettant de créer 
+  des formulaires. </font> </li>
+  <li><font face="Courier New" size="2">Des instructions impossible à convertir automatiquement et qui seront à 
+  réécrire à la main.</font></li>
+</ul>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Il faut convertir les programmes VB6 avec l'outil de conversion
+<b>pour voir ce que 
+cela donne</b>: c'est instructif de voir le nouveau code.</font></p>
+<p><font face="Courier New" size="2">Mais il faut réécrire totalement une bonne partie du code: l'appel des 
+fenêtres en particulier..</font></p>
+<p><b><font color="#FF0000" face="Courier New" size="2">Il faut rapidement ne pas utiliser du tout la classe 
+de compatibilité VB 6 , éviter les instructions héritées de VB6, privilégier 
+l'usage des classes du FrameWork.</font></b></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</span>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-8.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v7-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v7-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+</html>

@@ -1,0 +1,1115 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="ve1-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 1.3</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exemples:Tableaux, collections:</font></b></td>
+    <td width="14%" height="76"><a href="ve1-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p align="center"><b>
+    <font face="Courier New" size="5" color="#800080">Tri, 
+    recherche, insertion , effacement d'élément.</font></b></p>
+<p><b><font color="#800080" face="Courier New" size="2">Le travail sur des 
+tableaux est très intéressant. On étudiera plusieurs routines en comparant la 
+méthode classique et les fonctions du Framework. Puis on utilisera les 
+collections pour faire la même chose.</font></b></p>
+<p><b><font color="#800080" face="Courier New" size="2">On verra comment:&nbsp;
+</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">1 -Comment utiliser un
+tableau ou une collection.</font></b></p>
+<p><b><font face="Courier New" size="2" color="#800080">2 -Utiliser les TABLEAUX</font></b></p>
+<blockquote>
+<p><font color="#800080" face="Courier New" size="2">A- Trier un tableau.</font></p>
+<p><font color="#800080" face="Courier New" size="2">B- Rechercher un élément 
+dans un tableau.</font></p>
+<p><font color="#800080" face="Courier New" size="2">C- Effacer, insérer un 
+élément dans un tableau.</font></p>
+</blockquote>
+<p><b><font face="Courier New" size="2" color="#800080">3 - Utiliser les COLLECTIONS.</font></b></p>
+<blockquote>
+<p><font color="#800080" face="Courier New" size="2">A- Trier une collection.</font></p>
+<p><font color="#800080" face="Courier New" size="2">B- Rechercher un élément 
+dans une collection.</font></p>
+<p><font color="#800080" face="Courier New" size="2">C- Effacer, insérer un 
+élément dans une collection.</font></p>
+</blockquote>
+<p><b><font face="Courier New" size="2" color="#800080">4 - Utilisation 
+particulière des tableaux.</font></b></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="6" color="#FF0000"><span style="background-color: #C0C0C0">1
+- Tableaux ou 
+collections:</span></font></b></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2">Nous avons une série de 100 adresses
+comprenant chacune un numéro, une rue, une ville.&nbsp;</font></p>
+<p><font face="Courier New" size="2">Dans quoi les stocker?</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><b><span style="background-color: #C0C0C0">1- On peut utiliser un tableau à
+plusieurs dimensions.</span></b></font></p>
+<p><font face="Courier New" size="2"><b>Un tableau</b> peut avoir plusieurs 
+dimensions, cela permet plusieurs indices:</font></p>
+<p><font face="Courier New" size="2">Soit un tableau T(,) de String permettant 
+de stocker en mémoire les adresses (Numéro, Rue, Ville..) </font></p>
+<p><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim T(99,2) As
+String</span></font></p>
+<p><span style="background-color: #ffffff"><font face="Courier New" size="2">On
+constate que tous les éléments ont le même type (String ici).</font></span></p>
+<p><font face="Courier New" size="2">Numéro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Rue&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ville</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="39%" id="AutoNumber8">
+  <tr>
+    <td width="33%"><font face="Courier New" size="2">&nbsp;32</font></td>
+    <td width="33%"><font face="Courier New" size="2">&nbsp;grande rue</font></td>
+    <td width="34%"><font face="Courier New" size="2">&nbsp;Paris</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Courier New" size="2">&nbsp;12</font></td>
+    <td width="33%"><font face="Courier New" size="2">&nbsp;place&nbsp;</font></td>
+    <td width="34%"><font face="Courier New" size="2">&nbsp;Lyon</font></td>
+  </tr>
+  <tr>
+    <td width="33%"><font face="Courier New" size="2">&nbsp;..</font></td>
+    <td width="33%">&nbsp;</td>
+    <td width="34%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="33%">&nbsp;</td>
+    <td width="33%">&nbsp;</td>
+    <td width="34%">&nbsp;</td>
+  </tr>
+</table>
+<p><font face="Courier New" size="2">...</font></p>
+<p><font face="Courier New" size="2">Le premier indice est l'indice de chaque
+adresse (ligne).&nbsp; </font></p>
+<p><font face="Courier New" size="2"> Le second indice, celui de la colonne,
+indique la nature de l'information: numéro, rue, ville.</font></p>
+<p><font face="Courier New" size="2">Ainsi le numéro de l'adresse 1 est <font color="#0000FF">T(0,0)</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut mettre 12 dans le numéro de la seconde adresse&nbsp;&nbsp; <font color="#0000FF">T(1,0)=&quot;12&quot;</font></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut m</font><font face="Courier New" size="2">ettre la ville de l'adresse 3
+dans une variable:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+laVille As String= T(2,2)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut balayer toutes les villes avec une boucle, pour chercher une ville par
+exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">For
+i As Integer =0 To 99</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font color="#0000FF" face="Courier New" size="2">
+If T(i,2)=&quot;Lyon&quot; Then...</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">Next
+i</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><span style="background-color: #C0C0C0"><span style="font-size: 10pt; font-family: Courier New"><b>2-
+On
+peut aussi </b></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New"><b>définir
+une structure et travailler sur un tableau 'structuré'.</b>&nbsp;</span></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Public
+Structure </span><font color="#0000ff"><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">Adresse</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;
+Dim Numero&nbsp;&nbsp;&nbsp;&nbsp; As Integer</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;
+Dim </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Rue</font><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+As String</span></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;
+Dim </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Ville</font><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+As String</span></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="FONT-SIZE: 10pt; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff">End
+Structure</span></p>
+<p><font face="Courier New" size="2">Il est ensuite possible de travailler
+sur un tableau de variable 'structure'</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><font color="#0000ff"><span style="BACKGROUND-COLOR: #ffffff">Dim
+Adresses(99) As Adresse&nbsp;</span></font>&nbsp;&nbsp; 'Permet de travailler
+sur un tableau de 100 adresses</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" color="#0000ff" size="2">Adresses(33).Rue=&quot;Place
+de la mairie&quot;</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut m</font><font face="Courier New" size="2">ettre la ville de l'adresse 3
+dans une variable:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">Dim
+laVille As String= Adresses(2).Ville</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">On
+peut balayer toutes les villes avec une boucle, pour chercher une ville par
+exemple:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">For
+i As Integer =0 To 99</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;<font color="#0000FF" face="Courier New" size="2">
+If Adresses(i).Ville =&quot;Lyon&quot; Then...</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font color="#0000FF" face="Courier New" size="2">Next
+i</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2"><b>Un tableau a un nombre défini d'élément</b> 
+quand on le déclare, plus les dimensions sont grandes, plus il occupe de place, 
+même si certains de ses éléments sont vides. Une collection ne contient que les 
+éléments qu'on a mis.&nbsp; </font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0"><b>3-
+On peut utiliser une collection</b>.</span></font></p>
+<p><font face="Courier New" size="2">Il faut créer une Classe:</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><span style="color: blue; background-color: #ffffff">Public
+Class </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #ffffff"><font color="#0000ff">Adresse</font></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="color: blue; background-color: #ffffff"><font size="2" face="Courier New">&nbsp;&nbsp;
+Public Numero&nbsp;&nbsp;&nbsp;&nbsp; As Integer</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><span style="color: blue; background-color: #ffffff">&nbsp;&nbsp;
+Public </span><span style="background-color: #ffffff"><font color="#0000ff">Rue</font><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+As String</span></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><font face="Courier New" size="2"><span style="color: blue; background-color: #ffffff">&nbsp;&nbsp;
+Public </span><span style="background-color: #ffffff"><font color="#0000ff">Ville</font><span style="COLOR: blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+As String</span></span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><span style="color: blue; background-color: #ffffff"><font size="2" face="Courier New">End
+Class</font></span></p>
+<p><font face="Courier New" size="2">Déclarer une instance de cette classe.</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim Adresse1 As New Adresse</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Adresse1.Rue= &quot;Place
+de la mairie&quot;</font></p>
+<p><font face="Courier New" size="2">Créer une collection.</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim MesAdresses As New ArrayList</font></p>
+<p><font size="2" face="Courier New">Y ajouter les adresses.</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">MesAdresses.Add ( Adresse1)</font></p>
+<p><font size="2" face="Courier New">Afficher dans une MsgBox la rue du premier
+élément.</font></p>
+<p><font SIZE="2" face="Courier New" color="#0000FF">MsgBox(CType(MesAdresses.Item(0),
+Adresse).Rue)</font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New">Le top c'est de créer une collection
+génériques</font></p>
+<p><font size="2" face="Courier New" color="#0000FF">Dim MesAdresses As New List(
+Of
+adresse)</font></p>
+<p><font size="2" face="Courier New">Elle ne pourra contenir que des adresses.</font></p>
+<p><font SIZE="2" face="Courier New" color="#0000FF">MsgBox(MesAdresses.Item(0).Rue)</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="3" color="#800080"><b>Le travail sur les tableaux est beaucoup 
+plus rapide</b>  <b> que sur les collections.</b></font></p>
+<p><font face="Courier New" size="2">Par exemple , pour stocker 1000 string dans 
+un tableau ou une collection, l'usage du tableau est 60% plus rapide.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New" size="3" color="#800080"><b>En programmation
+fonctionnelle on utilise les tableaux par habitude, en programmation Objet on
+utilise bien les Collections.</b></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="6" color="#FF0000"><span style="background-color: #C0C0C0">2
+- Utiliser les Tableaux:</span></font></b></p>
+<p><font color="#0000FF" size="5" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">A- Le Tri</span></font></p>
+<font SIZE="2" face="Courier New">
+<p><span style="background-color: #C0C0C0">Routine de Tri .</span></p>
+<p>Pour trier un tableau de chaînes de caractères, il faut comparer 2 chaînes 
+contiguës, si la première est supérieure (c'est à dire après l'autre sur le plan 
+alphabétique)on inverse les 2 chaînes, sinon on n'inverse pas. Puis on 
+recommence sur 2 autres chaînes en balayant le tableau jusqu'à ce qu'il soit 
+trié.</p>
+<p>Tout l'art des routines de tri est de faire le moins de comparaisons possible 
+pour trier le plus vite possible.&nbsp; </p>
+<p>Voyons une des routines les plus rapides, le <b>Bubble Sort</b> (ou tri à 
+bulle); on le nomme ainsi car l'élément le plus grand descend progressivement au 
+fur et à mesure jusqu'à la fin du tableau comme une bulle.(il faut imaginer la 
+surface en bas et les bulles qui descendent!! </p>
+<p>Une boucle interne balaye le tableau et compare 2 élément contigus et les 
+inverse si nécessaire. Une boucle externe fait tourner la boucle interne N fois.</p>
+<p>La boucle interne fait descendre l'élément le plus grand vers la fin du 
+tableau, la boucle externe répète l'opération N fois permettant le tri de tous 
+les éléments.</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">Private</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> Button1_Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Création du 
+tableau et de son contenu non trié.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+T(5) </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#008000">'élément de 0 à 4</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">T(0) = &quot;toto&quot;</p>
+<p style="margin-top: 0; margin-bottom: 0">T(1) = &quot;tata&quot;</p>
+<p style="margin-top: 0; margin-bottom: 0">T(2) = &quot;tutu&quot;</p>
+<p style="margin-top: 0; margin-bottom: 0">T(3) = &quot;lolo&quot;</p>
+<p style="margin-top: 0; margin-bottom: 0">T(4) = &quot;lulu&quot;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Création des 
+variables</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+N </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</font><font SIZE="2"> = 5&nbsp;
+<font color="#008000">'Nombre d'éléments</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> i, j </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Integer</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> Temp </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String&nbsp;&nbsp;&nbsp; </font>
+<font SIZE="2" color="#008000">'Variable temporaire</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">'Routine de tri</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> 
+i = 0 </font><font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2"> N - 1&nbsp;&nbsp;&nbsp;
+<font color="#008000">'Boucle externe</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> j = 0 </font>
+  <font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2"> N - 1&nbsp;&nbsp;
+  <font color="#008000">'Boucle interne</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2"> T(j) &gt; T(j + 1) </font>
+  <font SIZE="2" COLOR="#0000ff">Then</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp; Temp = T(j) : T(j) = T(j + 
+  1) : T(j + 1) = Temp&nbsp; <font color="#008000">'Inverser si pas dans le bon 
+  ordre</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+  <font SIZE="2" COLOR="#0000ff">If</p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff">Next</font><font SIZE="2"> j</p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Next</font><font SIZE="2"> i</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font color="#008000">' Pour afficher 
+le tableau trié dans un textbox</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2"> 
+tt </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String= &quot;&quot;</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">For</font><font SIZE="2"> i = 0 </font>
+<font SIZE="2" COLOR="#0000ff">To</font><font SIZE="2"> N</p>
+<p style="margin-top: 0; margin-bottom: 0">tt = tt + T(i) + ControlChars.CrLf</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">Next i</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">TextBox1.Text = tt</p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p>Remarque: pour inverser le contenue de 2 variables, on doit écrire</p>
+<p>&nbsp;<font color="#0000FF">Temp=T(j): T(j)=T(j+1):T(j+1)=Temp&nbsp; </font>
+(L'instruction qui faisait cela en VB6 et qui se nommait Swap n'existe plus)</p>
+<p>&nbsp;</p>
+<p>Cette routine trie bien le tableau mais n'est <b>pas optimisée</b>: il n'est 
+pas nécessaire que la boucle interne tourne de 0 à N-1 à chaque fois car après 
+une boucle ,le dernier élément, le plus grand, est à sa place. Pour i=0 la boucle interne tourne 
+jusqu'à N-1, pour i=1 jusqu'à N-2...</p>
+<p>Cela donne:</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">For i=0 To N-1</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+For j=0 To <b>N-i-1</b></font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If T(j)&gt;T(j+1) then </font> </span> </p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Temp=T(j): T(j)=T(j+1):T(j+1)=Temp</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Next j</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;Next i</font></span></p>
+<p>Il existe d'autres méthodes encore plus rapide (Méthode de Shell et 
+Shell-Metzner), il existe aussi le QuickSort très performant pour les tableaux 
+non triés , voir chapitre sur la récursivité.</p>
+<p>Mais il y a plus simple:</p>
+<p><font face="Courier New"><span style="background-color: #C0C0C0">
+Tri avec la méthode SORT du Framework.</span></font></p>
+<p>Pour un tableau unidimensionnel.</p>
+<p><font color="#0000FF"><span style="background-color: #FFFFFF">Dim Animals(2) As String<br>
+Animals(0) = &quot;lion&quot;<br>
+Animals(1) = &quot;girafe&quot;<br>
+Animals(2) = &quot;loup&quot;<br>
+</span></font></p>
+<p><font color="#0000FF"><span style="background-color: #FFFFFF">
+Array.<b>Sort</b>(Animals)</span><br>
+&nbsp;</font></p>
+<p>Et le tableau est trié!!</p>
+<p>On rappelle que l'on ne peut pas trier un tableau multidimensionnelle, mais 
+il y a des ruses.(voir rubrique:tableau)</p>
+<p>Les Collections peuvent être triées automatiquement aussi.</p>
+<p>&nbsp;</p>
+<p>
+<font SIZE="5" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0"><b>B- Recherche dans un tableau.</b></span></font></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Routine de recherche:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">On a un tableau de string, on veut 
+chercher ou se trouve(en quelle position) une string.</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0"><b>Pour une liste non triée,</b> on 
+n'a pas d'autres choix que de comparer la string cherchée à chaque élément du 
+tableau, on utilisera donc une boucle:</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">N=4&nbsp;
+</font>'tableau de 5 éléments.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim T(N) As 
+String&nbsp; </font>'élément de 0 à 4</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(0)=&quot;vert&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(1)=&quot;bleu&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(2)=&quot;rouge&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(3)=&quot;jaune&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(4)=&quot;blanc&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim i&nbsp; As 
+Integer&nbsp;&nbsp;&nbsp; </font>'Variable de boucle</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim AChercher 
+As String= &quot;rouge&quot; </font>'String à chercher</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">For i=0 To N</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+If T(i)=AChercher then </font> </span> </p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Exit For</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+End if</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Next i</font></span></p>
+<p>'i contient 2</p>
+</font>
+<p>
+<font SIZE="2" face="Courier New">
+<b>Pour une liste <u>triée</u> (suite ordonnée),</b> on peut utiliser <b>la méthode de 
+recherche dichotomique</b>: On compare l'élément recherché à l'élément du milieu 
+du tableau, cela permet de savoir dans quelle moitié se situe l'élément 
+recherché. De nouveau on compare à l'élément recherché à l'élément du milieu de 
+la bonne moitié...jusqu'à trouver. Pour cela on utilise les variables Inf et Sup 
+qui sont les bonnes inférieure et supérieure de la zone de recherche et la 
+variable Milieu. On compare l'élément recherché à l'élément du tableau d'indice 
+milieu, si il sont égaux on a trouvé , on sort; si ils sont différents on modifie 
+Inf et Sup pour pointer la bonne plage puis on donne à Milieu la valeur du 
+milieu de la nouvelle plage et on recommence.&nbsp;
+</font>
+</p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim N As 
+Integer</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim T(N) As 
+String&nbsp; </font>'élément de 0 à 4</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim Inf, Sup, 
+Milieu As Integer '</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim Reponse As 
+Integer <b>'contient le numero de l'élément</b></font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'ou -1 si élément non trouvé </b></font> </span> </p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim i&nbsp; As 
+Integer&nbsp;&nbsp;&nbsp; </font>'Variable de boucle</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim AChercher 
+As String= &quot;c&quot; </font>'String à chercher</span></p>
+<p style="margin-top: 2; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">N=4&nbsp;
+</font>'tableau de 5 éléments.</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(0)=&quot;a&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(1)=&quot;b&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(2)=&quot;c&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(3)=&quot;d&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">T(4)=&quot;e&quot;</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Inf=0: Sup=N</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Do</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+if inf&gt;Sup then Reponse=-1: Exit Do</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+Milieu= INT((Inf+Sup)/2)</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+If Achercher=T(Milieu) then Reponse=Milieu:Exit Do</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+If Achercher&lt;T(Milieu) then Sup=Milieu-1</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; 
+If Achercher&gt;T(Milieu) then Inf=Milieu+1</font></span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Loop</font></span></p>
+</font>
+<p><font face="Courier New" size="2">'Reponse =2</font></p>
+<p><font face="Courier New" size="2">La recherche dichotomique est rapide car il 
+y a moins de comparaisons.</font></p>
+<p><span style="background-color: #C0C0C0">
+<font SIZE="2" face="Courier New">
+Recherche avec les facilités du Framework.</font></span></p>
+<p><b><font face="Courier New" size="2">Mais comme d'habitude VB.Net possède des 
+propriétés permettant de rechercher dans un tableau trié ou non et cela sans 
+avoir à écrire de routine.</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><b>Binarysearch</b> 
+recherche un élément dans un tableau <b>trié</b> unidimensionnel.(algorithme de 
+comparaison binaire performant sur tableau trié: probablement une recherche 
+dichotomique)</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; background-color:#FFFFFF"><font color="#0000ff">
+I=Array.BinarySearch(Mois,&nbsp;&quot;Février&quot;)</font> </span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">IndexOf</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Recherche un objet spécifié dans un tableau unidimensionnel (trié ou non), 
+retourne l'index de la première occurrence.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">Dim myIndex As Integer = 
+Array.IndexOf(myArray, myString)<br>
+&nbsp;</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+Retourne -1 si l'élément n'est pas trouvé.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+<b>LastIndexOf</b> fait une recherche à partir de la fin.</font></p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">C</font></b><font SIZE="2" face="Courier New"><b><font SIZE="5" face="Courier New" color="#0000FF">- 
+Eliminer, insérer un élément dans un tableau.</font></b></font></span></p>
+<font SIZE="4" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">1- Éliminer un élément.</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec une routine:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+Soit un tableau de 4 String T(0), T(1), T(2),T(3).</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="11%" id="AutoNumber4">
+  <tr>
+    <td width="100%">Toto</td>
+  </tr>
+  <tr>
+    <td width="100%"><b>Tata</b></td>
+  </tr>
+  <tr>
+    <td width="100%">Tonton</td>
+  </tr>
+  <tr>
+    <td width="100%">Titi</td>
+  </tr>
+</table>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+On veut éliminer l'élément &quot;Tata&quot;, le second élément; il faut passer le troisième 
+dans le second, le quatrième dans le troisième... et effacer le dernier élément 
+du tableau.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim N As 
+Integer</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim T(N) As 
+String&nbsp; </font>'création d'un tableau de String.</span></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">For i= 1 To N-1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; T(i)=T(i+1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">T(N-1)=&quot;&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'ne pas oublier de modifier le dernier 
+élément&nbsp; </font></p>
+<p><font face="Courier New" size="2">On obtient:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="11%" id="AutoNumber4">
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Toto</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Tonton</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Titi</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">&nbsp;</td>
+</font>
+  </tr>
+</table>
+<p><font face="Courier New" size="2">On remarque que la boucle démarre au niveau 
+de l'élément à enlever et pas à la fin du tableau.</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Avec les facilités du Framework:</span></font></p>
+<p><font face="Courier New" size="2">On peut décaler les éléments d'un tableau&nbsp; 
+avec la méthode&nbsp; <font color="#0000FF">Copy </font>de<font color="#0000FF"> 
+la Classe 
+Array:</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New">Il suffit de</font><font face="Courier New" size="2"> copier le tableau sur le même tableau 
+mais décalé d'un élément.</font></p>
+<p><font color="#0000FF" face="Courier New">Array.Copy(T, 2, T, 1, T.Length - 2)</font></p>
+<p><font color="#0000FF" face="Courier New">T(T.Length-1)=&quot;&quot;</font></p>
+</font>
+<p><font face="Courier New" size="2">On utilise ici une surcharge de Copy:</font><font color="#0000FF" face="Courier New" size="2">
+</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Array.Copy(Tor, 
+indexOrigine, td, indexDestitation, nombredElements)</font></p>
+<p><font face="Courier New" size="2">Tor: Tableau d'origine; Td tableau 
+destination.</font></p>
+<p>&nbsp;</p>
+<font SIZE="4" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">2-Insérer un élément.</span></p>
+</font>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec une routine:</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+Soit un tableau de 4 String T(0), T(1), T(2),T(3).</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="11%" id="AutoNumber5">
+  <tr>
+    <td width="100%"><font size="2">Toto</font></td>
+  </tr>
+  <tr>
+    <td width="100%"><font size="2">Tonton</font></td>
+  </tr>
+  <tr>
+    <td width="100%"><font size="2">Titi</font></td>
+  </tr>
+  <tr>
+    <td width="100%">&nbsp;</td>
+  </tr>
+</table>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+On veut insérer l'élément &quot;Tata&quot; en seconde position, après &quot;Toto&quot;; il faut 
+d'abord décaler les éléments vers la fin du tableau. Attention : il faut le 
+faire <b>en commençant par la fin du tableau</b>: il faut passer l'avant dernier 
+élément en dernière position puis l'avant avant dernier en avant dernière 
+position. </p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim N As 
+Integer</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font color="#0000FF">Dim T(N) As 
+String&nbsp; </font>'création d'un tableau de String.</span></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Integer</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">For i= N-1 To 1 Step -1</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; T(i)=T(i-1)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0000FF">T(1)=&quot;Tata&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'ne pas oublier d'ajouter</font></p>
+<p><font face="Courier New" size="2">On obtient:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="11%" id="AutoNumber6">
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Toto</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Tata</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Tonton</td>
+</font>
+  </tr>
+  <tr>
+<font SIZE="2" face="Courier New">
+    <td width="100%">Titi</td>
+</font>
+  </tr>
+</table>
+<p><font face="Courier New" size="2">On remarque que la boucle doit commencer à 
+la fin du tableau et remonter.</font></p>
+<p><font face="Courier New" size="2"><span style="background-color: #C0C0C0">
+Avec les facilités du Framework:</span></font></p>
+<p><font face="Courier New" size="2">On peut déplacer les éléments avec la 
+méthode&nbsp; <font color="#0000FF">Copy  </font>de<font color="#0000FF"> Array:</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">On copie le tableau sur le même tableau 
+mais décalé d'un élément.</font></p>
+<p><font color="#0000FF" face="Courier New">Array.Copy(T, 1, T, 2, T.Length - 2)</font></p>
+<p><font color="#0000FF" face="Courier New">T(1)=&quot;Tata&quot;</font></p>
+</font>
+<p><font face="Courier New" size="2">On utilise ici une surcharge de Copy:</font><font color="#0000FF" face="Courier New" size="2">
+</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Array.Copy(Tor, 
+indexOrigine, td, indexDestitation, nombredElements)</font></p>
+<p><font face="Courier New" size="2">Tor: Tableau d'origine; Td tableau 
+destination </font></p>
+<p>&nbsp;</p>
+<p><b><font face="Courier New" size="6" color="#FF0000"><span style="background-color: #C0C0C0">3
+- Utiliser les collections:</span></font></b></p>
+<p><font face="Courier New" size="2">Relire le chapitre sur les collections.</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">On rappelle qu</span><span style="FONT-FAMILY: Courier New">e 
+nombre d'élément dans une collection n'est pas défini au départ comme dans un 
+tableau. Dans une collection il n'y a que les éléments que l'on a ajouté.</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">Les éléments sont 
+repérés grâce à un <b>index, mais attention, si vous ajoutez un élément, cela 
+décale l'index des éléments qui suivent. </b></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff">
+<span style="BACKGROUND-COLOR: #ffffff">Dim L As New ArrayList()</span></font><span style="BACKGROUND-COLOR: #ffffff">&nbsp;</span>&nbsp;&nbsp;&nbsp; 
+'On crée une collection ArrayList</span><font face="Courier New" size="2">&nbsp;</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff">
+<span style="BACKGROUND-COLOR: #ffffff">L.Add(&quot;toto&quot;)</span></font><span style="BACKGROUND-COLOR: #ffffff">&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On ajoute un élément à la collection</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff">
+<span style="BACKGROUND-COLOR: #ffffff">MsgBox(L(0))</span></font><span style="BACKGROUND-COLOR: #ffffff">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On affiche le premier élément</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt; TEXT-INDENT: 35.4pt">
+<font size="2"><span style="FONT-FAMILY: Courier New">On pourra aussi écrire
+<font color="#0000ff">L.Item(0)</font> pour pointer le premier élément.&nbsp;&nbsp; </span>
+</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000ff">MsgBox(L.Count.ToString)&nbsp;</font>&nbsp;&nbsp;&nbsp; 'On affiche le nombre 
+d’élément.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="FONT-FAMILY: Courier New">Attention c'est le nombre d'éléments. 
+S'il y a 3 éléments dans la ArrayList ce sont les éléments d'index 0,1,2.</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font color="#0000FF" size="4" face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">A- Le Tri d'une 
+collection. </span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="font-size: 10pt; font-family: Courier New"><font color="#0000ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+L.Sort()&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'Trie la collection</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="4" color="#0000FF">B</font></span><font color="#0000FF" size="4" face="Courier New"><span style="font-weight: 700; background-color: #C0C0C0">- 
+Recherche dans une collection.</span></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10pt; font-family: Courier New"><font color="#0000ff">
+L.Containts (élément)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>' Retourne True si la liste contient 
+élément.</span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Recherche d'un élément dans une 
+collection NON TRIEE avec <font color="#0000FF">IndexOf</font>:</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim<font SIZE="2" color="#0000FF"> 
+  l </font>As<font SIZE="2" color="#0000FF"> </font>New</font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  ArrayList</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;toto&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">i = l.IndexOf(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">MsgBox(i.ToString)&nbsp;&nbsp; </font>
+  </font></font><font SIZE="2"><font face="Courier New">&nbsp;'Affiche 1</font></font></p>
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+rappelle qu'il existe aussi <font color="#0000FF">LastIndexOf</font> qui démarre 
+par la fin et une surcharge permettant de débuter la recherche à partir d'un 
+indice donné.</font></p>
+<blockquote>
+  <font SIZE="2" COLOR="#0000ff">
+  <p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+  <span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></font>
+  </p>
+</blockquote>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Recherche d'un élément dans une 
+collection TRIEE avec<font SIZE="2" COLOR="#0000ff"> BinarySearch:</font></font></font><font SIZE="2" COLOR="#0000ff"></p>
+</font>
+<blockquote>
+  <font SIZE="2" COLOR="#0000ff">
+  <p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+  l </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+  ArrayList</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> i
+  </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+  </font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;toto&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Add(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">l.Sort()</font><font face="Courier New">'Il 
+  est nécessaire que le tableau soit trié </font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">i = l.BinarySearch(&quot;lulu&quot;)</font></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <font face="Courier New" color="#0000FF">MsgBox(i.ToString)</font></p>
+</blockquote>
+</font>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></font>
+</p>
+<p class="MsoNormal" style="margin-top: 6pt"><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">C</font></b><b><font SIZE="4" face="Courier New" color="#0000FF"><font SIZE="2" face="Courier New">-
+</font>Éliminer, insérer un élément dans une collection.</font></b></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp; </span></font>
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><font color="#0000ff">
+L.Remove(&quot;toto&quot;)&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'On enlève un élément de la liste</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#0000ff">L.RemoveAt(0)&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On enlève l’élément 0 de la liste</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'"><b>&nbsp;&nbsp;&nbsp;&nbsp;
+Insert</b> permet d’insérer à un index spécifié.</span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Courier New" color="#0000ff" size="2">L.Insert( position, Ainserrer)</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="6" color="#FF0000">4</font></b></span><b><font face="Courier New" size="6" color="#FF0000"><span style="background-color: #C0C0C0"> 
+- Autre utilisation des Tableaux:</span></font></b></p>
+<p>&nbsp;</p>
+<p><font SIZE="2" face="Courier New"><b><font face="Courier New">
+Utiliser un tableau plutôt qu'une lourde routine</font></b></font><font SIZE="2" face="Courier New"><b><font face="Courier New">
+permet parfois de résoudre un problème de programmation&nbsp; .</font></b></font></p>
+<p><b><font face="Courier New" size="2">Le principe est: plutôt que d'utiliser 
+une multitude de test pour trouver une valeur, il est parfois préférable de 
+mettre judicieusement les valeurs dans un tableau et ensuite de lire la bonne 
+'case'.</font></b></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0; font-weight:700"><font face="Courier New" size="3">1 - Exemple 1:</font></span></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+J'ai besoin de savoir le nom du jour de la semaine en fonction de son numéro.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+1 doit retourner &quot;Lundi&quot;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+2 doit retourner &quot;Mardi&quot;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+3 doit retourner &quot;Mercredi&quot;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+..</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec If Then</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+C'est pas bien élégant, en plus il faut appeler la 
+routine à chaque fois qu'on veut le nom.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim J As Integer</font>&nbsp; ' Contient le numéro du jour</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim Nom As String&nbsp;&nbsp;&nbsp; </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">If J= 1 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nom=&quot;Lundi&quot;</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">ElseIf J= 2 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nom=&quot;Mardi&quot;</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">End If</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec Select Case</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+On peut faire un Select Case, c'est pas bien élégant, en plus il faut appeler la 
+routine à chaque fois qu'on veut le nom.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">SelectCase J</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; Case 1 </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nom=&quot;Lundi&quot;</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; Case 2</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nom=&quot;Mardi&quot;</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; ..</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">End Select</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec un tableau</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+C'est plus élégant de créer un tableau.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim Nom as String ={&quot;Lundi&quot;, &quot;Mardi&quot;, 
+&quot;Mercredi&quot;....&quot;Dimanche&quot;}</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Lenom= Nom (J-1)</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+C'est plus commode et le plus compact.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Notez que le premier élément du tableau étant l'élément 0 , il faut utiliser
+<font color="#0000FF">J-1</font>.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec le Framework</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+On utilise pour cela une énumération:</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Enum NomJour<br>
+&nbsp;&nbsp;&nbsp; Lundi<br>
+&nbsp;&nbsp;&nbsp; Mardi<br>
+&nbsp;&nbsp;&nbsp; Mercredi<br>
+&nbsp;&nbsp;&nbsp; Jeudi<br>
+&nbsp;&nbsp;&nbsp; Vendredi<br>
+&nbsp;&nbsp;&nbsp; Samedi<br>
+&nbsp;&nbsp;&nbsp; Dimanche<br>
+End Enum </font><br>
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+puis</p>
+<font SIZE="2" COLOR="#0000ff">
+<p>Dim</font><font SIZE="2" color="#0000FF"> s </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> Type =
+</font><font SIZE="2" COLOR="#0000ff">GetType</font><font SIZE="2"><font color="#0000FF">(NomJour) </font>
+'on instance <font color="#0000FF">s</font></p>
+<p><font color="#0000FF">Nom = [Enum].GetName(s, J)&nbsp;&nbsp;&nbsp; </font>'Paramètre: 
+une instance de l'énumération et J; retourne le nom.</p>
+<p>&nbsp;</p>
+</font>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0; font-weight:700"><font face="Courier New" size="3">2 - Exemple 2:</font></span></p>
+<font SIZE="2" face="Courier New">
+<p style="margin-top: 2; margin-bottom: 0">
+J'ai besoin de connaître le risque de faire un accident vasculaire en fonction 
+du sexe et de la tranche d'age.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+10 à 20 ans , Homme&nbsp; doit retourner 0</p>
+<p style="margin-top: 2; margin-bottom: 0">
+...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+60 à 70 ans et Femme doit retourner 20</p>
+<p style="margin-top: 2; margin-bottom: 0">
+...</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec If Then</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+C'est pas bien élégant, en plus il faut appeler la 
+routine à chaque fois.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim S As Integer</font>&nbsp; ' Contient le sexe 0 
+masculin, 1 féminin</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim A As Integer </font>&nbsp;' Contient la tranche d'age</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim Risque As Integer&nbsp;&nbsp;&nbsp; </font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">If S= 1 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; If A=1 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Risque=0</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; ElseIf A=2 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Risque=3</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; ..</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; End If</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Else</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; If A=1 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Risque=0</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp; ElseIf A=2 Then</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Risque=3</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; ..</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; End If</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">End If</font></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<span style="background-color: #C0C0C0">Avec un tableau</span></p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+C'est plus élégant de créer un tableau a 2 dimensions.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Les colonnes indiquent le sexe, les lignes, la tranche d'age.</p>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+Sexe Masculin&nbsp;&nbsp;&nbsp; Sexe Féminin</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="25%" id="AutoNumber7">
+  <tr>
+    <td width="50%" align="center">0</td>
+    <td width="50%" align="center">0</td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">1</td>
+    <td width="50%" align="center">30</td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">...</td>
+    <td width="50%" align="center">...</td>
+  </tr>
+</table>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Dim Risques(,) as Integer =</font><font SIZE="2">{{0, 0}, 
+{1, 2}, {0, 0}, {2, 3}}</p>
+</font>
+<p style="margin-top: 2; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 2; margin-bottom: 0">
+<font color="#0000FF">Risque= Risques(S, A)</font></p>
+</font>
+<p>&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="ve1-2.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve1-4.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve1-3.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:22 GMT -->
+</html>

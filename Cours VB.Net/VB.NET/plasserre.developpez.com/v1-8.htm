@@ -1,0 +1,737 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET constante, énumération </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.8</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les constantes, les 
+    énumérations.</font></b></td>
+    <td width="14%" height="76"><a href="v1-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font face="Symbol" size="7" color="#FF0000">p</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<b><font color="#800000" face="Courier New" size="2">Les constantes.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<b><font color="#800000" face="Courier New" size="2">Les énumérations.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+<b><font color="#800000" face="Courier New" size="2">Généralisations, 
+énumérations fournies par VB.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="6" color="#0000FF">Constantes</font></b></span><b><font face="Courier New" size="6" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700">Comme 
+les variables, elles ont un nom et un type, mais leurs valeurs sont 'constantes'.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On les déclare par le 
+mot <font color="#0000FF"> <b>Const</b></font>, on peut les initialiser en même temps avec <b>=</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Const NOMDUPROGRAMME=&nbsp;&quot;LDF&quot;</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;
+constante de type String (chaîne de caractères).</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">Const NOMBREDECASE As Integer = 12&nbsp;</span>&nbsp;&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;constante
+de type Integer</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Ensuite on peut utiliser 
+la constante:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">For k= 0 
+To NOMBREDECASE</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Next k</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on utilise: For k=0 To 12, à la lecture 
+c'est moins clair.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on écrit: <font color="#0000FF">
+NOMBREDECASE=13</font> cela déclenche une erreur!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Habituellement, les constantes sont créées en 
+début de programme.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Il est conseillé par 
+convention d'écrire <b>le 
+nom&nbsp;des constantes en majuscules</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+Intérêt des constantes&nbsp;?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp; -<b>Améliore la lisibilité</b> et évite d'utiliser des constantes littérales:</span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut éviter:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">For i=0 To 
+100&nbsp;&nbsp;&nbsp; </font><font size="2">'A quoi correspond 100?</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Next i</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Il faut écrire</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Const 
+NBMAXPATIENT As Integer= 100</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">For i=0 To NBMAXPATIENT</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<b>-Modifications 
+du code facilitées:</b></span></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si une constante doit 
+être <b>modifiée</b> ultérieurement, il suffit en mode conception, de modifier sa 
+valeur ce qui modifie sa valeur dans l’ensemble du code de l’application.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-family: Courier New">
+<font size="2" color="#0000FF">Const 
+NBMAXPATIENT As Integer= 200 </font>
+<font size="2" color="#008000">'Si j'introduis une modification de valeur</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">For i=0 To NBMAXPATIENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2" color="#008000">'Toutes les boucles utilisant 
+NBMAXPATIENT seront à jour</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Next i</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;<b>-Amélioration la vitesse.</b></span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Const 
+NBMAXPATIENT As Integer= 100</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+Dim nombre=</font> </span>
+<font face="Courier New" size="2" color="#0000FF">NBMAXPATIENT</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#111111">est plus rapide que:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim 
+nbpatient As Integer= 100</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+Dim nombre=</font> <font color="#0000FF">nbpatient</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Car le compilateur code directement nombre=20 
+dans le premier cas.</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On rappelle que
+<b>seuls les types primitifs peuvent avoir des constantes</b> </span>
+<font face="Courier New" size="2">( Byte, Boolean, Short, Integer, Long, Single, 
+Double, Decimal, Date, Char, String)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Constantes prédéfinies dans le langage:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New"><b>Les constantes de Visual Basic</b> sont toujours 
+là:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New"><font size="2" color="#0000FF">
+vbOk&nbsp;&nbsp; </font><font size="2">
+&nbsp;'retourné par une MessageBox quand l'utilisateur a cliqué sur Ok.</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF" face="Courier New">
+vbBack</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF" face="Courier New">
+vbCancel</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New"><font size="2" color="#0000FF">
+vbCrLf&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2">
+'caractère numéro 13 (Cr) puis numéro 10 (Lf)</font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">True False:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On rappelle que
+<font color="#0000FF">True </font>et <font color="#0000FF">False</font> sont des 
+valeurs Booléens faisant partie intégrante de VB. </font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les anciens de VB6 ne plus 
+utiliser -1 et 0 (D'ailleurs c'est maintenant 1 et 0). </font> </p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Mais, en plus, dans Visual Basic&nbsp;.NET, la 
+plupart des constantes sont remplacées par <b>des énumérations</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">(Voir plus bas )</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font color="#008000">
+<img border="0" src="vicochev.GIF" width="32" height="34">
+<font face="Courier New" size="2">Utiliser largement 
+ces constantes fournies par VB, cela améliore la lisibilité et la maintenance.</font></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New" size="6" color="#0000FF"><span style="background-color: #C0C0C0">Énumération:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les énumérations sont utilisées lorsque l'on a
+<b>un jeu de constantes liées logiquement</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Un bloc <b>Enum</b> permet de créer une liste 
+(une énumération) de constantes:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Enum TypeFichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; DOC</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; RTF</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; TEXTE</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Enum</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Les constantes ainsi créées sont </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">TypeFichier.DOC</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">TypeFichier.RTF</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">TypeFichier.TEXTE</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Le bloc Enum doit être dans <b>l'en-tête du module 
+(en haut)</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">C'est bien pratique car en écrivant le code, 
+dès que je tape <b>TypeFichier.</b> la liste (DOC RTF TEXTE) apparaît.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Ensuite, on peut utiliser dans le programme 
+les constantes créées.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">f</font></span><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">ichierEnCours= TypeFichier.DOC</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;</span>&nbsp; 
+par exemple.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On peut ensuite tester:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">If f</font></span><font face="Courier New" size="2"><font color="#0000FF"><span style="background-color: #FFFFFF">ichierEnCours= 
+TypeFichier.RTF then</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;</span>&nbsp; 
+par exemple.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#FF0000">
+<img border="0" src="vicocheb.gif" width="32" height="34"> Il est conseillé par 
+convention d'écrire <b>le nom&nbsp;des énumérations en minuscules avec la première 
+lettre en majuscules</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Chaque constante littérale de 
+l'énumération a une valeur par défaut. </font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Par défaut  </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">TypeFichier.Doc&nbsp; =<b>0</b>&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">TypeFichier.RTF&nbsp; =<b>1</b> </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">TypeFichier.TEXTE=<b>2</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">La première valeur est 0.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Si on ne spécifie rien, les valeurs sont des 
+Integers, le premier élément est 0 puis 1, 2,3...</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2" color="#FF0000">On
+voit l'intérêt des énumérations: plutôt que d'envoyer par exemple comme
+paramètre à une fonction la constante de valeur 2, on enverra
+TypeFichier.Texte : c'est parlant, lisible et on n'a pas besoin de se souvenir
+que le 'code' 2 veut dite 'Texte'.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois le nom utilisé dans l'énumération (la 
+constante littérale) est suffisant en soi et on n'utilise pas la valeur : Dans un programme gérant des 
+fichiers, une variable prendra la valeur TypeFichier.Doc pour indiquer qu'on 
+travaille sur les fichiers .DOC. Peu importe la valeur de la constante.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;Mais 
+d'autres fois il faut que chaque constante de l'énumération possède une valeur 
+particulière.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Je peux imposer une valeur à chaque constante 
+de l'énumération :</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Enum TypeFichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; DOC=2</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; RTF=4</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; TEXTE=8</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Enum</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">Cela 
+évite d'écrire</font><font face="Courier New" size="2" color="#0000FF"> f</font></span><span style="background-color: #FFFFFF"><font color="#0000FF" face="Courier New" size="2">ichierEnCours= 
+15 </font><font face="Courier New" size="2">
+(en retenant que 15=fichier doc, 30= fichier rtf...)</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Je peux même donner plusieurs valeurs avec 
+<font color="#0000FF">And</font> 
+et <font color="#0000FF">Or</font> à condition d'utiliser l'<b>attribut Flags</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&lt;Flags()&gt; Enum TypeFichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; DOC=2</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; RTF=4</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; TEXTE=8</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; TOUS= DOC 
+AND RTF AND TEXTE</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Enum</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">
+L'attributs &lt;Flags()&gt; indique que les valeurs sont codées en bits, ce qui permet 
+les combinaisons de valeurs. (pour 2 le second bit est à 1, pour 4 le troisième 
+bit est à 1, pour 8, le quatrième bit est à 1...)&nbsp; (voir chapitre sue l'algèbre de Boole.)
+C'est pour cela qu'on a donné les valeurs 2, 4, 8 et non 1, 2, 3.</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les énumérations sont des types 
+qui héritent de <b>System.Enum </b>et qui représentent symboliquement un 
+ensemble de valeurs. Par défaut ses valeurs sont des 'Integer' mais on peut 
+spécifier d'autres types: Byte, Short, Integer ou Long. <br>
+L'exemple suivant déclare une énumération dont le type sous-jacent est Long :<br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">Enum Color 
+As Long<br>
+&nbsp;Red<br>
+&nbsp;Green<br>
+&nbsp;Blue<br>
+End Enum</span><br>
+&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Habituellement, on utilise les énumérations 
+dans le code, comme des constantes.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<font FACE="Courier" SIZE="1" COLOR="#ff0000">
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Enum TypeFichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; DOC=2</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; RTF=4</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; TEXTE=8</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Enum</span></font></p>
+</font>
+<p ALIGN="LEFT"><font face="Courier New" size="2">O</font><font FACE="Courier New" SIZE="2" COLOR="#008000">n
+enverra par exemple à une Sub le paramètre TypeFichier.Texte : c'est parlant,
+lisible<font face="Courier New">.</font>
+</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#008000">
+<p ALIGN="LEFT"><b>' affecter à une variable:</b></p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT">Dim
+</font><font FACE="Courier New" SIZE="2" color="#0000FF">
+monFichier </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">As </font>
+<font face="Courier New" size="2" color="#0000FF">TypeFichier = TypeFichier.RTF
+</font></p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">On remarque qu'on crée une
+variable de type 'énumération' dans laquelle on ne peut mettre qu'une des
+valeurs de l'énumération (en fait un Integer) et pas une autre.</font></p>
+<p ALIGN="LEFT"><font size="2" face="Courier New">On aurait pu écrire:&nbsp;</font></p>
+<p ALIGN="LEFT"><font FACE="Courier New" SIZE="2" COLOR="#0000ff">Dim
+</font><font FACE="Courier New" SIZE="2" color="#0000FF">
+monFichier </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">As </font>
+<font face="Courier New" size="2" color="#0000FF">TypeFichier =4&nbsp; </font><font face="Courier New" size="2">mais
+là, on perd la lisibilité.</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+<p ALIGN="LEFT">&nbsp;</p>
+<p ALIGN="LEFT">' affichage d'une valeur</p>
+</b></font><font FACE="Courier New" SIZE="2" color="#0000FF">
+<p ALIGN="LEFT">Console.Out.WriteLine(&quot;Numéro type du fichier=&quot; &amp; monFichier)</p>
+</font><font FACE="Courier New" SIZE="2">
+<p ALIGN="LEFT">Affiche: 4</p>
+<font FACE="Courier New" SIZE="2" color="#0000FF">
+<p ALIGN="LEFT">Console.Out.WriteLine(&quot;Type du fichier=&quot; &amp; monFichier<b>.ToString</b>)</p>
+</font>
+<p ALIGN="LEFT">Affiche: RTF</p>
+<p ALIGN="LEFT">&nbsp;</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+<p ALIGN="LEFT">' test avec la constante de l'énumération</p>
+</b></font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">If </font><font FACE="Courier New" SIZE="2" color="#0000FF">(monFichier 
+= TypeFichier.RTF) </font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">Then</p>
+</font><font FACE="Courier New" SIZE="2" color="#0000FF">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(&quot;C'est du RTF&quot;)</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">End If</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font FACE="Courier New" SIZE="2">
+Affiche:&quot;C'est du RTF&quot;</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b>
+<font face="Courier New" size="2">Mais parfois on a besoin de récupérer la liste 
+des éléments d'une énumératio</font><font size="2">n</font>.</b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Comment relire la liste des énumérations?</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut utiliser<b> </b></font>
+<font FACE="Courier New" SIZE="2">une méthode statique (ne nécessitant pas 
+d'instanciation) <font color="#0000FF">
+GetValues</font><i> </i>pour obtenir toutes les constantes littérales ou valeurs d'un type énuméré que 
+l'on passe en paramètre.</font></p>
+<font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+<p ALIGN="LEFT">' liste des mentions littérales (Constantes)</p>
+</b></font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">For Each </font>
+<font face="Courier New" size="2" color="#0000FF">t </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As </font>
+<font face="Courier New" size="2" color="#0000FF">TypeFichier </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">In </font>
+<font face="Courier New" size="2"><font color="#0000FF">[Enum].GetValues(monFichier.GetType)</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(t.ToString)</font></p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Next</p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#008000"><b>
+<p ALIGN="LEFT">' liste des mentions entières (Valeurs)</p>
+</b></font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">For Each </font>
+<font face="Courier New" size="2" color="#0000FF">t </font>
+<font FACE="Courier New" SIZE="2" COLOR="#0000ff">As Integer In </font>
+<font face="Courier New" size="2"><font color="#0000FF">
+[Enum].GetValues(monFichier.GetType)</font></p>
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(t)</font></p>
+</font><font FACE="Courier New" SIZE="2" COLOR="#0000ff">
+<p ALIGN="LEFT" style="margin-top: 0; margin-bottom: 0">Next</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Affiche:</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">DOC</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">RTF</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">TEXTE</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">4</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">8</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Si on affecte un élément d'une énumération à 
+une variable Integer, on récupère la valeur, si on utilise ToString on récupère 
+la constante littérale.</font></b></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+n </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">n = TypeFichier.RTF</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Console.Out.WriteLine(n.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> st
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">st = TypeFichier.RTF.ToString</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">Console.Out.WriteLine(st)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Affiche</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">2</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">RTF</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Comment récupérer dans une énumération une 
+constante à partir de sa valeur ou une valeur à partir de la constante? </font>
+</b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ici il faut instancier:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+s </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+Type = </font><font SIZE="2" COLOR="#0000ff">GetType</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">(TypeFichier)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+Console.Out.WriteLine(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">([Enum].GetName(s, 
+15), </font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">))</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+Console.Out.WriteLine(</font></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">([Enum].Parse(s, 
+&quot;DOC&quot;), </font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2" color="#0000FF"><font face="Courier New">))</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">Affiche:</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">DOC</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">2</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="6" color="#0000FF">
+<span style="background-color: #C0C0C0; font-weight:700">
+Généralisation de la notion d'énumération:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#008000" face="Courier New" size="2">Noter que 
+VB.Net contient, comme on l'a vu, un tas de constantes classées à l'aide d'
+Enumération.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight:700; background-color:#C0C0C0"><font color="#0000FF">
+ControlChars:</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Cette énumération contient 
+les caractères de contrôle.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+ControlChars.CrLf&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Chr$(13)+Chr$(10) 
+qui sert à sauter à la ligne 
+dans une chaîne de caractères&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Si on affiche
+<font color="#0000FF">&quot;VISUAL&quot; &amp; ControlChars.CrLf &amp;&nbsp;&quot;BASIC&quot;</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;On obtient à 
+l’écran&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">VISUAL</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">BASIC</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><u>
+<span style="text-decoration: none; font-size: 10.0pt; font-family: Courier New; color: #333399">
+&nbsp;</span></u></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">ControlChars.Tab</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Chr$(9) = caractère de tabulation </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">ControlChars.NullChar</font>&nbsp;&nbsp; Aucun caractère</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">ControlChars.Nothing</font><b>&nbsp;</b>&nbsp;&nbsp; Chaîne vide</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New; ">
+ControlChars.Back</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Taper
+<font color="#0000FF"> ControlChars.</font>&nbsp; 
+Et comme d’habitude vous obtiendrez la liste des constantes.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF">
+<span style="font-family: Courier New; font-weight: 700; background-color: #C0C0C0">
+Couleurs:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On peut aussi utiliser 
+<b>l'énumération des couleurs définies par le Framework</b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+System.Drawing.Color.Blue</font>&nbsp;&nbsp;&nbsp; Pour le bleu</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">ou en simplifiant (si Imports </font>
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+System.Drawing </font><font color="#111111">
+a été écrit)</font></span><font face="Courier New" size="2" color="#111111">
+</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">
+Color.Chocolate</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">
+Color.Black</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">..</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #C0C0C0">Math:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si 
+<font color="#0000FF">Imports System.Math</font> est présent en haut du module,</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+PI</font>&nbsp;&nbsp;&nbsp; contient 3,14…</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">
+E&nbsp;</font>&nbsp;&nbsp;&nbsp; contient la base log naturel</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #C0C0C0">Touche du clavier dans le Framework:</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est parfois nécessaire de savoir si une 
+touche précise à été tapée par l'utilisateur au clavier, pour cela il faut 
+connaître les touches, mais pas besoin de se souvenir du codes des touches, il 
+suffit de taper <b>Keys.</b> et la liste des touches s'affiche. Cliquer sur le 
+nom de la touche recherchée et vous obtenez la constante correspondant à la 
+touche: </font></p>
+<font SIZE="2" face="Courier New" color="#0000FF">
+<p>Keys.Right&nbsp;&nbsp;&nbsp; </font><font SIZE="2" face="Courier New">
+'Désigne le code de la touche '-&gt;'</p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Keys.D8&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</font><font SIZE="2" face="Courier New">'Désigne 
+le code de la touche '8'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Keys.Delete&nbsp;&nbsp; </font><font SIZE="2" face="Courier New">
+'Désigne le code de la touche 'Suppr'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Keys.D&nbsp;&nbsp; </font><font SIZE="2" face="Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;
+</font>'Désigne le code de la touche 'D'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Keys.Shift&nbsp;&nbsp;&nbsp; </font><font SIZE="2" face="Courier New">'Désigne le code de la touche 'Majuscule'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font SIZE="2" face="Courier New" color="#0000FF">
+Keys.SnapShot&nbsp;</font><font SIZE="2" face="Courier New">'Désigne le code de la touche 'Impression écran'</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF" face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">Autre Énumération, un 
+exemple:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Quand on ferme une MessageBox.(une fenêtre qui affiche un message), cela retourne une valeur<font color="#0000FF">
+</font>qui contient: </font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+MsgBoxResult.Yes</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2"> <font color="#0000FF">
+MsgBoxResult.No&nbsp;&nbsp;&nbsp; </font>ou</font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">
+MsgBoxResult.Cancel </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En fonction du bouton qu'a utilisé l'utilisateur pour 
+sortir de la fenêtre MessageBox (appuie sur les boutons Oui, Non, Cancel) .</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-10.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:56 GMT -->
+</html>

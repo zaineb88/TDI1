@@ -1,0 +1,988 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:27:47 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net databinding source de données</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.6</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Charger des contrôles avec 
+    des SGBD.</font></b></td>
+    <td width="9%" height="76"><a href="v6-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">A - Comment remplir une
+ListBox avec une table venant d'une base de données?(avec du code)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">B - Comment remplir un DataGrid avec
+une table venant d'une base de données?(avec du code)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">C
+- Comment créer une source de données automatiquement (VB2005 ou 2008) puis
+remplir une dataGrid? (2 lignes de code!!)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><span style="font-family: Courier New; font-weight: 700">D
+- Comment avec 
+quelques click et sans une ligne de code, créer une application permettant 
+d'afficher le contenu d'une base de données? (en VB 2005 ou 2008)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Cette liaison de 
+données entre une source de données et un contrôle se nomme '</span></font><span style="font-family: Courier New; font-weight: 700"><font size="2" color="#FF0000">DATABINDING</font><font size="2" color="#800080">'.</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" size="5" color="#0000FF">A - Remplir une ListBox avec une 
+colonne d'une table d'une BD: </font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Ici
+on va écrire du code.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700"><font face="Courier New" size="2">Exemple:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-weight: 700"><font face="Courier New" size="2">Dans une base 
+de données Accès nommé 'Nom.Mdb', j'ai une table 'NomPatient' avec plusieurs 
+colonnes, je veux afficher la colonne des noms dans une listBox:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table id="AutoNumber19" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="100%" border="0">
+  <tr>
+    <td width="25%">Champs Civilité</td>
+    <td width="25%">Champ Nom</td>
+    <td width="25%">Champ Prénom</td>
+    <td width="25%">Champ Numéro Interne</td>
+  </tr>
+</table>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt">&nbsp;</p>
+<table id="AutoNumber4" style="BORDER-COLLAPSE: collapse" borderColor="#111111" cellSpacing="0" cellPadding="0" width="100%" border="1">
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%" bgcolor="#00FF00">Durand</td>
+    <td width="25%">Luc</td>
+    <td width="25%">1</td>
+  </tr>
+  <tr>
+    <td width="25%">Mme</td>
+    <td width="25%" bgcolor="#00FF00">Dupont</td>
+    <td width="25%">Josette</td>
+    <td width="25%">2</td>
+  </tr>
+  <tr>
+    <td width="25%">M.</td>
+    <td width="25%" bgcolor="#00FF00">Thomas</td>
+    <td width="25%">Guy</td>
+    <td width="25%">3</td>
+  </tr>
+</table>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New"><b><span style="background-color: #C0C0C0">On peut 
+utiliser un 'DataReader'</span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voir la page 6-4&nbsp; <a href="v6-4.htm">Lire 
+rapidement en lecture seule: le DataReader </a></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est de la 'lecture seule' très rapide.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New"><b><span style="background-color: #C0C0C0">On peut 
+utiliser un 'DataSet', créer un 'DataTable' et la lier au contrôle.</span></b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Le DataSet est une représentation en mémoire 
+des données; Une fois chargé on peut travailler en mode déconnecté.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour le remplir il faut un <b>DataAdapter</b>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vctrl1.GIF" width="103" height="211"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Bien sur il faut importer des espaces de nom:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Data</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Imports</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+System.Data.OleDb</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans la zone déclaration de la fenêtre:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#008000">'Déclarer la connexion</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+ObjetConnection </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration l'Objet Commande </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetCommand </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommand</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataAdapter</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetDataAdapter </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbDataAdapter</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataSet</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetDataSet </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+DataSet</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'String contenant la 'Requête SQL' </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+strSql </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataTable</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetDataTable </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+DataTable</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Paramêtres de connexion à la DB</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+strConn </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans une routine&nbsp; Button1_Click créer les divers objets et remplir la listbox.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+Button1_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button1.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Initialisation de la chaîne de paramètres pour 
+la connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">strConn = 
+&quot;Provider=Microsoft.Jet.OLEDB.4.0;&quot; &amp; &quot;Data Source= c:\nom.mdb;&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Initialisation de la chaîne contenant 
+l'instruction SQL</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">strSql = 
+&quot;SELECT FICHEPATIENT.* FROM FICHEPATIENT&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#008000">'Instanciation d'un Objet Connexion</font></p>
+</font>
+<font SIZE="2" COLOR="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetConnection =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Donner à la propriété ConnectionString les 
+paramètres de connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetConnection.ConnectionString = strConn</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Ouvrir la connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetConnection.Open()</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#008000">'Instancier un objet Commande</font></p>
+</font>
+<font SIZE="2" COLOR="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetCommand =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommand(strSql)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#008000">'Instancier un objet Adapter</font></p>
+</font>
+<font SIZE="2" COLOR="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetDataAdapter =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbDataAdapter(ObjetCommand)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'initialiser l'objet Command</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetCommand.Connection() = ObjetConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Avec l'aide de la propriété Fill du DataAdapter 
+charger le DataSet</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetDataAdapter.Fill(ObjetDataSet, &quot;FICHEPATIENT&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Mettre dans un Objet DataTable une table du 
+DataSet</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">ObjetDataTable 
+= ObjetDataSet.Tables(&quot;FICHEPATIENT&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#008000" face="Courier New">'Indiquer au ListBox d'afficher la 
+table &quot;fichepatient&quot; (indiquer la source)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.DataSource = ObjetDataSet.Tables(&quot;FICHEPATIENT&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#008000">'Indiquer quelle colonne afficher</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.DisplayMember = &quot;NOM&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font face="Courier New" SIZE="2" COLOR="#0000ff">Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Voilà, cela affiche la liste des noms.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" color="#FF0000">Bien respecter les minuscules et 
+majuscules dans les noms de tables et de champs+++</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b><font face="Courier New">Récupérer la 
+valeur d'un autre champ</font></b></span></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">On a vu que 
+dans la table, chaque enregistrement avait un champ 'Nom' mais aussi un champ 'NumInt' 
+(numéro interne)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Dans les 
+programmes, on a souvent besoin de récupérer le numéro interne (un ID) quand 
+l'utilisateur clique sur un des noms; le numéro interne servira a travailler sur ce patient.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Exemple: 
+comment récupérer le numéro interne 3 quand l'utilisateur clique sur 'Thomas'?</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Il faut 
+indiquer à la ListBox que la Value de chaque ligne est 'NumInt' en utilisant la 
+propriété <font color="#0000FF">ListBox1.ValueMember</font>.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Quand 
+l'utilisateur clique sur une ligne de la ListBox, cela déclenche l'évènement
+<font color="#0000FF">ListBox1_SelectedIndexChanged</font>, là on récupère la 
+valeur de NumInt correspondant; elle se trouve dans <font color="#0000FF">
+ListBox1.SelectedValue</font>. (C'est un Int32)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" color="#FF0000">Attention:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Les exemples 
+de Microsoft ne fonctionnent pas!! car, on n'explique nulle part l'importance de 
+l'ordre des lignes remplissant la ListBox.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;<b><font face="Courier New" color="#FF0000">C'est 
+DataSource qui semble&nbsp; déclencher le chargement de la ListBox avec la prise 
+en compte de DisplayMember et ValueMember.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Si on fait 
+comme Microsoft (renseigner ListBox1.DataSource en premier):</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.DataSource = ObjetDataSet.Tables(&quot;FICHEPATIENT&quot;)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.DisplayMember = &quot;NOM&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.ValueMember = &quot;NUMINT&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">ValueMember </font>
+<font face="Courier New">ne fonctionne pas bien, et 
+ListBox1.SelectedValue retourne un objet de type DataRowView impossible à 
+utiliser.&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">&nbsp;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font face="Courier New" color="#FF0000">Il faut donc renseigner le DataSource 
+en dernier.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.DisplayMember = &quot;NOM&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ListBox1.ValueMember = &quot;NUMINT&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><b>
+<font color="#0000FF" face="Courier New">
+ListBox1.DataSource = ObjetDataSet.Tables(&quot;FICHEPATIENT&quot;)</font></b></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans ce cas <font color="#0000FF">ListBox1.SelectedValue</font> 
+contient bien un Int32 correspondant au 'NutInt' selectionné.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">'Ensuite on peut récupérer sans problème 
+NumInt (et l'afficher par exemple dans une TextBox)</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ListBox1_SelectedIndexChanged(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> System.EventArgs) </font>
+<font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+ListBox1.SelectedIndexChanged</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> o </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> </font>
+<font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Object</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> ListBox1.SelectedIndex 
+&lt;&gt; -1 </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">TextBox1.Text = </font> </font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(ListBox1.SelectedValue,
+</font><font SIZE="2" COLOR="#0000ff">String</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="5" color="#0000FF">
+<span style="background-color: #C0C0C0">B - Remplir un DataGrid avec une base de 
+données via un DataSet:</span></font></b><br>
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Ici on va écrire du code.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Avec mise à jour de la base de donnée</b>, si on 
+fait une modification dans le Datagrid. Oui ça marche.(Depuis que j'ai ajouté le 
+CommandBluider)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut créer une <font color="#0000FF">
+Connection</font>, un <font color="#0000FF">DataAdapter</font> et un
+<font color="#0000FF">DataSet</font>, <b>puis en UNE 
+ligne de code</b>, on peut l'afficher dans un <font color="#0000FF">DataGrid</font>.(Grille avec des lignes et 
+des colonnes comme un tableur), ne pas oublier le <font color="#0000FF">
+CommandBuilder</font> sinon Update ne marche pas.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Dans la zone de déclaration:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet Connection</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+ObjetConnection </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet Commande </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetCommand </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommand</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataAdapter</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2" color="#0000FF"> 
+ObjetDataAdapter </font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbDataAdapter</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataSet</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+<font color="#0000FF">ObjetDataSet </font></font><font SIZE="2" COLOR="#0000ff">
+As</font><font SIZE="2" color="#0000FF"> </font><font SIZE="2" COLOR="#0000ff">
+New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> DataSet</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">' Déclaration Objet DataTable</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+<font color="#0000FF">ObjetDataTable </font></font><font SIZE="2" COLOR="#0000ff">
+As</font><font SIZE="2" color="#0000FF"> </font><font SIZE="2" COLOR="#0000ff">
+New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+DataTable</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'String contenant la 'Requête SQL' </p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+<font color="#0000FF">strSql</font> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Paramêtres de connexion à la DB</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+<font color="#0000FF">strConn</font> </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">String</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">' 
+Déclaration d'un&nbsp; OleDbCommandBuilder</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2">
+<font color="#0000FF">ObjetCB </font></font><font SIZE="2" COLOR="#0000ff">As</font></font><font SIZE="2" color="#0000FF"><font face="Courier New"> 
+OleDbCommandBuilder</font></p>
+</font>
+<p class="titre3" style="margin:0 0cm; ">
+&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font><font SIZE="2" face="Courier New">
+<p style="margin-top: 0; margin-bottom: 0"><b>Le bouton ButtonAfficheGrid 
+remplie le DataGrid avec nom.mdb table 'FICHEPATIENT'</b></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> <font color="#0000FF">
+ButtonAfficheGrid_Click(</font></font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ButtonAfficheGrid.Click</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Initialisation de la chaîne de paramètres pour 
+la connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">strConn = 
+&quot;Provider=Microsoft.Jet.OLEDB.4.0;&quot; &amp; &quot;Data Source= c:\nom.mdb;&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Initialisation de la chaîne contenant 
+l'instruction SQL</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">strSql = 
+&quot;SELECT FICHEPATIENT.* FROM FICHEPATIENT&quot;</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Instanciation d'un Objet Connexion</p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetConnection =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Donner à la propriété ConnectionString les 
+paramètres de connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetConnection.ConnectionString = strConn</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Ouvrir la connexion</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetConnection.Open()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Instancier un objet Commande</p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetCommand =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommand(strSql)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Instancier un objet Adapter</p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetDataAdapter =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbDataAdapter(ObjetCommand)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'initialiser l'objet Command</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetCommand.Connection() = ObjetConnection</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'initialiser l'objet OleCBComandBuilder (sinon pas 
+d'update)</p>
+</font><font SIZE="2" color="#0000FF">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">ObjetCB =
+</font> </font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">New</font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+OleDbCommandBuilder(ObjetDataAdapter)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">'Avec l'aide de la propriété Fill du DataAdapter 
+charger le DataSet</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+ObjetDataAdapter.Fill(ObjetDataSet, &quot;FICHEPATIENT&quot;)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'Créer une datatable à partir 
+du dataset</p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">ObjetDataTable 
+= ObjetDataSet.Tables(</font><font SIZE="2" COLOR="#0000FF">&quot;FICHEPATIENT&quot;</font><font color="#0000FF">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" COLOR="#008000" face="Courier New">'Mettre dans le DataGrid une 
+table&nbsp; DataTable</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+DataGrid1.DataSource= ObjetDataTable</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Sub</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font SIZE="2" face="Courier New">Le bouton 
+ButtonMiseA jour met à jour nom.mdb si on a fait une modification dans le 
+DataGrid.</font></b><font SIZE="2" COLOR="#0000ff"></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+ButtonMiseAJour_Click(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Object, </font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.EventArgs) </font><font SIZE="2" COLOR="#0000ff">Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+ButtonMiseAJour.Click</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2">
+<font face="Courier New" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" color="#008000">'Mettre à jour</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">
+&nbsp;&nbsp;&nbsp;
+ObjetDataAdapter.Update(ObjetDataSet, &quot;FICHEPATIENT&quot;)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font>
+<font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vctrl2.GIF" width="285" height="146"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">Les lignes, colonnes, nom des champs, 
+ascenseurs... sont crées automatiquement avec la table &quot;FICHEPATIENT&quot;!! <font color="#FF0000">Génial.</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">On peut cliquer dans une cellule, la 
+modifier..rajouter ou enlever des lignes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">On peut aussi remplir le Datagrid avec:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">DataGrid1.DataSource = ObjetDataSet</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New">DataGrid1.DataMember = &quot;FICHEPATIENT&quot;</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">En mode Design, on peut modifier l'aspect du DataGrid dans la 
+fenêtre de propriété ou en utilisant la mise en forme automatique (lien en bas 
+de la fenêtre de propriétés.)en VB 2003 ou en VB 2008 Express</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vgridformauto.JPG"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">C
+- Créer une 'source de données' sans code puis remplir une DataGrid:</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">( VB
+2005 VB 2008):</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">Ici
+on créé une &quot;source de données&quot; avec un DataSet&nbsp; puis avec 2&nbsp; lignes de
+code on va remplir une DataGrid.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">On a une base de données Access (Nom.MDB), on 
+veut afficher le contenu d'une des tables (la table 'FICHEPATIENT') dans une grid.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal"><span style="background-color: #FFFF00"><font face="Courier New" size="3">A - Création de la 
+source de données:</font></span></p>
+<p class="MsoNormal"><font size="2" face="Courier New">Il faut créer une 
+source de données:</font></p>
+<p class="MsoNormal"><font size="2" face="Courier New">Menu 'Données'=&gt; 'Ajouter 
+une nouvelle source de données'</font></p>
+<p class="MsoNormal" align="center"><img border="0" src="vbd3.JPG" width="332" height="147"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ici la source de données 
+est une base de données:</font></p>
+<p class="MsoNormal" align="center">
+<img border="0" src="vbind1.JPG" width="574" height="386"></p>
+<p class="MsoNormal"><font face="Courier New" size="2">On clique sur 'Base de 
+données' 
+puis bouton 'Suivant'.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ensuite il faut faire le 
+choix de la connexion (Cela correspond au choix d'une base de données 
+existante).</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Cliquer sur 'Nouvelle 
+connexion'. Une nouvelle fenêtre nommée 'Ajouter une connexion' s'ouvre:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Indiquer le type de 
+source de données (ici Microsoft Access (OLEDB), puis le nom de la base de 
+données; enfin cliquer sur &quot;Ok&quot;.</font></p>
+<p class="MsoNormal" align="center">
+<img border="0" src="vbind2.JPG" width="627" height="544"></p>
+<p align="left"><font face="Courier New" size="2">On retrouve le nom de la bd 
+dans la zone connexion, cliquer sur &quot;Suivant&quot;.</font></p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous demande s'il 
+faut copier la BD dans le projet: Si oui la BD sera copiée dans le répertoire de 
+travail quand vous installerez votre application. A vous de voir.</font></p>
+<p align="center"><img border="0" src="vbind3.JPG" width="819" height="160"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous propose 
+d'enregistrer les chaînes de connexion (nom de la base...) dans le fichier de 
+configuration afin qu'elles soient stockées et lues lors de l'utilisation 
+ultérieure. (Automatiquement bien sur) A vous de voir.</font></p>
+<p align="center"><img border="0" src="vbind4.JPG" width="578" height="385"></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite il faut choisir dans 
+la base les objets&nbsp; qui seront chargés dans le dataset.</font></p>
+<p align="left"><font face="Courier New" size="2">C'est habituellement les 
+Tables. Cocher 'Tables'.</font></p>
+<p align="center"><img border="0" src="vbind5.JPG" width="578" height="385"></p>
+<p align="left"><font face="Courier New" size="2">Cliquer sur &quot;Terminer&quot;.</font></p>
+<p align="left"><font face="Courier New" size="2">Pour voir la source de
+données, cliquer dans le menu 'Données', 'Voir les sources de données'.</font></p>
+<p align="center"><img border="0" src="vsourcedon.bmp"></p>
+<p align="left"><font face="Courier New" size="2">On voit bien le DataSet qui a
+été crée (NOMDataSet) et qui contient une table FICHEPATIENT.</font></p>
+<p><span style="background-color: #FFFF00"><font face="Courier New" size="3">B - Remplir
+le DataSet:</font></span></p>
+<p><font face="Courier New" size="2">On utilisera la méthode Fill du
+TableAdapter pour remplir le DataSet.</font></p>
+<p><font face="Courier New" size="2"><font COLOR="#0000ff">Private</font> <font COLOR="#0000ff">Sub</font>
+Form1_Load</font></p>
+<p><font COLOR="#008000" size="2" face="Courier New">'Création d'un
+TableAdapter</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2"><font COLOR="#0000ff">Dim</font>
+FPTableAdapter = <font COLOR="#0000ff">New</font>
+NOMDataSetTableAdapters.FICHEPATIENTTableAdapter</font></font></p>
+<p><font COLOR="#008000" size="2" face="Courier New">'Extraction des données et
+chargement du DataSet</font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">FPTableAdapter.Fill(NOMDataSet.FICHEPATIENT)</font></p>
+</font>
+<p align="left"><font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><span style="background-color: #FFFF00"><font face="Courier New" size="3">C
+- Faire le lien DataSet-Grid</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">Dans
+les propriétés de DataGrid il faut enseigner DataSource et DataMember.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vbind8.JPG"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">On exécute, la grille se remplit avec les
+données.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="3"><span style="background-color: #FFFF00">D
+- Enregistrer les modifications de la grid effectuées par l'utilisateur dans la
+base de données:</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left"><font face="Courier New" size="2">Les
+modifications de la grille sont répercutés dans le DataSet, il faut
+enregistrer le DataSet dans la base grâce au TableAdapter et à sa méthode
+Update.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Private</font><font face="Courier New">
+<font COLOR="#0000ff">Sub</font> Enregistrer_Click</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">Dim</font>
+PatTableAdapter = <font COLOR="#0000ff">New</font>
+NOMDataSetTableAdapters.FICHEPATIENTTableAdapter</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">NOMDataSetBindingSource.EndEdit()</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">'Vérifiez
+que des modifications ont eu lieu</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">If</font>
+NOMDataSet.HasChanges <font COLOR="#0000ff">Then</font></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New" size="2" COLOR="#008000">&nbsp;&nbsp;&nbsp;
+'Appliquer les changements dans la base de données</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;
+PatTableAdapter.Update(NOMDataSet.FICHEPATIENT)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+</font><font face="Courier New" COLOR="#0000ff">If</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">D
+- Remplir un DataGrid avec une base de données sans une ligne de code&nbsp;</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="5" color="#0000FF"><span style="background-color: #C0C0C0">(VB
+2005 VB 2008):</span></font></b><br>
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Ici
+PAS UNE LIGNE DE CODE.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">On a une base de données Access (Nom.MDB), on 
+veut afficher le contenu d'une des tables (la table 'FICHEPATIENT') dans une 
+grille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">A - Il faut créer une source de données: la BD 
+Nom.MDB.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+<font face="Courier New" size="2">B - Il faut créer automatiquement l'interface 
+utilisateur et les liens entre cette interface et une table de la BD.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="left">
+&nbsp;</p>
+<p class="MsoNormal"><span style="background-color: #FFFF00">A - Création de la 
+source de données:</span></p>
+<p class="MsoNormal"><font size="2" face="Courier New">Il faut créer une 
+source de données:</font></p>
+<p class="MsoNormal"><font size="2" face="Courier New">Menu 'Données'=&gt; 'Ajouter 
+une nouvelle source de données'</font></p>
+<p class="MsoNormal" align="center"><img border="0" src="vbd3.JPG" width="332" height="147"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ici la source de données 
+est une base de données:</font></p>
+<p class="MsoNormal" align="center">
+<img border="0" src="vbind1.JPG" width="574" height="386"></p>
+<p class="MsoNormal"><font face="Courier New" size="2">On clique sur 'Base de 
+données' 
+puis bouton 'Suivant'.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ensuite il faut faire le 
+choix de la connexion (Cela correspond au choix d'une base de données 
+existante).</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Cliquer sur 'Nouvelle 
+connexion'. Une nouvelle fenêtre nommée 'Ajouter une connexion' s'ouvre:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Indiquer le type de 
+source de données (ici Microsoft Access (OLEDB), puis le nom de la base de 
+données; enfin cliquer sur &quot;Ok&quot;.</font></p>
+<p class="MsoNormal" align="center">
+<img border="0" src="vbind2.JPG" width="627" height="544"></p>
+<p align="left"><font face="Courier New" size="2">On retrouve le nom de la bd 
+dans la zone connexion, cliquer sur &quot;Suivant&quot;.</font></p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous demande s'il 
+faut copier la BD dans le projet: Si oui la BD sera copiée dans le répertoire de 
+travail quand vous installerez votre application. A vous de voir.</font></p>
+<p align="center"><img border="0" src="vbind3.JPG" width="819" height="160"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous propose 
+d'enregistrer les chaînes de connexion (nom de la base...) dans le fichier de 
+configuration afin qu'elles soient stockées et lues lors de l'utilisation 
+ultérieure. (Automatiquement bien sur) A vous de voir.</font></p>
+<p align="center"><img border="0" src="vbind4.JPG" width="578" height="385"></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite il faut choisir dans 
+la base les objets&nbsp; qui seront chargés dans le dataset.</font></p>
+<p align="left"><font face="Courier New" size="2">C'est habituellement les 
+Tables. Cocher 'Tables'.</font></p>
+<p align="center"><img border="0" src="vbind5.JPG" width="578" height="385"></p>
+<p align="left"><font face="Courier New" size="2">Cliquer sur &quot;Terminer&quot;.</font></p>
+<p align="center">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFF00">B - Génération automatique de 
+l'interface utilisateur:</span></p>
+<p align="left"><font face="Courier New" size="2">Visual Studio dispose d'une 
+fenêtre 'Sources de données' depuis laquelle vous pouvez faire glisser des 
+éléments jusqu'à un formulaire pour créer automatiquement des contrôles liés aux 
+données qui affichent des données.</font></p>
+<p align="left"><font size="2" face="Courier New">Afficher les sources de 
+données:</font></p>
+<p align="left"><font size="2" face="Courier New">Menu 'Données' puis 'Afficher 
+les sources de données'</font></p>
+<p align="left"><img border="0" src="vbd3.JPG" width="332" height="147"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Il apparaît à droite la 
+fenêtre 'Sources de données'</font></p>
+<p align="left"><font face="Courier New" size="2">Dérouler 'NomDataSet'(c'est le 
+nom donné par VB à la connexion) et cliquer 
+sur 'FICHEPATIENT' (c'est le nom d'une table de la BD).</font></p>
+<p align="left"><font face="Courier New" size="2">Enfin faire un drag ans drop à 
+partir de FICHEPATIENT et déposer le sur la form de gauche (qui est vide au 
+départ)</font></p>
+<p align="left"><font face="Courier New" size="2">Miracle: il apparaît 
+automatiquement: </font></p>
+<blockquote>
+<p align="left"><font face="Courier New" size="2">-un datagrid.</font></p>
+<p align="left"><font face="Courier New" size="2">-une barre de navigation (tout 
+est généré automatiquement: les bitmap des boutons dans les ressources&nbsp; Setting...)</font></p>
+<p align="left"><font face="Courier New" size="2">-Un DataSet, un TableAdapter</font></p>
+<p align="left"><font face="Courier New" size="2">-Un composant BindingSource.(Il 
+fait le lien entre l'interface et la source de données)</font></p>
+<p align="left"><font face="Courier New" size="2">-Un composant BindingNavigator.(Il 
+gère la barre de navigation)</font></p>
+<p align="left">&nbsp;</p>
+</blockquote>
+<p align="center"><img border="0" src="vbind6.JPG" width="741" height="517"></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">On voit bien en dessous les 4 composants qui 
+ont été ajoutés.</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">C'est terminé!!</font></p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p align="left" style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Il suffit de lancer le programme, et on se 
+voit la bd dans la grille, on se ballade dedans avec le curseur ou la barre de 
+navigation, on peut ajouter, effacer une ligne, enregistrer les modifications:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vbind7.JPG" width="463" height="195"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Pour générer, non par une grid 
+mais des zones de saisie textbox pour chaque champ, avant de faire le drag and 
+drop, dérouler la liste contre la Table dans les sources de données et cliquer sur 
+'Détails'.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il y a un exemple dans la section 5-10 qui 
+donne ceci:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vbd4.JPG" width="819" height="408"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-5.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v6-7.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-6.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+</html>

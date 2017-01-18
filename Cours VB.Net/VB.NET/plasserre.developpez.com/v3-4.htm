@@ -1,0 +1,1164 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:48 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : textbox richtextbox  maskedtextbox rtf </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.4</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les TextBox .</font></b></td>
+    <td width="14%" height="76"><a href="v3-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Les contrôles 
+permettant de saisir du texte sont:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+TextBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+RichTextBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+MaskedTextBox (VB2005 Framework2)</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="4">Les contrôles &nbsp;TextBox.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Contrôle qui permet de taper du texte qui peut être modifié par l'utilisateur du 
+programme.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">C'est la propriété
+<font color="#0000FF">Text</font> qui contient le texte qui a été tapé par 
+l'utilisateur.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Exemple hyper simple: Comment demander son nom à 
+l'utilisateur ?</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il faut créer un label dont la propriété Text 
+contient &quot;Tapez votre nom:&quot;, suivi d'un TextBox nommé txtNom avec une propriété 
+Text=&quot;&quot; (Ce qui fait que la TextBox est vide), enfin un bouton nommé btOk dont 
+la propriété Text=&quot;Ok&quot;.Cela donne:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vtextbox2008.JPG" width="366" height="106"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">txtNom.Select() </font>
+dans Form_Load<b> </b>donne le focus à la TextBox</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une fois que l'utilisateur a tapé son nom, il 
+clique sur le bouton 'Ok':</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans btOk_Click il y a:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font color="#0000FF" face="Courier New" size="2">Dim nom As String</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">nom= txtNom.Text</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La variable Nom contient bien maintenant le 
+nom de l'utilisateur.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Un TextBox</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+correspond à un </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">mini 
+éditeur de texte</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">.(Mais 
+sans enrichissement: sans gras, ni italique… du moins pour être exact, 
+l'enrichissement affecte la totalité du texte et pas seulement une partie) La police de caractères affectant 
+la totalité du texte peut simplement être modifiée par la propriété</span><span style="font-family: Courier New; color: windowtext">
+<b>Font</b>. </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+La couleur du texte peut être modifiée par</span><span style="font-family: Courier New; color: windowtext">
+<b>ForeColor</b>, </span></font>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">mais la totalité du texte aura la même couleur.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vtextbox.gif" width="183" height="43"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">La propriété </span>
+</font><span style="font-family: Courier New; color: windowtext"><font size="2">
+<b>.text</b> </font></span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">permet aussi de modifier le texte visible dans le contrôle.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</span><font color="#0000FF"><span style="font-family: Courier New">TextBox1.text=&nbsp;&quot;Bonjour&quot;</span></font><span style="font-family: Courier New; color: windowtext">
+</span></font>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">‘Affiche &quot;Bonjour&quot; dans le contrôle.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">Parmi les multiples 
+propriétés de ce contrôle, signalons&nbsp;: </font></span></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><span style="font-family: Courier New"><font size="2" color="#0033FF">Multiline</font></span></b><span style="font-family: Courier New"><font size="2">&nbsp;: 
+autorise ou non l’écriture sur plusieurs lignes.<br>
+<font color="#0033FF">
+<b>Scrollbars</b></font>&nbsp;: fait figurer une barre de défilement horizontale ou 
+verticale (ou les deux) <br>
+<font color="#0033FF">
+<b>PaswordChar</b></font>&nbsp;: crypte le texte entré sous forme d’étoiles. <br>
+<font color="#0033FF">
+<b>MaxLength</b></font>&nbsp;: limite le nombre de caractères qu’il est possible de saisir.</font></span></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font color="#0000FF"><font size="2">
+TextBox1.MaxLength=&nbsp;3 </font>
+</font><font size="2">'limite la saisie à 3 caractères.</font></span></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2" color="#0000FF">
+TextBox1.MaxLength=&nbsp;0 </font>
+<font size="2">'ne limite pas la saisie et permet de taper un très long texte.</font></span></p>
+<p class="MsoNormal" style="margin-left: 36.0pt; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New"><b>TextLength</b> donne la 
+longueur du texte</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+En mode </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+MultiLine</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+la collection</span><span style="font-family: Courier New; color: windowtext">
+<b>Lines</b> </span></font>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">contient dans chacun de ses éléments une des lignes affichées 
+dans le contrôle:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;</span><font color="#0000FF"><span style="font-family: Courier New; font-weight: normal">TexBox1.Lines(0)</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+contient la première ligne</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;</span><font color="#0000FF"><span style="font-family: Courier New; font-weight: normal">TexBox1.Lines(1)</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+la 
+seconde...</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+En mode </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+MultiLine</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+ on peut accepter ou non d'inclure dans le texte les tabulation (propriété </span><span style="font-family: Courier New; font-weight: normal"> 
+<font color="#0000FF">AcceptTab</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">)
+ou les retours à la ligne (propriété </span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">AcceptReturn</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">Les 
+TextBox contiennent une méthode Undo: annulation de la dernière modification.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">La propriété
+<font color="#0000FF">CanUndo</font> du TextBox doit être à True.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Ensuite pour modifier:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">If textBox1.CanUndo = 
+True Then</font><br>
+<font color="#0000FF">textBox1.Undo()</font><br>
+' Vider le buffer Undo.<br>
+<font color="#0000FF">textBox1.ClearUndo()</font><br>
+<font color="#0000FF">End If</font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il existe aussi <font color="#0033FF">Redo
+(Faux!!)</font>.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Ajouter au texte:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut ajouter du texte au texte déjà présent 
+dans le TextBox</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">textBox2.AppendText(MonText)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">C'est équivalent à</font><font face="Courier New" size="2" color="#0000FF"> 
+textBox2.Text=textBox2.Text+MonText<br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Pour saisir un mot de passe:</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span codeLanguage="VisualBasic">
+<font color="#0033FF" size="2" face="Courier New">TextBox1.PassWord = true</font><br>
+<font size="2" face="Courier New">Ainsi il apparaît des *** au lieu des 
+caractères tapés.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Pour ne saisir que des majuscules:&nbsp;</font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font SIZE="2" color="#0000FF" face="Courier New">TextBox1.CharacterCasing =
+CharacterCasing.Upper</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">
+Evènements liés aux TextBox:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">
+<font color="#0033FF">KeyDown</font>
+</span><span style="font-family: Courier New">survient quand on appuie sur le 
+touche.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; font-weight: 700">
+<font color="#0033FF">KeyPress</font>
+</span><span style="font-family: Courier New">quand la touche est enfoncée.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><font color="#0033FF"><span style="font-family: Courier New; font-weight: 700">KeyUp
+</span></font><span style="font-family: Courier New">quand on relâche la touche.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Ils surviennent dans cet 
+ordre.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">KeyPress permet de 
+récupérer la touche tapée dans </span></font> 
+<font color="#0000FF" SIZE="2" face="Courier New">
+e.KeyChar </font> 
+<font SIZE="2" face="Courier New">
+(le code unicode mais pas les touches de fonction de direction comme
+CTRL,F1, F2, flèche haut...)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">KeyDown et KeyUp 
+permettent de voir ce qui a été tapé physiquement, le code clavier (dans </span></font> 
+<font color="#0000FF" SIZE="2" face="Courier New">
+e.KeyCode) </font> 
+<font size="2"><span style="font-family: Courier New"> et aussi si&nbsp; MAJ ALT CTRL ont été
+pressés (dans&nbsp;</span></font><font size="2"><span style="font-family: Courier New">
+</span></font><font color="#0000FF" SIZE="2" face="Courier New">e.Shift</font><font size="2"><span style="font-family: Courier New">
+e.Alt..)</span></font></p>
+<blockquote>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">On peut récupérer la 
+touche pressée, mais impossible d'en modifier la valeur 
+en VB 2003(</span></font><font color="#0000FF" SIZE="2" face="Courier New">e.KeyChar </font> 
+<font SIZE="2" face="Courier New">
+est en lecture seule), par contre en VB 2005 , on peut modifier e.KeyChar.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Voir exemple plus bas;</font></p>
+<p class="titre3"><font face="Courier New" size="2"><b>Comment récupérer la 
+totalité du texte qui est dans le TextBox?</b></font></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">
+<font size="2">T= textBox1.Text</font></span></p>
+<p class="titre3"><span style="font-family: Courier New; color: windowtext">
+<font size="2"><b>Comment mettre les lignes saisies par l'utilisateur dans un 
+tableau&nbsp;?&nbsp;</b></font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">
+<font size="2">Dim tempArray() as String</font></span></p>
+<p class="titre3"><span style="font-family: Courier New; color: #0000FF">
+<font size="2"><span style="background-color: #FFFFFF">tempArray = textBox1.Lines&nbsp;</span>&nbsp;&nbsp;&nbsp; </font></span>
+<font size="2"><span style="font-family: Courier New">'On utilise la collection
+<b>Lines</b></span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+<font size="2">Comment récupérer la première ligne&nbsp;?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF"><font size="2">T= 
+textBox1.Lines(0)</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">TextBox1.GetFirstCharIndexOfCurrentLine</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+retourne la position du premier caractère de la ligne courante.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">(le
+premier caractère est à la position 0 et on compte des retour à la ligne
+comme 1 caractère)</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font SIZE="2" face="Courier New"><font color="#0000FF">TextBox1.GetFirstCharIndexFromLine(2)</font>
+retourne l'index&nbsp; du premier caractère de la ligne 2.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">TextBox1.GetCharFromPosition(New
+Point(10.1))</font> retourne le caractère coordonnée 10,1</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF"><font size="2">
+<span style="font-family: Courier New">Pour <b>sélectionner</b> une portion de 
+texte par code on utilise:</span></font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#0000FF" SIZE="2">TextBox1.SelectionStart=3
+</font><font face="Courier New" SIZE="2">'position de départ</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#0000FF" SIZE="2">TextBox1.SelectionLength=4
+</font><font face="Courier New" SIZE="2">'nombre de caractère sélectionné</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi écrire:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">TextBox1.Select(3,4)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">puis</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">TexBox1.SelectedText=&quot;toto&quot; </span>
+<span style="font-family: Courier New; background-color:#FFFFFF">'remplace la 
+sélection par 'toto'</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">TexBox1.SelectAll </span>
+</font><font size="2"><span style="font-family: Courier New; background-color:#FFFFFF">'sélectionne
+la totalité du texte.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">TexBox1.DESelectAll </span>
+<span style="font-family: Courier New; background-color:#FFFFFF">'désélectionne
+la totalité du texte. (SelectionLength=0)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si l'utilisateur sélectionne une partie du
+texte, elle est dans <font color="#0000FF">TextBox1.SelectedText&nbsp;</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><b>Comment positionner le curseur après le 
+troisième caractère?</b></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">En donnant à la propriété SelectionStart la 
+valeur 3</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#0000FF" SIZE="2">TextBox1.SelectionStart=3</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">SelectionLength doit avoir la valeur 0</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight:700"><font size="2">
+Comment interdire la frappe de certains caractères dans une TextBox?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple:</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Ne permettre de saisir que 
+des chiffres.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Pour cela il faut utiliser 
+l'évènement <font color="#0000FF">KeyPress</font> du textBox qui retourne un 
+objet <font color="#0000FF">e</font> de type </span></font>
+<font SIZE="2" face="Courier New">KeyPressEventArgs. <font color="#0000FF">
+e.KeyChar</font> contient le caractère pressé, mais il est en lecture seule!! on 
+ne peut le modifier. Pour annuler la frappe (dans notre exemple si le caractère 
+n'est pas un chiffre) il faut faire <font color="#0000FF">e.handled=True</font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">IsNumeric</font> permet 
+de tester si&nbsp; le caractère est numérique.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Private</span></font></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> TextBox1_KeyPress(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.Windows.Forms.KeyPressEventArgs) </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Handles</span></font></font><font face="Courier New" SIZE="2"><span style="background-color: #FFFFFF"> 
+TextBox1.KeyPress</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">If</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+IsNumeric(e.KeyChar) </font><font SIZE="2" COLOR="#0000ff">Then</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; e.Handled = </span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">False</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Else</span></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; e.Handled = </span>
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">True</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">If</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Sub</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New" size="2">En VB 
+2005</font><font face="Courier New" size="2" color="#0000FF"> </font></span>
+<span codeLanguage="VisualBasic"><font face="Courier New" size="2">
+<font SIZE="2" color="#0000FF">TextBox1.CharacterCasing = CharacterCasing.Upper&nbsp;</font>
+permet de saisir que des majuscules.</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span codeLanguage="VisualBasic"><font face="Courier New" size="2">(Numeric qui
+ne permet de saisir que du numérique fonctionne uniquement en C#!!)</font><br>
+&nbsp;</span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font size="2" face="Courier New">
+Compter combien de fois on a tapé certains caractères?</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">Private</span></font><font face="Courier New"><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2"> TextBox1_KeyPress(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2">, </font>
+<font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e </font>
+<font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> 
+System.Windows.Forms.KeyPressEventArgs) </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Handles</span></font></font><font face="Courier New" SIZE="2"><span style="background-color: #FFFFFF"> 
+TextBox1.KeyPress</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font size="2" face="Courier New" color="#0000FF">
+<span style="background-color: #FFFFFF">Select Case e.KeyChar<br>
+</font>
+<font size="2" face="Courier New">
+' Compte les&nbsp; backspaces.</font><font size="2" face="Courier New" color="#0000FF"><br>
+Case ControlChars.Back<br>
+&nbsp;&nbsp;&nbsp; Nombrebackspace = Nombrebackspace + 1<br>
+</font>
+<font size="2" face="Courier New">
+' Compte les&nbsp; 'ENTER' .</font><font size="2" face="Courier New" color="#0000FF"><br>
+Case ControlChars.Lf<br>
+&nbsp;&nbsp;&nbsp; Nombrereturn = Nombrereturn + 1<br>
+</font>
+<font size="2" face="Courier New">
+' Compte les&nbsp; ESC . </font>
+<font size="2" face="Courier New" color="#0000FF">
+<br>
+Case Convert.ToChar(27)<br>
+&nbsp;&nbsp;&nbsp; NombreEsc = NombreEsc + 1<br>
+</font>
+<font size="2" face="Courier New">
+' Compte les autres.</font><font size="2" face="Courier New" color="#0000FF"><br>
+Case Else<br>
+&nbsp;&nbsp;&nbsp; keyPressCount = keyPressCount + 1<br>
+End Select<br>
+End Sub</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Petite parenthèse:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Pour comparer les caractères il y a 2 méthodes:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">if 
+e.KeyChar=Convert.ToChar(27) then</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">ou</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<font color="#0000FF">if 
+AscW(e.Keychar)=27 then</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">
+Différentes manières de récupérer ce qui a été tapé:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+L'évènement <font color="#0000FF">TextBox1_TextChanged </font>se produit dès 
+qu'il y a une modification dans le textbox (frappe d'un caractère mais aussi 
+modification de la propriété<font color="#0000FF"> Text)</font>, dans la 
+procédure <font color="#0000FF">TextBox1_TextChanged </font>on peut utiliser&nbsp;
+<font color="#0000FF">TextBox.text</font> qui contient la totalité du texte.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Quand on tape un caractère au clavier, les évènements suivant se déclenchent 
+(dans l'ordre):</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" SIZE="2" face="Courier New">TextBox1_KeyDown()&nbsp; </font>
+<font SIZE="2" face="Courier New">quand on appuie sur la touche.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">TextBox1_KeyPress()  </font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">TextBox1_KeyUp()</font>&nbsp;&nbsp;&nbsp; quand on relâche 
+la touche.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" SIZE="2" face="Courier New">TextBox1_KeyDown() </font>
+<font SIZE="2" face="Courier New">et</font><font color="#0000FF" SIZE="2" face="Courier New"> </font><font SIZE="2" face="Courier New">
+<font color="#0000FF">TextBox1_KeyUp()</font> retourne le paramètre
+<font color="#0000FF">e</font>.&nbsp; </font>
+<font color="#0000FF" SIZE="2" face="Courier New">&nbsp;</font></p>
+<blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">e.KeyChar</font> permet de récupérer le caractère qui à été tapé 
+(le caractère UNICODE).</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+(on peut facilement le tester avec les fonctions traitant des caractères:
+<font color="#0000FF">IsDigit</font> par exemple pour voir s'il est numérique, 
+ou tester son code Ascii ou plutôt unicode)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" face="Courier New" size="2">if 
+AscW(e.Keychar)=27 then</font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" SIZE="2" face="Courier New">TextBox1_KeyPress()</font><font SIZE="2" face="Courier New">retourne 
+le paramètre <font color="#0000FF">e</font>.&nbsp; </font>
+<font color="#0000FF" SIZE="2" face="Courier New">&nbsp;</font></p>
+<blockquote>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">e.KeyCode</font> permet de récupérer le code clavier qui à été tapé. 
+Pour tester une caractère on utilise l'énumération Keys:</font></p>
+  <font SIZE="2" COLOR="#0000ff">
+  <p><font face="Courier New">If</font></font><font face="Courier New"><font SIZE="2"> e.KeyCode = Keys.A </font>
+  <font SIZE="2" COLOR="#0000ff">Then </font></font><font SIZE="2"><font face="Courier New">(permet devoir si 
+  l'utilisateur a tapé sur la touche A.)</font></p>
+  <p><font face="Courier New"><font COLOR="#0000ff">End</font>
+  <font COLOR="#0000ff">If
+  </font>
+  </font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Noter bien que c'est le code de la touche (et pas du caractère), on peut tester
+<font color="#0000FF">Keys.Escape</font> <font color="#0000FF">Keys.Back</font>..</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Aussi on peut aussi tester:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">e.Alt</font> permet de savoir si la touche Alt est 
+enfoncée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font SIZE="2" face="Courier New">
+<font color="#0000FF">e.Shift</font> permet de savoir si la touche Shift est 
+enfoncée.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font SIZE="2" face="Courier New">
+<font color="#0000FF">e.Ctrl</font> permet de savoir si la touche Contrôle est 
+enfoncée.</font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0">
+<font color="#0000FF" SIZE="2" face="Courier New">KeyChar </font>
+<font SIZE="2" face="Courier New">et</font><font color="#0000FF" SIZE="2" face="Courier New">
+</font><font color="#0000FF" SIZE="2" face="Courier New">KeyCode </font>
+<font SIZE="2" face="Courier New">sont en lecture seule en 2003, on ne peut donc pas les 
+modifier!! (en 2005 on le peut)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2" face="Courier New"><b>
+En VB 2003, y a t-il un moyen de modifier le caractère tapé?</b>&nbsp; les propriétés de e 
+comme e.KeyChar (dans KeyPress) ou e.KeyCode, e.KeyData e.KeyValue dans les 
+évènements KeyPress et KeyDown sont en lecture seule!!!</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Une 
+solution&nbsp; est de modifier directement le texte:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Exemple: Si l'utilisateur tape ',' afficher '.' à la place.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+TextBox1_KeyPress(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.KeyPressEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font face="Courier New" color="#0000FF"> 
+TextBox1.KeyPress</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font><font SIZE="2" color="#0000FF"> pos
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Integer</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">pos = TextBox1.SelectionStart </font>
+<font face="Courier New" color="#008000">'on mémorise la position du curseur</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+e.KeyChar = &quot;,&quot; </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">e.Handled = </font></font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">True </font>
+<font SIZE="2" color="#008000">'on ne valide pas le caractère ',' qui 
+n'apparaîtra pas.</font></font><font SIZE="2" color="#008000"></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">TextBox1.Text = TextBox1.Text.Insert(pos, 
+&quot;.&quot;)</font><font face="Courier New" color="#008000">'on insère un '.'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">TextBox1.SelectionStart = pos + 1
+</font><font face="Courier New" color="#008000">'on avance le curseur d'un 
+caractère</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><b>
+En VB </b><img border="0" src="v2005.JPG" width="52" height="21"> (Framework 2) <b>
+y a t-il un moyen de modifier le caractère tapé?</b></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+<font color="#0033FF">e.KeyChar</font> est enfin en lecture-écriture.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Pour transformer un caractère tapé au clavier, c'est simple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Quand l'utilisateur tape ',' , afficher '.'.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Private</font></font><font face="Courier New"><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Sub</font><font SIZE="2" color="#0000FF"> 
+TextBox1_KeyPress(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+sender </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">Object</font><font SIZE="2" color="#0000FF">,
+</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2" color="#0000FF"> 
+e </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF"> 
+System.Windows.Forms.KeyPressEventArgs) </font><font SIZE="2" COLOR="#0000ff">
+Handles</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+TextBox3.KeyPress</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">&nbsp;&nbsp;&nbsp; If</font><font SIZE="2" color="#0000FF"> 
+e.KeyChar = &quot;,&quot; </font><font SIZE="2" COLOR="#0000ff">Then</font><font SIZE="2" color="#0000FF"> 
+e.KeyChar = </font><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(&quot;.&quot;,
+</font><font SIZE="2" COLOR="#0000ff">Char</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF"> </font>
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Sub</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="2">VB
+<img border="0" src="v2005.JPG" width="52" height="21"> (le Framework 2) apporte 
+de nouvelles facilités:</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">La propriété <font color="#0033FF">
+ShortCutsEnabled = True</font> permet à l'utilisateur d'ouvrir un menu 
+contextuel avec le click droit; ce menu permet les annuler, couper, copier, 
+coller, supprimer, Sélectionner tout; ce qui peut aussi être fait avec les 
+raccourcis clavier Shift/Inser Ctrl/Inser..</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<img border="0" src="vtextb2005.JPG" width="239" height="150"></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<b><font face="Courier New" size="2">Il est aussi possible d'aider la saisie de 
+mot.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Exemple: je tape 'tot' le textBox propose 
+'toto'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">pour cela dans la fenêtre de propriétés:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0033FF">AutoCompletedMode</font> 
+doit prendre la valeur Append ou Suggest à la place de None. </font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0033FF">AutoCompletedSource</font> 
+indique ou chercher les lignes de 'suggestion'</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0033FF">
+AutoCompletedCustomSource</font> est une liste de lignes utilisées.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">Ci dessus, dans l'exemple:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0033FF">AutoCompletedMode= 
+Suggest</font>&nbsp; affiche le mot dessous; Append l'aurait affiché dans le 
+textBox.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2" color="#0033FF">AutoCompletedSource= 
+CustomSource </font><font face="Courier New" size="2">indique d'utiliser les 
+mots de AutoCompletedCustomSource</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2"><font color="#0000FF">
+AutoCompletedCustomSource</font> contient la liste des mots (pour les rentrer 
+cliquer sur les '..'.)</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" size="2">&nbsp; </font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="4">Le contrôle RichTextBox&nbsp;:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #008000"><font size="2">Si vous 
+êtes débutant passer à un rubrique suivante, vous reviendrez plus tard à la 
+gestion du code RTF. </font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">Rich Text</font> veut dire 'Texte enrichi'</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Le contrôle  </span><font color="#0000FF">
+<span style="font-family: Courier New; font-weight: normal">
+RichTextBox</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+permet d'afficher, d'entrer et de 
+manipuler du texte mis en forme. Il effectue les mêmes tâches que le contrôle </span>
+</font><font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+TextBox</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2">, 
+mais il peut également afficher des polices, des couleurs et des liens, charger 
+du texte et des images incorporées à partir d'un fichier, ainsi que rechercher 
+des caractères spécifiques.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vicochev.GIF" width="32" height="34"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal"> </span>
+<span style="font-family: Courier New; color: #008000; font-weight: 700">Le 
+contrôle RichTextBox a les possibilités d’un traitement de texte comme Word</span><span style="font-family: Courier New; color: #008000; font-weight: normal">.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vrtf.gif" width="175" height="84"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="4"><span style="font-family: Courier New; font-weight: 700">Qu'est 
+ce que</span></font><span style="font-family: Courier New; color: windowtext; font-weight: 700"><font size="4"> RTF?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Le format du texte que l’on peut mettre dans une RichTextBox est 
+le format  </span><font color="#0000FF">
+<span style="font-family: Courier New; font-weight: normal">
+RTF</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+(Rich Text Format = Format de Texte Enrichi)</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Voir&nbsp; <a href="v2-40.htm">Format RTF</a>
+pour le détails</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="2">Pour utiliser les fonctionnalités du 
+RichTextBox il faut utiliser la propriété .Rtf</font></b></p>
+<blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Quand j’affecte un texte à la propriété .</span><span style="font-family: Courier New; color: windowtext; font-weight: 700">Text
+</span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+il est affiché tel quel, sans tenir compte de l’enrichissement.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Quand j’affecte un texte à la propriété </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">.Rtf</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+du contrôle pour l’afficher, s'il contient des enrichissement au format RTF , 
+l’enrichissement est affiché&nbsp;:</span></font></p>
+</blockquote>
+<p><b><font face="Courier New" size="4">Comment afficher un texte enrichi?</font></b></p>
+<p><font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">RichTextBox1.RTF= T&nbsp; </span></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'T étant le texte enrichi</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight:700">
+<font size="4">Exemple 
+complet&nbsp;de texte RTF:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">&quot;{\rtf1\ansi&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;</span></font><span style="color: #0000FF; font-weight: normal; background-color: #FFFFFF" lang="EN-GB">{ 
+\colortbl </span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span lang="EN-GB" style="color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+\red0\green0\blue0;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span lang="EN-GB" style="color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+\red255\green0\blue0;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span lang="EN-GB" style="color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+\red0\green255\blue0;}</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">{\fonttbl</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">{\fo\froman Symbol;}</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">{\f1\fswiss Arial;}</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">}</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">Ce qui suit est en \f1 \cf1 \i  Arial Rouge Italique \f0 
+\cf0  \i0</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">}&nbsp;»</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">Cela 
+donne:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<img border="0" src="vrtf.gif" width="175" height="84"></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">Nb&nbsp;: Si 
+vous voulez copier coller l’exemple pour l’essayer, enlever les sauts à la ligne.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="4"><span style="font-family: Courier New; color: windowtext; font-weight: 700">Autres:</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+RichTextBox1</span><font face="Courier New"><font color="#0033FF"><span style="font-weight: normal; background-color: #FFFFFF">.</span>ZoomFactor</font>
+permet de modifier la taille du&nbsp; texte&nbsp; (normal= 1)</font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0033FF">Undo</font> et <font color="#0033FF">Redo</font>
+sont possible si <font color="#0033FF">CanUndo</font> à la valeur True.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2"><font color="#0033FF">Copy</font>,
+<font color="#0033FF">Cut</font>, <font color="#0033FF">Paste</font>
+fonctionnent comme beaucoup de propriétés communes à TextBox et RichTextBox.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+<font size="4">Comment modifier l’aspect du texte qui a été sélectionné&nbsp;?</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">On 
+n’est plus dans le cas ou on affiche d’emblée la totalité du texte, mais dans le 
+cas&nbsp; ou l’utilisateur veut modifier son texte qui est déjà dans le contrôle. </font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Exemple: L’utilisateur sélectionne une portion du texte dans le contrôle 
+puis clique sur une bouton nommé ’Rouge’ pour mettre la sélection en rouge.
+</font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Dans </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+BoutonRouge_Click()</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+écrire&nbsp;:</span></font></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">RichTextBox1.SelectionColor = System.Drawing.Color.Red</font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">De même pour modifier la police, la hauteur de la police, 
+l’aspect gras ou non&nbsp;:</font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">RichTextBox1.SelectionFont = New Font(&quot;Tahoma&quot;, 12, 
+FontStyle.Bold)</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+<font size="4">Enfin le texte peut être enregistré dans un fichier&nbsp;:</font></span></p>
+<p class="titre3">
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF">
+<font size="2">richTextBox1.SaveFile(FileName, RichTextBoxStreamType.RichText)</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Si on remplace&nbsp;</span><span style="font-family: Courier New; color: windowtext; font-weight: 700">.RichText </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+&nbsp;par </span>
+</font>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">.PlainText</font></span><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+c’est le texte brut et non le texte enrichi qui est enregistré</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Pour lire un fichier il faut employer </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">.LoadFile
+</span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+avec la même syntaxe.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="4"><span style="font-family: Courier New">Comment faire une r</span></font><span style="font-family: Courier New; color: windowtext"><font size="4">echerche 
+dans le texte?</font></span></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">La fonction</font></span><font size="2"><span style="font-family: Courier New; color: windowtext">
+</span><font color="#0000FF"><span style="font-family: Courier New">Find</span></font><span style="font-family: Courier New; color: windowtext">
+</span></font>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">permet de rechercher une chaîne de caractères dans le texte&nbsp;:</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; background-color:#FFFFFF"><font size="2">
+richTextBox1.Find(searchText, searchStart, searchEnd, RichTextBoxFinds.MatchCase)
+</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span style="color: windowtext; font-weight: normal">La méthode retourne 
+l'emplacement d'index du premier caractère du texte recherché et met en 
+surbrillance ce dernier&nbsp;; sinon, elle retourne la valeur&nbsp;-1.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2" face="Courier New">Il peut y avoir des liens hypertexte et on 
+peut interdire la modification enfin il y a les méthodes <font color="#0033FF">Undo</font> et
+<font color="#0033FF">Redo</font> sur les 
+dernières modifications. Comme pour les textbox il y a une collection <font color="#0033FF">Lines()</font>
+qui contient chacune des lignes.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Si
+<font color="#0033FF">MaxLength=0 </font>, la limite du texte est de 64k
+caractères.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font size="4"><span style="font-family: Courier New">Comment Imprimer ce que
+contient la RichTextBox</span></font><span style="font-family: Courier New; color: windowtext"><font size="4">?</font></span></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">Rien
+de simple...</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">Microsoft
+fourni le code d'un contrôle nommé </span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">ExtendedRichTextBox</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">
+qui hérite de RichTextBox mais qui contient en plus une méthode </span><span style="font-family: Courier New; font-weight: normal"><font color="#0000FF">Print</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal">.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2"><span style="font-family: Courier New; color: windowtext; font-weight: normal">Dur,
+dur pour le trouver sur le net!!</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font size="2" face="Courier New">Il
+est sur le site CodeSource:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><a href="http://www.codeproject.com/vb/net/WordProcessingPackage.asp"><font face="Courier New" size="2">Exemple
+en anglais du code d'un traitement de texte (Word processor) utilisant un
+ExtendedRichTextBox qui permet l'impression.</font></a></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Le
+code en VB du contrôle ExtendedRichTextBox est dans l'exemple.&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Le
+Solution RichTextEditor contient&nbsp; le code du contrôle&nbsp;
+ExtendedRichTextBox et le code de l'application RichTextEditor qui utilise le
+contrôle.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt"><font face="Courier New" size="2">Il
+faut charger le projet RichTextEditor , le générer&nbsp; (pour que le contrôle
+soit 'compilé' ), fermer puis rouvrir le projet.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p>
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="4">Le contrôle MaskedTextBox&nbsp;(VB
+<img border="0" src="v2005.JPG" width="52" height="21"> Framework 2):</font></span></p>
+<p><font face="Courier New" size="2">Permettant d'utiliser un masque pour la saisie 
+de caractères. Le masque indique quels caractères interdire ou permettre.</font></p>
+<p align="center"><img border="0" src="vmasktb2.JPG" width="48" height="24"></p>
+<blockquote>
+<p><font face="Courier New" size="2">La propriété <font color="#0033FF">Mask</font> 
+permet d'indiquer le masque de saisie.</font></p>
+<p><font face="Courier New" size="2">On peut la modifier en mode 'Design' à 
+partir de la fenêtre 'Propriétés' :</font></p>
+<p><img border="0" src="vmrextb.JPG" width="510" height="358"></p>
+<p><font face="Courier New" size="2">On voit bien dans la fenêtre ci dessus: le 
+masque '00:00' permet de saisir 2 groupes de 2 chiffres. L'utilisateur ne voit que 
+ce 
+qu'il y a dans l'aperçu '__:__' et est obligé de taper 2 chiffres puis 2 
+chiffres.</font></p>
+<p><font face="Courier New" size="2">On peut utiliser des masques de la liste 
+(Heure, date, code postal..) ou créer un masque personnalisé. </font></p>
+<p><font face="Courier New" size="2">On peut aussi modifier le masque par code:</font></p>
+<p><font face="Courier New" size="2"><span codeLanguage="VisualBasicUsage">
+<font color="#0033FF">maskedTextBox1.Mask = &quot;LL&quot;</font><br>
+&nbsp;</span></font></p>
+<p><font face="Courier New" size="2">Pour le masque personnalisé on utilise:</font></p>
+  <table cellSpacing="0" cellPadding="0" width="100%" xmlns>
+    <tr>
+      <td><font face="Courier New" size="2">0</font></td>
+      <td><font face="Courier New" size="2">Chiffre requis (lettres refusés)</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">9</font></td>
+      <td><font face="Courier New" size="2">Chiffre ou espace optionnel. 
+      (lettres refusés)</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">#</font></td>
+      <td><font face="Courier New" size="2">Chiffre ou espace optionnel. (+) (-) 
+      sont permis.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">L</font></td>
+      <td><font face="Courier New" size="2">Lettre requise. (chiffres refusés)</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">?</font></td>
+      <td><font face="Courier New" size="2">Lettre requise optionnelle. 
+      (chiffres refusés)</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">&amp;</font></td>
+      <td><font face="Courier New" size="2">Caractère requis.(Chiffres et 
+      lettres permises)&nbsp; </font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">C</font></td>
+      <td><font face="Courier New" size="2">Caractère, requis 
+      optionnel.(Chiffres et lettres permises %*&amp; permis) </font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">A</font></td>
+      <td><font face="Courier New" size="2">Alphanumérique requis opt.(Chiffres 
+      et lettres permises %*&amp; refusés) </font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">.</font></td>
+      <td><font face="Courier New" size="2">Point Decimal; celui de la culture.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">,</font></td>
+      <td><font face="Courier New" size="2">Séparateur de millier; celui de la 
+      culture.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">:</font></td>
+      <td><font face="Courier New" size="2">Séparateur de temps; celui de la 
+      culture.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">/</font></td>
+      <td><font face="Courier New" size="2">Séparateur de date; celui de la 
+      culture.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">$</font></td>
+      <td><font face="Courier New" size="2">Symbole monétaire; celui de la 
+      culture.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">&lt;</font></td>
+      <td><font face="Courier New" size="2">Convertir les caractères qui suivent 
+      en minuscule. </font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">&gt; </font></td>
+      <td><font face="Courier New" size="2">Convertir les caractères qui suivent 
+      en majuscule.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">|</font></td>
+      <td><font face="Courier New" size="2">Stop la conversion minuscule ou 
+      majuscule.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">\</font></td>
+      <td><font face="Courier New" size="2">Escape. Le caractère qui suit 
+      devient un littéral.“\\” affichera '\'.</font></td>
+    </tr>
+    <tr>
+      <td><font face="Courier New" size="2">Autres caractères</font></td>
+      <td><font face="Courier New" size="2">Littéraux. Affichés tels quels
+      </font></td>
+    </tr>
+  </table>
+  <p xmlns><font face="Courier New" size="2">Exemple:</font></p>
+  <p><code><font face="Courier New" size="2">&quot;00/00/0000&quot; permet de saisir une 
+  date.</font></code></p>
+  <p><code><font size="2" face="Courier New">&quot;LLL&quot;&nbsp;&nbsp; permet de saisir 
+  trois lettres (pas des chiffres)</font></code><font size="2" face="Courier New">
+  </font></p>
+  <p xmlns><font face="Courier New" size="2">/ $ , : sont dépendant de la 
+  culture en cours:</font></p>
+  <p xmlns><font face="Courier New" size="2">Si le <font color="#0033FF">Mask=&quot;0$&quot;</font>&nbsp; il apparaîtra 
+  &quot;_€&quot; en culture française.</font></p>
+  <p xmlns><font face="Courier New" size="2">On peut modifier cela par
+  <a href="ms-help__/MS.VSExpressCC.v80/MS.NETFramework.v20.fr/cpref/html/P_System_Windows_Forms_MaskedTextBox_FormatProvider.htm">
+  FormatProvider</a> property.</font></p>
+<p><font face="Courier New" size="2"><span codeLanguage="VisualBasicUsage">
+<font color="#0033FF">MaskCompleted </font>indique si la saisie est conforme.</span></font></p>
+<p><span codeLanguage="VisualBasicUsage"><font face="Courier New">
+<font size="2" color="#0033FF">Dim returnValue As </font><font size="2">
+<a href="ms-help__/MS.VSExpressCC.v80/MS.NETFramework.v20.fr/cpref/html/T_System_Boolean.htm">
+<font color="#0033FF">Boolean</font></a></font></font><font color="#0033FF"><font size="2" face="Courier New"><br>
+returnValue = maskedTextBox1.MaskCompleted</font><br>
+&nbsp;</font></span></p>
+  <font SIZE="2" face="Courier New">
+  <p><font color="#0033FF">MaskedTextBox1.text</font> permet de lire le contenu 
+  du texte.</p>
+  </font><span codeLanguage="VisualBasic">
+  <pre>L'évènement le plus souvent utilisé est <font color="#0033FF">TextChanged</font></pre>
+  <pre><font color="#0033FF">Private Sub MaTextBox_TextChanged(sender As Object, _ 
+  e As EventArgs) Handles MaTextBox.TextChanged
+End Sub </font>
+</pre>
+  </span>
+</blockquote>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-3.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-5.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-4.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:49 GMT -->
+</html>

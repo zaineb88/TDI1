@@ -1,0 +1,375 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:49 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : label linklabel </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="57%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="9%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.5</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les Labels</font></b></td>
+    <td width="14%" height="76"><a href="v3-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<font color="#FFFFFF" size="5">
+<span style="font-weight: 700; background-color: #FF0000">Ceci est un Label 
+Rouge!!</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Il y a 2 sortes de 
+Label:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+'Label'</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+'LinkLabel'</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Les labels.</span></font></b></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: windowtext">On 
+en a déjà utilisé pour <b>afficher du texte non modifiable par l'utilisateur 
+(ce n'est donc pas une zone de saisie pour l'utilisateur du logiciel)</b>.</span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Les contrôles </font></span><font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Label</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+sont généralement utilisés pour </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+fournir un texte descriptif à un contrôle</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">. 
+Vous pouvez par exemple utiliser un contrôle </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+Label</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+pour ajouter un texte descriptif à un contrôle TextBox. Ceci a pour but 
+d'informer l'utilisateur du type de donnée attendu dans le contrôle.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Exemple hyper simple: 
+Comment indiquer à l'utilisateur qu'il faut saisir son nom?</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Devant le TextBox 
+permettant la saisie du nom, on ajoute un 'Label' qui affiche 'Taper votre 
+nom:'.</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vtextbox2008.JPG" width="366" height="106"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">La légende qui s'affiche dans l'étiquette est contenue dans la 
+propriété </font></span><font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">Text</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+du label. 
+</span>
+</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Après avoir déposé le 
+'Label' sur le formulaire, on peut modifier le texte affiché à partir de la 
+fenêtre de propriétés, en passant par la propriété '<font color="#0000FF">Text</font>':</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt" align="center">
+<img border="0" src="vlabel.JPG" width="528" height="236"></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On peut aussi mettre la propriété
+<font color="#0000FF">ForeColor</font> à Red pour que le texte du label soit en 
+rouge.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour modifier le texte du label1 par du code:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Label1.Text=&quot;Donner votre 
+Prénom&quot;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">La propriété </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+Alignement</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+vous permet de définir l'alignement du texte dans l'étiquette (centré, à droite, 
+à gauche), </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+BorderStyle</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+permet de mettre une bordure (un tour) ou non..</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Label1.Text=&quot;Label avec 
+une bordure et un fond jaune&quot;</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Label1.BorderStyle=BorderStyle.FixedSingle</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Label1.ForeColor=Color.Red</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">Label2.BackColor=Color.Yellow</font></p>
+<p><font face="Courier New" size="2">donne:</font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="36%" id="AutoNumber6">
+  <tr>
+    <td width="100%" bgcolor="#FFFF00"><font face="Courier New" size="2">
+    <span style="background-color: #FFFF00">&nbsp;</span><font color="#FF0000"><span style="background-color: #FFFF00">Label 
+    avec une bordure et un fond jaune&nbsp; </span></font></font></td>
+  </tr>
+</table>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Remarque: la plupart du temps les labels sont 
+modifiés en mode design, directement dans la fenêtre des propriétés.</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: windowtext; font-weight: normal">
+Il est également possible d’y afficher une image avec la propriété </span>
+<span style="font-size: 10.0pt; font-family: Courier New; color: windowtext; font-weight: 700">
+.Image</span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">La propriété
+<font color="#0000FF">AutoSize</font> autorise le label, si elle est égale à
+<font color="#0000FF">True</font>,a se redimensionner pour afficher la totalité 
+du texte. </span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">
+<span style="font-weight: 700; background-color: #C0C0C0">Remarque sur la mise à 
+jour de l'affichage: </span> </font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La mise à jour de l'affichage du Label (comme 
+les autres contrôles d'ailleurs) est effectuée en fin de Sub:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si on écrit:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+i </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+i = 0 </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+100</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<font face="Courier New" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Label1.Text = 
+i.ToString</span></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next 
+i</span></p>
+</font>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">La variable i prend les valeurs 1 à 100, mais 
+à l'affichage rien ne se passe pendant la boucle, VB affiche uniquement 100 à la 
+fin; si on désire voir les chiffres défiler avec affichage de 0 puis 1 puis 2... 
+il faut rafraîchir l'affichage à chaque boucle avec la méthode
+<font color="#0000FF">Refresh():</font></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF">Dim</span></font></font><font face="Courier New"><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF"> 
+i </span></font><span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2" color="#0000FF"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Integer</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">For</span></font><span style="background-color: #FFFFFF"><font SIZE="2" color="#0000FF"> 
+i = 0 </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF">To</span></font></font><font SIZE="2"><font face="Courier New" color="#0000FF"><span style="background-color: #FFFFFF"> 
+100</span></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">
+<span style="background-color: #FFFFFF"><font color="#0000FF">&nbsp;&nbsp;&nbsp; Label1.Text = 
+i.ToString: <b>Label1.Refresh()</b></font></span></font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">
+<span style="background-color: #FFFFFF">Next i</span></p>
+</font>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Une alternative est de mettre un </font>
+<font SIZE="2"><font face="Courier New"><font color="#0000FF">
+Application.DoEvents()</font> qui donne à Windows le temps de traiter les 
+messages et de rafraîchir l'affichage.</font></p>
+</font>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700; background-color:#C0C0C0">
+<font size="4">Les LinkLabel</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">
+Permettent de créer un <b>lien</b> sur un label</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><b></b><font size="2">
+<b>Text</b> </font></span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Indique le texte qui apparaît.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+<font size="2">LinkArea</font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+défini la zone de texte qui agira comme un lien; dans la fenêtre de propriété 
+taper 11&nbsp;;4 (on verra que c’est plus simple que de le faire par code)</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Les 4 caractères à partir 
+du 11ème seront le lien, ils seront soulignés. Ne pas oublier comme toujours que 
+le premier caractère est le caractère 0.</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">L’événement </font></span><font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+LinkClicked</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+est déclenché quand l’utilisateur clique sur le lien. Dans cette procédure on 
+peut permettre le saut vers un site Internet par exemple ou toute autre action. </font>
+</span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">
+Exemple&nbsp;:</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">LinkLabel1.text=&nbsp;&quot;Visitez le site LDF&quot;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: normal; background-color:#FFFFFF">
+<font size="2">LinkLabel1.LinkArea = New System.Windows.Forms.LinkArea(11, 4)</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">‘Pourquoi faire simple&nbsp;!!</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Cela affiche&nbsp;:</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img border="0" src="vlinklab.gif" width="88" height="17"></font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">Si l’utilisateur clique sur le mot 'site', la procédure suivante 
+est déclenchée&nbsp;:</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: #0000FF; font-weight: 700">
+<font size="2">Private Sub LinkLabel1.LinkClicked…</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New">Il est possible de </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+modifier la couleur du lien pour indiquer qu'il a été utilisé:</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">S</span><span style="font-family: Courier New; color: windowtext; font-weight: normal">i </span>
+<span style="font-family: Courier New; color: windowtext; font-weight: 700">
+VisitedLinkColor</span><span style="font-family: Courier New; color: windowtext; font-weight: normal"> 
+contient une couleur&nbsp; </span>
+<span style="font-family: Courier New; font-weight: normal; background-color:#FFFFFF"><font color="#0000FF">
+e.visited=True </font>modifie la couleur.</span></font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">(e est l'élément qui a envoyé l'évènement, 
+j'en modifie la propriété Visited.)</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">On</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+peut y inclure&nbsp;u</font></span><font face="Courier New" size="2">ne action 
+quelconque, en particulier un saut vers un site Web:</font></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="background-color: #FFFFFF"><font color="#0000FF">
+<span style="font-family: Courier New; font-weight: normal">
+System.diagnostics.Process.Start(&quot;</span></font></span><span style="font-family: Courier New; color: windowtext; font-weight: normal; background-color: #FFFFFF">&nbsp;</span><span style="font-family: Courier New; font-weight: normal"><b>http://plasserre.developpez.com/</b></span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal; background-color:#FFFFFF"><font size="2">&nbsp;&quot;)</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">&nbsp;'correspond au code qui ouvre un browser Internet (Internet 
+Explorer ou Netscape) et qui charge la page dont l'adresse est 
+indiquée.</font></span></p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext; font-weight: normal">
+<font size="2">La collection</font></span><font size="2"><span style="font-family: Courier New; color: windowtext"> 
+Links</span></font><span style="font-family: Courier New; color: windowtext; font-weight: normal"><font size="2"> 
+permet d’afficher plusieurs liens dans un même texte, mais cela devient vite 
+très compliqué.</font></span></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-4.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-6.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-5.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:50 GMT -->
+</html>

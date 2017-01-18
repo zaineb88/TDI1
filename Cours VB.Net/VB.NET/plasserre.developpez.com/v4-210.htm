@@ -1,0 +1,237 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-210.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:14 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  message d'erreur</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+.a_section {
+	color: #000000;
+	font-size: 12px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-style: normal;
+	
+}
+
+
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-200.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.210</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Message d'erreur.</font></b></td>
+    <td width="9%" height="76"><a href="vd1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Quand il y a une erreur de syntaxe, VB 
+souligne l'erreur. Mettre le curseur sur l'erreur, un&nbsp; message d'erreur 
+apparaît:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vaide3.gif" width="406" height="35"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+corriger l faut écrire' Text' et non 'Texte'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">En VB 2005 un panneau d'exclamation permet 
+d'ouvrir une fenêtre proposant le moyen de corriger l'erreur: </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="v2005p15.JPG" width="436" height="205"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Ici on met dans la propriété text d'un label 
+un Integer (ligne jaune), alors qu'il faut mettre une String (Option Strict est probablement 
+égal à On); Vb montre la correction : CStr(i) converti i en String.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Certains messages d'erreur, pour les débutants, 
+sont parfois 
+totalement incompréhensible!!</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Voyons quelques messages très fréquents:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Instance d'objet</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span class="postbody"><b>
+<font color="#008000">&quot;La référence d'objet n'est pas définie à une instance 
+d'un objet&quot;.</font></b> </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span class="postbody">La plupart du temps 
+cela veut dire qu'on utilise un membre d'un Objet alors qu'on n'a pas instancié 
+cet objet.<br>
+Il y a bien une Classe, mais pas d'objet instancié à partir de cette Classe, on 
+veut utiliser une membre sur la Classe alors qu'on ne peut utiliser un membre que 
+sur une instance.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span class="postbody">Exemple:</span></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+bt </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">&nbsp;Button</font></p>
+<p><font color="#0000FF" face="Courier New">bt.BringToFront()</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><span class="postbody">Il n'existe pas 
+réellement d'objet Button : la référence d'objet (bt) n'est donc pas une 
+instance.</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il aurait fallu écrire:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+bt </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font color="#0000FF" face="Courier New"> 
+Button</font></p>
+<p><font color="#0000FF" face="Courier New">bt.BringToFront()</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF">Membre absent</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span class="postbody"><b>
+<font color="#008000" size="2" face="Courier New">&quot;Texte n'est pas un membre de System.Windows.Forms.TextBox&quot;</font></b></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Parfois on fait une bête faute de frappe:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<img border="0" src="vaide3.gif" width="406" height="35"></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il faut tapez : text!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">D'autres fois, on se trompe sur la classe et 
+instance.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">
+<font color="#0000FF">TextBox1.IsNullOrEmpty&nbsp; </font>donne le message:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span class="postbody"><b>
+<font color="#008000" face="Courier New" size="2">&quot;IsNullOrEmpty n'est pas un membre de 
+System.Windows.Forms.TextBox&quot;</font></b></span></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2">On se trompe: on pense que IsNullOrEmpty est un membre de l'instance 
+TextBox1, en fait c'est un membre de la classe&nbsp; String; il faut écrire:</font></p>
+</font>
+<p><font size="2" COLOR="#0000FF" face="Courier New">
+If String.IsNullOrEmpty(TextBox1.Text) Then
+</font>
+</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Type Attendu.</span></font></p>
+<font SIZE="2" face="Courier New">
+<p><span class="postbody"><b>
+<font color="#008000">&quot;Type attendu&quot;</font></b></span></p>
+<p>Exemple 1:</p>
+<font size="2">
+<p></font><font face="Courier New"><font color="#0000ff" size="2">Private</font><font size="2"> 
+MyVariable </font><font color="#0000ff" size="2">As</font><font size="2"> </font>
+<font color="#0000ff" size="2">New</font></font><font size="2"><font face="Courier New">
+<u><i>Obladioblada</i></u></font></p>
+</font>
+<p>Après As New VB attend un type (Integer , Short, String) ou un nom de classe
+(Form1..). Obladioblada n'est pas une classe (un type!!)</p>
+<p>Exemple 2:</p>
+</font><font SIZE="2" COLOR="#008000" face="Courier New">
+<p>' Déclaration Objet DataSet</p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">Private</font><font SIZE="2"> 
+ObjetDataSet </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">New</font></font><font SIZE="2"><font face="Courier New">
+<u><i>dataset</i></u></font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">dataset est souligné comme une erreur &quot;<b><font color="#008000">type 
+attendu</font></b>&quot;!!: Après New Vb attend un type d'objet, une classe. Dataset 
+n'est donc pas considéré comme une classe, pourtant c'est une Classe mais elle
+n'est pas reconnue:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Explication: l'espace de nom contenant la Classe 
+correspondante n'a pas été importé.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New"><font size="2">En fait dataset ne peut être utilisé que 
+si </font><font SIZE="2" color="#0000FF">Imports System.Data</font><font SIZE="2" COLOR="#008000">
+</font></font><font SIZE="2"><font face="Courier New">a été ajouté en début
+de module, dans 
+ce cas Vb sait que c'est un type .</font></p>
+</font>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<font face="Courier New" color="#0000FF"><span style="font-weight: 700; background-color: #C0C0C0">Identificateur
+Attendu.</span></font>&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"> <font color="#0000FF" size="2" face="Courier New">Dim
+2a As Integer&nbsp;&nbsp;</font><font color="#111111" size="2" face="Courier New">
+=&gt; 2 est surligné, si on met la souris sur le &quot;2&quot;, le message
+'Identificateur attendu' apparaît.</font></p>
+<p class="MsoNormal" style="margin-top: 6pt"><font size="2" face="Courier New"><b>Erreur</b>: un
+nom de variable ne doit pas commencer par un chiffre, Vb considère donc
+que&nbsp; '2a' n'est pas un identificateur (un nom de variable' valide).</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-200.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vd1-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-210.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:25:14 GMT -->
+</html>

@@ -1,0 +1,221 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : goto</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="58%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="8%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v1-19.6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.19.7</font></b></td>
+    <td width="47%" height="76" align="center"><b><font size="6" face="Courier New" color="#800080">Contrôle
+      des connaissances.</font></b>
+      <p><b><font size="6" face="Courier New" color="#800080">Collections</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v1-19.8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vpagvb.JPG" width="50" height="57"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="5" color="#FFFFFF"><span style="background-color: #008000">Questions</span></font></b><b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">Si Vb n'accepte pas
+de créer une collection (exercice 7.1) c'est que l'espace de nom correspondant
+n'est pas importé.</font></p>
+<p style="margin-top: 6pt"><font face="Courier New" size="2">Il faut écrire
+tout en haut du module (au dessus de Public Class)&nbsp; <font color="#0000FF">Imports
+System.Collections</font></font></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">7-
+Collections</span></font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">7.1
+</font><font face="Courier New" size="2">Créer une collection de type ListArray nommée
+'L', ajouter &quot;Dupont&quot;, &quot;Durand&quot;, &quot;Dubout&quot; à la
+collection. Afficher dans une MessageBox le premier élément de la collection
+puis le dernier. Enlever le second. Si la collection contient
+&quot;Dubout&quot;, ajouter &quot;Toto&quot; à la position où est
+&quot;Dubout&quot;. Créer une boucle qui affiche tous les éléments de la
+liste.</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="3">7.2
+</font><font face="Courier New" size="2">Créer une collection nommée 'lst' de
+génériques List(Of) et contenant des entiers Long. , ajouter 12, 24, 32.
+Afficher dans une MessageBox le troisième élément.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="2">Créer
+une boucle pour afficher dans une MessageBox successivement tous les éléments
+de la liste.</font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt">
+<b><span style="background-color: #008000"><font face="Courier New" size="5" color="#FFFFFF">Réponses:</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6pt"><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">7-
+Collections</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6pt">
+&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px"><b><font face="Courier New" size="3">7.1
+</font><font face="Courier New" size="2">Créer une collection de type ListArray nommée
+'L', ajouter &quot;Dupont&quot;, &quot;Durand&quot;, &quot;Dubout&quot; à la
+collection. Afficher dans une MessageBox le premier élément de la collection
+puis le dernier. Enlever le second. Si la collection contient
+&quot;Dubout&quot;, ajouter &quot;Toto&quot; à la position où est
+&quot;Dubout&quot;. Créer une boucle qui affiche tous les éléments de la
+liste.</font></b></p>
+<p class="MsoNormal" style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Dim L As New ArrayList()</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'On crée une 
+collection ArrayList</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">L.Add(&quot;Dupont&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On ajoute un élément à la collection</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">L.Add(&quot;Dubout&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On ajoute un élément à la collection</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">L.Add(&quot;Durand&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'On ajoute un élément à la collection</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(L(0))</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'On affiche le premier élément</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt">
+<span style="font-size:10.0pt;font-family:&quot;Courier New&quot;">
+<font color="#0000FF"><span style="background-color: #FFFFFF">MsgBox(L(L.Count-1))&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'</span></font>On affiche le dernier élément&nbsp;</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt;text-indent:35.4pt"><font size="2"><span style="font-family: Courier New">S'il y a 3 éléments dans la  ArrayList ce sont les éléments d'index 0,1,2.</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font color="#0000FF">L.RemoveAt(1)&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; 
+'On enlève l’élément d'index 0 de la liste</span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;">&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">&nbsp;If L.Contains (&quot;Dubout&quot;) Then&nbsp;&nbsp;&nbsp;&nbsp;</font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF" face="Courier New" size="2">L.Insert( L.IndexOf(&quot;Dubout&quot;),
+&quot;Toto&quot;)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; </font>
+<font face="Courier New" size="2">&nbsp;<font color="#0000FF">End If</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="font-size: 10pt; font-family: Courier New"><font color="#0000ff">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;</span>
+<span style="background-color: #FFFFFF">Dim Element As Object</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; For Each Element in L</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MsgBox(
+Element )</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom: 0"><font color="#0000FF" face="Courier New" size="2">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Next</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p style="margin-top:6.0pt"><font face="Courier New" size="2">Bien se souvenir
+qu'une listeArray contient des Objets.&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Attention
+Element étant un objet, si je veux l'afficher par exemple, il faut le 'caster' en
+String:&nbsp;&nbsp;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Comme
+on est en option Strict, il ne faut pas écrire L(0).Item mais L(0)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New" size="3">7.2
+</font><font face="Courier New" size="2">Créer une collection nommée 'lst' de
+génériques List(Of) et contenant des entiers Long. , ajouter 12, 24, 32.
+Afficher dans une MessageBox le troisième élément.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b><font face="Courier New" size="2">Créer
+une boucle pour afficher dans une MessageBox successivement tous les éléments
+de la liste.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font FACE="Courier New" size="2"><font SIZE="2" FACE="Courier New" color="#0000FF">D</font><font SIZE="2" COLOR="#0000ff">im</font><font SIZE="2" color="#0000FF"> 
+lst </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font><font SIZE="2" COLOR="#0000ff">New</font><font SIZE="2" color="#0000FF"> 
+ List(</font><font SIZE="2" COLOR="#0000ff">Of</font><font SIZE="2" color="#0000FF">
+</font><font color="#0000ff">Long</font><font color="#0000FF">)</font>
+</font>
+</p>
+<p style="margin-top:6.0pt"><font size="2" color="#0000FF" face="Courier New">lst.Add
+12</font></p>
+<p style="margin-top:6.0pt"><font size="2" color="#0000FF" face="Courier New">lst.Add
+24</font></p>
+<p style="margin-top:6.0pt"><font size="2" color="#0000FF" face="Courier New">lst.Add
+32</font></p>
+<p style="margin-top:6.0pt"><font size="2" color="#0000FF" face="Courier New">MsgBox
+(lst(2))&nbsp; </font><font size="2" face="Courier New" color="#111111">'affiche
+32</font></p>
+<p><font size="2"><font face="Courier New" COLOR="#0000ff">For</font><font face="Courier New">
+<font COLOR="#0000ff">Each</font> l <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Long</font>
+<font COLOR="#0000ff">In</font> lst</font></font></p>
+<font SIZE="2">
+<p><font face="Courier New" size="2" color="#0000FF">MsgBox(l)</font></p>
+</font>
+<p><font face="Courier New" size="2" COLOR="#0000ff">Next</font></p>
+<p style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-19.6.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-19.8.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-19.7.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:08 GMT -->
+</html>

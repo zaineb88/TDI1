@@ -1,0 +1,642 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6conv.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:52 GMT -->
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET conversion Ctype </title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="62%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="4%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><b>
+    <font size="6" color="#800080" face="Courier New">&nbsp;</font></b><a href="v1-6-num.htm"><img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font size="6" color="#800080" face="Courier New">1.6.3</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Conversion, séparateur 
+    décimal.</font></b></td>
+    <td width="14%" height="76"><a href="v1-6tab.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top:6.0pt" align="center">
+<font face="Arial" size="7" color="#FF0000">&nbsp;&nbsp;
+<img border="0" src="vpagvb.JPG" width="50" height="57">&nbsp;&nbsp;&nbsp;&nbsp; 4</font><font face="Arial" size="7" color="#FFFF00">8</font><font face="Arial" size="7" color="#00FF00">1</font><font face="Arial" size="7" color="#0000FF">5</font><font face="Arial" size="7" color="#FF00FF">1</font><font face="Arial" size="7" color="#FF0000">6</font><font face="Arial" size="7" color="#FFFF00">2</font><font face="Arial" size="7" color="#00FF00">3</font><font face="Arial" size="7" color="#0000FF">4</font><font face="Arial" size="7" color="#FF00FF">2</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b><font color="#800080">On a vu qu'on peut afficher les chaînes de caractères 
+(des 'String'); 
+par ailleurs, on fait des calculs avec les variables numériques (Integer, 
+Single..).</font></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2" color="#800080">On a donc besoin sans arrêt de 
+faire des calculs avec des variables numériques et de transformer le résultat en 
+String pour l'afficher et vice versa.</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">Est-il possible de convertir une variable 
+d'un type à un autre?&nbsp;&nbsp;&nbsp; OUI!!</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font size="2" color="#800080"><b>
+<span style="font-family: Courier New">On aura donc besoin de savoir transformer 
+des variables de tous types en d'autres types.</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" color="#0000FF" size="5"><span style="font-weight: 700; background-color: #C0C0C0">1-
+Conversion numérique&lt;==&gt;Chaîne de caractères.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Conversion 
+numérique=&gt;String= 'ToString'</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Quel intérêt de convertir?</b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On veut afficher un résultat numérique.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On ne peut afficher que des <b>String</b> 
+(chaîne de caractères) dans un label ou un TextBox par exemple.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Aussi</span></font><span style="font-size: 10.0pt; font-family: Courier New">, 
+il faut transformer cette valeur numérique en chaîne avant de l’afficher, on le 
+fait avec la méthode<font color="#0000FF">&nbsp; &quot;.ToString&quot;</font>:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="background-color: #FFFFFF"><font color="#0000FF">Dim 
+i As Integer=12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>
+'On déclare une variable i qu'on initialise à 12</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><font color="#0000FF"><span style="background-color: #FFFFFF">Label.text = 
+i.ToString&nbsp;</span>&nbsp;&nbsp; </font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">
+La valeur de i est transformée en String puis affectée à la propriété Text du 
+label, ce qui affiche 
+'12'</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">On verra plus loin qu'on peut ajouter des 
+paramètres.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<font face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Conversion 
+String=&gt;numérique= 'CStr'</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">A 
+l’inverse une chaîne de caractères peut être transformée en numérique&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Par exemple, l'utilisateur doit saisir un 
+nombre, il saisit un 
+nombre dans une boite de saisie (InputBox), mais il tape des caractères au clavier et c'est cette chaîne de 
+caractères qui est retournée, il faut la transformer en numérique.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim 
+s as String</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim i as Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">s</font><font face="Courier New" size="2"><font color="#0000FF">= InputBox (&quot;Test&quot;, 
+&quot;Taper un nombre&quot;) </font>'Saisie dans une InputBox&nbsp; d'un nombre par 
+l'utilisateur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+'s contient maintenant une chaîne de caractères, &quot;45&quot; par exemple.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">i=CStr(s)&nbsp; 
+' s </font>est la variable String.</span></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">i contient bien maintenant la valeur 45.</font></p>
+<p style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">CStr </font>permet
+donc de convertir du numérique en Sring.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<font face="Courier New">
+<span style="font-weight: 700; background-color: #C0C0C0">Autre manière de convertir
+des String=&gt;numérique= 'CType'</span></font><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></font></p>
+<p style="margin-top: 6.0pt"><font face="Courier New">Même exemple avec Ctype.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim 
+s as String</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Dim i as Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">s</font><font face="Courier New" size="2"><font color="#0000FF">= InputBox (&quot;Test&quot;, 
+&quot;Taper un nombre&quot;) </font>'Saisie dans une InputBox&nbsp; d'un nombre par 
+l'utilisateur.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+'s contient maintenant une chaîne de caractères, &quot;45&quot; par exemple.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF"><b>i=CType(s,Integer)&nbsp;</b>
+' s </font>est la variable String,<font color="#0000FF"> Integer
+</font>est le type à obtenir.</span></p>
+<p style="margin-top: 6.0pt">
+<font face="Courier New" size="2">i contient bien maintenant la valeur 45.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">CType</font> 
+permet donc de convertir n’importe quel type 
+en n’importe quel type&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il suffit de donner à 
+cette fonction la variable à modifier et le type à obtenir.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il existe encore une autre
+manière de faire:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">i</span></font></span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">=Integer.Parse(s)&nbsp;&nbsp;&nbsp;&nbsp; </font>'on transforme la chaîne 
+s en 
+Integer <font color="#0000FF">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>&nbsp; </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Bizarre&nbsp;cette 
+syntaxe!!&nbsp; en fait c’est le type Integer qui a une méthode (Parse) qui 
+transforme une chaîne en entier.</span></p>
+<font FACE="Courier New" SIZE="1">
+<blockquote>
+  <blockquote>
+    <p ALIGN="LEFT">Il y a aussi:</p>
+    <p ALIGN="LEFT">Transformation d'une chaîne en Long&nbsp; <i>
+    <font color="#0000FF">Long.Parse(chaine)</font> ou Int64.Parse(chaine)</p>
+    </i>
+    <p ALIGN="LEFT">Transformation d'une chaîne en Double <i><font color="#0000FF">
+    Double.Parse(chaîne)</font></p>
+    </i>
+    <p ALIGN="LEFT">Transformation d'une chaîne en Single </font>
+    <font FACE="Courier New" SIZE="1" color="#0000FF"><i>Single.Parse(chaîne)
+</i></font>
+</p>
+    <p ALIGN="LEFT">&nbsp;</p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF" size="5"><span style="font-weight: 700; background-color: #C0C0C0">2-
+Résumons toutes les possibilités de conversion.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF" size="4">
+<span style="font-weight: 700; background-color: #C0C0C0">A- CType pour toutes les 
+conversions</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"> <b>Ctype</b> peut aussi servir à convertir de 
+la même manière un single en double, un Short en Integer....</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Il est donc possible de convertir un type de 
+variable en un autre.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il suffit de donner à 
+cette fonction la variable à modifier et le type à obtenir.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">&nbsp;<font color="#0000FF">Dim 
+d As Double = 2.65</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">&nbsp;Dim 
+i As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<span style="background-color: #FFFFFF"><font color="#0000FF">i</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">=CType(d,Integer)&nbsp;</span>&nbsp;&nbsp;
+</font>'conversion en entier </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<blockquote>
+  <blockquote>
+<pre class="code"><font face="Courier New" size="1">Pour les forts:</font></pre>
+<pre class="code"><font face="Courier New" size="2"><b>DirectCast</b></font><font face="Courier New" size="1"> fait de même mais on doit utiliser une variable ByRef.</font></pre>
+<pre class="code"><span style="background-color: #FFFFFF"><font size="1" color="#0000FF"><span style="font-family: Courier New">i</span></font></span><span style="background-color: #FFFFFF; font-family:Courier New"><font size="1" color="#0000FF">=DirectCast(s,Integer) </font><font size="1">'s doit être ByRef</font></span></pre>
+<blockquote>
+  <blockquote>
+    <p><font face="Courier New"><font size="1">Par contre</font><b><font size="1"> 
+    DirectCast</font></b><font size="1"> nécessite que le type d'exécution d'une 
+    variable objet soit identique au type spécifié.</font></font></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <font face="Courier New" size="1">' nécessite Option Strict Off.<br>
+    <font color="#0000FF">Dim Q As Object = 2.37</font>&nbsp;&nbsp; ' crée un 
+    objet contenant un double.<br>
+    <font color="#0000FF">Dim K As Integer =<b>CType</b>(Q, Integer)</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    'Marche</font></p>
+    <p style="margin-top: 0; margin-bottom: 0"><font color="#0000FF">
+    <font size="1" face="Courier New">Dim J As Integer = </font><font size="1">
+    <code><b class="cfe"><font face="Courier New">DirectCast(</font></b></code><font face="Courier New">Q, 
+    Integer</font><code><b class="cfe"><font face="Courier New">)</font></b></code></font></font><font size="1" face="Courier New">&nbsp;&nbsp; 
+    ' échoue </font></p>
+    <p><font size="1" face="Courier New">DirectCast échoue car le type 
+    d'exécution de </font><font size="1"><code class="ce">
+    <font face="Courier New">Q</font></code><font face="Courier New"> est <b>
+    Double</b>. <b>CType</b> réussit car <b>Double</b> peut être converti en <b>
+    Integer</b>, mais <b>DirectCast</b> échoue car le type d'exécution de </font>
+    <code class="ce"><font face="Courier New">Q</font></code></font><font size="1" face="Courier New"> 
+    n'est pas encore <b>Integer</b>. </font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<b><font face="Courier New" size="2">TryCast</font><font face="Courier New" size="1"> de VB 2005 (Framework 2)<img border="0" src="v2005.JPG" width="52" height="21"></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="1">TryCast fonctionne comme DirectCast mais retourne Nothing si la conversion est impossible 
+(et ne plante pas!).</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF"><font size="1" face="Courier New">Dim J As Integer = <code><b class="cfe">Try</b></code></font><font size="1"><code><b class="cfe"><font face="Courier New">Cast(</font></b></code><font face="Courier New">Q, 
+    Integer</font><code><b class="cfe"><font face="Courier New">)</font></b></code></font></font><font size="1" face="Courier New">&nbsp; </font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-weight: 700; background-color: #C0C0C0">
+<font face="Courier New" color="#0000FF" size="4">B- Fonctions spécifiques</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">CType fait toutes les conversions, mais on 
+peut aussi utiliser des fonctions qui sont <b>spécifiques au type de la variable 
+de retour</b>: Le nom de ces fonctions contient 'C' comme '<b>C</b>onvert' puis le nom du type de la variable de 
+retour.</font></p>
+<pre class="syntax"><font face="Courier New"><b>CBool()  Pour convertir en Booléen</b>
+<b>CByte(</b><b>)  Pour convertir en octet</b>
+<b>CChar()  Pour convertir en Char</b>
+<b>CDate()  Pour convertir en Date</b>
+<b>CDbl()   Pour convertir en Double</b>
+<b>CDec()   Pour convertir en Decimal</b>
+<b>CInt()   Pour convertir en Integer</b>
+<b>CLng()   Pour convertir en Long</b>
+<b>CObj()   Pour convertir en Objet</b>
+<b>CShort() Pour convertir en  Short</b>
+<b>CSng()   Pour convertir en Single</b>
+<b>CStr()   Pour convertir en String</b></font></pre>
+<pre class="syntax">Et en VB 2005</pre>
+<pre class="syntax"><font face="Courier New"><b>CSByte()   Pour convertir en SByte</b>
+<b>CUShort() Pour convertir en  UShort</b>
+<b>CUInt()   Pour convertir en UInteger</b>
+<b>CULng()   Pour convertir en ULong</b></font></pre>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple <b>CDbl</b>&nbsp; 
+retourne un 'Double'.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim I As Integer=123</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim D As Double</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">D=CDbl(I)&nbsp;</span> </font>&nbsp; 
+'donnera D=123&nbsp; D est un Double (réel double précision)</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Ces fonctions sont plus <b>rapides</b> car 
+elles sont spécifiques. </font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Remarque:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Les fonctions <b>CInt</b> et <b>CLng</b> 
+arrondissent les parties décimales égales à&nbsp;0,5 au <b>nombre pair</b> le plus 
+proche. Par exemple, 0,5 s'arrondit à 0 et 1,5 s'arrondit à 2. Bizarre!!</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Ces
+fonctions utilisent le séparateur décimal de la langue en cours, celui des
+paramètres locaux(on reverra cela).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" color="#0000FF" size="4"><b>
+<span style="background-color: #C0C0C0">C- Val et Str (de MicroSoft.VisualBasic) existe aussi:</span></b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Ouf pour les anciens!!</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Ces fonctions permettent aussi la <b>conversion String=&gt;Numérique et 
+Numérique=&gt;String</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b>Val</b> donne la valeur numérique d'une expression String.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim i As Integer</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">i=Val(&quot;5&quot;)</span> </font>&nbsp;&nbsp; ' i=5</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Val s'arrête au premier caractère non numérique.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">Val(&quot;12er&quot;)</span></font> retourne 12</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Val reconnaît le point (et pas la virgule)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim i As Double</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">i=Val(&quot;5.45&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp; ' 
+donnera i=5,45</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">i=Val(&quot;5,45&quot;)</span></font><span style="background-color: #FFFFFF">&nbsp;</span>&nbsp;&nbsp; ' 
+donnera i=5</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b>Str </b>transforme une valeur numérique en String:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Dim s As String</span></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF"><span style="background-color: #FFFFFF">s=Str(1999)</span> </font>&nbsp;&nbsp; ' s=&quot; 1999&quot;</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Noter bien: Str ajoute un espace à gauche ou le signe'-' si le nombre est 
+négatif.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Str ne reconnaît que le point comme séparateur décimal. (Pour utiliser les 
+autres séparateurs locaux, il faut utiliser la fonction CStr() ).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">D- La Classe System.Convert</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+La Classe <b>System.Convert</b> permet la conversion d'un type de base vers un 
+autre:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">.ToString</font> en fait partie</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Pour convertir <b>un Single en Byte</b> (entier 8 bits non signé)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">.ToByte</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Pour convertir <b>un Byte en Single</b>:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">.ToSingle</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">singleVal = System.Convert.ToSingle(byteVal)</font><b><br>
+&nbsp;</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+en <b>Decimal </b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">.ToDecimal</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">On a des méthodes pour pratiquement convertir 
+tous les types en tous les types. Cherchez!!</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On verra plus loin, la fonction <b>Format </b>utilisée pour convertir les 
+valeurs numériques que vous voulez mettre aux formats dates, heures ou monnaie 
+ou dans d'autres formats définis par l'utilisateur.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Pour faire très 
+simple, retenir</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0"> 
+++++:</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">ToString</font> pour les conversions en String des 
+variables numériques(pour 
+afficher).</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2"><font color="#0000FF">CStr</font> pour convertir
+du numérique en String.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">Ctype</font> pour convertir tout en tout.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Le fait de convertir d'un type dans un autre s'appelle ' effectuer un <b>cast</b>'</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Conversion Explicite et 
+Implicite.</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+A noter que dans cette page , on a étudié la <b>conversion Explicite:</b> est 
+permet de forcer la conversion vers un type&nbsp; à l'aide de mots clés.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Dim 
+d As Double = 2.65</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim i As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<span style="background-color: #FFFFFF"><font color="#0000FF">i</font></span><font color="#0000FF"><span style="background-color: #FFFFFF">=CType(d,Integer)&nbsp;</span></font></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Il existe aussi la <b>conversion implicite</b> effectuée automatiquement sans 
+syntaxe particulière et de manière transparente.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+VB peut le permettre ( Si Option Explicit Off dans la configuration )</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemple</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New"><font color="#0000FF">Dim 
+d As Double = 2.65</font></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#0000FF"><span style="font-family: Courier New">Dim i As 
+Integer</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<span style="background-color: #FFFFFF"><font color="#0000FF">i</font></span><span style="background-color: #FFFFFF"><font color="#0000FF">=d&nbsp;
+</font>'Pour affecter à i le Double d, Vb a transformé le double d en Integer.</span></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On verra que ce mode de travail n'est pas recommandé.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Conversion restrictive.</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Attention, la conversion est dite restrictive si le type final ne peut pas 
+convertir toutes les valeurs du départ:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Si je convertis un Single en Integer, la partie décimale peut être tronquée, 
+c'est une conversion restrictive.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+L'inverse (conversion Short en Single par exemple) est dite étendue. </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" color="#0000FF" size="5">3- Séparateur décimal: le point 
+ou la virgule?</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Les fonctions <b>Val</b> <b>() et Str () ne reconnaissent que le point</b> (<b>.</b>) comme séparateur 
+décimal.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim s As Single</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">s=Val (&quot;123.4&quot;)&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2">'est accepté, c'est 123,4 en français.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On rappelle aussi que&nbsp; <b>le séparateur d'un littéral est le point </b>(un 
+littéral sert à donner inrectement une valeur à une variable):</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim s As Single</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">s= 456.67</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Les fonctions <b>CDbl</b>, <b>CType, CSng ou Parse </b>ainsi que<b> ToString </b>
+utilisent le séparateur des<b> paramètres locaux </b>de la machine . Ils 
+reconnaissent la culture.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Le symbole de séparateur décimal (ainsi que celui des milliers ) est <b>
+donc
+spécifique à la culture</b>.</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+En France, sur votre ordinateur, le séparateur décimal est la virgule.</font></p>
+  </li>
+</ul>
+<font SIZE="2" COLOR="#0000ff">
+<blockquote>
+  <blockquote>
+<p><font face="Courier New">Dim</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+s </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Single</font></p>
+</font><font SIZE="2">
+<p><font face="Courier New" color="#0000FF">s = </font></font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(&quot;123,4&quot;,
+</font><font SIZE="2" COLOR="#0000ff">Single</font></font><font SIZE="2"><font face="Courier New" color="#0000FF">)</font></p>
+<p><font face="Courier New" color="#0000FF">Console.Out.WriteLine(s.ToString)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Affiche: '123,4'</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Par contre </font><font face="Courier New" color="#0000FF" SIZE="2">s = </font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(&quot;123.4&quot;,
+</font><font SIZE="2" COLOR="#0000ff">Single</font></font><font face="Courier New" color="#0000FF" SIZE="2">) </font>
+<font face="Courier New" SIZE="2">est refusé.</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<ul>
+  <li>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Au Usa le séparateur décimal est le point.</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" color="#0000FF" SIZE="2">s = </font>
+<font face="Courier New"><font SIZE="2" COLOR="#0000ff">CType</font><font SIZE="2" color="#0000FF">(&quot;123.4&quot;,
+</font><font SIZE="2" COLOR="#0000ff">Single</font></font><font face="Courier New" color="#0000FF" SIZE="2">) </font>
+<font face="Courier New" SIZE="2">est accepté</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" color="#0000FF" SIZE="2">Console.Out.WriteLine(s.ToString)</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+'Affiche '123.4'</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On remarque donc que <b>ToString</b> utilise aussi le séparateur spécifique à la 
+culture.</font></p>
+<font SIZE="2">
+<p><font face="Courier New" color="#0000FF">Console.Out.WriteLine(s.ToString)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Affiche: '123,4' en France</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">Lors 
+de l'utilisation d'autres séparateurs décimaux (applications internationales, 
+par exemple), convertissez la chaîne en nombre à l'aide de la fonction <b>CDbl</b> 
+ou <b>CType CSng ou Parse</b>.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="2">Pour voir quel est le séparateur en cours:</font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Menu Démarrer-&gt;Paramètres-&gt;Panneau de configuration&gt;Options régionales et 
+linguistiques.</font></p>
+<font SIZE="2" face="Courier New">
+<p>&nbsp;</p>
+<p><b>Obtient le séparateur décimal en fonction des paramètres locaux de la 
+machine par du code.</b></p>
+<p><font color="#0000FF"><b>SeparateurDécimal</b> = 
+NumberFormatInfo.CurrentInfo.NumberDecimalSeparator</font></p>
+</font>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<b>On peut modifier le CultureInfo:</b></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On peut, si on est en CultureInfo Français, afficher en mode Us</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Dim i As Single = 45.78</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+' Afficher dans la CultureInfo courante: Français </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">Console.WriteLine(i.ToString)</font>&nbsp;&nbsp;&nbsp; 
+'Affiche 45,78</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+' Créer un CultureInfo en anglais&nbsp; U.S.<br>
+<font color="#0000FF">Dim us As New CultureInfo(&quot;en-US&quot;)</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<br>
+' Afficher sur la console&nbsp; en CultureInfo Us.<br>
+<font color="#0000FF">Console.WriteLine(i.ToString(&quot;c&quot;, us))</font>&nbsp;&nbsp;&nbsp; 
+'Affiche 45.78</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<br>
+&nbsp;Il s'agit ici d'une surcharge de ToString , &quot;c&quot; signifie NumberFormatInfo</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt"><b>
+<font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">IsNumeric</span></font></b></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+On utilise la fonction <b>IsNumeric</b> pour déterminer si le contenu d'une 
+variable peut être évalué comme un nombre.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+Exemples:</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<br>
+<span style="background-color: #FFFFFF">
+<font color="#0000FF">Dim MyVar As Object<br>
+Dim R As Boolean<br>
+<br>
+MyVar = &quot;45&quot; <br>
+R = IsNumeric(MyVar) </font>' R= True.<font color="#0000FF"><br>
+' ...<br>
+MyVar = &quot;678.92&quot; <br>
+R = IsNumeric(MyVar) </font>' R= True.<font color="#0000FF"><br>
+' ...<br>
+MyVar = &quot;45 Kg&quot;<br>
+R = IsNumeric(MyVar) </font>' R= False.</span><font color="#0000FF"><br>
+&nbsp;</font></font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<font face="Courier New" size="2" color="#0000FF">'</font><font face="Courier New" size="2">Attention 
+le dernier exemple indique que &quot;45 Kg&quot; n'est pas purement numérique, mais
+<font color="#0000FF">Val(&quot;45 Kg&quot;)</font> retourne 45 sans déclencher d'erreur 
+car Val transforme les caractères numériques à partir de la gauche, en s'arrêtant 
+dès qu'il y a un caractère non numérique.&nbsp; </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Lexique anglais=&gt;Français:</font></b></span></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+To <font color="#0000FF">Cast</font> = Mouler, couler.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+<font color="#0000FF">Type</font> = Type, genre.</font></p>
+<p class="MsoNormal" style="margin-top:6.0pt"><font face="Courier New" size="2">
+To <font color="#0000FF">parse</font> = analyser. </font></p>
+<p class="MsoNormal" style="margin-top:6.0pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v1-6-num.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v1-6tab.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v1-6conv.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:21:52 GMT -->
+</html>

@@ -1,0 +1,9 @@
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\TariafMaha.exe
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\TariafMaha.pdb
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\bin\Debug\TariafMaha.exe
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\bin\Debug\TariafMaha.pdb
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\TariafMaha.Form1.resources
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\TariafMaha.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\Nouveau dossier\ZainebMazouz\ZinebMazouz\obj\x86\Debug\GenerateResource.write.1.tlog

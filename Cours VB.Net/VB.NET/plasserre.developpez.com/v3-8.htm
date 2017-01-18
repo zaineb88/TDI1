@@ -1,0 +1,630 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:53 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET: msgBox messagebox inputbox openfiledialog savefiledialog</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.8</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Les fenêtres toutes 
+    faites.</font></b></td>
+    <td width="14%" height="76">
+    <a href="v3-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Il existe :</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les
+MessageBox et MsgBox.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; Les 
+InputBox</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; et 
+les autres</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">...</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">&nbsp;&nbsp;&nbsp; </span></font>
+<img border="0" src="vfenetre.JPG" width="98" height="111"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Ces</span></b></font><b><span style="font-size: 10.0pt; font-family: Courier New"> 
+fenêtres toutes faites </span><font face="Courier New" size="2">&nbsp;facilitent 
+le travail&nbsp;</font></b>:</p>
+<p><b><font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">MessageBox&nbsp;du Framework 2 (VB 2005):</span></font></b></p>
+<p><b><font size="2" face="Courier New">Ouvre une fenêtre qui présente&nbsp; un 
+message.</font></b></p>
+<p><font face="Courier New" size="2">C’est une fonction qui affiche un message dans une boîte de dialogue, attend 
+que l'utilisateur clique sur un bouton (Ok ou Oui-Non..), puis retourne si on le 
+désire, une 
+information qui indique le bouton cliqué par l'utilisateur.</font></p>
+<p><font face="Courier New" size="2">On utilise la méthode <font color="#0000FF">
+Show</font> pour afficher la boite.</font></p>
+<p><font size="2" face="Courier New">On doit fournir le texte à afficher, on 
+peut aussi fournir le titre dans la barre, le type de bouton , le type d'icône et le bouton 
+par défaut, une option , la présence d'un bouton d'aide.</font></p>
+<p><font face="Courier New" size="2">Syntaxe:</font></p>
+<p><font face="Courier New"><span style="background-color: #FFFFFF"><font color="#0000FF"> <b>
+<font size="2">MessageBox.show</font></b><font size="2">(TexteAAfficher) </font></font>
+<font size="2">' Affiche une box avec le message et un bouton 'Ok', pas de 
+valeur de retour.</font></span></font></p>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">Reponse</span><span style="background-color: #FFFFFF">= <b>MessageBox.show</b>(TexteAAfficher,Titre, TypeBouton , Icone, BoutonParDéfaut, Option, Bouton d'aide)</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><span style="background-color: #FFFFFF">Le bouton cliqué par l'utilisateur est retourné dans<font color="#0000FF"> Reponse </font></span><span style="font-size: 10.0pt; font-family: Courier New">(de type <font color="#0000FF">DialogResult)</font></span><span style="background-color: #FFFFFF"><font color="#0000FF">.</font></span></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">Exemple:</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><img border="0" src="vmsgbox.gif" width="192" height="126"></pre>
+<h4><font face="Courier New">Paramètres</font></h4>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>TexteAAfficher</i>
+</font> </p>
+<p class="MsoNormal" style="margin-left: 36.0pt">
+<font face="Courier New" size="2">Obligatoire. Expression <b>
+String</b> affichée comme message de la boîte de dialogue (longueur maximale 
+1&nbsp;024&nbsp;caractères). N'oubliez pas d'insérer un retour chariot si le texte est 
+long, cela crée 2 lignes. </font> </p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>Titre</i> </font> </p>
+<p class="MsoNormal" style="margin-left: 36.0pt">
+<font face="Courier New" size="2">&nbsp;Expression <b>String</b> 
+affichée dans la barre de titre de la boîte de dialogue. Si l'argument <i>Titre</i> 
+est omis, le nom de l'application est placé dans la barre de titre. </font> </p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>&nbsp;</i></font></p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>TypeBouton </i>&nbsp;</font></p>
+<p class="MsoNormal" style="margin-left: 36.0pt">
+<font face="Courier New" size="2">Expression numérique qui 
+représente la somme des valeurs spécifiant </font> </p>
+<p class="MsoNormal" style="margin-left: 36.0pt">
+<font face="Courier New" size="2">-le nombre et le type de 
+boutons à afficher&nbsp;: </font> </p>
+<p class="MsoNormal" style="margin-left: 70.8pt">
+<font face="Courier New" size="2"><font color="#0000FF">MessageBoxButtons.OKOnly</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Un 
+seul bouton ‘Ok’</font></p>
+<p class="MsoNormal" style="margin-left: 70.8pt">
+<font face="Courier New" size="2"><font color="#0000FF">MessageBoxButtons.YesNo</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deux boutons ‘Oui’ ‘Non’</font></p>
+<p class="MsoNormal" style="margin-left: 70.8pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+MessageBoxButtons.OkCancel</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ 
+‘Ok’ et ‘Annuler’</font></p>
+<p class="MsoNormal" style="margin-left: 70.8pt">
+<font face="Courier New" size="2"><font color="#0000FF">MessageBoxButtons.AbortRetryIgnore</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+‘Annule’ ‘Recommence’ ‘Ignore'</font></p>
+<p class="MsoNormal" style="margin-left: 70.8pt">
+&nbsp;</p>
+<p class="MsoNormal">
+<font face="Courier New" size="2"><i>&nbsp;Icons</i></font></p>
+<p class="MsoNormal" style="margin-left: 36.0pt">
+<font face="Courier New" size="2">-le style d'icône à utiliser&nbsp;</font></p>
+<blockquote>
+  <blockquote>
+<font SIZE="2">
+<p> <font color="#0000FF" face="Courier New" size="2">MessageBoxIcon.Error</font></p>
+<p>
+</font>
+<font face="Courier New" size="2" color="#0000FF">MessageBoxIcon.Exclamation</font></p>
+    <blockquote>
+<p class="MsoNormal" style="text-indent: 35.4pt">
+<font face="Courier New" size="2" color="#0000FF">...</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>L'identité du bouton par défaut</i></font></p>
+<p class="MsoNormal"><i><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></i>
+<font face="Courier New" size="2" color="#0000FF">MessageBoxDefaultButton.Button1</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBoxDefaultButton.Button2</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>Les options </i></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" SIZE="2" color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MessageBoxOptions.RightAlign</font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>L'affiche d'un bouton 
+d'aide</i></font></p>
+<p class="MsoNormal"><font face="Courier New" size="2"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</i><font color="#0000FF">True </font>pour l'afficher.</font></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Comme d'habitude, il suffit de taper</font><font face="Courier New" size="2" color="#0000FF"> 
+MessageBox.Show( </font><font face="Courier New" size="2"><b>pour que VB 
+proposer les paramètres</b>.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Retour de la 
+fonction&nbsp;:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Retourne une 
+constante de type <font color="#0000FF">DialogResult</font>&nbsp;qui indique quel bouton à été pressé.</span></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">DialogResult.Yes</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">DialogResult.No</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">DialogResult.Cancel</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">DialogResult.Retry</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">DialogResult.Ok</span></font></p>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;Exemple 1:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">&nbsp;Afficher un simple message:</span></b></font></p>
+<font SIZE="2">
+<p>&nbsp;<font color="#0000FF" face="Courier New">MessageBox.Show(</font></font><font SIZE="2" COLOR="#0000FF"><font face="Courier New">&quot;bonjour&quot;)</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><b>&nbsp;</b>Affiche <img border="0" src="vmessagb.GIF" width="108" height="108"></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<font SIZE="2">
+<p><b>E<font face="Courier New" size="2">xemple 2:</font></b></p>
+<p><b><font face="Courier New" size="2">&nbsp;Afficher les boutons Oui Non et un bouton d'aide, une icône 
+d'erreur, tester si l'utilisateur a cliqué sur Oui:</font></b></font></p>
+<p><font face="Courier New" size="2"><font COLOR="#0000ff">Dim</font> r
+<font SIZE="2" COLOR="#0000ff">As</font> <font color="#0000FF">
+DialogResult&nbsp; </font>(cela marche aussi avec Integer)</font></p>
+<font SIZE="2" color="#0000FF">
+<p><font face="Courier New">r = MessageBox.Show(&quot;bonjour&quot;, &quot;Programme&quot;, 
+MessageBoxButtons.YesNo, MessageBoxIcon.Error,_ MessageBoxDefaultButton.Button1, 
+MessageBoxOptions.RightAlign, </font></font>
+<font SIZE="2" COLOR="#0000ff" face="Courier New">True</font><font SIZE="2" color="#0000FF"><font face="Courier New">)
+</font></p>
+</font><font SIZE="2">
+<p></font><font face="Courier New"><font SIZE="2" COLOR="#0000ff">If</font><font SIZE="2" color="#0000FF"> 
+r = Windows.Forms.DialogResult.Yes </font></font><font SIZE="2" COLOR="#0000ff">
+<font face="Courier New">Then</font></p>
+</font>
+<p><font size="2" color="#0000FF" face="Courier New">..</font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></font></p>
+<p><font face="Courier New" size="2">Affiche:</font></p>
+<p><img border="0" src="vmessagb2.GIF" width="278" height="126"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" face="Courier New">Ecriture plus compact:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">If</font></font><font face="Courier New"><font SIZE="2" color="#0000FF"> 
+MessageBox.Show(&quot;bonjour&quot;, &quot;Programme&quot;, MessageBoxButtons.YesNo) = Windows.Forms.DialogResult.Yes
+</font><font SIZE="2" COLOR="#0000ff">then</font></font><font SIZE="2"><font color="#0000FF" face="Courier New">
+</font></p>
+<p><font face="Courier New" color="#0000FF">.....</font></font></p>
+<p><font face="Courier New"><font SIZE="2" COLOR="#0000ff">End</font><font SIZE="2" color="#0000FF">
+</font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">If</font></p>
+</font>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font size="4" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">MsgBox&nbsp;du Visual Basic&nbsp;</span></font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">L’ancienne syntaxe Visual Basic 
+avec MsgBox est conservée&nbsp;:(A éviter? on l'utilise tous!!)</span></b></p>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">MessageBox.Show</font> est VB.NET,  <font color="#0000FF">MsgBox</font> est du VB.</span></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><b>&nbsp;</b></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt"><font color="#0000FF"><span style="background-color: #FFFFFF">Reponse= MsgBox(TexteAAfficher, Style, Titre)</span></font></pre>
+<pre style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt; font-size: 10.0pt; font-family: Courier New; margin-left: 0cm; margin-right: 0cm; margin-top: 0cm; margin-bottom: .0001pt">&nbsp;</pre>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans ce cas il faut 
+utiliser MsgBoxStyle&nbsp; et MsgBoxResult pour le retour. De plus les 
+arguments ne sont pas dans le même ordre!!</span></p>
+<blockquote>
+  <blockquote>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">-Pour
+    le choix des boutons <b>MsgBoxStyle</b> peut prendre les valeurs:</font></p>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;&nbsp;
+    <font color="#0000FF">YesNo</font> (cela affiche 2 boutons &quot;Oui&quot;
+    et &quot;Non&quot;), <font color="#0000FF">OkCancel</font>, <font color="#0000FF">AbortRetryIgnore</font>...</font></p>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Pour
+    le choix du bouton par défaut <b>MsgBoxStyle</b> peut prendre les valeurs:</font></p>
+    <p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">&nbsp;&nbsp;
+    <font color="#0000FF">DefaultButton1</font>, <font color="#0000FF">DefaultButton2</font>..</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour les icônes <b>MsgBoxStyle</b> peut
+prendre les valeurs:</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vmsgbox2.JPG" width="279" height="135"></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Il faut ajouter les styles les uns aux autres avec 'Or'.</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<span style="font-size: 10.0pt; font-family: Courier New"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</b></span><font face="Courier New" size="2">Au retour au a les valeurs:</font></p>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">MsgBoxResult.Yes,
+MsgBoxResult.No, MsgBoxResult.Cancel...&nbsp;</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple simple&nbsp;fournissant
+un simple message à l'utilisateur:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">MsgBox
+(&quot;Bonjour&quot;) </font></span><font face="Courier New" size="2"><span style="background-color: #FFFFFF">affiche
+une message box avec le message 'Bonjour', un bouton 'Ok' et dans la barre de
+titre, le nom de l'application. Il n'y a pas de valeur de retour.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple courant posant
+une question, l'utilisateur doit cliquer sur 'oui' ou 'non', on teste si c'est
+'oui':</span></p>
+<p><font size="2" color="#0000FF"><font face="Courier New">If MsgBox(&quot;D'accord?&quot;,
+MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then</font></font></p>
+<font SIZE="2">
+<p><font color="#0000FF"><font face="Courier New">End If</font></font></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Exemple complet&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+Dim </font>msg
+<font color="#0000FF">As String</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+Dim </font>title<font color="#0000FF"> As String</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+Dim </font>style<font color="#0000FF"> As MsgBoxStyle</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+Dim </font>response<font color="#0000FF"> As 
+MsgBoxResult</font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">msg 
+= </font>&quot;Voulez vous continuer?&quot;<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' </font>
+Définition du message à afficher.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">style = 
+MsgBoxStyle.DefaultButton2 Or _</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">&nbsp;&nbsp; 
+MsgBoxStyle.Critical Or MsgBoxStyle.YesNo </font>'On affiche Oui Non</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">title = 
+</font>&quot;MsgBox 
+Démonstration&quot;<font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ' </font>
+Définition du&nbsp; titre.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">' Affiche la boite 
+MsgBox.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF; font-weight:700">response = MsgBox(msg, 
+style, title)</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+If response = 
+</font>MsgBoxResult.Yes <font color="#0000FF">Then&nbsp;&nbsp; </font></span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+&nbsp;&nbsp; </font>' code si l’utilisateur a cliqué sur Oui</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Else</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+<font color="#0000FF">
+&nbsp;&nbsp; </font>' code si l’utilisateur a cliqué sur Non.</span></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">End If</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Voila ce que cela donne:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vmsgbox.gif" width="192" height="126"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">‘On remarque que dans 
+l’exemple, on crée des variables dans&nbsp; lesquelles on met le texte ou les 
+constantes adéquates, avant d’appeler la fonction MsgBox. En condensé cela
+donne:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" color="#0000FF"><b>
+<span style="font-size: 10.0pt">If </span></b><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF; font-weight:700">MsgBox(</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&quot;Voulez vous continuer?&quot;</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF; font-weight:700">,
+</span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"> 
+MsgBoxStyle.DefaultButton2 Or MsgBoxStyle.Critical Or MsgBoxStyle.YesNo</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF; font-weight:700">,
+</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">&quot;MsgBox 
+Démonstration&quot;</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF; font-weight:700">)=</span><b><span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b><span style="font-size: 10.0pt; background-color: #FFFFFF">MsgBoxResult.Yes
+Then&nbsp;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; background-color: #FFFFFF"><font face="Courier New" color="#0000FF">End
+If</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF"><b>
+<span style="font-size: 14.0pt; font-family: Courier New; background-color:#C0C0C0">InputBox</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">C'</span></b></font><b><span style="font-size: 10.0pt; font-family: Courier New">est 
+une fonction qui permet d’ouvrir une fenêtre qui pose une question&nbsp;:</span></b></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New">Elle retourne la 
+réponse tapée par l’utilisateur.</span></p>
+<p class="MsoNormal" style="text-autospace: none">
+<font size="2"><span style="font-family: Courier New">Le retour est effectué 
+dans une variable String.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></font></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue; background-color:#FFFFFF">Dim</span><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF"> 
+Nom </font> <span style="color: blue">As</span><font color="#0000FF"> </font> <span style="color: blue">String</span></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">Nom = InputBox(&quot;Bonjour&quot;,&quot;Tapez 
+votre nom ?&quot;)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Cela donne&nbsp;:</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;<img border="0" src="vinputbox.jpg" width="361" height="152"></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">On pourrait rajouter 
+un 3eme argument=la réponse par défaut.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si l’utilisateur 
+clique sur le bouton 'Annuler', une chaîne vide est retournée.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">On
+a souvent besoin de contrôler si l'utilisateur à tapé quelque chose puis
+d'enlever les espaces:</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Dim reponse As String </font><font face="Courier New" size="2">'on
+crée une variable qui contiendra la chaîne tapée par l'utilisateur.</font></p>
+<p><font color="#0000FF" face="Courier New" size="2">Do</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; reponse=
+InputBox(&quot;Tapez un nom&quot;) </font><font face="Courier New" size="2">'saisir
+une chaîne de caractères dans une InputBox</font></p>
+<p><font face="Courier New" size="2" color="#0000FF">Loop Until
+String.IsNullOrEmpty(reponse)</font><font face="Courier New" size="2">'si
+l'utilisateur n'a rien tapé, on boucle et on réaffiche l'inputbox</font></p>
+<p>&nbsp;</p>
+<p><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New">reponse=</span></font><span style="font-size:10.0pt;
+font-family:&quot;Courier New&quot;"><font color="#0000FF">reponse.Trim(&quot; &quot;)&nbsp;&nbsp;&nbsp; </font>'enlève
+les espaces avant et après</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">OpenFileDialog</font></span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-size: 10.0pt; font-family: Courier New">Comment afficher&nbsp; une 
+boite de dialogue permettant de sélectionner un fichier (ou des fichiers)&nbsp;à ouvrir 
+par exemple ?</span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans la boite à 
+Outils, cliquez sur OpenFileDialog puis cliquez sur la fenêtre en cours&nbsp;: un 
+contrôle OpenFileDialog1 apparaît sous le fenêtre.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Ouvre une boite de 
+dialogue permettant de choisir un nom et un chemin de fichier, au programmeur 
+d'écrire le code lisant les fichiers.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Dans le code, à 
+l’endroit ou doit s’ouvrir la&nbsp; fenêtre,(Dans l'évènement Click d'un bouton 
+nommé 'Ouvrir' par exemple) tapez&nbsp;: </span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Private Sub ButtonOuvrir_Click()</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+&nbsp;&nbsp;&nbsp;
+OpenFileDialog1.ShowDialog()</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">End Sub</span></font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">C’est suffisant pour 
+créer une fenêtre montrant l’arborescence des fichiers et répertoires et pour 
+que l'utilisateur choisisse un fichier:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<img border="0" src="vopenfil.JPG" width="463" height="318"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">M</span></font><span style="font-size: 10.0pt; font-family: Courier New">ais le plus souvent on a besoin que la 
+boite de dialogue propose un type de fichier et un répertoire précis.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Par exemple je veux 
+ouvrir un fichier .TXT dans le répertoire c:\MesTextes</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Il faut dans ce cas, 
+<b>AVANT</b> le ShowDialog renseigner certaines propriétés du contrôle 
+OpenFileDialog1&nbsp;:</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New"><b>
+&nbsp;</b><span style="background-color: #FFFFFF">With OpenFileDialog1</span></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt; font-family: Courier New">&nbsp;</span></font><span style="font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF; font-size: 10.0pt">&nbsp;
+</span></font><font size="2"><font color="#0000FF">.Title= &quot;Ouvrir&quot;</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'Titre de la barre de titre</font></span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;
+.InitialDirectory = &quot;c:\&quot;&nbsp;&nbsp; </font>'répertoire de
+départ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; <font color="#0000FF">
+.Filter=&quot;Fichiers txt|*.txt&quot;</font> </span>' on travaille uniquement sur les .txt</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'s'il y a plusieurs filtres les séparer par ;&nbsp; </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">FilterIndex</font>&nbsp; indique le filtre en cours</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;
+<span style="background-color: #FFFFFF"> <font color="#0000FF">
+.Multiselect=False </font></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'sélectionner 1 
+seul fichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;
+<span style="background-color: #FFFFFF"> <font color="#0000FF">
+.CheckFileExists=True</font></span>&nbsp;&nbsp;&nbsp;&nbsp; 'Message&nbsp; si nom de 
+fichier qui n'existe pas.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'Permet d'ouvrir uniquement un fichier qui existe; <font color="#0000FF">CheckPathExists</font>
+peut aussi être utilisé. </span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;&nbsp;&nbsp;<font size="2"><span style="font-family: Courier New">&nbsp;&nbsp;
+<font color="#0000FF">.ValidateNames=True</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'n'accepte que les noms valides (win 32)</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;
+.AddExtension=True</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'ajoute une
+extension au nom s'il n'y en a pas</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">End With</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Comment afficher la boite et vérifier si 
+l'utilisateur à cliqué sur 'Ouvrir'?</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><span style="font-family: Courier New">La
+méthode </span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">.ShowDialog
+</font></span><font size="2"><span style="font-family: Courier New">peut
+retourner un élément de l'énumération </span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">DialogResult</font></span><font size="2"><span style="font-family: Courier New">
+pour indiquer l'action de l'utilisateur sur la boite de dialog:</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF"> DialogResult.Ok&nbsp;</font>&nbsp;&nbsp;
+'si l'utilisateur a cliqué sur 'Ouvrir'</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">DialogResult.Cancel</font>&nbsp;&nbsp;
+'si l'utilisateur a cliqué sur 'Annuler'</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">Comment
+utiliser cela?</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">I</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">f 
+OpenFileDialog1.ShowDialog= DialogResult.Ok Then&nbsp; </font>'L'utilisateur a
+bien cliqué sur ok</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<span style="background-color: #FFFFFF"><font size="2" color="#0000FF">
+<span style="font-family: Courier New">E</span></font></span><font size="2"><span style="font-family: Courier New; background-color:#FFFFFF"><font color="#0000FF">nd if</font><b>&nbsp;&nbsp;&nbsp;
+</b></span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Maintenant,<b> </b></span></font>
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">OpenFileDialog1.FileName </font>contient le nom du fichier 
+sélectionné (avec extension et chemin)</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#0000FF">
+<span style="font-family: Courier New; background-color:#FFFFFF">Path.GetFileName(</span></font><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">OpenFileDialog1.FileName)</span></font> 
+donne le nom du fichier sans chemin.</span></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b>
+<span style="font-family: Courier New; background-color:#C0C0C0">
+<font size="4" color="#0000FF">SaveFileDialog</font></span><span style="font-size: 10.0pt; font-family: Courier New"> </span></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Boite de dialogue fonctionnant de la même 
+manière que OpenFileDialog mais avec quelques propriétés spécifiques.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">Ouvre une boite de dialogue permettant à 
+l'utilisateur de 
+choisir un nom et un chemin de fichier, au programmeur d'écrire le code 
+enregistrant les fichiers.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">SaveFileDialo1.CreatePrompt= True</span> </font>&nbsp;&nbsp; ' Message de confirmation 
+si</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'création d'un nouveau fichier</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">SaveFileDialo1.OverwritePrompt=True</span> </font>&nbsp;'Message si le fichier existe 
+déjà</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+'évite l'effacement d'anciennes données</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New"><font color="#0000FF">
+<span style="background-color: #FFFFFF">SaveFileDialo1.DefaultExt=&quot;txt&quot;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp; </font>'extension 
+par défaut</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">On récupère aussi dans <b>.FileName</b> 
+le nom du fichier si la propriété <b>.ShowDialog</b> à retourné <b>
+DialogResult.Ok</b>.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2">
+<span style="font-family: Courier New">&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">&nbsp;</font></span></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="v3-9.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:22:56 GMT -->
+</html>

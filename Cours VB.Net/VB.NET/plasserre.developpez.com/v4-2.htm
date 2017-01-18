@@ -1,0 +1,763 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:27 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net formulaire modal </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v4-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">4.2</font></b></td>
+    <td width="52%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Ouvrir plusieurs 
+    formulaires.</font></b></td>
+    <td width="9%" height="76"><a href="v4-2-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vwindow.JPG" width="99" height="79"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<b>
+<font face="Courier New" color="#FF0000">Rappel:Formulaire=fenêtre</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment à partir d'un 
+formulaire 'Form1' ouvrir un second formulaire à partir 
+de la Classe 'Form2' ?</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">En VB2003</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font color="#800080" size="2" face="Courier New">En VB 2005</font></p>
+</blockquote>
+<p class="MsoNormal" style="margin-top: 6.0pt">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Formulaire modal et non 
+modale.</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Comment se nomment les 
+formulaires?</span></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Autres</span></font></p>
+<blockquote>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Un formulaire est un 
+objet</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Exemple</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">DialogResult</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<font size="2" color="#800080">
+<span style="font-family: Courier New; font-weight: 700">Bouton par défaut</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font size="5" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Créer un formulaire en VB 2003:</span></font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<u>
+<font face="Courier New"><b>A- Il faut d'abord créer la Classe Form2</b></font></u></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Ajoutez un formulaire (Menu Projet, Ajouter un 
+formulaire au projet), nommez le 'Form2' .</font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font face="Courier New" size="2">
+On se rend compte que quand on ajoute un formulaire (Form2 par exemple), on crée 
+une nouvelle 'classe<b>':</b></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><b>
+<font face="Courier New" size="2">'</font></b><font face="Courier New" size="2"><b>Class Form2' </b>qui<b> </b>hérite de<b> 
+System.Windows.Forms.Form , </b>elle hérite donc de toutes les propriétés et 
+méthodes de la Classe Form qui est la classe 'formulaire'.</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p>Public</font><font SIZE="2"> </font><font SIZE="2" COLOR="#0000ff">Class</font><font SIZE="2"> 
+Form2</p>
+<p></font><font SIZE="2" COLOR="#0000ff">Inherits</font><font SIZE="2"> 
+System.Windows.Forms.Form</font><span style="background-color: #FFFFFF"><font face="Courier New" size="2" color="#0000FF">
+</font></span></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<font face="Courier New" color="#0000ff" size="2">
+<span style="background-color: #FFFFFF">End Class</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt"><font size="2">
+<span style="FONT-FAMILY: Courier New">Elle contient du <a href="v8-1.htm">code généré automatiquement par le 
+concepteur Windows Forms</a> et le</span><span style="FONT-FAMILY: Courier New">s 
+procédures liées aux évènements</span><span style="FONT-FAMILY: Courier New">.</span></font></p>
+<p class="MsoNormal" style="MARGIN-TOP: 6pt">
+<span style="font-family: Courier New"><font size="2">Dessinez dans Form2 les 
+contrôles nécessaires.</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<u>
+<b><font face="Courier New">B- Il faut créer ensuite le nouvel Objet formulaire, 
+une instance de Form2:</font></b></u></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Pour créer un nouveau 
+formulaire dans le programme, il faut:</span></font><span style="font-family: Courier New"><font size="2"> </font>
+</span></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New"><font size="2"><b>Instancier 
+un formulaire</b> à partir du moule, de la Classe Form2 avec le mot
+<font color="#0000FF">New</font>.</font></span></p>
+  </li>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><b><span style="font-family: Courier New">O</span></b></font><span style="font-family: Courier New"><font size="2"><b>uvrir ce 
+formulaire</b>, le faire apparaître, (avec <font color="#0000FF">ShowDialog</font>, c’est un formulaire 
+modal) </font></span></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color: blue">Dim</span> <font color="#0000FF">formSecondaire</font> <span style="color: blue">As</span>
+<span style="color: blue">New</span> <font color="#0000FF">Form2()</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">.ShowDialog()</span>&nbsp;</font> </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp; </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>En résumé:</b> on a Form1, on dessine 
+Form2:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vform12.JPG" width="701" height="201"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour que le bouton nommé &quot;Créer Form 
+secondaire&quot; ouvre le second formulaire, il faut y mettre le code:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">Private 
+ButtonCreerFormSecondaire_Click()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color: blue">&nbsp; Dim</span><font color="#0000FF"> formSecondaire
+</font> <span style="color: blue">As</span><font color="#0000FF"> </font>
+<span style="color: blue">New</span><font color="#0000FF"> Form2()</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">&nbsp; formSecondaire</font></span><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">.ShowDialog()</span>&nbsp; </font> </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF" face="Courier New" size="2">End Sub</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2" color="#008000">En conclusion:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2" color="#008000">
+<span style="font-family: Courier New; font-weight: 700">Le fait d'ajouter un 
+formulaire à un projet crée une Class, (un 'type' de 
+formulaire, un moule) ce qui permet 
+ensuite d'instancier (de créer) un objet formulaire.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>VB 2003 est tolérant</b> pour le premier 
+formulaire: si on dessine un formulaire et ses contrôles et qu'on lance le 
+programme, il accepte de fonctionner bien qu'on ait pas instancié le formulaire. 
+Par contre, si on crée une seconde classe formulaire, il faut créer une instance de ce 
+formulaire.</font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<span style="color: blue">Dim</span> <font color="#0000FF">formSecondaire</font> <span style="color: blue">As</span>
+<span style="color: blue">New</span> <font color="#0000FF">Form2()</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF"><span style="background-color: #FFFFFF">.ShowDialog()</span>&nbsp;</font>&nbsp;&nbsp;&nbsp;&nbsp; </span></p>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b>
+<font size="5" face="Courier New" color="#0000FF">
+<span style="background-color: #C0C0C0">Créer un formulaire en VB 2005:</span></font></b></p>
+<pre class="code"><font face="Courier New" size="2"><b><img border="0" src="v2005.JPG" width="52" height="21">  Pas besoin d'instancier systématiquement un formulaire:</b></font></pre>
+<pre class="code"><b>O</b><span codeLanguage="other"><b>n peut utiliser  la Class Form2 sans instancier, en utilisant directement le nom de la Classe</b>:</span></pre>
+<pre class="code"><font face="Courier New">On dessine Form2 (la classe) puis on peut écrire directement:</font></pre>
+<pre class="code"><font color="#0000FF" face="Courier New" size="2">Private ButtonCreerFormSecondaire_Click()</font><span codeLanguage="other"><font color="#0000ff">
+    <b>Form2</b>.ShowDialog()
+End sub</font></span></pre>
+<pre class="code"><img border="0" src="vform12.JPG" width="701" height="201"></pre>
+<pre class="code">On peut même utiliser les propriétés directement:</pre>
+<pre class="code"><span codeLanguage="other"><b> <font color="#0000ff">Form2</font></b><font color="#0000ff">.ForeColor = System.Drawing.Color.Coral
+ <b>Form2</b>.BackColor = System.Drawing.Color.Cyan</font></span></pre>
+<pre class="code">En fait, comme il n'y a pas d'instance de Form2, VB en crée une.</pre>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">(Vb 2005, C'est comme en VB6)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2" face="Courier New">On peut aussi faire comme en VB 2003 en 
+instancier le formulaire, mais c'est plus complexe.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF"><b>
+<font size="5">
+<span style="font-family: Courier New; background-color: #C0C0C0">Formulaire modale ou non 
+modale</span></font><span style="font-family: Courier New"><font size="5"><span style="background-color: #C0C0C0">:</span></font></span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Un formulaire <b>modal</b> est un formulaire qui, 
+une fois ouvert, prend la main, interdit l'usage des autres fenêtres. Pour 
+poursuivre, on ne peut que sortir de ce formulaire.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple typique: une MessageBox est un 
+formulaire modal, les fenêtres d'avertissement dans Windows sont aussi modales.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour ouvrir un formulaire modal, il faut 
+utiliser la méthode <font color="#0000FF">.ShowDialog</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim f As New Form2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">f.ShowDialog()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">ou en VB 2005</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">form2.ShowDialog()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Noter, et c'est très important, que le code 
+qui suit .showDialog est exécuté <b>après</b> la fermeture de la fenêtre modale.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Pour avoir un formulaire <b>
+non modal</b> faire</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim f As New Form2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">f.Show()&nbsp;&nbsp;&nbsp;&nbsp;</font>&nbsp; </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2">ou en VB 2005</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">form2.Show()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Dans ce cas le formulaire f 
+s'ouvre, le code qui suit .Show est exécuté immédiatement, et il est possible de 
+passer dans une autre fenêtre de l'application sans fermer f.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<b><font face="Courier New" size="2">Instance multiple</font></b><font face="Courier New" size="2"><b>:</b> si un bouton1 
+contient le code:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Private Button1_Click</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim f As New Form2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">f.Show()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font> </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">A chaque fois que l'on clique sur le bouton 
+cela ouvre un formulaire: on peut en ouvrir plusieurs. On se retrouve avec X 
+instances de Form2!!</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Pour éviter cela:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp; -Utiliser
+<font color="#0000FF">ShowDialog</font></font></p>
+<blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">-Mettre </font>
+<font face="Courier New" size="2" color="#0000FF">Dim f As New Form2 </font>
+<font face="Courier New" size="2">&nbsp;dans la partie déclaration, ainsi il n'y 
+aura qu'une instance de Form2. Le second click déclenche une erreur.</font></p>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Class Form1</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Dim f As New Form2&nbsp;&nbsp; </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">Private Button1_Click&nbsp;&nbsp;
+</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">
+<font color="#0000FF">&nbsp;&nbsp;&nbsp; f.Show()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font> </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+  </blockquote>
+</blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-family: Courier New; font-weight: 700; background-color:#C0C0C0">
+<font size="5" color="#0000FF">
+Dénomination des formulaires après leur création:</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+En VB 2003 et 2005 (avec instanciation d'un formulaire)</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2"><span style="font-family: Courier New">Une procédure&nbsp; qui 
+est dans Form1 crée un 
+formulaire par </span></font> 
+</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font color="#0000FF" face="Courier New" size="2">Private Buttonformsecondaire_Click ()&nbsp;&nbsp;&nbsp;  </font>
+</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Dim  </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font color="#0000FF" face="Courier New" size="2"> 
+As New Form2</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font size="2" face="Courier New" color="#0000FF">End Sub</font></p>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Dans</b> le formulaire&nbsp;</font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">formSecondaire</font></span><font face="Courier New" size="2"> créé:</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Utiliser <font color="#0000FF">Me</font> pour 
+désigner le formulaire où on se trouve. (Form2 ou  </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+formSecondaire</span><font face="Courier New" size="2">&nbsp; ne sont pas acceptés)</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><font color="#0000FF">Me.Text= &quot;Second formulaire&quot;</font> modifie le texte 
+de la barre supérieure du formulaire</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Le formulaire  </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><span style="font-size: 10.0pt; font-family: Courier New"> pourra 
+être fermé par <font color="#0000FF">Me.close()</font> dans le code du bouton 
+Quitter par exemple.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><b>Hors</b> du formulaire  </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font face="Courier New" size="2">, <b>dans la 
+procédure où a été instancié le formulaire</b>:</font></p>
+  </li>
+</ul>
+<blockquote>
+  <blockquote>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Utiliser<font color="#0000FF"> </font>
+</font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font face="Courier New" size="2"><font color="#0000FF">&nbsp; </font>
+pour désigner le formulaire.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New">Si la fenêtre 
+appelante veut récupérer des informations dans le formulaire  </span>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><span style="font-size: 10.0pt; font-family: Courier New"> (un texte dans txtMessage par exemple), il faudra écrire.</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">
+Text=</span></font><span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF"><font color="#0000FF">formSecondaire</font></span><font color="#0000FF"><span style="font-size: 10.0pt; font-family: Courier New; background-color:#FFFFFF">.txtMessage.Text</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+  </blockquote>
+</blockquote>
+<ul>
+  <li>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre, <b>hors de la procédure qui a créée</b> 
+le formulaire,  </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font face="Courier New" size="2"> n'est <b>pas</b> accessible 
+car on a crée le formulaire dans une procédure: cette instance du formulaire 
+n'est visible que dans cette procédure. Pour rendre un formulaire accessible 
+partout on peut écrire </font><font face="Courier New" size="2" color="#0000FF">
+Public </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font color="#0000FF" face="Courier New" size="2"> 
+As New Form2&nbsp; </font><font face="Courier New" size="2">dans la zone 
+générale avant les procédures.</font></p>
+  </li>
+</ul>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">Class Form1</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">Sub MaRoutine()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font color="#0000FF" face="Courier New" size="2">&nbsp;&nbsp;&nbsp; Dim  </font>
+<span style="font-size: 10.0pt; font-family: Courier New; background-color: #FFFFFF">
+<font color="#0000FF">formSecondaire</font></span><font color="#0000FF" face="Courier New" size="2"> 
+As New Form2</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;&nbsp; Text=formSecondaire.TextBox.Text</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">Sub AutreRoutine()</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">..</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">End Sub</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 2; margin-bottom:2">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la procédure <font color="#0000FF">
+MaRoutine()</font> le formulaire formSecondaire est visible&nbsp; et
+<font color="#0000FF">formSecondaire.TextBox</font> est utilisable, <b>pas</b> dans la procédure
+<font color="#0000FF">AutreRoutine()</font><b>. </b></font>
+<font size="2"><span style="font-family: Courier New">
+<b>En résumé: Attention donc, si 
+vous instanciez un formulaire dans une procédure, elle sera visible et accessible 
+uniquement dans cette procédure . </b> </span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Cela parait évident car <b>un formulaire est un 
+objet</b> comme un autre et sa visibilité obéit aux règles habituelles ( J'ai 
+mis malgré tout un certains temps à le comprendre!!).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vicocheb.gif" width="32" height="34"><b><font face="Courier New" size="2" color="#FF0000">Un 
+formulaire est un objet et sa visibilité obéit aux règles habituelles: Il peut 
+être instancié dans une procédure, un module, précédé de 'Public' ,'Private'.. ce qui 
+permet de gérer son accessibilité.</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+En VB 2005, sans instanciation des formulaires:</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Par contre en VB 2005, si vous dessinez 
+Form2 et que vous tapez:</font></p>
+<pre class="code"><font color="#0000FF" face="Courier New" size="2">Private ButtonCreerFormSecondaire_Click()</font><span codeLanguage="other"><font color="#0000ff">
+    <b>Form2</b>.Show()
+End sub</font></span></pre>
+<pre class="code">Vous pouvez utiliser dans Form1 les propriétés et contrôles de Form2 directement:</pre>
+<pre class="code"><span codeLanguage="other"><b> <font color="#0000ff">Form2</font></b><font color="#0000ff">.ForeColor = System.Drawing.Color.Coral</font></span></pre>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font size="2" face="Courier New">La Classe Form2 étant public , on a toujours 
+accès au formulaire et aux contrôles.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">(Par contre, on n'a pas accès aux procédures 
+évènements qui sont 'Private')</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Un exemple:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans Form1 Button1 affiche le formulaire Form2 
+(directement sans instanciation).</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Dans la procédure Button2_Click de Form1 on a 
+accès au TextBox qui est dans Form2: </font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<img border="0" src="vfrm1frm2.JPG" width="661" height="524"></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="5" color="#0000FF">Autres remarques sur les 
+formulaires:</font></b></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF">
+<span style="font-weight: 700; background-color: #C0C0C0">Un formulaire est un 
+objet:On peut ajouter à un formulaire des méthodes et 
+des membres:</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">On a vu que, en fait, il y a création d'une 
+Classe quand on dessine un formulaire, et bien comme dans un module de Classe 
+(on verra cela plus loin), on peut ajouter des propriétés et des méthodes.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt"><b>
+<font face="Courier New" size="2">Pour ajouter une méthode à un formulaire, il 
+faut créer une Sub Public dans le corps de la fenêtre:</font></b></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">Class Form1</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Sub Imprime()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;&nbsp;&nbsp; Code d'impression</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End Sub</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">End Class</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si une instance de la fenêtre se nomme F,
+<font color="#0000FF">F.Imprime()</font> exécute la méthode Imprime (donc la sub 
+Imprime())</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">De même, pour définir un membre d'un 
+formulaire, 
+il faut ajouter une variable 'public'.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Public Utilisateur As String</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Permet d'utiliser en dehors du formulaire&nbsp; <font color="#0000FF">
+F.Utilisateur</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" color="#0000FF"><b>
+<span style="background-color: #C0C0C0">Exemple 
+plus complet: Afficher un formulaire.</span></b></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">&nbsp;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; font-weight: 700">
+Autre problème&nbsp;: comment savoir si un formulaire existe, s’il n’existe pas le 
+créer, s’il existe le rendre visible et lui donner la main&nbsp;:</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<span style="font-size: 10.0pt; font-family: Courier New; color: blue">&nbsp;</span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: blue">If</span> f <span style="color: blue">Is</span>
+<span style="color: blue">Nothing</span> <span style="color: blue">Then&nbsp;&nbsp;&nbsp;
+</span>'Si f=rien </span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<font color="#0000FF">f = </font>
+<span style="color: blue">New</span><font color="#0000FF"> Form2</font></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+f.ShowDialog()</span></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: blue">Else</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="color: blue">If</span> <font color="#0000FF">f.Visible = </font> <span style="color: blue">False</span><font color="#0000FF">
+</font>
+<span style="color: blue">Then</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+f.Visible = </font> <span style="color: blue">True</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>
+<span style="color: blue">End</span><font color="#0000FF"> </font> <span style="color: blue">If</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 0; margin-bottom:0">
+<font color="#0000FF">
+<span style="font-size: 10.0pt; font-family: Courier New">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f.Activate()</span></font></p>
+<p class="MsoNormal" style="margin-top: 0; margin-bottom:0">
+<span style="font-size: 10.0pt; font-family: Courier New"><font color="#0000FF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font>
+<span style="color: blue">End</span><font color="#0000FF"> </font> <span style="color: blue">If</span></span></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+&nbsp;</p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Autre solution plus complète gérant aussi la 
+taille du formulaire:</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">Si le formulaire existe et n'a pas été 'disposed'(détruit), 
+le mettre à la taille normale et en avant.</font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#0000FF">If Not IsNothing(F) Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </font>'Si on en a pas déjà disposé<font color="#0000FF"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If Not F.IsDisposed Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F.WindowState = FormWindowState.Normal&nbsp; ' Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F.BringToFront()&nbsp; '&nbsp; Optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F = New Form3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F.Show()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F = New Form3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F.Show()<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If</font></font></p>
+<p class="MsoNormal" style="text-autospace: none; margin-top: 6.0pt">
+<font face="Courier New" size="2"><br>
+(Merci Michel de Montréal)</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<b><font face="Courier New" size="4" color="#0000FF">
+<span style="background-color: #C0C0C0">Récupération d'information par 
+DialogResult.</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">On ouvre un formulaire modal, comment, après 
+sa fermeture, récupérer des informations sur ce qui s'est passé dans ce 
+formulaire 
+modale?</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Par exemple, l'utilisateur a t-il cliqué sur 
+le bouton Ok ou le bouton Cancel pour fermer le formulaire modale?</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Pour cela on va utiliser une propriété 
+<font color="#0000FF">DialogResult</font> des boutons, y mettre une valeur correspondant au bouton, <b>quand 
+l'utilisateur clique sur un bouton, la valeur de la propriété DialogResult du 
+bouton est assignée à la propriété DialogResult du formulaire</b>, on récupère 
+cette valeur à la fermeture du formulaire modal.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans le formulaire modal Form2 on met</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><span style="background-color: #FFFFFF">&nbsp;</span><font color="#0000FF"><span style="background-color: #FFFFFF">ButtonOk.DialogResult= 
+DialogResult.ok</span></font></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">&nbsp;</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #FFFFFF">
+<font face="Courier New" size="2" color="#0000FF">&nbsp;</font></span><font face="Courier New" size="2" color="#0000FF"><span style="background-color: #FFFFFF">ButtonCancel.DialogResult= 
+DialogResult.Cancel</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Dans le formulaire qui appelle:</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">Form2.ShowDialog()</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">If form2.DialogResult= DialogResult.ok then</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">&nbsp;&nbsp;&nbsp; 'l'utilisateur a cliqué 
+sur le bouton ok</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2" color="#0000FF">
+<span style="background-color: #FFFFFF">End if</span></font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New; color: windowtext"><font size="2">
+Remarque:</font></span></p>
+<ol>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">On utilise comme valeur de 
+DialogResult les constantes de l'énumération DialogResult:DialogResult.ok .Cancel .No .Yes&nbsp; .Retry&nbsp; 
+.None</span></font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">Si l'utilisateur clique 
+sur la fermeture du formulaire modal (bouton avec X) cela retourne DialogResult.cancel</span></font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font size="2"><span style="font-family: Courier New">on peut aussi utiliser la 
+syntaxe: <font color="#0000FF">If form2.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then </font>
+qui permet en une seule ligne d'ouvrir form2 et de tester si l'utilisateur a 
+cliqué sur le bouton ok de form2. </span></font></p>
+  </li>
+  <li>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="font-family: Courier New"><font size="2">La fermeture du formulaire 
+modal&nbsp; par le bouton de fermeture ou l'appel de la méthode Close ne détruit 
+pas toujours le formulaire modal, il faut dans ce cas utiliser la méthode
+</font><font size="2" color="#0000FF">Dispose <b>pour le détruire.</b> </font>
+</span><font size="2"><span style="font-family: Courier New"><br>
+&nbsp;</span></font></p>
+  </li>
+</ol>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<span style="background-color: #C0C0C0"><b>
+<font face="Courier New" size="4" color="#0000FF">Bouton par défaut</font></b></span><b><font face="Courier New" size="4" color="#0000FF"><span style="background-color: #C0C0C0">.</span></font></b></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Parfois dans un formulaire, l'utilisateur doit 
+pouvoir, valider (taper sur la touche 'Entrée') pour accepter et quitter rapidement le formulaire (c'est 
+l'équivalent du bouton 'Ok') ou taper 'Echap' pour sortir du formulaire sans 
+accepter (c'est l'équivalent du bouton 'Cancel').</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Il suffit pour cela de donner aux propriétés
+<font color="#0000FF">AcceptButton</font> et <font color="#0000FF">CancelButton</font> 
+du formulaire,le nom des boutons ok et cancel qui sont sur la feuille.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2"><font color="#0000FF">
+<span style="background-color: #FFFFFF">form1.AcceptButton = buttonOk<br>
+form1.CancelButton = buttonCancel</span></font><br>
+&nbsp;</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+<font face="Courier New" size="2">Si l'utilisateur tape la touche 'Echap' la 
+procédure<font color="#0000FF"> buttonCancel_Click</font> est exécutée.</font></p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">
+&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v4-1.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v4-2-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v4-2.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:30 GMT -->
+</html>

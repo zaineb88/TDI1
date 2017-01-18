@@ -1,0 +1,22 @@
+C:\Users\TDI1A\Desktop\vb safae1\Date\Date\bin\Debug\Date.exe
+C:\Users\TDI1A\Desktop\vb safae1\Date\Date\bin\Debug\Date.pdb
+C:\Users\TDI1A\Desktop\vb safae1\Date\Date\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\TDI1A\Desktop\vb safae1\Date\Date\obj\x86\Debug\Date.exe
+C:\Users\TDI1A\Desktop\vb safae1\Date\Date\obj\x86\Debug\Date.pdb
+C:\Users\sabri\Desktop\Date\Date\obj\x86\Debug\Date.exe
+C:\Users\sabri\Desktop\Date\Date\obj\x86\Debug\Date.pdb
+G:\programme de c shape alilo\Date\Date\obj\x86\Debug\Date.exe
+G:\programme de c shape alilo\Date\Date\obj\x86\Debug\Date.pdb
+G:\C#\Date\Date\obj\x86\Debug\Date.exe
+G:\C#\Date\Date\obj\x86\Debug\Date.pdb
+G:\C#\Date\Date\bin\Debug\Date.exe
+G:\C#\Date\Date\bin\Debug\Date.pdb
+G:\C#\Date\Date\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\Date-bessextille\Date\obj\x86\Debug\Date.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Date-bessextille\Date\obj\x86\Debug\Date.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Date-bessextille\Date\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\Date-bessextille\Date\obj\x86\Debug\Date.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\Date-bessextille\Date\bin\Debug\Date.exe
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\Date-bessextille\Date\bin\Debug\Date.pdb
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\Date-bessextille\Date\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\c sharp\Les Dates\Date-bessextille\Date\obj\x86\Debug\Date.pdb

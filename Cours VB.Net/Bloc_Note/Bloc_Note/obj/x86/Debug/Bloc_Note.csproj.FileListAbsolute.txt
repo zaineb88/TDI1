@@ -1,0 +1,32 @@
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.exe
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.pdb
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Form1.resources
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Police.resources
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Properties.Resources.resources
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.exe
+c:\users\oumaimabrk\documents\visual studio 2010\Projects\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.pdb
+G:\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.exe
+G:\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.pdb
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\ResolveAssemblyReference.cache
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Form1.resources
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Police.resources
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Properties.Resources.resources
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.read.1.tlog
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.write.1.tlog
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.exe
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.pdb
+G:\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Rechercher.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.exe
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\bin\Debug\Bloc_Note.pdb
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Form1.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Police.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Properties.Resources.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\Bloc_Note.Rechercher.resources
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Desktop\TDI\Cours VB.Net\Bloc_Note\Bloc_Note\obj\x86\Debug\GenerateResource.write.1.tlog

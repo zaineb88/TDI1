@@ -1,0 +1,374 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve3-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET exemple</title>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="54%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="12%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-31.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">E 3.1</font></b></td>
+    <td width="47%" height="76" align="center"><b>
+    <font face="Courier New" size="6" color="#800080">Exercice:ConversionF/E.</font></b></td>
+    <td width="14%" height="76"><a href="ve3-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080">
+<b><span style="font-family: Courier New">Comment créer un programme de 
+conversion Francs=&gt;Euros et Euros=&gt; Francs ?</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt">&nbsp;</p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2" color="#800080"><b><span style="font-family: Courier New">Voici
+l'interface utilisateur:</span></b></font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font size="2"><b>
+<span style="font-family: Courier New">Euros</span></b></font></p>
+<font SIZE="2">
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="12%" id="AutoNumber4">
+  <tr>
+    <td width="100%">2</td>
+  </tr>
+</table>
+<p><b>Francs:</b></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="12%" id="AutoNumber5">
+  <tr>
+    <td width="100%">13.12</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p><font face="Courier New">Il y a une zone de saisie Euros, une zone Francs, si 
+je tape dans la zone Euros '2' il s'affiche '13.12' dans la zone Francs; cela 
+fonctionne aussi dans le sens Francs=&gt;Euros.</font></p>
+<p><b><font face="Courier New" color="#800080">Conseils:</font></b></p>
+<p><b><font face="Courier New">Un formulaire affichera les zones de saisie, un 
+module standard contiendra les procédures de conversion.</font></b></p>
+<p><font face="Courier New">On crée un formulaire Form1 contenant :</font></p>
+<p><font face="Courier New">2 TextBox&nbsp; <b>BoiteF</b> et <b>BoiteE, </b>
+leurs propriétés Text=&quot;&quot;</font></p>
+<p><font face="Courier New">2 labels dont la propriété Text sera =<b>&quot;Euros&quot;</b> 
+et <b>&quot;Francs&quot;</b>, on les positionnera comme ci-dessus.</font></p>
+<p><font face="Courier New"><b>Un module Module1 contiendra 2 routines
+ConversionFE ConversionEF</b></font></p>
+<p><font face="Courier New" color="#800080"><b>Réponse en bas:</b></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Courier New"><font SIZE="2">Dans le formulaire, je 
+dimensionne un flag (ou drapeau):</font><font SIZE="2" COLOR="#0000ff"> 
+flagAffiche, </font><font SIZE="2">il sera donc visible dans la totalité du 
+formulaire. Je l'initialise à True.</font></font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">Public</font></span></font><span style="background-color: #FFFFFF"><font face="Courier New"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Class</font></font><font face="Courier New" SIZE="2"> 
+Form1</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF">
+<font SIZE="2" COLOR="#0000ff" face="Courier New">Inherits</font><font face="Courier New"> 
+System.Windows.Forms.Form</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Dim</font> flagAffiche
+<font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Boolean</font> 
+= </font></span><font SIZE="2" COLOR="#0000ff">
+<span style="background-color: #FFFFFF"><font face="Courier New">True</font></span></p>
+</font>
+<p>&nbsp;</p>
+<p><font face="Courier New">Comme la conversion doit se déclencher 
+automatiquement lorsque le texte de BoiteF ou BoiteE change, j'utilise les 
+évènements '<b>TextChanged</b>' de ces TextBox:</font></p>
+<p><font face="Courier New">Pour la conversion Euros=&gt;Francs, dans la procédure 
+TextChanged de BoiteE, je récupère le texte tapé (BoiteE.Text), j'<b>appelle la 
+fonction ConversionEF</b> en lui envoyant comme paramètre ce texte. La fonction 
+me retourne un double que je transforme en string et que j'affiche dans l'autre 
+TextBox(BoiteF).</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font> <font SIZE="2" COLOR="#0000ff">Sub</font> 
+BoiteE_TextChanged(<font SIZE="2" COLOR="#0000ff">ByVal</font> sender
+<font SIZE="2" COLOR="#0000ff">As</font> System.Object,
+<font SIZE="2" COLOR="#0000ff">ByVal</font> e <font SIZE="2" COLOR="#0000ff">As</font> 
+System.EventArgs) <font SIZE="2" COLOR="#0000ff">Handles</font> 
+BoiteE.TextChanged</font></span></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">If</font> flagAffiche =
+  <font SIZE="2" COLOR="#0000ff">True</font> </font></span>
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+  <font face="Courier New">Then</font></span></p>
+  </font>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">flagAffiche 
+    = </font></span><font SIZE="2" COLOR="#0000ff">
+    <span style="background-color: #FFFFFF"><font face="Courier New">False</font></span></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">BoiteF.Text 
+    = (ConversionEF(BoiteE.Text)).ToString</font></span></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">flagAffiche 
+    = </font></span><font SIZE="2" COLOR="#0000ff">
+    <span style="background-color: #FFFFFF"><font face="Courier New">True</font></span></p>
+  </blockquote>
+  </font>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">End</font> </font></span>
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+  <font face="Courier New">If</font></span></p>
+</blockquote>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+<font face="Courier New">Sub</font></span></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Idem pour 
+l'autre TextBox:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">Private</font> <font SIZE="2" COLOR="#0000ff">Sub</font> 
+BoiteF_TextChanged(<font SIZE="2" COLOR="#0000ff">ByVal</font> sender
+<font SIZE="2" COLOR="#0000ff">As</font> <font SIZE="2" COLOR="#0000ff">Object</font>,
+<font SIZE="2" COLOR="#0000ff">ByVal</font> e <font SIZE="2" COLOR="#0000ff">As</font> 
+System.EventArgs) <font SIZE="2" COLOR="#0000ff">Handles</font> 
+BoiteF.TextChanged</font></span></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">If</font> flagAffiche =
+  <font SIZE="2" COLOR="#0000ff">True</font> </font></span>
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+  <font face="Courier New">Then</font></span></p>
+  </font>
+  <blockquote>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">flagAffiche 
+    = </font></span><font SIZE="2" COLOR="#0000ff">
+    <span style="background-color: #FFFFFF"><font face="Courier New">False</font></span></p>
+    </font>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">BoiteE.Text 
+    = (ConversionFE(BoiteF.Text)).ToString</font></span></p>
+    <p style="margin-top: 0; margin-bottom: 0">
+    <span style="background-color: #FFFFFF"><font face="Courier New">flagAffiche 
+    = </font></span><font SIZE="2" COLOR="#0000ff">
+    <span style="background-color: #FFFFFF"><font face="Courier New">True</font></span></p>
+  </blockquote>
+  </font>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff">End</font> </font></span>
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+  <font face="Courier New">If</font></span></p>
+</blockquote>
+</font>
+<p style="margin-top: 0; margin-bottom: 0">
+<span style="background-color: #FFFFFF"><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff">End</font> </font></span>
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">
+<font face="Courier New">Sub</font></span></p>
+<p><font face="Courier New">End</font></font><font SIZE="2" face="Courier New">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Class</font></p>
+</font>
+<p><b><font face="Courier New">A quoi sert le flag : flagAffiche?</font></b></p>
+<p><font face="Courier New"><b>A éviter une boucle sans fin: </b>sans flag, 
+BoiteF_TextChanged modifie BoiteE_Text qui déclenche BoiteE_TextChanged qui 
+modifie BoiteF_Text qui déclenche BoiteF_TextChanged.....</font></p>
+<p><font face="Courier New">Avec le flag, quand je vais modifier la propriété 
+Text d'une TextBox, le met le flag à False, cela indique à l'autre évènement 
+TextChanged de ne pas lui aussi convertir et afficher.</font></p>
+<p>&nbsp;</p>
+<p><font face="Courier New">Enfin il faut <b>écrire les procédures </b>qui font 
+la conversion<b>: ConversionEF et ConversionFE </b>dans un module standard. Ces 
+procédures 'Function' appellent elles mêmes une autre fonction qui arrondi les 
+résultats à 2 décimales. </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Pour transformer des Euros en Francs, je les multiplie par 6.55957 puis 
+j'arrondis .</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On 
+remarque que ces procédures reçoivent une string en paramètres et retourne un 
+double.</font></p>
+</font><font SIZE="2" COLOR="#0000ff">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New">Module</font></font><font SIZE="2"><font face="Courier New"> 
+Module1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Public</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+ConversionEF(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Double</span></font></p>
+</font><font SIZE="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+  somme </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+  </span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+  <span style="background-color: #FFFFFF">Double</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+  resultat </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+  </span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+  <span style="background-color: #FFFFFF">Double</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">somme = 
+  Val(e)</font></span></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">resultat = 
+  Arrondir(somme * 6.55957)</font></span></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">
+  <span style="background-color: #FFFFFF">Return</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+  resultat</span></font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Function</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Public</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> 
+ConversionFE(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> e
+</font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">String</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Double</span></font></p>
+</font><font SIZE="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+  somme </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+  </span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+  <span style="background-color: #FFFFFF">Double</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+  <font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Dim</span></font><span style="background-color: #FFFFFF"><font SIZE="2"> 
+  resultat </font><font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+  </span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+  <span style="background-color: #FFFFFF">Double</span></font></p>
+  </font><font SIZE="2">
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">somme = 
+  Val(e)</font></span></p>
+  <p style="margin-top: 0; margin-bottom: 0">
+  <span style="background-color: #FFFFFF"><font face="Courier New">resultat = 
+  Arrondir(somme / 6.55957)</font></span></p>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">
+  <span style="background-color: #FFFFFF">Return</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+  resultat</span></font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Function</span></font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">
+Enfin <b>la Function Arrondir</b> arrondit à 2 décimales: pour cela on multiplie 
+par 100, on arrondit à l'entier avec Round puis on divise par 100.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">Public</span></font><span style="background-color: #FFFFFF"><font SIZE="2">
+</font><font SIZE="2" COLOR="#0000ff">Function</font><font SIZE="2"> Arrondir(</font><font SIZE="2" COLOR="#0000ff">ByVal</font><font SIZE="2"> 
+Valeur </font><font SIZE="2" COLOR="#0000ff">As</font><font SIZE="2"> </font>
+<font SIZE="2" COLOR="#0000ff">Double</font><font SIZE="2">) </font>
+<font SIZE="2" COLOR="#0000ff">As</font></span><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Double</span></font></p>
+</font><font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"></font>
+<font SIZE="2" COLOR="#008000" face="Courier New">
+<span style="background-color: #FFFFFF">'arrondi a 2 chiffres après la virgule</span></p>
+</font><font SIZE="2">
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"></font>
+  <font SIZE="2" COLOR="#0000ff" face="Courier New">
+  <span style="background-color: #FFFFFF">Return</span></font><font SIZE="2"><font face="Courier New"><span style="background-color: #FFFFFF"> 
+  (Math.Round(Valeur * 100)) / 100</span></font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0"></font><font face="Courier New">
+<font SIZE="2" COLOR="#0000ff"><span style="background-color: #FFFFFF">End</span></font><font SIZE="2"><span style="background-color: #FFFFFF">
+</span></font></font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">
+<span style="background-color: #FFFFFF">Function</span></font></p>
+<p><font face="Courier New">End</font></font><font SIZE="2" face="Courier New">
+</font><font SIZE="2" COLOR="#0000ff"><font face="Courier New">Module</font></font></p>
+<p><font face="Courier New" size="2">A noter que l'on aurait pu utiliser <b>une 
+surcharge de Round </b>qui arrondit directement à 2 décimales:</font></p>
+<font SIZE="2" COLOR="#0000ff">
+<p><font face="Courier New">Return</font></font><font SIZE="2"><font face="Courier New"> 
+(Math.Round(Valeur, 2))</font></p>
+</font>
+<p><b><font face="Courier New" size="2">Exercice:</font></b></p>
+<p><font face="Courier New" size="2">Quel code mettre dans la procédure 
+Button_Click d'un bouton nommé 'Remise à zéro' qui met les 2 zones de saisie à 
+zéro?</font></p>
+<p><font face="Courier New" size="2">(Penser au flag)</font></p>
+<p><font face="Courier New" size="2"><b>Amélioration:</b></font></p>
+<p><font face="Courier New" size="2">Si l'utilisateur tape une virgule il y a 
+problème car la fonction Val utilisée pour convertir le nombre saisi en 
+numérique reconnaît uniquement le point, il faut donc transformer les virgules en 
+points avec</font></p>
+<font size="2" color="#0000FF" face="Courier New">
+<p>e = Replace(e, &quot;,&quot;, &quot;.&quot;)</p>
+</font>
+<p><font face="Courier New" size="2">On peut tester si l'utilisateur a bien tapé 
+un nombre, avec la fonction&nbsp; <font color="#0000FF">IsNumeric</font>.</font></p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-31.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51">
+    <a href="file:///C:/WINLDF/Site%20ldf/vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="ve3-2.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/ve3-1.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+</html>

@@ -1,0 +1,426 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .Net  Link to SQL Link to Dataset</title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+h4
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="56%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours 
+    VB.net</font></b></td>
+    <td width="10%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v6-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">6.8</font></b></td>
+    <td width="52%" height="76" align="center"><b><font face="Courier New" size="6" color="#800080">LINK.</font></b></td>
+    <td width="9%" height="76"><a href="v7-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="vbasedonn.JPG" width="61" height="53"></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><b><font face="Courier New">Comment
+interroger une base de données?</font></b></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2">Jusqu'à
+VB 2005 on mettait les instructions SQL dans une chaîne de caractères et on créait
+un objet Command ADO avec cette chaîne pour interroger la base.</font></p>
+<p class="MsoNormal" style="margin-top: 6.0pt"><font face="Courier New" size="2"><b>Avec
+VB 2008 </b>et le Framework 3.5, on utilise LINK</font><font face="Courier New" size="2">
+un <b>langage de requêtes</b> (permettant d'interroger
+une source de données)&nbsp; directement <b> dans le code Visual Basic</b>&nbsp; et à
+l'aide de mots clés familiers (issues du SQL, le&nbsp; langage d'interrogation
+des bases de données).</font></p>
+<p><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="5">A
+- Link c'est quoi?</font></b></span></p>
+<p><font face="Courier New" size="2"><b>'L</b>anguage-<b>In</b>tegrated <b>Q</b>uery'<b>
+(LINQ), </b>veut dire</font> &quot;l<font face="Courier New" size="2">angage de requête
+intégré&quot;.</font></p>
+<p><font face="Courier New" size="2">&nbsp;On l'utilise dans VB à partir de VB2008 (Framework 3.5).</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">C'est un <b>langage de requêtes</b> (permettant d'interroger
+une source de données)&nbsp; directement <b> dans le code Visual Basic</b>&nbsp; et à
+l'aide de mots clés familiers (issues du SQL, le&nbsp; langage d'interrogation
+des bases de données).</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Cette source de données
+peut être un objet ArrayList, un tableau, une chaîne de caractères (voir Link
+to Objects chapitre 1.18)mais aussi, c'est ce qui nous intéresse ici, <font color="#0000FF">DataSet</font> ou une <font color="#0000FF">Base
+de données SQL</font>.</font></p>
+<p><span style="background-color: #FFFF00"><font face="Courier New" size="3">Pour que LINK
+soit pris en compte il faut:</font></span></p>
+<blockquote>
+<p class="procedureSubHeading"><font face="Courier New" size="2">Utiliser le<b>
+framework 3.5</b></font></p>
+<p><font face="Courier New" size="2">Dans les
+propriétés, onglet compile que <b> Option Infer=On</b></font></p>
+<p><font face="Courier New" size="2">Ajouter <b>System.Data.Linq</b>:</font></p>
+</blockquote>
+<div class="subSection">
+  <p><font face="Courier New" size="2">Si vous créez un nouveau projet dans VB
+  2008, toutes les conditions sont effectives par défaut; si vous modifiez un ancien
+  projet, il faut rajouter certaines références:</font></p>
+  <p><font face="Courier New" size="2">Dans l'<span class="ui">Explorateur de
+  solutions (Projet, Propriétés..)</span>, cliquez sur <span class="ui"><b>Références</b></span>,
+  puis cliquez sur <span class="ui"><b>Ajouter une référence</b></span>.</font></p>
+  <p><font face="Courier New" size="2">Cliquez sur <span class="ui">.NET</span>,
+  sur l'assembly <b>System.Data.Linq</b>, puis sur <span class="ui">OK, cela
+  ajoute la référence</span>.</font></p>
+  <p align="center"><img border="0" src="vlinq1.JPG" width="623" height="535"></p>
+  <p><font face="Courier New" size="2">Il faut ajouter l'espace de nom:</font></p>
+  <p><font face="Courier New" size="2">Dans l'explorateur de solution cocher
+  Systel.Data.Link comme ci-dessus ou ajouter les directives suivantes en haut
+  du <span class="code">Module1</span>&nbsp;:</font><span codeLanguage="VisualBasic"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font color="#0000FF" size="2" face="Courier New">Imports</font></span><font color="#0000FF" size="2" face="Courier New"> 
+  System.Data.Linq</font>
+      </span>
+  </p>
+</div>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #FFFF00"><font face="Courier New" size="3">Principe
+d'une requête Link:</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">A
+titre d'exemple simpliste, on a des données dans MyData et chaque donnée a un
+champ 'Nom'. Comment chercher les enregistrements ayant comme nom
+&quot;toto&quot;?</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+Resultat = </font></font><font face="Courier New" size="2" color="#0000FF">From
+Element In MyData _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Where
+Element.Nom =</font> <font COLOR="#a31515">&quot;Toto&quot;</font> _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Select
+Element</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">On
+crée une <b>variable de requête</b> (ici ' Dim Resultat') qui contient les
+résultats,</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">puis
+l'<b>expression de requête</b> composée de:</font></p>
+<blockquote>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">From&nbsp;
+  </font>: dans quoi chercher? dans chaque Element de MyData.</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Where</font>
+  : précise les conditions à appliquer.</font></p>
+  <p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Select</font>:
+  Précise les éléments qui vont apparaître dans 'Resultat'</font></p>
+</blockquote>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+que Dim From In Where Select doivent être sur une seule unique et même ligne;
+pour la lisibilité, on écrit sur plusieurs lignes en ajoutant des
+continuateurs de lignes &quot; _&quot;.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+aussi qu'initialement on connaît MyData et on sait que chaque élément de
+MyData a un champ 'Nom', c'est tout!! On utilise dans la requête les nouvelles
+variables 'Resultat' et 'Element' sans avoir à déclarer leurs types (on aurait
+pu le faire). 'Element' est une variable de portée déduite comme élément de
+MyData.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">'Et
+pour afficher les noms&nbsp; dans une ListBox:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">For
+Each P In Resultat</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;&nbsp;
+ListBox1.Items.Add(P.NOM )</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Next</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><u><font color="#0000FF">Order
+By</font> </u>permet de trier les résultats.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"><font face="Courier New" size="2" color="#0000FF">Dim</font></span><font face="Courier New" size="2" color="#0000FF">
+Resultat = <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">From</span>
+Element <span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">In</span>
+MyData _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<b>Order
+By</b> Element.Price Descending, Element.Nom _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">&nbsp;<span class="keyword" xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5">Select</span>
+Element.Nom, Element.Price</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Ici
+on trie par prix décroissant, puis à prix égal sur le nom croissant.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Remarquons
+qu'on sélectionne seulement 2 'colonnes'.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="5">B
+- Link To DataSet</font></b></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">En
+plus de <font color="#0000FF">System.Link</font>, il doit y avoir une
+référence à <font color="#0000FF">System.Data</font> et <font color="#0000FF">System.Data.DataSetExtentions
+</font>pour le DataSet.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt" align="left"><font face="Courier New" size="2">On
+a une base de données Access (Nom.MDB), on veut charger la table 'FICHEPATIENT'
+qui contient les colonnes NOM, PRENOM, SEXE.. dans un DataSet puis interroger le
+DataSet avec Link.</font></p>
+<p class="titre3" style="MARGIN: 6pt 0cm 0pt" align="left">&nbsp;</p>
+<p class="MsoNormal"><span style="BACKGROUND-COLOR: #ffff00"><font face="Courier New" size="3">A
+- Création de la source de données:</font></span></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Il faut créer une source
+de données:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Menu 'Données'=&gt;
+'Ajouter une nouvelle source de données'</font></p>
+<p class="MsoNormal" align="center"><img height="147" src="vbd3.JPG" width="332" border="0"></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ici la source de données
+est une base de données:</font></p>
+<p class="MsoNormal" align="center"><img height="386" src="vbind1.JPG" width="574" border="0"></p>
+<p class="MsoNormal"><font face="Courier New" size="2">On clique sur 'Base de
+données' puis bouton 'Suivant'.</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Ensuite il faut faire le
+choix de la connexion (Cela correspond au choix d'une base de données
+existante).</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Cliquer sur 'Nouvelle
+connexion'. Une nouvelle fenêtre nommée 'Ajouter une connexion' s'ouvre:</font></p>
+<p class="MsoNormal"><font face="Courier New" size="2">Indiquer le type de
+source de données (ici Microsoft Access (OLEDB), puis le nom de la base de données;
+enfin cliquer sur &quot;Ok&quot;.</font></p>
+<p class="MsoNormal" align="center"><img height="544" src="vbind2.JPG" width="627" border="0"></p>
+<p align="left"><font face="Courier New" size="2">On retrouve le nom de la bd
+dans la zone connexion, cliquer sur &quot;Suivant&quot;.</font></p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous demande s'il
+faut copier la BD dans le projet: Si oui la BD sera copiée dans le répertoire
+de travail quand vous installerez votre application. A vous de voir.</font></p>
+<p align="center"><img height="160" src="vbind3.JPG" width="819" border="0"></p>
+<p align="left">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite VB vous propose
+d'enregistrer les chaînes de connexion (nom de la base...) dans le fichier de
+configuration afin qu'elles soient stockées et lues lors de l'utilisation ultérieure.
+(Automatiquement bien sur) A vous de voir.</font></p>
+<p align="center"><img height="385" src="vbind4.JPG" width="578" border="0"></p>
+<p align="center">&nbsp;</p>
+<p align="left"><font face="Courier New" size="2">Ensuite il faut choisir dans
+la base les objets&nbsp; qui seront chargés dans le DataSet.</font></p>
+<p align="left"><font face="Courier New" size="2">C'est habituellement les
+Tables. Cocher 'Tables' dérouler puis cocher FICHEPATIENT .</font></p>
+<p align="center"><img height="385" src="vbind5.JPG" width="578" border="0"></p>
+<p align="left"><font face="Courier New" size="2">Cliquer sur
+&quot;Terminer&quot;, la source de données a été créée.</font></p>
+<p align="left"><font face="Courier New" size="2">Pour voir la source de données,
+cliquer dans le menu 'Données', 'Voir les sources de données'.</font></p>
+<p align="center"><img src="vsourcedon.bmp" border="0"></p>
+<p align="left"><font face="Courier New" size="2">On voit bien le DataSet qui a
+été crée (NOMDataSet) et qui contient une table FICHEPATIENT.</font></p>
+<p><span style="BACKGROUND-COLOR: #ffff00"><font face="Courier New" size="3">B -
+Remplir le DataSet:</font></span></p>
+<p><font face="Courier New" size="2">On utilisera la méthode Fill du
+TableAdapter pour remplir le DataSet.</font></p>
+<p><font face="Courier New" size="2">Dans<font color="#0000ff"> Private</font> <font color="#0000ff">Sub</font>
+Form1_Load</font></p>
+<p><font face="Courier New" color="#008000" size="2">'Création d'un
+TableAdapter</font></p>
+<font size="2">
+<p><font face="Courier New" size="2"><font color="#0000ff">Dim</font>
+FPTableAdapter = <font color="#0000ff">New</font>
+NOMDataSetTableAdapters.FICHEPATIENTTableAdapter</font></font></p>
+<p><font face="Courier New" color="#008000" size="2">'Extraction des données et
+chargement du DataSet</font></p>
+<font size="2">
+<p><font face="Courier New" size="2">FPTableAdapter.Fill(NOMDataSet.FICHEPATIENT)</font></p>
+</font>
+<p align="left"><font face="Courier New" color="#0000ff" size="2">End Sub</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Voila,
+le DataSet est chargé puis déconnecté.</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="3"><span style="background-color: #ffff00">C</span></font><span style="BACKGROUND-COLOR: #ffff00"><font face="Courier New" size="3">
+- Interroger le DataSet avec Link:</font></span></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><b><font face="Courier New" size="2">Afficher
+tous les garçons.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Le
+champ SEXE contient 'M' ou 'F'&nbsp; le 'filtre' Where&nbsp; est donc simple et
+utilise '=':</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;LePatient.SEXE
+= <font COLOR="#a31515">&quot;M&quot;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#111111">Cela
+donne:</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Dim
+query = _</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">From
+LePatient In NOMDataSet.FICHEPATIENT.AsEnumerable() _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font color="#0000FF">Where
+LePatient.SEXE =</font> <font COLOR="#a31515">&quot;M&quot;</font> _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Select
+LePatient</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">'En
+pour afficher les noms et prénoms dans une ListBox:</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">For
+Each P In query</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">ListBox1.Items.Add(P.NOM.ToString
+&amp; P.PRENOM.ToString)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#0000FF">Next</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">FICHEPATIENT étant une
+Table (qui n'a pas l'interface IEnumerable), il faut ajouter .AsEnumerable()</font></p>
+<p xmlid="PARA006"><b><font face="Courier New" size="2">Afficher tous les
+&quot;PHILIPPE&quot;</font></b></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Comme notre champ PRENOM
+est de 20 caractères et qu'il contient des espaces, on ne peut utiliser '='; on
+va donc utiliser <font color="#0000FF">Like </font><font color="#111111">qui
+recherche si</font><font color="#0000FF"> LePatient.PRENOM&nbsp; </font><font color="#111111">contient
+le modèle</font><font color="#0000FF"> </font></font><font COLOR="#a31515" face="Courier New" size="2">&quot;PHILIPPE*&quot;</font><font face="Courier New" size="2">.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">Dim</font><font face="Courier New">
+query = _</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">From</font>
+LePatient <font COLOR="#0000ff">In</font> NOMDataSet.FICHEPATIENT.AsEnumerable()
+_</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New"><font COLOR="#0000ff">Where</font>
+LePatient.PRENOM <font COLOR="#0000ff">Like</font> <font COLOR="#a31515">&quot;PHILIPPE*&quot;</font>
+_</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font COLOR="#0000ff" face="Courier New">Select</font><font face="Courier New">
+LePatient</font></font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Attention, dans le modèle
+il y a des caractères génériques:</font></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+<p xmlid="PARA006"><font face="Courier New" size="2">? veut dire 1 caractère
+quelconque.</font></p>
+      <p xmlid="PARA006"><font face="Courier New" size="2">* veut dire 0 ou
+      plusieurs caractères quelconque.</font></p>
+      <p xmlid="PARA006"><font face="Courier New" size="2">Ce n'est pas les
+      caractères'_' et '%' comme dans SQL!!!</font></p>
+    </blockquote>
+  </blockquote>
+</blockquote>
+<p xmlid="PARA006" align="left">&nbsp;</p>
+<p xmlid="PARA006" align="left"><b><font face="Courier New" size="2">Afficher
+tous les &quot;PHILIPPE&quot; mais en créant une nouvelle variable de requête.</font></b></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Dim</font>
+query =&nbsp; <font COLOR="#0000ff">From</font> LePatient <font COLOR="#0000ff">In</font>
+NOMDataSet.FICHEPATIENT.AsEnumerable() _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Where</font>
+LePatient.PRENOM <font COLOR="#0000ff">Like</font> <font COLOR="#a31515">&quot;PHILIPPE*&quot;</font>
+_</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Select</font>
+<font COLOR="#0000ff">New</font> <font COLOR="#0000ff">With</font> { _</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.LeNom
+= LePatient.Field(<font COLOR="#0000ff">Of</font> <font COLOR="#0000ff">String</font>)(<font COLOR="#a31515">&quot;NOM&quot;</font>),
+_</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">.LeSexe
+= LePatient.Field(<font COLOR="#0000ff">Of</font> <font COLOR="#0000ff">String</font>)(<font COLOR="#a31515">&quot;SEXE&quot;</font>)}</font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">For</font>
+<font COLOR="#0000ff">Each</font> P <font COLOR="#0000ff">In</font> query</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">ListBox1.Items.Add(P.LeNom.ToString
+&amp; P.LeSexe.ToString)</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font COLOR="#0000ff" size="2" face="Courier New">Next</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2">Ici la structure de la
+variable de requête (qui contient les résultats) est crée de toute pièce par
+<font color="#0000FF">Select New With {}</font>, on s'est contenté de créer
+des champs avec un nouveau nom.</font></p>
+<p xmlid="PARA006">&nbsp;</p>
+<p xmlid="PARA006">&nbsp;</p>
+<p xmlid="PARA006"><span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="5">C
+- Link To SQL</font></b></span></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: green"><font face="Courier New" size="2">'
+DataContext permet une connection à la base.</font></span><font face="Courier New" size="2">&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+db <span style="COLOR: blue">As</span> <span style="COLOR: blue">New</span>
+ DataContext(<span style="COLOR: maroon">&quot;…\Northwnd.mdf&quot;</span>) <span style="COLOR: green">'&nbsp;</span></font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="color: green">Recupérer
+une table</span></font><font face="Courier New" size="2"><span style="COLOR: green">.</span>&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+Customers <span style="COLOR: blue">As</span> Table(<span style="COLOR: blue">Of</span>
+Customer) = db.GetTable(<span style="COLOR: blue">Of</span> Customer)()</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;<span style="COLOR: green">'
+Interrogation sur Customer en recherchant 'London'.</span>&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">Dim</span>
+Query = _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;
+From cust <span style="COLOR: blue">In</span> Customers _</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;
+Where cust.City = <span style="COLOR: maroon">&quot;London&quot;</span> _&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">&nbsp;
+Select</span> cust&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2" color="#008000">&nbsp;'Affichage
+résurtat sur la console</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><span style="COLOR: blue">For</span>
+<span style="COLOR: blue">Each</span> cust <span style="COLOR: blue">In</span>
+Query&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Console.WriteLine(<span style="COLOR: maroon">&quot;id=&quot;</span> &amp;
+cust.CustomerID &amp; _ <span style="COLOR: maroon">&quot;, City=&quot;</span>
+&amp; cust.City)&nbsp;</font></p>
+<p xmlid="PARA006" style="margin-top: 0; margin-bottom: 0"><span style="COLOR: blue"><font face="Courier New" size="2">Next</font></span></p>
+<p xmlid="PARA006">&nbsp;</p>
+<p xmlid="PARA006"><font face="Courier New" size="2">On peut aussi exécuter des
+commandes sur le DataContext. (exemple: augmenter de 100 le prix unitaire)</font></p>
+<p xmlid="PARA006"><font face="Courier New" size="2"><font color="#0000FF">db.ExecuteCommand
+</font>(<span style="COLOR: maroon">&quot;UPDATE Products SET UnitPrice =
+UnitPrice + 100&quot;</span>)</font></p>
+<p xmlid="PARA006">&nbsp;</p>
+<p xmlid="PARA006">&nbsp;</p>
+<p class="titre3" style="margin-left: 0cm; margin-right: 0cm; margin-top: 6.0pt; margin-bottom: .0001pt">&nbsp;</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v6-7.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img src="vbtind.GIF" border="0" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v7-1.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v6-8.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:28:23 GMT -->
+</html>

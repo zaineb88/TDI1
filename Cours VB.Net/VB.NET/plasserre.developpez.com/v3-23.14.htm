@@ -1,0 +1,170 @@
+<html>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:18 GMT -->
+<head>
+<meta http-equiv="Content-Language" content="fr">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<META NAME="MS.LOCALE" CONTENT="fr-FR">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Cours Visual Basic .NET : textbox richtextbox  maskedtextbox rtf </title>
+<style>
+<!--
+h6
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold}
+-->
+</style>
+</head>
+
+<body background="vfond.jpg" leftmargin="90">
+
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="103%" id="AutoNumber1" height="62">
+  <tr>
+    <td width="27%" height="62"><font face="Courier New"><b>
+    <font size="5" color="#0000FF">Site</font></b><img border="0" src="ldf.GIF" width="121" height="51"><font color="#0000FF" size="5">:</font></font></td>
+    <td width="55%" height="62" align="center"><b>
+    <font face="Arial" size="7" color="#0000FF">&nbsp;</font><font size="7" color="#0000FF" face="Courier New">Cours VB.net</font></b></td>
+    <td width="11%" height="62">
+    <img border="0" src="vhom.JPG" width="118" height="114"></td>
+    <td width="34%" height="62">&nbsp;</td>
+  </tr>
+</table>
+<table border="2" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2" height="76">
+  <tr>
+    <td width="29%" height="76" align="center"><a href="v3-23.13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a> <b>
+    <font face="Courier New" size="6" color="#800080">3.23.14</font></b></td>
+    <td width="47%" height="76" align="center">&nbsp;
+      <p><b>
+    <font face="Courier New" size="6" color="#800080">WPF: Les Listes.</font></b></p>
+    </td>
+    <td width="14%" height="76"><a href="v3-29.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+    <td width="11%" height="76"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+  </tr>
+</table>
+<p class="MsoNormal" style="margin-top: 6.0pt" align="center">
+<img border="0" src="voutils.JPG" width="51" height="50"></p>
+<p style="margin-top: 6.0pt" align="left">
+<span style="background-color: #C0C0C0"><b><font face="Courier New" color="#0000FF" size="4">Créons
+une liste:</font></b></span>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<font face="Courier New" size="2">On va la chercher dans la boite à outils et
+on la dépose ici sur une grid.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">
+<img border="0" src="vwpfgrid.JPG" width="314" height="320">
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left">
+&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Dans
+la fenêtre XMLA,&nbsp; cela donne:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBox</font><font COLOR="#ff0000">
+Grid.Column</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+Grid.Row</font><font COLOR="#0000ff">=&quot;2&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;22,26,21,19&quot;</font><font COLOR="#ff0000">
+Name</font><font COLOR="#0000ff">=&quot;ListBox1&quot; /&gt;</font></font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#ff0000">Grid.Column</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+Grid.Row</font><font COLOR="#0000ff">=&quot;2&quot; </font>indiquent les
+coordonnées de la cellule de la grid.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">On
+peut ajouter des éléments dans la ListBox <b>en mode conception dans le
+Designer</b>.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font size="2" face="Courier New">Dans
+la fenêtre &quot;propriétés&quot; de la ListBox cliquer sur le bouton en face
+de <font color="#0000FF">Items</font>. Cela ouvre une fenêtre permettant
+d'ajouter des éléments à la ListBox</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><img border="0" src="vwpflistbox1.JPG" width="927" height="420">
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font color="#111111">Le
+bouton &quot;Ajouter&quot; permet d'ajouter des</font><font color="#0000ff">
+ListBoxItem, </font><font color="#111111">chacun ayant des propriétés. La
+propriété &quot;Content&quot; indique le texte qui sera affiché.</font></font>
+</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">Cela
+modifie le code XAML en ajoutant les ListBoxItem.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" COLOR="#0000ff">&lt;</font><font face="Courier New"><font COLOR="#a31515">ListBox</font><font COLOR="#ff0000">
+Grid.Column</font><font COLOR="#0000ff">=&quot;3&quot;</font><font COLOR="#ff0000">
+Grid.Row</font><font COLOR="#0000ff">=&quot;2&quot;</font><font COLOR="#ff0000">
+Margin</font><font COLOR="#0000ff">=&quot;22,26,21,19&quot;</font><font COLOR="#ff0000">
+Name</font></font><font face="Courier New" COLOR="#0000ff">=&quot;ListBox1&quot;&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBoxItem</font><font COLOR="#0000ff">&gt;</font><font COLOR="#a31515">toto</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBoxItem</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;</font><font COLOR="#a31515">ListBoxItem</font><font COLOR="#0000ff">&gt;</font><font COLOR="#a31515">lululu</font><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBoxItem</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<font SIZE="2" COLOR="#a31515">
+<p style="margin-top: 0; margin-bottom: 0"></font><font size="2"><font face="Courier New"><font COLOR="#0000ff">&lt;/</font><font COLOR="#a31515">ListBox</font></font><font face="Courier New" COLOR="#0000ff">&gt;</font></font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><b>Pour
+ajouter des éléments à la ListBox dans le code VB:</b></font>
+</p>
+<p><font size="2" face="Courier New"><font COLOR="#0000ff">Private</font> <font COLOR="#0000ff">Sub</font>
+Window1_Loaded</font></p>
+<p><font size="2" face="Courier New">ListBox1.Items.Add(<font COLOR="#a31515">&quot;toto&quot;</font>)</font></p>
+<p><font size="2" face="Courier New">ListBox1.Items.Add(<font COLOR="#a31515">&quot;lulu&quot;</font>)</font></p>
+<p><font face="Courier New" size="2"><font COLOR="#0000ff">End</font> <font COLOR="#0000ff">Sub</font></font></p>
+<p>&nbsp;</p>
+<p><font size="2" face="Courier New" color="#111111"><b>La ListBox à des
+procédures évènements dans le code VB. MouseDoubleClick par exemple:</b></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font> ListBox1_MouseDoubleClick(<font COLOR="#0000ff">ByVal</font>
+sender <font COLOR="#0000ff">As</font> <font COLOR="#0000ff">Object</font>, <font COLOR="#0000ff">ByVal</font>
+e <font COLOR="#0000ff">As</font> System.Windows.Input.MouseButtonEventArgs) <font COLOR="#0000ff">Handles</font>
+ListBox1.MouseDoubleClick</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" color="#008000">'ici
+on affiche dans un messagebox l'item sur lequel l'utilisateur à clické.</font></font></p>
+<font SIZE="2">
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier New" size="2">MsgBox(ListBox1.SelectedItem.ToString)</font></p>
+</font>
+<p style="margin-top: 0; margin-bottom: 0"><font size="2"><font face="Courier New" size="2"><font COLOR="#0000ff">End</font>
+<font COLOR="#0000ff">Sub</font></font></font></p>
+<p style="margin-top: 6.0pt" align="left"><font color="#111111"><font face="Courier New" size="2">On
+remarque que l'élément sélectionné est </font></font><font color="#0000ff" face="Courier New" size="2">SelectedItem.</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2">Il y
+a aussi:</font>
+</p>
+<p style="margin-top: 6.0pt" align="left"><font face="Courier New" size="2"><font COLOR="#0000ff">Private</font>
+<font COLOR="#0000ff">Sub</font> ListBox1_SelectionChanged</font>
+</p>
+<p style="margin-top: 6.0pt" align="left">&nbsp;
+</p>
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3" height="51">
+  <tr>
+    <td width="25%" height="51"><a href="v3-23.13.htm">
+    <img border="0" src="vbtret.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vindex.htm">
+    <img border="0" src="vbtind.GIF" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="vsommair.htm">
+    <img border="0" src="vbtsomm.gif" width="78" height="28"></a></td>
+    <td width="25%" height="51"><a href="v3-29.htm">
+    <img border="0" src="vbtsuiv.GIF" width="78" height="28"></a></td>
+  </tr>
+</table>
+
+</body>
+
+
+<!-- Mirrored from plasserre.developpez.com/v3-23.14.htm by HTTrack Website Copier/3.x [XR&CO'2008], Thu, 18 Dec 2008 18:24:20 GMT -->
+</html>

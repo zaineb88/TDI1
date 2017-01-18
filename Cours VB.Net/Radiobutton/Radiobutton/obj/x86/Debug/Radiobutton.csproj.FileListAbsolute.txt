@@ -1,0 +1,12 @@
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.Form1.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.Properties.Resources.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\bin\Debug\Radiobutton.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\bin\Debug\Radiobutton.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.exe
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.pdb
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.CheckBox.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.Liste.resources
+C:\Users\ZIZI\Documents\Visual Studio 2010\Projects\vb\Radiobutton\Radiobutton\obj\x86\Debug\Radiobutton.TreeView.resources
